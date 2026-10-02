@@ -1,0 +1,38 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MK087050.1 1 25602
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=59785
+MK087050.1	Genbank	region	1	25602	.	+	.	ID=MK087050.1:1..25602;Dbxref=taxon:59785;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+MK087050.1	Genbank	gene	1	906	.	+	.	ID=gene-nad1;Name=nad1;gbkey=Gene;gene=nad1;gene_biotype=protein_coding
+MK087050.1	Genbank	CDS	1	906	.	+	0	ID=cds-AZA06365.1;Parent=gene-nad1;Dbxref=NCBI_GP:AZA06365.1;Name=AZA06365.1;gbkey=CDS;gene=nad1;product=NADH dehydrogenase subunit 1;protein_id=AZA06365.1;transl_table=4
+MK087050.1	Genbank	CDS	1260	2432	.	+	0	ID=cds-AZA06366.1;Dbxref=NCBI_GP:AZA06366.1;Name=AZA06366.1;Note=ORF_390;gbkey=CDS;product=hypothetical protein;protein_id=AZA06366.1;transl_table=4
+MK087050.1	Genbank	repeat_region	2415	2822	.	+	.	ID=id-MK087050.1:2415..2822;Note=Repeat 1;gbkey=repeat_region
+MK087050.1	Genbank	repeat_region	2913	3320	.	+	.	ID=id-MK087050.1:2913..3320;Note=Repeat 1;gbkey=repeat_region
+MK087050.1	Genbank	CDS	3473	3976	.	+	0	ID=cds-AZA06367.1;Dbxref=NCBI_GP:AZA06367.1;Name=AZA06367.1;Note=ORF_167;gbkey=CDS;product=hypothetical protein;protein_id=AZA06367.1;transl_table=4
+MK087050.1	Genbank	CDS	3979	4734	.	+	0	ID=cds-AZA06368.1;Dbxref=NCBI_GP:AZA06368.1;Name=AZA06368.1;gbkey=CDS;product=hypothetical protein;protein_id=AZA06368.1;transl_table=4
+MK087050.1	Genbank	CDS	4734	5528	.	+	0	ID=cds-AZA06369.1;Dbxref=NCBI_GP:AZA06369.1;Name=AZA06369.1;Note=ORF_264;gbkey=CDS;product=hypothetical protein;protein_id=AZA06369.1;transl_table=4
+MK087050.1	Genbank	CDS	5546	6328	.	+	0	ID=cds-AZA06370.1;Dbxref=NCBI_GP:AZA06370.1;Name=AZA06370.1;Note=ORF_260;gbkey=CDS;product=hypothetical protein;protein_id=AZA06370.1;transl_table=4
+MK087050.1	Genbank	CDS	6439	6780	.	+	0	ID=cds-AZA06371.1;Dbxref=NCBI_GP:AZA06371.1;Name=AZA06371.1;Note=ORF_113;gbkey=CDS;product=hypothetical protein;protein_id=AZA06371.1;transl_table=4
+MK087050.1	Genbank	CDS	6789	8147	.	+	0	ID=cds-AZA06372.1;Dbxref=NCBI_GP:AZA06372.1;Name=AZA06372.1;Note=ORF_452;gbkey=CDS;product=hypothetical protein;protein_id=AZA06372.1;transl_table=4
+MK087050.1	Genbank	CDS	8153	9271	.	+	0	ID=cds-AZA06373.1;Dbxref=NCBI_GP:AZA06373.1;Name=AZA06373.1;Note=ORF_372;gbkey=CDS;product=hypothetical protein;protein_id=AZA06373.1;transl_table=4
+MK087050.1	Genbank	repeat_region	9291	9698	.	+	.	ID=id-MK087050.1:9291..9698;Note=Repeat 1;gbkey=repeat_region
+MK087050.1	Genbank	repeat_region	9785	10254	.	+	.	ID=id-MK087050.1:9785..10254;Note=Repeat 1;gbkey=repeat_region
+MK087050.1	Genbank	CDS	10401	11513	.	+	0	ID=cds-AZA06374.1;Dbxref=NCBI_GP:AZA06374.1;Name=AZA06374.1;Note=ORF_370;gbkey=CDS;product=hypothetical protein;protein_id=AZA06374.1;transl_table=4
+MK087050.1	Genbank	repeat_region	11541	11700	.	+	.	ID=id-MK087050.1:11541..11700;Note=Repeat 2;gbkey=repeat_region
+MK087050.1	Genbank	repeat_region	11777	11936	.	+	.	ID=id-MK087050.1:11777..11936;Note=Repeat 2;gbkey=repeat_region
+MK087050.1	Genbank	repeat_region	12149	12308	.	+	.	ID=id-MK087050.1:12149..12308;Note=Repeat 2;gbkey=repeat_region
+MK087050.1	Genbank	gene	13058	16592	.	+	.	ID=gene-rnl;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+MK087050.1	Genbank	rRNA	13058	16592	.	+	.	ID=rna-rnl;Parent=gene-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+MK087050.1	Genbank	exon	13058	16592	.	+	.	ID=exon-rnl-1;Parent=rna-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+MK087050.1	Genbank	CDS	16593	17969	.	+	0	ID=cds-AZA06375.1;Dbxref=NCBI_GP:AZA06375.1;Name=AZA06375.1;Note=ORF_458;gbkey=CDS;product=hypothetical protein;protein_id=AZA06375.1;transl_table=4
+MK087050.1	Genbank	CDS	17983	19050	.	+	0	ID=cds-AZA06376.1;Dbxref=NCBI_GP:AZA06376.1;Name=AZA06376.1;Note=ORF_355;gbkey=CDS;product=hypothetical protein;protein_id=AZA06376.1;transl_table=4
+MK087050.1	Genbank	gene	19052	20425	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+MK087050.1	Genbank	CDS	19052	20425	.	+	0	ID=cds-AZA06377.1;Parent=gene-nad5;Dbxref=NCBI_GP:AZA06377.1;Name=AZA06377.1;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=AZA06377.1;transl_table=4
+MK087050.1	Genbank	CDS	20425	21429	.	+	0	ID=cds-AZA06378.1;Dbxref=NCBI_GP:AZA06378.1;Name=AZA06378.1;Note=ORF_334;gbkey=CDS;product=hypothetical protein;protein_id=AZA06378.1;transl_table=4
+MK087050.1	Genbank	CDS	21442	23922	.	+	0	ID=cds-AZA06379.1;Dbxref=NCBI_GP:AZA06379.1;Name=AZA06379.1;Note=ORF_826;gbkey=CDS;product=hypothetical protein;protein_id=AZA06379.1;transl_table=4
+MK087050.1	Genbank	repeat_region	23965	24338	.	+	.	ID=id-MK087050.1:23965..24338;Note=Repeat 1;gbkey=repeat_region
+MK087050.1	Genbank	gene	24613	25602	.	+	.	ID=gene-rns;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+MK087050.1	Genbank	rRNA	24613	25602	.	+	.	ID=rna-rns;Parent=gene-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+MK087050.1	Genbank	exon	24613	25602	.	+	.	ID=exon-rns-1;Parent=rna-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+

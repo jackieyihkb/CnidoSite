@@ -1,0 +1,65 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_027526.1 1 18647
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=262591
+NC_027526.1	RefSeq	region	1	18647	.	+	.	ID=NC_027526.1:1..18647;Dbxref=taxon:262591;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;isolate=14846/IV/SATS-LN/2007;mol_type=genomic DNA
+NC_027526.1	RefSeq	gene	1	2543	.	+	.	ID=gene-PRUS_0001;Dbxref=GeneID:25014183;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=PRUS_0001
+NC_027526.1	RefSeq	CDS	1	894	.	+	0	ID=cds-YP_009158832.1;Parent=gene-PRUS_0001;Dbxref=GenBank:YP_009158832.1,GeneID:25014183;Name=YP_009158832.1;gbkey=CDS;gene=COX1;locus_tag=PRUS_0001;product=cytochrome c oxidase subunit I;protein_id=YP_009158832.1;transl_table=4
+NC_027526.1	RefSeq	CDS	1860	2543	.	+	0	ID=cds-YP_009158832.1;Parent=gene-PRUS_0001;Dbxref=GenBank:YP_009158832.1,GeneID:25014183;Name=YP_009158832.1;gbkey=CDS;gene=COX1;locus_tag=PRUS_0001;product=cytochrome c oxidase subunit I;protein_id=YP_009158832.1;transl_table=4
+NC_027526.1	RefSeq	gene	1335	1402	.	+	.	ID=gene-PRUS_0003;Dbxref=GeneID:25014156;Name=PRUS_0003;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0003
+NC_027526.1	RefSeq	tRNA	1335	1402	.	+	.	ID=rna-PRUS_0003;Parent=gene-PRUS_0003;Dbxref=GeneID:25014156;anticodon=(pos:1358..1360);gbkey=tRNA;locus_tag=PRUS_0003;product=tRNA-Ile
+NC_027526.1	RefSeq	exon	1335	1402	.	+	.	ID=exon-PRUS_0003-1;Parent=rna-PRUS_0003;Dbxref=GeneID:25014156;anticodon=(pos:1358..1360);gbkey=tRNA;locus_tag=PRUS_0003;product=tRNA-Ile
+NC_027526.1	RefSeq	gene	1632	1700	.	+	.	ID=gene-PRUS_0004;Dbxref=GeneID:25014157;Name=PRUS_0004;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0004
+NC_027526.1	RefSeq	tRNA	1632	1700	.	+	.	ID=rna-PRUS_0004;Parent=gene-PRUS_0004;Dbxref=GeneID:25014157;anticodon=(pos:1668..1670);gbkey=tRNA;locus_tag=PRUS_0004;product=tRNA-Pro
+NC_027526.1	RefSeq	exon	1632	1700	.	+	.	ID=exon-PRUS_0004-1;Parent=rna-PRUS_0004;Dbxref=GeneID:25014157;anticodon=(pos:1668..1670);gbkey=tRNA;locus_tag=PRUS_0004;product=tRNA-Pro
+NC_027526.1	RefSeq	gene	2639	2709	.	+	.	ID=gene-PRUS_0005;Dbxref=GeneID:25014158;Name=PRUS_0005;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0005
+NC_027526.1	RefSeq	tRNA	2639	2709	.	+	.	ID=rna-PRUS_0005;Parent=gene-PRUS_0005;Dbxref=GeneID:25014158;anticodon=(pos:2671..2673);gbkey=tRNA;locus_tag=PRUS_0005;product=tRNA-Met
+NC_027526.1	RefSeq	exon	2639	2709	.	+	.	ID=exon-PRUS_0005-1;Parent=rna-PRUS_0005;Dbxref=GeneID:25014158;anticodon=(pos:2671..2673);gbkey=tRNA;locus_tag=PRUS_0005;product=tRNA-Met
+NC_027526.1	RefSeq	gene	3266	3341	.	+	.	ID=gene-PRUS_0006;Dbxref=GeneID:25014159;Name=PRUS_0006;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0006
+NC_027526.1	RefSeq	tRNA	3266	3341	.	+	.	ID=rna-PRUS_0006;Parent=gene-PRUS_0006;Dbxref=GeneID:25014159;anticodon=(pos:3315..3317);gbkey=tRNA;locus_tag=PRUS_0006;product=tRNA-Tyr
+NC_027526.1	RefSeq	exon	3266	3341	.	+	.	ID=exon-PRUS_0006-1;Parent=rna-PRUS_0006;Dbxref=GeneID:25014159;anticodon=(pos:3315..3317);gbkey=tRNA;locus_tag=PRUS_0006;product=tRNA-Tyr
+NC_027526.1	RefSeq	gene	3402	3464	.	+	.	ID=gene-PRUS_0007;Dbxref=GeneID:25014160;Name=PRUS_0007;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0007
+NC_027526.1	RefSeq	tRNA	3402	3464	.	+	.	ID=rna-PRUS_0007;Parent=gene-PRUS_0007;Dbxref=GeneID:25014160;anticodon=(pos:3437..3439);gbkey=tRNA;locus_tag=PRUS_0007;product=tRNA-Tyr
+NC_027526.1	RefSeq	exon	3402	3464	.	+	.	ID=exon-PRUS_0007-1;Parent=rna-PRUS_0007;Dbxref=GeneID:25014160;anticodon=(pos:3437..3439);gbkey=tRNA;locus_tag=PRUS_0007;product=tRNA-Tyr
+NC_027526.1	RefSeq	gene	3521	4957	.	+	.	ID=gene-PRUS_0008;Dbxref=GeneID:25014161;Name=PRUS_0008;gbkey=Gene;gene_biotype=rRNA;locus_tag=PRUS_0008
+NC_027526.1	RefSeq	rRNA	3521	4957	.	+	.	ID=rna-PRUS_0008;Parent=gene-PRUS_0008;Dbxref=GeneID:25014161;gbkey=rRNA;locus_tag=PRUS_0008;product=large subunit ribosomal RNA
+NC_027526.1	RefSeq	exon	3521	4957	.	+	.	ID=exon-PRUS_0008-1;Parent=rna-PRUS_0008;Dbxref=GeneID:25014161;gbkey=rRNA;locus_tag=PRUS_0008;product=large subunit ribosomal RNA
+NC_027526.1	RefSeq	gene	3603	3674	.	+	.	ID=gene-PRUS_0009;Dbxref=GeneID:25014162;Name=PRUS_0009;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0009
+NC_027526.1	RefSeq	tRNA	3603	3674	.	+	.	ID=rna-PRUS_0009;Parent=gene-PRUS_0009;Dbxref=GeneID:25014162;anticodon=(pos:3632..3634);gbkey=tRNA;locus_tag=PRUS_0009;product=tRNA-Ser
+NC_027526.1	RefSeq	exon	3603	3674	.	+	.	ID=exon-PRUS_0009-1;Parent=rna-PRUS_0009;Dbxref=GeneID:25014162;anticodon=(pos:3632..3634);gbkey=tRNA;locus_tag=PRUS_0009;product=tRNA-Ser
+NC_027526.1	RefSeq	gene	5201	18169	.	+	.	ID=gene-PRUS_0010;Dbxref=GeneID:25014182;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=PRUS_0010
+NC_027526.1	RefSeq	CDS	5201	5923	.	+	0	ID=cds-YP_009158834.1;Parent=gene-PRUS_0010;Dbxref=GenBank:YP_009158834.1,GeneID:25014182;Name=YP_009158834.1;gbkey=CDS;gene=ND5;locus_tag=PRUS_0010;product=NADH dehydrogenase subunit 5;protein_id=YP_009158834.1;transl_table=4
+NC_027526.1	RefSeq	CDS	17057	18169	.	+	0	ID=cds-YP_009158834.1;Parent=gene-PRUS_0010;Dbxref=GenBank:YP_009158834.1,GeneID:25014182;Name=YP_009158834.1;gbkey=CDS;gene=ND5;locus_tag=PRUS_0010;product=NADH dehydrogenase subunit 5;protein_id=YP_009158834.1;transl_table=4
+NC_027526.1	RefSeq	gene	6260	7237	.	+	.	ID=gene-PRUS_0013;Dbxref=GeneID:25014164;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=PRUS_0013
+NC_027526.1	RefSeq	CDS	6260	7237	.	+	0	ID=cds-YP_009158835.1;Parent=gene-PRUS_0013;Dbxref=GenBank:YP_009158835.1,GeneID:25014164;Name=YP_009158835.1;gbkey=CDS;gene=ND1;locus_tag=PRUS_0013;product=NADH dehydrogenase subunit 1;protein_id=YP_009158835.1;transl_table=4
+NC_027526.1	RefSeq	gene	7359	8519	.	+	.	ID=gene-PRUS_0014;Dbxref=GeneID:25014175;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=PRUS_0014
+NC_027526.1	RefSeq	CDS	7359	8519	.	+	0	ID=cds-YP_009158836.1;Parent=gene-PRUS_0014;Dbxref=GenBank:YP_009158836.1,GeneID:25014175;Name=YP_009158836.1;gbkey=CDS;gene=CYTB;locus_tag=PRUS_0014;product=cytochrome b;protein_id=YP_009158836.1;transl_table=4
+NC_027526.1	RefSeq	gene	8657	8727	.	+	.	ID=gene-PRUS_0016;Dbxref=GeneID:25014165;Name=PRUS_0016;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0016
+NC_027526.1	RefSeq	tRNA	8657	8727	.	+	.	ID=rna-PRUS_0016;Parent=gene-PRUS_0016;Dbxref=GeneID:25014165;anticodon=(pos:8675..8677);gbkey=tRNA;locus_tag=PRUS_0016;product=tRNA-Met
+NC_027526.1	RefSeq	exon	8657	8727	.	+	.	ID=exon-PRUS_0016-1;Parent=rna-PRUS_0016;Dbxref=GeneID:25014165;anticodon=(pos:8675..8677);gbkey=tRNA;locus_tag=PRUS_0016;product=tRNA-Met
+NC_027526.1	RefSeq	gene	9089	10186	.	+	.	ID=gene-PRUS_0017;Dbxref=GeneID:25014166;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=PRUS_0017
+NC_027526.1	RefSeq	CDS	9089	10186	.	+	0	ID=cds-YP_009158837.1;Parent=gene-PRUS_0017;Dbxref=GenBank:YP_009158837.1,GeneID:25014166;Name=YP_009158837.1;gbkey=CDS;gene=ND2;locus_tag=PRUS_0017;product=NADH dehydrogenase subunit 2;protein_id=YP_009158837.1;transl_table=4
+NC_027526.1	RefSeq	gene	10199	10813	.	+	.	ID=gene-PRUS_0018;Dbxref=GeneID:25014176;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=PRUS_0018
+NC_027526.1	RefSeq	CDS	10199	10813	.	+	0	ID=cds-YP_009158838.1;Parent=gene-PRUS_0018;Dbxref=GenBank:YP_009158838.1,GeneID:25014176;Name=YP_009158838.1;gbkey=CDS;gene=ND6;locus_tag=PRUS_0018;product=NADH dehydrogenase subunit 6;protein_id=YP_009158838.1;transl_table=4
+NC_027526.1	RefSeq	gene	10887	11585	.	+	.	ID=gene-PRUS_0019;Dbxref=GeneID:25014181;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=PRUS_0019
+NC_027526.1	RefSeq	CDS	10887	11585	.	+	0	ID=cds-YP_009158839.1;Parent=gene-PRUS_0019;Dbxref=GenBank:YP_009158839.1,GeneID:25014181;Name=YP_009158839.1;gbkey=CDS;gene=ATP6;locus_tag=PRUS_0019;product=ATP synthase F0 subunit 6;protein_id=YP_009158839.1;transl_table=4
+NC_027526.1	RefSeq	gene	11848	13323	.	+	.	ID=gene-PRUS_0021;Dbxref=GeneID:25014167;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=PRUS_0021
+NC_027526.1	RefSeq	CDS	11848	13323	.	+	0	ID=cds-YP_009158840.1;Parent=gene-PRUS_0021;Dbxref=GenBank:YP_009158840.1,GeneID:25014167;Name=YP_009158840.1;gbkey=CDS;gene=ND4;locus_tag=PRUS_0021;product=NADH dehydrogenase subunit 4;protein_id=YP_009158840.1;transl_table=4
+NC_027526.1	RefSeq	gene	13350	14456	.	+	.	ID=gene-PRUS_0022;Dbxref=GeneID:25014178;Name=PRUS_0022;gbkey=Gene;gene_biotype=rRNA;locus_tag=PRUS_0022
+NC_027526.1	RefSeq	rRNA	13350	14456	.	+	.	ID=rna-PRUS_0022;Parent=gene-PRUS_0022;Dbxref=GeneID:25014178;gbkey=rRNA;locus_tag=PRUS_0022;product=small subunit ribosomal RNA
+NC_027526.1	RefSeq	exon	13350	14456	.	+	.	ID=exon-PRUS_0022-1;Parent=rna-PRUS_0022;Dbxref=GeneID:25014178;gbkey=rRNA;locus_tag=PRUS_0022;product=small subunit ribosomal RNA
+NC_027526.1	RefSeq	gene	14662	15450	.	+	.	ID=gene-PRUS_0023;Dbxref=GeneID:25014168;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=PRUS_0023
+NC_027526.1	RefSeq	CDS	14662	15450	.	+	0	ID=cds-YP_009158841.1;Parent=gene-PRUS_0023;Dbxref=GenBank:YP_009158841.1,GeneID:25014168;Name=YP_009158841.1;gbkey=CDS;gene=COX3;locus_tag=PRUS_0023;product=cytochrome c oxidase subunit III;protein_id=YP_009158841.1;transl_table=4
+NC_027526.1	RefSeq	gene	15486	16229	.	+	.	ID=gene-PRUS_0024;Dbxref=GeneID:25014174;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=PRUS_0024
+NC_027526.1	RefSeq	CDS	15486	16229	.	+	0	ID=cds-YP_009158842.1;Parent=gene-PRUS_0024;Dbxref=GenBank:YP_009158842.1,GeneID:25014174;Name=YP_009158842.1;gbkey=CDS;gene=COX2;locus_tag=PRUS_0024;product=cytochrome c oxidase subunit II;protein_id=YP_009158842.1;transl_table=4
+NC_027526.1	RefSeq	gene	16283	16582	.	+	.	ID=gene-PRUS_0025;Dbxref=GeneID:25014173;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=PRUS_0025
+NC_027526.1	RefSeq	CDS	16283	16582	.	+	0	ID=cds-YP_009158843.1;Parent=gene-PRUS_0025;Dbxref=GenBank:YP_009158843.1,GeneID:25014173;Name=YP_009158843.1;gbkey=CDS;gene=ND4L;locus_tag=PRUS_0025;product=NADH dehydrogenase subunit 4L;protein_id=YP_009158843.1;transl_table=4
+NC_027526.1	RefSeq	gene	16597	16953	.	+	.	ID=gene-PRUS_0026;Dbxref=GeneID:25014179;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=PRUS_0026
+NC_027526.1	RefSeq	CDS	16597	16953	.	+	0	ID=cds-YP_009158844.1;Parent=gene-PRUS_0026;Dbxref=GenBank:YP_009158844.1,GeneID:25014179;Name=YP_009158844.1;gbkey=CDS;gene=ND3;locus_tag=PRUS_0026;product=NADH dehydrogenase subunit 3;protein_id=YP_009158844.1;transl_table=4
+NC_027526.1	RefSeq	gene	18209	18278	.	+	.	ID=gene-PRUS_0027;Dbxref=GeneID:25014177;Name=PRUS_0027;gbkey=Gene;gene_biotype=tRNA;locus_tag=PRUS_0027
+NC_027526.1	RefSeq	tRNA	18209	18278	.	+	.	ID=rna-PRUS_0027;Parent=gene-PRUS_0027;Dbxref=GeneID:25014177;gbkey=tRNA;locus_tag=PRUS_0027;product=tRNA-Trp
+NC_027526.1	RefSeq	exon	18209	18278	.	+	.	ID=exon-PRUS_0027-1;Parent=rna-PRUS_0027;Dbxref=GeneID:25014177;gbkey=tRNA;locus_tag=PRUS_0027;product=tRNA-Trp
+NC_027526.1	RefSeq	gene	18311	18526	.	+	.	ID=gene-PRUS_0028;Dbxref=GeneID:25014169;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=PRUS_0028
+NC_027526.1	RefSeq	CDS	18311	18526	.	+	0	ID=cds-YP_009158845.1;Parent=gene-PRUS_0028;Dbxref=GenBank:YP_009158845.1,GeneID:25014169;Name=YP_009158845.1;gbkey=CDS;gene=ATP8;locus_tag=PRUS_0028;product=ATP synthase F0 subunit 8;protein_id=YP_009158845.1;transl_table=4
+

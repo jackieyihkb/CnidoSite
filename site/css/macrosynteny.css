@@ -1,0 +1,267 @@
+/* ---------------------------------------------------------------------------
+ * macrosynteny.css -- 宏共线性三个页面（macrosynteny.php / macrosynteny_result.php
+ * / macrosynteny_overview.php）的样式。
+ *
+ * 配色与控件已统一到站内风格，不再用原来的紫罗兰渐变：
+ *   第 1 节 = 站内通用控件（表单 / 按钮 / 表格 / 提示框），类名与 go.php、
+ *             kegg.php、interpro.php、proteindomain.php 逐字相同 —— 那几个页面
+ *             各自把同一份规则抄在 inline <style> 里，这里集中放一份给本模块的三个页面用。
+ *   第 2 节 = 只有本模块用到的东西：Oxford grid 画布、tooltip、连锁群图例、热图色带。
+ *
+ * 改类名前先看 js/macrosynteny.js，它依赖这些选择器：
+ *   #msr-svg / #msr-grid-wrap / #msr-tooltip / #msr-legend / #msr-heatmap ...
+ *   .msr-legend .item（.on / .off / .sw）、circle.dim、tr.sel、.msr-tooltip .cl
+ * ------------------------------------------------------------------------- */
+
+/* ======================= 1) 站内通用控件 ======================= */
+
+/* 表单容器 */
+.kegg-form-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 35px;
+    margin-top: 20px;
+    border: 1px solid #e2e8f0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-title::before { content: "\1F9EC"; font-size: 24px; }
+.form-group { margin-bottom: 25px; }
+.form-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 10px;
+}
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #fff;
+    color: #1e293b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.form-select:focus {
+    outline: none;
+    border-color:#047857;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+.form-select optgroup { font-weight: 700; color: #1e293b; }
+.form-select optgroup option { font-weight: 400; color: #1e293b; }
+
+/* 按钮 */
+.button-group { display: flex; gap: 15px; margin-top: 30px; }
+.btn-submit, .btn-reset {
+    flex: 1;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.btn-submit {
+    background:linear-gradient(135deg, #047857 0%, #065f46 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    background:linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+}
+.btn-reset {
+    background: #f8fafc;
+    color: #64748b;
+    border: 2px solid #e2e8f0;
+}
+.btn-reset:hover { background: #f1f5f9; color: #475569; border-color: #cbd5e1; }
+
+/* 次级链接（原来用紫色 .msr-btn-ghost，现在统一成站内的绿色文字链接） */
+.example-link {
+    color:#047857;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.example-link:hover { color:#047857; text-decoration: underline; }
+
+/* ======================= 2) 本模块专用 ======================= */
+
+/* 页面标题（结果页放 "A vs B"）与统计小药丸 */
+.msr-page-title { font-size: 22px; font-weight: 700; color: #1e293b; margin: 0 0 10px; line-height: 1.35; }
+.msr-page-title .vs { color:#64748b; font-weight: 400; }
+.msr-stat {
+    display: inline-block; background: #f1f5f9; border: 1px solid #e2e8f0; color: #334155;
+    border-radius: 16px; padding: 5px 14px; font-size: 15px; font-weight: 600; margin: 0 8px 8px 0;
+}
+.msr-stat.green { background:#f0fdf4; border-color: #a7f3d0; color: #047857; }
+
+/* 两列物种选择 */
+.msr-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+@media (max-width: 700px) { .msr-two-col { grid-template-columns: 1fr; } }
+
+/* 小字提示 */
+.msr-hint { font-size: 15px; color:#64748b; margin-top: 8px; line-height: 1.6; }
+
+/* 说明 / 警告框（配色同 genomeinfo.php 的橙色提示条） */
+.msr-note {
+    background: #f8fafc; border: 1px solid #e2e8f0; border-left: 4px solid #3b82f6;
+    border-radius: 10px; padding: 14px 18px; font-size: 16px; color: #334155;
+    line-height: 1.75; margin: 18px 0;
+}
+.msr-note.warn { background: #fffbeb; border-color: #fde68a; border-left-color:#b45309; color: #92400e; }
+.msr-note code { background: #f1f5f9; padding: 1px 5px; border-radius: 4px; }
+.msr-note pre { background: #fff !important; }
+
+/* 小节标题与说明正文 */
+.msr-section-title { font-size: 18px; font-weight: 700; color: #1e293b; margin: 28px 0 12px; }
+.msr-help { font-size: 15px; color: #64748b; line-height: 1.8; }
+.msr-help ul { margin: 8px 0 8px 20px; }
+
+/* ---- 表格：用站内 gridtable，只补上「选中行」这一条 ----
+   数字右对齐（td.num）和悬停高亮现在都由 templatemo_style.css 的共用样式提供
+   （与 core 的 table.cc 一致），原来这里各写了一份、悬停底色还差一档
+   （#f8fafc vs 共用的 #f1f5f9）—— 删掉，免得站里出现两种悬停色。
+   注意三个 macrosynteny 页面都用页内 <style> 把整表钉回居中（那里有说明），
+   所以删掉这条不会让它们变成右对齐。 */
+table.gridtable tr.sel td { background:#f0fdf4; }
+.msr-table-scroll { max-height: 60vh; overflow: auto; margin: 12px 0; }
+#msr-linkage-table { table-layout: auto; }
+#msr-linkage-table th { position: sticky; top: 0; z-index: 2; }
+.msr-sig { color: #b91c1c; font-weight: 600; }
+.msr-ns { color:#64748b; }
+
+/* ---- 结果页工具条 ---- */
+.msr-toolbar {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+    padding: 12px 16px; margin: 16px 0; font-size: 15px; color: #475569;
+}
+.msr-toolbar label { font-weight: 600; }
+.msr-toolbar select, .msr-toolbar input[type=number] {
+    padding: 6px 10px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px;
+    background: #fff; color: #1e293b;
+}
+.msr-toolbar select:focus { outline: none; border-color:#047857; }
+.msr-toolbar .example-link { margin-top: 0; }
+
+/* ---- Oxford grid 画布 ---- */
+.msr-grid-wrap {
+    position: relative; overflow: auto; max-height: 78vh;
+    border: 1px solid #e2e8f0; border-radius: 10px; background: #fff;
+}
+/* 图比容器窄时（适配视图常常如此，因为这张图是方的、容器是宽的）居中放，
+   比靠左留一大块空白好看。图比容器宽时 auto 外边距算成 0，不影响滚动。 */
+.msr-grid-wrap svg { display: block; margin: 0 auto; cursor: grab; }
+.msr-grid-wrap circle { cursor: pointer; }
+.msr-grid-wrap circle.dim { opacity: .06; }
+.msr-grid-wrap.dragging svg, .msr-grid-wrap.dragging circle { cursor: grabbing; }
+
+/* ---- 图右上角的常驻缩放控制条（− / 读数 / + / 还原） ----
+   .msr-plot 只是个定位基准，本身不参与布局；控制条必须放在 .msr-grid-wrap **外面**：
+   那个容器是 overflow:auto 的滚动区，放进去会跟着画布一起滚走。 */
+.msr-plot { position: relative; }
+.msr-zoomctl {
+    position: absolute; top: 12px; right: 12px; z-index: 20;
+    display: flex; gap: 2px; align-items: center;
+    background: rgba(255, 255, 255, .94); border: 1px solid #e2e8f0; border-radius: 10px;
+    padding: 4px 6px; box-shadow: 0 4px 14px rgba(15, 23, 42, .10);
+}
+.msr-zoomctl .msr-zbtn {
+    border: 0; background: transparent; color: #475569; cursor: pointer;
+    font-size: 16px; font-weight: 700; line-height: 1; padding: 6px 9px; border-radius: 7px;
+}
+.msr-zoomctl .msr-zbtn:hover { background: #f1f5f9; color: #0f172a; }
+.msr-zoomctl .msr-zbtn:focus-visible { outline: 2px solid #10b981; outline-offset: 1px; }
+/* 到头了就把按钮灰掉：缩放下限是适配比例，再往外缩只是图更小、留白更多 */
+.msr-zoomctl .msr-zbtn:disabled { color:#64748b; cursor: default; background: transparent; }
+.msr-zoomctl .msr-zreset { font-size: 15px; font-weight: 600; padding: 6px 8px; }
+.msr-zoomctl .msr-zval {
+    font-size: 15px; color: #64748b; min-width: 38px; text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+/* 全屏时 .msr-grid-wrap 脱离文档流变成整屏的 fixed 层，.msr-plot 的高度随之塌成 0，
+   绝对定位的控制条会留在原地 —— 所以这时改成窗口坐标系的 fixed，z-index 压过 5000。 */
+.msr-grid-wrap.msr-full ~ .msr-zoomctl { position: fixed; top: 12px; right: 12px; z-index: 5001; }
+
+/* ---- 全屏：整张图占满窗口（Esc 或左上角小控制条的 ✕ 退出） ---- */
+.msr-grid-wrap.msr-full {
+    position: fixed; left: 0; top: 0; width: 100%; height: 100%;
+    max-height: none; z-index: 5000; border: 0; border-radius: 0;
+}
+/* 全屏时的浮动控制条。必须是 fixed 且挂在 body 上：容器本身是 overflow:auto 的滚动区，
+   放在里面会跟着画布一起滚走。 */
+.msr-full-panel {
+    position: fixed; left: 12px; top: 12px; z-index: 5001;
+    display: flex; gap: 6px; align-items: center;
+    background: rgba(255, 255, 255, .95); border: 1px solid #e2e8f0;
+    border-radius: 10px; padding: 6px 8px; box-shadow: 0 4px 14px rgba(15, 23, 42, .12);
+}
+
+/* ---- tooltip（深色气泡，配色跟随站内 slate） ---- */
+.msr-tooltip {
+    position: fixed; z-index: 9999; pointer-events: none; display: none;
+    background: rgba(15, 23, 42, .96); color: #f8fafc; border-radius: 8px;
+    padding: 10px 12px; font-size: 15px; line-height: 1.6; max-width: 460px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+}
+.msr-tooltip b { color: #fff; }
+.msr-tooltip a { color: #6ee7b7; }
+.msr-tooltip .cl { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+/* 钉住（单击某个点）之后才接收鼠标事件 —— 里面的基因链接这时才点得到 */
+.msr-tooltip.pinned { pointer-events: auto; padding-right: 28px; }
+.msr-tooltip .x {
+    position: absolute; top: 3px; right: 9px; cursor: pointer;
+    color:#64748b; font-size: 15px; line-height: 1;
+}
+.msr-tooltip .x:hover { color: #fff; }
+
+/* ---- 连锁群图例（可点隐藏） ---- */
+.msr-legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.msr-legend .item {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 15px; color: #334155;
+    border: 1px solid #e2e8f0; border-radius: 16px; padding: 4px 10px; cursor: pointer;
+    background: #fff; user-select: none;
+}
+.msr-legend .item.on { border-color:#047857; box-shadow: 0 0 0 2px rgba(16, 185, 129, .15); }
+.msr-legend .item.off { opacity: .45; }
+.msr-legend .sw { width: 12px; height: 12px; border-radius: 3px; }
+
+/* ---- 概览热图 ---- */
+.msr-heat-wrap { overflow: auto; max-height: 82vh; border: 1px solid #e2e8f0; border-radius: 10px; background: #fff; padding: 8px; }
+.msr-heat-wrap svg { display: block; }
+.msr-heat-legend { display: flex; align-items: center; gap: 10px; font-size: 15px; color: #475569; margin: 10px 0; }
+/* 色带对应 js 里默认指标 frac 的绿色 ramp，换默认指标时这里也要跟着改 */
+.msr-heat-legend .ramp { width: 180px; height: 12px; border-radius: 6px;
+    background: linear-gradient(90deg, #f8fafc 0%, #a7f3d0 35%, #34d399 70%, #047857 100%); }

@@ -1,0 +1,45 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_081454.1 1 18481
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=140239
+NC_081454.1	RefSeq	region	1	18481	.	+	.	ID=NC_081454.1:1..18481;Dbxref=taxon:140239;Is_circular=true;Name=MT;collected-by=Z. Richards;collection-date=2019;country=Australia;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=Z100020
+NC_081454.1	RefSeq	gene	1	71	.	+	.	ID=gene-RCV57_mgt01;Dbxref=GeneID:83993526;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=RCV57_mgt01
+NC_081454.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-RCV57_mgt01;Parent=gene-RCV57_mgt01;Dbxref=GeneID:83993526;gbkey=tRNA;gene=trnM;locus_tag=RCV57_mgt01;product=tRNA-Met
+NC_081454.1	RefSeq	exon	1	71	.	+	.	ID=exon-RCV57_mgt01-1;Parent=rna-RCV57_mgt01;Dbxref=GeneID:83993526;gbkey=tRNA;gene=trnM;locus_tag=RCV57_mgt01;product=tRNA-Met
+NC_081454.1	RefSeq	gene	72	2331	.	+	.	ID=gene-RCV57_mgr02;Dbxref=GeneID:83993511;Name=rrn16;gbkey=Gene;gene=rrn16;gene_biotype=rRNA;locus_tag=RCV57_mgr02
+NC_081454.1	RefSeq	rRNA	72	2331	.	+	.	ID=rna-RCV57_mgr02;Parent=gene-RCV57_mgr02;Dbxref=GeneID:83993511;gbkey=rRNA;gene=rrn16;locus_tag=RCV57_mgr02;product=16S ribosomal RNA
+NC_081454.1	RefSeq	exon	72	2331	.	+	.	ID=exon-RCV57_mgr02-1;Parent=rna-RCV57_mgr02;Dbxref=GeneID:83993511;gbkey=rRNA;gene=rrn16;locus_tag=RCV57_mgr02;product=16S ribosomal RNA
+NC_081454.1	RefSeq	gene	2434	16341	.	+	.	ID=gene-RCV57_mgp12;Dbxref=GeneID:83993525;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=RCV57_mgp12
+NC_081454.1	RefSeq	CDS	2434	3153	.	+	0	ID=cds-YP_010897717.1;Parent=gene-RCV57_mgp12;Dbxref=GenBank:YP_010897717.1,GeneID:83993525;Name=YP_010897717.1;gbkey=CDS;gene=ND5;locus_tag=RCV57_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_010897717.1;transl_table=4
+NC_081454.1	RefSeq	CDS	15226	16341	.	+	0	ID=cds-YP_010897717.1;Parent=gene-RCV57_mgp12;Dbxref=GenBank:YP_010897717.1,GeneID:83993525;Name=YP_010897717.1;gbkey=CDS;gene=ND5;locus_tag=RCV57_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_010897717.1;transl_table=4
+NC_081454.1	RefSeq	sequence_feature	11598	12820	.	+	.	ID=id-RCV57_mgp12;Dbxref=GeneID:83993525;Note=putative control region;gbkey=misc_feature;gene=ND5;locus_tag=RCV57_mgp12
+NC_081454.1	RefSeq	gene	3477	4460	.	+	.	ID=gene-RCV57_mgp11;Dbxref=GeneID:83993522;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=RCV57_mgp11
+NC_081454.1	RefSeq	CDS	3477	4460	.	+	0	ID=cds-YP_010897718.1;Parent=gene-RCV57_mgp11;Dbxref=GenBank:YP_010897718.1,GeneID:83993522;Name=YP_010897718.1;gbkey=CDS;gene=ND1;locus_tag=RCV57_mgp11;product=NADH dehydrogenase subunit 1;protein_id=YP_010897718.1;transl_table=4
+NC_081454.1	RefSeq	gene	6253	7350	.	+	.	ID=gene-RCV57_mgp10;Dbxref=GeneID:83993512;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=RCV57_mgp10
+NC_081454.1	RefSeq	CDS	6253	7350	.	+	0	ID=cds-YP_010897719.1;Parent=gene-RCV57_mgp10;Dbxref=GenBank:YP_010897719.1,GeneID:83993512;Name=YP_010897719.1;gbkey=CDS;gene=ND2;locus_tag=RCV57_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_010897719.1;transl_table=4
+NC_081454.1	RefSeq	gene	7383	7976	.	+	.	ID=gene-RCV57_mgp09;Dbxref=GeneID:83993513;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=RCV57_mgp09
+NC_081454.1	RefSeq	CDS	7383	7976	.	+	0	ID=cds-YP_010897720.1;Parent=gene-RCV57_mgp09;Dbxref=GenBank:YP_010897720.1,GeneID:83993513;Name=YP_010897720.1;gbkey=CDS;gene=ND6;locus_tag=RCV57_mgp09;product=NADH dehydrogenase subunit 6;protein_id=YP_010897720.1;transl_table=4
+NC_081454.1	RefSeq	gene	8045	8743	.	+	.	ID=gene-RCV57_mgp08;Dbxref=GeneID:83993514;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=RCV57_mgp08
+NC_081454.1	RefSeq	CDS	8045	8743	.	+	0	ID=cds-YP_010897721.1;Parent=gene-RCV57_mgp08;Dbxref=GenBank:YP_010897721.1,GeneID:83993514;Name=YP_010897721.1;gbkey=CDS;gene=ATP6;locus_tag=RCV57_mgp08;product=ATP synthase F0 subunit 6;protein_id=YP_010897721.1;transl_table=4
+NC_081454.1	RefSeq	gene	8895	10370	.	+	.	ID=gene-RCV57_mgp07;Dbxref=GeneID:83993515;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=RCV57_mgp07
+NC_081454.1	RefSeq	CDS	8895	10370	.	+	0	ID=cds-YP_010897722.1;Parent=gene-RCV57_mgp07;Dbxref=GenBank:YP_010897722.1,GeneID:83993515;Name=YP_010897722.1;gbkey=CDS;gene=ND4;locus_tag=RCV57_mgp07;product=NADH dehydrogenase subunit 4;protein_id=YP_010897722.1;transl_table=4
+NC_081454.1	RefSeq	gene	10423	11598	.	+	.	ID=gene-RCV57_mgr01;Dbxref=GeneID:83993516;Name=rrn12;gbkey=Gene;gene=rrn12;gene_biotype=rRNA;locus_tag=RCV57_mgr01
+NC_081454.1	RefSeq	rRNA	10423	11598	.	+	.	ID=rna-RCV57_mgr01;Parent=gene-RCV57_mgr01;Dbxref=GeneID:83993516;gbkey=rRNA;gene=rrn12;locus_tag=RCV57_mgr01;product=12S ribosomal RNA
+NC_081454.1	RefSeq	exon	10423	11598	.	+	.	ID=exon-RCV57_mgr01-1;Parent=rna-RCV57_mgr01;Dbxref=GeneID:83993516;gbkey=rRNA;gene=rrn12;locus_tag=RCV57_mgr01;product=12S ribosomal RNA
+NC_081454.1	RefSeq	gene	12821	13609	.	+	.	ID=gene-RCV57_mgp06;Dbxref=GeneID:83993517;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=RCV57_mgp06
+NC_081454.1	RefSeq	CDS	12821	13609	.	+	0	ID=cds-YP_010897723.1;Parent=gene-RCV57_mgp06;Dbxref=GenBank:YP_010897723.1,GeneID:83993517;Name=YP_010897723.1;gbkey=CDS;gene=COX3;locus_tag=RCV57_mgp06;product=cytochrome c oxidase subunit III;protein_id=YP_010897723.1;transl_table=4
+NC_081454.1	RefSeq	gene	13666	14409	.	+	.	ID=gene-RCV57_mgp05;Dbxref=GeneID:83993518;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=RCV57_mgp05
+NC_081454.1	RefSeq	CDS	13666	14409	.	+	0	ID=cds-YP_010897724.1;Parent=gene-RCV57_mgp05;Dbxref=GenBank:YP_010897724.1,GeneID:83993518;Name=YP_010897724.1;gbkey=CDS;gene=COX2;locus_tag=RCV57_mgp05;product=cytochrome c oxidase subunit II;protein_id=YP_010897724.1;transl_table=4
+NC_081454.1	RefSeq	gene	14442	14741	.	+	.	ID=gene-RCV57_mgp04;Dbxref=GeneID:83993519;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=RCV57_mgp04
+NC_081454.1	RefSeq	CDS	14442	14741	.	+	0	ID=cds-YP_010897725.1;Parent=gene-RCV57_mgp04;Dbxref=GenBank:YP_010897725.1,GeneID:83993519;Name=YP_010897725.1;gbkey=CDS;gene=ND4L;locus_tag=RCV57_mgp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_010897725.1;transl_table=4
+NC_081454.1	RefSeq	gene	14774	15130	.	+	.	ID=gene-RCV57_mgp03;Dbxref=GeneID:83993520;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=RCV57_mgp03
+NC_081454.1	RefSeq	CDS	14774	15130	.	+	0	ID=cds-YP_010897726.1;Parent=gene-RCV57_mgp03;Dbxref=GenBank:YP_010897726.1,GeneID:83993520;Name=YP_010897726.1;gbkey=CDS;gene=ND3;locus_tag=RCV57_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_010897726.1;transl_table=4
+NC_081454.1	RefSeq	gene	16372	16441	.	+	.	ID=gene-RCV57_mgt02;Dbxref=GeneID:83993521;Name=trnW;gbkey=Gene;gene=trnW;gene_biotype=tRNA;locus_tag=RCV57_mgt02
+NC_081454.1	RefSeq	tRNA	16372	16441	.	+	.	ID=rna-RCV57_mgt02;Parent=gene-RCV57_mgt02;Dbxref=GeneID:83993521;gbkey=tRNA;gene=trnW;locus_tag=RCV57_mgt02;product=tRNA-Trp
+NC_081454.1	RefSeq	exon	16372	16441	.	+	.	ID=exon-RCV57_mgt02-1;Parent=rna-RCV57_mgt02;Dbxref=GeneID:83993521;gbkey=tRNA;gene=trnW;locus_tag=RCV57_mgt02;product=tRNA-Trp
+NC_081454.1	RefSeq	gene	16474	16692	.	+	.	ID=gene-RCV57_mgp02;Dbxref=GeneID:83993523;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=RCV57_mgp02
+NC_081454.1	RefSeq	CDS	16474	16692	.	+	0	ID=cds-YP_010897727.1;Parent=gene-RCV57_mgp02;Dbxref=GenBank:YP_010897727.1,GeneID:83993523;Name=YP_010897727.1;gbkey=CDS;gene=ATP8;locus_tag=RCV57_mgp02;product=ATP synthase F0 subunit 8;protein_id=YP_010897727.1;transl_table=4
+NC_081454.1	RefSeq	gene	16674	18275	.	+	.	ID=gene-RCV57_mgp01;Dbxref=GeneID:83993524;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=RCV57_mgp01
+NC_081454.1	RefSeq	CDS	16674	18275	.	+	0	ID=cds-YP_010897728.1;Parent=gene-RCV57_mgp01;Dbxref=GenBank:YP_010897728.1,GeneID:83993524;Name=YP_010897728.1;gbkey=CDS;gene=COX1;locus_tag=RCV57_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_010897728.1;transl_table=4
+

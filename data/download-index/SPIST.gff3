@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_011162.1 1 17177
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=50429
+NC_011162.1	RefSeq	region	1	17177	.	+	.	ID=NC_011162.1:1..17177;Dbxref=taxon:50429;Is_circular=true;Name=MT;common=Red Sea coral;country=Taiwan;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_011162.1	RefSeq	gene	1	71	.	+	.	ID=gene-KEG84_t01;Dbxref=GeneID:64987953;Name=KEG84_t01;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEG84_t01
+NC_011162.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-KEG84_t01;Parent=gene-KEG84_t01;Dbxref=GeneID:64987953;gbkey=tRNA;locus_tag=KEG84_t01;product=tRNA-Met
+NC_011162.1	RefSeq	exon	1	71	.	+	.	ID=exon-KEG84_t01-1;Parent=rna-KEG84_t01;Dbxref=GeneID:64987953;gbkey=tRNA;locus_tag=KEG84_t01;product=tRNA-Met
+NC_011162.1	RefSeq	gene	72	2007	.	+	.	ID=gene-KEG84_r02;Dbxref=GeneID:64987952;Name=KEG84_r02;gbkey=Gene;gene_biotype=rRNA;locus_tag=KEG84_r02
+NC_011162.1	RefSeq	rRNA	72	2007	.	+	.	ID=rna-KEG84_r02;Parent=gene-KEG84_r02;Dbxref=GeneID:64987952;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=KEG84_r02;product=l-rRNA
+NC_011162.1	RefSeq	exon	72	2007	.	+	.	ID=exon-KEG84_r02-1;Parent=rna-KEG84_r02;Dbxref=GeneID:64987952;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=KEG84_r02;product=l-rRNA
+NC_011162.1	RefSeq	gene	2008	14429	.	+	.	ID=gene-KEG84_r01;Dbxref=GeneID:6798793;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=KEG84_r01
+NC_011162.1	RefSeq	CDS	2008	2718	.	+	0	ID=cds-YP_002149701.1;Parent=gene-KEG84_r01;Dbxref=GenBank:YP_002149701.1,GeneID:6798793;Name=YP_002149701.1;gbkey=CDS;gene=ND5;locus_tag=KEG84_r01;product=NADH dehydrogenase subunit 5;protein_id=YP_002149701.1;transl_table=4
+NC_011162.1	RefSeq	CDS	13302	14429	.	+	0	ID=cds-YP_002149701.1;Parent=gene-KEG84_r01;Dbxref=GenBank:YP_002149701.1,GeneID:6798793;Name=YP_002149701.1;gbkey=CDS;gene=ND5;locus_tag=KEG84_r01;product=NADH dehydrogenase subunit 5;protein_id=YP_002149701.1;transl_table=4
+NC_011162.1	RefSeq	rRNA	10117	11030	.	+	.	ID=rna-KEG84_r01;Parent=gene-KEG84_r01;Dbxref=GeneID:6798793;Note=12S ribosomal RNA;gbkey=rRNA;gene=ND5;locus_tag=KEG84_r01;product=s-rRNA
+NC_011162.1	RefSeq	exon	10117	11030	.	+	.	ID=exon-KEG84_r01-1;Parent=rna-KEG84_r01;Dbxref=GeneID:6798793;Note=12S ribosomal RNA;gbkey=rRNA;gene=ND5;locus_tag=KEG84_r01;product=s-rRNA
+NC_011162.1	RefSeq	intron	2719	13301	.	+	.	ID=id-KEG84_r01;Parent=gene-KEG84_r01;Dbxref=GeneID:6798793;Note=group I intron;gbkey=intron;gene=ND5;locus_tag=KEG84_r01
+NC_011162.1	RefSeq	sequence_feature	7566	8670	.	+	.	ID=id-KEG84_r01-2;Dbxref=GeneID:6798793;Note=putative control region;gbkey=misc_feature;gene=ND5;locus_tag=KEG84_r01
+NC_011162.1	RefSeq	gene	2843	3820	.	+	.	ID=gene-KEG84_p12;Dbxref=GeneID:6798792;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=KEG84_p12
+NC_011162.1	RefSeq	CDS	2843	3820	.	+	0	ID=cds-YP_002149702.1;Parent=gene-KEG84_p12;Dbxref=GenBank:YP_002149702.1,GeneID:6798792;Name=YP_002149702.1;gbkey=CDS;gene=ND1;locus_tag=KEG84_p12;product=NADH dehydrogenase subunit 1;protein_id=YP_002149702.1;transl_table=4
+NC_011162.1	RefSeq	gene	3872	5011	.	+	.	ID=gene-KEG84_p11;Dbxref=GeneID:6798791;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=KEG84_p11
+NC_011162.1	RefSeq	CDS	3872	5011	.	+	0	ID=cds-YP_002149703.1;Parent=gene-KEG84_p11;Dbxref=GenBank:YP_002149703.1,GeneID:6798791;Name=YP_002149703.1;gbkey=CDS;gene=CYTB;locus_tag=KEG84_p11;product=cytochrome b;protein_id=YP_002149703.1;transl_table=4
+NC_011162.1	RefSeq	gene	5232	6323	.	+	.	ID=gene-KEG84_p10;Dbxref=GeneID:6798781;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=KEG84_p10
+NC_011162.1	RefSeq	CDS	5232	6323	.	+	0	ID=cds-YP_002149704.1;Parent=gene-KEG84_p10;Dbxref=GenBank:YP_002149704.1,GeneID:6798781;Name=YP_002149704.1;gbkey=CDS;gene=ND2;locus_tag=KEG84_p10;product=NADH dehydrogenase subunit 2;protein_id=YP_002149704.1;transl_table=4
+NC_011162.1	RefSeq	gene	6325	6888	.	+	.	ID=gene-KEG84_p09;Dbxref=GeneID:6798788;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=KEG84_p09
+NC_011162.1	RefSeq	CDS	6325	6888	.	+	0	ID=cds-YP_002149705.1;Parent=gene-KEG84_p09;Dbxref=GenBank:YP_002149705.1,GeneID:6798788;Name=YP_002149705.1;gbkey=CDS;gene=ND6;locus_tag=KEG84_p09;product=NADH dehydrogenase subunit 6;protein_id=YP_002149705.1;transl_table=4
+NC_011162.1	RefSeq	gene	6888	7565	.	+	.	ID=gene-KEG84_p08;Dbxref=GeneID:6798785;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=KEG84_p08
+NC_011162.1	RefSeq	CDS	6888	7565	.	+	0	ID=cds-YP_002149706.1;Parent=gene-KEG84_p08;Dbxref=GenBank:YP_002149706.1,GeneID:6798785;Name=YP_002149706.1;gbkey=CDS;gene=ATP6;locus_tag=KEG84_p08;product=ATP synthase F0 subunit 6;protein_id=YP_002149706.1;transl_table=4
+NC_011162.1	RefSeq	gene	8671	10116	.	+	.	ID=gene-KEG84_p07;Dbxref=GeneID:6798787;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=KEG84_p07
+NC_011162.1	RefSeq	CDS	8671	10116	.	+	0	ID=cds-YP_002149707.1;Parent=gene-KEG84_p07;Dbxref=GenBank:YP_002149707.1,GeneID:6798787;Name=YP_002149707.1;gbkey=CDS;gene=ND4;locus_tag=KEG84_p07;product=NADH dehydrogenase subunit 4;protein_id=YP_002149707.1;transl_table=4
+NC_011162.1	RefSeq	gene	11031	11810	.	+	.	ID=gene-KEG84_p06;Dbxref=GeneID:6798783;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=KEG84_p06
+NC_011162.1	RefSeq	CDS	11031	11810	.	+	0	ID=cds-YP_002149708.1;Parent=gene-KEG84_p06;Dbxref=GenBank:YP_002149708.1,GeneID:6798783;Name=YP_002149708.1;gbkey=CDS;gene=COX3;locus_tag=KEG84_p06;product=cytochrome c oxidase subunit III;protein_id=YP_002149708.1;transl_table=4
+NC_011162.1	RefSeq	gene	11786	12622	.	+	.	ID=gene-KEG84_p05;Dbxref=GeneID:6798782;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=KEG84_p05
+NC_011162.1	RefSeq	CDS	11786	12622	.	+	0	ID=cds-YP_002149709.1;Parent=gene-KEG84_p05;Dbxref=GenBank:YP_002149709.1,GeneID:6798782;Name=YP_002149709.1;gbkey=CDS;gene=COX2;locus_tag=KEG84_p05;product=cytochrome c oxidase subunit II;protein_id=YP_002149709.1;transl_table=4
+NC_011162.1	RefSeq	gene	12604	12903	.	+	.	ID=gene-KEG84_p04;Dbxref=GeneID:6798786;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=KEG84_p04
+NC_011162.1	RefSeq	CDS	12604	12903	.	+	0	ID=cds-YP_002149710.1;Parent=gene-KEG84_p04;Dbxref=GenBank:YP_002149710.1,GeneID:6798786;Name=YP_002149710.1;gbkey=CDS;gene=ND4L;locus_tag=KEG84_p04;product=NADH dehydrogenase subunit 4L;protein_id=YP_002149710.1;transl_table=4
+NC_011162.1	RefSeq	gene	12903	13247	.	+	.	ID=gene-KEG84_p03;Dbxref=GeneID:6798790;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=KEG84_p03
+NC_011162.1	RefSeq	CDS	12903	13247	.	+	0	ID=cds-YP_002149711.1;Parent=gene-KEG84_p03;Dbxref=GenBank:YP_002149711.1,GeneID:6798790;Name=YP_002149711.1;gbkey=CDS;gene=ND3;locus_tag=KEG84_p03;product=NADH dehydrogenase subunit 3;protein_id=YP_002149711.1;transl_table=4
+NC_011162.1	RefSeq	gene	14442	14511	.	+	.	ID=gene-KEG84_t02;Dbxref=GeneID:64987950;Name=KEG84_t02;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEG84_t02
+NC_011162.1	RefSeq	tRNA	14442	14511	.	+	.	ID=rna-KEG84_t02;Parent=gene-KEG84_t02;Dbxref=GeneID:64987950;gbkey=tRNA;locus_tag=KEG84_t02;product=tRNA-Trp
+NC_011162.1	RefSeq	exon	14442	14511	.	+	.	ID=exon-KEG84_t02-1;Parent=rna-KEG84_t02;Dbxref=GeneID:64987950;gbkey=tRNA;locus_tag=KEG84_t02;product=tRNA-Trp
+NC_011162.1	RefSeq	gene	14513	14761	.	+	.	ID=gene-KEG84_p02;Dbxref=GeneID:6798784;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=KEG84_p02
+NC_011162.1	RefSeq	CDS	14513	14761	.	+	0	ID=cds-YP_002149712.1;Parent=gene-KEG84_p02;Dbxref=GenBank:YP_002149712.1,GeneID:6798784;Name=YP_002149712.1;gbkey=CDS;gene=ATP8;locus_tag=KEG84_p02;product=ATP synthase F0 subunit 8;protein_id=YP_002149712.1;transl_table=4
+NC_011162.1	RefSeq	gene	14742	14803	.	+	.	ID=gene-KEG84_t03;Dbxref=GeneID:64987951;Name=KEG84_t03;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEG84_t03
+NC_011162.1	RefSeq	tRNA	14742	14803	.	+	.	ID=rna-KEG84_t03;Parent=gene-KEG84_t03;Dbxref=GeneID:64987951;gbkey=tRNA;locus_tag=KEG84_t03;product=tRNA-Trp
+NC_011162.1	RefSeq	exon	14742	14803	.	+	.	ID=exon-KEG84_t03-1;Parent=rna-KEG84_t03;Dbxref=GeneID:64987951;gbkey=tRNA;locus_tag=KEG84_t03;product=tRNA-Trp
+NC_011162.1	RefSeq	gene	15592	17139	.	+	.	ID=gene-KEG84_p01;Dbxref=GeneID:6798789;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=KEG84_p01
+NC_011162.1	RefSeq	CDS	15592	17139	.	+	0	ID=cds-YP_002149713.1;Parent=gene-KEG84_p01;Dbxref=GenBank:YP_002149713.1,GeneID:6798789;Name=YP_002149713.1;gbkey=CDS;gene=COX1;locus_tag=KEG84_p01;product=cytochrome c oxidase subunit I;protein_id=YP_002149713.1;transl_table=4
+

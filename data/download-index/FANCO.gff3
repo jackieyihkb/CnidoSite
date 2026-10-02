@@ -1,0 +1,45 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_015641.1 1 18875
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46750
+NC_015641.1	RefSeq	region	1	18875	.	+	.	ID=NC_015641.1:1..18875;Dbxref=taxon:46750;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;old-name=Euphyllia ancora
+NC_015641.1	RefSeq	gene	1	71	.	+	.	ID=gene-BI139_mgt01;Dbxref=GeneID:36475830;Name=BI139_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=BI139_mgt01
+NC_015641.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-BI139_mgt01;Parent=gene-BI139_mgt01;Dbxref=GeneID:36475830;gbkey=tRNA;locus_tag=BI139_mgt01;product=tRNA-Met
+NC_015641.1	RefSeq	exon	1	71	.	+	.	ID=exon-BI139_mgt01-1;Parent=rna-BI139_mgt01;Dbxref=GeneID:36475830;gbkey=tRNA;locus_tag=BI139_mgt01;product=tRNA-Met
+NC_015641.1	RefSeq	gene	72	2379	.	+	.	ID=gene-BI139_mgr02;Dbxref=GeneID:36475831;Name=BI139_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=BI139_mgr02
+NC_015641.1	RefSeq	rRNA	72	2379	.	+	.	ID=rna-BI139_mgr02;Parent=gene-BI139_mgr02;Dbxref=GeneID:36475831;gbkey=rRNA;locus_tag=BI139_mgr02;product=16S ribosomal RNA
+NC_015641.1	RefSeq	exon	72	2379	.	+	.	ID=exon-BI139_mgr02-1;Parent=rna-BI139_mgr02;Dbxref=GeneID:36475831;gbkey=rRNA;locus_tag=BI139_mgr02;product=16S ribosomal RNA
+NC_015641.1	RefSeq	gene	2458	16159	.	+	.	ID=gene-BI139_mgr01;Dbxref=GeneID:10751679;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=BI139_mgr01
+NC_015641.1	RefSeq	CDS	2458	3176	.	+	0	ID=cds-YP_004581265.1;Parent=gene-BI139_mgr01;Dbxref=GenBank:YP_004581265.1,GeneID:10751679;Name=YP_004581265.1;gbkey=CDS;gene=ND5;locus_tag=BI139_mgr01;product=NADH dehydrogenase subunit 5;protein_id=YP_004581265.1;transl_table=4
+NC_015641.1	RefSeq	CDS	15043	16159	.	+	1	ID=cds-YP_004581265.1;Parent=gene-BI139_mgr01;Dbxref=GenBank:YP_004581265.1,GeneID:10751679;Name=YP_004581265.1;gbkey=CDS;gene=ND5;locus_tag=BI139_mgr01;product=NADH dehydrogenase subunit 5;protein_id=YP_004581265.1;transl_table=4
+NC_015641.1	RefSeq	rRNA	10861	12037	.	+	.	ID=rna-BI139_mgr01;Parent=gene-BI139_mgr01;Dbxref=GeneID:10751679;gbkey=rRNA;gene=ND5;locus_tag=BI139_mgr01;product=12S ribosomal RNA
+NC_015641.1	RefSeq	exon	10861	12037	.	+	.	ID=exon-BI139_mgr01-1;Parent=rna-BI139_mgr01;Dbxref=GeneID:10751679;gbkey=rRNA;gene=ND5;locus_tag=BI139_mgr01;product=12S ribosomal RNA
+NC_015641.1	RefSeq	gene	3560	4543	.	+	.	ID=gene-BI139_mgp12;Dbxref=GeneID:10751680;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=BI139_mgp12
+NC_015641.1	RefSeq	CDS	3560	4543	.	+	0	ID=cds-YP_004581266.1;Parent=gene-BI139_mgp12;Dbxref=GenBank:YP_004581266.1,GeneID:10751680;Name=YP_004581266.1;gbkey=CDS;gene=ND1;locus_tag=BI139_mgp12;product=NADH dehydrogenase subunit 1;protein_id=YP_004581266.1;transl_table=4
+NC_015641.1	RefSeq	gene	4642	5796	.	+	.	ID=gene-BI139_mgp11;Dbxref=GeneID:10751668;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=BI139_mgp11
+NC_015641.1	RefSeq	CDS	4642	5796	.	+	0	ID=cds-YP_004581267.1;Parent=gene-BI139_mgp11;Dbxref=GenBank:YP_004581267.1,GeneID:10751668;Name=YP_004581267.1;gbkey=CDS;gene=CYTB;locus_tag=BI139_mgp11;product=cytochrome b;protein_id=YP_004581267.1;transl_table=4
+NC_015641.1	RefSeq	gene	6610	7707	.	+	.	ID=gene-BI139_mgp10;Dbxref=GeneID:10751669;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=BI139_mgp10
+NC_015641.1	RefSeq	CDS	6610	7707	.	+	0	ID=cds-YP_004581268.1;Parent=gene-BI139_mgp10;Dbxref=GenBank:YP_004581268.1,GeneID:10751669;Name=YP_004581268.1;gbkey=CDS;gene=ND2;locus_tag=BI139_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_004581268.1;transl_table=4
+NC_015641.1	RefSeq	gene	7731	8324	.	+	.	ID=gene-BI139_mgp09;Dbxref=GeneID:10751670;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=BI139_mgp09
+NC_015641.1	RefSeq	CDS	7731	8324	.	+	0	ID=cds-YP_004581269.1;Parent=gene-BI139_mgp09;Dbxref=GenBank:YP_004581269.1,GeneID:10751670;Name=YP_004581269.1;gbkey=CDS;gene=ND6;locus_tag=BI139_mgp09;product=NADH dehydrogenase subunit 6;protein_id=YP_004581269.1;transl_table=4
+NC_015641.1	RefSeq	gene	8374	9072	.	+	.	ID=gene-BI139_mgp08;Dbxref=GeneID:10751671;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=BI139_mgp08
+NC_015641.1	RefSeq	CDS	8374	9072	.	+	0	ID=cds-YP_004581270.1;Parent=gene-BI139_mgp08;Dbxref=GenBank:YP_004581270.1,GeneID:10751671;Name=YP_004581270.1;gbkey=CDS;gene=ATP6;locus_tag=BI139_mgp08;product=ATP synthase F0 subunit 6;protein_id=YP_004581270.1;transl_table=4
+NC_015641.1	RefSeq	gene	9333	10808	.	+	.	ID=gene-BI139_mgp07;Dbxref=GeneID:10751672;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=BI139_mgp07
+NC_015641.1	RefSeq	CDS	9333	10808	.	+	0	ID=cds-YP_004581271.1;Parent=gene-BI139_mgp07;Dbxref=GenBank:YP_004581271.1,GeneID:10751672;Name=YP_004581271.1;gbkey=CDS;gene=ND4;locus_tag=BI139_mgp07;product=NADH dehydrogenase subunit 4;protein_id=YP_004581271.1;transl_table=4
+NC_015641.1	RefSeq	gene	12698	13486	.	+	.	ID=gene-BI139_mgp06;Dbxref=GeneID:10751673;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=BI139_mgp06
+NC_015641.1	RefSeq	CDS	12698	13486	.	+	0	ID=cds-YP_004581272.1;Parent=gene-BI139_mgp06;Dbxref=GenBank:YP_004581272.1,GeneID:10751673;Name=YP_004581272.1;gbkey=CDS;gene=COX3;locus_tag=BI139_mgp06;product=cytochrome c oxidase subunit III;protein_id=YP_004581272.1;transl_table=4
+NC_015641.1	RefSeq	gene	13506	14249	.	+	.	ID=gene-BI139_mgp05;Dbxref=GeneID:10751674;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=BI139_mgp05
+NC_015641.1	RefSeq	CDS	13506	14249	.	+	0	ID=cds-YP_004581273.1;Parent=gene-BI139_mgp05;Dbxref=GenBank:YP_004581273.1,GeneID:10751674;Name=YP_004581273.1;gbkey=CDS;gene=COX2;locus_tag=BI139_mgp05;product=cytochrome c oxidase subunit II;protein_id=YP_004581273.1;transl_table=4
+NC_015641.1	RefSeq	gene	14249	14548	.	+	.	ID=gene-BI139_mgp04;Dbxref=GeneID:10751675;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=BI139_mgp04
+NC_015641.1	RefSeq	CDS	14249	14548	.	+	0	ID=cds-YP_004581274.1;Parent=gene-BI139_mgp04;Dbxref=GenBank:YP_004581274.1,GeneID:10751675;Name=YP_004581274.1;gbkey=CDS;gene=ND4L;locus_tag=BI139_mgp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_004581274.1;transl_table=4
+NC_015641.1	RefSeq	gene	14565	14921	.	+	.	ID=gene-BI139_mgp03;Dbxref=GeneID:10751676;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=BI139_mgp03
+NC_015641.1	RefSeq	CDS	14565	14921	.	+	0	ID=cds-YP_004581275.1;Parent=gene-BI139_mgp03;Dbxref=GenBank:YP_004581275.1,GeneID:10751676;Name=YP_004581275.1;gbkey=CDS;gene=ND3;locus_tag=BI139_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_004581275.1;transl_table=4
+NC_015641.1	RefSeq	gene	16172	16241	.	+	.	ID=gene-BI139_mgt02;Dbxref=GeneID:36475829;Name=BI139_mgt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=BI139_mgt02
+NC_015641.1	RefSeq	tRNA	16172	16241	.	+	.	ID=rna-BI139_mgt02;Parent=gene-BI139_mgt02;Dbxref=GeneID:36475829;gbkey=tRNA;locus_tag=BI139_mgt02;product=tRNA-Trp
+NC_015641.1	RefSeq	exon	16172	16241	.	+	.	ID=exon-BI139_mgt02-1;Parent=rna-BI139_mgt02;Dbxref=GeneID:36475829;gbkey=tRNA;locus_tag=BI139_mgt02;product=tRNA-Trp
+NC_015641.1	RefSeq	gene	16274	16492	.	+	.	ID=gene-BI139_mgp02;Dbxref=GeneID:10751677;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=BI139_mgp02
+NC_015641.1	RefSeq	CDS	16274	16492	.	+	0	ID=cds-YP_004581276.1;Parent=gene-BI139_mgp02;Dbxref=GenBank:YP_004581276.1,GeneID:10751677;Name=YP_004581276.1;gbkey=CDS;gene=ATP8;locus_tag=BI139_mgp02;product=ATP synthase F0 subunit 8;protein_id=YP_004581276.1;transl_table=4
+NC_015641.1	RefSeq	gene	16474	18774	.	+	.	ID=gene-BI139_mgp01;Dbxref=GeneID:10751678;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=BI139_mgp01
+NC_015641.1	RefSeq	CDS	16474	18774	.	+	0	ID=cds-YP_004581277.1;Parent=gene-BI139_mgp01;Dbxref=GenBank:YP_004581277.1,GeneID:10751678;Name=YP_004581277.1;gbkey=CDS;gene=COX1;locus_tag=BI139_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_004581277.1;transl_table=4
+

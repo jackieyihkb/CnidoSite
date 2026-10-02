@@ -1,0 +1,402 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 1em;
+  padding: 0;
+  text-align: center
+}
+.p3p_page { 
+  text-align: left;
+  margin: auto;
+  width: 1024px;
+}
+table {
+  border: 0;
+  width: 100%;
+  empty-cells: show;
+}
+td {
+  border: 0;
+  padding: 0.15em;
+}
+a:visited { 
+  color: blue; 
+}
+.p3p_shaded {
+  background-color: #e6e6cd;
+}
+.p3p_more_space {
+  padding: 0.2em;
+}
+.p3p_big_space {
+  padding: 0.4em;
+}
+
+.p3p_blue {
+  background-color: #ccccff;
+}
+.p3p_news {
+  float: left;
+  width: 800px;
+  padding: 2px;
+  margin: 8px 0 0 8px;
+  line-height: normal;
+  text-align: center; 
+}
+.p3p_top_bar {
+  width: 900px;
+  padding: 0px;
+  border: 2px solid #ccccff;
+}
+.p3p_top_bar_title {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.p3p_top_bar_explain {
+  font-size: 1.0em;
+  font-weight: 500;
+}
+.p3p_task_bar {
+  width: 900px;
+  border: 2px solid #ccccff;
+  margin: 4px 0px 0px 0px;
+  clear: left;
+  float: left;
+  background-color: #ffffe6;
+  overflow: hidden;
+  padding: 0px;
+}
+.p3p_no_border_explain {
+  border: 0;
+  font-style: italic;
+  font-size: smaller;
+}
+.p3_prop {
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+.p3p_tab_help_table {
+  font-family: monospace;
+  font-size: 12px;
+}
+div#P3P_TAB_HELP{
+  padding: 10px;
+  width: 880px;
+  margin: 4px 0px 0px 0px;
+}
+div#p3p_no_javascript {
+  width: 880px;
+  border: 2px solid #ccccff;
+  margin: 4px 0px 0px 0px;
+  clear: left;
+  float: left;
+  background-color: red;
+  overflow: hidden;
+  padding: 10px;	
+}
+div#P3P_TOP_MESSAGE_ERROR {
+  width: 880px;
+  border: 2px solid #ccccff;
+  margin: 4px 0px 0px 0px;
+  clear: left;
+  float: left;
+  background-color: red;
+  overflow: hidden;
+  padding: 10px;
+}
+div#P3P_TOP_MESSAGE_WARNING {
+  width: 880px;
+  border: 2px solid #ccccff;
+  margin: 4px 0px 0px 0px;
+  clear: left;
+  float: left;
+  background-color: #ffff66;
+  overflow: hidden;
+  padding: 10px;
+}
+div#P3P_TOP_MESSAGE_MESSAGE {
+  width: 880px;
+  border: 2px solid #ccccff;
+  margin: 4px 0px 0px 0px;
+  clear: left;
+  float: left;
+  background-color: #33cc33;
+  overflow: hidden;
+  padding: 10px;
+}
+div#P3P_MENU_BAR {
+  float: left;
+  width: 900px;
+  padding: 0px;
+  margin: 8px 0 0 8px;
+  line-height: normal;
+  text-align: left;
+}
+div#P3P_MENU_BAR ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+div#P3P_MENU_BAR li {
+  float: left;
+  margin: 0;
+  border: 2px solid #ccccff;
+  border-bottom-width: 0;
+}
+div#P3P_MENU_BAR a {
+  top: 2px;
+  display: block;
+  padding: 0.24em 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.p3p_tab_page {
+  width: 900px;
+  border: 2px solid #ccccff;
+  clear: left;
+  float: left;
+  background-color: #ffffe6;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+.p3p_fit_to_table {
+  padding:0.3em;
+}
+.p3p_section {
+  margin: 4px;
+  border: 1px dashed #ccccff;
+}
+.p3p_top_right {
+  text-align: right;
+  vertical-align: top;
+}
+.p3p_footer_bar {
+  float:left; 
+  width: 900px; 
+  padding: 0px;
+  margin: 8px 0 8px 0;
+  border: 2px solid #ccccff;
+  text-align: left;
+}
+.p3p_footer_l {
+  float: left;
+  margin: 8px;
+  font-size: 80%;
+  font-family: Arial;
+  font-weight: bold;
+  text-align: left;
+}
+.p3p_footer_r {
+  float: right;
+  margin: 8px;
+  font-size: 80%;
+  font-family: Arial;
+  font-weight: bold;
+  text-align: left;
+}
+.p3p_result_sequence {
+  float: left;
+  font-size:1.0em;
+  font-family:Courier,monospace;
+  padding-top: 20px;
+  padding-right: 60px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+}
+.p3p_pair_box_div {
+  margin: 5px;
+  border: 2px solid #ccccff;
+  clear: left;
+  float: left;
+  width: 886px;	
+}
+.p3p_pair_box_table{
+  border-collapse: collapse;
+}
+.p3p_pair_box_cell {
+  padding-top: 0.45em;
+  padding-right: 0.2em;
+  padding-bottom: 0.45em;
+  padding-left: 0.2em;
+}
+.p3p_pair_box_cell_s {
+  padding-top: 0.45em;
+  padding-right: 0.2em;
+  padding-bottom: 0.45em;
+  padding-left: 0.2em;
+  font-size: 90%;
+}
+.p3p_excluded_region {
+  background-color: #ff503c;
+  color: #000000;
+}
+.p3p_target {
+  background-color: #a0fa82;
+  color: #000000;
+}
+.p3p_included_region {
+  background-color: #6ed25a;
+  color: #000000;
+}
+.p3p_primer_overlap_pos {
+  background-color: #a0a0a0;
+  color: #000000;
+}
+.p3p_left_primer {
+  background-color: #ccccff;
+  color: #000000;
+}
+.p3p_internal_oligo {
+  background-color: #000000;
+  color: #ffffff;
+}
+.p3p_right_primer {
+  background-color: #faf04b;
+  color: #000000;
+}
+.p3p_primer_pair {
+  background-color: #c8c8c8;
+  color: #000000;
+}
+.p3p_left_right_primer {
+ background-color: #8ce100;
+ color: #000000;
+}
+.p3p_oligo_cell {
+  padding: 0.2em;
+}
+.p3p_oligo_problem {
+  padding: 0.2em;
+  background-color: #ff783c; 
+}
+.p3p_long_list {
+  padding: 15px;
+}
+.p3p_long_list_table {
+  text-align: left;
+  border-collapse: collapse;
+}
+.p3p_cell_long_list_l {
+  text-align: left;
+}
+.p3p_cell_long_list_r {
+  text-align: right;
+}
+.p3p_table_with_border {
+  border: 1px solid #000000;
+  border-collapse: collapse; 
+}
+.p3p_cell_with_border { 
+  border: 1px solid #000000;
+  padding: 0.2em;
+}
+div#p3p_uuid_link {
+  margin: 7px;
+  border: none;
+  clear: left;
+  float: left;
+  width: 886px;
+}
+div#p3p_statictics {
+  margin: 7px;
+  border: none;
+  clear: left;
+  float: left;
+  width: 886px;
+}
+.p3p_comp_file_l{
+  border: 1px solid #000000;
+  padding: 0.2em;
+ font-size: 0.8em;
+}
+.p3p_comp_file_r{
+  border: 1px solid #000000;
+  padding: 0.2em;
+  font-size: 0.9em;
+}
+
+
+
+  	div#primer3plus_messages { 
+        width:900px;
+        border: 2px solid #ccccff;
+        margin: 4px 0px 0px 0px;
+        clear: left;
+        float: left;
+        background-color: rgb(255, 0, 0);
+        overflow:hidden;
+        padding: 0px;
+	}
+	div#primer3plus_results {
+		width:900px;
+		border: 2px solid #ccccff;
+		margin: 4px 0px 0px 0px;
+		clear: left;
+		float: left;
+		background-color: rgb(255, 255, 230);
+		overflow:hidden;
+		padding: 0px;
+	}
+	
+	div#primer3plus_select_sequence {
+		width:900px;
+		border: 2px solid #ccccff;
+		margin: 4px 0px 0px 0px;
+		clear: left;
+		float: left;
+		background-color: rgb(255, 255, 230);
+		overflow:hidden;
+		padding: 0px;
+	}
+	div#primer3plus_manager {
+		width:900px;
+		border: 2px solid #ccccff;
+		margin: 4px 0px 0px 0px;
+		clear: left;
+		float: left;
+		background-color: rgb(255, 255, 230);
+		overflow:hidden;
+		padding: 0px;
+	}
+	.primer3plus_tab_page_no_border {
+		width:900px;
+		clear: left;
+		float: left;
+		background-color: rgb(255, 255, 230);
+		overflow:hidden;
+	}	
+	
+	.primer3plus_submit {
+		width: 900px;
+		clear: left;
+		float: left;
+		background-color: rgb(255, 255, 230);
+		overflow:hidden;
+	}
+
+  .primer3plus_cell_no_border_problem { border:0; padding:0.15em;background-color:rgb(255,120,60); }
+  .primer3plus_cell_no_border_uli_bd { border:0; padding:0.15em; font-weight:bold; text-decoration:underline; }
+  .primer3plus_cell_no_border_right { border:0; padding:0.15em; text-align:right;}
+  .primer3plus_note { background-color:rgb(255,120,60); padding:0px; }
+  .primer3plus_excluded_region { background-color:rgb(255,80,60); color:rgb(0,0,0); }
+  .primer3plus_target { background-color:rgb(160,250,130); color:rgb(0,0,0); }
+  .primer3plus_included_region { background-color:rgb(110,210,90); color:rgb(0,0,0); }
+  .primer3plus_left_primer { background-color:#ccccff; color:rgb(0,0,0); }
+  .primer3plus_internal_oligo { background-color:rgb(0,0,0); color:rgb(255,255,255); }
+  .primer3plus_right_primer { background-color:rgb(250,240,75); color:rgb(0,0,0); }
+  .primer3plus_left_right_primer { background-color:rgb(140,225,0); color:rgb(0,0,0); }
+  .primer3plus_primer_overlap_pos { background-color:rgb(160,160,160); color:rgb(0,0,0); }
+  .primer3plus_warning { background-color:rgb(255,120,60); }
+  .primer3plus_primer_pair { background-color:rgb(200,200,200); color:rgb(0,0,0); }
+  div#primer3plus_result_sequence { float: left; font-size:1.0em; font-family:Courier,monospace; }
+  div#primer3plus_result_sequence_id  { float: left; font-size:1.0em; font-weight:bold;}
+  .primer3plus_select_all { width: 100%; clear: left; float: left;background-color: rgb(255, 255, 230);}
+  .region_button { width: 25px; }
+  textarea#sequenceTextarea { font-family:Courier,monospace; width:95%; }
+  .primer3plus_top_bar_explain_cell { border:0; font-style: italic; font-size: 0.9em; background: rgb(255, 255, 230);}
+

@@ -1,0 +1,42 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PP498686.1 1 19018
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2918053
+PP498686.1	Genbank	region	1	19018	.	+	.	ID=PP498686.1:1..19018;Dbxref=taxon:2918053;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;isolate=M6106;mol_type=genomic DNA;tissue-type=polyp
+PP498686.1	Genbank	gene	16	1761	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	16	1761	.	+	0	ID=cds-WZH56297.1;Parent=gene-COX1;Dbxref=NCBI_GP:WZH56297.1;Name=WZH56297.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=WZH56297.1;transl_table=4
+PP498686.1	Genbank	rRNA	1762	2692	.	+	.	ID=rna-PP498686.1:1762..2692;gbkey=rRNA;product=12S ribosomal RNA
+PP498686.1	Genbank	exon	1762	2692	.	+	.	ID=exon-PP498686.1:1762..2692-1;Parent=rna-PP498686.1:1762..2692;gbkey=rRNA;product=12S ribosomal RNA
+PP498686.1	Genbank	gene	2702	3673	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	2702	3673	.	+	0	ID=cds-WZH56298.1;Parent=gene-ND1;Dbxref=NCBI_GP:WZH56298.1;Name=WZH56298.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=WZH56298.1;transl_table=4
+PP498686.1	Genbank	gene	3709	4902	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	3709	4902	.	+	0	ID=cds-WZH56299.1;Parent=gene-CYTB;Dbxref=NCBI_GP:WZH56299.1;Name=WZH56299.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=WZH56299.1;transl_table=4
+PP498686.1	Genbank	gene	4957	7947	.	+	.	ID=gene-msh1;Name=msh1;gbkey=Gene;gene=msh1;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	4957	7947	.	+	0	ID=cds-WZH56300.1;Parent=gene-msh1;Dbxref=NCBI_GP:WZH56300.1;Name=WZH56300.1;gbkey=CDS;gene=msh1;product=MutS-like protein;protein_id=WZH56300.1;transl_table=4
+PP498686.1	Genbank	rRNA	7948	9931	.	+	.	ID=rna-PP498686.1:7948..9931;gbkey=rRNA;product=16S ribosomal RNA
+PP498686.1	Genbank	exon	7948	9931	.	+	.	ID=exon-PP498686.1:7948..9931-1;Parent=rna-PP498686.1:7948..9931;gbkey=rRNA;product=16S ribosomal RNA
+PP498686.1	Genbank	gene	9965	11329	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	9965	11329	.	+	0	ID=cds-WZH56301.1;Parent=gene-ND2;Dbxref=NCBI_GP:WZH56301.1;Name=WZH56301.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=WZH56301.1;transl_table=4
+PP498686.1	Genbank	gene	11317	13134	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	11317	13134	.	+	0	ID=cds-WZH56302.1;Parent=gene-ND5;Dbxref=NCBI_GP:WZH56302.1;Name=WZH56302.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=WZH56302.1;transl_table=4
+PP498686.1	Genbank	gene	13157	14605	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	13157	14605	.	+	0	ID=cds-WZH56303.1;Parent=gene-ND4;Dbxref=NCBI_GP:WZH56303.1;Name=WZH56303.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=WZH56303.1;transl_table=4
+PP498686.1	Genbank	gene	14666	14736	.	-	.	ID=gene-trnM(cat);Name=trnM(cat);gbkey=Gene;gene=trnM(cat);gene_biotype=tRNA
+PP498686.1	Genbank	tRNA	14666	14736	.	-	.	ID=rna-trnM(cat);Parent=gene-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PP498686.1	Genbank	exon	14666	14736	.	-	.	ID=exon-trnM(cat)-1;Parent=rna-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PP498686.1	Genbank	gene	14776	15561	.	-	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	14776	15561	.	-	0	ID=cds-WZH56304.1;Parent=gene-COX3;Dbxref=NCBI_GP:WZH56304.1;Name=WZH56304.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=WZH56304.1;transl_table=4
+PP498686.1	Genbank	gene	15589	16296	.	-	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	15589	16296	.	-	0	ID=cds-WZH56305.1;Parent=gene-ATP6;Dbxref=NCBI_GP:WZH56305.1;Name=WZH56305.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=WZH56305.1;transl_table=4
+PP498686.1	Genbank	gene	16317	16532	.	-	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	16317	16532	.	-	0	ID=cds-WZH56306.1;Parent=gene-ATP8;Dbxref=NCBI_GP:WZH56306.1;Name=WZH56306.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=WZH56306.1;transl_table=4
+PP498686.1	Genbank	gene	16553	17314	.	-	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	16553	17314	.	-	0	ID=cds-WZH56307.1;Parent=gene-COX2;Dbxref=NCBI_GP:WZH56307.1;Name=WZH56307.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=WZH56307.1;transl_table=4
+PP498686.1	Genbank	gene	17380	17673	.	-	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	17380	17673	.	-	0	ID=cds-WZH56308.1;Parent=gene-ND4L;Dbxref=NCBI_GP:WZH56308.1;Name=WZH56308.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=WZH56308.1;transl_table=4
+PP498686.1	Genbank	gene	17712	18065	.	-	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	17712	18065	.	-	0	ID=cds-WZH56309.1;Parent=gene-ND3;Dbxref=NCBI_GP:WZH56309.1;Name=WZH56309.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=WZH56309.1;transl_table=4
+PP498686.1	Genbank	gene	18101	18655	.	-	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PP498686.1	Genbank	CDS	18101	18655	.	-	0	ID=cds-WZH56310.1;Parent=gene-ND6;Dbxref=NCBI_GP:WZH56310.1;Name=WZH56310.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=WZH56310.1;transl_table=4
+

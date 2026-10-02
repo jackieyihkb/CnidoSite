@@ -1,0 +1,45 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PV255755.1 1 16468
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=128131
+PV255755.1	Genbank	region	1	16468	.	+	.	ID=PV255755.1:1..16468;Dbxref=taxon:128131;Is_circular=true;Name=MT;collected-by=Zheng Shuo;collection-date=24-Nov-2015;country=China;gbkey=Src;genome=mitochondrion;lat-lon=24.906786 N 119.289528 E;mol_type=genomic DNA
+PV255755.1	Genbank	gene	1500	3028	.	+	.	ID=gene-rnl;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+PV255755.1	Genbank	rRNA	1500	3028	.	+	.	ID=rna-rnl;Parent=gene-rnl;gbkey=rRNA;gene=rnl;product=16S ribosomal RNA
+PV255755.1	Genbank	exon	1500	3028	.	+	.	ID=exon-rnl-1;Parent=rna-rnl;gbkey=rRNA;gene=rnl;product=16S ribosomal RNA
+PV255755.1	Genbank	gene	3286	4851	.	-	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	3286	4851	.	-	0	ID=cds-YDU70298.1;Parent=gene-COX1;Dbxref=NCBI_GP:YDU70298.1;Name=YDU70298.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=YDU70298.1;transl_table=4
+PV255755.1	Genbank	gene	4990	5670	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	4990	5670	.	+	0	ID=cds-YDU70299.1;Parent=gene-COX2;Dbxref=NCBI_GP:YDU70299.1;Name=YDU70299.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=YDU70299.1;transl_table=4
+PV255755.1	Genbank	gene	5677	5746	.	+	.	ID=gene-trnW(tca);Name=trnW(tca);gbkey=Gene;gene=trnW(tca);gene_biotype=tRNA
+PV255755.1	Genbank	tRNA	5677	5746	.	+	.	ID=rna-trnW(tca);Parent=gene-trnW(tca);gbkey=tRNA;gene=trnW(tca);product=tRNA-Trp
+PV255755.1	Genbank	exon	5677	5746	.	+	.	ID=exon-trnW(tca)-1;Parent=rna-trnW(tca);gbkey=tRNA;gene=trnW(tca);product=tRNA-Trp
+PV255755.1	Genbank	gene	5752	5952	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	5752	5952	.	+	0	ID=cds-YDU70300.1;Parent=gene-ATP8;Dbxref=NCBI_GP:YDU70300.1;Name=YDU70300.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=YDU70300.1;transl_table=4
+PV255755.1	Genbank	gene	5952	6659	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	5952	6659	.	+	0	ID=cds-YDU70301.1;Parent=gene-ATP6;Dbxref=NCBI_GP:YDU70301.1;Name=YDU70301.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=YDU70301.1;transl_table=4
+PV255755.1	Genbank	gene	6659	7444	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	6659	7444	.	+	0	ID=cds-YDU70302.1;Parent=gene-COX3;Dbxref=NCBI_GP:YDU70302.1;Name=YDU70302.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=YDU70302.1;transl_table=4
+PV255755.1	Genbank	gene	7449	7519	.	+	.	ID=gene-trnM(cat);Name=trnM(cat);gbkey=Gene;gene=trnM(cat);gene_biotype=tRNA
+PV255755.1	Genbank	tRNA	7449	7519	.	+	.	ID=rna-trnM(cat);Parent=gene-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PV255755.1	Genbank	exon	7449	7519	.	+	.	ID=exon-trnM(cat)-1;Parent=rna-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PV255755.1	Genbank	gene	7827	8834	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	7827	8834	.	+	0	ID=cds-YDU70303.1;Parent=gene-ND2;Dbxref=NCBI_GP:YDU70303.1;Name=YDU70303.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=YDU70303.1;transl_table=4
+PV255755.1	Genbank	gene	8835	10649	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	8835	10649	.	+	0	ID=cds-YDU70304.1;Parent=gene-ND5;Dbxref=NCBI_GP:YDU70304.1;Name=YDU70304.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=YDU70304.1;transl_table=4
+PV255755.1	Genbank	gene	10780	11612	.	+	.	ID=gene-rns;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+PV255755.1	Genbank	rRNA	10780	11612	.	+	.	ID=rna-rns;Parent=gene-rns;gbkey=rRNA;gene=rns;product=12S ribosomal RNA
+PV255755.1	Genbank	exon	10780	11612	.	+	.	ID=exon-rns-1;Parent=rna-rns;gbkey=rRNA;gene=rns;product=12S ribosomal RNA
+PV255755.1	Genbank	gene	11644	12186	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	11644	12186	.	+	0	ID=cds-YDU70305.1;Parent=gene-ND6;Dbxref=NCBI_GP:YDU70305.1;Name=YDU70305.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=YDU70305.1;transl_table=4
+PV255755.1	Genbank	gene	12200	12532	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	12200	12532	.	+	0	ID=cds-YDU70306.1;Parent=gene-ND3;Dbxref=NCBI_GP:YDU70306.1;Name=YDU70306.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=YDU70306.1;transl_table=4
+PV255755.1	Genbank	gene	12523	12825	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	12523	12825	.	+	0	ID=cds-YDU70307.1;Parent=gene-ND4L;Dbxref=NCBI_GP:YDU70307.1;Name=YDU70307.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=YDU70307.1;transl_table=4
+PV255755.1	Genbank	gene	12936	13796	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	12936	13796	.	+	0	ID=cds-YDU70308.1;Parent=gene-ND1;Dbxref=NCBI_GP:YDU70308.1;Name=YDU70308.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=YDU70308.1;transl_table=4
+PV255755.1	Genbank	gene	13907	15238	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	13907	15238	.	+	0	ID=cds-YDU70309.1;Parent=gene-ND4;Dbxref=NCBI_GP:YDU70309.1;Name=YDU70309.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=YDU70309.1;transl_table=4
+PV255755.1	Genbank	gene	15243	16466	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PV255755.1	Genbank	CDS	15243	16466	.	+	0	ID=cds-YDU70310.1;Parent=gene-CYTB;Dbxref=NCBI_GP:YDU70310.1;Name=YDU70310.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=YDU70310.1;transl_table=4
+

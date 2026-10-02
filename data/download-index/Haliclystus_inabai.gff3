@@ -1,0 +1,51 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region BK067228.1 1 17399
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1843197
+BK067228.1	tpg	region	1	17399	.	+	.	ID=BK067228.1:1..17399;Dbxref=taxon:1843197;Name=MT;gbkey=Src;genome=mitochondrion;isolate=IRGN AP055;mol_type=genomic DNA;specimen-voucher=IRGN:AP055
+BK067228.1	tpg	inverted_repeat	1	373	.	-	.	ID=id-BK067228.1:1..373;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+BK067228.1	tpg	gene	358	1809	.	-	.	ID=gene-polB;Name=polB;gbkey=Gene;gene=polB;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	358	1809	.	-	0	ID=cds-DBB38823.1;Parent=gene-polB;Dbxref=NCBI_GP:DBB38823.1;Name=DBB38823.1;gbkey=CDS;gene=polB;product=putative DNA polymerase type B;protein_id=DBB38823.1;transl_table=4
+BK067228.1	tpg	gene	1802	2089	.	-	.	ID=gene-orf314;Name=orf314;gbkey=Gene;gene=orf314;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	1802	2089	.	-	0	ID=cds-DBB38824.1;Parent=gene-orf314;Dbxref=NCBI_GP:DBB38824.1;Name=DBB38824.1;gbkey=CDS;gene=orf314;product=hypothetical protein;protein_id=DBB38824.1;transl_table=4
+BK067228.1	tpg	gene	2090	3916	.	-	.	ID=gene-rnl;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+BK067228.1	tpg	rRNA	2090	3916	.	-	.	ID=rna-rnl;Parent=gene-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+BK067228.1	tpg	exon	2090	3916	.	-	.	ID=exon-rnl-1;Parent=rna-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+BK067228.1	tpg	gene	3917	5533	.	-	.	ID=gene-cox1;Name=cox1;gbkey=Gene;gene=cox1;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	3917	5533	.	-	0	ID=cds-DBB38825.1;Parent=gene-cox1;Dbxref=NCBI_GP:DBB38825.1;Name=DBB38825.1;gbkey=CDS;gene=cox1;product=cytochrome c oxidase subunit 1;protein_id=DBB38825.1;transl_table=4
+BK067228.1	tpg	gene	5589	6335	.	+	.	ID=gene-cox2;Name=cox2;gbkey=Gene;gene=cox2;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	5589	6335	.	+	0	ID=cds-DBB38826.1;Parent=gene-cox2;Dbxref=NCBI_GP:DBB38826.1;Name=DBB38826.1;gbkey=CDS;gene=cox2;product=cytochrome c oxidase subunit 2;protein_id=DBB38826.1;transl_table=4
+BK067228.1	tpg	gene	6341	6411	.	+	.	ID=gene-trnW(uca);Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA
+BK067228.1	tpg	tRNA	6341	6411	.	+	.	ID=rna-trnW(uca);Parent=gene-trnW(uca);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+BK067228.1	tpg	exon	6341	6411	.	+	.	ID=exon-trnW(uca)-1;Parent=rna-trnW(uca);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+BK067228.1	tpg	gene	6412	6615	.	+	.	ID=gene-atp8;Name=atp8;gbkey=Gene;gene=atp8;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	6412	6615	.	+	0	ID=cds-DBB38827.1;Parent=gene-atp8;Dbxref=NCBI_GP:DBB38827.1;Name=DBB38827.1;gbkey=CDS;gene=atp8;product=ATP synthase F0 subunit 8;protein_id=DBB38827.1;transl_table=4
+BK067228.1	tpg	gene	6609	7316	.	+	.	ID=gene-atp6;Name=atp6;gbkey=Gene;gene=atp6;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	6609	7316	.	+	0	ID=cds-DBB38828.1;Parent=gene-atp6;Dbxref=NCBI_GP:DBB38828.1;Name=DBB38828.1;gbkey=CDS;gene=atp6;product=ATP synthase F0 subunit 6;protein_id=DBB38828.1;transl_table=4
+BK067228.1	tpg	gene	7327	8112	.	+	.	ID=gene-cox3;Name=cox3;gbkey=Gene;gene=cox3;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	7327	8112	.	+	0	ID=cds-DBB38829.1;Parent=gene-cox3;Dbxref=NCBI_GP:DBB38829.1;Name=DBB38829.1;gbkey=CDS;gene=cox3;product=cytochrome c oxidase subunit 3;protein_id=DBB38829.1;transl_table=4
+BK067228.1	tpg	gene	8118	8184	.	+	.	ID=gene-trnM(cau);Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA
+BK067228.1	tpg	tRNA	8118	8184	.	+	.	ID=rna-trnM(cau);Parent=gene-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+BK067228.1	tpg	exon	8118	8184	.	+	.	ID=exon-trnM(cau)-1;Parent=rna-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+BK067228.1	tpg	gene	8186	9532	.	+	.	ID=gene-nad2;Name=nad2;gbkey=Gene;gene=nad2;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	8186	9532	.	+	0	ID=cds-DBB38830.1;Parent=gene-nad2;Dbxref=NCBI_GP:DBB38830.1;Name=DBB38830.1;gbkey=CDS;gene=nad2;product=NADH dehydrogenase subunit 2;protein_id=DBB38830.1;transl_table=4
+BK067228.1	tpg	gene	9520	11341	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	9520	11341	.	+	0	ID=cds-DBB38831.1;Parent=gene-nad5;Dbxref=NCBI_GP:DBB38831.1;Name=DBB38831.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=DBB38831.1;transl_except=(pos:11341%2Caa:TERM);transl_table=4
+BK067228.1	tpg	gene	11342	12254	.	+	.	ID=gene-rns;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+BK067228.1	tpg	rRNA	11342	12254	.	+	.	ID=rna-rns;Parent=gene-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+BK067228.1	tpg	exon	11342	12254	.	+	.	ID=exon-rns-1;Parent=rna-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+BK067228.1	tpg	gene	12255	12806	.	+	.	ID=gene-nad6;Name=nad6;gbkey=Gene;gene=nad6;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	12255	12806	.	+	0	ID=cds-DBB38832.1;Parent=gene-nad6;Dbxref=NCBI_GP:DBB38832.1;Name=DBB38832.1;gbkey=CDS;gene=nad6;product=NADH dehydrogenase subunit 6;protein_id=DBB38832.1;transl_table=4
+BK067228.1	tpg	gene	12800	13153	.	+	.	ID=gene-nad3;Name=nad3;gbkey=Gene;gene=nad3;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	12800	13153	.	+	0	ID=cds-DBB38833.1;Parent=gene-nad3;Dbxref=NCBI_GP:DBB38833.1;Name=DBB38833.1;gbkey=CDS;gene=nad3;product=NADH dehydrogenase subunit 3;protein_id=DBB38833.1;transl_table=4
+BK067228.1	tpg	gene	13154	13453	.	+	.	ID=gene-nad4L;Name=nad4L;gbkey=Gene;gene=nad4L;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	13154	13453	.	+	0	ID=cds-DBB38834.1;Parent=gene-nad4L;Dbxref=NCBI_GP:DBB38834.1;Name=DBB38834.1;gbkey=CDS;gene=nad4L;product=NADH dehydrogenase subunit 4L;protein_id=DBB38834.1;transl_table=4
+BK067228.1	tpg	gene	13453	14439	.	+	.	ID=gene-nad1;Name=nad1;gbkey=Gene;gene=nad1;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	13453	14439	.	+	0	ID=cds-DBB38835.1;Parent=gene-nad1;Dbxref=NCBI_GP:DBB38835.1;Name=DBB38835.1;gbkey=CDS;gene=nad1;product=NADH dehydrogenase subunit 1;protein_id=DBB38835.1;transl_table=4
+BK067228.1	tpg	gene	14440	15900	.	+	.	ID=gene-nad4;Name=nad4;gbkey=Gene;gene=nad4;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	14440	15900	.	+	0	ID=cds-DBB38836.1;Parent=gene-nad4;Dbxref=NCBI_GP:DBB38836.1;Name=DBB38836.1;gbkey=CDS;gene=nad4;product=NADH dehydrogenase subunit 4;protein_id=DBB38836.1;transl_table=4
+BK067228.1	tpg	gene	15900	17042	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+BK067228.1	tpg	CDS	15900	17042	.	+	0	ID=cds-DBB38837.1;Parent=gene-cob;Dbxref=NCBI_GP:DBB38837.1;Name=DBB38837.1;gbkey=CDS;gene=cob;product=apocytochrome b;protein_id=DBB38837.1;transl_table=4
+BK067228.1	tpg	inverted_repeat	17027	17399	.	+	.	ID=id-BK067228.1:17027..17399;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+

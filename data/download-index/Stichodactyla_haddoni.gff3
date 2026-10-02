@@ -1,0 +1,56 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MW760873.1 1 18999
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=475174
+MW760873.1	Genbank	region	1	18999	.	+	.	ID=MW760873.1:1..18999;Dbxref=taxon:475174;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+MW760873.1	Genbank	gene	1	716	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+MW760873.1	Genbank	gene	2397	3513	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	1	716	.	+	0	ID=cds-QXO87014.1;Parent=gene-ND5;Dbxref=NCBI_GP:QXO87014.1;Name=QXO87014.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=QXO87014.1;transl_table=4
+MW760873.1	Genbank	CDS	2397	3513	.	+	1	ID=cds-QXO87014.1;Parent=gene-ND5;Dbxref=NCBI_GP:QXO87014.1;Name=QXO87014.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=QXO87014.1;transl_table=4
+MW760873.1	Genbank	gene	941	1924	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	941	1924	.	+	0	ID=cds-QXO87015.1;Parent=gene-ND1;Dbxref=NCBI_GP:QXO87015.1;Name=QXO87015.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=QXO87015.1;transl_table=4
+MW760873.1	Genbank	gene	1931	2287	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	1931	2287	.	+	0	ID=cds-QXO87016.1;Parent=gene-ND3;Dbxref=NCBI_GP:QXO87016.1;Name=QXO87016.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=QXO87016.1;transl_table=4
+MW760873.1	Genbank	tRNA	3810	3879	.	+	.	ID=rna-MW760873.1:3810..3879;gbkey=tRNA;product=tRNA-Trp
+MW760873.1	Genbank	exon	3810	3879	.	+	.	ID=exon-MW760873.1:3810..3879-1;Parent=rna-MW760873.1:3810..3879;gbkey=tRNA;product=tRNA-Trp
+MW760873.1	Genbank	gene	3994	5376	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	3994	5376	.	+	0	ID=cds-QXO87017.1;Parent=gene-ND2;Dbxref=NCBI_GP:QXO87017.1;Name=QXO87017.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=QXO87017.1;transl_table=4
+MW760873.1	Genbank	sequence_feature	5377	5425	.	+	.	ID=id-MW760873.1:5377..5425;Note=IGR_4;gbkey=misc_feature
+MW760873.1	Genbank	rRNA	5426	6483	.	+	.	ID=rna-MW760873.1:5426..6483;gbkey=rRNA;product=small subunit ribosomal RNA
+MW760873.1	Genbank	exon	5426	6483	.	+	.	ID=exon-MW760873.1:5426..6483-1;Parent=rna-MW760873.1:5426..6483;gbkey=rRNA;product=small subunit ribosomal RNA
+MW760873.1	Genbank	sequence_feature	6484	6535	.	+	.	ID=id-MW760873.1:6484..6535;Note=IGR_5;gbkey=misc_feature
+MW760873.1	Genbank	gene	6536	7282	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;gene_synonym=COII
+MW760873.1	Genbank	CDS	6536	7282	.	+	0	ID=cds-QXO87018.1;Parent=gene-COX2;Dbxref=NCBI_GP:QXO87018.1;Name=QXO87018.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit 2;protein_id=QXO87018.1;transl_table=4
+MW760873.1	Genbank	sequence_feature	7283	7287	.	+	.	ID=id-MW760873.1:7283..7287;Note=IGR_6;gbkey=misc_feature
+MW760873.1	Genbank	gene	7288	8763	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	7288	8763	.	+	0	ID=cds-QXO87019.1;Parent=gene-ND4;Dbxref=NCBI_GP:QXO87019.1;Name=QXO87019.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=QXO87019.1;transl_table=4
+MW760873.1	Genbank	sequence_feature	8764	8767	.	+	.	ID=id-MW760873.1:8764..8767;Note=IGR_7;gbkey=misc_feature
+MW760873.1	Genbank	gene	8768	9376	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	8768	9376	.	+	0	ID=cds-QXO87020.1;Parent=gene-ND6;Dbxref=NCBI_GP:QXO87020.1;Name=QXO87020.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=QXO87020.1;transl_table=4
+MW760873.1	Genbank	sequence_feature	9377	9403	.	+	.	ID=id-MW760873.1:9377..9403;Note=IGR_8;gbkey=misc_feature
+MW760873.1	Genbank	gene	9404	10555	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	9404	10555	.	+	0	ID=cds-QXO87021.1;Parent=gene-CYTB;Dbxref=NCBI_GP:QXO87021.1;Name=QXO87021.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=QXO87021.1;transl_table=4
+MW760873.1	Genbank	sequence_feature	10556	11033	.	+	.	ID=id-MW760873.1:10556..11033;Note=IGR_9;gbkey=misc_feature
+MW760873.1	Genbank	tRNA	11034	11104	.	+	.	ID=rna-MW760873.1:11034..11104;gbkey=tRNA;product=tRNA-Met
+MW760873.1	Genbank	exon	11034	11104	.	+	.	ID=exon-MW760873.1:11034..11104-1;Parent=rna-MW760873.1:11034..11104;gbkey=tRNA;product=tRNA-Met
+MW760873.1	Genbank	rRNA	11105	13321	.	+	.	ID=rna-MW760873.1:11105..13321;gbkey=rRNA;product=large subunit ribosomal RNA
+MW760873.1	Genbank	exon	11105	13321	.	+	.	ID=exon-MW760873.1:11105..13321-1;Parent=rna-MW760873.1:11105..13321;gbkey=rRNA;product=large subunit ribosomal RNA
+MW760873.1	Genbank	sequence_feature	13322	13392	.	+	.	ID=id-MW760873.1:13322..13392;Note=IGR_10;gbkey=misc_feature
+MW760873.1	Genbank	gene	13393	14181	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;gene_synonym=COIII
+MW760873.1	Genbank	CDS	13393	14181	.	+	0	ID=cds-QXO87022.1;Parent=gene-COX3;Dbxref=NCBI_GP:QXO87022.1;Name=QXO87022.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit 3;protein_id=QXO87022.1;transl_table=4
+MW760873.1	Genbank	sequence_feature	14182	14349	.	+	.	ID=id-MW760873.1:14182..14349;Note=IGR_11;gbkey=misc_feature
+MW760873.1	Genbank	gene	14350	16789	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;gene_synonym=COI
+MW760873.1	Genbank	CDS	14350	15242	.	+	0	ID=cds-QXO87023.1;Parent=gene-COX1;Dbxref=NCBI_GP:QXO87023.1;Name=QXO87023.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit 1;protein_id=QXO87023.1;transl_table=4
+MW760873.1	Genbank	CDS	16108	16789	.	+	1	ID=cds-QXO87023.1;Parent=gene-COX1;Dbxref=NCBI_GP:QXO87023.1;Name=QXO87023.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit 1;protein_id=QXO87023.1;transl_table=4
+MW760873.1	Genbank	gene	14350	16095	.	+	.	ID=gene-HEG1;Name=HEG1;gbkey=Gene;gene=HEG1;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	14350	16095	.	+	0	ID=cds-QXO87027.1;Parent=gene-HEG1;Dbxref=NCBI_GP:QXO87027.1;Name=QXO87027.1;gbkey=CDS;gene=HEG1;product=HEG1;protein_id=QXO87027.1;transl_table=4
+MW760873.1	Genbank	gene	17196	17729	.	+	.	ID=gene-OrfA;Name=OrfA;gbkey=Gene;gene=OrfA;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	17196	17729	.	+	0	ID=cds-QXO87028.1;Parent=gene-OrfA;Dbxref=NCBI_GP:QXO87028.1;Name=QXO87028.1;gbkey=CDS;gene=OrfA;product=OrfA;protein_id=QXO87028.1;transl_table=4
+MW760873.1	Genbank	gene	17719	18018	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	17719	18018	.	+	0	ID=cds-QXO87024.1;Parent=gene-ND4L;Dbxref=NCBI_GP:QXO87024.1;Name=QXO87024.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=QXO87024.1;transl_table=4
+MW760873.1	Genbank	gene	18043	18258	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	18043	18258	.	+	0	ID=cds-QXO87025.1;Parent=gene-ATP8;Dbxref=NCBI_GP:QXO87025.1;Name=QXO87025.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=QXO87025.1;transl_table=4
+MW760873.1	Genbank	gene	18291	18980	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+MW760873.1	Genbank	CDS	18291	18980	.	+	0	ID=cds-QXO87026.1;Parent=gene-ATP6;Dbxref=NCBI_GP:QXO87026.1;Name=QXO87026.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=QXO87026.1;transl_table=4
+

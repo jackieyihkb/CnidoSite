@@ -1,0 +1,197 @@
+# ---------------------------------------------------------------------------
+# 站点根目录加固（Apache 2.4）—— 2026-09-22
+#
+# 1) Options -Indexes
+#    整站原本开着目录浏览：/js/ /css/ /images/ /includes/ /primer3plus/
+#    /manual_images/ /GSEA/ 等等都可以逐条列出文件。Apache 自带的默认只挡
+#    .ht* 文件（apache2.conf 里的 <FilesMatch "^\.ht">），目录一概不管。
+#    关掉它不影响任何页面：站内没有一处链接依赖目录列表（唯一大量出现的
+#    href="/phylotree/" 指向的是有 index.php 的目录，DirectoryIndex 照常生效）。
+#
+# 2) 隐藏路径一律 404
+#    两个 vendored 的 .git 目录曾整份可从 HTTP 取走 —— .git/config（含 remote
+#    地址）、.git/index、.git/packed-refs、.git/objects/*，再配上目录浏览，
+#    等于把仓库历史整个下载出去。两个目录现在各自有 .htaccess（Require all
+#    denied）；这一条是给「将来又 vendored 一个库」兜底的。
+#    用 RedirectMatch 而不是 RewriteRule：本站没启用 mod_rewrite（启用需要
+#    root），mod_alias 一直在。
+#    模式要求 .git/.env 后面跟着 / 或结束，所以 .gitignore、.envrc 这类**正常
+#    文件**不受影响。
+#
+# 3) 备份后缀一律 404 —— 2026-09-23 补
+#    上面两条都拦不住 *备份*：今天在 docroot 里又扫出 9 个 `*.php.bak-*`
+#    （genefamily*.bak-20260921 / *.bak2-20260921 / core/index.php.bak-* /
+#    genetree/index.php.bak-*）。名字里带 .php，Apache 按 PHP 执行，于是每个
+#    都成了线上页面的一个 200 副本；哪天备份的是含口令的文件就不再是"重复
+#    内容"而是泄露了。文件已挪到 /home/jackie/cnidosite-backups/（vhost 之外），
+#    这一条防的是下次再有人（包括我）顺手 cp 一份在原地。
+#    只匹配这些后缀，且必须落在结尾：站内没有任何正常文件是 .bak/.old/.orig/
+#    .save/.swp/.copy/波浪号结尾的，所以挡不到任何页面。
+# ---------------------------------------------------------------------------
+Options -Indexes
+
+RedirectMatch 404 (?i)(^|/)\.(git|svn|hg|bzr|cvs|env|idea|vscode|ds_store)(/|$)
+RedirectMatch 404 (?i)(\.(bak|old|orig|save|swp|swo|copy|inc)[^/]*|~)$
+
+# ---------------------------------------------------------------------------
+# 3b) .inc 后缀一律 404 —— 2026-09-29 补
+#
+# 第 3 条的后缀列表里没有 .inc，于是**服务器端包含片段被当作纯文本整份提供**：
+# 实测 `GET /cytoscape/tail.list.inc` → **200 / 29,673 字节**，Apache 不认这个
+# 扩展名，按默认类型直接把源码吐出来，其中 588、599、626 三行是 mysqli 连接
+# 的构造（四个参数与 includes/state.php 里 cnido_conn() 的那份**完全相同**）
+# —— 也就是说**数据库连接口令可以匿名下载**，不用猜文件名，`include()` 那一行
+# 就写在页面源码里。同一条回复里正在把口令收拢进 cnido_conn()，而这里它一直
+# 挂在公网上，两条要一起看。
+#
+# 站内只有两个 .inc 不在 tmp/ 下（cytoscape/tail.list.inc、cytoscape/head.inc），
+# 两个都只被 include()/require 以**文件系统路径**读取，全站没有任何一处
+# href/src/action 指向 .inc（扫过 php/html/js/css）；tmp_download.php 取回
+# 边表走的是 `/tmp_download.php?f=…inc`，URL 结尾是 .php，不受这条影响。
+#    后缀用 [^/]* 而不是精确的 `inc$`，是为了连 `xxx.inc.php` 这种
+#    「片段但以 .php 结尾」的写法一起挡住（macrosynteny_species.inc.php 是
+#    唯一一个，同样只被 include 读）。挡住它不影响功能：include 读的是磁盘。
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# 5) 点开头的路径段一律 404 —— 2026-09-27 补
+#
+# 上面第 2 条是**枚举**出来的名字（git/svn/hg/…/ds_store），迟早会有下一个没枚举到的。
+# 2026-09-27 就真的出现了：docroot 里多了一个 `.menu_bak/`（整站 PHP 的一份拷贝，
+# 2026-09-26 23:42），里面 core/index.php 等文件 Web 可达 —— 实测
+# `/.menu_bak/core/index.php` 返回 **200 / 26,496 字节**（其余页面 500，是相对路径
+# include 断了，但 PHP 确实被执行了）。第 2 条的名字列表和第 3 条的后缀规则
+# **都匹配不到它**：前者没有 menu_bak，后者要求 `.bak…` 落在 URL 结尾，而
+# `/.menu_bak/core/index.php` 结尾是 `index.php`。
+#
+# 所以这一条不再枚举名字，改成「任何一个以点开头的路径段」，一次把这类
+# 「顺手 cp 一份在原地」的副本全兜住。判断过的安全性：
+#   - 全站 **没有任何一处** 链接指向点开头的路径段（扫过 php/js/html/css 的
+#     href/src/action/url，0 命中），所以挡不到任何页面；
+#   - 站内以点开头的实体只有 .claude/ .menu_bak/ .htaccess 和两个 vendored
+#     .git/（后者各自还有自己的 .htaccess），全都**不该**被 Web 提供；
+#   - 唯一需要放行的是 ACME 续期的 `/.well-known/`，用否定环视显式排除。
+#     现在没有 certbot（SSL 是手写的 cnidosite-ssl.conf），但把这条写死会在
+#     将来某次续期时以「昨天还好好的」的方式炸掉，代价不对等，所以留着。
+# 正则已用 PCRE 逐条比对过 15 个真实路径（.menu_bak 系 7 个命中、.well-known 系
+# 与 8 个正常 URL 全部不命中），上线后再实测 404。
+# ---------------------------------------------------------------------------
+RedirectMatch 404 (?i)(^|/)\.(?!well-known(/|$))[^/]+(/|$)
+
+# ---------------------------------------------------------------------------
+# 6) BLAST 数据库不对外提供 —— 2026-09-27 补
+#
+# blast/db/ 里是 13 GB 的 BLAST 索引（3781 个 .pdb/.phr/.psq/.ndb/.nsq…）。
+# 第 1 条 Options -Indexes 只关掉目录列表（/blast/db/ 是 403），**单个文件照样
+# 200**：实测 /blast/db/Actinia_mediterranea.pep.psq → 200 / 41,623,607 字节，
+# 整个库集都能被随便下载。全站没有任何一处链接指向它们（**渲染** blast.php 与
+# download.php 之后再 grep 输出得到的结论，不是 grep 源码 —— 见 tmp/ 那次的
+# 教训：链接可以由常量拼出来，字面量根本不出现）。
+#
+# 挡掉不影响任何功能：BLAST 搜索读的是**文件系统**路径（system() 里的
+# `-d db/…`），下拉框读的是 scandir()，两者都不经过 HTTP。
+#
+# 这条也**不能**用「把库挪出 docroot」代替：2026-09-27 已经把 blast/db 这个
+# 符号链接指向了 docroot 外的 /var/www/cnidosite-tools/blastdb/db（为了搬回
+# NVMe 提速），而 **Apache 会跟着符号链接走出 docroot**，文件依然 200。要断
+# HTTP 只能靠规则本身。
+# ---------------------------------------------------------------------------
+RedirectMatch 404 (?i)(^|/)blast/db(/|$)
+
+# ---------------------------------------------------------------------------
+# 4) 拒绝把 worker 占满的爬虫 —— 2026-09-26 补
+#
+# 症状：用户报 gene_detail.php「半天加载不出来」，但页面本身没问题 ——
+#   curl 实测 TTFB 60 ms、整页 46 个资源 2.5 秒、MySQL 只有 2-3 条查询在跑。
+# 真因是 prefork 的 worker 用光了（MaxRequestWorkers=150）：
+#   /server-status → "150 requests currently being processed, 0 idle workers"
+#   计分板拆开：K(keepalive 空闲连接) 77、R(正在读请求) 50、C(关闭) 22、
+#              W(真的在跑 PHP) 1
+# 也就是说 150 个 worker 里只有 1 个在干正事，其余被「连着但不发请求」的
+# 连接占着。KeepAliveTimeout=5 让每条浏览器/爬虫连接在最后一次请求之后
+# 还要独占一个 worker 5 秒，而 prefork 是「一个 worker 一个连接」。
+#
+# 放大它的就是爬虫（robots.txt 此前是 404，等于没有任何约束）：
+#   216.73.216.110  95,323 次/天（ClaudeBot）
+#   216.73.216.111  12,583 次/天（ClaudeBot，同一 UA）
+# 峰值 2,500-3,900 次/分钟；单 gene_detail.php 就枚举了 5,858 个不同查询串。
+# 同样这两个 IP 在 2026-09-26 已经靠枚举 DNA_methylation.php 把整站打瘫过一次
+# （mysqld 1903%、load 37）。
+#
+# 为什么 robots.txt 之外还要在这里挡：robots.txt 是**建议**，而且 ClaudeBot
+# 隔几小时才重取一次（当天 08:24 取到的还是 404），等它生效的这段时间里
+# worker 一直是 0 空闲、真实用户一直排队。被 403 挡掉的请求立刻就结束、
+# 连接随即关闭，worker 马上释放 —— 而 keepalive 是把它按住 5 秒。
+#
+# 同理挡 Lightpanda（无头浏览器，08:34 那一分钟 296 次）。
+# 用 SetEnvIfNoCase + RequireAll 而不是 RewriteRule：本站没启用 mod_rewrite。
+# 想要撤回：删掉这一个块（SetEnvIfNoCase 几行 + 那个 <RequireAll>）即可，
+# 只影响下面这几个 UA，Googlebot/Bingbot 等一律不受影响。
+#
+# 2026-09-26 11:4x 补漏：这里原先只写了 ClaudeBot 和 Lightpanda 两行，
+# 而 /var/www/html/.htaccess 和 lab/.htaccess 都写了 Anthropic 全部三个。
+# "ClaudeBot" 不是 "Claude-SearchBot" 的子串，所以后两个在本站一直是**放行**的。
+# 三个补齐，与另外两站对齐。
+#
+# 新增 meta-externalagent（Meta 的 AI 训练爬虫，今天 55,580 次、全部 200，
+# 集中在 57.141.0.0/16，在枚举 /jbrowse/）。
+# 注意：**不要**改成封 57.141.0.0/16 整段 —— 负责分享预览的 facebookexternalhit
+# 也在这一段（今天 143 次）。按 UA 字符串封才只影响训练爬虫，分享预览不受影响。
+# ---------------------------------------------------------------------------
+SetEnvIfNoCase User-Agent "ClaudeBot"        cnido_badbot
+SetEnvIfNoCase User-Agent "Claude-SearchBot" cnido_badbot
+SetEnvIfNoCase User-Agent "Claude-User"      cnido_badbot
+SetEnvIfNoCase User-Agent "anthropic-ai"     cnido_badbot
+SetEnvIfNoCase User-Agent "Lightpanda"       cnido_badbot
+SetEnvIfNoCase User-Agent "meta-externalagent" cnido_badbot
+
+<RequireAll>
+    Require all granted
+    Require not env cnido_badbot
+</RequireAll>
+
+# ---------------------------------------------------------------------------
+# 让被拦的爬虫**立刻释放 worker** —— 2026-09-26 加
+#
+# 本站就是被打瘫的那个，所以这三行对本站最要紧。
+# 403 只结束响应体；HTTP/1.1 默认 keep-alive，连接仍被 KeepAliveTimeout 按住。
+# 本站的故障现场正是 K=77（keep-alive 空闲连接）/ R=50 / C=22，
+# 而**真正在跑 PHP 的 W 只有 1** —— 绝大多数 worker 在陪爬虫干等，
+# 这才是「网站打不开」的机制。**403 不是免费的。**
+#
+# `nokeepalive` 由 Apache 核心 ap_set_keepalive() 读取，设上即强制
+# `Connection: close`（Debian 自带 setenvif.conf 一直在用，标准接口）。
+# SetEnvIf 在 post_read_request 阶段执行，早于 authz 的 access_checker，
+# 所以被 <RequireAll> 判 403 的响应同样带 Connection: close。
+# 完整解释见 /var/www/html/.htaccess 的同名段落。
+# ---------------------------------------------------------------------------
+SetEnvIfNoCase User-Agent "ClaudeBot|Claude-SearchBot|Claude-User|anthropic-ai" nokeepalive
+SetEnvIfNoCase User-Agent "Lightpanda"         nokeepalive
+SetEnvIfNoCase User-Agent "meta-externalagent" nokeepalive
+
+# ---------------------------------------------------------------------------
+# 7) 脚本源码与运行记录不对外提供 —— 2026-09-29 补
+#
+# 第 1 条 Options -Indexes 只关掉目录列表（/GSEA/、/GSEA/bin/ 都是 403），
+# **单个文件照样 200** —— 和第 6 条 blast/db 是同一个机制。实测（2026-09-29）：
+#
+#   /GSEA/job_record            200 / 18,587 B   历次作业号 + 提交者 IP + 时间
+#   /GSEA/access.log            200 / 265,027 B  整个模块的访问日志（IP、UA、查询串）
+#   /GSEA/deploy-all.sh         200 / 16 MB      部署脚本（text/x-sh 直接可读）
+#   /GSEA/exp_file_credential   200 / 37 KB      ELF 可执行文件
+#   /GSEA/*.py  /GSEA/bin/*.py  200 /   1.6-3 KB  管线源码（text/x-python 直接可读）
+#   /phylotree/tools/*.py 等    200              同上
+#
+# 前两个是**访客数据**（作业号与 IP），不是本站在展示的内容；.sh/.py/二进制是
+# 服务端实现，都不该由 HTTP 提供。全站没有任何一处链接指向这些文件 —— 判据是
+# 「渲染页面后 grep 输出」而不是 grep 源码（**链接可以由常量拼出来**，见 tmp/ 那次
+# 的教训）；渲染结果里唯一的 gsea/ 链接是 GSEA.php 的 "View Example"
+# （→ gsea/customized_background.txt），不受这两条规则影响。
+#
+# `.py$` 这条是整站生效的：docroot 里 40 个 .py/.pyc 全部是服务端脚本
+# （GSEA 管线、phylotree/tools、primer3plus/server），没有一个是被链接的页面。
+# 用 RedirectMatch 而不是 RewriteRule：本站没启用 mod_rewrite（见第 2 条）。
+# 想撤回：删掉这个块即可，不影响任何页面。
+# ---------------------------------------------------------------------------
+RedirectMatch 404 (?i)\.(py|pyc)$
+RedirectMatch 404 (?i)(^|/)GSEA/(job_record|access\.log|deploy-all\.sh|exp_file_credential)$

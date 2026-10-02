@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_013573.1 1 18842
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=151771
+NC_013573.1	RefSeq	region	1	18842	.	+	.	ID=NC_013573.1:1..18842;Dbxref=taxon:151771;Is_circular=true;Name=MT;common=soft coral;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_013573.1	RefSeq	gene	1	1597	.	+	.	ID=gene-KEH08_p01;Dbxref=GeneID:8656276;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=KEH08_p01
+NC_013573.1	RefSeq	CDS	1	1597	.	+	0	ID=cds-YP_003331249.1;Parent=gene-KEH08_p01;Dbxref=GenBank:YP_003331249.1,GeneID:8656276;Name=YP_003331249.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=COX1;locus_tag=KEH08_p01;product=cytochrome c oxidase subunit I;protein_id=YP_003331249.1;transl_except=(pos:1597%2Caa:TERM);transl_table=4
+NC_013573.1	RefSeq	gene	1749	2671	.	+	.	ID=gene-KEH08_r01;Dbxref=GeneID:64988510;Name=KEH08_r01;gbkey=Gene;gene_biotype=rRNA;locus_tag=KEH08_r01
+NC_013573.1	RefSeq	rRNA	1749	2671	.	+	.	ID=rna-KEH08_r01;Parent=gene-KEH08_r01;Dbxref=GeneID:64988510;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=KEH08_r01;product=12S ribosomal RNA
+NC_013573.1	RefSeq	exon	1749	2671	.	+	.	ID=exon-KEH08_r01-1;Parent=rna-KEH08_r01;Dbxref=GeneID:64988510;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=KEH08_r01;product=12S ribosomal RNA
+NC_013573.1	RefSeq	gene	2676	3647	.	+	.	ID=gene-KEH08_p14;Dbxref=GeneID:8656266;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=KEH08_p14
+NC_013573.1	RefSeq	CDS	2676	3647	.	+	0	ID=cds-YP_003331250.1;Parent=gene-KEH08_p14;Dbxref=GenBank:YP_003331250.1,GeneID:8656266;Name=YP_003331250.1;gbkey=CDS;gene=ND1;locus_tag=KEH08_p14;product=NADH dehydrogenase subunit 1;protein_id=YP_003331250.1;transl_table=4
+NC_013573.1	RefSeq	gene	3730	4866	.	+	.	ID=gene-KEH08_p13;Dbxref=GeneID:8656267;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=KEH08_p13
+NC_013573.1	RefSeq	CDS	3730	4866	.	+	0	ID=cds-YP_003331251.1;Parent=gene-KEH08_p13;Dbxref=GenBank:YP_003331251.1,GeneID:8656267;Name=YP_003331251.1;gbkey=CDS;gene=CYTB;locus_tag=KEH08_p13;product=cytochrome b;protein_id=YP_003331251.1;transl_table=4
+NC_013573.1	RefSeq	gene	5066	5623	.	+	.	ID=gene-KEH08_p12;Dbxref=GeneID:8656268;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=KEH08_p12
+NC_013573.1	RefSeq	CDS	5066	5623	.	+	0	ID=cds-YP_003331252.1;Parent=gene-KEH08_p12;Dbxref=GenBank:YP_003331252.1,GeneID:8656268;Name=YP_003331252.1;gbkey=CDS;gene=ND6;locus_tag=KEH08_p12;product=NADH dehydrogenase subunit 6;protein_id=YP_003331252.1;transl_table=4
+NC_013573.1	RefSeq	gene	5667	6020	.	+	.	ID=gene-KEH08_p11;Dbxref=GeneID:8656269;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=KEH08_p11
+NC_013573.1	RefSeq	CDS	5667	6020	.	+	0	ID=cds-YP_003331253.1;Parent=gene-KEH08_p11;Dbxref=GenBank:YP_003331253.1,GeneID:8656269;Name=YP_003331253.1;gbkey=CDS;gene=ND3;locus_tag=KEH08_p11;product=NADH dehydrogenase subunit 3;protein_id=YP_003331253.1;transl_table=4
+NC_013573.1	RefSeq	gene	6040	6333	.	+	.	ID=gene-KEH08_p10;Dbxref=GeneID:8656270;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=KEH08_p10
+NC_013573.1	RefSeq	CDS	6040	6333	.	+	0	ID=cds-YP_003331254.1;Parent=gene-KEH08_p10;Dbxref=GenBank:YP_003331254.1,GeneID:8656270;Name=YP_003331254.1;gbkey=CDS;gene=ND4L;locus_tag=KEH08_p10;product=NADH dehydrogenase subunit 4L;protein_id=YP_003331254.1;transl_table=4
+NC_013573.1	RefSeq	gene	6347	9286	.	+	.	ID=gene-KEH08_p09;Dbxref=GeneID:8656271;Name=mutS;gbkey=Gene;gene=mutS;gene_biotype=protein_coding;locus_tag=KEH08_p09
+NC_013573.1	RefSeq	CDS	6347	9286	.	+	0	ID=cds-YP_003331255.1;Parent=gene-KEH08_p09;Dbxref=GenBank:YP_003331255.1,GeneID:8656271;Name=YP_003331255.1;gbkey=CDS;gene=mutS;locus_tag=KEH08_p09;product=DNA mismatch repair protein;protein_id=YP_003331255.1;transl_table=4
+NC_013573.1	RefSeq	gene	9296	11492	.	+	.	ID=gene-KEH08_r02;Dbxref=GeneID:64988511;Name=KEH08_r02;gbkey=Gene;gene_biotype=rRNA;locus_tag=KEH08_r02
+NC_013573.1	RefSeq	rRNA	9296	11492	.	+	.	ID=rna-KEH08_r02;Parent=gene-KEH08_r02;Dbxref=GeneID:64988511;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=KEH08_r02;product=16S ribosomal RNA
+NC_013573.1	RefSeq	exon	9296	11492	.	+	.	ID=exon-KEH08_r02-1;Parent=rna-KEH08_r02;Dbxref=GeneID:64988511;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=KEH08_r02;product=16S ribosomal RNA
+NC_013573.1	RefSeq	gene	11588	12626	.	+	.	ID=gene-KEH08_p08;Dbxref=GeneID:8656272;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=KEH08_p08
+NC_013573.1	RefSeq	CDS	11588	12626	.	+	0	ID=cds-YP_003331256.1;Parent=gene-KEH08_p08;Dbxref=GenBank:YP_003331256.1,GeneID:8656272;Name=YP_003331256.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=ND2;locus_tag=KEH08_p08;product=NADH dehydrogenase subunit 2;protein_id=YP_003331256.1;transl_except=(pos:12626%2Caa:TERM);transl_table=4
+NC_013573.1	RefSeq	gene	12616	14433	.	+	.	ID=gene-KEH08_p07;Dbxref=GeneID:8656273;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=KEH08_p07
+NC_013573.1	RefSeq	CDS	12616	14433	.	+	0	ID=cds-YP_003331257.1;Parent=gene-KEH08_p07;Dbxref=GenBank:YP_003331257.1,GeneID:8656273;Name=YP_003331257.1;gbkey=CDS;gene=ND5;locus_tag=KEH08_p07;product=NADH dehydrogenase subunit 5;protein_id=YP_003331257.1;transl_table=4
+NC_013573.1	RefSeq	gene	14518	15966	.	+	.	ID=gene-KEH08_p06;Dbxref=GeneID:8656274;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=KEH08_p06
+NC_013573.1	RefSeq	CDS	14518	15966	.	+	0	ID=cds-YP_003331258.1;Parent=gene-KEH08_p06;Dbxref=GenBank:YP_003331258.1,GeneID:8656274;Name=YP_003331258.1;gbkey=CDS;gene=ND4;locus_tag=KEH08_p06;product=NADH dehydrogenase subunit 4;protein_id=YP_003331258.1;transl_table=4
+NC_013573.1	RefSeq	gene	16039	16109	.	-	.	ID=gene-KEH08_t01;Dbxref=GeneID:64988512;Name=KEH08_t01;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEH08_t01
+NC_013573.1	RefSeq	tRNA	16039	16109	.	-	.	ID=rna-KEH08_t01;Parent=gene-KEH08_t01;Dbxref=GeneID:64988512;gbkey=tRNA;locus_tag=KEH08_t01;product=tRNA-Met
+NC_013573.1	RefSeq	exon	16039	16109	.	-	.	ID=exon-KEH08_t01-1;Parent=rna-KEH08_t01;Dbxref=GeneID:64988512;gbkey=tRNA;locus_tag=KEH08_t01;product=tRNA-Met
+NC_013573.1	RefSeq	gene	16149	16934	.	-	.	ID=gene-KEH08_p05;Dbxref=GeneID:8656275;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=KEH08_p05
+NC_013573.1	RefSeq	CDS	16149	16934	.	-	0	ID=cds-YP_003331259.1;Parent=gene-KEH08_p05;Dbxref=GenBank:YP_003331259.1,GeneID:8656275;Name=YP_003331259.1;gbkey=CDS;gene=COX3;locus_tag=KEH08_p05;product=cytochrome c oxidase subunit III;protein_id=YP_003331259.1;transl_table=4
+NC_013573.1	RefSeq	gene	16999	17706	.	-	.	ID=gene-KEH08_p04;Dbxref=GeneID:8656277;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=KEH08_p04
+NC_013573.1	RefSeq	CDS	16999	17706	.	-	0	ID=cds-YP_003331260.1;Parent=gene-KEH08_p04;Dbxref=GenBank:YP_003331260.1,GeneID:8656277;Name=YP_003331260.1;gbkey=CDS;gene=ATP6;locus_tag=KEH08_p04;product=ATP synthase F0 subunit 6;protein_id=YP_003331260.1;transl_table=4
+NC_013573.1	RefSeq	gene	17731	17946	.	-	.	ID=gene-KEH08_p03;Dbxref=GeneID:8656278;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=KEH08_p03
+NC_013573.1	RefSeq	CDS	17731	17946	.	-	0	ID=cds-YP_003331261.1;Parent=gene-KEH08_p03;Dbxref=GenBank:YP_003331261.1,GeneID:8656278;Name=YP_003331261.1;gbkey=CDS;gene=ATP8;locus_tag=KEH08_p03;product=ATP synthase F0 subunit 8;protein_id=YP_003331261.1;transl_table=4
+NC_013573.1	RefSeq	gene	17969	18730	.	-	.	ID=gene-KEH08_p02;Dbxref=GeneID:8656279;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=KEH08_p02
+NC_013573.1	RefSeq	CDS	17969	18730	.	-	0	ID=cds-YP_003331262.1;Parent=gene-KEH08_p02;Dbxref=GenBank:YP_003331262.1,GeneID:8656279;Name=YP_003331262.1;gbkey=CDS;gene=COX2;locus_tag=KEH08_p02;product=cytochrome c oxidase subunit II;protein_id=YP_003331262.1;transl_table=4
+

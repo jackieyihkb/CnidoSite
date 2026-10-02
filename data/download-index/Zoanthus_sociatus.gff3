@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_046476.1 1 21202
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=134931
+NC_046476.1	RefSeq	region	1	21202	.	+	.	ID=NC_046476.1:1..21202;Dbxref=taxon:134931;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_046476.1	RefSeq	gene	1	2885	.	+	.	ID=gene-HCR72_mgp01;Dbxref=GeneID:44793947;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;gene_synonym=COI;locus_tag=HCR72_mgp01
+NC_046476.1	RefSeq	CDS	1	888	.	+	0	ID=cds-YP_009738033.1;Parent=gene-HCR72_mgp01;Dbxref=GenBank:YP_009738033.1,GeneID:44793947;Name=YP_009738033.1;gbkey=CDS;gene=COX1;locus_tag=HCR72_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009738033.1;transl_table=4
+NC_046476.1	RefSeq	CDS	2169	2885	.	+	0	ID=cds-YP_009738033.1;Parent=gene-HCR72_mgp01;Dbxref=GenBank:YP_009738033.1,GeneID:44793947;Name=YP_009738033.1;gbkey=CDS;gene=COX1;locus_tag=HCR72_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009738033.1;transl_table=4
+NC_046476.1	RefSeq	exon	1	888	.	+	.	ID=id-HCR72_mgp01-1;Parent=gene-HCR72_mgp01;Dbxref=GeneID:44793947;exon_number=1;gbkey=exon;gene=COX1;locus_tag=HCR72_mgp01;number=1
+NC_046476.1	RefSeq	exon	2169	2885	.	+	.	ID=id-HCR72_mgp01-2;Parent=gene-HCR72_mgp01;Dbxref=GeneID:44793947;exon_number=2;gbkey=exon;gene=COX1;locus_tag=HCR72_mgp01;number=2
+NC_046476.1	RefSeq	intron	889	2168	.	+	.	ID=id-HCR72_mgp01;Parent=gene-HCR72_mgp01;Dbxref=GeneID:44793947;Note=group 1 intron;gbkey=intron;gene=COX1;locus_tag=HCR72_mgp01
+NC_046476.1	RefSeq	gene	3014	3313	.	+	.	ID=gene-HCR72_mgp02;Dbxref=GeneID:44793933;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=HCR72_mgp02
+NC_046476.1	RefSeq	CDS	3014	3313	.	+	0	ID=cds-YP_009738034.1;Parent=gene-HCR72_mgp02;Dbxref=GenBank:YP_009738034.1,GeneID:44793933;Name=YP_009738034.1;gbkey=CDS;gene=ND4L;locus_tag=HCR72_mgp02;product=NADH dehydrogenase subunit 4L;protein_id=YP_009738034.1;transl_table=4
+NC_046476.1	RefSeq	gene	3391	3609	.	+	.	ID=gene-HCR72_mgp03;Dbxref=GeneID:44793942;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=HCR72_mgp03
+NC_046476.1	RefSeq	CDS	3391	3609	.	+	0	ID=cds-YP_009738035.1;Parent=gene-HCR72_mgp03;Dbxref=GenBank:YP_009738035.1,GeneID:44793942;Name=YP_009738035.1;gbkey=CDS;gene=ATP8;locus_tag=HCR72_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_009738035.1;transl_table=4
+NC_046476.1	RefSeq	gene	3808	4506	.	+	.	ID=gene-HCR72_mgp04;Dbxref=GeneID:44793943;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=HCR72_mgp04
+NC_046476.1	RefSeq	CDS	3808	4506	.	+	0	ID=cds-YP_009738036.1;Parent=gene-HCR72_mgp04;Dbxref=GenBank:YP_009738036.1,GeneID:44793943;Name=YP_009738036.1;gbkey=CDS;gene=ATP6;locus_tag=HCR72_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009738036.1;transl_table=4
+NC_046476.1	RefSeq	gene	4735	5926	.	+	.	ID=gene-HCR72_mgr01;Dbxref=GeneID:44793939;Name=HCR72_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=HCR72_mgr01
+NC_046476.1	RefSeq	rRNA	4735	5926	.	+	.	ID=rna-HCR72_mgr01;Parent=gene-HCR72_mgr01;Dbxref=GeneID:44793939;Note=small subunit rRNA;gbkey=rRNA;locus_tag=HCR72_mgr01;product=small subunit ribosomal RNA
+NC_046476.1	RefSeq	exon	4735	5926	.	+	.	ID=exon-HCR72_mgr01-1;Parent=rna-HCR72_mgr01;Dbxref=GeneID:44793939;Note=small subunit rRNA;gbkey=rRNA;locus_tag=HCR72_mgr01;product=small subunit ribosomal RNA
+NC_046476.1	RefSeq	gene	6340	7500	.	+	.	ID=gene-HCR72_mgp13;Dbxref=GeneID:44793944;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=HCR72_mgp13
+NC_046476.1	RefSeq	CDS	6340	7500	.	+	0	ID=cds-YP_009738037.1;Parent=gene-HCR72_mgp13;Dbxref=GenBank:YP_009738037.1,GeneID:44793944;Name=YP_009738037.1;gbkey=CDS;gene=ND2;locus_tag=HCR72_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_009738037.1;transl_table=4
+NC_046476.1	RefSeq	gene	7606	7676	.	+	.	ID=gene-HCR72_mgt01;Dbxref=GeneID:44793936;Name=HCR72_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=HCR72_mgt01
+NC_046476.1	RefSeq	tRNA	7606	7676	.	+	.	ID=rna-HCR72_mgt01;Parent=gene-HCR72_mgt01;Dbxref=GeneID:44793936;gbkey=tRNA;locus_tag=HCR72_mgt01;product=tRNA-Met
+NC_046476.1	RefSeq	exon	7606	7676	.	+	.	ID=exon-HCR72_mgt01-1;Parent=rna-HCR72_mgt01;Dbxref=GeneID:44793936;gbkey=tRNA;locus_tag=HCR72_mgt01;product=tRNA-Met
+NC_046476.1	RefSeq	gene	7716	10162	.	+	.	ID=gene-HCR72_mgr02;Dbxref=GeneID:44793945;Name=HCR72_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=HCR72_mgr02
+NC_046476.1	RefSeq	rRNA	7716	10162	.	+	.	ID=rna-HCR72_mgr02;Parent=gene-HCR72_mgr02;Dbxref=GeneID:44793945;Note=large subunit rRNA;gbkey=rRNA;locus_tag=HCR72_mgr02;product=large subunit ribosomal RNA
+NC_046476.1	RefSeq	exon	7716	10162	.	+	.	ID=exon-HCR72_mgr02-1;Parent=rna-HCR72_mgr02;Dbxref=GeneID:44793945;Note=large subunit rRNA;gbkey=rRNA;locus_tag=HCR72_mgr02;product=large subunit ribosomal RNA
+NC_046476.1	RefSeq	gene	10586	14666	.	+	.	ID=gene-HCR72_mgp12;Dbxref=GeneID:44793946;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=HCR72_mgp12
+NC_046476.1	RefSeq	CDS	10586	11317	.	+	0	ID=cds-YP_009738038.1;Parent=gene-HCR72_mgp12;Dbxref=GenBank:YP_009738038.1,GeneID:44793946;Name=YP_009738038.1;gbkey=CDS;gene=ND5;locus_tag=HCR72_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_009738038.1;transl_table=4
+NC_046476.1	RefSeq	CDS	13536	14666	.	+	0	ID=cds-YP_009738038.1;Parent=gene-HCR72_mgp12;Dbxref=GenBank:YP_009738038.1,GeneID:44793946;Name=YP_009738038.1;gbkey=CDS;gene=ND5;locus_tag=HCR72_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_009738038.1;transl_table=4
+NC_046476.1	RefSeq	exon	10586	11317	.	+	.	ID=id-HCR72_mgp12-1;Parent=gene-HCR72_mgp12;Dbxref=GeneID:44793946;exon_number=1;gbkey=exon;gene=ND5;locus_tag=HCR72_mgp12;number=1
+NC_046476.1	RefSeq	exon	13536	14666	.	+	.	ID=id-HCR72_mgp12-2;Parent=gene-HCR72_mgp12;Dbxref=GeneID:44793946;exon_number=2;gbkey=exon;gene=ND5;locus_tag=HCR72_mgp12;number=2
+NC_046476.1	RefSeq	intron	11318	13535	.	+	.	ID=id-HCR72_mgp12;Parent=gene-HCR72_mgp12;Dbxref=GeneID:44793946;Note=group 1 intron;gbkey=intron;gene=ND5;locus_tag=HCR72_mgp12
+NC_046476.1	RefSeq	gene	11633	12646	.	+	.	ID=gene-HCR72_mgp11;Dbxref=GeneID:44793932;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=HCR72_mgp11
+NC_046476.1	RefSeq	CDS	11633	12646	.	+	0	ID=cds-YP_009738039.1;Parent=gene-HCR72_mgp11;Dbxref=GenBank:YP_009738039.1,GeneID:44793932;Name=YP_009738039.1;gbkey=CDS;gene=ND1;locus_tag=HCR72_mgp11;product=NADH dehydrogenase subunit 1;protein_id=YP_009738039.1;transl_table=4
+NC_046476.1	RefSeq	gene	12834	13190	.	+	.	ID=gene-HCR72_mgp10;Dbxref=GeneID:44793937;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=HCR72_mgp10
+NC_046476.1	RefSeq	CDS	12834	13190	.	+	0	ID=cds-YP_009738040.1;Parent=gene-HCR72_mgp10;Dbxref=GenBank:YP_009738040.1,GeneID:44793937;Name=YP_009738040.1;gbkey=CDS;gene=ND3;locus_tag=HCR72_mgp10;product=NADH dehydrogenase subunit 3;protein_id=YP_009738040.1;transl_table=4
+NC_046476.1	RefSeq	gene	15561	16313	.	+	.	ID=gene-HCR72_mgp09;Dbxref=GeneID:44793941;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;gene_synonym=COII;locus_tag=HCR72_mgp09
+NC_046476.1	RefSeq	CDS	15561	16313	.	+	0	ID=cds-YP_009738041.1;Parent=gene-HCR72_mgp09;Dbxref=GenBank:YP_009738041.1,GeneID:44793941;Name=YP_009738041.1;gbkey=CDS;gene=COX2;locus_tag=HCR72_mgp09;product=cytochrome c oxidase subunit II;protein_id=YP_009738041.1;transl_table=4
+NC_046476.1	RefSeq	gene	16674	18149	.	+	.	ID=gene-HCR72_mgp08;Dbxref=GeneID:44793938;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=HCR72_mgp08
+NC_046476.1	RefSeq	CDS	16674	18149	.	+	0	ID=cds-YP_009738042.1;Parent=gene-HCR72_mgp08;Dbxref=GenBank:YP_009738042.1,GeneID:44793938;Name=YP_009738042.1;gbkey=CDS;gene=ND4;locus_tag=HCR72_mgp08;product=NADH dehydrogenase subunit 4;protein_id=YP_009738042.1;transl_table=4
+NC_046476.1	RefSeq	gene	18152	18802	.	+	.	ID=gene-HCR72_mgp07;Dbxref=GeneID:44793934;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=HCR72_mgp07
+NC_046476.1	RefSeq	CDS	18152	18802	.	+	0	ID=cds-YP_009738043.1;Parent=gene-HCR72_mgp07;Dbxref=GenBank:YP_009738043.1,GeneID:44793934;Name=YP_009738043.1;gbkey=CDS;gene=ND6;locus_tag=HCR72_mgp07;product=NADH dehydrogenase subunit 6;protein_id=YP_009738043.1;transl_table=4
+NC_046476.1	RefSeq	gene	18893	20080	.	+	.	ID=gene-HCR72_mgp06;Dbxref=GeneID:44793940;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=HCR72_mgp06
+NC_046476.1	RefSeq	CDS	18893	20080	.	+	0	ID=cds-YP_009738044.1;Parent=gene-HCR72_mgp06;Dbxref=GenBank:YP_009738044.1,GeneID:44793940;Name=YP_009738044.1;gbkey=CDS;gene=CYTB;locus_tag=HCR72_mgp06;product=cytochrome b;protein_id=YP_009738044.1;transl_table=4
+NC_046476.1	RefSeq	gene	20337	21125	.	+	.	ID=gene-HCR72_mgp05;Dbxref=GeneID:44793935;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;gene_synonym=COIII;locus_tag=HCR72_mgp05
+NC_046476.1	RefSeq	CDS	20337	21125	.	+	0	ID=cds-YP_009738045.1;Parent=gene-HCR72_mgp05;Dbxref=GenBank:YP_009738045.1,GeneID:44793935;Name=YP_009738045.1;gbkey=CDS;gene=COX3;locus_tag=HCR72_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_009738045.1;transl_table=4
+

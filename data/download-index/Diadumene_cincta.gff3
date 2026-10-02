@@ -1,0 +1,53 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region BK069897.1 1 18023
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=478395
+BK069897.1	tpg	region	1	18023	.	+	.	ID=BK069897.1:1..18023;Dbxref=taxon:478395;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+BK069897.1	tpg	gene	1	3513	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+BK069897.1	tpg	exon	1	717	.	+	.	ID=id-ND5-1;Parent=gene-ND5;exon_number=1;gbkey=exon;gene=ND5;number=1
+BK069897.1	tpg	intron	718	2433	.	+	.	ID=id-ND5;Parent=gene-ND5;Note=group I;gbkey=intron;gene=ND5
+BK069897.1	tpg	exon	2434	3513	.	+	.	ID=id-ND5-2;Parent=gene-ND5;exon_number=2;gbkey=exon;gene=ND5;number=2
+BK069897.1	tpg	CDS	1	717	.	+	0	ID=cds-DBB32546.1;Parent=gene-ND5;Dbxref=NCBI_GP:DBB32546.1;Name=DBB32546.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=DBB32546.1;transl_table=4
+BK069897.1	tpg	CDS	2434	3513	.	+	0	ID=cds-DBB32546.1;Parent=gene-ND5;Dbxref=NCBI_GP:DBB32546.1;Name=DBB32546.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=DBB32546.1;transl_table=4
+BK069897.1	tpg	gene	941	1924	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	941	1924	.	+	0	ID=cds-DBB32547.1;Parent=gene-ND1;Dbxref=NCBI_GP:DBB32547.1;Name=DBB32547.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=DBB32547.1;transl_table=4
+BK069897.1	tpg	gene	1931	2287	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	1931	2287	.	+	0	ID=cds-DBB32548.1;Parent=gene-ND3;Dbxref=NCBI_GP:DBB32548.1;Name=DBB32548.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=DBB32548.1;transl_table=4
+BK069897.1	tpg	gene	3574	3643	.	+	.	ID=gene-tRNA-Tyr;Name=tRNA-Tyr;gbkey=Gene;gene=tRNA-Tyr;gene_biotype=tRNA
+BK069897.1	tpg	tRNA	3574	3643	.	+	.	ID=rna-tRNA-Tyr;Parent=gene-tRNA-Tyr;gbkey=tRNA;gene=tRNA-Tyr;product=tRNA-Tyr
+BK069897.1	tpg	exon	3574	3643	.	+	.	ID=exon-tRNA-Tyr-1;Parent=rna-tRNA-Tyr;gbkey=tRNA;gene=tRNA-Tyr;product=tRNA-Tyr
+BK069897.1	tpg	gene	3749	5125	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	3749	5125	.	+	0	ID=cds-DBB32549.1;Parent=gene-ND2;Dbxref=NCBI_GP:DBB32549.1;Name=DBB32549.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=DBB32549.1;transl_table=4
+BK069897.1	tpg	gene	5175	6256	.	+	.	ID=gene-12S;Name=12S;gbkey=Gene;gene=12S;gene_biotype=rRNA
+BK069897.1	tpg	rRNA	5175	6256	.	+	.	ID=rna-12S;Parent=gene-12S;gbkey=rRNA;gene=12S;product=small subunit ribosomal RNA
+BK069897.1	tpg	exon	5175	6256	.	+	.	ID=exon-12S-1;Parent=rna-12S;gbkey=rRNA;gene=12S;product=small subunit ribosomal RNA
+BK069897.1	tpg	gene	6309	7055	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	6309	7055	.	+	0	ID=cds-DBB32550.1;Parent=gene-COX2;Dbxref=NCBI_GP:DBB32550.1;Name=DBB32550.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=DBB32550.1;transl_table=4
+BK069897.1	tpg	gene	7701	9170	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	7701	9170	.	+	0	ID=cds-DBB32551.1;Parent=gene-ND4;Dbxref=NCBI_GP:DBB32551.1;Name=DBB32551.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=DBB32551.1;transl_table=4
+BK069897.1	tpg	gene	9175	9783	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	9175	9783	.	+	0	ID=cds-DBB32552.1;Parent=gene-ND6;Dbxref=NCBI_GP:DBB32552.1;Name=DBB32552.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=DBB32552.1;transl_table=4
+BK069897.1	tpg	gene	9846	10991	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	9846	10991	.	+	0	ID=cds-DBB32553.1;Parent=gene-CYTB;Dbxref=NCBI_GP:DBB32553.1;Name=DBB32553.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=DBB32553.1;transl_table=4
+BK069897.1	tpg	gene	11050	11120	.	+	.	ID=gene-tRNA-Met;Name=tRNA-Met;gbkey=Gene;gene=tRNA-Met;gene_biotype=tRNA
+BK069897.1	tpg	tRNA	11050	11120	.	+	.	ID=rna-tRNA-Met;Parent=gene-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+BK069897.1	tpg	exon	11050	11120	.	+	.	ID=exon-tRNA-Met-1;Parent=rna-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+BK069897.1	tpg	gene	11121	13304	.	+	.	ID=gene-16S rRNA;Name=16S rRNA;gbkey=Gene;gene=16S rRNA;gene_biotype=rRNA
+BK069897.1	tpg	rRNA	11121	13304	.	+	.	ID=rna-16S rRNA;Parent=gene-16S rRNA;gbkey=rRNA;gene=16S rRNA;product=large subunit ribosomal RNA
+BK069897.1	tpg	exon	11121	13304	.	+	.	ID=exon-16S rRNA-1;Parent=rna-16S rRNA;gbkey=rRNA;gene=16S rRNA;product=large subunit ribosomal RNA
+BK069897.1	tpg	gene	13374	14162	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	13374	14162	.	+	0	ID=cds-DBB32554.1;Parent=gene-COX3;Dbxref=NCBI_GP:DBB32554.1;Name=DBB32554.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=DBB32554.1;transl_table=4
+BK069897.1	tpg	gene	14259	16704	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+BK069897.1	tpg	exon	14259	15152	.	+	.	ID=id-COX1-1;Parent=gene-COX1;exon_number=1;gbkey=exon;gene=COX1;number=1
+BK069897.1	tpg	intron	15153	16008	.	+	.	ID=id-COX1;Parent=gene-COX1;Note=group I;gbkey=intron;gene=COX1
+BK069897.1	tpg	exon	16009	16704	.	+	.	ID=id-COX1-2;Parent=gene-COX1;exon_number=2;gbkey=exon;gene=COX1;number=2
+BK069897.1	tpg	CDS	14259	15152	.	+	0	ID=cds-DBB32555.1;Parent=gene-COX1;Dbxref=NCBI_GP:DBB32555.1;Name=DBB32555.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=DBB32555.1;transl_table=4
+BK069897.1	tpg	CDS	16009	16704	.	+	0	ID=cds-DBB32555.1;Parent=gene-COX1;Dbxref=NCBI_GP:DBB32555.1;Name=DBB32555.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=DBB32555.1;transl_table=4
+BK069897.1	tpg	gene	16745	17044	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	16745	17044	.	+	0	ID=cds-DBB32556.1;Parent=gene-ND4L;Dbxref=NCBI_GP:DBB32556.1;Name=DBB32556.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=DBB32556.1;transl_table=4
+BK069897.1	tpg	gene	17069	17284	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	17069	17284	.	+	0	ID=cds-DBB32557.1;Parent=gene-ATP8;Dbxref=NCBI_GP:DBB32557.1;Name=DBB32557.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=DBB32557.1;transl_table=4
+BK069897.1	tpg	gene	17315	18004	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+BK069897.1	tpg	CDS	17315	18004	.	+	0	ID=cds-DBB32558.1;Parent=gene-ATP6;Dbxref=NCBI_GP:DBB32558.1;Name=DBB32558.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=DBB32558.1;transl_table=4
+

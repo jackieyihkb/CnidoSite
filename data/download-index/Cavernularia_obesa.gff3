@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region OK149222.1 1 18641
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1226274
+OK149222.1	Genbank	region	1	18641	.	+	.	ID=OK149222.1:1..18641;Dbxref=taxon:1226274;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+OK149222.1	Genbank	gene	1	1472	.	+	.	ID=gene-rrn16;Name=rrn16;gbkey=Gene;gene=rrn16;gene_biotype=rRNA
+OK149222.1	Genbank	rRNA	1	1472	.	+	.	ID=rna-rrn16;Parent=gene-rrn16;gbkey=rRNA;gene=rrn16;product=16S ribosomal RNA
+OK149222.1	Genbank	exon	1	1472	.	+	.	ID=exon-rrn16-1;Parent=rna-rrn16;gbkey=rRNA;gene=rrn16;product=16S ribosomal RNA
+OK149222.1	Genbank	gene	1488	2855	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	1488	2855	.	+	0	ID=cds-UFH78309.1;Parent=gene-ND2;Dbxref=NCBI_GP:UFH78309.1;Name=UFH78309.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=UFH78309.1;transl_table=4
+OK149222.1	Genbank	gene	2843	4660	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	2843	4660	.	+	0	ID=cds-UFH78310.1;Parent=gene-ND5;Dbxref=NCBI_GP:UFH78310.1;Name=UFH78310.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=UFH78310.1;transl_table=4
+OK149222.1	Genbank	gene	4687	6135	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	4687	6135	.	+	0	ID=cds-UFH78311.1;Parent=gene-ND4;Dbxref=NCBI_GP:UFH78311.1;Name=UFH78311.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=UFH78311.1;transl_table=4
+OK149222.1	Genbank	gene	6231	6301	.	+	.	ID=gene-trnM(cau);Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA
+OK149222.1	Genbank	tRNA	6231	6301	.	+	.	ID=rna-trnM(cau);Parent=gene-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+OK149222.1	Genbank	exon	6231	6301	.	+	.	ID=exon-trnM(cau)-1;Parent=rna-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+OK149222.1	Genbank	gene	6367	7152	.	-	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	6367	7152	.	-	0	ID=cds-UFH78312.1;Parent=gene-COX3;Dbxref=NCBI_GP:UFH78312.1;Name=UFH78312.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=UFH78312.1;transl_table=4
+OK149222.1	Genbank	gene	7210	7917	.	-	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	7210	7917	.	-	0	ID=cds-UFH78313.1;Parent=gene-ATP6;Dbxref=NCBI_GP:UFH78313.1;Name=UFH78313.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=UFH78313.1;transl_table=4
+OK149222.1	Genbank	gene	7937	8152	.	-	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	7937	8152	.	-	0	ID=cds-UFH78314.1;Parent=gene-ATP8;Dbxref=NCBI_GP:UFH78314.1;Name=UFH78314.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=UFH78314.1;transl_table=4
+OK149222.1	Genbank	gene	8195	8956	.	-	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	8195	8956	.	-	0	ID=cds-UFH78315.1;Parent=gene-COX2;Dbxref=NCBI_GP:UFH78315.1;Name=UFH78315.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=UFH78315.1;transl_table=4
+OK149222.1	Genbank	gene	9059	10624	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	9059	10624	.	+	0	ID=cds-UFH78316.1;Parent=gene-COX1;Dbxref=NCBI_GP:UFH78316.1;Name=UFH78316.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=UFH78316.1;transl_table=4
+OK149222.1	Genbank	gene	10666	11721	.	+	.	ID=gene-rrn12;Name=rrn12;gbkey=Gene;gene=rrn12;gene_biotype=rRNA
+OK149222.1	Genbank	rRNA	10666	11721	.	+	.	ID=rna-rrn12;Parent=gene-rrn12;gbkey=rRNA;gene=rrn12;product=12S ribosomal RNA
+OK149222.1	Genbank	exon	10666	11721	.	+	.	ID=exon-rrn12-1;Parent=rna-rrn12;gbkey=rRNA;gene=rrn12;product=12S ribosomal RNA
+OK149222.1	Genbank	gene	11772	12752	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	11772	12752	.	+	0	ID=cds-UFH78317.1;Parent=gene-ND1;Dbxref=NCBI_GP:UFH78317.1;Name=UFH78317.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=UFH78317.1;transl_table=4
+OK149222.1	Genbank	gene	12765	13925	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	12765	13925	.	+	0	ID=cds-UFH78318.1;Parent=gene-CYTB;Dbxref=NCBI_GP:UFH78318.1;Name=UFH78318.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=UFH78318.1;transl_table=4
+OK149222.1	Genbank	gene	13943	14497	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	13943	14497	.	+	0	ID=cds-UFH78319.1;Parent=gene-ND6;Dbxref=NCBI_GP:UFH78319.1;Name=UFH78319.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=UFH78319.1;transl_table=4
+OK149222.1	Genbank	gene	14546	14899	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	14546	14899	.	+	0	ID=cds-UFH78320.1;Parent=gene-ND3;Dbxref=NCBI_GP:UFH78320.1;Name=UFH78320.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=UFH78320.1;transl_table=4
+OK149222.1	Genbank	gene	14903	15196	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	14903	15196	.	+	0	ID=cds-UFH78321.1;Parent=gene-ND4L;Dbxref=NCBI_GP:UFH78321.1;Name=UFH78321.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=UFH78321.1;transl_table=4
+OK149222.1	Genbank	gene	15210	18134	.	+	.	ID=gene-mutS;Name=mutS;gbkey=Gene;gene=mutS;gene_biotype=protein_coding
+OK149222.1	Genbank	CDS	15210	18134	.	+	0	ID=cds-UFH78322.1;Parent=gene-mutS;Dbxref=NCBI_GP:UFH78322.1;Name=UFH78322.1;gbkey=CDS;gene=mutS;product=mutS;protein_id=UFH78322.1;transl_table=4
+

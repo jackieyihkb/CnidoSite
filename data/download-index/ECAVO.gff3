@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_035667.1 1 19316
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=317547
+NC_035667.1	RefSeq	region	1	19316	.	+	.	ID=NC_035667.1:1..19316;Dbxref=taxon:317547;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=SNSB-BSPG 2015 XXXI GW4597
+NC_035667.1	RefSeq	gene	1	1597	.	+	.	ID=gene-CKX76_mgp01;Dbxref=GeneID:33904505;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=CKX76_mgp01
+NC_035667.1	RefSeq	CDS	1	1597	.	+	0	ID=cds-YP_009417066.1;Parent=gene-CKX76_mgp01;Dbxref=GenBank:YP_009417066.1,GeneID:33904505;Name=YP_009417066.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=COX1;locus_tag=CKX76_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009417066.1;transl_except=(pos:1597%2Caa:TERM);transl_table=4
+NC_035667.1	RefSeq	gene	1749	2674	.	+	.	ID=gene-CKX76_mgr01;Dbxref=GeneID:33904489;Name=CKX76_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKX76_mgr01
+NC_035667.1	RefSeq	rRNA	1749	2674	.	+	.	ID=rna-CKX76_mgr01;Parent=gene-CKX76_mgr01;Dbxref=GeneID:33904489;gbkey=rRNA;locus_tag=CKX76_mgr01;product=12S ribosomal RNA
+NC_035667.1	RefSeq	exon	1749	2674	.	+	.	ID=exon-CKX76_mgr01-1;Parent=rna-CKX76_mgr01;Dbxref=GeneID:33904489;gbkey=rRNA;locus_tag=CKX76_mgr01;product=12S ribosomal RNA
+NC_035667.1	RefSeq	gene	2679	3650	.	+	.	ID=gene-CKX76_mgp14;Dbxref=GeneID:33904502;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=CKX76_mgp14
+NC_035667.1	RefSeq	CDS	2679	3650	.	+	0	ID=cds-YP_009417067.1;Parent=gene-CKX76_mgp14;Dbxref=GenBank:YP_009417067.1,GeneID:33904502;Name=YP_009417067.1;gbkey=CDS;gene=ND1;locus_tag=CKX76_mgp14;product=NADH dehydrogenase subunit 1;protein_id=YP_009417067.1;transl_table=4
+NC_035667.1	RefSeq	gene	3712	4872	.	+	.	ID=gene-CKX76_mgp13;Dbxref=GeneID:33904490;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=CKX76_mgp13
+NC_035667.1	RefSeq	CDS	3712	4872	.	+	0	ID=cds-YP_009417068.1;Parent=gene-CKX76_mgp13;Dbxref=GenBank:YP_009417068.1,GeneID:33904490;Name=YP_009417068.1;gbkey=CDS;gene=CYTB;locus_tag=CKX76_mgp13;product=cytochrome b;protein_id=YP_009417068.1;transl_table=4
+NC_035667.1	RefSeq	gene	4913	5470	.	+	.	ID=gene-CKX76_mgp12;Dbxref=GeneID:33904491;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=CKX76_mgp12
+NC_035667.1	RefSeq	CDS	4913	5470	.	+	0	ID=cds-YP_009417069.1;Parent=gene-CKX76_mgp12;Dbxref=GenBank:YP_009417069.1,GeneID:33904491;Name=YP_009417069.1;gbkey=CDS;gene=ND6;locus_tag=CKX76_mgp12;product=NADH dehydrogenase subunit 6;protein_id=YP_009417069.1;transl_table=4
+NC_035667.1	RefSeq	gene	5514	5873	.	+	.	ID=gene-CKX76_mgp11;Dbxref=GeneID:33904492;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=CKX76_mgp11
+NC_035667.1	RefSeq	CDS	5514	5873	.	+	0	ID=cds-YP_009417070.1;Parent=gene-CKX76_mgp11;Dbxref=GenBank:YP_009417070.1,GeneID:33904492;Name=YP_009417070.1;gbkey=CDS;gene=ND3;locus_tag=CKX76_mgp11;product=NADH dehydrogenase subunit 3;protein_id=YP_009417070.1;transl_table=4
+NC_035667.1	RefSeq	gene	5886	6179	.	+	.	ID=gene-CKX76_mgp10;Dbxref=GeneID:33904493;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=CKX76_mgp10
+NC_035667.1	RefSeq	CDS	5886	6179	.	+	0	ID=cds-YP_009417071.1;Parent=gene-CKX76_mgp10;Dbxref=GenBank:YP_009417071.1,GeneID:33904493;Name=YP_009417071.1;gbkey=CDS;gene=ND4L;locus_tag=CKX76_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_009417071.1;transl_table=4
+NC_035667.1	RefSeq	gene	6193	9150	.	+	.	ID=gene-CKX76_mgp09;Dbxref=GeneID:33904494;Name=MutS;gbkey=Gene;gene=MutS;gene_biotype=protein_coding;locus_tag=CKX76_mgp09
+NC_035667.1	RefSeq	CDS	6193	9150	.	+	0	ID=cds-YP_009417072.1;Parent=gene-CKX76_mgp09;Dbxref=GenBank:YP_009417072.1,GeneID:33904494;Name=YP_009417072.1;gbkey=CDS;gene=MutS;locus_tag=CKX76_mgp09;product=MutS-like protein;protein_id=YP_009417072.1;transl_table=4
+NC_035667.1	RefSeq	gene	9160	11342	.	+	.	ID=gene-CKX76_mgr02;Dbxref=GeneID:33904495;Name=CKX76_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKX76_mgr02
+NC_035667.1	RefSeq	rRNA	9160	11342	.	+	.	ID=rna-CKX76_mgr02;Parent=gene-CKX76_mgr02;Dbxref=GeneID:33904495;gbkey=rRNA;locus_tag=CKX76_mgr02;product=16S ribosomal RNA
+NC_035667.1	RefSeq	exon	9160	11342	.	+	.	ID=exon-CKX76_mgr02-1;Parent=rna-CKX76_mgr02;Dbxref=GeneID:33904495;gbkey=rRNA;locus_tag=CKX76_mgr02;product=16S ribosomal RNA
+NC_035667.1	RefSeq	gene	11347	12504	.	+	.	ID=gene-CKX76_mgp08;Dbxref=GeneID:33904503;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=CKX76_mgp08
+NC_035667.1	RefSeq	CDS	11347	12504	.	+	0	ID=cds-YP_009417073.1;Parent=gene-CKX76_mgp08;Dbxref=GenBank:YP_009417073.1,GeneID:33904503;Name=YP_009417073.1;gbkey=CDS;gene=ND2;locus_tag=CKX76_mgp08;product=NADH dehydrogenase subunit 2;protein_id=YP_009417073.1;transl_table=4
+NC_035667.1	RefSeq	gene	12492	14309	.	+	.	ID=gene-CKX76_mgp07;Dbxref=GeneID:33904496;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=CKX76_mgp07
+NC_035667.1	RefSeq	CDS	12492	14309	.	+	0	ID=cds-YP_009417074.1;Parent=gene-CKX76_mgp07;Dbxref=GenBank:YP_009417074.1,GeneID:33904496;Name=YP_009417074.1;gbkey=CDS;gene=ND5;locus_tag=CKX76_mgp07;product=NADH dehydrogenase subunit 5;protein_id=YP_009417074.1;transl_table=4
+NC_035667.1	RefSeq	gene	15009	16457	.	+	.	ID=gene-CKX76_mgp06;Dbxref=GeneID:33904497;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=CKX76_mgp06
+NC_035667.1	RefSeq	CDS	15009	16457	.	+	0	ID=cds-YP_009417075.1;Parent=gene-CKX76_mgp06;Dbxref=GenBank:YP_009417075.1,GeneID:33904497;Name=YP_009417075.1;gbkey=CDS;gene=ND4;locus_tag=CKX76_mgp06;product=NADH dehydrogenase subunit 4;protein_id=YP_009417075.1;transl_table=4
+NC_035667.1	RefSeq	gene	16515	16581	.	-	.	ID=gene-CKX76_mgt01;Dbxref=GeneID:33904498;Name=CKX76_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=CKX76_mgt01
+NC_035667.1	RefSeq	tRNA	16515	16581	.	-	.	ID=rna-CKX76_mgt01;Parent=gene-CKX76_mgt01;Dbxref=GeneID:33904498;gbkey=tRNA;locus_tag=CKX76_mgt01;product=tRNA-Met
+NC_035667.1	RefSeq	exon	16515	16581	.	-	.	ID=exon-CKX76_mgt01-1;Parent=rna-CKX76_mgt01;Dbxref=GeneID:33904498;gbkey=tRNA;locus_tag=CKX76_mgt01;product=tRNA-Met
+NC_035667.1	RefSeq	gene	16625	17410	.	-	.	ID=gene-CKX76_mgp05;Dbxref=GeneID:33904504;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=CKX76_mgp05
+NC_035667.1	RefSeq	CDS	16625	17410	.	-	0	ID=cds-YP_009417076.1;Parent=gene-CKX76_mgp05;Dbxref=GenBank:YP_009417076.1,GeneID:33904504;Name=YP_009417076.1;gbkey=CDS;gene=COX3;locus_tag=CKX76_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_009417076.1;transl_table=4
+NC_035667.1	RefSeq	gene	17475	18182	.	-	.	ID=gene-CKX76_mgp04;Dbxref=GeneID:33904499;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=CKX76_mgp04
+NC_035667.1	RefSeq	CDS	17475	18182	.	-	0	ID=cds-YP_009417077.1;Parent=gene-CKX76_mgp04;Dbxref=GenBank:YP_009417077.1,GeneID:33904499;Name=YP_009417077.1;gbkey=CDS;gene=ATP6;locus_tag=CKX76_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009417077.1;transl_table=4
+NC_035667.1	RefSeq	gene	18205	18420	.	-	.	ID=gene-CKX76_mgp03;Dbxref=GeneID:33904500;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=CKX76_mgp03
+NC_035667.1	RefSeq	CDS	18205	18420	.	-	0	ID=cds-YP_009417078.1;Parent=gene-CKX76_mgp03;Dbxref=GenBank:YP_009417078.1,GeneID:33904500;Name=YP_009417078.1;gbkey=CDS;gene=ATP8;locus_tag=CKX76_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_009417078.1;transl_table=4
+NC_035667.1	RefSeq	gene	18443	19204	.	-	.	ID=gene-CKX76_mgp02;Dbxref=GeneID:33904501;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=CKX76_mgp02
+NC_035667.1	RefSeq	CDS	18443	19204	.	-	0	ID=cds-YP_009417079.1;Parent=gene-CKX76_mgp02;Dbxref=GenBank:YP_009417079.1,GeneID:33904501;Name=YP_009417079.1;gbkey=CDS;gene=COX2;locus_tag=CKX76_mgp02;product=cytochrome c oxidase subunit II;protein_id=YP_009417079.1;transl_table=4
+

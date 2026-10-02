@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cell Atlas viewer &mdash; CnidoSite</title>
+<!--
+  Standalone page for the interactive cell atlas viewer.
+
+  This file is both the drop-in demo AND the reference for how a PHP page
+  embeds the viewer: link the two static files, give it a mount element, and
+  construct CnidoAtlas.  There is no build step and no external dependency.
+
+  Deep links (used by cell_marker.php / gene_exp.php to cross-link a marker
+  table row to its feature plot):
+      index.html?dataset=AMILL_whole_adult&type=<cell type>&gene=<gene>
+-->
+<link rel="stylesheet" href="cellatlas.css">
+<style>
+  body {
+    margin: 0;
+    padding: 22px;
+    background: #f9f9f7;
+    color: #0b0b0b;
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .wrap { max-width: 1500px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: #52514e; font-size: 14.5px; margin: 0 0 16px; max-width: 76ch; }
+  .picker { margin-bottom: 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .picker label { font-size: 13.5px; color: #52514e; }
+  select { font: inherit; padding: 5px 9px; border: 1px solid #c3c2b7;
+           border-radius: 4px; background: #fff; }
+  .linkrow { margin-top: 10px; font-size: 13.5px; color: #52514e; }
+  .linkrow code {
+    background: #fff; border: 1px solid #e1e0d9; border-radius: 3px;
+    padding: 2px 6px; font-size: 13px; word-break: break-all;
+  }
+  .err { color: #d03b3b; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Interactive cell atlas</h1>
+  <p class="lede">
+    Every cell in the dataset is drawn as one point, coloured by cell type,
+    cluster, library, quality-control metric, or the expression of a single
+    gene. Drag to pan, scroll to zoom, shift-drag to select a region.
+    Click a group in the legend to isolate it.
+  </p>
+
+  <div class="picker">
+    <label for="ds">Dataset</label>
+    <select id="ds"></select>
+    <span id="msg" class="err"></span>
+  </div>
+
+  <div id="atlas"></div>
+
+  <div class="linkrow">
+    Permalink to the current view:
+    <code id="permalink">&mdash;</code>
+  </div>
+</div>
+
+<script src="cellatlas.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var mount = document.getElementById("atlas");
+  var sel = document.getElementById("ds");
+  var msg = document.getElementById("msg");
+  var permalink = document.getElementById("permalink");
+  var viewer = null;
+  var dataRoot = "../singlecell_data/";
+
+  function fail(text) { msg.textContent = text; msg.className = "err"; }
+  function clear() { msg.textContent = ""; }
+
+  // Surface errors rather than letting them die in the console: this page is
+  // what a site maintainer will look at when something breaks.
+  window.addEventListener("error", function (e) {
+    fail("Error: " + (e.message || e.error || "unknown"));
+  });
+  window.addEventListener("unhandledrejection", function (e) {
+    fail("Error: " + ((e.reason && e.reason.message) || e.reason || "unknown"));
+  });
+
+  function updatePermalink() {
+    if (!viewer) return;
+    var q = viewer.urlState();
+    var url = location.pathname + "?" + q;
+    permalink.textContent = url;
+    try { history.replaceState(null, "", url); } catch (e) { /* file:// */ }
+  }
+
+  function open(datasetId) {
+    clear();
+    if (viewer) viewer = null;
+    mount.innerHTML = "";
+    // ?theme=dark|light pins the viewer's theme; otherwise it follows the
+    // visitor's OS preference (see the media query in cellatlas.css). Must be
+    // set before the viewer reads its palette.
+    var want = new URLSearchParams(location.search).get("theme");
+    if (want === "dark" || want === "light") {
+      mount.setAttribute("data-theme", want);
+    } else {
+      mount.removeAttribute("data-theme");
+    }
+    viewer = new CnidoAtlas({
+      mount: mount,
+      dataUrl: dataRoot + datasetId + "/",
+      datasetId: datasetId
+    });
+    viewer.load().then(function () {
+      viewer.applyUrlState();
+      updatePermalink();
+      // keep the permalink in step as the user explores
+      var t = setInterval(function () { updatePermalink(); }, 1200);
+      window.addEventListener("beforeunload", function () { clearInterval(t); });
+    }).catch(function (e) {
+      fail("Could not load " + datasetId + ": " + e.message);
+    });
+  }
+
+  // discover what has been exported; fall back to the demo dataset so the page
+  // still works when opened straight off disk
+  fetch(dataRoot + "_export_index.json")
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (idx) {
+      var ids = (idx && idx.length) ? idx.map(function (d) { return d.dataset_id; })
+                                    : ["AMILL_whole_adult"];
+      ids.forEach(function (id) {
+        var o = document.createElement("option");
+        o.value = id; o.textContent = id;
+        sel.appendChild(o);
+      });
+      var want = new URLSearchParams(location.search).get("dataset");
+      var pick = (want && ids.indexOf(want) >= 0) ? want : ids[0];
+      sel.value = pick;
+      sel.addEventListener("change", function () { open(sel.value); });
+      open(pick);
+    })
+    .catch(function () {
+      sel.innerHTML = "<option>AMILL_whole_adult</option>";
+      open("AMILL_whole_adult");
+    });
+})();
+</script>
+</body>
+</html>

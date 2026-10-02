@@ -1,0 +1,126 @@
+<!doctype html>
+<!--
+    Copyright (C) 2006 - 2022 by Andreas Untergasser and Harm Nijveen
+    All rights reserved.
+  
+    This file is part of Primer3Plus. Primer3Plus is a web interface to Primer3.
+  
+    The Primer3Plus is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 3 of the License, or
+    (at your option) any later version.
+  
+    Primer3Plus is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+  
+    You should have received a copy of the GNU General Public License
+    along with this Primer3Plus. If not, see <https://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=1034, initial-scale=1.0">
+  <meta name="description" content="The Compare Files tool analyzes Primer3 settings files for differences.">
+  <title>Primer3Plus - Compare Files</title>
+  <link rel="stylesheet" href="/static/css/primer3plus.css">
+  <link rel="canonical" href="https://www.primer3plus.com/primer3compareFiles.html" />
+</head>
+<body>
+  <div class="p3p_page">
+    <div class="p3p_top_bar">
+      <table>
+        <colgroup>
+          <col style="width: 60%" class="p3p_blue">
+          <col style="width: 20%" class="p3p_blue">
+          <col style="width: 20%" class="p3p_blue">
+        </colgroup>
+        <tr>
+          <td class="p3p_big_space p3p_blue" rowspan="2"><a class="p3p_top_bar_title">Primer3CompareFiles</a><br>
+            <a class="p3p_top_bar_explain">find the difference</a>
+          </td>
+          <td class="p3p_big_space p3p_blue">
+            <a style="font-weight:bold;text-decoration: none;" href="/primer3plusPackage.html">More...</a>
+          </td>
+          <td class="p3p_big_space p3p_blue">
+            <a style="font-weight:bold;text-decoration: none;" href="https://github.com/primer3-org/primer3plus" target="_blank">Source Code</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="p3p_big_space p3p_blue">
+            <a style="font-weight:bold;text-decoration: none;" href="/primer3plusHelp.html">Help</a>
+          </td>
+          <td class="p3p_big_space p3p_blue">
+            <a style="font-weight:bold;text-decoration: none;" href="/primer3plusAbout.html">About</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="P3P_TOP_MESSAGE_ERROR" style="display: none;">
+      <table>
+        <colgroup>
+          <col style="width: 90%">
+          <col style="width: 10%">
+        </colgroup>
+        <tr>
+          <td>
+            <div id="P3P_TOP_MESSAGE_ERROR_BOX"></div>
+          </td>
+          <td class="p3p_top_right">
+            <input id="P3P_ACTION_RESET_ERROR" value="Dismiss" type="button">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="P3P_TAB_HELP" class="p3p_tab_page">
+      <p>&nbsp;&nbsp;Primer3CompareFiles allows to compare files with each other and the 
+        default values to identify differences.<br>
+        <br>
+        &nbsp;&nbsp;<a>File 1:</a>
+        &nbsp;&nbsp;<input id="P3P_COMPARE_FILE_ONE" type="file"><br>
+        <br>
+        &nbsp;&nbsp;<a>File 2:</a>
+        &nbsp;&nbsp;<input id="P3P_COMPARE_FILE_TWO" type="file">&nbsp;&nbsp;
+	or&nbsp;&nbsp;&nbsp;&nbsp;<a>Server settings:</a>&nbsp;&nbsp;
+        <select id="P3P_SERVER_SETTINGS_FILE">
+          <option value="Default">Default</option>
+          <option value="None">None</option>
+        </select>&nbsp;
+        <input id="P3P_ACTION_SERVER_SETTINGS" value="Activate Settings" type="button"><br>
+        <br>
+        <br>
+        &nbsp;&nbsp;
+        <input id="P3P_ACTION_RUN_COMPARE" value="Run Compare" type="button" style="font-size: 0.9em; background: #83db7b;">
+        &nbsp;&nbsp;
+        <input id="P3P_ACTION_RUN_CONVERT_OLD" value="Convert Old Tags" type="button" style="font-size: 0.9em;">
+        &nbsp;&nbsp;
+        <input id="P3P_ACTION_RESET_DEFAULT" value="Reset Default" type="button" style="font-size: 0.9em;">
+      </p>
+      <br />
+      <div id="P3P_RESULTS_BOX">
+      </div>
+    </div>
+
+    <div class="p3p_footer_bar">
+      <div class="p3p_footer_l">
+        GEAR + Primer3 &#126;
+        <a target="_blank" class="p3p_footer_link" href="https://www.gear-genomics.com"> Home </a> &#183;
+        <a target="_blank" class="p3p_footer_link" href="https://github.com/gear-genomics"> GEAR-GitHub </a> &#183;
+        <a target="_blank" class="p3p_footer_link" href="https://github.com/primer3-org"> Primer3-GitHub </a> &#183;
+        <a target="_blank" class="p3p_footer_link" href="https://www.gear-genomics.com/terms"> Terms of Use </a> &#183;
+        <a target="_blank" class="p3p_footer_link" href="https://www.gear-genomics.com/contact"> Contact Us </a>
+      </div>
+      <div class="p3p_footer_r">
+        Supported by
+        <a target="_blank" class="p3p_footer_link" href="https://www.embl.de">EMBL</a>
+      </div>
+    </div>
+
+  </div>
+  <script src="static/libs/axios-0.27.0.min.js"></script>
+  <script type="module" src="static/js/primer3plus.js"></script>
+</body>
+</html>

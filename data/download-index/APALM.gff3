@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MW246565.1 1 18254
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6131
+MW246565.1	Genbank	region	1	18254	.	+	.	ID=MW246565.1:1..18254;Dbxref=taxon:6131;Is_circular=true;Name=MT;clone=HG0125;collected-by=Iliana Baums%2C Pennsylvania State University;collection-date=31-Oct-2015;country=Virgin Islands;gbkey=Src;genome=mitochondrion;identified-by=Sheila Kitchen;lat-lon=18.31701 N 64.9892 W;mol_type=genomic DNA;specimen-voucher=13752
+MW246565.1	Genbank	tRNA	1	71	.	+	.	ID=rna-MW246565.1:1..71;gbkey=tRNA;product=tRNA-Met
+MW246565.1	Genbank	exon	1	71	.	+	.	ID=exon-MW246565.1:1..71-1;Parent=rna-MW246565.1:1..71;gbkey=tRNA;product=tRNA-Met
+MW246565.1	Genbank	rRNA	72	2241	.	+	.	ID=rna-MW246565.1:72..2241;gbkey=rRNA;product=large subunit ribosomal RNA
+MW246565.1	Genbank	exon	72	2241	.	+	.	ID=exon-MW246565.1:72..2241-1;Parent=rna-MW246565.1:72..2241;gbkey=rRNA;product=large subunit ribosomal RNA
+MW246565.1	Genbank	gene	2434	3153	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+MW246565.1	Genbank	gene	14999	16114	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	2434	3153	.	+	0	ID=cds-UGV21510.1;Parent=gene-nad5;Dbxref=NCBI_GP:UGV21510.1;Name=UGV21510.1;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=UGV21510.1;transl_table=4
+MW246565.1	Genbank	CDS	14999	16114	.	+	0	ID=cds-UGV21510.1;Parent=gene-nad5;Dbxref=NCBI_GP:UGV21510.1;Name=UGV21510.1;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=UGV21510.1;transl_table=4
+MW246565.1	Genbank	gene	3477	4460	.	+	.	ID=gene-nad1;Name=nad1;gbkey=Gene;gene=nad1;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	3477	4460	.	+	0	ID=cds-UGV21511.1;Parent=gene-nad1;Dbxref=NCBI_GP:UGV21511.1;Name=UGV21511.1;gbkey=CDS;gene=nad1;product=NADH dehydrogenase subunit 1;protein_id=UGV21511.1;transl_table=4
+MW246565.1	Genbank	gene	4570	5727	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	4570	5727	.	+	0	ID=cds-UGV21512.1;Parent=gene-cob;Dbxref=NCBI_GP:UGV21512.1;Name=UGV21512.1;gbkey=CDS;gene=cob;product=cytochrome b;protein_id=UGV21512.1;transl_table=4
+MW246565.1	Genbank	gene	6251	7348	.	+	.	ID=gene-nad2;Name=nad2;gbkey=Gene;gene=nad2;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	6251	7348	.	+	0	ID=cds-UGV21513.1;Parent=gene-nad2;Dbxref=NCBI_GP:UGV21513.1;Name=UGV21513.1;gbkey=CDS;gene=nad2;product=NADH dehydrogenase subunit 2;protein_id=UGV21513.1;transl_table=4
+MW246565.1	Genbank	gene	7381	7974	.	+	.	ID=gene-nad6;Name=nad6;gbkey=Gene;gene=nad6;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	7381	7974	.	+	0	ID=cds-UGV21514.1;Parent=gene-nad6;Dbxref=NCBI_GP:UGV21514.1;Name=UGV21514.1;gbkey=CDS;gene=nad6;product=NADH dehydrogenase subunit 6;protein_id=UGV21514.1;transl_table=4
+MW246565.1	Genbank	gene	8043	8741	.	+	.	ID=gene-atp6;Name=atp6;gbkey=Gene;gene=atp6;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	8043	8741	.	+	0	ID=cds-UGV21515.1;Parent=gene-atp6;Dbxref=NCBI_GP:UGV21515.1;Name=UGV21515.1;gbkey=CDS;gene=atp6;product=ATP synthase F0 subunit 6;protein_id=UGV21515.1;transl_table=4
+MW246565.1	Genbank	gene	8893	10368	.	+	.	ID=gene-nad4;Name=nad4;gbkey=Gene;gene=nad4;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	8893	10368	.	+	0	ID=cds-UGV21516.1;Parent=gene-nad4;Dbxref=NCBI_GP:UGV21516.1;Name=UGV21516.1;gbkey=CDS;gene=nad4;product=NADH dehydrogenase subunit 4;protein_id=UGV21516.1;transl_table=4
+MW246565.1	Genbank	rRNA	10631	11603	.	+	.	ID=rna-MW246565.1:10631..11603;gbkey=rRNA;product=small subunit ribosomal RNA
+MW246565.1	Genbank	exon	10631	11603	.	+	.	ID=exon-MW246565.1:10631..11603-1;Parent=rna-MW246565.1:10631..11603;gbkey=rRNA;product=small subunit ribosomal RNA
+MW246565.1	Genbank	sequence_feature	11583	12594	.	+	.	ID=id-MW246565.1:11583..12594;Note=putative control region;gbkey=misc_feature
+MW246565.1	Genbank	gene	12595	13383	.	+	.	ID=gene-cox3;Name=cox3;gbkey=Gene;gene=cox3;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	12595	13383	.	+	0	ID=cds-UGV21517.1;Parent=gene-cox3;Dbxref=NCBI_GP:UGV21517.1;Name=UGV21517.1;gbkey=CDS;gene=cox3;product=cytochrome c oxidase subunit 3;protein_id=UGV21517.1;transl_table=4
+MW246565.1	Genbank	gene	13440	14183	.	+	.	ID=gene-cox2;Name=cox2;gbkey=Gene;gene=cox2;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	13440	14183	.	+	0	ID=cds-UGV21518.1;Parent=gene-cox2;Dbxref=NCBI_GP:UGV21518.1;Name=UGV21518.1;gbkey=CDS;gene=cox2;product=cytochrome c oxidase subunit 2;protein_id=UGV21518.1;transl_table=4
+MW246565.1	Genbank	gene	14212	14514	.	+	.	ID=gene-nad4l;Name=nad4l;gbkey=Gene;gene=nad4l;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	14212	14514	.	+	0	ID=cds-UGV21519.1;Parent=gene-nad4l;Dbxref=NCBI_GP:UGV21519.1;Name=UGV21519.1;gbkey=CDS;gene=nad4l;product=NADH dehydrogenase subunit 4L;protein_id=UGV21519.1;transl_table=4
+MW246565.1	Genbank	gene	14547	14903	.	+	.	ID=gene-nad3;Name=nad3;gbkey=Gene;gene=nad3;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	14547	14903	.	+	0	ID=cds-UGV21520.1;Parent=gene-nad3;Dbxref=NCBI_GP:UGV21520.1;Name=UGV21520.1;gbkey=CDS;gene=nad3;product=NADH dehydrogenase subunit 3;protein_id=UGV21520.1;transl_table=4
+MW246565.1	Genbank	tRNA	16145	16214	.	+	.	ID=rna-MW246565.1:16145..16214;gbkey=tRNA;product=tRNA-Trp
+MW246565.1	Genbank	exon	16145	16214	.	+	.	ID=exon-MW246565.1:16145..16214-1;Parent=rna-MW246565.1:16145..16214;gbkey=tRNA;product=tRNA-Trp
+MW246565.1	Genbank	gene	16247	16465	.	+	.	ID=gene-atp8;Name=atp8;gbkey=Gene;gene=atp8;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	16247	16465	.	+	0	ID=cds-UGV21521.1;Parent=gene-atp8;Dbxref=NCBI_GP:UGV21521.1;Name=UGV21521.1;gbkey=CDS;gene=atp8;product=ATP synthase F0 subunit 8;protein_id=UGV21521.1;transl_table=4
+MW246565.1	Genbank	gene	16447	18048	.	+	.	ID=gene-cox1;Name=cox1;gbkey=Gene;gene=cox1;gene_biotype=protein_coding
+MW246565.1	Genbank	CDS	16447	18048	.	+	0	ID=cds-UGV21522.1;Parent=gene-cox1;Dbxref=NCBI_GP:UGV21522.1;Name=UGV21522.1;gbkey=CDS;gene=cox1;product=cytochrome c oxidase subunit 1;protein_id=UGV21522.1;transl_table=4
+

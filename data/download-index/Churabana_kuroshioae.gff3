@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PQ554682.1 1 22738
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2840133
+PQ554682.1	Genbank	region	1	22738	.	+	.	ID=PQ554682.1:1..22738;Dbxref=taxon:2840133;Is_circular=true;Name=MT;collected-by=H. Kise;collection-date=17-Oct-2021;country=Pacific Ocean;gbkey=Src;genome=mitochondrion;identified-by=H. Kise;isolate=KM158CN8;mol_type=genomic DNA;specimen-voucher=NSMT-Co1899
+PQ554682.1	Genbank	gene	1	3123	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	1	888	.	+	0	ID=cds-XLV12912.1;Parent=gene-COX1;Dbxref=NCBI_GP:XLV12912.1;Name=XLV12912.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XLV12912.1;transl_table=4
+PQ554682.1	Genbank	CDS	2380	3123	.	+	0	ID=cds-XLV12912.1;Parent=gene-COX1;Dbxref=NCBI_GP:XLV12912.1;Name=XLV12912.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XLV12912.1;transl_table=4
+PQ554682.1	Genbank	exon	1	888	.	+	.	ID=id-COX1-1;Parent=gene-COX1;exon_number=1;gbkey=exon;gene=COX1;number=1
+PQ554682.1	Genbank	exon	2380	3123	.	+	.	ID=id-COX1-2;Parent=gene-COX1;exon_number=2;gbkey=exon;gene=COX1;number=2
+PQ554682.1	Genbank	intron	889	2379	.	+	.	ID=id-COX1;Parent=gene-COX1;exon_number=1;gbkey=intron;gene=COX1;number=1
+PQ554682.1	Genbank	gene	3296	3595	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	3296	3595	.	+	0	ID=cds-XLV12913.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XLV12913.1;Name=XLV12913.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XLV12913.1;transl_table=4
+PQ554682.1	Genbank	gene	3665	3883	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	3665	3883	.	+	0	ID=cds-XLV12914.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XLV12914.1;Name=XLV12914.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XLV12914.1;transl_table=4
+PQ554682.1	Genbank	gene	4183	4881	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	4183	4881	.	+	0	ID=cds-XLV12915.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XLV12915.1;Name=XLV12915.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XLV12915.1;transl_table=4
+PQ554682.1	Genbank	rRNA	5209	6462	.	+	.	ID=rna-PQ554682.1:5209..6462;gbkey=rRNA;product=small subunit ribosomal RNA
+PQ554682.1	Genbank	exon	5209	6462	.	+	.	ID=exon-PQ554682.1:5209..6462-1;Parent=rna-PQ554682.1:5209..6462;gbkey=rRNA;product=small subunit ribosomal RNA
+PQ554682.1	Genbank	gene	7132	8319	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	7132	8319	.	+	0	ID=cds-XLV12916.1;Parent=gene-ND2;Dbxref=NCBI_GP:XLV12916.1;Name=XLV12916.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XLV12916.1;transl_table=4
+PQ554682.1	Genbank	tRNA	8471	8541	.	+	.	ID=rna-PQ554682.1:8471..8541;gbkey=tRNA;product=tRNA-Met
+PQ554682.1	Genbank	exon	8471	8541	.	+	.	ID=exon-PQ554682.1:8471..8541-1;Parent=rna-PQ554682.1:8471..8541;gbkey=tRNA;product=tRNA-Met
+PQ554682.1	Genbank	rRNA	8598	11586	.	+	.	ID=rna-PQ554682.1:8598..11586;gbkey=rRNA;product=large subunit ribosomal RNA
+PQ554682.1	Genbank	exon	8598	11586	.	+	.	ID=exon-PQ554682.1:8598..11586-1;Parent=rna-PQ554682.1:8598..11586;gbkey=rRNA;product=large subunit ribosomal RNA
+PQ554682.1	Genbank	gene	12015	16249	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	12015	12731	.	+	0	ID=cds-XLV12917.1;Parent=gene-ND5;Dbxref=NCBI_GP:XLV12917.1;Name=XLV12917.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XLV12917.1;transl_table=4
+PQ554682.1	Genbank	CDS	15086	16249	.	+	0	ID=cds-XLV12917.1;Parent=gene-ND5;Dbxref=NCBI_GP:XLV12917.1;Name=XLV12917.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XLV12917.1;transl_table=4
+PQ554682.1	Genbank	exon	12015	12731	.	+	.	ID=id-ND5-1;Parent=gene-ND5;exon_number=1;gbkey=exon;gene=ND5;number=1
+PQ554682.1	Genbank	exon	15086	16249	.	+	.	ID=id-ND5-2;Parent=gene-ND5;exon_number=2;gbkey=exon;gene=ND5;number=2
+PQ554682.1	Genbank	intron	12732	15085	.	+	.	ID=id-ND5;Parent=gene-ND5;gbkey=intron;gene=ND5
+PQ554682.1	Genbank	gene	13120	14109	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	13120	14109	.	+	0	ID=cds-XLV12918.1;Parent=gene-ND1;Dbxref=NCBI_GP:XLV12918.1;Name=XLV12918.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XLV12918.1;transl_table=4
+PQ554682.1	Genbank	gene	14277	14633	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	14277	14633	.	+	0	ID=cds-XLV12919.1;Parent=gene-ND3;Dbxref=NCBI_GP:XLV12919.1;Name=XLV12919.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XLV12919.1;transl_table=4
+PQ554682.1	Genbank	tRNA	16290	16359	.	+	.	ID=rna-PQ554682.1:16290..16359;gbkey=tRNA;product=tRNA-Trp
+PQ554682.1	Genbank	exon	16290	16359	.	+	.	ID=exon-PQ554682.1:16290..16359-1;Parent=rna-PQ554682.1:16290..16359;gbkey=tRNA;product=tRNA-Trp
+PQ554682.1	Genbank	gene	16447	17211	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	16447	17211	.	+	0	ID=cds-XLV12920.1;Parent=gene-COX2;Dbxref=NCBI_GP:XLV12920.1;Name=XLV12920.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XLV12920.1;transl_table=4
+PQ554682.1	Genbank	gene	17711	19249	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	17711	19249	.	+	0	ID=cds-XLV12921.1;Parent=gene-ND4;Dbxref=NCBI_GP:XLV12921.1;Name=XLV12921.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XLV12921.1;transl_table=4
+PQ554682.1	Genbank	gene	19536	20216	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	19536	20216	.	+	0	ID=cds-XLV12922.1;Parent=gene-ND6;Dbxref=NCBI_GP:XLV12922.1;Name=XLV12922.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XLV12922.1;transl_table=4
+PQ554682.1	Genbank	gene	20307	21467	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	20307	21467	.	+	0	ID=cds-XLV12923.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XLV12923.1;Name=XLV12923.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XLV12923.1;transl_table=4
+PQ554682.1	Genbank	gene	21721	22509	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PQ554682.1	Genbank	CDS	21721	22509	.	+	0	ID=cds-XLV12924.1;Parent=gene-COX3;Dbxref=NCBI_GP:XLV12924.1;Name=XLV12924.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XLV12924.1;transl_table=4
+

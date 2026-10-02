@@ -1,0 +1,47 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region BK067227.1 1 15467
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=264074
+BK067227.1	tpg	region	1	15467	.	+	.	ID=BK067227.1:1..15467;Dbxref=taxon:264074;Name=MT;gbkey=Src;genome=mitochondrion;isolate=IRGN 742QOJ1H3Z;mol_type=genomic DNA;specimen-voucher=IRGN:742QOJ1H3Z
+BK067227.1	tpg	inverted_repeat	2	412	.	-	.	ID=id-BK067227.1:2..412;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+BK067227.1	tpg	gene	314	2087	.	-	.	ID=gene-rnl;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+BK067227.1	tpg	rRNA	314	2087	.	-	.	ID=rna-rnl;Parent=gene-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+BK067227.1	tpg	exon	314	2087	.	-	.	ID=exon-rnl-1;Parent=rna-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+BK067227.1	tpg	gene	2140	2877	.	+	.	ID=gene-cox2;Name=cox2;gbkey=Gene;gene=cox2;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	2140	2877	.	+	0	ID=cds-DBB38810.1;Parent=gene-cox2;Dbxref=NCBI_GP:DBB38810.1;Name=DBB38810.1;gbkey=CDS;gene=cox2;product=cytochrome c oxidase subunit 2;protein_id=DBB38810.1;transl_table=4
+BK067227.1	tpg	gene	2895	2964	.	+	.	ID=gene-trnW(uca);Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA
+BK067227.1	tpg	tRNA	2895	2964	.	+	.	ID=rna-trnW(uca);Parent=gene-trnW(uca);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+BK067227.1	tpg	exon	2895	2964	.	+	.	ID=exon-trnW(uca)-1;Parent=rna-trnW(uca);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+BK067227.1	tpg	gene	2968	3174	.	+	.	ID=gene-atp8;Name=atp8;gbkey=Gene;gene=atp8;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	2968	3174	.	+	0	ID=cds-DBB38811.1;Parent=gene-atp8;Dbxref=NCBI_GP:DBB38811.1;Name=DBB38811.1;gbkey=CDS;gene=atp8;product=ATP synthase F0 subunit 8;protein_id=DBB38811.1;transl_table=4
+BK067227.1	tpg	gene	3174	3878	.	+	.	ID=gene-atp6;Name=atp6;gbkey=Gene;gene=atp6;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	3174	3878	.	+	0	ID=cds-DBB38812.1;Parent=gene-atp6;Dbxref=NCBI_GP:DBB38812.1;Name=DBB38812.1;gbkey=CDS;gene=atp6;product=ATP synthase F0 subunit 6;protein_id=DBB38812.1;transl_table=4
+BK067227.1	tpg	gene	3878	4663	.	+	.	ID=gene-cox3;Name=cox3;gbkey=Gene;gene=cox3;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	3878	4663	.	+	0	ID=cds-DBB38813.1;Parent=gene-cox3;Dbxref=NCBI_GP:DBB38813.1;Name=DBB38813.1;gbkey=CDS;gene=cox3;product=cytochrome c oxidase subunit 3;protein_id=DBB38813.1;transl_table=4
+BK067227.1	tpg	gene	4680	4748	.	+	.	ID=gene-trnM(cau);Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA
+BK067227.1	tpg	tRNA	4680	4748	.	+	.	ID=rna-trnM(cau);Parent=gene-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+BK067227.1	tpg	exon	4680	4748	.	+	.	ID=exon-trnM(cau)-1;Parent=rna-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+BK067227.1	tpg	gene	4752	6062	.	+	.	ID=gene-nad2;Name=nad2;gbkey=Gene;gene=nad2;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	4752	6062	.	+	0	ID=cds-DBB38814.1;Parent=gene-nad2;Dbxref=NCBI_GP:DBB38814.1;Name=DBB38814.1;gbkey=CDS;gene=nad2;product=NADH dehydrogenase subunit 2;protein_id=DBB38814.1;transl_table=4
+BK067227.1	tpg	gene	6066	7892	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	6066	7892	.	+	0	ID=cds-DBB38815.1;Parent=gene-nad5;Dbxref=NCBI_GP:DBB38815.1;Name=DBB38815.1;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=DBB38815.1;transl_table=4
+BK067227.1	tpg	gene	7895	8807	.	+	.	ID=gene-rns;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+BK067227.1	tpg	rRNA	7895	8807	.	+	.	ID=rna-rns;Parent=gene-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+BK067227.1	tpg	exon	7895	8807	.	+	.	ID=exon-rns-1;Parent=rna-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+BK067227.1	tpg	gene	8808	9356	.	+	.	ID=gene-nad6;Name=nad6;gbkey=Gene;gene=nad6;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	8808	9356	.	+	0	ID=cds-DBB38816.1;Parent=gene-nad6;Dbxref=NCBI_GP:DBB38816.1;Name=DBB38816.1;gbkey=CDS;gene=nad6;product=NADH dehydrogenase subunit 6;protein_id=DBB38816.1;transl_table=4
+BK067227.1	tpg	gene	9347	9703	.	+	.	ID=gene-nad3;Name=nad3;gbkey=Gene;gene=nad3;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	9347	9703	.	+	0	ID=cds-DBB38817.1;Parent=gene-nad3;Dbxref=NCBI_GP:DBB38817.1;Name=DBB38817.1;gbkey=CDS;gene=nad3;product=NADH dehydrogenase subunit 3;protein_id=DBB38817.1;transl_table=4
+BK067227.1	tpg	gene	9703	9996	.	+	.	ID=gene-nad4L;Name=nad4L;gbkey=Gene;gene=nad4L;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	9703	9996	.	+	0	ID=cds-DBB38818.1;Parent=gene-nad4L;Dbxref=NCBI_GP:DBB38818.1;Name=DBB38818.1;gbkey=CDS;gene=nad4L;product=NADH dehydrogenase subunit 4L;protein_id=DBB38818.1;transl_table=4
+BK067227.1	tpg	gene	9996	10982	.	+	.	ID=gene-nad1;Name=nad1;gbkey=Gene;gene=nad1;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	9996	10982	.	+	0	ID=cds-DBB38819.1;Parent=gene-nad1;Dbxref=NCBI_GP:DBB38819.1;Name=DBB38819.1;gbkey=CDS;gene=nad1;product=NADH dehydrogenase subunit 1;protein_id=DBB38819.1;transl_table=4
+BK067227.1	tpg	gene	10973	12430	.	+	.	ID=gene-nad4;Name=nad4;gbkey=Gene;gene=nad4;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	10973	12430	.	+	0	ID=cds-DBB38820.1;Parent=gene-nad4;Dbxref=NCBI_GP:DBB38820.1;Name=DBB38820.1;gbkey=CDS;gene=nad4;product=NADH dehydrogenase subunit 4;protein_id=DBB38820.1;transl_table=4
+BK067227.1	tpg	gene	12441	13580	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	12441	13580	.	+	0	ID=cds-DBB38821.1;Parent=gene-cob;Dbxref=NCBI_GP:DBB38821.1;Name=DBB38821.1;gbkey=CDS;gene=cob;product=apocytochrome b;protein_id=DBB38821.1;transl_table=4
+BK067227.1	tpg	gene	13600	15165	.	+	.	ID=gene-cox1;Name=cox1;gbkey=Gene;gene=cox1;gene_biotype=protein_coding
+BK067227.1	tpg	CDS	13600	15165	.	+	0	ID=cds-DBB38822.1;Parent=gene-cox1;Dbxref=NCBI_GP:DBB38822.1;Name=DBB38822.1;gbkey=CDS;gene=cox1;product=cytochrome c oxidase subunit 1;protein_id=DBB38822.1;transl_table=4
+BK067227.1	tpg	inverted_repeat	15057	15467	.	+	.	ID=id-BK067227.1:15057..15467;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+

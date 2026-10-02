@@ -1,0 +1,76 @@
+# CnidoSite robots.txt
+# 建立于 2026-09-26。此前本站没有这个文件（404），任何爬虫都没有约束。
+
+# ---------------------------------------------------------------------------
+# 1) ClaudeBot —— 2026-09-26 一天的请求量
+# ---------------------------------------------------------------------------
+# 当天来自 216.73.216.110 / 216.73.216.111 的请求：
+#   216.73.216.110   95,323 次
+#   216.73.216.111   12,583 次
+# 峰值 2,500-3,900 次/分钟，且是系统性枚举：单是 gene_detail.php 就有
+# 5,858 个不同的查询串，另有 2,104 次 domain_search.php（那个查询一次要
+# UNION 148 个物种的注释表，实测单次最长 107 秒）。
+#
+# 同样这两个 IP、同样这个 UA，在 2026-09-26 已经因为枚举
+# DNA_methylation.php 把整站打瘫过一次（mysqld 1903% CPU、load 37，
+# 见 memory: cnidosite-bs-tables-no-index-outage）。那次之后 DNA_methylation.php
+# 加了行数上限与超时兜底，但爬虫本身没有任何约束。
+#
+# 结果就是：服务器本身能正常服务（单页实测 0.06 秒，MySQL 只有 2-3 条
+# 在跑的查询），但 40-65 请求/秒的爬虫把连接和带宽占满，真实用户打开
+# gene_detail.php 要等很久 —— 用户看到的是"半天加载不出来"。
+#
+# 所以这里直接整站拒绝。本站是学术数据库，无法承受无界枚举。
+User-agent: ClaudeBot
+Disallow: /
+
+# Anthropic 另外两个爬虫共用同一段 IP（216.73.216.0/22），这里原本漏了，
+# 2026-09-26 11:4x 补齐，与 /var/www/html/robots.txt 对齐。
+User-agent: Claude-SearchBot
+Disallow: /
+
+User-agent: Claude-User
+Disallow: /
+
+# meta-externalagent（Meta 的 AI 训练爬虫）—— 2026-09-26 11:4x 加。
+# 当天在本站拿了大量 200 并在枚举 /jbrowse/。和 facebookexternalhit
+# （链接分享预览，另一个 UA，同 57.141.0.0/16 段）区分开，预览不受影响。
+User-agent: meta-externalagent
+Disallow: /
+
+# ---------------------------------------------------------------------------
+# 2) 所有其它爬虫：只排除计算密集 / 可无限枚举的端点
+# ---------------------------------------------------------------------------
+# 下面这些都不是"内容页"而是"查询入口"：参数任意、结果由用户输入决定，
+# 索引它们对搜索引擎没有价值，对本站却是实打实的负载。
+# 内容页（species_portal.php、paleobiology.php、about 等）保持可抓取。
+User-agent: *
+Disallow: /search.php
+Disallow: /gene_search_res.php
+Disallow: /domain_search.php
+Disallow: /gene_function.php
+Disallow: /gene_result.php
+Disallow: /genefamily_result.php
+Disallow: /go_result.php
+Disallow: /busco_result.php
+Disallow: /interpro_result.php
+Disallow: /kegg_result.php
+Disallow: /download_fun.php
+Disallow: /api.php
+Disallow: /DNA_methylation.php
+Disallow: /blast/
+Disallow: /jbrowse/
+Disallow: /primer3plus/
+Disallow: /GSEA/
+Disallow: /cytoscape/
+Disallow: /gene_exp.php
+Disallow: /cell_atlas.php
+Disallow: /cell_marker.php
+Disallow: /macrosynteny/
+Disallow: /genetree/
+Disallow: /phylotree/
+
+# 基因号是可无限枚举的（任何 XP_* 都能进详情页），别让爬虫顺着列下去。
+Disallow: /gene_detail.php?gene=
+
+Crawl-delay: 5

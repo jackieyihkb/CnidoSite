@@ -1,0 +1,21 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PQ893892.1 1 14015
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=182359
+PQ893892.1	Genbank	region	1	14015	.	+	.	ID=PQ893892.1:1..14015;Dbxref=taxon:182359;Is_circular=true;Name=MT;country=Czech Republic;gbkey=Src;genome=mitochondrion;isolate=F3C1_2;isolation-source=blood;mol_type=genomic DNA;nat-host=Cyprinus carpio (common carp)%3B Blood proliferative stages
+PQ893892.1	Genbank	gene	3048	4251	.	+	.	ID=gene-rnl;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+PQ893892.1	Genbank	rRNA	3048	4251	.	+	.	ID=rna-rnl;Parent=gene-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+PQ893892.1	Genbank	exon	3048	4251	.	+	.	ID=exon-rnl-1;Parent=rna-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+PQ893892.1	Genbank	gene	4252	5343	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+PQ893892.1	Genbank	CDS	4252	5343	.	+	0	ID=cds-XMQ98124.1;Parent=gene-cob;Dbxref=NCBI_GP:XMQ98124.1;Name=XMQ98124.1;gbkey=CDS;gene=cob;product=cytochrome b;protein_id=XMQ98124.1;transl_table=4
+PQ893892.1	Genbank	gene	5346	5987	.	+	.	ID=gene-cox2;Name=cox2;gbkey=Gene;gene=cox2;gene_biotype=protein_coding
+PQ893892.1	Genbank	CDS	5346	5987	.	+	0	ID=cds-XMQ98125.1;Parent=gene-cox2;Dbxref=NCBI_GP:XMQ98125.1;Name=XMQ98125.1;gbkey=CDS;gene=cox2;product=cytochrome c oxidase subunit II;protein_id=XMQ98125.1;transl_table=4
+PQ893892.1	Genbank	CDS	6120	8042	.	+	0	ID=cds-XMQ98126.1;Dbxref=NCBI_GP:XMQ98126.1;Name=XMQ98126.1;Note=orf7;gbkey=CDS;product=hypothetical protein;protein_id=XMQ98126.1;transl_table=4
+PQ893892.1	Genbank	gene	8057	9469	.	+	.	ID=gene-cox1;Name=cox1;gbkey=Gene;gene=cox1;gene_biotype=protein_coding
+PQ893892.1	Genbank	CDS	8057	9469	.	+	0	ID=cds-XMQ98127.1;Parent=gene-cox1;Dbxref=NCBI_GP:XMQ98127.1;Name=XMQ98127.1;gbkey=CDS;gene=cox1;product=cytochrome c oxidase subunit I;protein_id=XMQ98127.1;transl_table=4
+PQ893892.1	Genbank	CDS	9493	10008	.	+	0	ID=cds-XMQ98128.1;Dbxref=NCBI_GP:XMQ98128.1;Name=XMQ98128.1;Note=orf3;gbkey=CDS;product=hypothetical protein;protein_id=XMQ98128.1;transl_table=4
+PQ893892.1	Genbank	gene	10103	10682	.	+	.	ID=gene-rns;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+PQ893892.1	Genbank	rRNA	10103	10682	.	+	.	ID=rna-rns;Parent=gene-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+PQ893892.1	Genbank	exon	10103	10682	.	+	.	ID=exon-rns-1;Parent=rna-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+

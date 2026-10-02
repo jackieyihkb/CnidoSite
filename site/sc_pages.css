@@ -1,0 +1,660 @@
+/*!
+ * sc_pages.css -- page chrome for the four Single-cell pages.
+ *
+ * Scoped under .sc- prefixes so nothing here can collide with
+ * templatemo_style.css.  The viewer brings its own stylesheet
+ * (viewer/cellatlas.css); this file only styles the parts the PHP pages own:
+ * the dataset picker, the statistics tables, and the QC panel.
+ */
+
+.sc-picker {
+  margin: 6px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.sc-picker label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+.sc-picker select {
+  font-size: 15px;
+  padding: 5px 9px;
+  border: 1px solid #c3c2b7;
+  border-radius: 4px;
+  background: #fff;
+  /* max-width 620 是给宽屏收口的，管不住窄屏：<select> 的宽度由**最长的那个
+     option** 决定，它是 flex 子项、min-width:auto，所以宽屏取 620、375px 屏
+     上仍然是数据集全名撑出来的 620px。min-width:0 才允许它被压下去。 */
+  max-width: 620px;
+  min-width: 0;
+}
+
+.sc-note {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 4px 0 12px;
+  max-width: 96ch;
+}
+.sc-note a { color:#1d4ed8; }
+/* 段落要铺满整栏（用户 2026-09-27 在 sn_data.php、2026-09-28 在 cell_atlas.php
+   两次提出的同一要求：段落文字全部铺开、占满）。.sc-note 的 96ch 是给别的单细胞
+   页面正文用的可读性上限，那几页不动；这里只放宽这一个类。实测：96ch 在 16px 下
+   量出 854px（2026-09-30 全站说明框正文由 15px 抬到 16px 之前是 801px），而同一页
+   的表格/图版是 1558px —— 说明段落只占了一半宽，看起来像被挤在左边。用它的页面：
+   sn_data.php 页脚两段 QC、cell_atlas.php 全部说明段落。 */
+.sc-note-wide { max-width: none; }
+
+.sc-empty {
+  padding: 22px;
+  background:#f8fafc;
+  border: 1px solid #e1e0d9;
+  border-radius: 5px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ */
+/* tables                                                              */
+/* ------------------------------------------------------------------ */
+table.sc-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0 18px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #1e293b;
+}
+/* Frame matched to the site's shared data-table look (templatemo_style.css
+   `table.gridtable`, which is in turn core/index.php's `table.cc`): no vertical
+   rules, a light header band, hairline row separators, zebra striping.
+   Alignment deliberately stays left here -- most .sc-table uses in this module
+   are label/value tables (gene_exp.php), where the first column
+   is a row label and centring it would read worse, not better. */
+table.sc-table th,
+table.sc-table td {
+  border: 0;
+  border-bottom: 1px solid #eef2f7;
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+table.sc-table th {
+  background:#f1f5f9;
+  color:#334155;
+  border-bottom: 1px solid #e2e8f0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+table.sc-table tr:nth-child(even) td { background:#fcfdff; }
+/* Numeric cells hug their content.  The site's layout is a fixed 1630px, so a
+   `width:100%` table with only six columns stretched `Rank` and `log2 FC` to
+   several hundred pixels each.  `width:1%` is the shrink-to-fit idiom: the
+   numeric columns collapse to the widest number, and the slack goes to the
+   text columns, which is where a reader wants it. */
+table.sc-table td.num,
+table.sc-table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  width: 1%;
+}
+table.sc-table a { color:#1d4ed8; text-decoration: none; }
+table.sc-table a:hover { text-decoration: underline; }
+
+/* gene_exp.php's "About <gene>" table: two columns, a row label and one value,
+   and exactly one value in the whole table is a sentence (the "Source dataset
+   ID" row explains itself in the cell).  The 640px cap that used to be inline
+   on this table wrapped that one row over five lines while the label column
+   sat half empty, so the table is capped only where it has to be: below the
+   1200px breakpoint rwd-tables.js is already scrolling it sideways, and from
+   1201px up the cap is lifted and a fixed layout is used instead.  With the
+   label column at 11em -- a hair over the widest label, "Source dataset ID" at
+   127px -- every row of this table sits on one line.  The `Detected in` value
+   carries `num` for the tabular figures, but right-aligning it is what let the
+   marker tables line their counts up down a column; in a one-column key/value
+   table it would strand the value at the far edge, so it stays left here. */
+table.sc-table.sc-about { max-width: 640px; }
+table.sc-table.sc-about th:first-child { width: 45%; }
+table.sc-table.sc-about td.num { text-align: left; }
+
+@media (min-width: 1201px) {
+  table.sc-table.sc-about { max-width: none; table-layout: fixed; }
+  table.sc-table.sc-about th:first-child { width: 11em; }
+}
+
+/* status pills for the QC table ------------------------------------- */
+.sc-pill {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 10px;
+  font-size: 15px;
+  white-space: nowrap;
+  border: 1px solid;
+}
+.sc-pill-ok   { background: #eaf7ea; border-color: #b6ddb6; color: #006300; }
+/* "as published": the dataset is here and usable, but nothing on this site was
+   run to produce it -- neither the green "QC applied" nor the amber warning is
+   the right colour for that */
+.sc-pill-info { background: #eaf2fd; border-color: #b9cfe8; color: #1a4f86; }
+.sc-pill-warn { background: #fdf4e3; border-color: #f0dba8; color: #7a5300; }
+.sc-pill-none { background:#f1f5f9; border-color: #dcdcd6; color: #666; }
+
+/* ------------------------------------------------------------------ */
+/* QC panel -- cell_atlas.php                                          */
+/* ------------------------------------------------------------------ */
+/* Was one `repeat(auto-fill, minmax(290px,1fr))` grid: five columns of
+   180px label + 107px value, so every value folded into 2-10 lines of two
+   or three words, the row was stretched to whatever the tallest cell
+   needed (326px measured on ACOER_lifecycle), and a cell holding "16" sat
+   above a hand's width of blank space.  Widths that read fine in a
+   table column do not read fine standing alone on a 1590px page.
+   Now two layers: the figures that really are figures (cell counts and
+   retention) become tiles, everything else goes into one card per topic,
+   one fact per line, label fixed, value taking the rest.  No funnel
+   arrows between the counts -- the stages are not always nested
+   (NVECT_2month reports 2,032 cells but deposits a 10,000-barcode
+   matrix), so a chain would read as if the number grew. */
+.sc-qc-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+.sc-qc-tile {
+  flex: 1 1 200px;
+  background:#f8fafc;
+  border: 1px solid #e1e0d9;
+  border-radius: 6px;
+  padding: 10px 13px 9px;
+}
+.sc-qc-tile-k {
+  font-size: 13px;
+  font-weight: 700;
+  color:#6b6b6b;
+}
+.sc-qc-tile-v {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  color:#1a1a1a;
+  margin-top: 3px;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: break-word;
+}
+.sc-qc-tile-n { font-size: 15px; color:#8a8a84; margin-top: 2px; line-height: 1.45; }
+
+/* Two columns at the site's 1590px content width (1590 fits two 560px
+   columns and not three), one column if the block is ever narrower. */
+.sc-qc-cards {
+  display: grid;
+  /* minmax 的下限不能写成死的 560px：容器窄于 560 时轨道**不会**收缩，
+     卡片就顶着 560 溢出栏外（375px 屏上栏只有 333）。min(560px, 100%) 才是
+     上面注释里「block 更窄时就一栏」那句话的真正写法；宽屏下 min() 取 560，
+     与改前逐像素相同。 */
+  grid-template-columns: repeat(auto-fit, minmax(min(560px, 100%), 1fr));
+  gap: 16px;
+  margin: 0 0 16px;
+  align-items: start;   /* cards keep their own height -- a short card is not
+                           stretched down to match a tall neighbour, which is
+                           what left the blank holes in the old grid */
+}
+.sc-qc-card {
+  background:#fff;
+  border: 1px solid #e1e0d9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+/* Same slate head bar as .sc-fig-card above, so the two containers read as
+   one family on this page.  h4 has no rule anywhere in templatemo_style.css
+   (only the UA default), so margin/padding/font all have to be set here. */
+.sc-qc-card > h4 {
+  margin: 0;
+  background:#f1f5f9;
+  border-bottom: 1px solid #e1e0d9;
+  padding: 9px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color:#333;
+}
+.sc-qc-bd { padding: 2px 14px 6px; }
+.sc-qc-row {
+  display: flex;
+  gap: 14px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f0ec;
+  font-size: 15px;
+  /* flex-start, not baseline: a label long enough to wrap ("Mitochondrial
+     genes found" is 160px in a 152px column) would otherwise push the value
+     down to sit beside the label's LAST line.  Both sides are 14px on the same
+     line-height, so for the single-line rows -- all but that one -- the two
+     are identical. */
+  align-items: flex-start;
+}
+.sc-qc-row:last-child { border-bottom: 0; }
+.sc-qc-k { flex: 0 0 152px; color:#6b6b6b; }
+.sc-qc-v {
+  flex: 1 1 auto;
+  min-width: 0;
+  color:#1a1a1a;
+  /* Values include GCA accessions and ISO timestamps -- single tokens that
+     cannot be broken.  Without this they ran out of the card; the old grid
+     clipped 2026-09-26T16:21:00+00:00 at the column edge. */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.sc-figure {
+  margin: 10px 0 16px;
+  font-size: 15px;
+  color: #555;
+}
+.sc-figure img {
+  max-width: 100%;
+  border: 1px solid #e1e0d9;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* ------------------------------------------------------------------ */
+/* published-figure cards                                              */
+/* ------------------------------------------------------------------ */
+/* The site's own UMAPs, shown for datasets that were not re-analysed.
+   Deliberately a different shape from the interactive viewer so the two
+   are not mistaken for one another. */
+/* Capped at 760px rather than 1fr: the site's content column is 1630px wide, so
+   a dataset with only one figure (either because the second was never deposited
+   or because it was byte-identical to the first) got a single card spanning the
+   whole width with a small image adrift in the middle of it. */
+.sc-fig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 760px));
+  justify-content: start;
+  gap: 20px;
+  margin: 14px 0 6px;
+}
+.sc-fig-card {
+  background: #fff;
+  border: 1px solid #e1e0d9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.sc-fig-head {
+  background:#f1f5f9;
+  border-bottom: 1px solid #e1e0d9;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+.sc-fig-body {
+  padding: 12px;
+  text-align: center;
+}
+.sc-fig-body img {
+  max-width: 100%;
+  max-height: 640px;   /* a very tall UMAP must not push the page's own QC
+                          section below the fold on its own */
+  height: auto;
+  border-radius: 3px;
+}
+
+/* callout ------------------------------------------------------------ */
+.sc-callout {
+  border: 1px solid #e1e0d9;
+  border-left-width: 4px;
+  border-radius: 4px;
+  padding: 11px 15px;
+  margin: 12px 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #444;
+  max-width: 96ch;
+}
+.sc-callout b { color: #222; }
+.sc-callout-info { background:#f8fafc; border-left-color:#1d4ed8; }
+.sc-callout-warn { background: #fdf9ef; border-left-color: #c9861b; }
+.sc-callout a { color:#1d4ed8; }
+
+/* gene-ID display: site accession + the dataset's own ID -------------- */
+/* 映射上时主显示是站点号（XP_/KAL/PFX…），来源数据集自己的号进括号。括号那截要
+   明显次要（浅色、小一号），否则一串里两个号并列，读者分不清哪个是站点的。
+   两处都曾低于 12px：括号 11.5px、未映射角标 10.5px。括号是次要信息，小一号没
+   问题，但 12px 以下在 13.5/14px 的正文旁边已经不是「次要」而是「费劲」；角标
+   更过分 —— 它是读者用来判断这个号能不能查到的**依据**，不是装饰。都提到 12.5px：
+   仍小于正文，层级不变，可读性回来。 */
+.sc-src {
+  color: #8a8a84;
+  font-size: 15px;
+  cursor: help;            /* 有 title，鼠标要给「这里可以停一下」的信号 */
+  white-space: nowrap;
+}
+/* 未映射的角标。不用纯颜色区分：颜色对色盲读者无效，而且这三个词要能自己解释
+   自己（title 里写了原因）。虚线底边＝有悬停说明，和 <abbr> 的惯例一致。 */
+.sc-unmapped {
+  color: #9a6a1b;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px dotted #c9861b;
+  cursor: help;
+  text-decoration: none;
+}
+
+/* cell-type chips ---------------------------------------------------- */
+.sc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 14px;
+  align-items: center;
+}
+.sc-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #dcdcd6;
+  border-radius: 14px;
+  background: #fff;
+  font-size: 15px;
+  color:#1d4ed8;
+  text-decoration: none;
+  /* 细胞类型名可能是 gastrodermis_muscle_parietal_circular_... 这种不可断行的
+     长单词：nowrap 会让整块 chip 顶出栏外（360px 下量到 367px 宽、右边缘 388）。
+     允许折行并按容器限宽；放得下时 chip 仍按内容宽度排版，宽屏布局不变。 */
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.sc-chip:hover { border-color:#1d4ed8; background:#f8fafc; }
+.sc-chip.on {
+  background:#1d4ed8;
+  border-color:#1d4ed8;
+  color: #fff;
+  font-weight: 600;
+}
+.sc-chip em {
+  font-style: normal;
+  color:#64748b;
+  font-size: 15px;
+  margin-left: 5px;
+}
+.sc-chip.on em { color: #cfe1f7; }
+.sc-chips-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 2px;
+}
+
+/* keep wide result tables from pushing the page sideways ------------- */
+.sc-table-wrap {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 8px 0 18px;
+}
+.sc-table-wrap table.sc-table { margin: 0; }
+
+/* gene search box ---------------------------------------------------- */
+.sc-search {
+  margin: 6px 0 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sc-search input[type=text] {
+  font-size: 15px;
+  padding: 5px 9px;
+  border: 1px solid #c3c2b7;
+  border-radius: 4px;
+  min-width: 260px;
+}
+.sc-search button {
+  font-size: 15px;
+  padding: 5px 14px;
+  border: 1px solid #c3c2b7;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+.sc-search button:hover { border-color:#1d4ed8; color:#1d4ed8; }
+
+/* ------------------------------------------------------------------ */
+/* cell_atlas.php — share bar in the cell-type table                   */
+/* ------------------------------------------------------------------ */
+/* The Percent column was a bare number.  A bar beside it makes the
+   composition readable at a glance -- with 13+ cell types the eye cannot
+   rank "28.51%" against "2.55%" without doing arithmetic.  The bar is the
+   percentage itself, drawn against a 100% track, so no rescaling caveat is
+   needed: a row at 2.55% fills 2.55% of the track.  The track is given a
+   fixed width because `td.num` sets `width:1%` (shrink-to-fit), which would
+   collapse a flexible bar to its minimum on every row and destroy the
+   comparison the bar exists for. */
+table.sc-table tr:hover td { background: #f4f8fd; }
+table.sc-table tr.sc-total td {
+  font-weight: 600;
+  border-top: 2px solid #c9d4e0;
+  background: #f7f9fb !important;
+}
+table.sc-table th.num.pct,
+table.sc-table td.num.pct { width: 168px; }
+.sc-share-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.sc-share {
+  flex: 1 1 auto;
+  height: 12px;
+  min-width: 60px;
+  background:#f1f5f9;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sc-share i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #8fbce6 0%, #5b93cf 100%);
+  border-radius: 5px;
+}
+.sc-share-v { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------------ */
+/* sn_data.php — the Quality Control column                            */
+/* ------------------------------------------------------------------ */
+/* The cell used to be one 11px run-on line ("library · 28,736 -> 25,164
+   cells · 87.6% retained · doublets 0.04%"), where the figures ran together
+   and could not be compared between datasets.  It is now a label/value grid,
+   so the numbers line up down the column and can be scanned.
+   The selector has to carry `table.gridtable`: that table's own `td` rule is
+   `table.gridtable td` -- specificity (0,1,2), which beats a bare `td.qc-cell`
+   (0,1,1) no matter where this file is loaded.  Written the short way, every
+   declaration below silently lost and the cell stayed at the inherited 14px
+   with `pre-wrap`; `white-space: normal` in particular is required, because
+   the host table sets `pre-wrap` and would otherwise render this markup's
+   indentation as literal gaps inside the cell. */
+table.gridtable td.qc-cell {
+  text-align: left;
+  padding: 6px 9px;
+  font-size: 15px;
+  line-height: 1.35;
+  white-space: normal;
+}
+.qc-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ecece7;
+}
+.qc-lib { color: #555; font-size: 15px; }
+.qc-figs { margin-top: 3px; }
+/* One metric per line.  The line is a flex row so that the label column is a
+   fixed width and every value therefore starts at the same x -- the figures
+   line up down the column and can be compared between datasets.  flex-wrap is
+   the safety valve: if the cell is ever narrower than label + value, the value
+   moves to its own line instead of overflowing into the neighbouring cell. */
+.qc-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 9px;
+  padding: 1px 0;
+}
+.qc-k {
+  flex: 0 0 84px;
+  color: #6b6b6b;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.qc-v {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+/* padding 只为了让点按区够 24px（原来量到 70×20）—— 触屏上这个链接是整张
+   数据集卡片唯一的出口，行高偏矮就常点不中。视觉位置几乎不变。 */
+.qc-more { display: inline-block; margin-top: 5px; padding: 2px 0; font-size: 15px; }
+.qc-why { color: #666; font-size: 15px; line-height: 1.5; }
+
+/* ------------------------------------------------------------------ */
+/* sn_data.php — the search box                                        */
+/* ------------------------------------------------------------------ */
+/* 形制照站内「列表页 + 搜索框」的样子（browse.php 的 .tax-search、
+   domain_search.php 的 .ds-form）：浅底卡片、服务端 GET。配色随本单细胞模块的
+   蓝 #1d4ed8。整栏 1630px 是固定宽，所以没有 media query —— flex-wrap 够用了。 */
+.sn-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 0 0 12px;
+}
+.sn-search label { font-weight: 600; color: #334155; font-size: 15px; }
+.sn-search input[type=text] {
+  flex: 1 1 320px;
+  min-width: 220px;
+  padding: 9px 13px;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+}
+.sn-search input[type=text]:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+.sn-search button {
+  padding: 9px 22px;
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sn-search button:hover { background: #1e40af; }
+/* 选择器必须写成 a.sn-search-clear：外链 templatemo_style.css 的
+   `a:link, a:visited { color:#1d4ed8 }` 是 (0,1,1)，裸类名 (0,1,0) 压不住，链接会
+   变成蓝色（同 browse.php 的 a.tax-search-clear）。 */
+a.sn-search-clear { color: #64748b; font-size: 14px; text-decoration: underline; }
+.sn-q { color: #1d4ed8; font-weight: 600; }
+.sn-hit { margin: 0 0 12px; color: #334155; font-size: 15px; }
+.sn-none { margin: 0 0 12px; color: #334155; font-size: 15px; line-height: 1.6; }
+
+/* ------------------------------------------------------------------ */
+/* cell_atlas.php — "Cell types in this dataset" table                 */
+/* ------------------------------------------------------------------ */
+/* Four short columns on a 1588px canvas (the site's content area is a
+   fixed 1630px).  At width:100% the two text columns were handed ~690px
+   each to hold "Neural 1" and "marker genes", which is what made this
+   table look broken.  The first column is floored so the cell-type names
+   are not cramped against the numbers, and the Percent track is kept wide
+   enough for the bars to be ranked by eye.
+
+   MEASURED 2026-09-23 (headless Chromium, 1500px viewport).  This rule
+   used to say `width: fit-content`, and the comment above used to claim
+   `width:auto` did the job -- NEITHER shrinks the table.  Chromium lays
+   this table out at the full 1590px column width for both `fit-content`,
+   `auto` and `100%` alike (measured table width 1590px, first column
+   789px), so the table overflowed the containing block and its right
+   border sat outside the viewport -- which is why the table read as
+   "having no frame".  Only `max-content` produces the intended hug
+   (table 696px, first column 231px).  `max-width:100%` still caps it on
+   a narrow screen, and cell_atlas.php wraps it in .sc-table-wrap so the
+   cap degrades to a horizontal scroll instead of a clipped frame. */
+table.sc-table.sc-cells { width: max-content; max-width: 100%; min-width: 560px; }
+table.sc-table.sc-cells th:first-child,
+table.sc-table.sc-cells td:first-child { min-width: 210px; }
+table.sc-table.sc-cells th.num.pct,
+table.sc-table.sc-cells td.num.pct { width: 240px; }
+table.sc-table.sc-cells th:last-child,
+table.sc-table.sc-cells td:last-child { min-width: 118px; }
+
+/* This table's frame used to be an explicit copy of the site red #af3a40 grid,
+   on the reasoning that every other data table was framed that way and this one
+   looked unframed beside them.  The site's shared look is now the borderless
+   grid from core (no frame at all, hairline separators), so the copy is gone
+   and this table needs nothing beyond the base rules at the top of this file --
+   which is why there is no .sc-cells frame block here any more.  The column
+   sizing above is untouched.
+   The only thing kept is the total row: it still has to read as a total, so it
+   gets the heavier top rule the rest of the table no longer uses. */
+table.sc-table.sc-cells tr.sc-total td {
+  border-top: 2px solid #cbd5e1;
+  background: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+/* cell_atlas.php -- the "Clusters" column of "Cell types in this dataset".
+   Present only where the dataset has a decodable cluster key (see $ckShow); the
+   cluster labels are chips, the same component the published-types list uses, so
+   a number reads as a chip there too.  A chip is not a link -- the row is the
+   cell type and that is what the link isolates -- so the chip's link blue gives
+   way to plain text colour and it gets no hover state.
+
+   The 460px cap is load-bearing, not decoration: this table is
+   `width: max-content` (see the note above `table.sc-table.sc-cells`), and
+   without a cap the column contributes the whole row's chips as one unbroken
+   line -- 19 clusters on OARBU_symbiotic -- which widens the table past the
+   column.  Capping the flex block is what lets .sc-chips wrap instead. */
+td.sc-clu-cell .sc-chips { margin: 0; gap: 4px; max-width: 460px; }
+.sc-chip.clu {
+  color: #334155;
+  border-color: #e5e7eb;
+  background: #f8fafc;
+  padding: 2px 9px;
+  font-size: 14px;
+  cursor: default;
+  /* "C18" 折行会变成 "C1" 换行 "8"，和旁边的细胞数糊成两行乱码（900px 量到过
+     "C1 3,10 / 3"）。标签本来就短，不许它断。 */
+  white-space: nowrap;
+}
+.sc-chip.clu em { font-size: 13px; }
+
+/* 窄屏下这张表不再往容器里挤。sc_pages.css 给 sc-cells 的 `max-width:100%`
+   会把表压到容器宽，auto 布局没有第二套列宽模型，于是 Clusters 列被分到
+   90px、chips 一列一个地竖排（900px 量到行高 282px）。这里改成和
+   templatemo_style.css 的 `@media (max-width:1200px) .gt-scroll > table.sc-table`
+   同一套：列宽取自然宽，由外面的 .sc-table-wrap 横滑。
+   只作用于有 Clusters 列的表（.sc-clu），四列那张和今天一样。 */
+@media (max-width: 1200px) {
+  .sc-table-wrap > table.sc-table.sc-cells.sc-clu { max-width: none; }
+}

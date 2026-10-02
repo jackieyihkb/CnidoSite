@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_016466.1 1 15949
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=12993
+NC_016466.1	RefSeq	region	1	15949	.	+	.	ID=NC_016466.1:1..15949;Dbxref=taxon:12993;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_016466.1	RefSeq	gene	11	577	.	-	.	ID=gene-dnaB;Dbxref=GeneID:11473190;Name=dnaB;gbkey=Gene;gene=dnaB;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	11	577	.	-	0	ID=cds-YP_004940460.1;Parent=gene-dnaB;Dbxref=GenBank:YP_004940460.1,GeneID:11473190;Name=YP_004940460.1;gbkey=CDS;gene=dnaB;product=replication helicase subunit;protein_id=YP_004940460.1;transl_table=4
+NC_016466.1	RefSeq	gene	580	885	.	-	.	ID=gene-orf314;Dbxref=GeneID:11473191;Name=orf314;gbkey=Gene;gene=orf314;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	580	885	.	-	0	ID=cds-YP_004940461.1;Parent=gene-orf314;Dbxref=GenBank:YP_004940461.1,GeneID:11473191;Name=YP_004940461.1;gbkey=CDS;gene=orf314;product=orf314;protein_id=YP_004940461.1;transl_table=4
+NC_016466.1	RefSeq	gene	890	2686	.	-	.	ID=gene-rnl;Dbxref=GeneID:11473192;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+NC_016466.1	RefSeq	rRNA	890	2686	.	-	.	ID=rna-rnl;Parent=gene-rnl;Dbxref=GeneID:11473192;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+NC_016466.1	RefSeq	exon	890	2686	.	-	.	ID=exon-rnl-1;Parent=rna-rnl;Dbxref=GeneID:11473192;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+NC_016466.1	RefSeq	gene	2687	4267	.	-	.	ID=gene-COX1;Dbxref=GeneID:11473187;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	2687	4267	.	-	0	ID=cds-YP_004940462.1;Parent=gene-COX1;Dbxref=GenBank:YP_004940462.1,GeneID:11473187;Name=YP_004940462.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=YP_004940462.1;transl_table=4
+NC_016466.1	RefSeq	gene	4336	5082	.	+	.	ID=gene-COX2;Dbxref=GeneID:11473188;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	4336	5082	.	+	0	ID=cds-YP_004940463.1;Parent=gene-COX2;Dbxref=GenBank:YP_004940463.1,GeneID:11473188;Name=YP_004940463.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=YP_004940463.1;transl_table=4
+NC_016466.1	RefSeq	gene	5088	5157	.	+	.	ID=gene-trnW(uca);Dbxref=GeneID:11473186;Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA
+NC_016466.1	RefSeq	tRNA	5088	5157	.	+	.	ID=rna-trnW(uca);Parent=gene-trnW(uca);Dbxref=GeneID:11473186;anticodon=(pos:5119..5121);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+NC_016466.1	RefSeq	exon	5088	5157	.	+	.	ID=exon-trnW(uca)-1;Parent=rna-trnW(uca);Dbxref=GeneID:11473186;anticodon=(pos:5119..5121);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+NC_016466.1	RefSeq	gene	5163	5375	.	+	.	ID=gene-ATP8;Dbxref=GeneID:11473180;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	5163	5375	.	+	0	ID=cds-YP_004940464.1;Parent=gene-ATP8;Dbxref=GenBank:YP_004940464.1,GeneID:11473180;Name=YP_004940464.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=YP_004940464.1;transl_table=4
+NC_016466.1	RefSeq	gene	5368	6069	.	+	.	ID=gene-ATP6;Dbxref=GeneID:11473183;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	5368	6069	.	+	0	ID=cds-YP_004940465.1;Parent=gene-ATP6;Dbxref=GenBank:YP_004940465.1,GeneID:11473183;Name=YP_004940465.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=YP_004940465.1;transl_table=4
+NC_016466.1	RefSeq	gene	6069	6854	.	+	.	ID=gene-COX3;Dbxref=GeneID:11473189;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	6069	6854	.	+	0	ID=cds-YP_004940466.1;Parent=gene-COX3;Dbxref=GenBank:YP_004940466.1,GeneID:11473189;Name=YP_004940466.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=YP_004940466.1;transl_table=4
+NC_016466.1	RefSeq	gene	6860	6930	.	+	.	ID=gene-trnM(cau);Dbxref=GeneID:11473176;Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA
+NC_016466.1	RefSeq	tRNA	6860	6930	.	+	.	ID=rna-trnM(cau);Parent=gene-trnM(cau);Dbxref=GeneID:11473176;anticodon=(pos:6892..6894);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+NC_016466.1	RefSeq	exon	6860	6930	.	+	.	ID=exon-trnM(cau)-1;Parent=rna-trnM(cau);Dbxref=GeneID:11473176;anticodon=(pos:6892..6894);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+NC_016466.1	RefSeq	gene	6933	8249	.	+	.	ID=gene-ND2;Dbxref=GeneID:11473177;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	6933	8249	.	+	0	ID=cds-YP_004940467.1;Parent=gene-ND2;Dbxref=GenBank:YP_004940467.1,GeneID:11473177;Name=YP_004940467.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=YP_004940467.1;transl_table=4
+NC_016466.1	RefSeq	gene	8250	10106	.	+	.	ID=gene-ND5;Dbxref=GeneID:11473178;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	8250	10106	.	+	0	ID=cds-YP_004940468.1;Parent=gene-ND5;Dbxref=GenBank:YP_004940468.1,GeneID:11473178;Name=YP_004940468.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=YP_004940468.1;transl_table=4
+NC_016466.1	RefSeq	gene	10062	11001	.	+	.	ID=gene-rns;Dbxref=GeneID:11473179;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+NC_016466.1	RefSeq	rRNA	10062	11001	.	+	.	ID=rna-rns;Parent=gene-rns;Dbxref=GeneID:11473179;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+NC_016466.1	RefSeq	exon	10062	11001	.	+	.	ID=exon-rns-1;Parent=rna-rns;Dbxref=GeneID:11473179;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+NC_016466.1	RefSeq	gene	11009	11581	.	+	.	ID=gene-ND6;Dbxref=GeneID:11473174;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	11009	11581	.	+	0	ID=cds-YP_004940469.1;Parent=gene-ND6;Dbxref=GenBank:YP_004940469.1,GeneID:11473174;Name=YP_004940469.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=YP_004940469.1;transl_table=4
+NC_016466.1	RefSeq	gene	11535	11894	.	+	.	ID=gene-ND3;Dbxref=GeneID:11473175;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	11535	11894	.	+	0	ID=cds-YP_004940470.1;Parent=gene-ND3;Dbxref=GenBank:YP_004940470.1,GeneID:11473175;Name=YP_004940470.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=YP_004940470.1;transl_table=4
+NC_016466.1	RefSeq	gene	11885	12187	.	+	.	ID=gene-ND4L;Dbxref=GeneID:11473181;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	11885	12187	.	+	0	ID=cds-YP_004940471.1;Parent=gene-ND4L;Dbxref=GenBank:YP_004940471.1,GeneID:11473181;Name=YP_004940471.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=YP_004940471.1;transl_table=4
+NC_016466.1	RefSeq	gene	12187	13155	.	+	.	ID=gene-ND1;Dbxref=GeneID:11473182;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	12187	13155	.	+	0	ID=cds-YP_004940472.1;Parent=gene-ND1;Dbxref=GenBank:YP_004940472.1,GeneID:11473182;Name=YP_004940472.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=YP_004940472.1;transl_table=4
+NC_016466.1	RefSeq	gene	13157	14596	.	+	.	ID=gene-ND4;Dbxref=GeneID:11473184;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	13157	14596	.	+	0	ID=cds-YP_004940473.1;Parent=gene-ND4;Dbxref=GenBank:YP_004940473.1,GeneID:11473184;Name=YP_004940473.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=YP_004940473.1;transl_table=4
+NC_016466.1	RefSeq	gene	14596	15747	.	+	.	ID=gene-CYTB;Dbxref=GeneID:11473185;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+NC_016466.1	RefSeq	CDS	14596	15747	.	+	0	ID=cds-YP_004940474.1;Parent=gene-CYTB;Dbxref=GenBank:YP_004940474.1,GeneID:11473185;Name=YP_004940474.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=YP_004940474.1;transl_table=4
+

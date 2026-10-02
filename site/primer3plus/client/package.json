@@ -1,0 +1,36 @@
+{
+  "name": "primer3plus-client",
+  "private": true,
+  "version": "3.1.1",
+  "description": "",
+  "scripts": {
+    "build": "rimraf dist && parcel build src/index.html --no-cache --no-source-maps --public-url ./",
+    "dev": "parcel src/index.html --no-cache --open"
+  },
+  "keywords": [
+    "Primer3",
+    "Primer3Plus",
+    "PCR",
+    "Polymerase Chain Reaction"
+  ],
+  "author": {
+    "name": "Andreas Untergasser",
+    "email": "andreas@untergasser.de",
+    "url": "http://untergasser.de"
+  },
+  "license": "GPL-3.0+",
+  "browserslist": [
+    ">0.25%",
+    "not dead",
+    "not IE <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/runtime": "^7.17.9",
+    "buffer": "^6.0.3",
+    "parcel": "^2.5.0",
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,0 +1,35 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_047219.1 1 19999
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=478399
+NC_047219.1	RefSeq	region	1	19999	.	+	.	ID=NC_047219.1:1..19999;Dbxref=taxon:478399;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_047219.1	RefSeq	gene	1	3570	.	+	.	ID=gene-HJF04_mgp01;Dbxref=GeneID:54599250;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=HJF04_mgp01
+NC_047219.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_009758600.1;Parent=gene-HJF04_mgp01;Dbxref=GenBank:YP_009758600.1,GeneID:54599250;Name=YP_009758600.1;gbkey=CDS;gene=ND5;locus_tag=HJF04_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009758600.1;transl_table=4
+NC_047219.1	RefSeq	CDS	2455	3570	.	+	0	ID=cds-YP_009758600.1;Parent=gene-HJF04_mgp01;Dbxref=GenBank:YP_009758600.1,GeneID:54599250;Name=YP_009758600.1;gbkey=CDS;gene=ND5;locus_tag=HJF04_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009758600.1;transl_table=4
+NC_047219.1	RefSeq	gene	941	1924	.	+	.	ID=gene-HJF04_mgp02;Dbxref=GeneID:54599238;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=HJF04_mgp02
+NC_047219.1	RefSeq	CDS	941	1924	.	+	0	ID=cds-YP_009758601.1;Parent=gene-HJF04_mgp02;Dbxref=GenBank:YP_009758601.1,GeneID:54599238;Name=YP_009758601.1;gbkey=CDS;gene=ND1;locus_tag=HJF04_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009758601.1;transl_table=4
+NC_047219.1	RefSeq	gene	1931	2287	.	+	.	ID=gene-HJF04_mgp03;Dbxref=GeneID:54599239;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=HJF04_mgp03
+NC_047219.1	RefSeq	CDS	1931	2287	.	+	0	ID=cds-YP_009758602.1;Parent=gene-HJF04_mgp03;Dbxref=GenBank:YP_009758602.1,GeneID:54599239;Name=YP_009758602.1;gbkey=CDS;gene=ND3;locus_tag=HJF04_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009758602.1;transl_table=4
+NC_047219.1	RefSeq	gene	4025	5182	.	+	.	ID=gene-HJF04_mgp04;Dbxref=GeneID:54599240;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=HJF04_mgp04
+NC_047219.1	RefSeq	CDS	4025	5182	.	+	0	ID=cds-YP_009758603.1;Parent=gene-HJF04_mgp04;Dbxref=GenBank:YP_009758603.1,GeneID:54599240;Name=YP_009758603.1;gbkey=CDS;gene=ND2;locus_tag=HJF04_mgp04;product=NADH dehydrogenase subunit 2;protein_id=YP_009758603.1;transl_table=4
+NC_047219.1	RefSeq	gene	6566	7306	.	+	.	ID=gene-HJF04_mgp05;Dbxref=GeneID:54599241;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=HJF04_mgp05
+NC_047219.1	RefSeq	CDS	6566	7306	.	+	0	ID=cds-YP_009758604.1;Parent=gene-HJF04_mgp05;Dbxref=GenBank:YP_009758604.1,GeneID:54599241;Name=YP_009758604.1;gbkey=CDS;gene=COX2;locus_tag=HJF04_mgp05;product=cytochrome c oxidase subunit II;protein_id=YP_009758604.1;transl_table=4
+NC_047219.1	RefSeq	gene	9299	10765	.	+	.	ID=gene-HJF04_mgp06;Dbxref=GeneID:54599242;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=HJF04_mgp06
+NC_047219.1	RefSeq	CDS	9299	10765	.	+	0	ID=cds-YP_009758605.1;Parent=gene-HJF04_mgp06;Dbxref=GenBank:YP_009758605.1,GeneID:54599242;Name=YP_009758605.1;gbkey=CDS;gene=ND4;locus_tag=HJF04_mgp06;product=NADH dehydrogenase subunit 4;protein_id=YP_009758605.1;transl_table=4
+NC_047219.1	RefSeq	gene	10770	11378	.	+	.	ID=gene-HJF04_mgp07;Dbxref=GeneID:54599243;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=HJF04_mgp07
+NC_047219.1	RefSeq	CDS	10770	11378	.	+	0	ID=cds-YP_009758606.1;Parent=gene-HJF04_mgp07;Dbxref=GenBank:YP_009758606.1,GeneID:54599243;Name=YP_009758606.1;gbkey=CDS;gene=ND6;locus_tag=HJF04_mgp07;product=NADH dehydrogenase subunit 6;protein_id=YP_009758606.1;transl_table=4
+NC_047219.1	RefSeq	gene	11409	12557	.	+	.	ID=gene-HJF04_mgp08;Dbxref=GeneID:54599244;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=HJF04_mgp08
+NC_047219.1	RefSeq	CDS	11409	12557	.	+	0	ID=cds-YP_009758607.1;Parent=gene-HJF04_mgp08;Dbxref=GenBank:YP_009758607.1,GeneID:54599244;Name=YP_009758607.1;gbkey=CDS;gene=CYTB;locus_tag=HJF04_mgp08;product=cytochrome b;protein_id=YP_009758607.1;transl_table=4
+NC_047219.1	RefSeq	gene	15149	15937	.	+	.	ID=gene-HJF04_mgp09;Dbxref=GeneID:54599245;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=HJF04_mgp09
+NC_047219.1	RefSeq	CDS	15149	15937	.	+	0	ID=cds-YP_009758608.1;Parent=gene-HJF04_mgp09;Dbxref=GenBank:YP_009758608.1,GeneID:54599245;Name=YP_009758608.1;gbkey=CDS;gene=COX3;locus_tag=HJF04_mgp09;product=cytochrome c oxidase subunit III;protein_id=YP_009758608.1;transl_table=4
+NC_047219.1	RefSeq	gene	16009	18433	.	+	.	ID=gene-HJF04_mgp10;Dbxref=GeneID:54599246;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=HJF04_mgp10
+NC_047219.1	RefSeq	CDS	16009	16898	.	+	0	ID=cds-YP_009758609.1;Parent=gene-HJF04_mgp10;Dbxref=GenBank:YP_009758609.1,GeneID:54599246;Name=YP_009758609.1;gbkey=CDS;gene=COX1;locus_tag=HJF04_mgp10;product=cytochrome c oxidase subunit I;protein_id=YP_009758609.1;transl_table=4
+NC_047219.1	RefSeq	CDS	17752	18433	.	+	1	ID=cds-YP_009758609.1;Parent=gene-HJF04_mgp10;Dbxref=GenBank:YP_009758609.1,GeneID:54599246;Name=YP_009758609.1;gbkey=CDS;gene=COX1;locus_tag=HJF04_mgp10;product=cytochrome c oxidase subunit I;protein_id=YP_009758609.1;transl_table=4
+NC_047219.1	RefSeq	gene	18718	19017	.	+	.	ID=gene-HJF04_mgp11;Dbxref=GeneID:54599247;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=HJF04_mgp11
+NC_047219.1	RefSeq	CDS	18718	19017	.	+	0	ID=cds-YP_009758610.1;Parent=gene-HJF04_mgp11;Dbxref=GenBank:YP_009758610.1,GeneID:54599247;Name=YP_009758610.1;gbkey=CDS;gene=ND4L;locus_tag=HJF04_mgp11;product=NADH dehydrogenase subunit 4L;protein_id=YP_009758610.1;transl_table=4
+NC_047219.1	RefSeq	gene	19042	19257	.	+	.	ID=gene-HJF04_mgp12;Dbxref=GeneID:54599248;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=HJF04_mgp12
+NC_047219.1	RefSeq	CDS	19042	19257	.	+	0	ID=cds-YP_009758611.1;Parent=gene-HJF04_mgp12;Dbxref=GenBank:YP_009758611.1,GeneID:54599248;Name=YP_009758611.1;gbkey=CDS;gene=ATP8;locus_tag=HJF04_mgp12;product=ATP synthase F0 subunit 8;protein_id=YP_009758611.1;transl_table=4
+NC_047219.1	RefSeq	gene	19291	19980	.	+	.	ID=gene-HJF04_mgp13;Dbxref=GeneID:54599249;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=HJF04_mgp13
+NC_047219.1	RefSeq	CDS	19291	19980	.	+	0	ID=cds-YP_009758612.1;Parent=gene-HJF04_mgp13;Dbxref=GenBank:YP_009758612.1,GeneID:54599249;Name=YP_009758612.1;gbkey=CDS;gene=ATP6;locus_tag=HJF04_mgp13;product=ATP synthase F0 subunit 6;protein_id=YP_009758612.1;transl_table=4
+

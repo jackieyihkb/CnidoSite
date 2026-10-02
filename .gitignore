@@ -1,0 +1,28 @@
+# 站点运行时写的东西
+site/tmp/
+*.log
+nohup.out
+
+# 本地配置（数据库口令不进仓库；见 docs/DEPLOYMENT.md）
+site/includes/db_config.php
+.env
+
+# 大数据下载回来以后落在这里，不入库。
+# `scripts/download-large-data/fetch_large_data.py` 的默认 --dest 就是 data/large/，
+# 所以按目录忽略就够了。
+#
+# 这里**曾经**还写着 `data/**/*.tar.gz` / `*.fa.gz` / `*.fq.gz` / `*.bam` 四条兜底，
+# 想的是「万一有人把大文件下到别处」。它们确实兜住了 —— 连仓库里本来就有的
+# 小体量策展数据一起兜掉了：data/download-index/transcriptome_assembly/ 下 4 个
+# ≤1MB 的 .tar.gz 是站点直接对外分发的打包数据，属于**要归档的东西**，
+# 却被 .gitignore 静默排除，`git status` 里一个字都不显示。
+# 按扩展名兜底 = 按「长得像大文件」判断，而不是按体量判断；宁可去掉它，
+# 让下错地方的大文件**看得见**地出现在 git status 里。
+data/large/
+
+# 编辑器 / 系统
+.DS_Store
+*.swp
+*~
+__pycache__/
+*.pyc

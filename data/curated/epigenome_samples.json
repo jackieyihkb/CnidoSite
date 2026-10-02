@@ -1,0 +1,496 @@
+{
+    "generated": "2026-09-28 00:25:12",
+    "note": "Sample inventory for the epigenome panel on gene_detail.php. Regenerate with tools/src/build_epigenome_samples.php after adding samples. The panel unions this list with the samples its own per-gene query hits, so a stale file can never hide a sample that has a peak at the gene.",
+    "tables": {
+        "ADIGI_DHS": {
+            "abbr": "ADIGI",
+            "assay": "DHS",
+            "label": "DNase-seq (DHS)",
+            "species": "Acropora digitifera",
+            "n_peaks": 8145,
+            "samples": [
+                {
+                    "sample": "WholeAnimal",
+                    "n": 8145,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "WholeAnimal"
+                }
+            ]
+        },
+        "EDIAP_ATAC": {
+            "abbr": "EDIAP",
+            "assay": "ATAC",
+            "label": "ATAC-seq",
+            "species": "Exaiptasia diaphana",
+            "n_peaks": 19164,
+            "samples": [
+                {
+                    "sample": "Mild_Stress_Aposym",
+                    "n": 7611,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "Mild_Stress_Aposym"
+                },
+                {
+                    "sample": "Mild_Stress_Sym",
+                    "n": 6812,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "Mild_Stress_Sym"
+                },
+                {
+                    "sample": "Stress_Day21_Sym",
+                    "n": 4094,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "Stress_Day21_Sym"
+                },
+                {
+                    "sample": "Stress_Day28_Aposym",
+                    "n": 621,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "Stress_Day28_Aposym"
+                },
+                {
+                    "sample": "Stress_Day21_Aposym",
+                    "n": 26,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "Stress_Day21_Aposym"
+                }
+            ]
+        },
+        "EDIAP_ChIP": {
+            "abbr": "EDIAP",
+            "assay": "ChIP",
+            "label": "ChIP-seq",
+            "species": "Exaiptasia diaphana",
+            "n_peaks": 23448,
+            "samples": [
+                {
+                    "sample": "H3K9ac_symbiont",
+                    "n": 18013,
+                    "hisType": "H3K9ac",
+                    "hisMark": "symbiont"
+                },
+                {
+                    "sample": "H3K27ac_symbiont",
+                    "n": 5435,
+                    "hisType": "H3K27ac",
+                    "hisMark": "symbiont"
+                }
+            ]
+        },
+        "HVULG_ChIP": {
+            "abbr": "HVULG",
+            "assay": "ChIP",
+            "label": "ChIP-seq",
+            "species": "Hydra vulgaris",
+            "n_peaks": 364692,
+            "samples": [
+                {
+                    "sample": "H4K20me1_whole_polyp_ALP_treated",
+                    "n": 39866,
+                    "hisType": "H4K20me1",
+                    "hisMark": "whole_polyp_ALP_treated"
+                },
+                {
+                    "sample": "H3K4me2_wholeAnimal",
+                    "n": 28182,
+                    "hisType": "H3K4me2",
+                    "hisMark": "wholeAnimal"
+                },
+                {
+                    "sample": "H4K20me1_regenerating_tips_8hrs",
+                    "n": 22058,
+                    "hisType": "H4K20me1",
+                    "hisMark": "regenerating_tips_8hrs"
+                },
+                {
+                    "sample": "H3K4me2_regenerating_head_24hr",
+                    "n": 19278,
+                    "hisType": "H3K4me2",
+                    "hisMark": "regenerating_head_24hr"
+                },
+                {
+                    "sample": "H3K27ac_regenerating_head_6hr",
+                    "n": 17202,
+                    "hisType": "H3K27ac",
+                    "hisMark": "regenerating_head_6hr"
+                },
+                {
+                    "sample": "H3K4me2_regenerating_head_4hr",
+                    "n": 16824,
+                    "hisType": "H3K4me2",
+                    "hisMark": "regenerating_head_4hr"
+                },
+                {
+                    "sample": "H3K4me3_regenerating_head_0hr",
+                    "n": 16685,
+                    "hisType": "H3K4me3",
+                    "hisMark": "regenerating_head_0hr"
+                },
+                {
+                    "sample": "H3K27ac_head",
+                    "n": 16498,
+                    "hisType": "H3K27ac",
+                    "hisMark": "head"
+                },
+                {
+                    "sample": "H3K27ac_regenerating_head_4hr",
+                    "n": 16198,
+                    "hisType": "H3K27ac",
+                    "hisMark": "regenerating_head_4hr"
+                },
+                {
+                    "sample": "H3K4me2_regenerating_head_0hr",
+                    "n": 15982,
+                    "hisType": "H3K4me2",
+                    "hisMark": "regenerating_head_0hr"
+                },
+                {
+                    "sample": "H3K4me3_wholeAnimal",
+                    "n": 15187,
+                    "hisType": "H3K4me3",
+                    "hisMark": "wholeAnimal"
+                },
+                {
+                    "sample": "H3K27ac_regenerating_head_0hr",
+                    "n": 15087,
+                    "hisType": "H3K27ac",
+                    "hisMark": "regenerating_head_0hr"
+                },
+                {
+                    "sample": "H3K4me3_regenerating_head_24hr",
+                    "n": 13550,
+                    "hisType": "H3K4me3",
+                    "hisMark": "regenerating_head_24hr"
+                },
+                {
+                    "sample": "H3K27ac_regenerating_head_24hr",
+                    "n": 12072,
+                    "hisType": "H3K27ac",
+                    "hisMark": "regenerating_head_24hr"
+                },
+                {
+                    "sample": "H3K4me3_whole_polyp_24hr_DMSO_control",
+                    "n": 11984,
+                    "hisType": "H3K4me3",
+                    "hisMark": "whole_polyp_24hr_DMSO_control"
+                },
+                {
+                    "sample": "H3K4me3_head",
+                    "n": 11151,
+                    "hisType": "H3K4me3",
+                    "hisMark": "head"
+                },
+                {
+                    "sample": "H3K4me3_regenerating_head_4hr",
+                    "n": 11050,
+                    "hisType": "H3K4me3",
+                    "hisMark": "regenerating_head_4hr"
+                },
+                {
+                    "sample": "H3K4me2_regenerating_head_6hr",
+                    "n": 10574,
+                    "hisType": "H3K4me2",
+                    "hisMark": "regenerating_head_6hr"
+                },
+                {
+                    "sample": "H3K4me2_head",
+                    "n": 10495,
+                    "hisType": "H3K4me2",
+                    "hisMark": "head"
+                },
+                {
+                    "sample": "H4K20me1_regenerating_tips_12hrs",
+                    "n": 10435,
+                    "hisType": "H4K20me1",
+                    "hisMark": "regenerating_tips_12hrs"
+                },
+                {
+                    "sample": "H3K4me3_regenerating_head_6hr",
+                    "n": 10144,
+                    "hisType": "H3K4me3",
+                    "hisMark": "regenerating_head_6hr"
+                },
+                {
+                    "sample": "H3K27ac_wholeAnimal",
+                    "n": 9547,
+                    "hisType": "H3K27ac",
+                    "hisMark": "wholeAnimal"
+                },
+                {
+                    "sample": "H3K27ac_whole_polyp_24hr_DMSO_control",
+                    "n": 7693,
+                    "hisType": "H3K27ac",
+                    "hisMark": "whole_polyp_24hr_DMSO_control"
+                },
+                {
+                    "sample": "H4K20me1_regenerating_tips_24hrs",
+                    "n": 3811,
+                    "hisType": "H4K20me1",
+                    "hisMark": "regenerating_tips_24hrs"
+                },
+                {
+                    "sample": "H3K9ac_whole_polyp_24hr_DMSO_control",
+                    "n": 1724,
+                    "hisType": "H3K9ac",
+                    "hisMark": "whole_polyp_24hr_DMSO_control"
+                },
+                {
+                    "sample": "H4K20me1_regenerating_tips_0hrs",
+                    "n": 667,
+                    "hisType": "H4K20me1",
+                    "hisMark": "regenerating_tips_0hrs"
+                },
+                {
+                    "sample": "panH3_CNT_whole_polyp_24hr_DMSO_control",
+                    "n": 588,
+                    "hisType": "panH3_CNT",
+                    "hisMark": "whole_polyp_24hr_DMSO_control"
+                },
+                {
+                    "sample": "H3K9ac_whole_polyp_24hr_ALP_treatment",
+                    "n": 160,
+                    "hisType": "H3K9ac",
+                    "hisMark": "whole_polyp_24hr_ALP_treatment"
+                }
+            ]
+        },
+        "NVECT_ATAC": {
+            "abbr": "NVECT",
+            "assay": "ATAC",
+            "label": "ATAC-seq",
+            "species": "Nematostella vectensis",
+            "n_peaks": 72182,
+            "samples": [
+                {
+                    "sample": "prestress_GSF",
+                    "n": 14546,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "prestress_GSF"
+                },
+                {
+                    "sample": "LD_CT_21h",
+                    "n": 9183,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "LD_CT_21h"
+                },
+                {
+                    "sample": "DD_CT_21h",
+                    "n": 8866,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "DD_CT_21h"
+                },
+                {
+                    "sample": "LD_CT_45h",
+                    "n": 8813,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "LD_CT_45h"
+                },
+                {
+                    "sample": "DD_CT_45h",
+                    "n": 8212,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "DD_CT_45h"
+                },
+                {
+                    "sample": "LD_CT_37h",
+                    "n": 6509,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "LD_CT_37h"
+                },
+                {
+                    "sample": "LD_CT_29h",
+                    "n": 6473,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "LD_CT_29h"
+                },
+                {
+                    "sample": "DD_CT_37h",
+                    "n": 5901,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "DD_CT_37h"
+                },
+                {
+                    "sample": "stress_GSL",
+                    "n": 1277,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "stress_GSL"
+                },
+                {
+                    "sample": "re48h_GSF",
+                    "n": 787,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "re48h_GSF"
+                },
+                {
+                    "sample": "re24h_GSL",
+                    "n": 729,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "re24h_GSL"
+                },
+                {
+                    "sample": "re48h_GSL",
+                    "n": 440,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "re48h_GSL"
+                },
+                {
+                    "sample": "stress_GSF",
+                    "n": 294,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "stress_GSF"
+                },
+                {
+                    "sample": "re24h_GSF",
+                    "n": 151,
+                    "hisType": "Adult tissues/organs",
+                    "hisMark": "re24h_GSF"
+                },
+                {
+                    "sample": "LD_CT_13h",
+                    "n": 1
+                }
+            ]
+        },
+        "NVECT_ChIP": {
+            "abbr": "NVECT",
+            "assay": "ChIP",
+            "label": "ChIP-seq",
+            "species": "Nematostella vectensis",
+            "n_peaks": 571887,
+            "samples": [
+                {
+                    "sample": "H3K4me1_planulae_4days",
+                    "n": 85974,
+                    "hisType": "H3K4me1",
+                    "hisMark": "planulae_4days"
+                },
+                {
+                    "sample": "late_planula_4d",
+                    "n": 68248,
+                    "hisType": "pSMAD1/5",
+                    "hisMark": "late_planula_4d"
+                },
+                {
+                    "sample": "H3K4me1_gastrulae_24h",
+                    "n": 49722,
+                    "hisType": "H3K4me1",
+                    "hisMark": "gastrulae_24h"
+                },
+                {
+                    "sample": "H3K36me3_planulae_4days",
+                    "n": 39921,
+                    "hisType": "H3K36me3",
+                    "hisMark": "planulae_4days"
+                },
+                {
+                    "sample": "late_gastrula",
+                    "n": 35618,
+                    "hisType": "pSMAD1/5",
+                    "hisMark": "late_gastrula"
+                },
+                {
+                    "sample": "H3K36me3_polyps",
+                    "n": 32153,
+                    "hisType": "H3K36me3",
+                    "hisMark": "polyps"
+                },
+                {
+                    "sample": "H3K4me2_gastrulae_24h",
+                    "n": 27651,
+                    "hisType": "H3K4me2",
+                    "hisMark": "gastrulae_24h"
+                },
+                {
+                    "sample": "H3K27ac_gastrulae_24h",
+                    "n": 22110,
+                    "hisType": "H3K27ac",
+                    "hisMark": "gastrulae_24h"
+                },
+                {
+                    "sample": "H3K4me2_polyps",
+                    "n": 21539,
+                    "hisType": "H3K4me2",
+                    "hisMark": "polyps"
+                },
+                {
+                    "sample": "H3K4me3_gastrulae_24h",
+                    "n": 19475,
+                    "hisType": "H3K4me3",
+                    "hisMark": "gastrulae_24h"
+                },
+                {
+                    "sample": "H3K27ac_planulae_4days",
+                    "n": 18986,
+                    "hisType": "H3K27ac",
+                    "hisMark": "planulae_4days"
+                },
+                {
+                    "sample": "H3K4me3_polyps",
+                    "n": 18774,
+                    "hisType": "H3K4me3",
+                    "hisMark": "polyps"
+                },
+                {
+                    "sample": "H3K4me2_planulae_4days",
+                    "n": 18429,
+                    "hisType": "H3K4me2",
+                    "hisMark": "planulae_4days"
+                },
+                {
+                    "sample": "H3K36me3_gastrulae_24h",
+                    "n": 17753,
+                    "hisType": "H3K36me3",
+                    "hisMark": "gastrulae_24h"
+                },
+                {
+                    "sample": "H3K4me2_neuronal_ELAV_cells",
+                    "n": 16583,
+                    "hisType": "H3K4me2",
+                    "hisMark": "neuronal_ELAV_cells"
+                },
+                {
+                    "sample": "H3K27ac_Ncol3_positive",
+                    "n": 14887,
+                    "hisType": "H3K27ac",
+                    "hisMark": "Ncol3_positive"
+                },
+                {
+                    "sample": "H3K4me3_planulae_4days",
+                    "n": 14266,
+                    "hisType": "H3K4me3",
+                    "hisMark": "planulae_4days"
+                },
+                {
+                    "sample": "H3K27ac_Nep3_positive",
+                    "n": 13569,
+                    "hisType": "H3K27ac",
+                    "hisMark": "Nep3_positive"
+                },
+                {
+                    "sample": "H3K27ac_Ncol3_negative",
+                    "n": 12873,
+                    "hisType": "H3K27ac",
+                    "hisMark": "Ncol3_negative"
+                },
+                {
+                    "sample": "H3K27ac_Nep3_negative",
+                    "n": 11955,
+                    "hisType": "H3K27ac",
+                    "hisMark": "Nep3_negative"
+                },
+                {
+                    "sample": "H3K4me1_neuronal_ELAV_cells",
+                    "n": 7847,
+                    "hisType": "H3K4me1",
+                    "hisMark": "neuronal_ELAV_cells"
+                },
+                {
+                    "sample": "H3K4me3_neuronal_ELAV_cells",
+                    "n": 3554,
+                    "hisType": "H3K4me3",
+                    "hisMark": "neuronal_ELAV_cells"
+                }
+            ]
+        }
+    }
+}

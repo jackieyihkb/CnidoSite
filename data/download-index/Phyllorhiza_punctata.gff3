@@ -1,0 +1,51 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_084193.1 1 16967
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=493932
+NC_084193.1	RefSeq	region	1	16967	.	+	.	ID=NC_084193.1:1..16967;Dbxref=taxon:493932;Is_circular=true;Name=MT;country=Singapore;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_084193.1	RefSeq	inverted_repeat	1	494	.	+	.	ID=id-NC_084193.1:1..494;Note=telomere;gbkey=repeat_region;rpt_family=ITR;rpt_type=inverted;rpt_unit_range=1..494
+NC_084193.1	RefSeq	gene	452	1339	.	-	.	ID=gene-UYJ97_mgp01;Dbxref=GeneID:86125088;Name=dnaB;gbkey=Gene;gene=dnaB;gene_biotype=protein_coding;locus_tag=UYJ97_mgp01
+NC_084193.1	RefSeq	CDS	452	1339	.	-	0	ID=cds-YP_010982456.1;Parent=gene-UYJ97_mgp01;Dbxref=GenBank:YP_010982456.1,GeneID:86125088;Name=YP_010982456.1;gbkey=CDS;gene=dnaB;locus_tag=UYJ97_mgp01;product=replication helicase subunit;protein_id=YP_010982456.1;transl_table=4
+NC_084193.1	RefSeq	gene	1347	1649	.	-	.	ID=gene-UYJ97_mgp02;Dbxref=GeneID:86125087;Name=orf314;gbkey=Gene;gene=orf314;gene_biotype=protein_coding;locus_tag=UYJ97_mgp02
+NC_084193.1	RefSeq	CDS	1347	1649	.	-	0	ID=cds-YP_010982457.1;Parent=gene-UYJ97_mgp02;Dbxref=GenBank:YP_010982457.1,GeneID:86125087;Name=YP_010982457.1;gbkey=CDS;gene=orf314;locus_tag=UYJ97_mgp02;product=hypothetical protein;protein_id=YP_010982457.1;transl_table=4
+NC_084193.1	RefSeq	gene	1659	3313	.	-	.	ID=gene-UYJ97_mgr02;Dbxref=GeneID:86125070;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA;locus_tag=UYJ97_mgr02
+NC_084193.1	RefSeq	rRNA	1659	3313	.	-	.	ID=rna-UYJ97_mgr02;Parent=gene-UYJ97_mgr02;Dbxref=GeneID:86125070;gbkey=rRNA;gene=rnl;locus_tag=UYJ97_mgr02;product=16S ribosomal RNA
+NC_084193.1	RefSeq	exon	1659	3313	.	-	.	ID=exon-UYJ97_mgr02-1;Parent=rna-UYJ97_mgr02;Dbxref=GeneID:86125070;gbkey=rRNA;gene=rnl;locus_tag=UYJ97_mgr02;product=16S ribosomal RNA
+NC_084193.1	RefSeq	gene	3463	5031	.	-	.	ID=gene-UYJ97_mgp15;Dbxref=GeneID:86125071;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=UYJ97_mgp15
+NC_084193.1	RefSeq	CDS	3463	5031	.	-	0	ID=cds-YP_010982458.1;Parent=gene-UYJ97_mgp15;Dbxref=GenBank:YP_010982458.1,GeneID:86125071;Name=YP_010982458.1;gbkey=CDS;gene=COX1;locus_tag=UYJ97_mgp15;product=cytochrome c oxidase subunit I;protein_id=YP_010982458.1;transl_table=4
+NC_084193.1	RefSeq	gene	5100	5846	.	+	.	ID=gene-UYJ97_mgp14;Dbxref=GeneID:86125072;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=UYJ97_mgp14
+NC_084193.1	RefSeq	CDS	5100	5846	.	+	0	ID=cds-YP_010982459.1;Parent=gene-UYJ97_mgp14;Dbxref=GenBank:YP_010982459.1,GeneID:86125072;Name=YP_010982459.1;gbkey=CDS;gene=COX2;locus_tag=UYJ97_mgp14;product=cytochrome c oxidase subunit II;protein_id=YP_010982459.1;transl_table=4
+NC_084193.1	RefSeq	gene	5852	5921	.	+	.	ID=gene-UYJ97_mgt01;Dbxref=GeneID:86125073;Name=trnW(tca);gbkey=Gene;gene=trnW(tca);gene_biotype=tRNA;locus_tag=UYJ97_mgt01
+NC_084193.1	RefSeq	tRNA	5852	5921	.	+	.	ID=rna-UYJ97_mgt01;Parent=gene-UYJ97_mgt01;Dbxref=GeneID:86125073;gbkey=tRNA;gene=trnW(tca);locus_tag=UYJ97_mgt01;product=tRNA-Trp
+NC_084193.1	RefSeq	exon	5852	5921	.	+	.	ID=exon-UYJ97_mgt01-1;Parent=rna-UYJ97_mgt01;Dbxref=GeneID:86125073;gbkey=tRNA;gene=trnW(tca);locus_tag=UYJ97_mgt01;product=tRNA-Trp
+NC_084193.1	RefSeq	gene	5927	6130	.	+	.	ID=gene-UYJ97_mgp13;Dbxref=GeneID:86125074;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=UYJ97_mgp13
+NC_084193.1	RefSeq	CDS	5927	6130	.	+	0	ID=cds-YP_010982460.1;Parent=gene-UYJ97_mgp13;Dbxref=GenBank:YP_010982460.1,GeneID:86125074;Name=YP_010982460.1;gbkey=CDS;gene=ATP8;locus_tag=UYJ97_mgp13;product=ATP synthase F0 subunit 8;protein_id=YP_010982460.1;transl_table=4
+NC_084193.1	RefSeq	gene	6137	6838	.	+	.	ID=gene-UYJ97_mgp12;Dbxref=GeneID:86125075;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=UYJ97_mgp12
+NC_084193.1	RefSeq	CDS	6137	6838	.	+	0	ID=cds-YP_010982461.1;Parent=gene-UYJ97_mgp12;Dbxref=GenBank:YP_010982461.1,GeneID:86125075;Name=YP_010982461.1;gbkey=CDS;gene=ATP6;locus_tag=UYJ97_mgp12;product=ATP synthase F0 subunit 6;protein_id=YP_010982461.1;transl_table=4
+NC_084193.1	RefSeq	gene	6838	7623	.	+	.	ID=gene-UYJ97_mgp11;Dbxref=GeneID:86125076;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=UYJ97_mgp11
+NC_084193.1	RefSeq	CDS	6838	7623	.	+	0	ID=cds-YP_010982462.1;Parent=gene-UYJ97_mgp11;Dbxref=GenBank:YP_010982462.1,GeneID:86125076;Name=YP_010982462.1;gbkey=CDS;gene=COX3;locus_tag=UYJ97_mgp11;product=cytochrome c oxidase subunit III;protein_id=YP_010982462.1;transl_table=4
+NC_084193.1	RefSeq	gene	7629	7699	.	+	.	ID=gene-UYJ97_mgt02;Dbxref=GeneID:86125077;Name=trnM(cat);gbkey=Gene;gene=trnM(cat);gene_biotype=tRNA;locus_tag=UYJ97_mgt02
+NC_084193.1	RefSeq	tRNA	7629	7699	.	+	.	ID=rna-UYJ97_mgt02;Parent=gene-UYJ97_mgt02;Dbxref=GeneID:86125077;gbkey=tRNA;gene=trnM(cat);locus_tag=UYJ97_mgt02;product=tRNA-Met
+NC_084193.1	RefSeq	exon	7629	7699	.	+	.	ID=exon-UYJ97_mgt02-1;Parent=rna-UYJ97_mgt02;Dbxref=GeneID:86125077;gbkey=tRNA;gene=trnM(cat);locus_tag=UYJ97_mgt02;product=tRNA-Met
+NC_084193.1	RefSeq	gene	7702	9021	.	+	.	ID=gene-UYJ97_mgp10;Dbxref=GeneID:86125078;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=UYJ97_mgp10
+NC_084193.1	RefSeq	CDS	7702	9021	.	+	0	ID=cds-YP_010982463.1;Parent=gene-UYJ97_mgp10;Dbxref=GenBank:YP_010982463.1,GeneID:86125078;Name=YP_010982463.1;gbkey=CDS;gene=ND2;locus_tag=UYJ97_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_010982463.1;transl_table=4
+NC_084193.1	RefSeq	gene	9021	10838	.	+	.	ID=gene-UYJ97_mgp09;Dbxref=GeneID:86125079;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=UYJ97_mgp09
+NC_084193.1	RefSeq	CDS	9021	10838	.	+	0	ID=cds-YP_010982464.1;Parent=gene-UYJ97_mgp09;Dbxref=GenBank:YP_010982464.1,GeneID:86125079;Name=YP_010982464.1;gbkey=CDS;gene=ND5;locus_tag=UYJ97_mgp09;product=NADH dehydrogenase subunit 5;protein_id=YP_010982464.1;transl_table=4
+NC_084193.1	RefSeq	gene	10837	11769	.	+	.	ID=gene-UYJ97_mgr01;Dbxref=GeneID:86125080;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA;locus_tag=UYJ97_mgr01
+NC_084193.1	RefSeq	rRNA	10837	11769	.	+	.	ID=rna-UYJ97_mgr01;Parent=gene-UYJ97_mgr01;Dbxref=GeneID:86125080;gbkey=rRNA;gene=rns;locus_tag=UYJ97_mgr01;product=12S ribosomal RNA
+NC_084193.1	RefSeq	exon	10837	11769	.	+	.	ID=exon-UYJ97_mgr01-1;Parent=rna-UYJ97_mgr01;Dbxref=GeneID:86125080;gbkey=rRNA;gene=rns;locus_tag=UYJ97_mgr01;product=12S ribosomal RNA
+NC_084193.1	RefSeq	gene	11773	12345	.	+	.	ID=gene-UYJ97_mgp08;Dbxref=GeneID:86125081;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=UYJ97_mgp08
+NC_084193.1	RefSeq	CDS	11773	12345	.	+	0	ID=cds-YP_010982465.1;Parent=gene-UYJ97_mgp08;Dbxref=GenBank:YP_010982465.1,GeneID:86125081;Name=YP_010982465.1;gbkey=CDS;gene=ND6;locus_tag=UYJ97_mgp08;product=NADH dehydrogenase subunit 6;protein_id=YP_010982465.1;transl_table=4
+NC_084193.1	RefSeq	gene	12299	12658	.	+	.	ID=gene-UYJ97_mgp07;Dbxref=GeneID:86125082;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=UYJ97_mgp07
+NC_084193.1	RefSeq	CDS	12299	12658	.	+	0	ID=cds-YP_010982466.1;Parent=gene-UYJ97_mgp07;Dbxref=GenBank:YP_010982466.1,GeneID:86125082;Name=YP_010982466.1;gbkey=CDS;gene=ND3;locus_tag=UYJ97_mgp07;product=NADH dehydrogenase subunit 3;protein_id=YP_010982466.1;transl_table=4
+NC_084193.1	RefSeq	gene	12649	12951	.	+	.	ID=gene-UYJ97_mgp06;Dbxref=GeneID:86125083;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=UYJ97_mgp06
+NC_084193.1	RefSeq	CDS	12649	12951	.	+	0	ID=cds-YP_010982467.1;Parent=gene-UYJ97_mgp06;Dbxref=GenBank:YP_010982467.1,GeneID:86125083;Name=YP_010982467.1;gbkey=CDS;gene=ND4L;locus_tag=UYJ97_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_010982467.1;transl_table=4
+NC_084193.1	RefSeq	gene	12951	13919	.	+	.	ID=gene-UYJ97_mgp05;Dbxref=GeneID:86125084;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=UYJ97_mgp05
+NC_084193.1	RefSeq	CDS	12951	13919	.	+	0	ID=cds-YP_010982468.1;Parent=gene-UYJ97_mgp05;Dbxref=GenBank:YP_010982468.1,GeneID:86125084;Name=YP_010982468.1;gbkey=CDS;gene=ND1;locus_tag=UYJ97_mgp05;product=NADH dehydrogenase subunit 1;protein_id=YP_010982468.1;transl_table=4
+NC_084193.1	RefSeq	gene	13921	15360	.	+	.	ID=gene-UYJ97_mgp04;Dbxref=GeneID:86125085;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=UYJ97_mgp04
+NC_084193.1	RefSeq	CDS	13921	15360	.	+	0	ID=cds-YP_010982469.1;Parent=gene-UYJ97_mgp04;Dbxref=GenBank:YP_010982469.1,GeneID:86125085;Name=YP_010982469.1;gbkey=CDS;gene=ND4;locus_tag=UYJ97_mgp04;product=NADH dehydrogenase subunit 4;protein_id=YP_010982469.1;transl_table=4
+NC_084193.1	RefSeq	gene	15360	16496	.	+	.	ID=gene-UYJ97_mgp03;Dbxref=GeneID:86125086;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=UYJ97_mgp03
+NC_084193.1	RefSeq	CDS	15360	16496	.	+	0	ID=cds-YP_010982470.1;Parent=gene-UYJ97_mgp03;Dbxref=GenBank:YP_010982470.1,GeneID:86125086;Name=YP_010982470.1;gbkey=CDS;gene=CYTB;locus_tag=UYJ97_mgp03;product=cytochrome b;protein_id=YP_010982470.1;transl_table=4
+NC_084193.1	RefSeq	inverted_repeat	16474	16967	.	-	.	ID=id-NC_084193.1:16474..16967;Note=telomere;gbkey=repeat_region;rpt_family=ITR;rpt_type=inverted;rpt_unit_range=16967..16474
+

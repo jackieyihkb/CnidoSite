@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_045515.1 1 17552
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1789172
+NC_045515.1	RefSeq	region	1	17552	.	+	.	ID=NC_045515.1:1..17552;Dbxref=taxon:1789172;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;old-name=Haliplanella lineata
+NC_045515.1	RefSeq	gene	1	3514	.	+	.	ID=gene-GU298_mgp01;Dbxref=GeneID:43560528;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=GU298_mgp01
+NC_045515.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_009724570.1;Parent=gene-GU298_mgp01;Dbxref=GenBank:YP_009724570.1,GeneID:43560528;Name=YP_009724570.1;gbkey=CDS;gene=ND5;locus_tag=GU298_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009724570.1;transl_table=4
+NC_045515.1	RefSeq	CDS	2375	3514	.	+	0	ID=cds-YP_009724570.1;Parent=gene-GU298_mgp01;Dbxref=GenBank:YP_009724570.1,GeneID:43560528;Name=YP_009724570.1;gbkey=CDS;gene=ND5;locus_tag=GU298_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009724570.1;transl_table=4
+NC_045515.1	RefSeq	intron	718	2374	.	+	.	ID=id-GU298_mgp01;Parent=gene-GU298_mgp01;Dbxref=GeneID:43560528;gbkey=intron;gene=ND5;locus_tag=GU298_mgp01
+NC_045515.1	RefSeq	gene	920	1924	.	+	.	ID=gene-GU298_mgp02;Dbxref=GeneID:43560512;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=GU298_mgp02
+NC_045515.1	RefSeq	CDS	920	1924	.	+	0	ID=cds-YP_009724571.1;Parent=gene-GU298_mgp02;Dbxref=GenBank:YP_009724571.1,GeneID:43560512;Name=YP_009724571.1;gbkey=CDS;gene=ND1;locus_tag=GU298_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009724571.1;transl_table=4
+NC_045515.1	RefSeq	gene	1931	2287	.	+	.	ID=gene-GU298_mgp03;Dbxref=GeneID:43560513;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=GU298_mgp03
+NC_045515.1	RefSeq	CDS	1931	2287	.	+	0	ID=cds-YP_009724572.1;Parent=gene-GU298_mgp03;Dbxref=GenBank:YP_009724572.1,GeneID:43560513;Name=YP_009724572.1;gbkey=CDS;gene=ND3;locus_tag=GU298_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009724572.1;transl_table=4
+NC_045515.1	RefSeq	gene	3575	3644	.	+	.	ID=gene-GU298_mgt01;Dbxref=GeneID:43560514;Name=tRNA;gbkey=Gene;gene=tRNA;gene_biotype=tRNA;locus_tag=GU298_mgt01
+NC_045515.1	RefSeq	tRNA	3575	3644	.	+	.	ID=rna-GU298_mgt01;Parent=gene-GU298_mgt01;Dbxref=GeneID:43560514;gbkey=tRNA;gene=tRNA;locus_tag=GU298_mgt01;product=tRNA-Trp
+NC_045515.1	RefSeq	exon	3575	3644	.	+	.	ID=exon-GU298_mgt01-1;Parent=rna-GU298_mgt01;Dbxref=GeneID:43560514;gbkey=tRNA;gene=tRNA;locus_tag=GU298_mgt01;product=tRNA-Trp
+NC_045515.1	RefSeq	gene	3969	5126	.	+	.	ID=gene-GU298_mgp13;Dbxref=GeneID:43560524;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=GU298_mgp13
+NC_045515.1	RefSeq	CDS	3969	5126	.	+	0	ID=cds-YP_009724573.1;Parent=gene-GU298_mgp13;Dbxref=GenBank:YP_009724573.1,GeneID:43560524;Name=YP_009724573.1;gbkey=CDS;gene=ND2;locus_tag=GU298_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_009724573.1;transl_table=4
+NC_045515.1	RefSeq	gene	5176	6257	.	+	.	ID=gene-GU298_mgr02;Dbxref=GeneID:43560515;Name=GU298_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=GU298_mgr02
+NC_045515.1	RefSeq	rRNA	5176	6257	.	+	.	ID=rna-GU298_mgr02;Parent=gene-GU298_mgr02;Dbxref=GeneID:43560515;gbkey=rRNA;locus_tag=GU298_mgr02;product=12S ribosomal RNA
+NC_045515.1	RefSeq	exon	5176	6257	.	+	.	ID=exon-GU298_mgr02-1;Parent=rna-GU298_mgr02;Dbxref=GeneID:43560515;gbkey=rRNA;locus_tag=GU298_mgr02;product=12S ribosomal RNA
+NC_045515.1	RefSeq	gene	6311	7051	.	+	.	ID=gene-GU298_mgp12;Dbxref=GeneID:43560526;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=GU298_mgp12
+NC_045515.1	RefSeq	CDS	6311	7051	.	+	0	ID=cds-YP_009724574.1;Parent=gene-GU298_mgp12;Dbxref=GenBank:YP_009724574.1,GeneID:43560526;Name=YP_009724574.1;gbkey=CDS;gene=COX2;locus_tag=GU298_mgp12;product=cytochrome c oxidase subunit II;protein_id=YP_009724574.1;transl_table=4
+NC_045515.1	RefSeq	gene	7213	8691	.	+	.	ID=gene-GU298_mgp11;Dbxref=GeneID:43560516;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=GU298_mgp11
+NC_045515.1	RefSeq	CDS	7213	8691	.	+	0	ID=cds-YP_009724575.1;Parent=gene-GU298_mgp11;Dbxref=GenBank:YP_009724575.1,GeneID:43560516;Name=YP_009724575.1;gbkey=CDS;gene=ND4;locus_tag=GU298_mgp11;product=NADH dehydrogenase subunit 4;protein_id=YP_009724575.1;transl_table=4
+NC_045515.1	RefSeq	gene	8696	9289	.	+	.	ID=gene-GU298_mgp10;Dbxref=GeneID:43560517;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=GU298_mgp10
+NC_045515.1	RefSeq	CDS	8696	9289	.	+	0	ID=cds-YP_009724576.1;Parent=gene-GU298_mgp10;Dbxref=GenBank:YP_009724576.1,GeneID:43560517;Name=YP_009724576.1;gbkey=CDS;gene=ND6;locus_tag=GU298_mgp10;product=NADH dehydrogenase subunit 6;protein_id=YP_009724576.1;transl_table=4
+NC_045515.1	RefSeq	gene	9348	10514	.	+	.	ID=gene-GU298_mgp09;Dbxref=GeneID:43560518;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=GU298_mgp09
+NC_045515.1	RefSeq	CDS	9348	10514	.	+	0	ID=cds-YP_009724577.2;Parent=gene-GU298_mgp09;Dbxref=GenBank:YP_009724577.2,GeneID:43560518;Name=YP_009724577.2;gbkey=CDS;gene=CYTB;locus_tag=GU298_mgp09;product=cytochrome b;protein_id=YP_009724577.2;transl_table=4
+NC_045515.1	RefSeq	gene	10573	10643	.	+	.	ID=gene-GU298_mgt02;Dbxref=GeneID:43560519;Name=tRNA;gbkey=Gene;gene=tRNA;gene_biotype=tRNA;locus_tag=GU298_mgt02
+NC_045515.1	RefSeq	tRNA	10573	10643	.	+	.	ID=rna-GU298_mgt02;Parent=gene-GU298_mgt02;Dbxref=GeneID:43560519;gbkey=tRNA;gene=tRNA;locus_tag=GU298_mgt02;product=tRNA-Met
+NC_045515.1	RefSeq	exon	10573	10643	.	+	.	ID=exon-GU298_mgt02-1;Parent=rna-GU298_mgt02;Dbxref=GeneID:43560519;gbkey=tRNA;gene=tRNA;locus_tag=GU298_mgt02;product=tRNA-Met
+NC_045515.1	RefSeq	gene	10644	12830	.	+	.	ID=gene-GU298_mgr01;Dbxref=GeneID:43560525;Name=GU298_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=GU298_mgr01
+NC_045515.1	RefSeq	rRNA	10644	12830	.	+	.	ID=rna-GU298_mgr01;Parent=gene-GU298_mgr01;Dbxref=GeneID:43560525;gbkey=rRNA;locus_tag=GU298_mgr01;product=16S ribosomal RNA
+NC_045515.1	RefSeq	exon	10644	12830	.	+	.	ID=exon-GU298_mgr01-1;Parent=rna-GU298_mgr01;Dbxref=GeneID:43560525;gbkey=rRNA;locus_tag=GU298_mgr01;product=16S ribosomal RNA
+NC_045515.1	RefSeq	gene	12902	13690	.	+	.	ID=gene-GU298_mgp08;Dbxref=GeneID:43560527;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=GU298_mgp08
+NC_045515.1	RefSeq	CDS	12902	13690	.	+	0	ID=cds-YP_009724578.1;Parent=gene-GU298_mgp08;Dbxref=GenBank:YP_009724578.1,GeneID:43560527;Name=YP_009724578.1;gbkey=CDS;gene=COX3;locus_tag=GU298_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_009724578.1;transl_table=4
+NC_045515.1	RefSeq	gene	13789	16233	.	+	.	ID=gene-GU298_mgp07;Dbxref=GeneID:43560520;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=GU298_mgp07
+NC_045515.1	RefSeq	CDS	13789	14703	.	+	0	ID=cds-YP_009724579.1;Parent=gene-GU298_mgp07;Dbxref=GenBank:YP_009724579.1,GeneID:43560520;Name=YP_009724579.1;gbkey=CDS;gene=COX1;locus_tag=GU298_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009724579.1;transl_table=4
+NC_045515.1	RefSeq	CDS	15538	16233	.	+	0	ID=cds-YP_009724579.1;Parent=gene-GU298_mgp07;Dbxref=GenBank:YP_009724579.1,GeneID:43560520;Name=YP_009724579.1;gbkey=CDS;gene=COX1;locus_tag=GU298_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009724579.1;transl_table=4
+NC_045515.1	RefSeq	intron	13790	14702	.	+	.	ID=id-GU298_mgp07;Parent=gene-GU298_mgp07;Dbxref=GeneID:43560520;gbkey=intron;gene=COX1;locus_tag=GU298_mgp07
+NC_045515.1	RefSeq	CDS	14835	15506	.	+	0	ID=cds-YP_009724580.1;Dbxref=GenBank:YP_009724580.1;Name=YP_009724580.1;gbkey=CDS;product=heg;protein_id=YP_009724580.1;transl_table=4
+NC_045515.1	RefSeq	gene	16274	16573	.	+	.	ID=gene-GU298_mgp06;Dbxref=GeneID:43560521;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=GU298_mgp06
+NC_045515.1	RefSeq	CDS	16274	16573	.	+	0	ID=cds-YP_009724581.1;Parent=gene-GU298_mgp06;Dbxref=GenBank:YP_009724581.1,GeneID:43560521;Name=YP_009724581.1;gbkey=CDS;gene=ND4L;locus_tag=GU298_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_009724581.1;transl_table=4
+NC_045515.1	RefSeq	gene	16598	16813	.	+	.	ID=gene-GU298_mgp05;Dbxref=GeneID:43560522;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=GU298_mgp05
+NC_045515.1	RefSeq	CDS	16598	16813	.	+	0	ID=cds-YP_009724582.1;Parent=gene-GU298_mgp05;Dbxref=GenBank:YP_009724582.1,GeneID:43560522;Name=YP_009724582.1;gbkey=CDS;gene=ATP8;locus_tag=GU298_mgp05;product=ATP synthase F0 subunit 8;protein_id=YP_009724582.1;transl_table=4
+NC_045515.1	RefSeq	gene	16844	17533	.	+	.	ID=gene-GU298_mgp04;Dbxref=GeneID:43560523;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=GU298_mgp04
+NC_045515.1	RefSeq	CDS	16844	17533	.	+	0	ID=cds-YP_009724583.1;Parent=gene-GU298_mgp04;Dbxref=GenBank:YP_009724583.1,GeneID:43560523;Name=YP_009724583.1;gbkey=CDS;gene=ATP6;locus_tag=GU298_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009724583.1;transl_table=4
+

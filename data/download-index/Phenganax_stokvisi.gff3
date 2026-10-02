@@ -1,0 +1,41 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PP330784.1 1 18950
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2614786
+PP330784.1	Genbank	region	1	18950	.	+	.	ID=PP330784.1:1..18950;Dbxref=taxon:2614786;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+PP330784.1	Genbank	gene	1	1677	.	+	.	ID=gene-Cox1;Name=Cox1;gbkey=Gene;gene=Cox1;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	1	1677	.	+	0	ID=cds-XYM50550.1;Parent=gene-Cox1;Dbxref=NCBI_GP:XYM50550.1;Name=XYM50550.1;gbkey=CDS;gene=Cox1;product=cytochrome c oxidase subunit I;protein_id=XYM50550.1;transl_table=4
+PP330784.1	Genbank	rRNA	1750	2652	.	+	.	ID=rna-PP330784.1:1750..2652;gbkey=rRNA;product=small subunit ribosomal RNA
+PP330784.1	Genbank	exon	1750	2652	.	+	.	ID=exon-PP330784.1:1750..2652-1;Parent=rna-PP330784.1:1750..2652;gbkey=rRNA;product=small subunit ribosomal RNA
+PP330784.1	Genbank	gene	2657	3622	.	+	.	ID=gene-Nad1;Name=Nad1;gbkey=Gene;gene=Nad1;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	2657	3622	.	+	0	ID=cds-XYM50551.1;Parent=gene-Nad1;Dbxref=NCBI_GP:XYM50551.1;Name=XYM50551.1;gbkey=CDS;gene=Nad1;product=NADH dehydrogenase subunit 1;protein_id=XYM50551.1;transl_table=4
+PP330784.1	Genbank	tRNA	3913	3983	.	+	.	ID=rna-PP330784.1:3913..3983;gbkey=tRNA;product=tRNA-Met
+PP330784.1	Genbank	exon	3913	3983	.	+	.	ID=exon-PP330784.1:3913..3983-1;Parent=rna-PP330784.1:3913..3983;gbkey=tRNA;product=tRNA-Met
+PP330784.1	Genbank	gene	4046	5494	.	-	.	ID=gene-Nad4;Name=Nad4;gbkey=Gene;gene=Nad4;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	4046	5494	.	-	0	ID=cds-XYM50552.1;Parent=gene-Nad4;Dbxref=NCBI_GP:XYM50552.1;Name=XYM50552.1;gbkey=CDS;gene=Nad4;product=NADH dehydrogenase subunit 4;protein_id=XYM50552.1;transl_table=4
+PP330784.1	Genbank	gene	5518	7335	.	-	.	ID=gene-Nad5;Name=Nad5;gbkey=Gene;gene=Nad5;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	5518	7335	.	-	0	ID=cds-XYM50553.1;Parent=gene-Nad5;Dbxref=NCBI_GP:XYM50553.1;Name=XYM50553.1;gbkey=CDS;gene=Nad5;product=NADH dehydrogenase subunit 5;protein_id=XYM50553.1;transl_table=4
+PP330784.1	Genbank	gene	7323	8648	.	-	.	ID=gene-Nad2;Name=Nad2;gbkey=Gene;gene=Nad2;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	7323	8648	.	-	0	ID=cds-XYM50554.1;Parent=gene-Nad2;Dbxref=NCBI_GP:XYM50554.1;Name=XYM50554.1;gbkey=CDS;gene=Nad2;product=NADH dehydrogenase subunit 2;protein_id=XYM50554.1;transl_table=4
+PP330784.1	Genbank	rRNA	8690	10594	.	-	.	ID=rna-PP330784.1:8690..10594;gbkey=rRNA;product=large subunit ribosomal RNA
+PP330784.1	Genbank	exon	8690	10594	.	-	.	ID=exon-PP330784.1:8690..10594-1;Parent=rna-PP330784.1:8690..10594;gbkey=rRNA;product=large subunit ribosomal RNA
+PP330784.1	Genbank	gene	10671	13592	.	-	.	ID=gene-MutS;Name=MutS;gbkey=Gene;gene=MutS;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	10671	13592	.	-	0	ID=cds-XYM50555.1;Parent=gene-MutS;Dbxref=NCBI_GP:XYM50555.1;Name=XYM50555.1;gbkey=CDS;gene=MutS;product=MutS-like protein;protein_id=XYM50555.1;transl_table=4
+PP330784.1	Genbank	gene	13606	13899	.	-	.	ID=gene-Nad4L;Name=Nad4L;gbkey=Gene;gene=Nad4L;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	13606	13899	.	-	0	ID=cds-XYM50556.1;Parent=gene-Nad4L;Dbxref=NCBI_GP:XYM50556.1;Name=XYM50556.1;gbkey=CDS;gene=Nad4L;product=NADH dehydrogenase subunit 4L;protein_id=XYM50556.1;transl_table=4
+PP330784.1	Genbank	gene	13919	14272	.	-	.	ID=gene-Nad3;Name=Nad3;gbkey=Gene;gene=Nad3;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	13919	14272	.	-	0	ID=cds-XYM50557.1;Parent=gene-Nad3;Dbxref=NCBI_GP:XYM50557.1;Name=XYM50557.1;gbkey=CDS;gene=Nad3;product=NADH dehydrogenase subunit 3;protein_id=XYM50557.1;transl_table=4
+PP330784.1	Genbank	gene	14290	14835	.	-	.	ID=gene-Nad6;Name=Nad6;gbkey=Gene;gene=Nad6;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	14290	14835	.	-	0	ID=cds-XYM50558.1;Parent=gene-Nad6;Dbxref=NCBI_GP:XYM50558.1;Name=XYM50558.1;gbkey=CDS;gene=Nad6;product=NADH dehydrogenase subunit 6;protein_id=XYM50558.1;transl_table=4
+PP330784.1	Genbank	gene	15048	16196	.	-	.	ID=gene-CytB;Name=CytB;gbkey=Gene;gene=CytB;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	15048	16196	.	-	0	ID=cds-XYM50559.1;Parent=gene-CytB;Dbxref=NCBI_GP:XYM50559.1;Name=XYM50559.1;gbkey=CDS;gene=CytB;product=cytochrome b;protein_id=XYM50559.1;transl_table=4
+PP330784.1	Genbank	gene	16253	17038	.	-	.	ID=gene-Cox3;Name=Cox3;gbkey=Gene;gene=Cox3;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	16253	17038	.	-	0	ID=cds-XYM50560.1;Parent=gene-Cox3;Dbxref=NCBI_GP:XYM50560.1;Name=XYM50560.1;gbkey=CDS;gene=Cox3;product=cytochrome c oxidase subunit III;protein_id=XYM50560.1;transl_table=4
+PP330784.1	Genbank	gene	17114	17821	.	-	.	ID=gene-Atp6;Name=Atp6;gbkey=Gene;gene=Atp6;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	17114	17821	.	-	0	ID=cds-XYM50561.1;Parent=gene-Atp6;Dbxref=NCBI_GP:XYM50561.1;Name=XYM50561.1;gbkey=CDS;gene=Atp6;product=ATP synthase subunit 6;protein_id=XYM50561.1;transl_table=4
+PP330784.1	Genbank	gene	17858	18073	.	-	.	ID=gene-Atp8;Name=Atp8;gbkey=Gene;gene=Atp8;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	17858	18073	.	-	0	ID=cds-XYM50562.1;Parent=gene-Atp8;Dbxref=NCBI_GP:XYM50562.1;Name=XYM50562.1;gbkey=CDS;gene=Atp8;product=ATP synthase subunit 8;protein_id=XYM50562.1;transl_table=4
+PP330784.1	Genbank	gene	18092	18844	.	-	.	ID=gene-Cox2;Name=Cox2;gbkey=Gene;gene=Cox2;gene_biotype=protein_coding
+PP330784.1	Genbank	CDS	18092	18844	.	-	0	ID=cds-XYM50563.1;Parent=gene-Cox2;Dbxref=NCBI_GP:XYM50563.1;Name=XYM50563.1;gbkey=CDS;gene=Cox2;product=cytochrome c oxidase subunit II;protein_id=XYM50563.1;transl_table=4
+

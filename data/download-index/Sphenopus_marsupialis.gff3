@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_046406.1 1 21199
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=541214
+NC_046406.1	RefSeq	region	1	21199	.	+	.	ID=NC_046406.1:1..21199;Dbxref=taxon:541214;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_046406.1	RefSeq	gene	1	2923	.	+	.	ID=gene-HCT17_mgp01;Dbxref=GeneID:44800048;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;gene_synonym=COI;locus_tag=HCT17_mgp01
+NC_046406.1	RefSeq	CDS	1	888	.	+	0	ID=cds-YP_009734615.1;Parent=gene-HCT17_mgp01;Dbxref=GenBank:YP_009734615.1,GeneID:44800048;Name=YP_009734615.1;gbkey=CDS;gene=COX1;locus_tag=HCT17_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009734615.1;transl_table=4
+NC_046406.1	RefSeq	CDS	2207	2923	.	+	0	ID=cds-YP_009734615.1;Parent=gene-HCT17_mgp01;Dbxref=GenBank:YP_009734615.1,GeneID:44800048;Name=YP_009734615.1;gbkey=CDS;gene=COX1;locus_tag=HCT17_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009734615.1;transl_table=4
+NC_046406.1	RefSeq	exon	1	888	.	+	.	ID=id-HCT17_mgp01-1;Parent=gene-HCT17_mgp01;Dbxref=GeneID:44800048;exon_number=1;gbkey=exon;gene=COX1;locus_tag=HCT17_mgp01;number=1
+NC_046406.1	RefSeq	exon	2207	2923	.	+	.	ID=id-HCT17_mgp01-2;Parent=gene-HCT17_mgp01;Dbxref=GeneID:44800048;exon_number=2;gbkey=exon;gene=COX1;locus_tag=HCT17_mgp01;number=2
+NC_046406.1	RefSeq	intron	889	2206	.	+	.	ID=id-HCT17_mgp01;Parent=gene-HCT17_mgp01;Dbxref=GeneID:44800048;Note=group 1 intron;gbkey=intron;gene=COX1;locus_tag=HCT17_mgp01
+NC_046406.1	RefSeq	gene	3064	3363	.	+	.	ID=gene-HCT17_mgp02;Dbxref=GeneID:44800034;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=HCT17_mgp02
+NC_046406.1	RefSeq	CDS	3064	3363	.	+	0	ID=cds-YP_009734616.1;Parent=gene-HCT17_mgp02;Dbxref=GenBank:YP_009734616.1,GeneID:44800034;Name=YP_009734616.1;gbkey=CDS;gene=ND4L;locus_tag=HCT17_mgp02;product=NADH dehydrogenase subunit 4L;protein_id=YP_009734616.1;transl_table=4
+NC_046406.1	RefSeq	gene	3409	3627	.	+	.	ID=gene-HCT17_mgp03;Dbxref=GeneID:44800043;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=HCT17_mgp03
+NC_046406.1	RefSeq	CDS	3409	3627	.	+	0	ID=cds-YP_009734617.1;Parent=gene-HCT17_mgp03;Dbxref=GenBank:YP_009734617.1,GeneID:44800043;Name=YP_009734617.1;gbkey=CDS;gene=ATP8;locus_tag=HCT17_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_009734617.1;transl_table=4
+NC_046406.1	RefSeq	gene	3843	4541	.	+	.	ID=gene-HCT17_mgp04;Dbxref=GeneID:44800044;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=HCT17_mgp04
+NC_046406.1	RefSeq	CDS	3843	4541	.	+	0	ID=cds-YP_009734618.1;Parent=gene-HCT17_mgp04;Dbxref=GenBank:YP_009734618.1,GeneID:44800044;Name=YP_009734618.1;gbkey=CDS;gene=ATP6;locus_tag=HCT17_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009734618.1;transl_table=4
+NC_046406.1	RefSeq	gene	4779	5974	.	+	.	ID=gene-HCT17_mgr01;Dbxref=GeneID:44800040;Name=HCT17_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=HCT17_mgr01
+NC_046406.1	RefSeq	rRNA	4779	5974	.	+	.	ID=rna-HCT17_mgr01;Parent=gene-HCT17_mgr01;Dbxref=GeneID:44800040;Note=small subunit RNA;gbkey=rRNA;locus_tag=HCT17_mgr01;product=small subunit ribosomal RNA
+NC_046406.1	RefSeq	exon	4779	5974	.	+	.	ID=exon-HCT17_mgr01-1;Parent=rna-HCT17_mgr01;Dbxref=GeneID:44800040;Note=small subunit RNA;gbkey=rRNA;locus_tag=HCT17_mgr01;product=small subunit ribosomal RNA
+NC_046406.1	RefSeq	gene	6423	7580	.	+	.	ID=gene-HCT17_mgp13;Dbxref=GeneID:44800045;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=HCT17_mgp13
+NC_046406.1	RefSeq	CDS	6423	7580	.	+	0	ID=cds-YP_009734619.1;Parent=gene-HCT17_mgp13;Dbxref=GenBank:YP_009734619.1,GeneID:44800045;Name=YP_009734619.1;gbkey=CDS;gene=ND2;locus_tag=HCT17_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_009734619.1;transl_table=4
+NC_046406.1	RefSeq	gene	7796	7866	.	+	.	ID=gene-HCT17_mgt01;Dbxref=GeneID:44800037;Name=HCT17_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=HCT17_mgt01
+NC_046406.1	RefSeq	tRNA	7796	7866	.	+	.	ID=rna-HCT17_mgt01;Parent=gene-HCT17_mgt01;Dbxref=GeneID:44800037;gbkey=tRNA;locus_tag=HCT17_mgt01;product=tRNA-Met
+NC_046406.1	RefSeq	exon	7796	7866	.	+	.	ID=exon-HCT17_mgt01-1;Parent=rna-HCT17_mgt01;Dbxref=GeneID:44800037;gbkey=tRNA;locus_tag=HCT17_mgt01;product=tRNA-Met
+NC_046406.1	RefSeq	gene	7906	10543	.	+	.	ID=gene-HCT17_mgr02;Dbxref=GeneID:44800046;Name=HCT17_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=HCT17_mgr02
+NC_046406.1	RefSeq	rRNA	7906	10543	.	+	.	ID=rna-HCT17_mgr02;Parent=gene-HCT17_mgr02;Dbxref=GeneID:44800046;Note=large subunit RNA;gbkey=rRNA;locus_tag=HCT17_mgr02;product=large subunit ribosomal RNA
+NC_046406.1	RefSeq	exon	7906	10543	.	+	.	ID=exon-HCT17_mgr02-1;Parent=rna-HCT17_mgr02;Dbxref=GeneID:44800046;Note=large subunit RNA;gbkey=rRNA;locus_tag=HCT17_mgr02;product=large subunit ribosomal RNA
+NC_046406.1	RefSeq	gene	10691	14870	.	+	.	ID=gene-HCT17_mgp12;Dbxref=GeneID:44800047;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=HCT17_mgp12
+NC_046406.1	RefSeq	CDS	10691	11422	.	+	0	ID=cds-YP_009734620.1;Parent=gene-HCT17_mgp12;Dbxref=GenBank:YP_009734620.1,GeneID:44800047;Name=YP_009734620.1;gbkey=CDS;gene=ND5;locus_tag=HCT17_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_009734620.1;transl_table=4
+NC_046406.1	RefSeq	CDS	13740	14870	.	+	0	ID=cds-YP_009734620.1;Parent=gene-HCT17_mgp12;Dbxref=GenBank:YP_009734620.1,GeneID:44800047;Name=YP_009734620.1;gbkey=CDS;gene=ND5;locus_tag=HCT17_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_009734620.1;transl_table=4
+NC_046406.1	RefSeq	exon	10691	11422	.	+	.	ID=id-HCT17_mgp12;Parent=gene-HCT17_mgp12;Dbxref=GeneID:44800047;gbkey=exon;gene=ND5;locus_tag=HCT17_mgp12
+NC_046406.1	RefSeq	exon	13740	14870	.	+	.	ID=id-HCT17_mgp12-2;Parent=gene-HCT17_mgp12;Dbxref=GeneID:44800047;gbkey=exon;gene=ND5;locus_tag=HCT17_mgp12
+NC_046406.1	RefSeq	intron	11423	13739	.	+	.	ID=id-HCT17_mgp12-3;Parent=gene-HCT17_mgp12;Dbxref=GeneID:44800047;gbkey=intron;gene=ND5;locus_tag=HCT17_mgp12
+NC_046406.1	RefSeq	gene	11756	12769	.	+	.	ID=gene-HCT17_mgp11;Dbxref=GeneID:44800033;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=HCT17_mgp11
+NC_046406.1	RefSeq	CDS	11756	12769	.	+	0	ID=cds-YP_009734621.1;Parent=gene-HCT17_mgp11;Dbxref=GenBank:YP_009734621.1,GeneID:44800033;Name=YP_009734621.1;gbkey=CDS;gene=ND1;locus_tag=HCT17_mgp11;product=NADH dehydrogenase subunit 1;protein_id=YP_009734621.1;transl_table=4
+NC_046406.1	RefSeq	gene	13035	13391	.	+	.	ID=gene-HCT17_mgp10;Dbxref=GeneID:44800038;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=HCT17_mgp10
+NC_046406.1	RefSeq	CDS	13035	13391	.	+	0	ID=cds-YP_009734622.1;Parent=gene-HCT17_mgp10;Dbxref=GenBank:YP_009734622.1,GeneID:44800038;Name=YP_009734622.1;gbkey=CDS;gene=ND3;locus_tag=HCT17_mgp10;product=NADH dehydrogenase subunit 3;protein_id=YP_009734622.1;transl_table=4
+NC_046406.1	RefSeq	gene	15491	16243	.	+	.	ID=gene-HCT17_mgp09;Dbxref=GeneID:44800042;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;gene_synonym=COII;locus_tag=HCT17_mgp09
+NC_046406.1	RefSeq	CDS	15491	16243	.	+	0	ID=cds-YP_009734623.1;Parent=gene-HCT17_mgp09;Dbxref=GenBank:YP_009734623.1,GeneID:44800042;Name=YP_009734623.1;gbkey=CDS;gene=COX2;locus_tag=HCT17_mgp09;product=cytochrome c oxidase subunit II;protein_id=YP_009734623.1;transl_table=4
+NC_046406.1	RefSeq	gene	16639	18114	.	+	.	ID=gene-HCT17_mgp08;Dbxref=GeneID:44800039;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=HCT17_mgp08
+NC_046406.1	RefSeq	CDS	16639	18114	.	+	0	ID=cds-YP_009734624.1;Parent=gene-HCT17_mgp08;Dbxref=GenBank:YP_009734624.1,GeneID:44800039;Name=YP_009734624.1;gbkey=CDS;gene=ND4;locus_tag=HCT17_mgp08;product=NADH dehydrogenase subunit 4;protein_id=YP_009734624.1;transl_table=4
+NC_046406.1	RefSeq	gene	18117	18767	.	+	.	ID=gene-HCT17_mgp07;Dbxref=GeneID:44800035;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=HCT17_mgp07
+NC_046406.1	RefSeq	CDS	18117	18767	.	+	0	ID=cds-YP_009734625.1;Parent=gene-HCT17_mgp07;Dbxref=GenBank:YP_009734625.1,GeneID:44800035;Name=YP_009734625.1;gbkey=CDS;gene=ND6;locus_tag=HCT17_mgp07;product=NADH dehydrogenase subunit 6;protein_id=YP_009734625.1;transl_table=4
+NC_046406.1	RefSeq	gene	18857	20044	.	+	.	ID=gene-HCT17_mgp06;Dbxref=GeneID:44800041;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=HCT17_mgp06
+NC_046406.1	RefSeq	CDS	18857	20044	.	+	0	ID=cds-YP_009734626.1;Parent=gene-HCT17_mgp06;Dbxref=GenBank:YP_009734626.1,GeneID:44800041;Name=YP_009734626.1;gbkey=CDS;gene=CYTB;locus_tag=HCT17_mgp06;product=cytochrome b;protein_id=YP_009734626.1;transl_table=4
+NC_046406.1	RefSeq	gene	20334	21122	.	+	.	ID=gene-HCT17_mgp05;Dbxref=GeneID:44800036;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;gene_synonym=COIII;locus_tag=HCT17_mgp05
+NC_046406.1	RefSeq	CDS	20334	21122	.	+	0	ID=cds-YP_009734627.1;Parent=gene-HCT17_mgp05;Dbxref=GenBank:YP_009734627.1,GeneID:44800036;Name=YP_009734627.1;gbkey=CDS;gene=COX3;locus_tag=HCT17_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_009734627.1;transl_table=4
+

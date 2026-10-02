@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_020375.1 1 18957
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=86515
+NC_020375.1	RefSeq	region	1	18957	.	+	.	ID=NC_020375.1:1..18957;Dbxref=taxon:86515;Is_circular=true;Name=MT;common=blue coral;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_020375.1	RefSeq	gene	1	1161	.	+	.	ID=gene-H900_mgp01;Dbxref=GeneID:14659884;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=H900_mgp01
+NC_020375.1	RefSeq	CDS	1	1161	.	+	0	ID=cds-YP_007476449.1;Parent=gene-H900_mgp01;Dbxref=GenBank:YP_007476449.1,GeneID:14659884;Name=YP_007476449.1;gbkey=CDS;gene=CYTB;locus_tag=H900_mgp01;product=cytochrome b;protein_id=YP_007476449.1;transl_table=4
+NC_020375.1	RefSeq	gene	1197	1754	.	+	.	ID=gene-H900_mgp02;Dbxref=GeneID:14659871;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=H900_mgp02
+NC_020375.1	RefSeq	CDS	1197	1754	.	+	0	ID=cds-YP_007476450.1;Parent=gene-H900_mgp02;Dbxref=GenBank:YP_007476450.1,GeneID:14659871;Name=YP_007476450.1;gbkey=CDS;gene=ND6;locus_tag=H900_mgp02;product=NADH dehydrogenase subunit 6;protein_id=YP_007476450.1;transl_table=4
+NC_020375.1	RefSeq	gene	1797	2150	.	+	.	ID=gene-H900_mgp03;Dbxref=GeneID:14659872;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=H900_mgp03
+NC_020375.1	RefSeq	CDS	1797	2150	.	+	0	ID=cds-YP_007476451.1;Parent=gene-H900_mgp03;Dbxref=GenBank:YP_007476451.1,GeneID:14659872;Name=YP_007476451.1;gbkey=CDS;gene=ND3;locus_tag=H900_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_007476451.1;transl_table=4
+NC_020375.1	RefSeq	gene	2176	2469	.	+	.	ID=gene-H900_mgp04;Dbxref=GeneID:14659873;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=H900_mgp04
+NC_020375.1	RefSeq	CDS	2176	2469	.	+	0	ID=cds-YP_007476452.1;Parent=gene-H900_mgp04;Dbxref=GenBank:YP_007476452.1,GeneID:14659873;Name=YP_007476452.1;gbkey=CDS;gene=ND4L;locus_tag=H900_mgp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_007476452.1;transl_table=4
+NC_020375.1	RefSeq	gene	2498	5473	.	+	.	ID=gene-H900_mgp05;Dbxref=GeneID:14659874;Name=msh1;gbkey=Gene;gene=msh1;gene_biotype=protein_coding;locus_tag=H900_mgp05
+NC_020375.1	RefSeq	CDS	2498	5473	.	+	0	ID=cds-YP_007476453.1;Parent=gene-H900_mgp05;Dbxref=GenBank:YP_007476453.1,GeneID:14659874;Name=YP_007476453.1;gbkey=CDS;gene=msh1;locus_tag=H900_mgp05;product=msh1;protein_id=YP_007476453.1;transl_table=4
+NC_020375.1	RefSeq	gene	5483	7457	.	+	.	ID=gene-H900_mgr02;Dbxref=GeneID:79570214;Name=H900_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=H900_mgr02
+NC_020375.1	RefSeq	rRNA	5483	7457	.	+	.	ID=rna-H900_mgr02;Parent=gene-H900_mgr02;Dbxref=GeneID:79570214;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=H900_mgr02;product=l-rRNA
+NC_020375.1	RefSeq	exon	5483	7457	.	+	.	ID=exon-H900_mgr02-1;Parent=rna-H900_mgr02;Dbxref=GeneID:79570214;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=H900_mgr02;product=l-rRNA
+NC_020375.1	RefSeq	gene	7460	8815	.	+	.	ID=gene-H900_mgp14;Dbxref=GeneID:14659875;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=H900_mgp14
+NC_020375.1	RefSeq	CDS	7460	8815	.	+	0	ID=cds-YP_007476454.1;Parent=gene-H900_mgp14;Dbxref=GenBank:YP_007476454.1,GeneID:14659875;Name=YP_007476454.1;gbkey=CDS;gene=ND2;locus_tag=H900_mgp14;product=NADH dehydrogenase subunit 2;protein_id=YP_007476454.1;transl_table=4
+NC_020375.1	RefSeq	gene	8803	10620	.	+	.	ID=gene-H900_mgp13;Dbxref=GeneID:14659876;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=H900_mgp13
+NC_020375.1	RefSeq	CDS	8803	10620	.	+	0	ID=cds-YP_007476455.1;Parent=gene-H900_mgp13;Dbxref=GenBank:YP_007476455.1,GeneID:14659876;Name=YP_007476455.1;gbkey=CDS;gene=ND5;locus_tag=H900_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_007476455.1;transl_table=4
+NC_020375.1	RefSeq	gene	10673	12133	.	+	.	ID=gene-H900_mgp12;Dbxref=GeneID:14659877;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=H900_mgp12
+NC_020375.1	RefSeq	CDS	10673	12133	.	+	0	ID=cds-YP_007476456.1;Parent=gene-H900_mgp12;Dbxref=GenBank:YP_007476456.1,GeneID:14659877;Name=YP_007476456.1;gbkey=CDS;gene=ND4;locus_tag=H900_mgp12;product=NADH dehydrogenase subunit 4;protein_id=YP_007476456.1;transl_table=4
+NC_020375.1	RefSeq	gene	12206	12276	.	-	.	ID=gene-H900_mgt01;Dbxref=GeneID:79570215;Name=H900_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=H900_mgt01
+NC_020375.1	RefSeq	tRNA	12206	12276	.	-	.	ID=rna-H900_mgt01;Parent=gene-H900_mgt01;Dbxref=GeneID:79570215;codons=AUG;gbkey=tRNA;locus_tag=H900_mgt01;product=tRNA-Met
+NC_020375.1	RefSeq	exon	12206	12276	.	-	.	ID=exon-H900_mgt01-1;Parent=rna-H900_mgt01;Dbxref=GeneID:79570215;codons=AUG;gbkey=tRNA;locus_tag=H900_mgt01;product=tRNA-Met
+NC_020375.1	RefSeq	gene	12311	13129	.	-	.	ID=gene-H900_mgp11;Dbxref=GeneID:14659878;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=H900_mgp11
+NC_020375.1	RefSeq	CDS	12311	13129	.	-	0	ID=cds-YP_007476457.1;Parent=gene-H900_mgp11;Dbxref=GenBank:YP_007476457.1,GeneID:14659878;Name=YP_007476457.1;gbkey=CDS;gene=COX3;locus_tag=H900_mgp11;product=cytochrome c oxidase subunit III;protein_id=YP_007476457.1;transl_table=4
+NC_020375.1	RefSeq	gene	13144	13851	.	-	.	ID=gene-H900_mgp10;Dbxref=GeneID:14659879;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=H900_mgp10
+NC_020375.1	RefSeq	CDS	13144	13851	.	-	0	ID=cds-YP_007476458.1;Parent=gene-H900_mgp10;Dbxref=GenBank:YP_007476458.1,GeneID:14659879;Name=YP_007476458.1;gbkey=CDS;gene=ATP6;locus_tag=H900_mgp10;product=ATP synthase F0 subunit 6;protein_id=YP_007476458.1;transl_table=4
+NC_020375.1	RefSeq	gene	13890	14105	.	-	.	ID=gene-H900_mgp09;Dbxref=GeneID:14659880;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=H900_mgp09
+NC_020375.1	RefSeq	CDS	13890	14105	.	-	0	ID=cds-YP_007476459.1;Parent=gene-H900_mgp09;Dbxref=GenBank:YP_007476459.1,GeneID:14659880;Name=YP_007476459.1;gbkey=CDS;gene=ATP8;locus_tag=H900_mgp09;product=ATP synthase F0 subunit 8;protein_id=YP_007476459.1;transl_table=4
+NC_020375.1	RefSeq	gene	14127	14888	.	-	.	ID=gene-H900_mgp08;Dbxref=GeneID:14659881;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=H900_mgp08
+NC_020375.1	RefSeq	CDS	14127	14888	.	-	0	ID=cds-YP_007476460.1;Parent=gene-H900_mgp08;Dbxref=GenBank:YP_007476460.1,GeneID:14659881;Name=YP_007476460.1;gbkey=CDS;gene=COX2;locus_tag=H900_mgp08;product=cytochrome c oxidase subunit II;protein_id=YP_007476460.1;transl_table=4
+NC_020375.1	RefSeq	gene	15075	16727	.	+	.	ID=gene-H900_mgp07;Dbxref=GeneID:14659882;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=H900_mgp07
+NC_020375.1	RefSeq	CDS	15075	16727	.	+	0	ID=cds-YP_007476461.1;Parent=gene-H900_mgp07;Dbxref=GenBank:YP_007476461.1,GeneID:14659882;Name=YP_007476461.1;gbkey=CDS;gene=COX1;locus_tag=H900_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_007476461.1;transl_table=4
+NC_020375.1	RefSeq	gene	16657	17710	.	+	.	ID=gene-H900_mgr01;Dbxref=GeneID:79570216;Name=H900_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=H900_mgr01
+NC_020375.1	RefSeq	rRNA	16657	17710	.	+	.	ID=rna-H900_mgr01;Parent=gene-H900_mgr01;Dbxref=GeneID:79570216;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=H900_mgr01;product=s-rRNA
+NC_020375.1	RefSeq	exon	16657	17710	.	+	.	ID=exon-H900_mgr01-1;Parent=rna-H900_mgr01;Dbxref=GeneID:79570216;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=H900_mgr01;product=s-rRNA
+NC_020375.1	RefSeq	gene	17819	18799	.	+	.	ID=gene-H900_mgp06;Dbxref=GeneID:14659883;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=H900_mgp06
+NC_020375.1	RefSeq	CDS	17819	18799	.	+	0	ID=cds-YP_007476462.1;Parent=gene-H900_mgp06;Dbxref=GenBank:YP_007476462.1,GeneID:14659883;Name=YP_007476462.1;gbkey=CDS;gene=ND1;locus_tag=H900_mgp06;product=NADH dehydrogenase subunit 1;protein_id=YP_007476462.1;transl_table=4
+

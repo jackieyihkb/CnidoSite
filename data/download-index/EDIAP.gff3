@@ -1,0 +1,55 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_056771.1 1 19790
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2652724
+NC_056771.1	RefSeq	region	1	19790	.	+	.	ID=NC_056771.1:1..19790;Dbxref=taxon:2652724;Is_circular=true;Name=MT;country=USA;gbkey=Src;genome=mitochondrion;isolate=US1;mol_type=genomic DNA;old-name=Aiptasia pulchella
+NC_056771.1	RefSeq	gene	1	3902	.	+	.	ID=gene-KYW36_mgp01;Dbxref=GeneID:67122641;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=KYW36_mgp01
+NC_056771.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_010133394.1;Parent=gene-KYW36_mgp01;Dbxref=GenBank:YP_010133394.1,GeneID:67122641;Name=YP_010133394.1;gbkey=CDS;gene=ND5;locus_tag=KYW36_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_010133394.1;transl_table=4
+NC_056771.1	RefSeq	CDS	2448	3902	.	+	0	ID=cds-YP_010133394.1;Parent=gene-KYW36_mgp01;Dbxref=GenBank:YP_010133394.1,GeneID:67122641;Name=YP_010133394.1;gbkey=CDS;gene=ND5;locus_tag=KYW36_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_010133394.1;transl_table=4
+NC_056771.1	RefSeq	exon	1	717	.	+	.	ID=id-KYW36_mgp01-1;Parent=gene-KYW36_mgp01;Dbxref=GeneID:67122641;exon_number=1;gbkey=exon;gene=ND5;locus_tag=KYW36_mgp01;number=1
+NC_056771.1	RefSeq	exon	2448	3902	.	+	.	ID=id-KYW36_mgp01-2;Parent=gene-KYW36_mgp01;Dbxref=GeneID:67122641;exon_number=2;gbkey=exon;gene=ND5;locus_tag=KYW36_mgp01;number=2
+NC_056771.1	RefSeq	intron	718	2447	.	+	.	ID=id-KYW36_mgp01;Parent=gene-KYW36_mgp01;Dbxref=GeneID:67122641;exon_number=1;gbkey=intron;gene=ND5;locus_tag=KYW36_mgp01;number=1
+NC_056771.1	RefSeq	gene	940	1923	.	+	.	ID=gene-KYW36_mgp02;Dbxref=GeneID:67122636;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=KYW36_mgp02
+NC_056771.1	RefSeq	CDS	940	1923	.	+	0	ID=cds-YP_010133395.1;Parent=gene-KYW36_mgp02;Dbxref=GenBank:YP_010133395.1,GeneID:67122636;Name=YP_010133395.1;gbkey=CDS;gene=ND1;locus_tag=KYW36_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_010133395.1;transl_table=4
+NC_056771.1	RefSeq	gene	1930	2286	.	+	.	ID=gene-KYW36_mgp03;Dbxref=GeneID:67122631;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=KYW36_mgp03
+NC_056771.1	RefSeq	CDS	1930	2286	.	+	0	ID=cds-YP_010133396.1;Parent=gene-KYW36_mgp03;Dbxref=GenBank:YP_010133396.1,GeneID:67122631;Name=YP_010133396.1;gbkey=CDS;gene=ND3;locus_tag=KYW36_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_010133396.1;transl_table=4
+NC_056771.1	RefSeq	gene	4026	4095	.	+	.	ID=gene-KYW36_mgt01;Dbxref=GeneID:67122633;Name=trnW;gbkey=Gene;gene=trnW;gene_biotype=tRNA;locus_tag=KYW36_mgt01
+NC_056771.1	RefSeq	tRNA	4026	4095	.	+	.	ID=rna-KYW36_mgt01;Parent=gene-KYW36_mgt01;Dbxref=GeneID:67122633;gbkey=tRNA;gene=trnW;locus_tag=KYW36_mgt01;product=tRNA-Trp
+NC_056771.1	RefSeq	exon	4026	4095	.	+	.	ID=exon-KYW36_mgt01-1;Parent=rna-KYW36_mgt01;Dbxref=GeneID:67122633;gbkey=tRNA;gene=trnW;locus_tag=KYW36_mgt01;product=tRNA-Trp
+NC_056771.1	RefSeq	gene	4390	5547	.	+	.	ID=gene-KYW36_mgp14;Dbxref=GeneID:67122640;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=KYW36_mgp14
+NC_056771.1	RefSeq	CDS	4390	5547	.	+	0	ID=cds-YP_010133397.1;Parent=gene-KYW36_mgp14;Dbxref=GenBank:YP_010133397.1,GeneID:67122640;Name=YP_010133397.1;gbkey=CDS;gene=ND2;locus_tag=KYW36_mgp14;product=NADH dehydrogenase subunit 2;protein_id=YP_010133397.1;transl_table=4
+NC_056771.1	RefSeq	gene	5597	6661	.	+	.	ID=gene-KYW36_mgr02;Dbxref=GeneID:67122632;Name=ssurRNA;gbkey=Gene;gene=ssurRNA;gene_biotype=rRNA;locus_tag=KYW36_mgr02
+NC_056771.1	RefSeq	rRNA	5597	6661	.	+	.	ID=rna-KYW36_mgr02;Parent=gene-KYW36_mgr02;Dbxref=GeneID:67122632;gbkey=rRNA;gene=ssurRNA;locus_tag=KYW36_mgr02;product=small subunit ribosomal RNA
+NC_056771.1	RefSeq	exon	5597	6661	.	+	.	ID=exon-KYW36_mgr02-1;Parent=rna-KYW36_mgr02;Dbxref=GeneID:67122632;gbkey=rRNA;gene=ssurRNA;locus_tag=KYW36_mgr02;product=small subunit ribosomal RNA
+NC_056771.1	RefSeq	gene	7275	8021	.	+	.	ID=gene-KYW36_mgp13;Dbxref=GeneID:67122638;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=KYW36_mgp13
+NC_056771.1	RefSeq	CDS	7275	8021	.	+	0	ID=cds-YP_010133398.1;Parent=gene-KYW36_mgp13;Dbxref=GenBank:YP_010133398.1,GeneID:67122638;Name=YP_010133398.1;gbkey=CDS;gene=COX2;locus_tag=KYW36_mgp13;product=cytochrome c oxidase subunit II;protein_id=YP_010133398.1;transl_table=4
+NC_056771.1	RefSeq	gene	8830	10299	.	+	.	ID=gene-KYW36_mgp12;Dbxref=GeneID:67122626;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=KYW36_mgp12
+NC_056771.1	RefSeq	CDS	8830	10299	.	+	0	ID=cds-YP_010133399.1;Parent=gene-KYW36_mgp12;Dbxref=GenBank:YP_010133399.1,GeneID:67122626;Name=YP_010133399.1;gbkey=CDS;gene=ND4;locus_tag=KYW36_mgp12;product=NADH dehydrogenase subunit 4;protein_id=YP_010133399.1;transl_table=4
+NC_056771.1	RefSeq	gene	10304	10912	.	+	.	ID=gene-KYW36_mgp11;Dbxref=GeneID:67122634;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=KYW36_mgp11
+NC_056771.1	RefSeq	CDS	10304	10912	.	+	0	ID=cds-YP_010133400.1;Parent=gene-KYW36_mgp11;Dbxref=GenBank:YP_010133400.1,GeneID:67122634;Name=YP_010133400.1;gbkey=CDS;gene=ND6;locus_tag=KYW36_mgp11;product=NADH dehydrogenase subunit 6;protein_id=YP_010133400.1;transl_table=4
+NC_056771.1	RefSeq	gene	10940	12130	.	+	.	ID=gene-KYW36_mgp10;Dbxref=GeneID:67122637;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=KYW36_mgp10
+NC_056771.1	RefSeq	CDS	10940	12130	.	+	0	ID=cds-YP_010133401.1;Parent=gene-KYW36_mgp10;Dbxref=GenBank:YP_010133401.1,GeneID:67122637;Name=YP_010133401.1;gbkey=CDS;gene=CYTB;locus_tag=KYW36_mgp10;product=cytochrome b;protein_id=YP_010133401.1;transl_table=4
+NC_056771.1	RefSeq	gene	12205	12275	.	+	.	ID=gene-KYW36_mgt02;Dbxref=GeneID:67122628;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=KYW36_mgt02
+NC_056771.1	RefSeq	tRNA	12205	12275	.	+	.	ID=rna-KYW36_mgt02;Parent=gene-KYW36_mgt02;Dbxref=GeneID:67122628;gbkey=tRNA;gene=trnM;locus_tag=KYW36_mgt02;product=tRNA-Met
+NC_056771.1	RefSeq	exon	12205	12275	.	+	.	ID=exon-KYW36_mgt02-1;Parent=rna-KYW36_mgt02;Dbxref=GeneID:67122628;gbkey=tRNA;gene=trnM;locus_tag=KYW36_mgt02;product=tRNA-Met
+NC_056771.1	RefSeq	gene	12276	14453	.	+	.	ID=gene-KYW36_mgr01;Dbxref=GeneID:67122639;Name=lsurRNA;gbkey=Gene;gene=lsurRNA;gene_biotype=rRNA;locus_tag=KYW36_mgr01
+NC_056771.1	RefSeq	rRNA	12276	14453	.	+	.	ID=rna-KYW36_mgr01;Parent=gene-KYW36_mgr01;Dbxref=GeneID:67122639;gbkey=rRNA;gene=lsurRNA;locus_tag=KYW36_mgr01;product=large subunit ribosomal RNA
+NC_056771.1	RefSeq	exon	12276	14453	.	+	.	ID=exon-KYW36_mgr01-1;Parent=rna-KYW36_mgr01;Dbxref=GeneID:67122639;gbkey=rRNA;gene=lsurRNA;locus_tag=KYW36_mgr01;product=large subunit ribosomal RNA
+NC_056771.1	RefSeq	gene	14522	15310	.	+	.	ID=gene-KYW36_mgp09;Dbxref=GeneID:67122630;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=KYW36_mgp09
+NC_056771.1	RefSeq	CDS	14522	15310	.	+	0	ID=cds-YP_010133402.1;Parent=gene-KYW36_mgp09;Dbxref=GenBank:YP_010133402.1,GeneID:67122630;Name=YP_010133402.1;gbkey=CDS;gene=COX3;locus_tag=KYW36_mgp09;product=cytochrome c oxidase subunit III;protein_id=YP_010133402.1;transl_table=4
+NC_056771.1	RefSeq	gene	15387	17859	.	+	.	ID=gene-KYW36_mgp08;Dbxref=GeneID:67122627;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=KYW36_mgp08
+NC_056771.1	RefSeq	CDS	15387	16279	.	+	0	ID=cds-YP_010133403.1;Parent=gene-KYW36_mgp08;Dbxref=GenBank:YP_010133403.1,GeneID:67122627;Name=YP_010133403.1;gbkey=CDS;gene=COX1;locus_tag=KYW36_mgp08;product=cytochrome c oxidase subunit I;protein_id=YP_010133403.1;transl_table=4
+NC_056771.1	RefSeq	CDS	17127	17859	.	+	1	ID=cds-YP_010133403.1;Parent=gene-KYW36_mgp08;Dbxref=GenBank:YP_010133403.1,GeneID:67122627;Name=YP_010133403.1;gbkey=CDS;gene=COX1;locus_tag=KYW36_mgp08;product=cytochrome c oxidase subunit I;protein_id=YP_010133403.1;transl_table=4
+NC_056771.1	RefSeq	exon	15387	16279	.	+	.	ID=id-KYW36_mgp08-1;Parent=gene-KYW36_mgp08;Dbxref=GeneID:67122627;exon_number=1;gbkey=exon;gene=COX1;locus_tag=KYW36_mgp08;number=1
+NC_056771.1	RefSeq	exon	17127	17859	.	+	.	ID=id-KYW36_mgp08-2;Parent=gene-KYW36_mgp08;Dbxref=GeneID:67122627;exon_number=2;gbkey=exon;gene=COX1;locus_tag=KYW36_mgp08;number=2
+NC_056771.1	RefSeq	intron	16280	17126	.	+	.	ID=id-KYW36_mgp08;Parent=gene-KYW36_mgp08;Dbxref=GeneID:67122627;exon_number=1;gbkey=intron;gene=COX1;locus_tag=KYW36_mgp08;number=1
+NC_056771.1	RefSeq	gene	16431	17126	.	+	.	ID=gene-KYW36_mgp07;Dbxref=GeneID:67122625;Name=heg;gbkey=Gene;gene=heg;gene_biotype=protein_coding;locus_tag=KYW36_mgp07
+NC_056771.1	RefSeq	CDS	16431	17126	.	+	0	ID=cds-YP_010133404.1;Parent=gene-KYW36_mgp07;Dbxref=GenBank:YP_010133404.1,GeneID:67122625;Name=YP_010133404.1;gbkey=CDS;gene=heg;locus_tag=KYW36_mgp07;product=homing endonuclease;protein_id=YP_010133404.1;transl_table=4
+NC_056771.1	RefSeq	gene	18516	18815	.	+	.	ID=gene-KYW36_mgp06;Dbxref=GeneID:67122629;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=KYW36_mgp06
+NC_056771.1	RefSeq	CDS	18516	18815	.	+	0	ID=cds-YP_010133405.1;Parent=gene-KYW36_mgp06;Dbxref=GenBank:YP_010133405.1,GeneID:67122629;Name=YP_010133405.1;gbkey=CDS;gene=ND4L;locus_tag=KYW36_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_010133405.1;transl_table=4
+NC_056771.1	RefSeq	gene	18839	19054	.	+	.	ID=gene-KYW36_mgp05;Dbxref=GeneID:67122635;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=KYW36_mgp05
+NC_056771.1	RefSeq	CDS	18839	19054	.	+	0	ID=cds-YP_010133406.1;Parent=gene-KYW36_mgp05;Dbxref=GenBank:YP_010133406.1,GeneID:67122635;Name=YP_010133406.1;gbkey=CDS;gene=ATP8;locus_tag=KYW36_mgp05;product=ATP synthase F0 subunit 8;protein_id=YP_010133406.1;transl_table=4
+NC_056771.1	RefSeq	gene	19085	19774	.	+	.	ID=gene-KYW36_mgp04;Dbxref=GeneID:67122624;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=KYW36_mgp04
+NC_056771.1	RefSeq	CDS	19085	19774	.	+	0	ID=cds-YP_010133407.1;Parent=gene-KYW36_mgp04;Dbxref=GenBank:YP_010133407.1,GeneID:67122624;Name=YP_010133407.1;gbkey=CDS;gene=ATP6;locus_tag=KYW36_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_010133407.1;transl_table=4
+

@@ -1,0 +1,47 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_072224.1 1 18482
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=114500
+NC_072224.1	RefSeq	region	1	18482	.	+	.	ID=NC_072224.1:1..18482;Dbxref=taxon:114500;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_072224.1	RefSeq	gene	1	71	.	+	.	ID=gene-P2049_mgt01;Dbxref=GeneID:79125908;Name=P2049_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=P2049_mgt01
+NC_072224.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-P2049_mgt01;Parent=gene-P2049_mgt01;Dbxref=GeneID:79125908;gbkey=tRNA;locus_tag=P2049_mgt01;product=tRNA-Met
+NC_072224.1	RefSeq	exon	1	71	.	+	.	ID=exon-P2049_mgt01-1;Parent=rna-P2049_mgt01;Dbxref=GeneID:79125908;gbkey=tRNA;locus_tag=P2049_mgt01;product=tRNA-Met
+NC_072224.1	RefSeq	gene	72	2331	.	+	.	ID=gene-P2049_mgr02;Dbxref=GeneID:79125910;Name=P2049_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=P2049_mgr02
+NC_072224.1	RefSeq	rRNA	72	2331	.	+	.	ID=rna-P2049_mgr02;Parent=gene-P2049_mgr02;Dbxref=GeneID:79125910;gbkey=rRNA;locus_tag=P2049_mgr02;product=16S ribosomal RNA
+NC_072224.1	RefSeq	exon	72	2331	.	+	.	ID=exon-P2049_mgr02-1;Parent=rna-P2049_mgr02;Dbxref=GeneID:79125910;gbkey=rRNA;locus_tag=P2049_mgr02;product=16S ribosomal RNA
+NC_072224.1	RefSeq	gene	2434	16342	.	+	.	ID=gene-P2049_mgp13;Dbxref=GeneID:79125913;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=P2049_mgp13
+NC_072224.1	RefSeq	CDS	2434	3153	.	+	0	ID=cds-YP_010713495.1;Parent=gene-P2049_mgp13;Dbxref=GenBank:YP_010713495.1,GeneID:79125913;Name=YP_010713495.1;gbkey=CDS;gene=ND5;locus_tag=P2049_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_010713495.1;transl_table=4
+NC_072224.1	RefSeq	CDS	15227	16342	.	+	0	ID=cds-YP_010713495.1;Parent=gene-P2049_mgp13;Dbxref=GenBank:YP_010713495.1,GeneID:79125913;Name=YP_010713495.1;gbkey=CDS;gene=ND5;locus_tag=P2049_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_010713495.1;transl_table=4
+NC_072224.1	RefSeq	intron	3154	15226	.	+	.	ID=id-P2049_mgp13;Parent=gene-P2049_mgp13;Dbxref=GeneID:79125913;Note=group I intron;gbkey=intron;gene=ND5;locus_tag=P2049_mgp13
+NC_072224.1	RefSeq	gene	3477	4460	.	+	.	ID=gene-P2049_mgp12;Dbxref=GeneID:79125897;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=P2049_mgp12
+NC_072224.1	RefSeq	CDS	3477	4460	.	+	0	ID=cds-YP_010713496.1;Parent=gene-P2049_mgp12;Dbxref=GenBank:YP_010713496.1,GeneID:79125897;Name=YP_010713496.1;gbkey=CDS;gene=ND1;locus_tag=P2049_mgp12;product=NADH dehydrogenase subunit 1;protein_id=YP_010713496.1;transl_table=4
+NC_072224.1	RefSeq	gene	4572	5729	.	+	.	ID=gene-P2049_mgp11;Dbxref=GeneID:79125898;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=P2049_mgp11
+NC_072224.1	RefSeq	CDS	4572	5729	.	+	0	ID=cds-YP_010713497.1;Parent=gene-P2049_mgp11;Dbxref=GenBank:YP_010713497.1,GeneID:79125898;Name=YP_010713497.1;gbkey=CDS;gene=CYTB;locus_tag=P2049_mgp11;product=cytochrome b;protein_id=YP_010713497.1;transl_table=4
+NC_072224.1	RefSeq	gene	6254	7351	.	+	.	ID=gene-P2049_mgp10;Dbxref=GeneID:79125899;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=P2049_mgp10
+NC_072224.1	RefSeq	CDS	6254	7351	.	+	0	ID=cds-YP_010713498.1;Parent=gene-P2049_mgp10;Dbxref=GenBank:YP_010713498.1,GeneID:79125899;Name=YP_010713498.1;gbkey=CDS;gene=ND2;locus_tag=P2049_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_010713498.1;transl_table=4
+NC_072224.1	RefSeq	gene	7384	7977	.	+	.	ID=gene-P2049_mgp09;Dbxref=GeneID:79125900;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=P2049_mgp09
+NC_072224.1	RefSeq	CDS	7384	7977	.	+	0	ID=cds-YP_010713499.1;Parent=gene-P2049_mgp09;Dbxref=GenBank:YP_010713499.1,GeneID:79125900;Name=YP_010713499.1;gbkey=CDS;gene=ND6;locus_tag=P2049_mgp09;product=NADH dehydrogenase subunit 6;protein_id=YP_010713499.1;transl_table=4
+NC_072224.1	RefSeq	gene	8046	8744	.	+	.	ID=gene-P2049_mgp08;Dbxref=GeneID:79125901;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=P2049_mgp08
+NC_072224.1	RefSeq	CDS	8046	8744	.	+	0	ID=cds-YP_010713500.1;Parent=gene-P2049_mgp08;Dbxref=GenBank:YP_010713500.1,GeneID:79125901;Name=YP_010713500.1;gbkey=CDS;gene=ATP6;locus_tag=P2049_mgp08;product=ATP synthase F0 subunit 6;protein_id=YP_010713500.1;transl_table=4
+NC_072224.1	RefSeq	gene	8896	10371	.	+	.	ID=gene-P2049_mgp07;Dbxref=GeneID:79125902;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=P2049_mgp07
+NC_072224.1	RefSeq	CDS	8896	10371	.	+	0	ID=cds-YP_010713501.1;Parent=gene-P2049_mgp07;Dbxref=GenBank:YP_010713501.1,GeneID:79125902;Name=YP_010713501.1;gbkey=CDS;gene=ND4;locus_tag=P2049_mgp07;product=NADH dehydrogenase subunit 4;protein_id=YP_010713501.1;transl_table=4
+NC_072224.1	RefSeq	gene	10424	11599	.	+	.	ID=gene-P2049_mgr01;Dbxref=GeneID:79125903;Name=P2049_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=P2049_mgr01
+NC_072224.1	RefSeq	rRNA	10424	11599	.	+	.	ID=rna-P2049_mgr01;Parent=gene-P2049_mgr01;Dbxref=GeneID:79125903;gbkey=rRNA;locus_tag=P2049_mgr01;product=12S ribosomal RNA
+NC_072224.1	RefSeq	exon	10424	11599	.	+	.	ID=exon-P2049_mgr01-1;Parent=rna-P2049_mgr01;Dbxref=GeneID:79125903;gbkey=rRNA;locus_tag=P2049_mgr01;product=12S ribosomal RNA
+NC_072224.1	RefSeq	gene	12822	13610	.	+	.	ID=gene-P2049_mgp06;Dbxref=GeneID:79125911;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=P2049_mgp06
+NC_072224.1	RefSeq	CDS	12822	13610	.	+	0	ID=cds-YP_010713502.1;Parent=gene-P2049_mgp06;Dbxref=GenBank:YP_010713502.1,GeneID:79125911;Name=YP_010713502.1;gbkey=CDS;gene=COX3;locus_tag=P2049_mgp06;product=cytochrome c oxidase subunit III;protein_id=YP_010713502.1;transl_table=4
+NC_072224.1	RefSeq	gene	13667	14410	.	+	.	ID=gene-P2049_mgp05;Dbxref=GeneID:79125904;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=P2049_mgp05
+NC_072224.1	RefSeq	CDS	13667	14410	.	+	0	ID=cds-YP_010713503.1;Parent=gene-P2049_mgp05;Dbxref=GenBank:YP_010713503.1,GeneID:79125904;Name=YP_010713503.1;gbkey=CDS;gene=COX2;locus_tag=P2049_mgp05;product=cytochrome c oxidase subunit II;protein_id=YP_010713503.1;transl_table=4
+NC_072224.1	RefSeq	gene	14443	14742	.	+	.	ID=gene-P2049_mgp04;Dbxref=GeneID:79125905;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=P2049_mgp04
+NC_072224.1	RefSeq	CDS	14443	14742	.	+	0	ID=cds-YP_010713504.1;Parent=gene-P2049_mgp04;Dbxref=GenBank:YP_010713504.1,GeneID:79125905;Name=YP_010713504.1;gbkey=CDS;gene=ND4L;locus_tag=P2049_mgp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_010713504.1;transl_table=4
+NC_072224.1	RefSeq	gene	14775	15131	.	+	.	ID=gene-P2049_mgp03;Dbxref=GeneID:79125906;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=P2049_mgp03
+NC_072224.1	RefSeq	CDS	14775	15131	.	+	0	ID=cds-YP_010713505.1;Parent=gene-P2049_mgp03;Dbxref=GenBank:YP_010713505.1,GeneID:79125906;Name=YP_010713505.1;gbkey=CDS;gene=ND3;locus_tag=P2049_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_010713505.1;transl_table=4
+NC_072224.1	RefSeq	gene	16373	16442	.	+	.	ID=gene-P2049_mgt02;Dbxref=GeneID:79125907;Name=P2049_mgt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=P2049_mgt02
+NC_072224.1	RefSeq	tRNA	16373	16442	.	+	.	ID=rna-P2049_mgt02;Parent=gene-P2049_mgt02;Dbxref=GeneID:79125907;gbkey=tRNA;locus_tag=P2049_mgt02;product=tRNA-Trp
+NC_072224.1	RefSeq	exon	16373	16442	.	+	.	ID=exon-P2049_mgt02-1;Parent=rna-P2049_mgt02;Dbxref=GeneID:79125907;gbkey=tRNA;locus_tag=P2049_mgt02;product=tRNA-Trp
+NC_072224.1	RefSeq	gene	16475	16693	.	+	.	ID=gene-P2049_mgp02;Dbxref=GeneID:79125912;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=P2049_mgp02
+NC_072224.1	RefSeq	CDS	16475	16693	.	+	0	ID=cds-YP_010713506.1;Parent=gene-P2049_mgp02;Dbxref=GenBank:YP_010713506.1,GeneID:79125912;Name=YP_010713506.1;gbkey=CDS;gene=ATP8;locus_tag=P2049_mgp02;product=ATP synthase F0 subunit 8;protein_id=YP_010713506.1;transl_table=4
+NC_072224.1	RefSeq	gene	16675	18276	.	+	.	ID=gene-P2049_mgp01;Dbxref=GeneID:79125909;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=P2049_mgp01
+NC_072224.1	RefSeq	CDS	16675	18276	.	+	0	ID=cds-YP_010713507.1;Parent=gene-P2049_mgp01;Dbxref=GenBank:YP_010713507.1,GeneID:79125909;Name=YP_010713507.1;gbkey=CDS;gene=COX1;locus_tag=P2049_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_010713507.1;transl_table=4
+

@@ -1,0 +1,660 @@
+/*!
+ * CnidoSite interactive cell atlas -- viewer chrome.
+ *
+ * Everything is scoped under .cna-root and uses its own custom properties, so
+ * the widget can be dropped into any page on the site without inheriting or
+ * fighting the existing Bootstrap rules.  Toolbar icons are drawn with CSS
+ * rather than an icon font, and no web fonts are loaded: the whole viewer is
+ * three static files.
+ *
+ * The cells themselves are painted by cellatlas.js into a <canvas>; this
+ * stylesheet supplies the surrounding chrome AND the palette.  The palette
+ * lives here, as custom properties, so that a site owner can retheme the atlas
+ * without editing JavaScript, and so the dark-mode steps are swapped in one
+ * place.  cellatlas.js reads these values back with getComputedStyle().
+ */
+
+/* ------------------------------------------------------------------ */
+/* palette                                                             */
+/* ------------------------------------------------------------------ */
+.cna-root {
+  /* categorical slots 1-8, light steps */
+  --cna-cat-1: #2a78d6;
+  --cna-cat-2: #eb6834;
+  --cna-cat-3: #1baf7a;
+  --cna-cat-4: #eda100;
+  --cna-cat-5: #e87ba4;
+  --cna-cat-6: #008300;
+  --cna-cat-7: #4a3aa7;
+  --cna-cat-8: #e34948;
+
+  /* the "everything else" backdrop in highlight mode -- deliberately neutral,
+     not a categorical slot */
+  --cna-grey: #c9c8c4;
+
+  /* canvas surface */
+  --cna-surface: #fcfcfb;
+
+  /* sequential ramp for expression magnitude: ONE hue, light -> dark. Never a
+     rainbow -- a rainbow ramp invents boundaries the data does not have. */
+  --cna-ramp: #cde2fb #b7d3f6 #9ec5f4 #86b6ef #6da7ec #5598e7 #3987e5
+              #2a78d6 #256abf #1c5cab #184f95 #104281 #0d366b;
+  --cna-zero: #efeeeb;   /* "not expressed" -- must not read as low expression */
+  --cna-na: #d8d7d3;     /* filtered out / no value */
+
+  /* chrome & ink */
+  --cna-plane: #f9f9f7;
+  --cna-ink: #0b0b0b;
+  --cna-ink-2: #52514e;
+  /* 只有浅色主题这一份要改：#898781 在 #f9f9f7 上只有 3.41（轴标签、图例、注释
+     全是它），#6f6e69 是 4.85 且仍是暖灰，不破坏这套暖色体系。下面深色主题里的
+     两份 #898781 压在 #2c2c2a 上，本来就读得清，不动。 */
+  --cna-muted: #6f6e69;
+  --cna-hair: #e1e0d9;
+  --cna-axis: #c3c2b7;
+  --cna-accent: #2a78d6;
+  --cna-radius: 6px;
+  --cna-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --cna-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  color: var(--cna-ink);
+  font-family: var(--cna-font);
+  font-size: 15px;
+  line-height: 1.45;
+  background: var(--cna-plane);
+  border: 1px solid var(--cna-hair);
+  border-radius: var(--cna-radius);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cna-root *,
+.cna-root *::before,
+.cna-root *::after { box-sizing: inherit; }
+
+/* Dark mode is SELECTED, not flipped: these are the same eight hues re-stepped
+   for the dark surface and validated against it (worst all-pairs CVD dE 9.4).
+   Declared under both scopes so an explicit [data-theme] toggle wins over the
+   OS preference, and the media query still applies when no toggle is set. */
+@media (prefers-color-scheme: dark) {
+  :where(.cna-root:not([data-theme="light"])) {
+    --cna-cat-1: #3987e5;
+    --cna-cat-2: #d95926;
+    --cna-cat-3: #199e70;
+    --cna-cat-4: #c98500;
+    --cna-cat-5: #d55181;
+    --cna-cat-6: #008300;
+    --cna-cat-7: #9085e9;
+    --cna-cat-8: #e66767;
+    --cna-grey: #4a4a46;
+    --cna-surface: #1a1a19;
+    /* Ramp reversed: on a dark surface the "high" end must be the LIGHT end,
+       otherwise the most-expressing cells vanish into the background.  It also
+       stops at step 600 rather than 700 -- below that the low end falls under
+       2:1 against the dark surface and stops separating from the neutral
+       "not expressed" fill. */
+    --cna-ramp: #184f95 #1c5cab #256abf #2a78d6 #3987e5 #5598e7 #6da7ec
+                #86b6ef #9ec5f4 #b7d3f6 #cde2fb;
+    --cna-zero: #383835;
+    --cna-na: #4a4a46;
+    --cna-plane: #0d0d0d;
+    --cna-ink: #ffffff;
+    --cna-ink-2: #c3c2b7;
+    --cna-muted: #898781;
+    --cna-hair: #2c2c2a;
+    --cna-axis: #383835;
+    --cna-accent: #3987e5;
+  }
+}
+
+.cna-root[data-theme="dark"] {
+  --cna-cat-1: #3987e5;
+  --cna-cat-2: #d95926;
+  --cna-cat-3: #199e70;
+  --cna-cat-4: #c98500;
+  --cna-cat-5: #d55181;
+  --cna-cat-6: #008300;
+  --cna-cat-7: #9085e9;
+  --cna-cat-8: #e66767;
+  --cna-grey: #4a4a46;
+  --cna-surface: #1a1a19;
+  --cna-ramp: #184f95 #1c5cab #256abf #2a78d6 #3987e5 #5598e7 #6da7ec
+              #86b6ef #9ec5f4 #b7d3f6 #cde2fb;
+  --cna-zero: #383835;
+  --cna-na: #4a4a46;
+  --cna-plane: #0d0d0d;
+  --cna-ink: #ffffff;
+  --cna-ink-2: #c3c2b7;
+  --cna-muted: #898781;
+  --cna-hair: #2c2c2a;
+  --cna-axis: #383835;
+  --cna-accent: #3987e5;
+}
+
+/* ------------------------------------------------------------------ */
+/* controls                                                            */
+/* ------------------------------------------------------------------ */
+.cna-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 16px;
+  padding: 14px 16px 12px;
+  background: var(--cna-plane);
+  border-bottom: 1px solid var(--cna-hair);
+}
+
+.cna-title {
+  flex: 0 0 auto;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-style: italic;   /* species binomials read as names, not labels */
+  margin-right: 4px;
+}
+
+.cna-subtitle {
+  flex: 1 1 140px;
+  color: var(--cna-ink-2);
+  font-size: 15px;
+  padding-bottom: 2px;
+}
+
+.cna-stat-row {
+  display: flex;
+  gap: 18px;
+  flex: 0 0 auto;
+  order: 3;
+}
+
+.cna-stat { text-align: right; }
+.cna-stat-v {
+  font-size: 18px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.cna-stat-l {
+  font-size: 15px;
+  color: var(--cna-muted);
+}
+
+.cna-label {
+  font-size: 15px;
+  color: var(--cna-muted);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.cna-select,
+.cna-input {
+  font: inherit;
+  font-size: 15px;
+  color: var(--cna-ink);
+  background: var(--cna-surface);
+  border: 1px solid var(--cna-axis);
+  border-radius: 4px;
+  padding: 5px 9px;
+  min-width: 180px;
+}
+.cna-input { min-width: 210px; }
+.cna-select:focus,
+.cna-input:focus {
+  outline: 2px solid var(--cna-accent);
+  outline-offset: -1px;
+}
+.cna-gene-wrap { display: flex; gap: 6px; align-items: flex-end; }
+
+.cna-btn {
+  font: inherit;
+  font-size: 15px;
+  color: var(--cna-ink);
+  background: var(--cna-surface);
+  border: 1px solid var(--cna-axis);
+  border-radius: 4px;
+  padding: 6px 13px;
+  cursor: pointer;
+}
+.cna-btn:hover { border-color: var(--cna-accent); color: var(--cna-accent); }
+.cna-reset { margin-left: auto; }
+
+.cna-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--cna-ink-2);
+  cursor: pointer;
+  user-select: none;
+}
+.cna-check input { accent-color: var(--cna-accent); }
+
+/* ------------------------------------------------------------------ */
+/* map + expression rail                                               */
+/* ------------------------------------------------------------------ */
+/* One row, two columns: the embedding on the left, the per-cell-type expression
+   panel on the right.  The panel used to be the third column of the row below,
+   where it was the narrowest of the three and ran past the bottom of the row it
+   shared with the legend; meanwhile the map ran a long way empty to the right of
+   the cloud, because an embedding is square-ish and the row is not.
+   The rail is capped so a very wide window spends its extra width on the map,
+   and scrolls on its own when a dataset has more cell types than fit beside it. */
+.cna-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+  gap: 1px;
+  background: var(--cna-hair);
+  border-top: 1px solid var(--cna-hair);
+}
+/* No gene selected: renderViolin() has only a heading and one line of prose to
+   put in the rail, so it gives its column back to the map rather than holding
+   360px of white.  See _syncControls(), which toggles this. */
+.cna-main-solo { grid-template-columns: minmax(0, 1fr); }
+.cna-main-solo .cna-rail { display: none; }
+
+/* gene_exp.php 的两个并排面板：左边是表达 UMAP，右边是同一批细胞按 cell type
+   上色的第二张 UMAP，下方再挂通栏的小提琴带。两张地图共用一套视图变换（见
+   cellatlas.js 的 _projectSide），所以同一个簇在两张图上落在相同的位置——
+   这是「右边放一张现成的 PNG」做不到的，那张图的两轴是各自拉伸的。
+   声明放在下面那条 @media 之前，窄屏时让位给单列。 */
+.cna-main-split { grid-template-columns: minmax(0, 1.25fr) minmax(320px, 1fr); }
+
+.cna-sidemap { display: flex; flex-direction: column; }
+/* 高度交给 flex：这个面板被拉伸到与左边地图相同的行高，地图吃掉图例之外的
+   全部余量，于是两边一样高。canvas 绝对定位，免得它自己的尺寸反过来参与
+   撑高、和 flex 打架。 */
+.cna-sidemap-stage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 260px;
+  background: var(--cna-surface);
+}
+.cna-sidemap .cna-canvas { position: absolute; left: 0; top: 0; }
+/* 25 个类型一行一个放不下，给固定高度 + 滚动（.cna-legend 已经有 overflow-y）。
+   高度取行高的整数倍：180px 时最后一行只露半截，看着像画坏了而不是像「还有」。
+   行高在这里钉死（22+2×2=26px，7 行＝182px）——继承的 line-height 会随字号走，
+   整数倍就对不上了。 */
+.cna-sidemap-leg { flex: 0 0 auto; height: 182px; margin-top: 10px; }
+.cna-sidemap-leg .cna-leg-row { line-height: 22px; padding-top: 2px; padding-bottom: 2px; }
+
+.cna-rail { overflow-y: auto; }
+/* The rail is the scroller here, so the violin body must not also cap itself at
+   560px: two nested scrollbars, the inner one shorter than the column it sits
+   in, is the kind of thing that reads as a broken panel rather than as depth. */
+.cna-rail .cna-violin { max-height: none; overflow-y: visible; }
+@media (max-width: 900px) {
+  /* Stacked, the map keeps its own height and the rail follows it -- the same
+     order the two had before, so nothing is lost on a narrow window. */
+  .cna-main { grid-template-columns: minmax(0, 1fr); }
+  .cna-rail { overflow-y: visible; }
+  /* 摞起来以后右边那张图不再有左图给它定高，就只剩 min-height 那 260px，
+     于是变成通栏宽框正中央的一个小方块（375px 屏上云只有 166px 宽，左图
+     305px）。给它和左图同一套下限，两张图才还是同一张图的两个画法。 */
+  .cna-sidemap-stage { min-height: 480px; }
+}
+
+/* ------------------------------------------------------------------ */
+/* stage                                                               */
+/* ------------------------------------------------------------------ */
+.cna-stage {
+  position: relative;
+  background: var(--cna-surface);
+  /* Tied to the viewport width, not fixed at 620px.  A UMAP is square-ish
+     -- the fourteen exported embeddings run 0.74-1.15 w/h -- so in a
+     620px box on a 1630px page the plot was a small square adrift in
+     1000px of empty canvas.  Growing with the width spends that space on
+     the plot instead of on margin, and the cap keeps a very wide window
+     from pushing the QC panel below the fold on its own. */
+  height: clamp(480px, 46vw, 760px);
+}
+.cna-canvas {
+  display: block;
+  cursor: grab;
+  touch-action: none;
+}
+
+.cna-hint {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  font-size: 15px;
+  color: var(--cna-muted);
+  background: color-mix(in srgb, var(--cna-surface) 82%, transparent);
+  padding: 2px 7px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.cna-tip {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  min-width: 180px;
+  max-width: 270px;
+  background: var(--cna-surface);
+  border: 1px solid var(--cna-axis);
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: 15px;
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.13);
+  color: var(--cna-ink-2);
+}
+.cna-tip b { color: var(--cna-ink); font-weight: 600; }
+
+/* ------------------------------------------------------------------ */
+/* lower panels                                                        */
+/* ------------------------------------------------------------------ */
+.cna-lower {
+  display: grid;
+  grid-template-columns: minmax(250px, 1.15fr) minmax(215px, 1fr);
+  gap: 1px;
+  background: var(--cna-hair);
+  border-top: 1px solid var(--cna-hair);
+}
+/* No stage-height override here: the clamp on .cna-stage already floors at
+   480px, which is taller than the 420px this used to set. */
+@media (max-width: 900px) {
+  .cna-lower { grid-template-columns: 1fr; }
+
+  /* .cna-stat-row 是 flex:0 0 auto，宽度由里面四个统计项的**内容**定死（382px）。
+     .cna-controls 自己能换行，但这一项拒绝收缩，换到自己那一行之后照样比
+     容器宽，在 375px 屏上右边的统计被 overflow:hidden 的祖先裁掉。
+     允许它收缩并在自己内部换行 —— 窄屏落成两行，宽屏宽度等于内容、逐像素不变。 */
+  .cna-stat-row { flex: 0 1 auto; min-width: 0; flex-wrap: wrap; }
+}
+
+.cna-panel {
+  background: var(--cna-plane);
+  padding: 13px 16px 16px;
+  min-width: 0;
+}
+.cna-panel-title {
+  font-size: 15px;
+  color: var(--cna-muted);
+  margin-bottom: 8px;
+}
+
+.cna-note {
+  font-size: 16px;
+  color: var(--cna-muted);
+  line-height: 1.5;
+}
+
+/* legend ----------------------------------------------------------- */
+.cna-legend { max-height: 340px; overflow-y: auto; }
+.cna-leg-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.cna-leg-row:hover { background: color-mix(in srgb, var(--cna-axis) 22%, transparent); }
+.cna-leg-row.is-on { background: color-mix(in srgb, var(--cna-accent) 13%, transparent); }
+.cna-sw {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  /* a hairline ring keeps a light swatch visible on a light panel */
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
+.cna-leg-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cna-leg-n {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  color: var(--cna-muted);
+}
+
+/* A dataset published under the study's own abbreviations hands the viewer a
+   key (opts.typeKey), and the expansion reads in the row, in the slack the
+   name column used to keep to itself.  Where that happens the name stops
+   growing -- left growing it would push the expansion to the far right of the
+   row, away from the name it explains -- and the expansion is the part that
+   gives up its tail on a narrow panel.  Quiet, and a point down from the names
+   so it does not compete with them. */
+.cna-leg-row.has-brief .cna-leg-name { flex: 0 0 auto; }
+.cna-leg-brief {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: var(--cna-muted);
+}
+/* Where the expansions come from, and the one name they cannot cover.  Sits
+   under the list rather than in a section of the host page: it is the list's
+   own footnote, and it stays in view while the names scroll. */
+.cna-leg-foot {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cna-muted);
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid var(--cna-hair);
+}
+
+.cna-ramp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--cna-muted);
+}
+.cna-ramp-bar {
+  flex: 1 1 auto;
+  height: 11px;
+  border-radius: 2px;
+}
+
+/* composition bars ------------------------------------------------- */
+.cna-comp { max-height: 340px; overflow-y: auto; }
+.cna-bar-row {
+  display: grid;
+  /* 标签轨宽跟着字号走：这行的字号 2026-09-27 统一时由 13px 抬到 15px，
+     轨宽不跟着放，省略号就多截掉几个细胞类型名（实测被截断的行数 2 → 5、
+     最长溢出 124px → 163px）。132 × 15/13 ≈ 152。 */
+  grid-template-columns: minmax(0, 152px) 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 2.5px 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+.cna-bar-row:hover .cna-bar-name { color: var(--cna-accent); }
+.cna-bar-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cna-bar-track {
+  height: 13px;
+  background: color-mix(in srgb, var(--cna-axis) 25%, transparent);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.cna-bar-fill {
+  height: 100%;
+  /* 2px surface gap keeps adjacent fills from reading as one another */
+  border-right: 2px solid var(--cna-plane);
+  border-radius: 2px 0 0 2px;
+  transition: width 0.15s ease-out;
+}
+.cna-bar-n {
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  color: var(--cna-muted);
+  min-width: 46px;
+  text-align: right;
+}
+
+/* expression-by-cell-type violins ---------------------------------- */
+/* 面板最多画 14 组，行高固定（.cna-v-row 26px SVG + 3px padding），整块约
+   505px。上限给 520 是为了让 14 行连同横轴和图例说明一次看全——330 那会儿
+   只露 10 行，横轴被挤到滚动区外面，等于没有轴。 */
+.cna-violin { max-height: 560px; overflow-y: auto; }
+.cna-v-row {
+  display: grid;
+  grid-template-columns: minmax(0, 132px) 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 2.5px 0;
+  font-size: 15px;
+}
+.cna-v-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 行内 SVG 被 preserveAspectRatio="none" 横向拉伸到轨道宽度，所以描边一律
+   non-scaling-stroke（属性写在 JS 里），否则竖线会被拉粗、轮廓上下不匀。 */
+.cna-v-svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+.cna-v-base { stroke: var(--cna-axis); stroke-width: 1; stroke-dasharray: 2 2; }
+/* 只填色不描边：描边会在密度趋零处留下一条假横线。fill-opacity 比原来的
+   0.40 高一点，因为少了描边以后形状要靠填充自己站住。 */
+.cna-v-body { fill-opacity: 0.55; }
+.cna-v-med { stroke: var(--cna-ink-2); stroke-width: 1.5; }
+.cna-v-pct {
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  color: var(--cna-muted);
+  min-width: 40px;
+  text-align: right;
+}
+.cna-v-axisrow { align-items: stretch; }
+.cna-v-axis {
+  position: relative;
+  height: 15px;
+  border-top: 1px solid var(--cna-hair);
+}
+.cna-v-ticklabel {
+  position: absolute;
+  top: 1px;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--cna-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* 通栏小提琴带（gene_exp.php）---------------------------------------- */
+/* 它是 .cna-main 的兄弟节点，不是它的格子，所以自己带一条顶边；否则两个面板
+   之间就少了那条全站统一的发丝线。 */
+.cna-vplot-band { border-top: 1px solid var(--cna-hair); }
+/* 带子里的小提琴是并排的、不滚动的，别再套一层 560px 的滚动区 */
+.cna-vplot-band .cna-violin { max-height: none; overflow-y: visible; }
+/* 宽度由 JS 行内给定（窄屏时大于容器，因此这里要能横向滚动）。 */
+.cna-vplot { width: 100%; overflow-x: auto; }
+/* 斜排的类型名本来就贴着图底，说明文字再贴上去就糊成一块了 */
+.cna-vplot-band .cna-violin > .cna-note { margin-top: 12px; }
+.cna-vp-svg { display: block; height: auto; overflow: visible; }
+
+.cna-vp-grid { stroke: var(--cna-hair); stroke-width: 1; }
+.cna-vp-axis { stroke: var(--cna-axis); stroke-width: 1; }
+/* 基准线＝该组自己的取值跨度，虚线，和版面 A 的中线基准同一套语言 */
+.cna-vp-base { stroke: var(--cna-axis); stroke-width: 1; stroke-dasharray: 2 2; }
+/* 只填色不描边：描边会在密度趋零处留一条假线（与版面 A 同一条理由） */
+.cna-vp-body { fill-opacity: 0.55; }
+.cna-vp-med { stroke: var(--cna-ink-2); stroke-width: 1.5; }
+
+/* 列多、名字长，字号比版面 A 的轴标签小一档；类型名斜排 45° 才不会互相压 */
+.cna-vp-tick,
+.cna-vp-axlab,
+.cna-vp-pct,
+.cna-vp-name {
+  font-family: var(--cna-font);
+  fill: var(--cna-muted);
+  font-size: 12px;
+}
+.cna-vp-tick { font-variant-numeric: tabular-nums; }
+.cna-vp-pct { font-variant-numeric: tabular-nums; }
+
+/* ------------------------------------------------------------------ */
+/* QC / provenance disclosure                                          */
+/* ------------------------------------------------------------------ */
+.cna-qc {
+  background: var(--cna-plane);
+  border-top: 1px solid var(--cna-hair);
+  font-size: 15px;
+}
+.cna-qc > summary {
+  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cna-ink-2);
+  list-style: none;
+}
+.cna-qc > summary::-webkit-details-marker { display: none; }
+.cna-qc > summary::before {
+  content: "▸";
+  display: inline-block;
+  width: 12px;
+  color: var(--cna-muted);
+  transition: transform 0.12s ease-out;
+}
+.cna-qc[open] > summary::before { transform: rotate(90deg); }
+.cna-qc > summary:hover { color: var(--cna-accent); }
+
+.cna-qc-body {
+  padding: 2px 16px 14px 28px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0 26px;
+}
+.cna-qc-row {
+  display: flex;
+  gap: 10px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--cna-hair);
+}
+.cna-qc-k {
+  flex: 0 0 190px;
+  color: var(--cna-muted);
+  font-size: 15px;
+}
+.cna-qc-v {
+  flex: 1 1 auto;
+  min-width: 0;
+  word-break: break-word;
+  font-size: 15px;
+}
+/* prose rows span the whole grid: see rowWide() in cellatlas.js */
+.cna-qc-row-wide {
+  grid-column: 1 / -1;
+}
+.cna-qc-row-wide .cna-qc-v {
+  line-height: 1.5;
+}
+
+/* status line ------------------------------------------------------ */
+.cna-status {
+  padding: 8px 16px;
+  font-size: 15px;
+  color: var(--cna-ink-2);
+  background: color-mix(in srgb, var(--cna-accent) 8%, var(--cna-plane));
+  border-top: 1px solid var(--cna-hair);
+}
+.cna-status:empty { display: none; }
+
+@media print {
+  .cna-controls, .cna-hint, .cna-tip { display: none; }
+  .cna-stage { height: 300px; }
+}

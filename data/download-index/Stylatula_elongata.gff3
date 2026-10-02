@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_018380.1 1 18733
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1214922
+NC_018380.1	RefSeq	region	1	18733	.	+	.	ID=NC_018380.1:1..18733;Dbxref=taxon:1214922;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_018380.1	RefSeq	gene	124	1689	.	+	.	ID=gene-B670_mgp01;Dbxref=GeneID:13435806;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=B670_mgp01
+NC_018380.1	RefSeq	CDS	124	1689	.	+	0	ID=cds-YP_006576487.1;Parent=gene-B670_mgp01;Dbxref=GenBank:YP_006576487.1,GeneID:13435806;Name=YP_006576487.1;gbkey=CDS;gene=COX1;locus_tag=B670_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_006576487.1;transl_table=4
+NC_018380.1	RefSeq	gene	1721	2783	.	+	.	ID=gene-B670_mgr01;Dbxref=GeneID:79564813;Name=B670_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=B670_mgr01
+NC_018380.1	RefSeq	rRNA	1721	2783	.	+	.	ID=rna-B670_mgr01;Parent=gene-B670_mgr01;Dbxref=GeneID:79564813;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=B670_mgr01;product=s-rRNA
+NC_018380.1	RefSeq	exon	1721	2783	.	+	.	ID=exon-B670_mgr01-1;Parent=rna-B670_mgr01;Dbxref=GeneID:79564813;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=B670_mgr01;product=s-rRNA
+NC_018380.1	RefSeq	gene	2835	3815	.	+	.	ID=gene-B670_mgp14;Dbxref=GeneID:13435793;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=B670_mgp14
+NC_018380.1	RefSeq	CDS	2835	3815	.	+	0	ID=cds-YP_006576488.1;Parent=gene-B670_mgp14;Dbxref=GenBank:YP_006576488.1,GeneID:13435793;Name=YP_006576488.1;gbkey=CDS;gene=ND1;locus_tag=B670_mgp14;product=NADH dehydrogenase subunit 1;protein_id=YP_006576488.1;transl_table=4
+NC_018380.1	RefSeq	gene	3827	4987	.	+	.	ID=gene-B670_mgp13;Dbxref=GeneID:13435794;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=B670_mgp13
+NC_018380.1	RefSeq	CDS	3827	4987	.	+	0	ID=cds-YP_006576489.1;Parent=gene-B670_mgp13;Dbxref=GenBank:YP_006576489.1,GeneID:13435794;Name=YP_006576489.1;gbkey=CDS;gene=CYTB;locus_tag=B670_mgp13;product=cytochrome b;protein_id=YP_006576489.1;transl_table=4
+NC_018380.1	RefSeq	gene	5006	5560	.	+	.	ID=gene-B670_mgp12;Dbxref=GeneID:13435795;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=B670_mgp12
+NC_018380.1	RefSeq	CDS	5006	5560	.	+	0	ID=cds-YP_006576490.1;Parent=gene-B670_mgp12;Dbxref=GenBank:YP_006576490.1,GeneID:13435795;Name=YP_006576490.1;gbkey=CDS;gene=ND6;locus_tag=B670_mgp12;product=NADH dehydrogenase subunit 6;protein_id=YP_006576490.1;transl_table=4
+NC_018380.1	RefSeq	gene	5625	5978	.	+	.	ID=gene-B670_mgp11;Dbxref=GeneID:13435796;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=B670_mgp11
+NC_018380.1	RefSeq	CDS	5625	5978	.	+	0	ID=cds-YP_006576491.1;Parent=gene-B670_mgp11;Dbxref=GenBank:YP_006576491.1,GeneID:13435796;Name=YP_006576491.1;gbkey=CDS;gene=ND3;locus_tag=B670_mgp11;product=NADH dehydrogenase subunit 3;protein_id=YP_006576491.1;transl_table=4
+NC_018380.1	RefSeq	gene	5982	6275	.	+	.	ID=gene-B670_mgp10;Dbxref=GeneID:13435797;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=B670_mgp10
+NC_018380.1	RefSeq	CDS	5982	6275	.	+	0	ID=cds-YP_006576492.1;Parent=gene-B670_mgp10;Dbxref=GenBank:YP_006576492.1,GeneID:13435797;Name=YP_006576492.1;gbkey=CDS;gene=ND4L;locus_tag=B670_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_006576492.1;transl_table=4
+NC_018380.1	RefSeq	gene	6289	9243	.	+	.	ID=gene-B670_mgp09;Dbxref=GeneID:13435798;Name=mutS;gbkey=Gene;gene=mutS;gene_biotype=protein_coding;locus_tag=B670_mgp09
+NC_018380.1	RefSeq	CDS	6289	9243	.	+	0	ID=cds-YP_006576493.1;Parent=gene-B670_mgp09;Dbxref=GenBank:YP_006576493.1,GeneID:13435798;Name=YP_006576493.1;gbkey=CDS;gene=mutS;locus_tag=B670_mgp09;product=mutS;protein_id=YP_006576493.1;transl_table=4
+NC_018380.1	RefSeq	gene	9253	11220	.	+	.	ID=gene-B670_mgr02;Dbxref=GeneID:79564814;Name=B670_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=B670_mgr02
+NC_018380.1	RefSeq	rRNA	9253	11220	.	+	.	ID=rna-B670_mgr02;Parent=gene-B670_mgr02;Dbxref=GeneID:79564814;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=B670_mgr02;product=l-rRNA
+NC_018380.1	RefSeq	exon	9253	11220	.	+	.	ID=exon-B670_mgr02-1;Parent=rna-B670_mgr02;Dbxref=GeneID:79564814;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=B670_mgr02;product=l-rRNA
+NC_018380.1	RefSeq	gene	11223	12605	.	+	.	ID=gene-B670_mgp08;Dbxref=GeneID:13435799;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=B670_mgp08
+NC_018380.1	RefSeq	CDS	11223	12605	.	+	0	ID=cds-YP_006576494.1;Parent=gene-B670_mgp08;Dbxref=GenBank:YP_006576494.1,GeneID:13435799;Name=YP_006576494.1;gbkey=CDS;gene=ND2;locus_tag=B670_mgp08;product=NADH dehydrogenase subunit 2;protein_id=YP_006576494.1;transl_table=4
+NC_018380.1	RefSeq	gene	12593	14410	.	+	.	ID=gene-B670_mgp07;Dbxref=GeneID:13435800;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=B670_mgp07
+NC_018380.1	RefSeq	CDS	12593	14410	.	+	0	ID=cds-YP_006576495.1;Parent=gene-B670_mgp07;Dbxref=GenBank:YP_006576495.1,GeneID:13435800;Name=YP_006576495.1;gbkey=CDS;gene=ND5;locus_tag=B670_mgp07;product=NADH dehydrogenase subunit 5;protein_id=YP_006576495.1;transl_table=4
+NC_018380.1	RefSeq	gene	14442	15890	.	+	.	ID=gene-B670_mgp06;Dbxref=GeneID:13435801;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=B670_mgp06
+NC_018380.1	RefSeq	CDS	14442	15890	.	+	0	ID=cds-YP_006576496.1;Parent=gene-B670_mgp06;Dbxref=GenBank:YP_006576496.1,GeneID:13435801;Name=YP_006576496.1;gbkey=CDS;gene=ND4;locus_tag=B670_mgp06;product=NADH dehydrogenase subunit 4;protein_id=YP_006576496.1;transl_table=4
+NC_018380.1	RefSeq	gene	16012	16082	.	-	.	ID=gene-B670_mgt01;Dbxref=GeneID:79564815;Name=B670_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=B670_mgt01
+NC_018380.1	RefSeq	tRNA	16012	16082	.	-	.	ID=rna-B670_mgt01;Parent=gene-B670_mgt01;Dbxref=GeneID:79564815;gbkey=tRNA;locus_tag=B670_mgt01;product=tRNA-Met
+NC_018380.1	RefSeq	exon	16012	16082	.	-	.	ID=exon-B670_mgt01-1;Parent=rna-B670_mgt01;Dbxref=GeneID:79564815;gbkey=tRNA;locus_tag=B670_mgt01;product=tRNA-Met
+NC_018380.1	RefSeq	gene	16147	16932	.	-	.	ID=gene-B670_mgp05;Dbxref=GeneID:13435802;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=B670_mgp05
+NC_018380.1	RefSeq	CDS	16147	16932	.	-	0	ID=cds-YP_006576497.1;Parent=gene-B670_mgp05;Dbxref=GenBank:YP_006576497.1,GeneID:13435802;Name=YP_006576497.1;gbkey=CDS;gene=COX3;locus_tag=B670_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_006576497.1;transl_table=4
+NC_018380.1	RefSeq	gene	16990	17697	.	-	.	ID=gene-B670_mgp04;Dbxref=GeneID:13435803;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=B670_mgp04
+NC_018380.1	RefSeq	CDS	16990	17697	.	-	0	ID=cds-YP_006576498.1;Parent=gene-B670_mgp04;Dbxref=GenBank:YP_006576498.1,GeneID:13435803;Name=YP_006576498.1;gbkey=CDS;gene=ATP6;locus_tag=B670_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_006576498.1;transl_table=4
+NC_018380.1	RefSeq	gene	17718	17933	.	-	.	ID=gene-B670_mgp03;Dbxref=GeneID:13435804;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=B670_mgp03
+NC_018380.1	RefSeq	CDS	17718	17933	.	-	0	ID=cds-YP_006576499.1;Parent=gene-B670_mgp03;Dbxref=GenBank:YP_006576499.1,GeneID:13435804;Name=YP_006576499.1;gbkey=CDS;gene=ATP8;locus_tag=B670_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_006576499.1;transl_table=4
+NC_018380.1	RefSeq	gene	17972	18733	.	-	.	ID=gene-B670_mgp02;Dbxref=GeneID:13435805;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=B670_mgp02
+NC_018380.1	RefSeq	CDS	17972	18733	.	-	0	ID=cds-YP_006576500.1;Parent=gene-B670_mgp02;Dbxref=GenBank:YP_006576500.1,GeneID:13435805;Name=YP_006576500.1;gbkey=CDS;gene=COX2;locus_tag=B670_mgp02;product=cytochrome c oxidase subunit II;protein_id=YP_006576500.1;transl_table=4
+

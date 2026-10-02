@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PV487496.1 1 14856
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=130080
+PV487496.1	Genbank	region	1	14856	.	+	.	ID=PV487496.1:1..14856;Dbxref=taxon:130080;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+PV487496.1	Genbank	gene	1	72	.	+	.	ID=gene-trnM(cat);Name=trnM(cat);gbkey=Gene;gene=trnM(cat);gene_biotype=tRNA
+PV487496.1	Genbank	tRNA	1	72	.	+	.	ID=rna-trnM(cat);Parent=gene-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PV487496.1	Genbank	exon	1	72	.	+	.	ID=exon-trnM(cat)-1;Parent=rna-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PV487496.1	Genbank	rRNA	179	1909	.	+	.	ID=rna-PV487496.1:179..1909;gbkey=rRNA;product=16S ribosomal RNA
+PV487496.1	Genbank	exon	179	1909	.	+	.	ID=exon-PV487496.1:179..1909-1;Parent=rna-PV487496.1:179..1909;gbkey=rRNA;product=16S ribosomal RNA
+PV487496.1	Genbank	gene	1945	13017	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	1945	2655	.	+	0	ID=cds-XRQ66142.1;Parent=gene-ND5;Dbxref=NCBI_GP:XRQ66142.1;Name=XRQ66142.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XRQ66142.1;transl_table=4
+PV487496.1	Genbank	CDS	11914	13017	.	+	0	ID=cds-XRQ66142.1;Parent=gene-ND5;Dbxref=NCBI_GP:XRQ66142.1;Name=XRQ66142.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XRQ66142.1;transl_table=4
+PV487496.1	Genbank	rRNA	8839	9747	.	+	.	ID=rna-ND5;Parent=gene-ND5;gbkey=rRNA;gene=ND5;product=12S ribosomal RNA
+PV487496.1	Genbank	exon	8839	9747	.	+	.	ID=exon-ND5-1;Parent=rna-ND5;gbkey=rRNA;gene=ND5;product=12S ribosomal RNA
+PV487496.1	Genbank	gene	2764	3711	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	2764	3711	.	+	0	ID=cds-XRQ66143.1;Parent=gene-ND1;Dbxref=NCBI_GP:XRQ66143.1;Name=XRQ66143.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XRQ66143.1;transl_table=4
+PV487496.1	Genbank	gene	3714	4853	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	3714	4853	.	+	0	ID=cds-XRQ66144.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XRQ66144.1;Name=XRQ66144.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XRQ66144.1;transl_table=4
+PV487496.1	Genbank	gene	4879	6165	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	4879	6165	.	+	0	ID=cds-XRQ66145.1;Parent=gene-ND2;Dbxref=NCBI_GP:XRQ66145.1;Name=XRQ66145.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XRQ66145.1;transl_table=4
+PV487496.1	Genbank	gene	6166	6726	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	6166	6726	.	+	0	ID=cds-XRQ66146.1;Parent=gene-ND6;Dbxref=NCBI_GP:XRQ66146.1;Name=XRQ66146.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XRQ66146.1;transl_table=4
+PV487496.1	Genbank	gene	6726	7403	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	6726	7403	.	+	0	ID=cds-XRQ66147.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XRQ66147.1;Name=XRQ66147.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XRQ66147.1;transl_table=4
+PV487496.1	Genbank	gene	7403	8842	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	7403	8842	.	+	0	ID=cds-XRQ66148.1;Parent=gene-ND4;Dbxref=NCBI_GP:XRQ66148.1;Name=XRQ66148.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XRQ66148.1;transl_table=4
+PV487496.1	Genbank	gene	9742	10521	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	9742	10521	.	+	0	ID=cds-XRQ66149.1;Parent=gene-COX3;Dbxref=NCBI_GP:XRQ66149.1;Name=XRQ66149.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XRQ66149.1;transl_table=4
+PV487496.1	Genbank	gene	10524	11231	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	10524	11231	.	+	0	ID=cds-XRQ66150.1;Parent=gene-COX2;Dbxref=NCBI_GP:XRQ66150.1;Name=XRQ66150.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XRQ66150.1;transl_table=4
+PV487496.1	Genbank	gene	11213	11512	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	11213	11512	.	+	0	ID=cds-XRQ66151.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XRQ66151.1;Name=XRQ66151.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XRQ66151.1;transl_table=4
+PV487496.1	Genbank	gene	11512	11856	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	11512	11856	.	+	0	ID=cds-XRQ66152.1;Parent=gene-ND3;Dbxref=NCBI_GP:XRQ66152.1;Name=XRQ66152.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XRQ66152.1;transl_table=4
+PV487496.1	Genbank	gene	13016	13085	.	+	.	ID=gene-trnW(tca);Name=trnW(tca);gbkey=Gene;gene=trnW(tca);gene_biotype=tRNA
+PV487496.1	Genbank	tRNA	13016	13085	.	+	.	ID=rna-trnW(tca);Parent=gene-trnW(tca);gbkey=tRNA;gene=trnW(tca);product=tRNA-Trp
+PV487496.1	Genbank	exon	13016	13085	.	+	.	ID=exon-trnW(tca)-1;Parent=rna-trnW(tca);gbkey=tRNA;gene=trnW(tca);product=tRNA-Trp
+PV487496.1	Genbank	gene	13089	13286	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	13089	13286	.	+	0	ID=cds-XRQ66153.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XRQ66153.1;Name=XRQ66153.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XRQ66153.1;transl_table=4
+PV487496.1	Genbank	gene	13286	14836	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PV487496.1	Genbank	CDS	13286	14836	.	+	0	ID=cds-XRQ66154.1;Parent=gene-COX1;Dbxref=NCBI_GP:XRQ66154.1;Name=XRQ66154.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XRQ66154.1;transl_table=4
+

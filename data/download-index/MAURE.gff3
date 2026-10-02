@@ -1,0 +1,42 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PX780304.1 1 16948
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=999287
+PX780304.1	Genbank	region	1	16948	.	+	.	ID=PX780304.1:1..16948;Dbxref=taxon:999287;Is_circular=true;Name=MT;collection-date=2006;country=Puerto Rico: Caribbean Sea;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=USNM1098754
+PX780304.1	Genbank	gene	1	12228	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	1	711	.	+	0	ID=cds-YEV36539.1;Parent=gene-ND5;Dbxref=NCBI_GP:YEV36539.1;Name=YEV36539.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=YEV36539.1;transl_table=4
+PX780304.1	Genbank	CDS	11125	12228	.	+	0	ID=cds-YEV36539.1;Parent=gene-ND5;Dbxref=NCBI_GP:YEV36539.1;Name=YEV36539.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=YEV36539.1;transl_table=4
+PX780304.1	Genbank	rRNA	7842	8751	.	+	.	ID=rna-ND5;Parent=gene-ND5;gbkey=rRNA;gene=ND5;product=12S ribosomal RNA
+PX780304.1	Genbank	exon	7842	8751	.	+	.	ID=exon-ND5-1;Parent=rna-ND5;gbkey=rRNA;gene=ND5;product=12S ribosomal RNA
+PX780304.1	Genbank	gene	836	1813	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	836	1813	.	+	0	ID=cds-YEV36540.1;Parent=gene-ND1;Dbxref=NCBI_GP:YEV36540.1;Name=YEV36540.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=YEV36540.1;transl_table=4
+PX780304.1	Genbank	gene	1846	2985	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	1846	2985	.	+	0	ID=cds-YEV36541.1;Parent=gene-CYTB;Dbxref=NCBI_GP:YEV36541.1;Name=YEV36541.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=YEV36541.1;transl_table=4
+PX780304.1	Genbank	gene	3206	4297	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	3206	4297	.	+	0	ID=cds-YEV36542.1;Parent=gene-ND2;Dbxref=NCBI_GP:YEV36542.1;Name=YEV36542.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=YEV36542.1;transl_table=4
+PX780304.1	Genbank	gene	4299	4862	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	4299	4862	.	+	0	ID=cds-YEV36543.1;Parent=gene-ND6;Dbxref=NCBI_GP:YEV36543.1;Name=YEV36543.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=YEV36543.1;transl_table=4
+PX780304.1	Genbank	gene	4862	5539	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	4862	5539	.	+	0	ID=cds-YEV36544.1;Parent=gene-ATP6;Dbxref=NCBI_GP:YEV36544.1;Name=YEV36544.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=YEV36544.1;transl_table=4
+PX780304.1	Genbank	gene	6397	7842	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	6397	7842	.	+	0	ID=cds-YEV36545.1;Parent=gene-ND4;Dbxref=NCBI_GP:YEV36545.1;Name=YEV36545.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=YEV36545.1;transl_table=4
+PX780304.1	Genbank	gene	8752	9531	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	8752	9531	.	+	0	ID=cds-YEV36546.1;Parent=gene-COX3;Dbxref=NCBI_GP:YEV36546.1;Name=YEV36546.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=YEV36546.1;transl_table=4
+PX780304.1	Genbank	gene	9507	10445	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	9507	10445	.	+	0	ID=cds-YEV36547.1;Parent=gene-COX2;Dbxref=NCBI_GP:YEV36547.1;Name=YEV36547.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=YEV36547.1;transl_table=4
+PX780304.1	Genbank	gene	10427	10726	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	10427	10726	.	+	0	ID=cds-YEV36548.1;Parent=gene-ND4L;Dbxref=NCBI_GP:YEV36548.1;Name=YEV36548.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=YEV36548.1;transl_table=4
+PX780304.1	Genbank	gene	10726	11070	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	10726	11070	.	+	0	ID=cds-YEV36549.1;Parent=gene-ND3;Dbxref=NCBI_GP:YEV36549.1;Name=YEV36549.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=YEV36549.1;transl_table=4
+PX780304.1	Genbank	tRNA	12241	12310	.	+	.	ID=rna-PX780304.1:12241..12310;gbkey=tRNA;product=tRNA-Trp
+PX780304.1	Genbank	exon	12241	12310	.	+	.	ID=exon-PX780304.1:12241..12310-1;Parent=rna-PX780304.1:12241..12310;gbkey=tRNA;product=tRNA-Trp
+PX780304.1	Genbank	gene	12312	12535	.	+	.	ID=gene-ATP8;Name=ATP8;end_range=12535,.;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;partial=true
+PX780304.1	Genbank	CDS	12312	12535	.	+	0	ID=cds-YEV36550.1;Parent=gene-ATP8;Dbxref=NCBI_GP:YEV36550.1;Name=YEV36550.1;end_range=12535,.;gbkey=CDS;gene=ATP8;partial=true;product=ATP synthase F0 subunit 8;protein_id=YEV36550.1;transl_table=4
+PX780304.1	Genbank	gene	13204	14790	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PX780304.1	Genbank	CDS	13204	14790	.	+	0	ID=cds-YEV36551.1;Parent=gene-COX1;Dbxref=NCBI_GP:YEV36551.1;Name=YEV36551.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=YEV36551.1;transl_table=4
+PX780304.1	Genbank	tRNA	14941	15011	.	+	.	ID=rna-PX780304.1:14941..15011;gbkey=tRNA;product=tRNA-Met
+PX780304.1	Genbank	exon	14941	15011	.	+	.	ID=exon-PX780304.1:14941..15011-1;Parent=rna-PX780304.1:14941..15011;gbkey=tRNA;product=tRNA-Met
+PX780304.1	Genbank	rRNA	15012	16948	.	+	.	ID=rna-PX780304.1:15012..16948;gbkey=rRNA;product=16S ribosomal RNA
+PX780304.1	Genbank	exon	15012	16948	.	+	.	ID=exon-PX780304.1:15012..16948-1;Parent=rna-PX780304.1:15012..16948;gbkey=rRNA;product=16S ribosomal RNA
+

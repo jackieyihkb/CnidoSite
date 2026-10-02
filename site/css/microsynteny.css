@@ -1,0 +1,331 @@
+/* ---------------------------------------------------------------------------
+ * microsynteny.css -- styles for /microsynteny.php and /microsynteny_detail.php
+ *
+ * Deliberately small: the page frame (header, navigation, footer, the
+ * .gd-notice component) comes from templatemo_style.css via the shared
+ * macrosynteny_page.php chrome, and the palette below matches the cards and
+ * tables used elsewhere on the site (slate greys with a blue accent).
+ * ------------------------------------------------------------------------ */
+
+.mts-lead {
+    margin: 10px 10px 14px 10px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #334155;
+}
+.mts-lead a { color: #1d4ed8; text-decoration: none; }
+.mts-lead a:hover { text-decoration: underline; }
+
+.mts-back { margin: 8px 10px 14px 10px; font-size: 15px; }
+.mts-back a { color: #1d4ed8; text-decoration: none; }
+.mts-back a:hover { text-decoration: underline; }
+
+.mts-h3 {
+    margin: 30px 10px 6px 10px;
+    font-size: 18px;
+    color: #1e293b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 18px;
+}
+
+/* ---- summary cards ---- */
+.mts-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px;
+    margin: 0 10px 18px 10px;
+}
+.mts-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, .05);
+}
+.mts-card .k { font-size: 13px; color: #64748b; font-weight: 600; }
+.mts-card .v { font-size: 24px; font-weight: 700; color: #1e293b; margin-top: 5px; line-height: 1.15; }
+.mts-card .u { font-size: 12px; color: #94a3b8; margin-top: 3px; }
+
+/* ---- controls ---- */
+.mts-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+    margin: 0 10px 14px 10px;
+}
+.mts-f label {
+    display: block;
+    font-size: 15px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.mts-f select, .mts-f input[type=text] {
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background: #fff;
+    color: #1e293b;
+}
+.mts-f input[type=text] { min-width: 230px; }
+.mts-btn {
+    padding: 8px 18px;
+    border: 1px solid #1d4ed8;
+    background: #1d4ed8;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.mts-btn:hover { background: #1e40af; }
+.mts-btn:disabled { background: #93c5fd; border-color: #93c5fd; cursor: default; }
+
+.mts-hint-inline { font-size: 15px; color: #64748b; margin: 0 10px 12px 10px; }
+
+/* ---- heatmap ---- */
+.mts-heat {
+    width: 100%;
+    height: 780px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+.mts-heatmsg { color: #b91c1c; font-size: 15px; margin: 0 10px 12px 10px; }
+
+/* 窄屏的坐标轴只印属名（见 microsynteny.php 里 mtsCompactGeometry 的注释）。
+   这句说明只在那种情况下出现，由 mtsDraw() 挂 .mts-compact-note 控制。 */
+.mts-genus-note { display: none; }
+.mts-compact-note .mts-genus-note { display: inline; }
+
+/* ---- detail page ---- */
+/* 详情页的「统计」表。表本身挂 gridtable：表头底色、下边框、留白、行分隔线、
+   字号全部由 templatemo_style.css 的共用样式提供（与 core 的 table.cc 一致）。
+   原来这里是另一套观感：整个表被 1px #e2e8f0 的方框 + 8px 圆角 + overflow:hidden
+   包成一个盒子，和站里其它表都不一样 —— 统一后删掉。
+   这里只留本页特有的：外边距、末行不画线，以及标签列左对齐（第一列是行标签，
+   居中读起来更差）。 */
+.mts-stat {
+    margin: 0 10px 18px 10px;
+}
+.mts-stat tr:last-child th, .mts-stat tr:last-child td { border-bottom: none; }
+/* 带 tr 且带 table.gridtable：共用样式里 `table.gridtable tr[align="center"] th` 是
+   (0,2,3)，短写法压不过它。 */
+table.gridtable.mts-stat tr th,
+table.gridtable.mts-stat tr td { text-align: left; }
+.mts-code {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 5px;
+    background: #f1f5f9;
+    color: #64748b;
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 12px;
+}
+
+/* 两图并列（circos | dotplot）。
+   2026-09-30 jackie 定案：此前是「一图一行、整栏宽」，理由是源图 ~3150 px 而标签只有
+   ~14-17 px，半宽槽位会把标签压到 ~3 px（那正是上一轮「看不清」报修的排法）。
+   现在改回并列 —— 屏幕上的标签大小只由几何决定（标签px × 显示宽/源图宽），
+   所以换更高分辨率的 inline 图救不了，宽屏也救不了（内容栏在视口 ~1600 px 处封顶
+   1588 px，2560 px 屏上每图仍只有 ~793 px）。并列在 1556 px 栏宽下每图 ~771 px、
+   标签 ~3.6 px，读不了是预期的：**这张 inline 图只是预览，真正的阅读面是点击后的
+   viewer**（100% + 缩放 + 平移）。换来的是竖向滚动从 ~3011 px 减到 ~1610 px。 */
+.mts-figs {
+    width: 100%;
+    margin: 0 0 12px 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+/* flex:1 1 0 + min-width:0：两图等宽且允许收缩（min-width:0 是必须的，
+   否则 flex 项的自动最小尺寸会把图撑回内容宽度、并列失效）。
+   只有一张图时它自然占满整行，与并列前的表现一致。 */
+.mts-figs > .mts-fig { flex: 1 1 0; min-width: 0; }
+
+/* 1200 px 以下堆叠回一图一行：并列在这个宽度已掉到每图 ~590 px、标签 ~2.8 px，
+   比桌面档还差一截，而堆叠能拿回整栏宽。断点取站里已有的 1200 px
+   （templatemo_style.css 的 .gt-scroll 同款），不另立新档。 */
+@media (max-width: 1200px) {
+    .mts-figs { display: block; }
+}
+
+.mts-fig {
+    margin: 0 0 22px 0;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mts-figcap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 15px;
+}
+.mts-figtitle { font-weight: 700; color: #334155; }
+.mts-figmeta { color: #94a3b8; font-size: 12px; font-variant-numeric: tabular-nums; }
+.mts-figacts { margin-left: auto; font-size: 15px; }
+.mts-figacts a { color: #1d4ed8; text-decoration: none; }
+.mts-figacts a:hover { text-decoration: underline; }
+.mts-figacts .sep { color: #cbd5e1; margin: 0 5px; }
+
+.mts-figbtn {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    cursor: zoom-in;
+    line-height: 0;
+}
+.mts-figbtn img { width: 100%; height: auto; display: block; }
+.mts-figbtn:hover img { opacity: .94; }
+.mts-figzoom {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(30, 41, 59, .78);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity .15s ease;
+    pointer-events: none;
+}
+.mts-figbtn:hover .mts-figzoom { opacity: 1; }
+
+/* ---- in-page figure viewer ---- */
+.mts-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(15, 23, 42, .93);
+    display: flex;
+    flex-direction: column;
+}
+.mts-viewer[hidden] { display: none; }
+.mts-viewer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 14px;
+    background: #1e293b;
+    color: #e2e8f0;
+    font-size: 15px;
+}
+.mts-viewer-title { font-weight: 600; }
+.mts-viewer-tools { margin-left: auto; display: flex; align-items: center; gap: 6px; }
+.mts-viewer-tools button,
+.mts-viewer-tools a {
+    padding: 5px 11px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: #334155;
+    color: #e2e8f0;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mts-viewer-tools button:hover,
+.mts-viewer-tools a:hover { background: #475569; }
+.mts-viewer-close { background: #1d4ed8 !important; border-color: #1d4ed8 !important; }
+.mts-viewer-zoom {
+    min-width: 46px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    color: #94a3b8;
+}
+.mts-viewer-stage {
+    flex: 1;
+    overflow: auto;
+    cursor: grab;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.mts-viewer-stage.grabbing { cursor: grabbing; }
+.mts-viewer-stage img { display: block; margin: 0 auto; background: #fff; }
+
+/* ---- full 144-species table ---- */
+.mts-tablewrap {
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    margin: 0 0 10px 0;
+}
+/* 表本身挂 gridtable：表头底色、下边框、行分隔线、悬停、字号、链接配色全部由
+   templatemo_style.css 的共用样式提供（与 core 的 table.cc 一致）。
+   原来这套是照着共用样式抄的近似值（字号 13px、悬停写在小节上、链接再声明一遍），
+   统一后删掉；td.num 右对齐现在也由共用的那一条给。这里只留本页特有的：
+   横向滚动容器、nowrap、吸附表头、排序箭头。 */
+.mts-table { border-collapse: separate; border-spacing: 0; }
+table.gridtable.mts-table tr th,
+table.gridtable.mts-table tr td { white-space: nowrap; }
+.mts-table thead th { position: sticky; top: 0; z-index: 2; }
+.mts-table thead th.sortable { cursor: pointer; user-select: none; }
+.mts-table thead th.sortable::after { content: "\2195"; color: #94a3b8; margin-left: 5px; font-size: 12px; }
+.mts-table thead th.sortable.asc::after { content: "\2191"; color: #1d4ed8; }
+.mts-table thead th.sortable.desc::after { content: "\2193"; color: #1d4ed8; }
+.mts-table .dim { color: #94a3b8; font-size: 12px; }
+
+.mts-pager { margin: 12px 0 6px 0; font-size: 15px; }
+.mts-pager a, .mts-pager span {
+    display: inline-block;
+    padding: 4px 9px;
+    margin: 0 3px 3px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #334155;
+    background: #fff;
+}
+.mts-pager a:hover { background: #f1f5f9; }
+.mts-pager span.cur { background: #1d4ed8; border-color: #1d4ed8; color: #fff; font-weight: 600; }
+.mts-pager span.dim { border: none; background: none; color: #94a3b8; }
+
+/* ---- notices ---- */
+.mts-warn {
+    margin: 0 10px 16px 10px;
+    padding: 12px 15px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    color: #92400e;
+    font-size: 16px;
+}
+.mts-note {
+    margin: 0 10px 16px 10px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #64748b;
+}
+.mts-note a { color: #1d4ed8; text-decoration: none; }
+.mts-note a:hover { text-decoration: underline; }
+
+/* Figure scope badge: which upstream figure set a plot came from.  The
+   chromosome-level plots are the submitted ones; the all-contig plots exist for
+   pairs whose blocks sit on scaffolds only. */
+.mts-figscope {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+.mts-figscope.chromosome { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.mts-figscope.scaffold   { background: #fffbeb; color: #b45309; border-color: #fde68a; }

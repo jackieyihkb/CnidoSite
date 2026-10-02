@@ -1,0 +1,65 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_029695.1 1 18646
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=51062
+NC_029695.1	RefSeq	region	1	18646	.	+	.	ID=NC_029695.1:1..18646;Dbxref=taxon:51062;Is_circular=true;Name=MT;collected-by=Wentao Niu;country=China: Hainan Island;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=466
+NC_029695.1	RefSeq	gene	1	2543	.	+	.	ID=gene-A3267_gp01;Dbxref=GeneID:27107707;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=A3267_gp01
+NC_029695.1	RefSeq	CDS	1	894	.	+	0	ID=cds-YP_009239111.1;Parent=gene-A3267_gp01;Dbxref=GenBank:YP_009239111.1,GeneID:27107707;Name=YP_009239111.1;gbkey=CDS;gene=COX1;locus_tag=A3267_gp01;product=cytochrome c oxidase subunit I;protein_id=YP_009239111.1;transl_table=4
+NC_029695.1	RefSeq	CDS	1866	2543	.	+	0	ID=cds-YP_009239111.1;Parent=gene-A3267_gp01;Dbxref=GenBank:YP_009239111.1,GeneID:27107707;Name=YP_009239111.1;gbkey=CDS;gene=COX1;locus_tag=A3267_gp01;product=cytochrome c oxidase subunit I;protein_id=YP_009239111.1;transl_table=4
+NC_029695.1	RefSeq	gene	1335	1402	.	+	.	ID=gene-A3267_gt01;Dbxref=GeneID:27107706;Name=A3267_gt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt01
+NC_029695.1	RefSeq	tRNA	1335	1402	.	+	.	ID=rna-A3267_gt01;Parent=gene-A3267_gt01;Dbxref=GeneID:27107706;gbkey=tRNA;locus_tag=A3267_gt01;product=tRNA-Ile
+NC_029695.1	RefSeq	exon	1335	1402	.	+	.	ID=exon-A3267_gt01-1;Parent=rna-A3267_gt01;Dbxref=GeneID:27107706;gbkey=tRNA;locus_tag=A3267_gt01;product=tRNA-Ile
+NC_029695.1	RefSeq	gene	1632	1700	.	+	.	ID=gene-A3267_gt02;Dbxref=GeneID:27107686;Name=A3267_gt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt02
+NC_029695.1	RefSeq	tRNA	1632	1700	.	+	.	ID=rna-A3267_gt02;Parent=gene-A3267_gt02;Dbxref=GeneID:27107686;gbkey=tRNA;locus_tag=A3267_gt02;product=tRNA-Pro
+NC_029695.1	RefSeq	exon	1632	1700	.	+	.	ID=exon-A3267_gt02-1;Parent=rna-A3267_gt02;Dbxref=GeneID:27107686;gbkey=tRNA;locus_tag=A3267_gt02;product=tRNA-Pro
+NC_029695.1	RefSeq	gene	2639	2709	.	+	.	ID=gene-A3267_gt03;Dbxref=GeneID:27107687;Name=A3267_gt03;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt03
+NC_029695.1	RefSeq	tRNA	2639	2709	.	+	.	ID=rna-A3267_gt03;Parent=gene-A3267_gt03;Dbxref=GeneID:27107687;gbkey=tRNA;locus_tag=A3267_gt03;product=tRNA-Met
+NC_029695.1	RefSeq	exon	2639	2709	.	+	.	ID=exon-A3267_gt03-1;Parent=rna-A3267_gt03;Dbxref=GeneID:27107687;gbkey=tRNA;locus_tag=A3267_gt03;product=tRNA-Met
+NC_029695.1	RefSeq	gene	3266	3341	.	+	.	ID=gene-A3267_gt04;Dbxref=GeneID:27107688;Name=A3267_gt04;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt04
+NC_029695.1	RefSeq	tRNA	3266	3341	.	+	.	ID=rna-A3267_gt04;Parent=gene-A3267_gt04;Dbxref=GeneID:27107688;gbkey=tRNA;locus_tag=A3267_gt04;product=tRNA-Tyr
+NC_029695.1	RefSeq	exon	3266	3341	.	+	.	ID=exon-A3267_gt04-1;Parent=rna-A3267_gt04;Dbxref=GeneID:27107688;gbkey=tRNA;locus_tag=A3267_gt04;product=tRNA-Tyr
+NC_029695.1	RefSeq	gene	3384	3446	.	+	.	ID=gene-A3267_gt05;Dbxref=GeneID:27107689;Name=A3267_gt05;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt05
+NC_029695.1	RefSeq	tRNA	3384	3446	.	+	.	ID=rna-A3267_gt05;Parent=gene-A3267_gt05;Dbxref=GeneID:27107689;gbkey=tRNA;locus_tag=A3267_gt05;product=tRNA-Phe
+NC_029695.1	RefSeq	exon	3384	3446	.	+	.	ID=exon-A3267_gt05-1;Parent=rna-A3267_gt05;Dbxref=GeneID:27107689;gbkey=tRNA;locus_tag=A3267_gt05;product=tRNA-Phe
+NC_029695.1	RefSeq	gene	3521	4957	.	+	.	ID=gene-A3267_gr02;Dbxref=GeneID:27107690;Name=A3267_gr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=A3267_gr02
+NC_029695.1	RefSeq	rRNA	3521	4957	.	+	.	ID=rna-A3267_gr02;Parent=gene-A3267_gr02;Dbxref=GeneID:27107690;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=A3267_gr02;product=16S ribosomal RNA
+NC_029695.1	RefSeq	exon	3521	4957	.	+	.	ID=exon-A3267_gr02-1;Parent=rna-A3267_gr02;Dbxref=GeneID:27107690;Note=16S ribosomal RNA;gbkey=rRNA;locus_tag=A3267_gr02;product=16S ribosomal RNA
+NC_029695.1	RefSeq	gene	5199	18167	.	+	.	ID=gene-A3267_gp13;Dbxref=GeneID:27107685;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=A3267_gp13
+NC_029695.1	RefSeq	CDS	5199	5921	.	+	0	ID=cds-YP_009239112.1;Parent=gene-A3267_gp13;Dbxref=GenBank:YP_009239112.1,GeneID:27107685;Name=YP_009239112.1;gbkey=CDS;gene=ND5;locus_tag=A3267_gp13;product=NADH dehydrogenase subunit 5;protein_id=YP_009239112.1;transl_table=4
+NC_029695.1	RefSeq	CDS	17052	18167	.	+	0	ID=cds-YP_009239112.1;Parent=gene-A3267_gp13;Dbxref=GenBank:YP_009239112.1,GeneID:27107685;Name=YP_009239112.1;gbkey=CDS;gene=ND5;locus_tag=A3267_gp13;product=NADH dehydrogenase subunit 5;protein_id=YP_009239112.1;transl_table=4
+NC_029695.1	RefSeq	gene	6115	6173	.	+	.	ID=gene-A3267_gt06;Dbxref=GeneID:27107705;Name=A3267_gt06;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt06
+NC_029695.1	RefSeq	tRNA	6115	6173	.	+	.	ID=rna-A3267_gt06;Parent=gene-A3267_gt06;Dbxref=GeneID:27107705;gbkey=tRNA;locus_tag=A3267_gt06;product=tRNA-Glu
+NC_029695.1	RefSeq	exon	6115	6173	.	+	.	ID=exon-A3267_gt06-1;Parent=rna-A3267_gt06;Dbxref=GeneID:27107705;gbkey=tRNA;locus_tag=A3267_gt06;product=tRNA-Glu
+NC_029695.1	RefSeq	gene	6258	7235	.	+	.	ID=gene-A3267_gp12;Dbxref=GeneID:27107691;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=A3267_gp12
+NC_029695.1	RefSeq	CDS	6258	7235	.	+	0	ID=cds-YP_009239113.1;Parent=gene-A3267_gp12;Dbxref=GenBank:YP_009239113.1,GeneID:27107691;Name=YP_009239113.1;gbkey=CDS;gene=ND1;locus_tag=A3267_gp12;product=NADH dehydrogenase subunit 1;protein_id=YP_009239113.1;transl_table=4
+NC_029695.1	RefSeq	gene	7357	8517	.	+	.	ID=gene-A3267_gp11;Dbxref=GeneID:27107698;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=A3267_gp11
+NC_029695.1	RefSeq	CDS	7357	8517	.	+	0	ID=cds-YP_009239114.1;Parent=gene-A3267_gp11;Dbxref=GenBank:YP_009239114.1,GeneID:27107698;Name=YP_009239114.1;gbkey=CDS;gene=CYTB;locus_tag=A3267_gp11;product=cytochrome b;protein_id=YP_009239114.1;transl_table=4
+NC_029695.1	RefSeq	gene	8655	8725	.	+	.	ID=gene-A3267_gt07;Dbxref=GeneID:27107696;Name=A3267_gt07;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt07
+NC_029695.1	RefSeq	tRNA	8655	8725	.	+	.	ID=rna-A3267_gt07;Parent=gene-A3267_gt07;Dbxref=GeneID:27107696;gbkey=tRNA;locus_tag=A3267_gt07;product=tRNA-Met
+NC_029695.1	RefSeq	exon	8655	8725	.	+	.	ID=exon-A3267_gt07-1;Parent=rna-A3267_gt07;Dbxref=GeneID:27107696;gbkey=tRNA;locus_tag=A3267_gt07;product=tRNA-Met
+NC_029695.1	RefSeq	gene	9087	10184	.	+	.	ID=gene-A3267_gp10;Dbxref=GeneID:27107692;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=A3267_gp10
+NC_029695.1	RefSeq	CDS	9087	10184	.	+	0	ID=cds-YP_009239115.1;Parent=gene-A3267_gp10;Dbxref=GenBank:YP_009239115.1,GeneID:27107692;Name=YP_009239115.1;gbkey=CDS;gene=ND2;locus_tag=A3267_gp10;product=NADH dehydrogenase subunit 2;protein_id=YP_009239115.1;transl_table=4
+NC_029695.1	RefSeq	gene	10197	10811	.	+	.	ID=gene-A3267_gp09;Dbxref=GeneID:27107697;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=A3267_gp09
+NC_029695.1	RefSeq	CDS	10197	10811	.	+	0	ID=cds-YP_009239116.1;Parent=gene-A3267_gp09;Dbxref=GenBank:YP_009239116.1,GeneID:27107697;Name=YP_009239116.1;gbkey=CDS;gene=ND6;locus_tag=A3267_gp09;product=NADH dehydrogenase subunit 6;protein_id=YP_009239116.1;transl_table=4
+NC_029695.1	RefSeq	gene	10885	11583	.	+	.	ID=gene-A3267_gp08;Dbxref=GeneID:27107702;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=A3267_gp08
+NC_029695.1	RefSeq	CDS	10885	11583	.	+	0	ID=cds-YP_009239117.1;Parent=gene-A3267_gp08;Dbxref=GenBank:YP_009239117.1,GeneID:27107702;Name=YP_009239117.1;gbkey=CDS;gene=ATP6;locus_tag=A3267_gp08;product=ATP synthase F0 subunit 6;protein_id=YP_009239117.1;transl_table=4
+NC_029695.1	RefSeq	gene	11846	13321	.	+	.	ID=gene-A3267_gp07;Dbxref=GeneID:27107701;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=A3267_gp07
+NC_029695.1	RefSeq	CDS	11846	13321	.	+	0	ID=cds-YP_009239118.1;Parent=gene-A3267_gp07;Dbxref=GenBank:YP_009239118.1,GeneID:27107701;Name=YP_009239118.1;gbkey=CDS;gene=ND4;locus_tag=A3267_gp07;product=NADH dehydrogenase subunit 4;protein_id=YP_009239118.1;transl_table=4
+NC_029695.1	RefSeq	gene	13348	14454	.	+	.	ID=gene-A3267_gr01;Dbxref=GeneID:27107695;Name=A3267_gr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=A3267_gr01
+NC_029695.1	RefSeq	rRNA	13348	14454	.	+	.	ID=rna-A3267_gr01;Parent=gene-A3267_gr01;Dbxref=GeneID:27107695;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=A3267_gr01;product=12S ribosomal RNA
+NC_029695.1	RefSeq	exon	13348	14454	.	+	.	ID=exon-A3267_gr01-1;Parent=rna-A3267_gr01;Dbxref=GeneID:27107695;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=A3267_gr01;product=12S ribosomal RNA
+NC_029695.1	RefSeq	gene	14660	15448	.	+	.	ID=gene-A3267_gp06;Dbxref=GeneID:27107693;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=A3267_gp06
+NC_029695.1	RefSeq	CDS	14660	15448	.	+	0	ID=cds-YP_009239119.1;Parent=gene-A3267_gp06;Dbxref=GenBank:YP_009239119.1,GeneID:27107693;Name=YP_009239119.1;gbkey=CDS;gene=COX3;locus_tag=A3267_gp06;product=cytochrome c oxidase subunit III;protein_id=YP_009239119.1;transl_table=4
+NC_029695.1	RefSeq	gene	15484	16227	.	+	.	ID=gene-A3267_gp05;Dbxref=GeneID:27107699;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=A3267_gp05
+NC_029695.1	RefSeq	CDS	15484	16227	.	+	0	ID=cds-YP_009239120.1;Parent=gene-A3267_gp05;Dbxref=GenBank:YP_009239120.1,GeneID:27107699;Name=YP_009239120.1;gbkey=CDS;gene=COX2;locus_tag=A3267_gp05;product=cytochrome c oxidase subunit II;protein_id=YP_009239120.1;transl_table=4
+NC_029695.1	RefSeq	gene	16281	16580	.	+	.	ID=gene-A3267_gp04;Dbxref=GeneID:27107700;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=A3267_gp04
+NC_029695.1	RefSeq	CDS	16281	16580	.	+	0	ID=cds-YP_009239121.1;Parent=gene-A3267_gp04;Dbxref=GenBank:YP_009239121.1,GeneID:27107700;Name=YP_009239121.1;gbkey=CDS;gene=ND4L;locus_tag=A3267_gp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_009239121.1;transl_table=4
+NC_029695.1	RefSeq	gene	16595	16951	.	+	.	ID=gene-A3267_gp03;Dbxref=GeneID:27107704;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=A3267_gp03
+NC_029695.1	RefSeq	CDS	16595	16951	.	+	0	ID=cds-YP_009239122.1;Parent=gene-A3267_gp03;Dbxref=GenBank:YP_009239122.1,GeneID:27107704;Name=YP_009239122.1;gbkey=CDS;gene=ND3;locus_tag=A3267_gp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009239122.1;transl_table=4
+NC_029695.1	RefSeq	gene	18207	18276	.	+	.	ID=gene-A3267_gt08;Dbxref=GeneID:27107703;Name=A3267_gt08;gbkey=Gene;gene_biotype=tRNA;locus_tag=A3267_gt08
+NC_029695.1	RefSeq	tRNA	18207	18276	.	+	.	ID=rna-A3267_gt08;Parent=gene-A3267_gt08;Dbxref=GeneID:27107703;gbkey=tRNA;locus_tag=A3267_gt08;product=tRNA-Trp
+NC_029695.1	RefSeq	exon	18207	18276	.	+	.	ID=exon-A3267_gt08-1;Parent=rna-A3267_gt08;Dbxref=GeneID:27107703;gbkey=tRNA;locus_tag=A3267_gt08;product=tRNA-Trp
+NC_029695.1	RefSeq	gene	18309	18524	.	+	.	ID=gene-A3267_gp02;Dbxref=GeneID:27107694;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=A3267_gp02
+NC_029695.1	RefSeq	CDS	18309	18524	.	+	0	ID=cds-YP_009239123.1;Parent=gene-A3267_gp02;Dbxref=GenBank:YP_009239123.1,GeneID:27107694;Name=YP_009239123.1;gbkey=CDS;gene=ATP8;locus_tag=A3267_gp02;product=ATP synthase F0 subunit 8;protein_id=YP_009239123.1;transl_table=4
+

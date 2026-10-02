@@ -1,0 +1,42 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region BK068674.1 1 16551
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2072708
+BK068674.1	tpg	region	1	16551	.	+	.	ID=BK068674.1:1..16551;Dbxref=taxon:2072708;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;note=SRR12775958
+BK068674.1	tpg	gene	1	3572	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	1	717	.	+	0	ID=cds-DBB32331.1;Parent=gene-ND5;Dbxref=NCBI_GP:DBB32331.1;Name=DBB32331.1;gbkey=CDS;gene=ND5;product=ND5;protein_id=DBB32331.1;transl_table=4
+BK068674.1	tpg	CDS	2477	3571	.	+	0	ID=cds-DBB32331.1;Parent=gene-ND5;Dbxref=NCBI_GP:DBB32331.1;Name=DBB32331.1;gbkey=CDS;gene=ND5;product=ND5;protein_id=DBB32331.1;transl_table=4
+BK068674.1	tpg	gene	1023	2006	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	1023	2006	.	+	0	ID=cds-DBB32332.1;Parent=gene-ND1;Dbxref=NCBI_GP:DBB32332.1;Name=DBB32332.1;gbkey=CDS;gene=ND1;product=ND1;protein_id=DBB32332.1;transl_table=4
+BK068674.1	tpg	gene	2011	2367	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	2011	2367	.	+	0	ID=cds-DBB32333.1;Parent=gene-ND3;Dbxref=NCBI_GP:DBB32333.1;Name=DBB32333.1;gbkey=CDS;gene=ND3;product=ND3;protein_id=DBB32333.1;transl_table=4
+BK068674.1	tpg	tRNA	3586	3656	.	+	.	ID=rna-BK068674.1:3586..3656;gbkey=tRNA;product=tRNA-Tyr
+BK068674.1	tpg	exon	3586	3656	.	+	.	ID=exon-BK068674.1:3586..3656-1;Parent=rna-BK068674.1:3586..3656;gbkey=tRNA;product=tRNA-Tyr
+BK068674.1	tpg	gene	3939	5330	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	3939	5330	.	+	0	ID=cds-DBB32334.1;Parent=gene-ND2;Dbxref=NCBI_GP:DBB32334.1;Name=DBB32334.1;gbkey=CDS;gene=ND2;product=ND2;protein_id=DBB32334.1;transl_table=4
+BK068674.1	tpg	rRNA	5379	6422	.	+	.	ID=rna-BK068674.1:5379..6422;Note=12S ribosomal RNA;gbkey=rRNA;product=small subunit ribosomal RNA
+BK068674.1	tpg	exon	5379	6422	.	+	.	ID=exon-BK068674.1:5379..6422-1;Parent=rna-BK068674.1:5379..6422;Note=12S ribosomal RNA;gbkey=rRNA;product=small subunit ribosomal RNA
+BK068674.1	tpg	gene	6446	7189	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	6446	7189	.	+	0	ID=cds-DBB32335.1;Parent=gene-COX2;Dbxref=NCBI_GP:DBB32335.1;Name=DBB32335.1;gbkey=CDS;gene=COX2;product=COX2;protein_id=DBB32335.1;transl_table=4
+BK068674.1	tpg	gene	7195	8670	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	7195	8670	.	+	0	ID=cds-DBB32336.1;Parent=gene-ND4;Dbxref=NCBI_GP:DBB32336.1;Name=DBB32336.1;gbkey=CDS;gene=ND4;product=ND4;protein_id=DBB32336.1;transl_table=4
+BK068674.1	tpg	gene	8676	9284	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	8676	9284	.	+	0	ID=cds-DBB32337.1;Parent=gene-ND6;Dbxref=NCBI_GP:DBB32337.1;Name=DBB32337.1;gbkey=CDS;gene=ND6;product=ND6;protein_id=DBB32337.1;transl_table=4
+BK068674.1	tpg	gene	9347	10501	.	+	.	ID=gene-Cytb;Name=Cytb;gbkey=Gene;gene=Cytb;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	9347	10501	.	+	0	ID=cds-DBB32338.1;Parent=gene-Cytb;Dbxref=NCBI_GP:DBB32338.1;Name=DBB32338.1;gbkey=CDS;gene=Cytb;product=Cytb;protein_id=DBB32338.1;transl_table=4
+BK068674.1	tpg	tRNA	10554	10615	.	+	.	ID=rna-BK068674.1:10554..10615;gbkey=tRNA;product=tRNA-Met
+BK068674.1	tpg	exon	10554	10615	.	+	.	ID=exon-BK068674.1:10554..10615-1;Parent=rna-BK068674.1:10554..10615;gbkey=tRNA;product=tRNA-Met
+BK068674.1	tpg	rRNA	10615	12737	.	+	.	ID=rna-BK068674.1:10615..12737;Note=16S ribosomal RNA;gbkey=rRNA;product=large subunit ribosomal RNA
+BK068674.1	tpg	exon	10615	12737	.	+	.	ID=exon-BK068674.1:10615..12737-1;Parent=rna-BK068674.1:10615..12737;Note=16S ribosomal RNA;gbkey=rRNA;product=large subunit ribosomal RNA
+BK068674.1	tpg	gene	12737	13525	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	12737	13525	.	+	0	ID=cds-DBB32339.1;Parent=gene-COX3;Dbxref=NCBI_GP:DBB32339.1;Name=DBB32339.1;gbkey=CDS;gene=COX3;product=COX3;protein_id=DBB32339.1;transl_table=4
+BK068674.1	tpg	gene	13662	15248	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	13662	15248	.	+	0	ID=cds-DBB32340.1;Parent=gene-COX1;Dbxref=NCBI_GP:DBB32340.1;Name=DBB32340.1;gbkey=CDS;gene=COX1;product=COX1;protein_id=DBB32340.1;transl_table=4
+BK068674.1	tpg	gene	15291	15590	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	15291	15590	.	+	0	ID=cds-DBB32341.1;Parent=gene-ND4L;Dbxref=NCBI_GP:DBB32341.1;Name=DBB32341.1;gbkey=CDS;gene=ND4L;product=ND4L;protein_id=DBB32341.1;transl_table=4
+BK068674.1	tpg	gene	15600	15830	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	15600	15830	.	+	0	ID=cds-DBB32342.1;Parent=gene-ATP8;Dbxref=NCBI_GP:DBB32342.1;Name=DBB32342.1;gbkey=CDS;gene=ATP8;product=ATP8;protein_id=DBB32342.1;transl_table=4
+BK068674.1	tpg	gene	15840	16538	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+BK068674.1	tpg	CDS	15840	16538	.	+	0	ID=cds-DBB32343.1;Parent=gene-ATP6;Dbxref=NCBI_GP:DBB32343.1;Name=DBB32343.1;gbkey=CDS;gene=ATP6;product=ATP6;protein_id=DBB32343.1;transl_table=4
+

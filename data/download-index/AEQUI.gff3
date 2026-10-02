@@ -1,0 +1,55 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_039929.1 1 20690
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6106
+NC_039929.1	RefSeq	region	1	20690	.	+	.	ID=NC_039929.1:1..20690;Dbxref=taxon:6106;Is_circular=true;Name=MT;biotype=Red pedal disc;collected-by=Craig Wilding;collection-date=10-Apr-2018;country=United Kingdom: Wales;gbkey=Src;genome=mitochondrion;isolation-source=Rhosneigr;mol_type=genomic DNA
+NC_039929.1	RefSeq	gene	1	4003	.	+	.	ID=gene-EI158_mgp01;Dbxref=GeneID:38458772;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=EI158_mgp01
+NC_039929.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_009538760.1;Parent=gene-EI158_mgp01;Dbxref=GenBank:YP_009538760.1,GeneID:38458772;Name=YP_009538760.1;gbkey=CDS;gene=ND5;locus_tag=EI158_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009538760.1;transl_table=4
+NC_039929.1	RefSeq	CDS	2888	4003	.	+	0	ID=cds-YP_009538760.1;Parent=gene-EI158_mgp01;Dbxref=GenBank:YP_009538760.1,GeneID:38458772;Name=YP_009538760.1;gbkey=CDS;gene=ND5;locus_tag=EI158_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009538760.1;transl_table=4
+NC_039929.1	RefSeq	exon	1	717	.	+	.	ID=id-EI158_mgp01-1;Parent=gene-EI158_mgp01;Dbxref=GeneID:38458772;exon_number=1;gbkey=exon;gene=ND5;locus_tag=EI158_mgp01;number=1
+NC_039929.1	RefSeq	exon	2888	4003	.	+	.	ID=id-EI158_mgp01-2;Parent=gene-EI158_mgp01;Dbxref=GeneID:38458772;exon_number=2;gbkey=exon;gene=ND5;locus_tag=EI158_mgp01;number=2
+NC_039929.1	RefSeq	intron	718	2887	.	+	.	ID=id-EI158_mgp01;Parent=gene-EI158_mgp01;Dbxref=GeneID:38458772;Note=group I;gbkey=intron;gene=ND5;locus_tag=EI158_mgp01
+NC_039929.1	RefSeq	gene	863	1924	.	+	.	ID=gene-EI158_mgp02;Dbxref=GeneID:38458755;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=EI158_mgp02
+NC_039929.1	RefSeq	CDS	863	1924	.	+	0	ID=cds-YP_009538761.1;Parent=gene-EI158_mgp02;Dbxref=GenBank:YP_009538761.1,GeneID:38458755;Name=YP_009538761.1;gbkey=CDS;gene=ND1;locus_tag=EI158_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009538761.1;transl_table=4
+NC_039929.1	RefSeq	gene	1931	2287	.	+	.	ID=gene-EI158_mgp03;Dbxref=GeneID:38458756;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=EI158_mgp03
+NC_039929.1	RefSeq	CDS	1931	2287	.	+	0	ID=cds-YP_009538762.1;Parent=gene-EI158_mgp03;Dbxref=GenBank:YP_009538762.1,GeneID:38458756;Name=YP_009538762.1;gbkey=CDS;gene=ND3;locus_tag=EI158_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009538762.1;transl_table=4
+NC_039929.1	RefSeq	gene	4252	4321	.	+	.	ID=gene-EI158_mgt01;Dbxref=GeneID:38458757;Name=EI158_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=EI158_mgt01
+NC_039929.1	RefSeq	tRNA	4252	4321	.	+	.	ID=rna-EI158_mgt01;Parent=gene-EI158_mgt01;Dbxref=GeneID:38458757;gbkey=tRNA;locus_tag=EI158_mgt01;product=tRNA-Trp
+NC_039929.1	RefSeq	exon	4252	4321	.	+	.	ID=exon-EI158_mgt01-1;Parent=rna-EI158_mgt01;Dbxref=GeneID:38458757;gbkey=tRNA;locus_tag=EI158_mgt01;product=tRNA-Trp
+NC_039929.1	RefSeq	gene	4374	5750	.	+	.	ID=gene-EI158_mgp14;Dbxref=GeneID:38458768;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=EI158_mgp14
+NC_039929.1	RefSeq	CDS	4374	5750	.	+	0	ID=cds-YP_009538763.1;Parent=gene-EI158_mgp14;Dbxref=GenBank:YP_009538763.1,GeneID:38458768;Name=YP_009538763.1;gbkey=CDS;gene=ND2;locus_tag=EI158_mgp14;product=NADH dehydrogenase subunit 2;protein_id=YP_009538763.1;transl_table=4
+NC_039929.1	RefSeq	gene	5800	6881	.	+	.	ID=gene-EI158_mgr02;Dbxref=GeneID:38458758;Name=EI158_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=EI158_mgr02
+NC_039929.1	RefSeq	rRNA	5800	6881	.	+	.	ID=rna-EI158_mgr02;Parent=gene-EI158_mgr02;Dbxref=GeneID:38458758;gbkey=rRNA;locus_tag=EI158_mgr02;product=small subunit ribosomal RNA
+NC_039929.1	RefSeq	exon	5800	6881	.	+	.	ID=exon-EI158_mgr02-1;Parent=rna-EI158_mgr02;Dbxref=GeneID:38458758;gbkey=rRNA;locus_tag=EI158_mgr02;product=small subunit ribosomal RNA
+NC_039929.1	RefSeq	gene	6935	7675	.	+	.	ID=gene-EI158_mgp13;Dbxref=GeneID:38458769;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;gene_synonym=COII;locus_tag=EI158_mgp13
+NC_039929.1	RefSeq	CDS	6935	7675	.	+	0	ID=cds-YP_009538764.1;Parent=gene-EI158_mgp13;Dbxref=GenBank:YP_009538764.1,GeneID:38458769;Name=YP_009538764.1;gbkey=CDS;gene=COX2;locus_tag=EI158_mgp13;product=cytochrome c oxidase subunit II;protein_id=YP_009538764.1;transl_table=4
+NC_039929.1	RefSeq	gene	7684	9621	.	+	.	ID=gene-EI158_mgp12;Dbxref=GeneID:38458759;Name=ORFA;gbkey=Gene;gene=ORFA;gene_biotype=protein_coding;locus_tag=EI158_mgp12
+NC_039929.1	RefSeq	CDS	7684	9621	.	+	0	ID=cds-YP_009538765.1;Parent=gene-EI158_mgp12;Dbxref=GenBank:YP_009538765.1,GeneID:38458759;Name=YP_009538765.1;gbkey=CDS;gene=ORFA;locus_tag=EI158_mgp12;product=hypothetical protein;protein_id=YP_009538765.1;transl_table=4
+NC_039929.1	RefSeq	gene	9664	11130	.	+	.	ID=gene-EI158_mgp11;Dbxref=GeneID:38458760;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=EI158_mgp11
+NC_039929.1	RefSeq	CDS	9664	11130	.	+	0	ID=cds-YP_009538766.1;Parent=gene-EI158_mgp11;Dbxref=GenBank:YP_009538766.1,GeneID:38458760;Name=YP_009538766.1;gbkey=CDS;gene=ND4;locus_tag=EI158_mgp11;product=NADH dehydrogenase subunit 4;protein_id=YP_009538766.1;transl_table=4
+NC_039929.1	RefSeq	gene	11135	11743	.	+	.	ID=gene-EI158_mgp10;Dbxref=GeneID:38458761;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=EI158_mgp10
+NC_039929.1	RefSeq	CDS	11135	11743	.	+	0	ID=cds-YP_009538767.1;Parent=gene-EI158_mgp10;Dbxref=GenBank:YP_009538767.1,GeneID:38458761;Name=YP_009538767.1;gbkey=CDS;gene=ND6;locus_tag=EI158_mgp10;product=NADH dehydrogenase subunit 6;protein_id=YP_009538767.1;transl_table=4
+NC_039929.1	RefSeq	gene	11770	12921	.	+	.	ID=gene-EI158_mgp09;Dbxref=GeneID:38458762;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=EI158_mgp09
+NC_039929.1	RefSeq	CDS	11770	12921	.	+	0	ID=cds-YP_009538768.1;Parent=gene-EI158_mgp09;Dbxref=GenBank:YP_009538768.1,GeneID:38458762;Name=YP_009538768.1;gbkey=CDS;gene=CYTB;locus_tag=EI158_mgp09;product=cytochrome b;protein_id=YP_009538768.1;transl_table=4
+NC_039929.1	RefSeq	gene	13327	13397	.	+	.	ID=gene-EI158_mgt02;Dbxref=GeneID:38458763;Name=EI158_mgt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=EI158_mgt02
+NC_039929.1	RefSeq	tRNA	13327	13397	.	+	.	ID=rna-EI158_mgt02;Parent=gene-EI158_mgt02;Dbxref=GeneID:38458763;gbkey=tRNA;locus_tag=EI158_mgt02;product=tRNA-Met
+NC_039929.1	RefSeq	exon	13327	13397	.	+	.	ID=exon-EI158_mgt02-1;Parent=rna-EI158_mgt02;Dbxref=GeneID:38458763;gbkey=tRNA;locus_tag=EI158_mgt02;product=tRNA-Met
+NC_039929.1	RefSeq	gene	13398	15591	.	+	.	ID=gene-EI158_mgr01;Dbxref=GeneID:38458770;Name=EI158_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=EI158_mgr01
+NC_039929.1	RefSeq	rRNA	13398	15591	.	+	.	ID=rna-EI158_mgr01;Parent=gene-EI158_mgr01;Dbxref=GeneID:38458770;gbkey=rRNA;locus_tag=EI158_mgr01;product=large subunit ribosomal RNA
+NC_039929.1	RefSeq	exon	13398	15591	.	+	.	ID=exon-EI158_mgr01-1;Parent=rna-EI158_mgr01;Dbxref=GeneID:38458770;gbkey=rRNA;locus_tag=EI158_mgr01;product=large subunit ribosomal RNA
+NC_039929.1	RefSeq	gene	15664	16452	.	+	.	ID=gene-EI158_mgp08;Dbxref=GeneID:38458771;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;gene_synonym=COIII;locus_tag=EI158_mgp08
+NC_039929.1	RefSeq	CDS	15664	16452	.	+	0	ID=cds-YP_009538769.1;Parent=gene-EI158_mgp08;Dbxref=GenBank:YP_009538769.1,GeneID:38458771;Name=YP_009538769.1;gbkey=CDS;gene=COX3;locus_tag=EI158_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_009538769.1;transl_table=4
+NC_039929.1	RefSeq	gene	16687	19112	.	+	.	ID=gene-EI158_mgp07;Dbxref=GeneID:38458764;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;gene_synonym=COI;locus_tag=EI158_mgp07
+NC_039929.1	RefSeq	CDS	16687	17576	.	+	0	ID=cds-YP_009538770.1;Parent=gene-EI158_mgp07;Dbxref=GenBank:YP_009538770.1,GeneID:38458764;Name=YP_009538770.1;gbkey=CDS;gene=COX1;locus_tag=EI158_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009538770.1;transl_table=4
+NC_039929.1	RefSeq	CDS	18431	19112	.	+	1	ID=cds-YP_009538770.1;Parent=gene-EI158_mgp07;Dbxref=GenBank:YP_009538770.1,GeneID:38458764;Name=YP_009538770.1;gbkey=CDS;gene=COX1;locus_tag=EI158_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009538770.1;transl_table=4
+NC_039929.1	RefSeq	exon	16687	17576	.	+	.	ID=id-EI158_mgp07-1;Parent=gene-EI158_mgp07;Dbxref=GeneID:38458764;exon_number=1;gbkey=exon;gene=COX1;locus_tag=EI158_mgp07;number=1
+NC_039929.1	RefSeq	exon	18431	19112	.	+	.	ID=id-EI158_mgp07-2;Parent=gene-EI158_mgp07;Dbxref=GeneID:38458764;exon_number=2;gbkey=exon;gene=COX1;locus_tag=EI158_mgp07;number=2
+NC_039929.1	RefSeq	intron	17577	18430	.	+	.	ID=id-EI158_mgp07;Parent=gene-EI158_mgp07;Dbxref=GeneID:38458764;Note=group I;gbkey=intron;gene=COX1;locus_tag=EI158_mgp07
+NC_039929.1	RefSeq	gene	19409	19708	.	+	.	ID=gene-EI158_mgp06;Dbxref=GeneID:38458765;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=EI158_mgp06
+NC_039929.1	RefSeq	CDS	19409	19708	.	+	0	ID=cds-YP_009538771.1;Parent=gene-EI158_mgp06;Dbxref=GenBank:YP_009538771.1,GeneID:38458765;Name=YP_009538771.1;gbkey=CDS;gene=ND4L;locus_tag=EI158_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_009538771.1;transl_table=4
+NC_039929.1	RefSeq	gene	19733	19948	.	+	.	ID=gene-EI158_mgp05;Dbxref=GeneID:38458766;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=EI158_mgp05
+NC_039929.1	RefSeq	CDS	19733	19948	.	+	0	ID=cds-YP_009538772.1;Parent=gene-EI158_mgp05;Dbxref=GenBank:YP_009538772.1,GeneID:38458766;Name=YP_009538772.1;gbkey=CDS;gene=ATP8;locus_tag=EI158_mgp05;product=ATP synthase F0 subunit 8;protein_id=YP_009538772.1;transl_table=4
+NC_039929.1	RefSeq	gene	19982	20671	.	+	.	ID=gene-EI158_mgp04;Dbxref=GeneID:38458767;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=EI158_mgp04
+NC_039929.1	RefSeq	CDS	19982	20671	.	+	0	ID=cds-YP_009538773.1;Parent=gene-EI158_mgp04;Dbxref=GenBank:YP_009538773.1,GeneID:38458767;Name=YP_009538773.1;gbkey=CDS;gene=ATP6;locus_tag=EI158_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009538773.1;transl_table=4
+

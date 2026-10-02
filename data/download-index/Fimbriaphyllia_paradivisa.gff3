@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PP526283.1 1 18896
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1768225
+PP526283.1	Genbank	region	1	18896	.	+	.	ID=PP526283.1:1..18896;Dbxref=taxon:1768225;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+PP526283.1	Genbank	gene	1	71	.	+	.	ID=gene-trnM-cat;Name=trnM-cat;gbkey=Gene;gene=trnM-cat;gene_biotype=tRNA
+PP526283.1	Genbank	tRNA	1	71	.	+	.	ID=rna-trnM-cat;Parent=gene-trnM-cat;gbkey=tRNA;gene=trnM-cat;product=tRNA-Met
+PP526283.1	Genbank	exon	1	71	.	+	.	ID=exon-trnM-cat-1;Parent=rna-trnM-cat;gbkey=tRNA;gene=trnM-cat;product=tRNA-Met
+PP526283.1	Genbank	gene	72	2379	.	+	.	ID=gene-rrnL;Name=rrnL;gbkey=Gene;gene=rrnL;gene_biotype=rRNA
+PP526283.1	Genbank	rRNA	72	2379	.	+	.	ID=rna-rrnL;Parent=gene-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+PP526283.1	Genbank	exon	72	2379	.	+	.	ID=exon-rrnL-1;Parent=rna-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+PP526283.1	Genbank	gene	2458	3177	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PP526283.1	Genbank	gene	15065	16180	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	2458	3177	.	+	0	ID=cds-XEC74368.1;Parent=gene-ND5;Dbxref=NCBI_GP:XEC74368.1;Name=XEC74368.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XEC74368.1;transl_table=4
+PP526283.1	Genbank	CDS	15065	16180	.	+	0	ID=cds-XEC74368.1;Parent=gene-ND5;Dbxref=NCBI_GP:XEC74368.1;Name=XEC74368.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XEC74368.1;transl_table=4
+PP526283.1	Genbank	exon	2458	3177	.	+	.	ID=id-ND5;Parent=gene-ND5;Note=exon1;gbkey=exon;gene=ND5
+PP526283.1	Genbank	exon	15065	16180	.	+	.	ID=id-ND5-2;Parent=gene-ND5;Note=exon2;gbkey=exon;gene=ND5
+PP526283.1	Genbank	intron	3178	15064	.	+	.	ID=id-PP526283.1:3178..15064;Note=intron1;gbkey=intron
+PP526283.1	Genbank	gene	3560	4543	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	3560	4543	.	+	0	ID=cds-XEC74369.1;Parent=gene-ND1;Dbxref=NCBI_GP:XEC74369.1;Name=XEC74369.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XEC74369.1;transl_table=4
+PP526283.1	Genbank	gene	4642	5796	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	4642	5796	.	+	0	ID=cds-XEC74370.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XEC74370.1;Name=XEC74370.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XEC74370.1;transl_table=4
+PP526283.1	Genbank	gene	6610	7707	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	6610	7707	.	+	0	ID=cds-XEC74371.1;Parent=gene-ND2;Dbxref=NCBI_GP:XEC74371.1;Name=XEC74371.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XEC74371.1;transl_table=4
+PP526283.1	Genbank	gene	7731	8324	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	7731	8324	.	+	0	ID=cds-XEC74372.1;Parent=gene-ND6;Dbxref=NCBI_GP:XEC74372.1;Name=XEC74372.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XEC74372.1;transl_table=4
+PP526283.1	Genbank	gene	8374	9072	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	8374	9072	.	+	0	ID=cds-XEC74373.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XEC74373.1;Name=XEC74373.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XEC74373.1;transl_table=4
+PP526283.1	Genbank	gene	9333	10808	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	9333	10808	.	+	0	ID=cds-XEC74374.1;Parent=gene-ND4;Dbxref=NCBI_GP:XEC74374.1;Name=XEC74374.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XEC74374.1;transl_table=4
+PP526283.1	Genbank	gene	10861	12037	.	+	.	ID=gene-rrnS;Name=rrnS;gbkey=Gene;gene=rrnS;gene_biotype=rRNA
+PP526283.1	Genbank	rRNA	10861	12037	.	+	.	ID=rna-rrnS;Parent=gene-rrnS;gbkey=rRNA;gene=rrnS;product=12S ribosomal RNA
+PP526283.1	Genbank	exon	10861	12037	.	+	.	ID=exon-rrnS-1;Parent=rna-rrnS;gbkey=rRNA;gene=rrnS;product=12S ribosomal RNA
+PP526283.1	Genbank	gene	12719	13507	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	12719	13507	.	+	0	ID=cds-XEC74375.1;Parent=gene-COX3;Dbxref=NCBI_GP:XEC74375.1;Name=XEC74375.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XEC74375.1;transl_table=4
+PP526283.1	Genbank	gene	13527	14270	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	13527	14270	.	+	0	ID=cds-XEC74376.1;Parent=gene-COX2;Dbxref=NCBI_GP:XEC74376.1;Name=XEC74376.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XEC74376.1;transl_table=4
+PP526283.1	Genbank	gene	14270	14569	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	14270	14569	.	+	0	ID=cds-XEC74377.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XEC74377.1;Name=XEC74377.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XEC74377.1;transl_table=4
+PP526283.1	Genbank	gene	14586	14942	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	14586	14942	.	+	0	ID=cds-XEC74378.1;Parent=gene-ND3;Dbxref=NCBI_GP:XEC74378.1;Name=XEC74378.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XEC74378.1;transl_table=4
+PP526283.1	Genbank	gene	16193	16262	.	+	.	ID=gene-trnW-tca;Name=trnW-tca;gbkey=Gene;gene=trnW-tca;gene_biotype=tRNA
+PP526283.1	Genbank	tRNA	16193	16262	.	+	.	ID=rna-trnW-tca;Parent=gene-trnW-tca;gbkey=tRNA;gene=trnW-tca;product=tRNA-Trp
+PP526283.1	Genbank	exon	16193	16262	.	+	.	ID=exon-trnW-tca-1;Parent=rna-trnW-tca;gbkey=tRNA;gene=trnW-tca;product=tRNA-Trp
+PP526283.1	Genbank	gene	16295	16513	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	16295	16513	.	+	0	ID=cds-XEC74379.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XEC74379.1;Name=XEC74379.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XEC74379.1;transl_table=4
+PP526283.1	Genbank	gene	16495	18795	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PP526283.1	Genbank	CDS	16495	18795	.	+	0	ID=cds-XEC74380.1;Parent=gene-COX1;Dbxref=NCBI_GP:XEC74380.1;Name=XEC74380.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XEC74380.1;transl_table=4
+

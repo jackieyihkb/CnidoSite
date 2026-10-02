@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PP763744.1 1 16707
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3143520
+PP763744.1	Genbank	region	1	16707	.	+	.	ID=PP763744.1:1..16707;Dbxref=taxon:3143520;Name=MT;collected-by=A. Collins;collection-date=2018-06;country=USA;dev-stage=juvenile;gbkey=Src;genome=mitochondrion;identified-by=A. Collins;isolate=AGC18067;lat-lon=38.891000 N 77.026600 W;mol_type=genomic DNA;note=Picked from culture dish;specimen-voucher=USNM:IZ:1715470
+PP763744.1	Genbank	gene	377	1363	.	-	.	ID=gene-dpo;Name=dpo;gbkey=Gene;gene=dpo;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	377	1363	.	-	0	ID=cds-XAM96201.1;Parent=gene-dpo;Dbxref=NCBI_GP:XAM96201.1;Name=XAM96201.1;gbkey=CDS;gene=dpo;product=DNA polymerase;protein_id=XAM96201.1;transl_table=4
+PP763744.1	Genbank	gene	1372	1665	.	-	.	ID=gene-orf314;Name=orf314;gbkey=Gene;gene=orf314;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	1372	1665	.	-	0	ID=cds-XAM96200.1;Parent=gene-orf314;Dbxref=NCBI_GP:XAM96200.1;Name=XAM96200.1;gbkey=CDS;gene=orf314;product=hypothetical protein;protein_id=XAM96200.1;transl_table=4
+PP763744.1	Genbank	gene	1691	3335	.	-	.	ID=gene-rnl;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA
+PP763744.1	Genbank	rRNA	1691	3335	.	-	.	ID=rna-rnl;Parent=gene-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+PP763744.1	Genbank	exon	1691	3335	.	-	.	ID=exon-rnl-1;Parent=rna-rnl;gbkey=rRNA;gene=rnl;product=large subunit ribosomal RNA
+PP763744.1	Genbank	gene	3426	5054	.	-	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	3426	5054	.	-	0	ID=cds-XAM96202.1;Parent=gene-COX1;Dbxref=NCBI_GP:XAM96202.1;Name=XAM96202.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XAM96202.1;transl_table=4
+PP763744.1	Genbank	gene	5123	5869	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	5123	5869	.	+	0	ID=cds-XAM96203.1;Parent=gene-COX2;Dbxref=NCBI_GP:XAM96203.1;Name=XAM96203.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XAM96203.1;transl_table=4
+PP763744.1	Genbank	gene	5875	5944	.	+	.	ID=gene-trnW(uca);Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA
+PP763744.1	Genbank	tRNA	5875	5944	.	+	.	ID=rna-trnW(uca);Parent=gene-trnW(uca);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+PP763744.1	Genbank	exon	5875	5944	.	+	.	ID=exon-trnW(uca)-1;Parent=rna-trnW(uca);gbkey=tRNA;gene=trnW(uca);product=tRNA-Trp
+PP763744.1	Genbank	gene	5950	6153	.	+	.	ID=gene-atp8;Name=atp8;gbkey=Gene;gene=atp8;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	5950	6153	.	+	0	ID=cds-XAM96213.1;Parent=gene-atp8;Dbxref=NCBI_GP:XAM96213.1;Name=XAM96213.1;gbkey=CDS;gene=atp8;product=ATP synthase F0 subunit 8;protein_id=XAM96213.1;transl_table=4
+PP763744.1	Genbank	gene	6155	6856	.	+	.	ID=gene-atp6;Name=atp6;gbkey=Gene;gene=atp6;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	6155	6856	.	+	0	ID=cds-XAM96214.1;Parent=gene-atp6;Dbxref=NCBI_GP:XAM96214.1;Name=XAM96214.1;gbkey=CDS;gene=atp6;product=ATP synthase F0 subunit 6;protein_id=XAM96214.1;transl_table=4
+PP763744.1	Genbank	gene	6856	7641	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	6856	7641	.	+	0	ID=cds-XAM96204.1;Parent=gene-COX3;Dbxref=NCBI_GP:XAM96204.1;Name=XAM96204.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XAM96204.1;transl_table=4
+PP763744.1	Genbank	gene	7647	7717	.	+	.	ID=gene-trnM(cau);Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA
+PP763744.1	Genbank	tRNA	7647	7717	.	+	.	ID=rna-trnM(cau);Parent=gene-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+PP763744.1	Genbank	exon	7647	7717	.	+	.	ID=exon-trnM(cau)-1;Parent=rna-trnM(cau);gbkey=tRNA;gene=trnM(cau);product=tRNA-Met
+PP763744.1	Genbank	gene	7720	9039	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	7720	9039	.	+	0	ID=cds-XAM96207.1;Parent=gene-ND2;Dbxref=NCBI_GP:XAM96207.1;Name=XAM96207.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XAM96207.1;transl_table=4
+PP763744.1	Genbank	gene	9039	10856	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	9039	10856	.	+	0	ID=cds-XAM96211.1;Parent=gene-ND5;Dbxref=NCBI_GP:XAM96211.1;Name=XAM96211.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XAM96211.1;transl_table=4
+PP763744.1	Genbank	gene	10855	11789	.	+	.	ID=gene-rns;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA
+PP763744.1	Genbank	rRNA	10855	11789	.	+	.	ID=rna-rns;Parent=gene-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+PP763744.1	Genbank	exon	10855	11789	.	+	.	ID=exon-rns-1;Parent=rna-rns;gbkey=rRNA;gene=rns;product=small subunit ribosomal RNA
+PP763744.1	Genbank	gene	11838	12365	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	11838	12365	.	+	0	ID=cds-XAM96212.1;Parent=gene-ND6;Dbxref=NCBI_GP:XAM96212.1;Name=XAM96212.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XAM96212.1;transl_table=4
+PP763744.1	Genbank	gene	12319	12678	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	12319	12678	.	+	0	ID=cds-XAM96208.1;Parent=gene-ND3;Dbxref=NCBI_GP:XAM96208.1;Name=XAM96208.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XAM96208.1;transl_table=4
+PP763744.1	Genbank	gene	12669	12971	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	12669	12971	.	+	0	ID=cds-XAM96210.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XAM96210.1;Name=XAM96210.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XAM96210.1;transl_table=4
+PP763744.1	Genbank	gene	12971	13939	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	12971	13939	.	+	0	ID=cds-XAM96206.1;Parent=gene-ND1;Dbxref=NCBI_GP:XAM96206.1;Name=XAM96206.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XAM96206.1;transl_table=4
+PP763744.1	Genbank	gene	13941	15380	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	13941	15380	.	+	0	ID=cds-XAM96209.1;Parent=gene-ND4;Dbxref=NCBI_GP:XAM96209.1;Name=XAM96209.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XAM96209.1;transl_table=4
+PP763744.1	Genbank	gene	15380	16516	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PP763744.1	Genbank	CDS	15380	16516	.	+	0	ID=cds-XAM96205.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XAM96205.1;Name=XAM96205.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XAM96205.1;transl_table=4
+

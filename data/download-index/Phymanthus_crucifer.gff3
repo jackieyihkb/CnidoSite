@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_027614.1 1 19727
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1291152
+NC_027614.1	RefSeq	region	1	19727	.	+	.	ID=NC_027614.1:1..19727;Dbxref=taxon:1291152;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_027614.1	RefSeq	gene	1	2191	.	+	.	ID=gene-AEY23_gr01;Dbxref=GeneID:25077455;Name=AEY23_gr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=AEY23_gr01
+NC_027614.1	RefSeq	rRNA	1	2191	.	+	.	ID=rna-AEY23_gr01;Parent=gene-AEY23_gr01;Dbxref=GeneID:25077455;gbkey=rRNA;locus_tag=AEY23_gr01;product=16S ribosomal RNA
+NC_027614.1	RefSeq	exon	1	2191	.	+	.	ID=exon-AEY23_gr01-1;Parent=rna-AEY23_gr01;Dbxref=GeneID:25077455;gbkey=rRNA;locus_tag=AEY23_gr01;product=16S ribosomal RNA
+NC_027614.1	RefSeq	gene	2262	3050	.	+	.	ID=gene-AEY23_gp13;Dbxref=GeneID:25077456;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=AEY23_gp13
+NC_027614.1	RefSeq	CDS	2262	3050	.	+	0	ID=cds-YP_009159690.1;Parent=gene-AEY23_gp13;Dbxref=GenBank:YP_009159690.1,GeneID:25077456;Name=YP_009159690.1;gbkey=CDS;gene=COX3;locus_tag=AEY23_gp13;product=cytochrome c oxidase subunit III;protein_id=YP_009159690.1;transl_table=4
+NC_027614.1	RefSeq	gene	3276	5712	.	+	.	ID=gene-AEY23_gp12;Dbxref=GeneID:25077443;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=AEY23_gp12
+NC_027614.1	RefSeq	CDS	3276	4165	.	+	0	ID=cds-YP_009159691.1;Parent=gene-AEY23_gp12;Dbxref=GenBank:YP_009159691.1,GeneID:25077443;Name=YP_009159691.1;gbkey=CDS;gene=COX1;locus_tag=AEY23_gp12;product=cytochrome c oxidase subunit I;protein_id=YP_009159691.1;transl_table=4
+NC_027614.1	RefSeq	CDS	5031	5712	.	+	1	ID=cds-YP_009159691.1;Parent=gene-AEY23_gp12;Dbxref=GenBank:YP_009159691.1,GeneID:25077443;Name=YP_009159691.1;gbkey=CDS;gene=COX1;locus_tag=AEY23_gp12;product=cytochrome c oxidase subunit I;protein_id=YP_009159691.1;transl_table=4
+NC_027614.1	RefSeq	intron	4166	5030	.	+	.	ID=id-AEY23_gp12;Parent=gene-AEY23_gp12;Dbxref=GeneID:25077443;gbkey=intron;gene=COX1;locus_tag=AEY23_gp12
+NC_027614.1	RefSeq	CDS	4320	5018	.	+	0	ID=cds-YP_009159692.1;Dbxref=GenBank:YP_009159692.1;Name=YP_009159692.1;gbkey=CDS;product=homing endonuclease;protein_id=YP_009159692.1;transl_table=4
+NC_027614.1	RefSeq	gene	5865	6164	.	+	.	ID=gene-AEY23_gp11;Dbxref=GeneID:25077444;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=AEY23_gp11
+NC_027614.1	RefSeq	CDS	5865	6164	.	+	0	ID=cds-YP_009159693.1;Parent=gene-AEY23_gp11;Dbxref=GenBank:YP_009159693.1,GeneID:25077444;Name=YP_009159693.1;gbkey=CDS;gene=ND4L;locus_tag=AEY23_gp11;product=NADH dehydrogenase subunit 4L;protein_id=YP_009159693.1;transl_table=4
+NC_027614.1	RefSeq	gene	6190	6405	.	+	.	ID=gene-AEY23_gp10;Dbxref=GeneID:25077445;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=AEY23_gp10
+NC_027614.1	RefSeq	CDS	6190	6405	.	+	0	ID=cds-YP_009159694.1;Parent=gene-AEY23_gp10;Dbxref=GenBank:YP_009159694.1,GeneID:25077445;Name=YP_009159694.1;gbkey=CDS;gene=ATP8;locus_tag=AEY23_gp10;product=ATP synthase F0 subunit 8;protein_id=YP_009159694.1;transl_table=4
+NC_027614.1	RefSeq	gene	6439	7128	.	+	.	ID=gene-AEY23_gp09;Dbxref=GeneID:25077446;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=AEY23_gp09
+NC_027614.1	RefSeq	CDS	6439	7128	.	+	0	ID=cds-YP_009159695.1;Parent=gene-AEY23_gp09;Dbxref=GenBank:YP_009159695.1,GeneID:25077446;Name=YP_009159695.1;gbkey=CDS;gene=ATP6;locus_tag=AEY23_gp09;product=ATP synthase F0 subunit 6;protein_id=YP_009159695.1;transl_table=4
+NC_027614.1	RefSeq	gene	7187	10930	.	+	.	ID=gene-AEY23_gp08;Dbxref=GeneID:25077447;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=AEY23_gp08
+NC_027614.1	RefSeq	CDS	7187	7903	.	+	0	ID=cds-YP_009159696.1;Parent=gene-AEY23_gp08;Dbxref=GenBank:YP_009159696.1,GeneID:25077447;Name=YP_009159696.1;gbkey=CDS;gene=ND5;locus_tag=AEY23_gp08;product=NADH dehydrogenase subunit 5;protein_id=YP_009159696.1;transl_table=4
+NC_027614.1	RefSeq	CDS	9815	10930	.	+	0	ID=cds-YP_009159696.1;Parent=gene-AEY23_gp08;Dbxref=GenBank:YP_009159696.1,GeneID:25077447;Name=YP_009159696.1;gbkey=CDS;gene=ND5;locus_tag=AEY23_gp08;product=NADH dehydrogenase subunit 5;protein_id=YP_009159696.1;transl_table=4
+NC_027614.1	RefSeq	intron	7904	9814	.	+	.	ID=id-AEY23_gp08;Parent=gene-AEY23_gp08;Dbxref=GeneID:25077447;gbkey=intron;gene=ND5;locus_tag=AEY23_gp08
+NC_027614.1	RefSeq	gene	8127	9110	.	+	.	ID=gene-AEY23_gp07;Dbxref=GeneID:25077448;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=AEY23_gp07
+NC_027614.1	RefSeq	CDS	8127	9110	.	+	0	ID=cds-YP_009159697.1;Parent=gene-AEY23_gp07;Dbxref=GenBank:YP_009159697.1,GeneID:25077448;Name=YP_009159697.1;gbkey=CDS;gene=ND1;locus_tag=AEY23_gp07;product=NADH dehydrogenase subunit 1;protein_id=YP_009159697.1;transl_table=4
+NC_027614.1	RefSeq	gene	9117	9473	.	+	.	ID=gene-AEY23_gp06;Dbxref=GeneID:25077449;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=AEY23_gp06
+NC_027614.1	RefSeq	CDS	9117	9473	.	+	0	ID=cds-YP_009159698.1;Parent=gene-AEY23_gp06;Dbxref=GenBank:YP_009159698.1,GeneID:25077449;Name=YP_009159698.1;gbkey=CDS;gene=ND3;locus_tag=AEY23_gp06;product=NADH dehydrogenase subunit 3;protein_id=YP_009159698.1;transl_table=4
+NC_027614.1	RefSeq	gene	11178	11247	.	+	.	ID=gene-AEY23_gt01;Dbxref=GeneID:25077450;Name=AEY23_gt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=AEY23_gt01
+NC_027614.1	RefSeq	tRNA	11178	11247	.	+	.	ID=rna-AEY23_gt01;Parent=gene-AEY23_gt01;Dbxref=GeneID:25077450;gbkey=tRNA;locus_tag=AEY23_gt01;product=tRNA-Trp
+NC_027614.1	RefSeq	exon	11178	11247	.	+	.	ID=exon-AEY23_gt01-1;Parent=rna-AEY23_gt01;Dbxref=GeneID:25077450;gbkey=tRNA;locus_tag=AEY23_gt01;product=tRNA-Trp
+NC_027614.1	RefSeq	gene	12726	13807	.	+	.	ID=gene-AEY23_gr02;Dbxref=GeneID:25077457;Name=AEY23_gr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=AEY23_gr02
+NC_027614.1	RefSeq	rRNA	12726	13807	.	+	.	ID=rna-AEY23_gr02;Parent=gene-AEY23_gr02;Dbxref=GeneID:25077457;gbkey=rRNA;locus_tag=AEY23_gr02;product=12S ribosomal RNA
+NC_027614.1	RefSeq	exon	12726	13807	.	+	.	ID=exon-AEY23_gr02-1;Parent=rna-AEY23_gr02;Dbxref=GeneID:25077457;gbkey=rRNA;locus_tag=AEY23_gr02;product=12S ribosomal RNA
+NC_027614.1	RefSeq	gene	13861	14601	.	+	.	ID=gene-AEY23_gp05;Dbxref=GeneID:25077458;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=AEY23_gp05
+NC_027614.1	RefSeq	CDS	13861	14601	.	+	0	ID=cds-YP_009159699.1;Parent=gene-AEY23_gp05;Dbxref=GenBank:YP_009159699.1,GeneID:25077458;Name=YP_009159699.1;gbkey=CDS;gene=COX2;locus_tag=AEY23_gp05;product=cytochrome c oxidase subunit II;protein_id=YP_009159699.1;transl_table=4
+NC_027614.1	RefSeq	gene	14611	15945	.	+	.	ID=gene-AEY23_gp04;Dbxref=GeneID:25077451;Name=AEY23_gp04;gbkey=Gene;gene_biotype=protein_coding;locus_tag=AEY23_gp04
+NC_027614.1	RefSeq	CDS	14611	15945	.	+	0	ID=cds-YP_009159700.1;Parent=gene-AEY23_gp04;Dbxref=GenBank:YP_009159700.1,GeneID:25077451;Name=YP_009159700.1;gbkey=CDS;locus_tag=AEY23_gp04;product=ORFA;protein_id=YP_009159700.1;transl_table=4
+NC_027614.1	RefSeq	gene	15988	17454	.	+	.	ID=gene-AEY23_gp03;Dbxref=GeneID:25077459;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=AEY23_gp03
+NC_027614.1	RefSeq	CDS	15988	17454	.	+	0	ID=cds-YP_009159701.1;Parent=gene-AEY23_gp03;Dbxref=GenBank:YP_009159701.1,GeneID:25077459;Name=YP_009159701.1;gbkey=CDS;gene=ND4;locus_tag=AEY23_gp03;product=NADH dehydrogenase subunit 4;protein_id=YP_009159701.1;transl_table=4
+NC_027614.1	RefSeq	gene	17468	18067	.	+	.	ID=gene-AEY23_gp02;Dbxref=GeneID:25077452;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=AEY23_gp02
+NC_027614.1	RefSeq	CDS	17468	18067	.	+	0	ID=cds-YP_009159702.1;Parent=gene-AEY23_gp02;Dbxref=GenBank:YP_009159702.1,GeneID:25077452;Name=YP_009159702.1;gbkey=CDS;gene=ND6;locus_tag=AEY23_gp02;product=NADH dehydrogenase subunit 6;protein_id=YP_009159702.1;transl_table=4
+NC_027614.1	RefSeq	gene	18095	19246	.	+	.	ID=gene-AEY23_gp01;Dbxref=GeneID:25077453;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=AEY23_gp01
+NC_027614.1	RefSeq	CDS	18095	19246	.	+	0	ID=cds-YP_009159703.1;Parent=gene-AEY23_gp01;Dbxref=GenBank:YP_009159703.1,GeneID:25077453;Name=YP_009159703.1;gbkey=CDS;gene=CYTB;locus_tag=AEY23_gp01;product=cytochrome b;protein_id=YP_009159703.1;transl_table=4
+NC_027614.1	RefSeq	gene	19657	19727	.	+	.	ID=gene-AEY23_gt02;Dbxref=GeneID:25077454;Name=AEY23_gt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=AEY23_gt02
+NC_027614.1	RefSeq	tRNA	19657	19727	.	+	.	ID=rna-AEY23_gt02;Parent=gene-AEY23_gt02;Dbxref=GeneID:25077454;gbkey=tRNA;locus_tag=AEY23_gt02;product=tRNA-Met
+NC_027614.1	RefSeq	exon	19657	19727	.	+	.	ID=exon-AEY23_gt02-1;Parent=rna-AEY23_gt02;Dbxref=GeneID:25077454;gbkey=tRNA;locus_tag=AEY23_gt02;product=tRNA-Met
+

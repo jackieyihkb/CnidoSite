@@ -1,0 +1,110 @@
+LOCUS       BK067243                2860 bp    DNA     linear   INV 05-MAY-2026
+DEFINITION  TPA_asm: Tamoya ohboya isolate IRGN 5EI4VPYLNR chromosome 8
+            mitochondrion, complete sequence.
+ACCESSION   BK067243
+VERSION     BK067243.1
+KEYWORDS    Third Party Data; TPA; TPA:assembly.
+SOURCE      mitochondrion Tamoya ohboya
+  ORGANISM  Tamoya ohboya
+            Eukaryota; Metazoa; Cnidaria; Cubozoa; Carybdeida; Tamoyidae;
+            Tamoya.
+REFERENCE   1  (bases 1 to 2860)
+  AUTHORS   Kayal,E. and Lavrov,D.V.
+  TITLE     One Ring does not rule them all: Linear mtDNA in Metazoa
+  JOURNAL   Gene 933, 148999 (2025)
+   PUBMED   39396556
+REFERENCE   2  (bases 1 to 2860)
+  AUTHORS   Kayal,E., Lavrov,D.V. and Collins,A.G.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (05-MAR-2024) Department of Ecology, Evolution, and
+            Organismal Biology, Iowa State University, 253 Bessey Hall, Ames,
+            IA 50011, USA
+COMMENT     THIRD PARTY DATABASE: This TPA record uses data from
+            DDBJ/EMBL/GenBank entry SRR13700068
+            
+            ##Assembly-Data-START##
+            Assembly Method :: SPAdes v. 3.15.5; NOVOPlasty v. 4.3; Bowtie2 v.
+                               2.5.2; Geneious v. 2023.2.1
+            Assembly Name   :: T. ohboya_SRR13700068
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2860
+                     /organism="Tamoya ohboya"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /isolate="IRGN 5EI4VPYLNR"
+                     /specimen_voucher="IRGN:5EI4VPYLNR"
+                     /db_xref="taxon:685043"
+                     /chromosome="8"
+     repeat_region   complement(11..802)
+                     /note="telomere repeat region"
+                     /rpt_type=inverted
+     gene            816..1964
+                     /gene="cob"
+     CDS             816..1964
+                     /gene="cob"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="apocytochrome b"
+                     /protein_id="DBB38880.1"
+                     /translation="MSALIRIRKNHPIVSLINGMVVDLPSPSSISYMWNFGSLLGLCL
+                     GIQIVTGIFLAMHYCADVGLAFSSIAHIMRNVNYGYLLKFFHANGASLFFLCAYMHIA
+                     RGLYYGSYNKAAVWNIGVIIFLIMVVTAFIGYVLPWGQMSFWGATVITNLVSAIPYIG
+                     DSIVQWIWGGFSVSNATLNRFFSLHYLFPFALAALALVHLIALHETGSSSPVGLRSDI
+                     DKVPFHIYFSVKDIYGFVILGLILTTVVYLAPNLLNDPENFIKANPLVTPVHIQPEWY
+                     FLFAYAVLRSIPDKLGGVIAMVSSILILLILPFVHTSKTNSLIFRPLGKLFYWVFCAN
+                     FILLTWIGSQPVEDPFILVGQISSFIYFSYFIALVPIIGYLENRLMFK"
+     repeat_region   2066..2857
+                     /note="telomere repeat region"
+                     /rpt_type=inverted
+ORIGIN      
+        1 ttacactctt tgtgtatata tgttatatat aaatatacgt attgatattc caaaattcca
+       61 ttttccttcc tcctaaaaaa gtgatttcta ttttcttatt ttactccttg ctaataggtt
+      121 tcgggtcaaa gtgataaaag agagtcgatt ttagatgaat tttatccctt caatccctat
+      181 tttttaccaa ttttgatggt gctgcagtgt tttaagtcaa attattttag tgttgctaag
+      241 ggattttcag tcaaatgtcg aattttgtag atattttagg gtcaatttta gaccactttt
+      301 tgctccactg ccgattttcg ggtttaaatt tagtctttcg atgccgcgga gttttttaca
+      361 acacttttag agttaaaagt gggcaggcaa gttttaagac taatttacta gggggtttac
+      421 tgactattgg ccctattttt gaaaaaggct tgatttttac tagtgctcgt tggagtagat
+      481 ttttaaaccc cctaatttag tacctaaaat aaggcagtaa attttgatga aattctctgg
+      541 ggagtaaatt ttggtttagc tgatcatttt ttactccgat tttactgccg acaattgggt
+      601 tcaatttgag aaaagtgata aaatatttcc ctctctaaga atggaattcc ccctccaatt
+      661 ttacatacct gaaatccctt gatagaaatc agtccctatt tattattttc tctgaacggc
+      721 caaatttgca cgggggggta tagtataaaa ttatcattat agagttcctc tcttctctct
+      781 ctctccccct ctcctctctt agagagtaga aagtaatgag cgctctgatc agaataagga
+      841 agaatcaccc tatagtttct ttaattaatg ggatggtggt tgatttacca tctcccagta
+      901 gtataagtta tatgtgaaac tttggttctc tattaggctt gtgtttagga attcaaatag
+      961 ttacgggtat attcttagct atgcactatt gcgcagatgt tggattggcc ttttcctcta
+     1021 tagcccatat tatgcgtaat gttaactatg gttacttact taaattcttt cacgctaatg
+     1081 gagcttcact gttttttctc tgtgcctata tgcatattgc tagaggcctt tattatggta
+     1141 gttataataa agcggcagta tgaaatatag gtgtaattat atttttaatt atggttgtta
+     1201 ccgcctttat tgggtatgtt cttccctggg gccaaatgtc tttctggggg gctactgtta
+     1261 ttactaattt agtttcggct attccttata ttggggattc tattgtccaa tggatatgag
+     1321 gtggattctc tgtttccaat gctacactaa atagattctt tagccttcat tatttgtttc
+     1381 cttttgccct agcagcactg gcattagttc acttgatagc actccatgaa acaggttcta
+     1441 gtagtcctgt aggattaagg tctgatattg ataaggttcc ttttcatatt tatttttcag
+     1501 tgaaggatat ctatgggttt gttattttag gtttaatttt aactacggtt gtataccttg
+     1561 cgcctaattt acttaatgac ccagagaatt ttattaaagc aaacccctta gtaacaccag
+     1621 tccacattca gccagaatgg tattttctat ttgcctatgc tgttcttaga tctatccctg
+     1681 ataagttagg gggagttatc gctatggtaa gcagcatttt aatacttcta attctccctt
+     1741 ttgtccatac aagtaaaacg aattctctaa tatttagacc actgggaaaa ctattttatt
+     1801 gggtattttg tgctaacttt attctactta cttgaattgg gtcccaacca gtggaagacc
+     1861 cctttatttt agtaggtcaa atttctagct ttatttattt ctcttacttt attgctttag
+     1921 ttcctatcat cggttactta gaaaataggc ttatgtttaa gtaagcaaga gtagtattca
+     1981 acctctctct ccttactaat taaaatagta gaactcctct cctagcgagg ggagttctta
+     2041 gttactcccc gagtgatagg aggagctaag agaggagagg gggagagaga gagaagagag
+     2101 gaactctata atgataattt tatactatac ccccccgtgc aaatttggcc gttcagagaa
+     2161 aataataaat agggactgat ttctatcaag ggatttcagg tatgtaaaat tggaggggga
+     2221 attccattct tagagaggga aatattttat cacttttctc aaattgaacc caattgtcgg
+     2281 cagtaaaatc ggagtaaaaa atgatcagct aaaccaaaat ttactcccca gagaatttca
+     2341 tcaaaattta ctgccttatt ttaggtacta aattaggggg tttaaaaatc tactccaacg
+     2401 agcactagta aaaatcaagc ctttttcaaa aatagggcca atagtcagta aaccccctag
+     2461 taaattagtc ttaaaacttg cctgcccact tttaactcta aaagtgttgt aaaaaactcc
+     2521 gcggcatcga aagactaaat ttaaacccga aaatcggcag tggagcaaaa agtggtctaa
+     2581 aattgaccct aaaatatcta caaaattcga catttgactg aaaatccctt agcaacacta
+     2641 aaataatttg acttaaaaca ctgcagcacc atcaaaattg gtaaaaaata gggattgaag
+     2701 ggataaaatt catctaaaat cgactctctt ttatcacttt gacccgaaac ctattagcaa
+     2761 ggagtaaaat aagaaaatag aaatcccttt tttaggagga aggaaaatgg aattttggca
+     2821 tatcaatacg tatagtcata tataacatat atacacagag
+//
+

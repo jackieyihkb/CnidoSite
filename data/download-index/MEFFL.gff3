@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_040137.1 1 17886
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=105610
+NC_040137.1	RefSeq	region	1	17886	.	+	.	ID=NC_040137.1:1..17886;Dbxref=taxon:105610;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=MABIK CN00079316
+NC_040137.1	RefSeq	gene	1	71	.	+	.	ID=gene-EJ511_mgt01;Dbxref=GeneID:38572043;Name=EJ511_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=EJ511_mgt01
+NC_040137.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-EJ511_mgt01;Parent=gene-EJ511_mgt01;Dbxref=GeneID:38572043;gbkey=tRNA;locus_tag=EJ511_mgt01;product=tRNA-Met
+NC_040137.1	RefSeq	exon	1	71	.	+	.	ID=exon-EJ511_mgt01-1;Parent=rna-EJ511_mgt01;Dbxref=GeneID:38572043;gbkey=tRNA;locus_tag=EJ511_mgt01;product=tRNA-Met
+NC_040137.1	RefSeq	gene	72	2330	.	+	.	ID=gene-EJ511_mgr02;Dbxref=GeneID:38572045;Name=EJ511_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=EJ511_mgr02
+NC_040137.1	RefSeq	rRNA	72	2330	.	+	.	ID=rna-EJ511_mgr02;Parent=gene-EJ511_mgr02;Dbxref=GeneID:38572045;gbkey=rRNA;locus_tag=EJ511_mgr02;product=16S ribosomal RNA
+NC_040137.1	RefSeq	exon	72	2330	.	+	.	ID=exon-EJ511_mgr02-1;Parent=rna-EJ511_mgr02;Dbxref=GeneID:38572045;gbkey=rRNA;locus_tag=EJ511_mgr02;product=16S ribosomal RNA
+NC_040137.1	RefSeq	gene	2433	15759	.	+	.	ID=gene-EJ511_mgp13;Dbxref=GeneID:38572048;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=EJ511_mgp13
+NC_040137.1	RefSeq	CDS	2433	3152	.	+	0	ID=cds-YP_009545489.1;Parent=gene-EJ511_mgp13;Dbxref=GenBank:YP_009545489.1,GeneID:38572048;Name=YP_009545489.1;gbkey=CDS;gene=ND5;locus_tag=EJ511_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_009545489.1;transl_table=4
+NC_040137.1	RefSeq	CDS	14644	15759	.	+	0	ID=cds-YP_009545489.1;Parent=gene-EJ511_mgp13;Dbxref=GenBank:YP_009545489.1,GeneID:38572048;Name=YP_009545489.1;gbkey=CDS;gene=ND5;locus_tag=EJ511_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_009545489.1;transl_table=4
+NC_040137.1	RefSeq	intron	3153	14643	.	+	.	ID=id-EJ511_mgp13;Parent=gene-EJ511_mgp13;Dbxref=GeneID:38572048;gbkey=intron;gene=ND5;locus_tag=EJ511_mgp13
+NC_040137.1	RefSeq	sequence_feature	11609	12235	.	+	.	ID=id-EJ511_mgp13-2;Dbxref=GeneID:38572048;Note=control region;gbkey=misc_feature;gene=ND5;locus_tag=EJ511_mgp13
+NC_040137.1	RefSeq	gene	3475	4458	.	+	.	ID=gene-EJ511_mgp12;Dbxref=GeneID:38572033;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=EJ511_mgp12
+NC_040137.1	RefSeq	CDS	3475	4458	.	+	0	ID=cds-YP_009545490.1;Parent=gene-EJ511_mgp12;Dbxref=GenBank:YP_009545490.1,GeneID:38572033;Name=YP_009545490.1;gbkey=CDS;gene=ND1;locus_tag=EJ511_mgp12;product=NADH dehydrogenase subunit 1;protein_id=YP_009545490.1;transl_table=4
+NC_040137.1	RefSeq	gene	4566	5723	.	+	.	ID=gene-EJ511_mgp11;Dbxref=GeneID:38572032;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=EJ511_mgp11
+NC_040137.1	RefSeq	CDS	4566	5723	.	+	0	ID=cds-YP_009545491.1;Parent=gene-EJ511_mgp11;Dbxref=GenBank:YP_009545491.1,GeneID:38572032;Name=YP_009545491.1;gbkey=CDS;gene=CYTB;locus_tag=EJ511_mgp11;product=cytochrome b;protein_id=YP_009545491.1;transl_table=4
+NC_040137.1	RefSeq	gene	6258	7355	.	+	.	ID=gene-EJ511_mgp10;Dbxref=GeneID:38572034;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=EJ511_mgp10
+NC_040137.1	RefSeq	CDS	6258	7355	.	+	0	ID=cds-YP_009545492.1;Parent=gene-EJ511_mgp10;Dbxref=GenBank:YP_009545492.1,GeneID:38572034;Name=YP_009545492.1;gbkey=CDS;gene=ND2;locus_tag=EJ511_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_009545492.1;transl_table=4
+NC_040137.1	RefSeq	gene	7388	7981	.	+	.	ID=gene-EJ511_mgp09;Dbxref=GeneID:38572035;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=EJ511_mgp09
+NC_040137.1	RefSeq	CDS	7388	7981	.	+	0	ID=cds-YP_009545493.1;Parent=gene-EJ511_mgp09;Dbxref=GenBank:YP_009545493.1,GeneID:38572035;Name=YP_009545493.1;gbkey=CDS;gene=ND6;locus_tag=EJ511_mgp09;product=NADH dehydrogenase subunit 6;protein_id=YP_009545493.1;transl_table=4
+NC_040137.1	RefSeq	gene	8052	8750	.	+	.	ID=gene-EJ511_mgp08;Dbxref=GeneID:38572036;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=EJ511_mgp08
+NC_040137.1	RefSeq	CDS	8052	8750	.	+	0	ID=cds-YP_009545494.1;Parent=gene-EJ511_mgp08;Dbxref=GenBank:YP_009545494.1,GeneID:38572036;Name=YP_009545494.1;gbkey=CDS;gene=ATP6;locus_tag=EJ511_mgp08;product=ATP synthase F0 subunit 6;protein_id=YP_009545494.1;transl_table=4
+NC_040137.1	RefSeq	gene	8930	10405	.	+	.	ID=gene-EJ511_mgp07;Dbxref=GeneID:38572037;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=EJ511_mgp07
+NC_040137.1	RefSeq	CDS	8930	10405	.	+	0	ID=cds-YP_009545495.1;Parent=gene-EJ511_mgp07;Dbxref=GenBank:YP_009545495.1,GeneID:38572037;Name=YP_009545495.1;gbkey=CDS;gene=ND4;locus_tag=EJ511_mgp07;product=NADH dehydrogenase subunit 4;protein_id=YP_009545495.1;transl_table=4
+NC_040137.1	RefSeq	gene	10434	11608	.	+	.	ID=gene-EJ511_mgr01;Dbxref=GeneID:38572038;Name=EJ511_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=EJ511_mgr01
+NC_040137.1	RefSeq	rRNA	10434	11608	.	+	.	ID=rna-EJ511_mgr01;Parent=gene-EJ511_mgr01;Dbxref=GeneID:38572038;gbkey=rRNA;locus_tag=EJ511_mgr01;product=12S ribosomal RNA
+NC_040137.1	RefSeq	exon	10434	11608	.	+	.	ID=exon-EJ511_mgr01-1;Parent=rna-EJ511_mgr01;Dbxref=GeneID:38572038;gbkey=rRNA;locus_tag=EJ511_mgr01;product=12S ribosomal RNA
+NC_040137.1	RefSeq	gene	12236	13024	.	+	.	ID=gene-EJ511_mgp06;Dbxref=GeneID:38572046;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=EJ511_mgp06
+NC_040137.1	RefSeq	CDS	12236	13024	.	+	0	ID=cds-YP_009545496.1;Parent=gene-EJ511_mgp06;Dbxref=GenBank:YP_009545496.1,GeneID:38572046;Name=YP_009545496.1;gbkey=CDS;gene=COX3;locus_tag=EJ511_mgp06;product=cytochrome c oxidase subunit III;protein_id=YP_009545496.1;transl_table=4
+NC_040137.1	RefSeq	gene	13080	13823	.	+	.	ID=gene-EJ511_mgp05;Dbxref=GeneID:38572039;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=EJ511_mgp05
+NC_040137.1	RefSeq	CDS	13080	13823	.	+	0	ID=cds-YP_009545497.1;Parent=gene-EJ511_mgp05;Dbxref=GenBank:YP_009545497.1,GeneID:38572039;Name=YP_009545497.1;gbkey=CDS;gene=COX2;locus_tag=EJ511_mgp05;product=cytochrome c oxidase subunit II;protein_id=YP_009545497.1;transl_table=4
+NC_040137.1	RefSeq	gene	13859	14158	.	+	.	ID=gene-EJ511_mgp04;Dbxref=GeneID:38572040;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=EJ511_mgp04
+NC_040137.1	RefSeq	CDS	13859	14158	.	+	0	ID=cds-YP_009545498.1;Parent=gene-EJ511_mgp04;Dbxref=GenBank:YP_009545498.1,GeneID:38572040;Name=YP_009545498.1;gbkey=CDS;gene=ND4L;locus_tag=EJ511_mgp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_009545498.1;transl_table=4
+NC_040137.1	RefSeq	gene	14190	14546	.	+	.	ID=gene-EJ511_mgp03;Dbxref=GeneID:38572041;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=EJ511_mgp03
+NC_040137.1	RefSeq	CDS	14190	14546	.	+	0	ID=cds-YP_009545499.1;Parent=gene-EJ511_mgp03;Dbxref=GenBank:YP_009545499.1,GeneID:38572041;Name=YP_009545499.1;gbkey=CDS;gene=ND3;locus_tag=EJ511_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009545499.1;transl_table=4
+NC_040137.1	RefSeq	gene	15789	15858	.	+	.	ID=gene-EJ511_mgt02;Dbxref=GeneID:38572042;Name=EJ511_mgt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=EJ511_mgt02
+NC_040137.1	RefSeq	tRNA	15789	15858	.	+	.	ID=rna-EJ511_mgt02;Parent=gene-EJ511_mgt02;Dbxref=GeneID:38572042;gbkey=tRNA;locus_tag=EJ511_mgt02;product=tRNA-Trp
+NC_040137.1	RefSeq	exon	15789	15858	.	+	.	ID=exon-EJ511_mgt02-1;Parent=rna-EJ511_mgt02;Dbxref=GeneID:38572042;gbkey=tRNA;locus_tag=EJ511_mgt02;product=tRNA-Trp
+NC_040137.1	RefSeq	gene	15891	16109	.	+	.	ID=gene-EJ511_mgp02;Dbxref=GeneID:38572047;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=EJ511_mgp02
+NC_040137.1	RefSeq	CDS	15891	16109	.	+	0	ID=cds-YP_009545500.1;Parent=gene-EJ511_mgp02;Dbxref=GenBank:YP_009545500.1,GeneID:38572047;Name=YP_009545500.1;gbkey=CDS;gene=ATP8;locus_tag=EJ511_mgp02;product=ATP synthase F0 subunit 8;protein_id=YP_009545500.1;transl_table=4
+NC_040137.1	RefSeq	gene	16091	17692	.	+	.	ID=gene-EJ511_mgp01;Dbxref=GeneID:38572044;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=EJ511_mgp01
+NC_040137.1	RefSeq	CDS	16091	17692	.	+	0	ID=cds-YP_009545501.1;Parent=gene-EJ511_mgp01;Dbxref=GenBank:YP_009545501.1,GeneID:38572044;Name=YP_009545501.1;gbkey=CDS;gene=COX1;locus_tag=EJ511_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009545501.1;transl_table=4
+NC_040137.1	RefSeq	sequence_feature	17693	17886	.	+	.	ID=id-NC_040137.1:17693..17886;Note=control region;gbkey=misc_feature
+

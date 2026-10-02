@@ -1,0 +1,46 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_083272.1 1 18259
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6130
+NC_083272.1	RefSeq	region	1	18259	.	+	.	ID=NC_083272.1:1..18259;Dbxref=taxon:6130;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_083272.1	RefSeq	gene	111	1092	.	+	.	ID=gene-R0619_mgr02;Dbxref=GeneID:85190800;Name=rrn12;gbkey=Gene;gene=rrn12;gene_biotype=rRNA;locus_tag=R0619_mgr02
+NC_083272.1	RefSeq	rRNA	111	1092	.	+	.	ID=rna-R0619_mgr02;Parent=gene-R0619_mgr02;Dbxref=GeneID:85190800;gbkey=rRNA;gene=rrn12;locus_tag=R0619_mgr02;product=12S ribosomal RNA
+NC_083272.1	RefSeq	exon	111	1092	.	+	.	ID=exon-R0619_mgr02-1;Parent=rna-R0619_mgr02;Dbxref=GeneID:85190800;gbkey=rRNA;gene=rrn12;locus_tag=R0619_mgr02;product=12S ribosomal RNA
+NC_083272.1	RefSeq	gene	2086	2874	.	+	.	ID=gene-R0619_mgp13;Dbxref=GeneID:85190808;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=R0619_mgp13
+NC_083272.1	RefSeq	CDS	2086	2874	.	+	0	ID=cds-YP_010963400.1;Parent=gene-R0619_mgp13;Dbxref=GenBank:YP_010963400.1,GeneID:85190808;Name=YP_010963400.1;gbkey=CDS;gene=COX3;locus_tag=R0619_mgp13;product=cytochrome c oxidase subunit III;protein_id=YP_010963400.1;transl_table=4
+NC_083272.1	RefSeq	gene	2931	3674	.	+	.	ID=gene-R0619_mgp12;Dbxref=GeneID:85190794;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=R0619_mgp12
+NC_083272.1	RefSeq	CDS	2931	3674	.	+	0	ID=cds-YP_010963401.1;Parent=gene-R0619_mgp12;Dbxref=GenBank:YP_010963401.1,GeneID:85190794;Name=YP_010963401.1;gbkey=CDS;gene=COX2;locus_tag=R0619_mgp12;product=cytochrome c oxidase subunit II;protein_id=YP_010963401.1;transl_table=4
+NC_083272.1	RefSeq	gene	3706	4005	.	+	.	ID=gene-R0619_mgp11;Dbxref=GeneID:85190795;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=R0619_mgp11
+NC_083272.1	RefSeq	CDS	3706	4005	.	+	0	ID=cds-YP_010963402.1;Parent=gene-R0619_mgp11;Dbxref=GenBank:YP_010963402.1,GeneID:85190795;Name=YP_010963402.1;gbkey=CDS;gene=ND4L;locus_tag=R0619_mgp11;product=NADH dehydrogenase subunit 4L;protein_id=YP_010963402.1;transl_table=4
+NC_083272.1	RefSeq	gene	4038	4394	.	+	.	ID=gene-R0619_mgp10;Dbxref=GeneID:85190796;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=R0619_mgp10
+NC_083272.1	RefSeq	CDS	4038	4394	.	+	0	ID=cds-YP_010963403.1;Parent=gene-R0619_mgp10;Dbxref=GenBank:YP_010963403.1,GeneID:85190796;Name=YP_010963403.1;gbkey=CDS;gene=ND3;locus_tag=R0619_mgp10;product=NADH dehydrogenase subunit 3;protein_id=YP_010963403.1;transl_table=4
+NC_083272.1	RefSeq	gene	4487	10895	.	+	.	ID=gene-R0619_mgp09;Dbxref=GeneID:85190810;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=R0619_mgp09
+NC_083272.1	RefSeq	CDS	10179	10895	.	+	0	ID=cds-YP_010963399.1;Parent=gene-R0619_mgp09;Dbxref=GenBank:YP_010963399.1,GeneID:85190810;Name=YP_010963399.1;gbkey=CDS;gene=ND5;locus_tag=R0619_mgp09;part=1;product=NADH dehydrogenase subunit 5;protein_id=YP_010963399.1;transl_table=4
+NC_083272.1	RefSeq	CDS	22746	23864	.	+	0	ID=cds-YP_010963399.1;Parent=gene-R0619_mgp09;Dbxref=GenBank:YP_010963399.1,GeneID:85190810;Name=YP_010963399.1;gbkey=CDS;gene=ND5;locus_tag=R0619_mgp09;part=2;product=NADH dehydrogenase subunit 5;protein_id=YP_010963399.1;transl_table=4
+NC_083272.1	RefSeq	gene	5636	5706	.	+	.	ID=gene-R0619_mgt01;Dbxref=GeneID:85190797;Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA;locus_tag=R0619_mgt01
+NC_083272.1	RefSeq	tRNA	5636	5706	.	+	.	ID=rna-R0619_mgt01;Parent=gene-R0619_mgt01;Dbxref=GeneID:85190797;gbkey=tRNA;gene=trnW(uca);locus_tag=R0619_mgt01;product=tRNA-Trp
+NC_083272.1	RefSeq	exon	5636	5706	.	+	.	ID=exon-R0619_mgt01-1;Parent=rna-R0619_mgt01;Dbxref=GeneID:85190797;gbkey=tRNA;gene=trnW(uca);locus_tag=R0619_mgt01;product=tRNA-Trp
+NC_083272.1	RefSeq	gene	5738	5956	.	+	.	ID=gene-R0619_mgp08;Dbxref=GeneID:85190806;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=R0619_mgp08
+NC_083272.1	RefSeq	CDS	5738	5956	.	+	0	ID=cds-YP_010963404.1;Parent=gene-R0619_mgp08;Dbxref=GenBank:YP_010963404.1,GeneID:85190806;Name=YP_010963404.1;gbkey=CDS;gene=ATP8;locus_tag=R0619_mgp08;product=ATP synthase F0 subunit 8;protein_id=YP_010963404.1;transl_table=4
+NC_083272.1	RefSeq	gene	5938	7539	.	+	.	ID=gene-R0619_mgp07;Dbxref=GeneID:85190798;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=R0619_mgp07
+NC_083272.1	RefSeq	CDS	5938	7539	.	+	0	ID=cds-YP_010963405.1;Parent=gene-R0619_mgp07;Dbxref=GenBank:YP_010963405.1,GeneID:85190798;Name=YP_010963405.1;gbkey=CDS;gene=COX1;locus_tag=R0619_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_010963405.1;transl_table=4
+NC_083272.1	RefSeq	gene	7746	7816	.	+	.	ID=gene-R0619_mgt02;Dbxref=GeneID:85190799;Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA;locus_tag=R0619_mgt02
+NC_083272.1	RefSeq	tRNA	7746	7816	.	+	.	ID=rna-R0619_mgt02;Parent=gene-R0619_mgt02;Dbxref=GeneID:85190799;gbkey=tRNA;gene=trnM(cau);locus_tag=R0619_mgt02;product=tRNA-Met
+NC_083272.1	RefSeq	exon	7746	7816	.	+	.	ID=exon-R0619_mgt02-1;Parent=rna-R0619_mgt02;Dbxref=GeneID:85190799;gbkey=tRNA;gene=trnM(cau);locus_tag=R0619_mgt02;product=tRNA-Met
+NC_083272.1	RefSeq	gene	7991	9997	.	+	.	ID=gene-R0619_mgr01;Dbxref=GeneID:85190807;Name=rrn16;gbkey=Gene;gene=rrn16;gene_biotype=rRNA;locus_tag=R0619_mgr01
+NC_083272.1	RefSeq	rRNA	7991	9997	.	+	.	ID=rna-R0619_mgr01;Parent=gene-R0619_mgr01;Dbxref=GeneID:85190807;gbkey=rRNA;gene=rrn16;locus_tag=R0619_mgr01;product=16S ribosomal RNA
+NC_083272.1	RefSeq	exon	7991	9997	.	+	.	ID=exon-R0619_mgr01-1;Parent=rna-R0619_mgr01;Dbxref=GeneID:85190807;gbkey=rRNA;gene=rrn16;locus_tag=R0619_mgr01;product=16S ribosomal RNA
+NC_083272.1	RefSeq	gene	11222	12205	.	+	.	ID=gene-R0619_mgp06;Dbxref=GeneID:85190809;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=R0619_mgp06
+NC_083272.1	RefSeq	CDS	11222	12205	.	+	0	ID=cds-YP_010963406.1;Parent=gene-R0619_mgp06;Dbxref=GenBank:YP_010963406.1,GeneID:85190809;Name=YP_010963406.1;gbkey=CDS;gene=ND1;locus_tag=R0619_mgp06;product=NADH dehydrogenase subunit 1;protein_id=YP_010963406.1;transl_table=4
+NC_083272.1	RefSeq	gene	12316	13473	.	+	.	ID=gene-R0619_mgp05;Dbxref=GeneID:85190801;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=R0619_mgp05
+NC_083272.1	RefSeq	CDS	12316	13473	.	+	0	ID=cds-YP_010963407.1;Parent=gene-R0619_mgp05;Dbxref=GenBank:YP_010963407.1,GeneID:85190801;Name=YP_010963407.1;gbkey=CDS;gene=CYTB;locus_tag=R0619_mgp05;product=cytochrome b;protein_id=YP_010963407.1;transl_table=4
+NC_083272.1	RefSeq	gene	13999	15096	.	+	.	ID=gene-R0619_mgp04;Dbxref=GeneID:85190802;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=R0619_mgp04
+NC_083272.1	RefSeq	CDS	13999	15096	.	+	0	ID=cds-YP_010963408.1;Parent=gene-R0619_mgp04;Dbxref=GenBank:YP_010963408.1,GeneID:85190802;Name=YP_010963408.1;gbkey=CDS;gene=ND2;locus_tag=R0619_mgp04;product=NADH dehydrogenase subunit 2;protein_id=YP_010963408.1;transl_table=4
+NC_083272.1	RefSeq	gene	15129	15722	.	+	.	ID=gene-R0619_mgp03;Dbxref=GeneID:85190803;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=R0619_mgp03
+NC_083272.1	RefSeq	CDS	15129	15722	.	+	0	ID=cds-YP_010963409.1;Parent=gene-R0619_mgp03;Dbxref=GenBank:YP_010963409.1,GeneID:85190803;Name=YP_010963409.1;gbkey=CDS;gene=ND6;locus_tag=R0619_mgp03;product=NADH dehydrogenase subunit 6;protein_id=YP_010963409.1;transl_table=4
+NC_083272.1	RefSeq	gene	15791	16489	.	+	.	ID=gene-R0619_mgp02;Dbxref=GeneID:85190804;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=R0619_mgp02
+NC_083272.1	RefSeq	CDS	15791	16489	.	+	0	ID=cds-YP_010963410.1;Parent=gene-R0619_mgp02;Dbxref=GenBank:YP_010963410.1,GeneID:85190804;Name=YP_010963410.1;gbkey=CDS;gene=ATP6;locus_tag=R0619_mgp02;product=ATP synthase F0 subunit 6;protein_id=YP_010963410.1;transl_table=4
+NC_083272.1	RefSeq	gene	16641	18116	.	+	.	ID=gene-R0619_mgp01;Dbxref=GeneID:85190805;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=R0619_mgp01
+NC_083272.1	RefSeq	CDS	16641	18116	.	+	0	ID=cds-YP_010963411.1;Parent=gene-R0619_mgp01;Dbxref=GenBank:YP_010963411.1,GeneID:85190805;Name=YP_010963411.1;gbkey=CDS;gene=ND4;locus_tag=R0619_mgp01;product=NADH dehydrogenase subunit 4;protein_id=YP_010963411.1;transl_table=4
+

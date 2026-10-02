@@ -1,0 +1,48 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PQ359434.1 1 17422
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46732
+PQ359434.1	Genbank	region	1	17422	.	+	.	ID=PQ359434.1:1..17422;Dbxref=taxon:46732;Is_circular=true;Name=MT;country=China;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+PQ359434.1	Genbank	gene	1	71	.	+	.	ID=gene-trnM(cat);Name=trnM(cat);gbkey=Gene;gene=trnM(cat);gene_biotype=tRNA
+PQ359434.1	Genbank	tRNA	1	71	.	+	.	ID=rna-trnM(cat);Parent=gene-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PQ359434.1	Genbank	exon	1	71	.	+	.	ID=exon-trnM(cat)-1;Parent=rna-trnM(cat);gbkey=tRNA;gene=trnM(cat);product=tRNA-Met
+PQ359434.1	Genbank	gene	72	1988	.	+	.	ID=gene-rrn16;Name=rrn16;gbkey=Gene;gene=rrn16;gene_biotype=rRNA
+PQ359434.1	Genbank	rRNA	72	1988	.	+	.	ID=rna-rrn16;Parent=gene-rrn16;gbkey=rRNA;gene=rrn16;product=16S ribosomal RNA
+PQ359434.1	Genbank	exon	72	1988	.	+	.	ID=exon-rrn16-1;Parent=rna-rrn16;gbkey=rRNA;gene=rrn16;product=16S ribosomal RNA
+PQ359434.1	Genbank	gene	1989	2699	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ359434.1	Genbank	gene	13563	14690	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	1989	2699	.	+	0	ID=cds-XHC79419.1;Parent=gene-ND5;Dbxref=NCBI_GP:XHC79419.1;Name=XHC79419.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XHC79419.1;transl_table=4
+PQ359434.1	Genbank	CDS	13563	14690	.	+	0	ID=cds-XHC79419.1;Parent=gene-ND5;Dbxref=NCBI_GP:XHC79419.1;Name=XHC79419.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XHC79419.1;transl_table=4
+PQ359434.1	Genbank	intron	2700	13562	.	+	.	ID=id-PQ359434.1:2700..13562;Note=group I intron;gbkey=intron
+PQ359434.1	Genbank	gene	2824	3801	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	2824	3801	.	+	0	ID=cds-XHC79420.1;Parent=gene-ND1;Dbxref=NCBI_GP:XHC79420.1;Name=XHC79420.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XHC79420.1;transl_table=4
+PQ359434.1	Genbank	gene	3853	4992	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	3853	4992	.	+	0	ID=cds-XHC79421.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XHC79421.1;Name=XHC79421.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XHC79421.1;transl_table=4
+PQ359434.1	Genbank	gene	4997	6304	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	4997	6304	.	+	0	ID=cds-XHC79422.1;Parent=gene-ND2;Dbxref=NCBI_GP:XHC79422.1;Name=XHC79422.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XHC79422.1;transl_table=4
+PQ359434.1	Genbank	gene	6306	6869	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	6306	6869	.	+	0	ID=cds-XHC79423.1;Parent=gene-ND6;Dbxref=NCBI_GP:XHC79423.1;Name=XHC79423.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XHC79423.1;transl_table=4
+PQ359434.1	Genbank	gene	6869	7546	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	6869	7546	.	+	0	ID=cds-XHC79424.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XHC79424.1;Name=XHC79424.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XHC79424.1;transl_table=4
+PQ359434.1	Genbank	gene	8937	10382	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	8937	10382	.	+	0	ID=cds-XHC79425.1;Parent=gene-ND4;Dbxref=NCBI_GP:XHC79425.1;Name=XHC79425.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XHC79425.1;transl_table=4
+PQ359434.1	Genbank	gene	10383	11291	.	+	.	ID=gene-rrn12;Name=rrn12;gbkey=Gene;gene=rrn12;gene_biotype=rRNA
+PQ359434.1	Genbank	rRNA	10383	11291	.	+	.	ID=rna-rrn12;Parent=gene-rrn12;gbkey=rRNA;gene=rrn12;product=12S ribosomal RNA
+PQ359434.1	Genbank	exon	10383	11291	.	+	.	ID=exon-rrn12-1;Parent=rna-rrn12;gbkey=rRNA;gene=rrn12;product=12S ribosomal RNA
+PQ359434.1	Genbank	gene	11292	12071	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	11292	12071	.	+	0	ID=cds-XHC79426.1;Parent=gene-COX3;Dbxref=NCBI_GP:XHC79426.1;Name=XHC79426.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XHC79426.1;transl_table=4
+PQ359434.1	Genbank	gene	12083	12883	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	12083	12883	.	+	0	ID=cds-XHC79427.1;Parent=gene-COX2;Dbxref=NCBI_GP:XHC79427.1;Name=XHC79427.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XHC79427.1;transl_table=4
+PQ359434.1	Genbank	gene	12865	13164	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	12865	13164	.	+	0	ID=cds-XHC79428.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XHC79428.1;Name=XHC79428.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XHC79428.1;transl_table=4
+PQ359434.1	Genbank	gene	13164	13508	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	13164	13508	.	+	0	ID=cds-XHC79429.1;Parent=gene-ND3;Dbxref=NCBI_GP:XHC79429.1;Name=XHC79429.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XHC79429.1;transl_table=4
+PQ359434.1	Genbank	gene	14703	14772	.	+	.	ID=gene-trnW(tca);Name=trnW(tca);gbkey=Gene;gene=trnW(tca);gene_biotype=tRNA
+PQ359434.1	Genbank	tRNA	14703	14772	.	+	.	ID=rna-trnW(tca);Parent=gene-trnW(tca);gbkey=tRNA;gene=trnW(tca);product=tRNA-Trp
+PQ359434.1	Genbank	exon	14703	14772	.	+	.	ID=exon-trnW(tca)-1;Parent=rna-trnW(tca);gbkey=tRNA;gene=trnW(tca);product=tRNA-Trp
+PQ359434.1	Genbank	gene	14774	14986	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	14774	14986	.	+	0	ID=cds-XHC79430.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XHC79430.1;Name=XHC79430.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XHC79430.1;transl_table=4
+PQ359434.1	Genbank	gene	15836	17395	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PQ359434.1	Genbank	CDS	15836	17395	.	+	0	ID=cds-XHC79431.1;Parent=gene-COX1;Dbxref=NCBI_GP:XHC79431.1;Name=XHC79431.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XHC79431.1;transl_table=4
+

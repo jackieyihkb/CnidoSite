@@ -1,0 +1,14 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region KJ452783.1 1 2578
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1193083
+KJ452783.1	Genbank	region	1	2578	.	+	.	ID=KJ452783.1:1..2578;Dbxref=taxon:1193083;Is_circular=true;Name=8;chromosome=8;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;old-name=Alatina moseri
+KJ452783.1	Genbank	inverted_repeat	1	576	.	-	.	ID=id-KJ452783.1:1..576;Note=telomere;gbkey=repeat_region;rpt_type=inverted
+KJ452783.1	Genbank	gene	606	1763	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+KJ452783.1	Genbank	CDS	606	1763	.	+	0	ID=cds-AHV78103.1;Parent=gene-cob;Dbxref=NCBI_GP:AHV78103.1;Name=AHV78103.1;gbkey=CDS;gene=cob;product=cytochrome b;protein_id=AHV78103.1;transl_table=4
+KJ452783.1	Genbank	gene	1875	1944	.	+	.	ID=gene-trnM;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA
+KJ452783.1	Genbank	tRNA	1875	1944	.	+	.	ID=rna-trnM;Parent=gene-trnM;codons=AUG;gbkey=tRNA;gene=trnM;product=tRNA-Met
+KJ452783.1	Genbank	exon	1875	1944	.	+	.	ID=exon-trnM-1;Parent=rna-trnM;codons=AUG;gbkey=tRNA;gene=trnM;product=tRNA-Met
+KJ452783.1	Genbank	inverted_repeat	1998	2578	.	+	.	ID=id-KJ452783.1:1998..2578;Note=telomere;gbkey=repeat_region;rpt_type=inverted
+

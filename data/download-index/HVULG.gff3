@@ -1,0 +1,30 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_011221.1 1 7686
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6087
+NC_011221.1	RefSeq	region	1	7686	.	+	.	ID=NC_011221.1:1..7686;Dbxref=taxon:6087;Name=2;chromosome=2;common=hydra;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;old-name=Hydra magnipapillata
+NC_011221.1	RefSeq	repeat_region	1	191	.	+	.	ID=id-NC_011221.1:1..191;gbkey=repeat_region;rpt_type=terminal
+NC_011221.1	RefSeq	pseudogene	138	191	.	-	.	ID=gene-KEG85_p01;Dbxref=GeneID:6904235;Name=COX1;Note=3' end;end_range=191,.;gbkey=Gene;gene=COX1;gene_biotype=pseudogene;locus_tag=KEG85_p01;partial=true;pseudo=true
+NC_011221.1	RefSeq	gene	232	302	.	+	.	ID=gene-KEG85_t01;Dbxref=GeneID:64987955;Name=KEG85_t01;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEG85_t01
+NC_011221.1	RefSeq	tRNA	232	302	.	+	.	ID=rna-KEG85_t01;Parent=gene-KEG85_t01;Dbxref=GeneID:64987955;Note=trnM;codons=AUG;gbkey=tRNA;locus_tag=KEG85_t01;product=tRNA-Met
+NC_011221.1	RefSeq	exon	232	302	.	+	.	ID=exon-KEG85_t01-1;Parent=rna-KEG85_t01;Dbxref=GeneID:64987955;Note=trnM;codons=AUG;gbkey=tRNA;locus_tag=KEG85_t01;product=tRNA-Met
+NC_011221.1	RefSeq	gene	307	1207	.	+	.	ID=gene-KEG85_r01;Dbxref=GeneID:64987956;Name=KEG85_r01;gbkey=Gene;gene_biotype=rRNA;locus_tag=KEG85_r01
+NC_011221.1	RefSeq	rRNA	307	1207	.	+	.	ID=rna-KEG85_r01;Parent=gene-KEG85_r01;Dbxref=GeneID:64987956;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=KEG85_r01;product=s-rRNA
+NC_011221.1	RefSeq	exon	307	1207	.	+	.	ID=exon-KEG85_r01-1;Parent=rna-KEG85_r01;Dbxref=GeneID:64987956;Note=12S ribosomal RNA;gbkey=rRNA;locus_tag=KEG85_r01;product=s-rRNA
+NC_011221.1	RefSeq	gene	1208	1765	.	+	.	ID=gene-KEG85_p08;Dbxref=GeneID:6904236;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=KEG85_p08
+NC_011221.1	RefSeq	CDS	1208	1765	.	+	0	ID=cds-YP_002221532.1;Parent=gene-KEG85_p08;Dbxref=GenBank:YP_002221532.1,GeneID:6904236;Name=YP_002221532.1;gbkey=CDS;gene=ND6;locus_tag=KEG85_p08;product=NADH dehydrogenase subunit 6;protein_id=YP_002221532.1;transl_table=4
+NC_011221.1	RefSeq	gene	1756	2103	.	+	.	ID=gene-KEG85_p07;Dbxref=GeneID:6904242;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=KEG85_p07
+NC_011221.1	RefSeq	CDS	1756	2103	.	+	0	ID=cds-YP_002221533.1;Parent=gene-KEG85_p07;Dbxref=GenBank:YP_002221533.1,GeneID:6904242;Name=YP_002221533.1;gbkey=CDS;gene=ND3;locus_tag=KEG85_p07;product=NADH dehydrogenase subunit 3;protein_id=YP_002221533.1;transl_table=4
+NC_011221.1	RefSeq	gene	2103	2402	.	+	.	ID=gene-KEG85_p06;Dbxref=GeneID:6904239;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=KEG85_p06
+NC_011221.1	RefSeq	CDS	2103	2402	.	+	0	ID=cds-YP_002221534.1;Parent=gene-KEG85_p06;Dbxref=GenBank:YP_002221534.1,GeneID:6904239;Name=YP_002221534.1;gbkey=CDS;gene=ND4L;locus_tag=KEG85_p06;product=NADH dehydrogenase subunit 4L;protein_id=YP_002221534.1;transl_table=4
+NC_011221.1	RefSeq	gene	2402	3391	.	+	.	ID=gene-KEG85_p05;Dbxref=GeneID:6904241;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=KEG85_p05
+NC_011221.1	RefSeq	CDS	2402	3391	.	+	0	ID=cds-YP_002221535.1;Parent=gene-KEG85_p05;Dbxref=GenBank:YP_002221535.1,GeneID:6904241;Name=YP_002221535.1;gbkey=CDS;gene=ND1;locus_tag=KEG85_p05;product=NADH dehydrogenase subunit 1;protein_id=YP_002221535.1;transl_table=4
+NC_011221.1	RefSeq	gene	3382	4836	.	+	.	ID=gene-KEG85_p04;Dbxref=GeneID:6904238;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=KEG85_p04
+NC_011221.1	RefSeq	CDS	3382	4836	.	+	0	ID=cds-YP_002221536.1;Parent=gene-KEG85_p04;Dbxref=GenBank:YP_002221536.1,GeneID:6904238;Name=YP_002221536.1;gbkey=CDS;gene=ND4;locus_tag=KEG85_p04;product=NADH dehydrogenase subunit 4;protein_id=YP_002221536.1;transl_table=4
+NC_011221.1	RefSeq	gene	4836	5984	.	+	.	ID=gene-KEG85_p03;Dbxref=GeneID:6904240;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=KEG85_p03
+NC_011221.1	RefSeq	CDS	4836	5984	.	+	0	ID=cds-YP_002221537.1;Parent=gene-KEG85_p03;Dbxref=GenBank:YP_002221537.1,GeneID:6904240;Name=YP_002221537.1;gbkey=CDS;gene=CYTB;locus_tag=KEG85_p03;product=cytochrome b;protein_id=YP_002221537.1;transl_table=4
+NC_011221.1	RefSeq	gene	5977	7545	.	+	.	ID=gene-KEG85_p02;Dbxref=GeneID:6904237;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=KEG85_p02
+NC_011221.1	RefSeq	CDS	5977	7545	.	+	0	ID=cds-YP_002221538.1;Parent=gene-KEG85_p02;Dbxref=GenBank:YP_002221538.1,GeneID:6904237;Name=YP_002221538.1;gbkey=CDS;gene=COX1;locus_tag=KEG85_p02;product=cytochrome c oxidase subunit I;protein_id=YP_002221538.1;transl_table=4
+NC_011221.1	RefSeq	repeat_region	7492	7686	.	+	.	ID=id-NC_011221.1:7492..7686;gbkey=repeat_region;rpt_type=terminal
+

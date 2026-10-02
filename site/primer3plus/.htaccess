@@ -1,0 +1,19 @@
+# ---------------------------------------------------------------------------
+# 让 primer3.html 由 PHP 解析。
+#
+# Primer Design 页面从「iframe 引用外部 primer3plus.com」改成了本站自己调用
+# primer3_core 的原生页面，但文件名必须保持 primer3.html：站点里有 74 个文件
+# 把这个 URL 硬编码在导航栏里（每个页面各带一份自己的导航 HTML，没有共享
+# include），改文件名意味着同时改 74 个文件。
+#
+# 也不能用 mod_rewrite 做内部改写：mod_rewrite 模块文件虽在
+# （/usr/lib/apache2/modules/mod_rewrite.so），但并没有 enable，enable 需要
+# root。SetHandler 属于 AllowOverride All 覆盖的 FileInfo 范围，无需 root 即可
+# 生效，所以走这条路。
+#
+# <Files> 只匹配这一个文件，同目录下的其它 .html（例如 test-form.html、以及
+# client/src/ 里上游自带的那批 html）不受影响，仍然按静态文件发送。
+# ---------------------------------------------------------------------------
+<Files "primer3.html">
+    SetHandler application/x-httpd-php
+</Files>

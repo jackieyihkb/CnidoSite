@@ -1,0 +1,42 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region MW588805.1 1 19267
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=396355
+MW588805.1	Genbank	region	1	19267	.	+	.	ID=MW588805.1:1..19267;Dbxref=taxon:396355;Is_circular=true;Name=MT;collected-by=Jamie Stevens;collection-date=18-Aug-2009;country=United Kingdom: England%2C Lyme Bay%2C East Tennants Reef;gbkey=Src;genome=mitochondrion;isolate=Eten04;isolation-source=Marine;lat-lon=50.652917 N 2.87515 W;mol_type=genomic DNA
+MW588805.1	Genbank	gene	1	1597	.	+	.	ID=gene-cox1;Name=cox1;gbkey=Gene;gene=cox1;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	1	1597	.	+	0	ID=cds-QXN53183.1;Parent=gene-cox1;Dbxref=NCBI_GP:QXN53183.1;Name=QXN53183.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=cox1;product=cytochrome c oxidase subunit I;protein_id=QXN53183.1;transl_except=(pos:1597%2Caa:TERM);transl_table=4
+MW588805.1	Genbank	rRNA	1749	2674	.	+	.	ID=rna-MW588805.1:1749..2674;gbkey=rRNA;product=12S ribosomal RNA
+MW588805.1	Genbank	exon	1749	2674	.	+	.	ID=exon-MW588805.1:1749..2674-1;Parent=rna-MW588805.1:1749..2674;gbkey=rRNA;product=12S ribosomal RNA
+MW588805.1	Genbank	gene	2679	3650	.	+	.	ID=gene-nad1;Name=nad1;gbkey=Gene;gene=nad1;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	2679	3650	.	+	0	ID=cds-QXN53184.1;Parent=gene-nad1;Dbxref=NCBI_GP:QXN53184.1;Name=QXN53184.1;gbkey=CDS;gene=nad1;product=NADH dehydrogenase subunit 1;protein_id=QXN53184.1;transl_table=4
+MW588805.1	Genbank	gene	3712	4872	.	+	.	ID=gene-cytb;Name=cytb;gbkey=Gene;gene=cytb;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	3712	4872	.	+	0	ID=cds-QXN53185.1;Parent=gene-cytb;Dbxref=NCBI_GP:QXN53185.1;Name=QXN53185.1;gbkey=CDS;gene=cytb;product=cytochrome b;protein_id=QXN53185.1;transl_table=4
+MW588805.1	Genbank	gene	4913	5470	.	+	.	ID=gene-nad6;Name=nad6;gbkey=Gene;gene=nad6;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	4913	5470	.	+	0	ID=cds-QXN53186.1;Parent=gene-nad6;Dbxref=NCBI_GP:QXN53186.1;Name=QXN53186.1;gbkey=CDS;gene=nad6;product=NADH dehydrogenase subunit 6;protein_id=QXN53186.1;transl_table=4
+MW588805.1	Genbank	gene	5514	5873	.	+	.	ID=gene-nad3;Name=nad3;gbkey=Gene;gene=nad3;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	5514	5873	.	+	0	ID=cds-QXN53187.1;Parent=gene-nad3;Dbxref=NCBI_GP:QXN53187.1;Name=QXN53187.1;gbkey=CDS;gene=nad3;product=NADH dehydrogenase subunit 3;protein_id=QXN53187.1;transl_table=4
+MW588805.1	Genbank	gene	5886	6179	.	+	.	ID=gene-nad4l;Name=nad4l;gbkey=Gene;gene=nad4l;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	5886	6179	.	+	0	ID=cds-QXN53188.1;Parent=gene-nad4l;Dbxref=NCBI_GP:QXN53188.1;Name=QXN53188.1;gbkey=CDS;gene=nad4l;product=NADH dehydrogenase subunit 4L;protein_id=QXN53188.1;transl_table=4
+MW588805.1	Genbank	gene	6193	9150	.	+	.	ID=gene-muts;Name=muts;gbkey=Gene;gene=muts;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	6193	9150	.	+	0	ID=cds-QXN53189.1;Parent=gene-muts;Dbxref=NCBI_GP:QXN53189.1;Name=QXN53189.1;gbkey=CDS;gene=muts;product=MutS-like protein;protein_id=QXN53189.1;transl_table=4
+MW588805.1	Genbank	gene	9160	11342	.	+	.	ID=gene-rrnL;Name=rrnL;gbkey=Gene;gene=rrnL;gene_biotype=rRNA
+MW588805.1	Genbank	rRNA	9160	11342	.	+	.	ID=rna-rrnL;Parent=gene-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+MW588805.1	Genbank	exon	9160	11342	.	+	.	ID=exon-rrnL-1;Parent=rna-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+MW588805.1	Genbank	gene	11347	12504	.	+	.	ID=gene-nad2;Name=nad2;gbkey=Gene;gene=nad2;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	11347	12504	.	+	0	ID=cds-QXN53190.1;Parent=gene-nad2;Dbxref=NCBI_GP:QXN53190.1;Name=QXN53190.1;gbkey=CDS;gene=nad2;product=NADH dehydrogenase subunit 2;protein_id=QXN53190.1;transl_table=4
+MW588805.1	Genbank	gene	12492	14309	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	12492	14309	.	+	0	ID=cds-QXN53191.1;Parent=gene-nad5;Dbxref=NCBI_GP:QXN53191.1;Name=QXN53191.1;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=QXN53191.1;transl_table=4
+MW588805.1	Genbank	gene	14960	16408	.	+	.	ID=gene-nad4;Name=nad4;gbkey=Gene;gene=nad4;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	14960	16408	.	+	0	ID=cds-QXN53192.1;Parent=gene-nad4;Dbxref=NCBI_GP:QXN53192.1;Name=QXN53192.1;gbkey=CDS;gene=nad4;product=NADH dehydrogenase subunit 4;protein_id=QXN53192.1;transl_table=4
+MW588805.1	Genbank	tRNA	16466	16532	.	+	.	ID=rna-MW588805.1:16466..16532;gbkey=tRNA;product=tRNA-Met
+MW588805.1	Genbank	exon	16466	16532	.	+	.	ID=exon-MW588805.1:16466..16532-1;Parent=rna-MW588805.1:16466..16532;gbkey=tRNA;product=tRNA-Met
+MW588805.1	Genbank	gene	16576	17361	.	-	.	ID=gene-cox3;Name=cox3;gbkey=Gene;gene=cox3;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	16576	17361	.	-	0	ID=cds-QXN53193.1;Parent=gene-cox3;Dbxref=NCBI_GP:QXN53193.1;Name=QXN53193.1;gbkey=CDS;gene=cox3;product=cytochrome c oxidase subunit III;protein_id=QXN53193.1;transl_table=4
+MW588805.1	Genbank	gene	17426	18133	.	-	.	ID=gene-atp6;Name=atp6;gbkey=Gene;gene=atp6;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	17426	18133	.	-	0	ID=cds-QXN53194.1;Parent=gene-atp6;Dbxref=NCBI_GP:QXN53194.1;Name=QXN53194.1;gbkey=CDS;gene=atp6;product=ATP synthase subunit 6;protein_id=QXN53194.1;transl_table=4
+MW588805.1	Genbank	gene	18156	18371	.	-	.	ID=gene-atp8;Name=atp8;gbkey=Gene;gene=atp8;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	18156	18371	.	-	0	ID=cds-QXN53195.1;Parent=gene-atp8;Dbxref=NCBI_GP:QXN53195.1;Name=QXN53195.1;gbkey=CDS;gene=atp8;product=ATP synthase subunit 8;protein_id=QXN53195.1;transl_table=4
+MW588805.1	Genbank	gene	18394	19155	.	-	.	ID=gene-cox2;Name=cox2;gbkey=Gene;gene=cox2;gene_biotype=protein_coding
+MW588805.1	Genbank	CDS	18394	19155	.	-	0	ID=cds-QXN53196.1;Parent=gene-cox2;Dbxref=NCBI_GP:QXN53196.1;Name=QXN53196.1;gbkey=CDS;gene=cox2;product=cytochrome c oxidase subunit II;protein_id=QXN53196.1;transl_table=4
+

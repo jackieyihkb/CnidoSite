@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_035579.1 1 20841
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=334445
+NC_035579.1	RefSeq	region	1	20841	.	+	.	ID=NC_035579.1:1..20841;Dbxref=taxon:334445;Is_circular=true;Name=MT;country=Norway;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_035579.1	RefSeq	gene	154	4093	.	+	.	ID=gene-CKM26_mgp01;Dbxref=GeneID:33875119;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=CKM26_mgp01
+NC_035579.1	RefSeq	CDS	154	885	.	+	0	ID=cds-YP_009413546.1;Parent=gene-CKM26_mgp01;Dbxref=GenBank:YP_009413546.1,GeneID:33875119;Name=YP_009413546.1;gbkey=CDS;gene=ND5;locus_tag=CKM26_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009413546.1;transl_table=4
+NC_035579.1	RefSeq	CDS	2963	4093	.	+	0	ID=cds-YP_009413546.1;Parent=gene-CKM26_mgp01;Dbxref=GenBank:YP_009413546.1,GeneID:33875119;Name=YP_009413546.1;gbkey=CDS;gene=ND5;locus_tag=CKM26_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009413546.1;transl_table=4
+NC_035579.1	RefSeq	exon	154	885	.	+	.	ID=id-CKM26_mgp01-1;Parent=gene-CKM26_mgp01;Dbxref=GeneID:33875119;exon_number=1;gbkey=exon;gene=ND5;locus_tag=CKM26_mgp01;number=1
+NC_035579.1	RefSeq	exon	2963	4093	.	+	.	ID=id-CKM26_mgp01-2;Parent=gene-CKM26_mgp01;Dbxref=GeneID:33875119;exon_number=2;gbkey=exon;gene=ND5;locus_tag=CKM26_mgp01;number=2
+NC_035579.1	RefSeq	intron	886	2962	.	+	.	ID=id-CKM26_mgp01;Parent=gene-CKM26_mgp01;Dbxref=GeneID:33875119;Note=group 1 intron;gbkey=intron;gene=ND5;locus_tag=CKM26_mgp01
+NC_035579.1	RefSeq	gene	1194	2204	.	+	.	ID=gene-CKM26_mgp02;Dbxref=GeneID:33875104;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=CKM26_mgp02
+NC_035579.1	RefSeq	CDS	1194	2204	.	+	0	ID=cds-YP_009413547.1;Parent=gene-CKM26_mgp02;Dbxref=GenBank:YP_009413547.1,GeneID:33875104;Name=YP_009413547.1;gbkey=CDS;gene=ND1;locus_tag=CKM26_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009413547.1;transl_table=4
+NC_035579.1	RefSeq	gene	2431	2787	.	+	.	ID=gene-CKM26_mgp03;Dbxref=GeneID:33875105;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=CKM26_mgp03
+NC_035579.1	RefSeq	CDS	2431	2787	.	+	0	ID=cds-YP_009413548.1;Parent=gene-CKM26_mgp03;Dbxref=GenBank:YP_009413548.1,GeneID:33875105;Name=YP_009413548.1;gbkey=CDS;gene=ND3;locus_tag=CKM26_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009413548.1;transl_table=4
+NC_035579.1	RefSeq	gene	4973	5725	.	+	.	ID=gene-CKM26_mgp04;Dbxref=GeneID:33875106;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;gene_synonym=COII;locus_tag=CKM26_mgp04
+NC_035579.1	RefSeq	CDS	4973	5725	.	+	0	ID=cds-YP_009413549.1;Parent=gene-CKM26_mgp04;Dbxref=GenBank:YP_009413549.1,GeneID:33875106;Name=YP_009413549.1;gbkey=CDS;gene=COX2;locus_tag=CKM26_mgp04;product=cytochrome c oxidase subunit II;protein_id=YP_009413549.1;transl_table=4
+NC_035579.1	RefSeq	gene	6042	7514	.	+	.	ID=gene-CKM26_mgp05;Dbxref=GeneID:33875107;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=CKM26_mgp05
+NC_035579.1	RefSeq	CDS	6042	7514	.	+	0	ID=cds-YP_009413550.1;Parent=gene-CKM26_mgp05;Dbxref=GenBank:YP_009413550.1,GeneID:33875107;Name=YP_009413550.1;gbkey=CDS;gene=ND4;locus_tag=CKM26_mgp05;product=NADH dehydrogenase subunit 4;protein_id=YP_009413550.1;transl_table=4
+NC_035579.1	RefSeq	gene	7603	8268	.	+	.	ID=gene-CKM26_mgp06;Dbxref=GeneID:33875108;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=CKM26_mgp06
+NC_035579.1	RefSeq	CDS	7603	8268	.	+	0	ID=cds-YP_009413551.1;Parent=gene-CKM26_mgp06;Dbxref=GenBank:YP_009413551.1,GeneID:33875108;Name=YP_009413551.1;gbkey=CDS;gene=ND6;locus_tag=CKM26_mgp06;product=NADH dehydrogenase subunit 6;protein_id=YP_009413551.1;transl_table=4
+NC_035579.1	RefSeq	gene	8396	9583	.	+	.	ID=gene-CKM26_mgp07;Dbxref=GeneID:33875109;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=CKM26_mgp07
+NC_035579.1	RefSeq	CDS	8396	9583	.	+	0	ID=cds-YP_009413552.1;Parent=gene-CKM26_mgp07;Dbxref=GenBank:YP_009413552.1,GeneID:33875109;Name=YP_009413552.1;gbkey=CDS;gene=CYTB;locus_tag=CKM26_mgp07;product=cytochrome b;protein_id=YP_009413552.1;transl_table=4
+NC_035579.1	RefSeq	gene	9656	10444	.	+	.	ID=gene-CKM26_mgp08;Dbxref=GeneID:33875110;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;gene_synonym=COIII;locus_tag=CKM26_mgp08
+NC_035579.1	RefSeq	CDS	9656	10444	.	+	0	ID=cds-YP_009413553.1;Parent=gene-CKM26_mgp08;Dbxref=GenBank:YP_009413553.1,GeneID:33875110;Name=YP_009413553.1;gbkey=CDS;gene=COX3;locus_tag=CKM26_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_009413553.1;transl_table=4
+NC_035579.1	RefSeq	gene	10522	13396	.	+	.	ID=gene-CKM26_mgp09;Dbxref=GeneID:33875111;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;gene_synonym=COI;locus_tag=CKM26_mgp09
+NC_035579.1	RefSeq	CDS	10522	11409	.	+	0	ID=cds-YP_009413554.1;Parent=gene-CKM26_mgp09;Dbxref=GenBank:YP_009413554.1,GeneID:33875111;Name=YP_009413554.1;gbkey=CDS;gene=COX1;locus_tag=CKM26_mgp09;product=cytochrome c oxidase subunit I;protein_id=YP_009413554.1;transl_table=4
+NC_035579.1	RefSeq	CDS	12686	13396	.	+	0	ID=cds-YP_009413554.1;Parent=gene-CKM26_mgp09;Dbxref=GenBank:YP_009413554.1,GeneID:33875111;Name=YP_009413554.1;gbkey=CDS;gene=COX1;locus_tag=CKM26_mgp09;product=cytochrome c oxidase subunit I;protein_id=YP_009413554.1;transl_table=4
+NC_035579.1	RefSeq	exon	10522	11409	.	+	.	ID=id-CKM26_mgp09-1;Parent=gene-CKM26_mgp09;Dbxref=GeneID:33875111;exon_number=1;gbkey=exon;gene=COX1;locus_tag=CKM26_mgp09;number=1
+NC_035579.1	RefSeq	intron	11410	12685	.	+	.	ID=id-CKM26_mgp09;Parent=gene-CKM26_mgp09;Dbxref=GeneID:33875111;Note=group 1 intron;gbkey=intron;gene=COX1;locus_tag=CKM26_mgp09
+NC_035579.1	RefSeq	gene	13456	13755	.	+	.	ID=gene-CKM26_mgp10;Dbxref=GeneID:33875112;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=CKM26_mgp10
+NC_035579.1	RefSeq	CDS	13456	13755	.	+	0	ID=cds-YP_009413555.1;Parent=gene-CKM26_mgp10;Dbxref=GenBank:YP_009413555.1,GeneID:33875112;Name=YP_009413555.1;gbkey=CDS;gene=ND4L;locus_tag=CKM26_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_009413555.1;transl_table=4
+NC_035579.1	RefSeq	gene	13862	14080	.	+	.	ID=gene-CKM26_mgp11;Dbxref=GeneID:33875113;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=CKM26_mgp11
+NC_035579.1	RefSeq	CDS	13862	14080	.	+	0	ID=cds-YP_009413556.1;Parent=gene-CKM26_mgp11;Dbxref=GenBank:YP_009413556.1,GeneID:33875113;Name=YP_009413556.1;gbkey=CDS;gene=ATP8;locus_tag=CKM26_mgp11;product=ATP synthase F0 subunit 8;protein_id=YP_009413556.1;transl_table=4
+NC_035579.1	RefSeq	gene	14284	14985	.	+	.	ID=gene-CKM26_mgp12;Dbxref=GeneID:33875114;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=CKM26_mgp12
+NC_035579.1	RefSeq	CDS	14284	14985	.	+	0	ID=cds-YP_009413557.1;Parent=gene-CKM26_mgp12;Dbxref=GenBank:YP_009413557.1,GeneID:33875114;Name=YP_009413557.1;gbkey=CDS;gene=ATP6;locus_tag=CKM26_mgp12;product=ATP synthase F0 subunit 6;protein_id=YP_009413557.1;transl_table=4
+NC_035579.1	RefSeq	gene	15113	16321	.	+	.	ID=gene-CKM26_mgr01;Dbxref=GeneID:33875115;Name=CKM26_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKM26_mgr01
+NC_035579.1	RefSeq	rRNA	15113	16321	.	+	.	ID=rna-CKM26_mgr01;Parent=gene-CKM26_mgr01;Dbxref=GeneID:33875115;gbkey=rRNA;locus_tag=CKM26_mgr01;product=small subunit ribosomal RNA
+NC_035579.1	RefSeq	exon	15113	16321	.	+	.	ID=exon-CKM26_mgr01-1;Parent=rna-CKM26_mgr01;Dbxref=GeneID:33875115;gbkey=rRNA;locus_tag=CKM26_mgr01;product=small subunit ribosomal RNA
+NC_035579.1	RefSeq	gene	16844	18001	.	+	.	ID=gene-CKM26_mgp13;Dbxref=GeneID:33875118;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=CKM26_mgp13
+NC_035579.1	RefSeq	CDS	16844	18001	.	+	0	ID=cds-YP_009413558.1;Parent=gene-CKM26_mgp13;Dbxref=GenBank:YP_009413558.1,GeneID:33875118;Name=YP_009413558.1;gbkey=CDS;gene=ND2;locus_tag=CKM26_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_009413558.1;transl_table=4
+NC_035579.1	RefSeq	gene	18052	18122	.	+	.	ID=gene-CKM26_mgt01;Dbxref=GeneID:33875116;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=CKM26_mgt01
+NC_035579.1	RefSeq	tRNA	18052	18122	.	+	.	ID=rna-CKM26_mgt01;Parent=gene-CKM26_mgt01;Dbxref=GeneID:33875116;gbkey=tRNA;gene=trnM;locus_tag=CKM26_mgt01;product=tRNA-Met
+NC_035579.1	RefSeq	exon	18052	18122	.	+	.	ID=exon-CKM26_mgt01-1;Parent=rna-CKM26_mgt01;Dbxref=GeneID:33875116;gbkey=tRNA;gene=trnM;locus_tag=CKM26_mgt01;product=tRNA-Met
+NC_035579.1	RefSeq	gene	18149	20797	.	+	.	ID=gene-CKM26_mgr02;Dbxref=GeneID:33875117;Name=CKM26_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKM26_mgr02
+NC_035579.1	RefSeq	rRNA	18149	20797	.	+	.	ID=rna-CKM26_mgr02;Parent=gene-CKM26_mgr02;Dbxref=GeneID:33875117;gbkey=rRNA;locus_tag=CKM26_mgr02;product=large subunit ribosomal RNA
+NC_035579.1	RefSeq	exon	18149	20797	.	+	.	ID=exon-CKM26_mgr02-1;Parent=rna-CKM26_mgr02;Dbxref=GeneID:33875117;gbkey=rRNA;locus_tag=CKM26_mgr02;product=large subunit ribosomal RNA
+

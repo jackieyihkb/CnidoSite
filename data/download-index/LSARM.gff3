@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_035670.1 1 18722
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1502934
+NC_035670.1	RefSeq	region	1	18722	.	+	.	ID=NC_035670.1:1..18722;Dbxref=taxon:1502934;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=SNSB-BSPG 2015 XXXI GW4737
+NC_035670.1	RefSeq	gene	1	1597	.	+	.	ID=gene-CKX47_mgp01;Dbxref=GeneID:33904559;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=CKX47_mgp01
+NC_035670.1	RefSeq	CDS	1	1597	.	+	0	ID=cds-YP_009417108.1;Parent=gene-CKX47_mgp01;Dbxref=GenBank:YP_009417108.1,GeneID:33904559;Name=YP_009417108.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=COX1;locus_tag=CKX47_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009417108.1;transl_except=(pos:1597%2Caa:TERM);transl_table=4
+NC_035670.1	RefSeq	gene	1748	2673	.	+	.	ID=gene-CKX47_mgr01;Dbxref=GeneID:33904543;Name=CKX47_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKX47_mgr01
+NC_035670.1	RefSeq	rRNA	1748	2673	.	+	.	ID=rna-CKX47_mgr01;Parent=gene-CKX47_mgr01;Dbxref=GeneID:33904543;gbkey=rRNA;locus_tag=CKX47_mgr01;product=12S ribosomal RNA
+NC_035670.1	RefSeq	exon	1748	2673	.	+	.	ID=exon-CKX47_mgr01-1;Parent=rna-CKX47_mgr01;Dbxref=GeneID:33904543;gbkey=rRNA;locus_tag=CKX47_mgr01;product=12S ribosomal RNA
+NC_035670.1	RefSeq	gene	2678	3649	.	+	.	ID=gene-CKX47_mgp14;Dbxref=GeneID:33904556;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=CKX47_mgp14
+NC_035670.1	RefSeq	CDS	2678	3649	.	+	0	ID=cds-YP_009417109.1;Parent=gene-CKX47_mgp14;Dbxref=GenBank:YP_009417109.1,GeneID:33904556;Name=YP_009417109.1;gbkey=CDS;gene=ND1;locus_tag=CKX47_mgp14;product=NADH dehydrogenase subunit 1;protein_id=YP_009417109.1;transl_table=4
+NC_035670.1	RefSeq	gene	3705	4871	.	+	.	ID=gene-CKX47_mgp13;Dbxref=GeneID:33904544;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=CKX47_mgp13
+NC_035670.1	RefSeq	CDS	3705	4871	.	+	0	ID=cds-YP_009417110.1;Parent=gene-CKX47_mgp13;Dbxref=GenBank:YP_009417110.1,GeneID:33904544;Name=YP_009417110.1;gbkey=CDS;gene=CYTB;locus_tag=CKX47_mgp13;product=cytochrome b;protein_id=YP_009417110.1;transl_table=4
+NC_035670.1	RefSeq	gene	4912	5469	.	+	.	ID=gene-CKX47_mgp12;Dbxref=GeneID:33904545;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=CKX47_mgp12
+NC_035670.1	RefSeq	CDS	4912	5469	.	+	0	ID=cds-YP_009417111.1;Parent=gene-CKX47_mgp12;Dbxref=GenBank:YP_009417111.1,GeneID:33904545;Name=YP_009417111.1;gbkey=CDS;gene=ND6;locus_tag=CKX47_mgp12;product=NADH dehydrogenase subunit 6;protein_id=YP_009417111.1;transl_table=4
+NC_035670.1	RefSeq	gene	5513	5878	.	+	.	ID=gene-CKX47_mgp11;Dbxref=GeneID:33904546;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=CKX47_mgp11
+NC_035670.1	RefSeq	CDS	5513	5878	.	+	0	ID=cds-YP_009417112.1;Parent=gene-CKX47_mgp11;Dbxref=GenBank:YP_009417112.1,GeneID:33904546;Name=YP_009417112.1;gbkey=CDS;gene=ND3;locus_tag=CKX47_mgp11;product=NADH dehydrogenase subunit 3;protein_id=YP_009417112.1;transl_table=4
+NC_035670.1	RefSeq	gene	5898	6191	.	+	.	ID=gene-CKX47_mgp10;Dbxref=GeneID:33904547;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=CKX47_mgp10
+NC_035670.1	RefSeq	CDS	5898	6191	.	+	0	ID=cds-YP_009417113.1;Parent=gene-CKX47_mgp10;Dbxref=GenBank:YP_009417113.1,GeneID:33904547;Name=YP_009417113.1;gbkey=CDS;gene=ND4L;locus_tag=CKX47_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_009417113.1;transl_table=4
+NC_035670.1	RefSeq	gene	6205	9162	.	+	.	ID=gene-CKX47_mgp09;Dbxref=GeneID:33904548;Name=MutS;gbkey=Gene;gene=MutS;gene_biotype=protein_coding;locus_tag=CKX47_mgp09
+NC_035670.1	RefSeq	CDS	6205	9162	.	+	0	ID=cds-YP_009417114.1;Parent=gene-CKX47_mgp09;Dbxref=GenBank:YP_009417114.1,GeneID:33904548;Name=YP_009417114.1;gbkey=CDS;gene=MutS;locus_tag=CKX47_mgp09;product=MutS-like protein;protein_id=YP_009417114.1;transl_table=4
+NC_035670.1	RefSeq	gene	9172	11354	.	+	.	ID=gene-CKX47_mgr02;Dbxref=GeneID:33904549;Name=CKX47_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKX47_mgr02
+NC_035670.1	RefSeq	rRNA	9172	11354	.	+	.	ID=rna-CKX47_mgr02;Parent=gene-CKX47_mgr02;Dbxref=GeneID:33904549;gbkey=rRNA;locus_tag=CKX47_mgr02;product=16S ribosomal RNA
+NC_035670.1	RefSeq	exon	9172	11354	.	+	.	ID=exon-CKX47_mgr02-1;Parent=rna-CKX47_mgr02;Dbxref=GeneID:33904549;gbkey=rRNA;locus_tag=CKX47_mgr02;product=16S ribosomal RNA
+NC_035670.1	RefSeq	gene	11359	12516	.	+	.	ID=gene-CKX47_mgp08;Dbxref=GeneID:33904557;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=CKX47_mgp08
+NC_035670.1	RefSeq	CDS	11359	12516	.	+	0	ID=cds-YP_009417115.1;Parent=gene-CKX47_mgp08;Dbxref=GenBank:YP_009417115.1,GeneID:33904557;Name=YP_009417115.1;gbkey=CDS;gene=ND2;locus_tag=CKX47_mgp08;product=NADH dehydrogenase subunit 2;protein_id=YP_009417115.1;transl_table=4
+NC_035670.1	RefSeq	gene	12504	14321	.	+	.	ID=gene-CKX47_mgp07;Dbxref=GeneID:33904550;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=CKX47_mgp07
+NC_035670.1	RefSeq	CDS	12504	14321	.	+	0	ID=cds-YP_009417116.1;Parent=gene-CKX47_mgp07;Dbxref=GenBank:YP_009417116.1,GeneID:33904550;Name=YP_009417116.1;gbkey=CDS;gene=ND5;locus_tag=CKX47_mgp07;product=NADH dehydrogenase subunit 5;protein_id=YP_009417116.1;transl_table=4
+NC_035670.1	RefSeq	gene	14416	15864	.	+	.	ID=gene-CKX47_mgp06;Dbxref=GeneID:33904551;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=CKX47_mgp06
+NC_035670.1	RefSeq	CDS	14416	15864	.	+	0	ID=cds-YP_009417117.1;Parent=gene-CKX47_mgp06;Dbxref=GenBank:YP_009417117.1,GeneID:33904551;Name=YP_009417117.1;gbkey=CDS;gene=ND4;locus_tag=CKX47_mgp06;product=NADH dehydrogenase subunit 4;protein_id=YP_009417117.1;transl_table=4
+NC_035670.1	RefSeq	gene	15918	15988	.	-	.	ID=gene-CKX47_mgt01;Dbxref=GeneID:33904552;Name=CKX47_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=CKX47_mgt01
+NC_035670.1	RefSeq	tRNA	15918	15988	.	-	.	ID=rna-CKX47_mgt01;Parent=gene-CKX47_mgt01;Dbxref=GeneID:33904552;gbkey=tRNA;locus_tag=CKX47_mgt01;product=tRNA-Met
+NC_035670.1	RefSeq	exon	15918	15988	.	-	.	ID=exon-CKX47_mgt01-1;Parent=rna-CKX47_mgt01;Dbxref=GeneID:33904552;gbkey=tRNA;locus_tag=CKX47_mgt01;product=tRNA-Met
+NC_035670.1	RefSeq	gene	16028	16813	.	-	.	ID=gene-CKX47_mgp05;Dbxref=GeneID:33904558;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=CKX47_mgp05
+NC_035670.1	RefSeq	CDS	16028	16813	.	-	0	ID=cds-YP_009417118.1;Parent=gene-CKX47_mgp05;Dbxref=GenBank:YP_009417118.1,GeneID:33904558;Name=YP_009417118.1;gbkey=CDS;gene=COX3;locus_tag=CKX47_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_009417118.1;transl_table=4
+NC_035670.1	RefSeq	gene	16878	17585	.	-	.	ID=gene-CKX47_mgp04;Dbxref=GeneID:33904553;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=CKX47_mgp04
+NC_035670.1	RefSeq	CDS	16878	17585	.	-	0	ID=cds-YP_009417119.1;Parent=gene-CKX47_mgp04;Dbxref=GenBank:YP_009417119.1,GeneID:33904553;Name=YP_009417119.1;gbkey=CDS;gene=ATP6;locus_tag=CKX47_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009417119.1;transl_table=4
+NC_035670.1	RefSeq	gene	17610	17825	.	-	.	ID=gene-CKX47_mgp03;Dbxref=GeneID:33904554;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=CKX47_mgp03
+NC_035670.1	RefSeq	CDS	17610	17825	.	-	0	ID=cds-YP_009417120.1;Parent=gene-CKX47_mgp03;Dbxref=GenBank:YP_009417120.1,GeneID:33904554;Name=YP_009417120.1;gbkey=CDS;gene=ATP8;locus_tag=CKX47_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_009417120.1;transl_table=4
+NC_035670.1	RefSeq	gene	17848	18609	.	-	.	ID=gene-CKX47_mgp02;Dbxref=GeneID:33904555;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=CKX47_mgp02
+NC_035670.1	RefSeq	CDS	17848	18609	.	-	0	ID=cds-YP_009417121.1;Parent=gene-CKX47_mgp02;Dbxref=GenBank:YP_009417121.1,GeneID:33904555;Name=YP_009417121.1;gbkey=CDS;gene=COX2;locus_tag=CKX47_mgp02;product=cytochrome c oxidase subunit II;protein_id=YP_009417121.1;transl_table=4
+

@@ -1,0 +1,57 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_035740.1 1 17024
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=321803
+NC_035740.1	RefSeq	region	1	17024	.	+	.	ID=NC_035740.1:1..17024;Dbxref=taxon:321803;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_035740.1	RefSeq	gene	1620	2363	.	+	.	ID=gene-CK904_mgp02;Dbxref=GeneID:33911738;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=CK904_mgp02
+NC_035740.1	RefSeq	CDS	1620	2363	.	+	0	ID=cds-YP_009421311.1;Parent=gene-CK904_mgp02;Dbxref=GenBank:YP_009421311.1,GeneID:33911738;Name=YP_009421311.1;gbkey=CDS;gene=COX2;locus_tag=CK904_mgp02;product=cytochrome c oxidase subunit II;protein_id=YP_009421311.1;transl_table=4
+NC_035740.1	RefSeq	gene	2368	2437	.	+	.	ID=gene-CK904_mgt01;Dbxref=GeneID:33911739;Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA;locus_tag=CK904_mgt01
+NC_035740.1	RefSeq	tRNA	2368	2437	.	+	.	ID=rna-CK904_mgt01;Parent=gene-CK904_mgt01;Dbxref=GeneID:33911739;gbkey=tRNA;gene=trnW(uca);locus_tag=CK904_mgt01;product=tRNA-Trp
+NC_035740.1	RefSeq	exon	2368	2437	.	+	.	ID=exon-CK904_mgt01-1;Parent=rna-CK904_mgt01;Dbxref=GeneID:33911739;gbkey=tRNA;gene=trnW(uca);locus_tag=CK904_mgt01;product=tRNA-Trp
+NC_035740.1	RefSeq	gene	2443	2646	.	+	.	ID=gene-CK904_mgp13;Dbxref=GeneID:33911752;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=CK904_mgp13
+NC_035740.1	RefSeq	CDS	2443	2646	.	+	0	ID=cds-YP_009421312.1;Parent=gene-CK904_mgp13;Dbxref=GenBank:YP_009421312.1,GeneID:33911752;Name=YP_009421312.1;gbkey=CDS;gene=ATP8;locus_tag=CK904_mgp13;product=ATP synthase F0 subunit 8;protein_id=YP_009421312.1;transl_table=4
+NC_035740.1	RefSeq	gene	2649	3350	.	+	.	ID=gene-CK904_mgp12;Dbxref=GeneID:33911740;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=CK904_mgp12
+NC_035740.1	RefSeq	CDS	2649	3350	.	+	0	ID=cds-YP_009421313.1;Parent=gene-CK904_mgp12;Dbxref=GenBank:YP_009421313.1,GeneID:33911740;Name=YP_009421313.1;gbkey=CDS;gene=ATP6;locus_tag=CK904_mgp12;product=ATP synthase F0 subunit 6;protein_id=YP_009421313.1;transl_table=4
+NC_035740.1	RefSeq	gene	3351	4136	.	+	.	ID=gene-CK904_mgp11;Dbxref=GeneID:33911741;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=CK904_mgp11
+NC_035740.1	RefSeq	CDS	3351	4136	.	+	0	ID=cds-YP_009421314.1;Parent=gene-CK904_mgp11;Dbxref=GenBank:YP_009421314.1,GeneID:33911741;Name=YP_009421314.1;gbkey=CDS;gene=COX3;locus_tag=CK904_mgp11;product=cytochrome c oxidase subunit III;protein_id=YP_009421314.1;transl_table=4
+NC_035740.1	RefSeq	gene	4144	4214	.	+	.	ID=gene-CK904_mgt02;Dbxref=GeneID:33911742;Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA;locus_tag=CK904_mgt02
+NC_035740.1	RefSeq	tRNA	4144	4214	.	+	.	ID=rna-CK904_mgt02;Parent=gene-CK904_mgt02;Dbxref=GeneID:33911742;gbkey=tRNA;gene=trnM(cau);locus_tag=CK904_mgt02;product=tRNA-Met
+NC_035740.1	RefSeq	exon	4144	4214	.	+	.	ID=exon-CK904_mgt02-1;Parent=rna-CK904_mgt02;Dbxref=GeneID:33911742;gbkey=tRNA;gene=trnM(cau);locus_tag=CK904_mgt02;product=tRNA-Met
+NC_035740.1	RefSeq	gene	4241	4311	.	-	.	ID=gene-CK904_mgt03;Dbxref=GeneID:33911753;Name=trnV-uac;gbkey=Gene;gene=trnV-uac;gene_biotype=tRNA;locus_tag=CK904_mgt03
+NC_035740.1	RefSeq	tRNA	4241	4311	.	-	.	ID=rna-CK904_mgt03;Parent=gene-CK904_mgt03;Dbxref=GeneID:33911753;gbkey=tRNA;gene=trnV-uac;locus_tag=CK904_mgt03;product=tRNA-Val
+NC_035740.1	RefSeq	exon	4241	4311	.	-	.	ID=exon-CK904_mgt03-1;Parent=rna-CK904_mgt03;Dbxref=GeneID:33911753;gbkey=tRNA;gene=trnV-uac;locus_tag=CK904_mgt03;product=tRNA-Val
+NC_035740.1	RefSeq	gene	4456	5535	.	+	.	ID=gene-CK904_mgp10;Dbxref=GeneID:33911754;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=CK904_mgp10
+NC_035740.1	RefSeq	CDS	4456	5535	.	+	0	ID=cds-YP_009421315.1;Parent=gene-CK904_mgp10;Dbxref=GenBank:YP_009421315.1,GeneID:33911754;Name=YP_009421315.1;gbkey=CDS;gene=ND2;locus_tag=CK904_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_009421315.1;transl_table=4
+NC_035740.1	RefSeq	gene	5451	5509	.	+	.	ID=gene-CK904_mgt04;Dbxref=GeneID:33911743;Name=trnR-ucg;gbkey=Gene;gene=trnR-ucg;gene_biotype=tRNA;locus_tag=CK904_mgt04
+NC_035740.1	RefSeq	tRNA	5451	5509	.	+	.	ID=rna-CK904_mgt04;Parent=gene-CK904_mgt04;Dbxref=GeneID:33911743;gbkey=tRNA;gene=trnR-ucg;locus_tag=CK904_mgt04;product=tRNA-Arg
+NC_035740.1	RefSeq	exon	5451	5509	.	+	.	ID=exon-CK904_mgt04-1;Parent=rna-CK904_mgt04;Dbxref=GeneID:33911743;gbkey=tRNA;gene=trnR-ucg;locus_tag=CK904_mgt04;product=tRNA-Arg
+NC_035740.1	RefSeq	gene	5657	7354	.	+	.	ID=gene-CK904_mgp09;Dbxref=GeneID:33911755;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=CK904_mgp09
+NC_035740.1	RefSeq	CDS	5657	7354	.	+	0	ID=cds-YP_009421316.1;Parent=gene-CK904_mgp09;Dbxref=GenBank:YP_009421316.1,GeneID:33911755;Name=YP_009421316.1;gbkey=CDS;gene=ND5;locus_tag=CK904_mgp09;product=NADH dehydrogenase subunit 5;protein_id=YP_009421316.1;transl_table=4
+NC_035740.1	RefSeq	gene	7352	8279	.	+	.	ID=gene-CK904_mgr02;Dbxref=GeneID:33911744;Name=rrns;gbkey=Gene;gene=rrns;gene_biotype=rRNA;locus_tag=CK904_mgr02
+NC_035740.1	RefSeq	rRNA	7352	8279	.	+	.	ID=rna-CK904_mgr02;Parent=gene-CK904_mgr02;Dbxref=GeneID:33911744;gbkey=rRNA;gene=rrns;locus_tag=CK904_mgr02;product=small subunit ribosomal RNA
+NC_035740.1	RefSeq	exon	7352	8279	.	+	.	ID=exon-CK904_mgr02-1;Parent=rna-CK904_mgr02;Dbxref=GeneID:33911744;gbkey=rRNA;gene=rrns;locus_tag=CK904_mgr02;product=small subunit ribosomal RNA
+NC_035740.1	RefSeq	gene	8306	8833	.	+	.	ID=gene-CK904_mgp08;Dbxref=GeneID:33911751;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=CK904_mgp08
+NC_035740.1	RefSeq	CDS	8306	8833	.	+	0	ID=cds-YP_009421317.1;Parent=gene-CK904_mgp08;Dbxref=GenBank:YP_009421317.1,GeneID:33911751;Name=YP_009421317.1;gbkey=CDS;gene=ND6;locus_tag=CK904_mgp08;product=NADH dehydrogenase subunit 6;protein_id=YP_009421317.1;transl_table=4
+NC_035740.1	RefSeq	gene	8838	9173	.	+	.	ID=gene-CK904_mgp07;Dbxref=GeneID:33911745;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=CK904_mgp07
+NC_035740.1	RefSeq	CDS	8838	9173	.	+	0	ID=cds-YP_009421318.1;Parent=gene-CK904_mgp07;Dbxref=GenBank:YP_009421318.1,GeneID:33911745;Name=YP_009421318.1;gbkey=CDS;gene=ND3;locus_tag=CK904_mgp07;product=NADH dehydrogenase subunit 3;protein_id=YP_009421318.1;transl_table=4
+NC_035740.1	RefSeq	gene	9215	9466	.	+	.	ID=gene-CK904_mgp06;Dbxref=GeneID:33911746;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=CK904_mgp06
+NC_035740.1	RefSeq	CDS	9215	9466	.	+	0	ID=cds-YP_009421319.1;Parent=gene-CK904_mgp06;Dbxref=GenBank:YP_009421319.1,GeneID:33911746;Name=YP_009421319.1;gbkey=CDS;gene=ND4L;locus_tag=CK904_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_009421319.1;transl_table=4
+NC_035740.1	RefSeq	gene	9478	10437	.	+	.	ID=gene-CK904_mgp05;Dbxref=GeneID:33911747;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=CK904_mgp05
+NC_035740.1	RefSeq	CDS	9478	10437	.	+	0	ID=cds-YP_009421320.1;Parent=gene-CK904_mgp05;Dbxref=GenBank:YP_009421320.1,GeneID:33911747;Name=YP_009421320.1;gbkey=CDS;gene=ND1;locus_tag=CK904_mgp05;product=NADH dehydrogenase subunit 1;protein_id=YP_009421320.1;transl_table=4
+NC_035740.1	RefSeq	gene	10546	11877	.	+	.	ID=gene-CK904_mgp04;Dbxref=GeneID:33911748;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=CK904_mgp04
+NC_035740.1	RefSeq	CDS	10546	11877	.	+	0	ID=cds-YP_009421321.1;Parent=gene-CK904_mgp04;Dbxref=GenBank:YP_009421321.1,GeneID:33911748;Name=YP_009421321.1;gbkey=CDS;gene=ND4;locus_tag=CK904_mgp04;product=NADH dehydrogenase subunit 4;protein_id=YP_009421321.1;transl_table=4
+NC_035740.1	RefSeq	gene	11885	13015	.	+	.	ID=gene-CK904_mgp03;Dbxref=GeneID:33911749;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=CK904_mgp03
+NC_035740.1	RefSeq	CDS	11885	13015	.	+	0	ID=cds-YP_009421322.1;Parent=gene-CK904_mgp03;Dbxref=GenBank:YP_009421322.1,GeneID:33911749;Name=YP_009421322.1;Note=cytb;gbkey=CDS;gene=CYTB;locus_tag=CK904_mgp03;product=cytochrome b;protein_id=YP_009421322.1;transl_table=4
+NC_035740.1	RefSeq	gene	13900	13962	.	+	.	ID=gene-CK904_mgt05;Dbxref=GeneID:33911750;Name=trnE-uuc;gbkey=Gene;gene=trnE-uuc;gene_biotype=tRNA;locus_tag=CK904_mgt05
+NC_035740.1	RefSeq	tRNA	13900	13962	.	+	.	ID=rna-CK904_mgt05;Parent=gene-CK904_mgt05;Dbxref=GeneID:33911750;gbkey=tRNA;gene=trnE-uuc;locus_tag=CK904_mgt05;product=tRNA-Glu
+NC_035740.1	RefSeq	exon	13900	13962	.	+	.	ID=exon-CK904_mgt05-1;Parent=rna-CK904_mgt05;Dbxref=GeneID:33911750;gbkey=tRNA;gene=trnE-uuc;locus_tag=CK904_mgt05;product=tRNA-Glu
+NC_035740.1	RefSeq	gene	14918	14975	.	+	.	ID=gene-CK904_mgt06;Dbxref=GeneID:33911756;Name=trnN-auu;gbkey=Gene;gene=trnN-auu;gene_biotype=tRNA;locus_tag=CK904_mgt06
+NC_035740.1	RefSeq	tRNA	14918	14975	.	+	.	ID=rna-CK904_mgt06;Parent=gene-CK904_mgt06;Dbxref=GeneID:33911756;gbkey=tRNA;gene=trnN-auu;locus_tag=CK904_mgt06;product=tRNA-Asn
+NC_035740.1	RefSeq	exon	14918	14975	.	+	.	ID=exon-CK904_mgt06-1;Parent=rna-CK904_mgt06;Dbxref=GeneID:33911756;gbkey=tRNA;gene=trnN-auu;locus_tag=CK904_mgt06;product=tRNA-Asn
+NC_035740.1	RefSeq	gene	15186	16884	.	-	.	ID=gene-CK904_mgr01;Dbxref=GeneID:33911757;Name=rrnL;gbkey=Gene;gene=rrnL;gene_biotype=rRNA;locus_tag=CK904_mgr01
+NC_035740.1	RefSeq	rRNA	15186	16884	.	-	.	ID=rna-CK904_mgr01;Parent=gene-CK904_mgr01;Dbxref=GeneID:33911757;gbkey=rRNA;gene=rrnL;locus_tag=CK904_mgr01;product=large subunit ribosomal RNA
+NC_035740.1	RefSeq	exon	15186	16884	.	-	.	ID=exon-CK904_mgr01-1;Parent=rna-CK904_mgr01;Dbxref=GeneID:33911757;gbkey=rRNA;gene=rrnL;locus_tag=CK904_mgr01;product=large subunit ribosomal RNA
+NC_035740.1	RefSeq	gene	16980	18572	.	-	.	ID=gene-CK904_mgp01;Dbxref=GeneID:33911758;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=CK904_mgp01
+NC_035740.1	RefSeq	CDS	16980	18572	.	-	0	ID=cds-YP_009421310.1;Parent=gene-CK904_mgp01;Dbxref=GenBank:YP_009421310.1,GeneID:33911758;Name=YP_009421310.1;gbkey=CDS;gene=COX1;locus_tag=CK904_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009421310.1;transl_table=4
+

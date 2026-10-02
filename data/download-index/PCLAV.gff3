@@ -1,0 +1,44 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_034749.1 1 18669
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=317549
+NC_034749.1	RefSeq	region	1	18669	.	+	.	ID=NC_034749.1:1..18669;Dbxref=taxon:317549;Is_circular=true;Name=MT;country=Italy:island of Ustica%2C Mediterranean Sea;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=GW4701
+NC_034749.1	RefSeq	gene	1	1597	.	+	.	ID=gene-CCM02_mgp01;Dbxref=GeneID:32886071;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=CCM02_mgp01
+NC_034749.1	RefSeq	CDS	1	1597	.	+	0	ID=cds-YP_009368726.1;Parent=gene-CCM02_mgp01;Dbxref=GenBank:YP_009368726.1,GeneID:32886071;Name=YP_009368726.1;Note=TAA stop codon is completed by the addition of 3' A residues to the mRNA;gbkey=CDS;gene=COX1;locus_tag=CCM02_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009368726.1;transl_except=(pos:1597%2Caa:TERM);transl_table=4
+NC_034749.1	RefSeq	gene	1748	2672	.	+	.	ID=gene-CCM02_mgr01;Dbxref=GeneID:32886057;Name=CCM02_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=CCM02_mgr01
+NC_034749.1	RefSeq	rRNA	1748	2672	.	+	.	ID=rna-CCM02_mgr01;Parent=gene-CCM02_mgr01;Dbxref=GeneID:32886057;gbkey=rRNA;locus_tag=CCM02_mgr01;product=small subunit ribosomal RNA
+NC_034749.1	RefSeq	exon	1748	2672	.	+	.	ID=exon-CCM02_mgr01-1;Parent=rna-CCM02_mgr01;Dbxref=GeneID:32886057;gbkey=rRNA;locus_tag=CCM02_mgr01;product=small subunit ribosomal RNA
+NC_034749.1	RefSeq	gene	2677	3648	.	+	.	ID=gene-CCM02_mgp14;Dbxref=GeneID:32886069;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=CCM02_mgp14
+NC_034749.1	RefSeq	CDS	2677	3648	.	+	0	ID=cds-YP_009368727.1;Parent=gene-CCM02_mgp14;Dbxref=GenBank:YP_009368727.1,GeneID:32886069;Name=YP_009368727.1;gbkey=CDS;gene=ND1;locus_tag=CCM02_mgp14;product=NADH dehydrogenase subunit 1;protein_id=YP_009368727.1;transl_table=4
+NC_034749.1	RefSeq	gene	3682	4836	.	+	.	ID=gene-CCM02_mgp13;Dbxref=GeneID:32886061;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=CCM02_mgp13
+NC_034749.1	RefSeq	CDS	3682	4836	.	+	0	ID=cds-YP_009368728.1;Parent=gene-CCM02_mgp13;Dbxref=GenBank:YP_009368728.1,GeneID:32886061;Name=YP_009368728.1;gbkey=CDS;gene=CYTB;locus_tag=CCM02_mgp13;product=cytochrome b;protein_id=YP_009368728.1;transl_table=4
+NC_034749.1	RefSeq	gene	4850	5407	.	+	.	ID=gene-CCM02_mgp12;Dbxref=GeneID:32886059;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=CCM02_mgp12
+NC_034749.1	RefSeq	CDS	4850	5407	.	+	0	ID=cds-YP_009368729.1;Parent=gene-CCM02_mgp12;Dbxref=GenBank:YP_009368729.1,GeneID:32886059;Name=YP_009368729.1;gbkey=CDS;gene=ND6;locus_tag=CCM02_mgp12;product=NADH dehydrogenase subunit 6;protein_id=YP_009368729.1;transl_table=4
+NC_034749.1	RefSeq	gene	5451	5810	.	+	.	ID=gene-CCM02_mgp11;Dbxref=GeneID:32886067;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=CCM02_mgp11
+NC_034749.1	RefSeq	CDS	5451	5810	.	+	0	ID=cds-YP_009368730.1;Parent=gene-CCM02_mgp11;Dbxref=GenBank:YP_009368730.1,GeneID:32886067;Name=YP_009368730.1;gbkey=CDS;gene=ND3;locus_tag=CCM02_mgp11;product=NADH dehydrogenase subunit 3;protein_id=YP_009368730.1;transl_table=4
+NC_034749.1	RefSeq	gene	5823	6116	.	+	.	ID=gene-CCM02_mgp10;Dbxref=GeneID:32886063;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=CCM02_mgp10
+NC_034749.1	RefSeq	CDS	5823	6116	.	+	0	ID=cds-YP_009368731.1;Parent=gene-CCM02_mgp10;Dbxref=GenBank:YP_009368731.1,GeneID:32886063;Name=YP_009368731.1;gbkey=CDS;gene=ND4L;locus_tag=CCM02_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_009368731.1;transl_table=4
+NC_034749.1	RefSeq	gene	6130	9093	.	+	.	ID=gene-CCM02_mgp09;Dbxref=GeneID:32886065;Name=MUTS;gbkey=Gene;gene=MUTS;gene_biotype=protein_coding;locus_tag=CCM02_mgp09
+NC_034749.1	RefSeq	CDS	6130	9093	.	+	0	ID=cds-YP_009368732.1;Parent=gene-CCM02_mgp09;Dbxref=GenBank:YP_009368732.1,GeneID:32886065;Name=YP_009368732.1;gbkey=CDS;gene=MUTS;locus_tag=CCM02_mgp09;product=MutS-like protein;protein_id=YP_009368732.1;transl_table=4
+NC_034749.1	RefSeq	gene	9120	11298	.	+	.	ID=gene-CCM02_mgr02;Dbxref=GeneID:32886060;Name=CCM02_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=CCM02_mgr02
+NC_034749.1	RefSeq	rRNA	9120	11298	.	+	.	ID=rna-CCM02_mgr02;Parent=gene-CCM02_mgr02;Dbxref=GeneID:32886060;gbkey=rRNA;locus_tag=CCM02_mgr02;product=large subunit ribosomal RNA
+NC_034749.1	RefSeq	exon	9120	11298	.	+	.	ID=exon-CCM02_mgr02-1;Parent=rna-CCM02_mgr02;Dbxref=GeneID:32886060;gbkey=rRNA;locus_tag=CCM02_mgr02;product=large subunit ribosomal RNA
+NC_034749.1	RefSeq	gene	11303	12460	.	+	.	ID=gene-CCM02_mgp08;Dbxref=GeneID:32886070;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=CCM02_mgp08
+NC_034749.1	RefSeq	CDS	11303	12460	.	+	0	ID=cds-YP_009368733.1;Parent=gene-CCM02_mgp08;Dbxref=GenBank:YP_009368733.1,GeneID:32886070;Name=YP_009368733.1;gbkey=CDS;gene=ND2;locus_tag=CCM02_mgp08;product=NADH dehydrogenase subunit 2;protein_id=YP_009368733.1;transl_table=4
+NC_034749.1	RefSeq	gene	12448	14265	.	+	.	ID=gene-CCM02_mgp07;Dbxref=GeneID:32886062;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=CCM02_mgp07
+NC_034749.1	RefSeq	CDS	12448	14265	.	+	0	ID=cds-YP_009368734.1;Parent=gene-CCM02_mgp07;Dbxref=GenBank:YP_009368734.1,GeneID:32886062;Name=YP_009368734.1;gbkey=CDS;gene=ND5;locus_tag=CCM02_mgp07;product=NADH dehydrogenase subunit 5;protein_id=YP_009368734.1;transl_table=4
+NC_034749.1	RefSeq	gene	14365	15813	.	+	.	ID=gene-CCM02_mgp06;Dbxref=GeneID:32886066;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=CCM02_mgp06
+NC_034749.1	RefSeq	CDS	14365	15813	.	+	0	ID=cds-YP_009368735.1;Parent=gene-CCM02_mgp06;Dbxref=GenBank:YP_009368735.1,GeneID:32886066;Name=YP_009368735.1;gbkey=CDS;gene=ND4;locus_tag=CCM02_mgp06;product=NADH dehydrogenase subunit 4;protein_id=YP_009368735.1;transl_table=4
+NC_034749.1	RefSeq	gene	15868	15938	.	-	.	ID=gene-CCM02_mgt01;Dbxref=GeneID:32886064;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=CCM02_mgt01
+NC_034749.1	RefSeq	tRNA	15868	15938	.	-	.	ID=rna-CCM02_mgt01;Parent=gene-CCM02_mgt01;Dbxref=GeneID:32886064;gbkey=tRNA;gene=trnM;locus_tag=CCM02_mgt01;product=tRNA-Met
+NC_034749.1	RefSeq	exon	15868	15938	.	-	.	ID=exon-CCM02_mgt01-1;Parent=rna-CCM02_mgt01;Dbxref=GeneID:32886064;gbkey=tRNA;gene=trnM;locus_tag=CCM02_mgt01;product=tRNA-Met
+NC_034749.1	RefSeq	gene	15977	16762	.	-	.	ID=gene-CCM02_mgp05;Dbxref=GeneID:32886068;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=CCM02_mgp05
+NC_034749.1	RefSeq	CDS	15977	16762	.	-	0	ID=cds-YP_009368736.1;Parent=gene-CCM02_mgp05;Dbxref=GenBank:YP_009368736.1,GeneID:32886068;Name=YP_009368736.1;gbkey=CDS;gene=COX3;locus_tag=CCM02_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_009368736.1;transl_table=4
+NC_034749.1	RefSeq	gene	16827	17534	.	-	.	ID=gene-CCM02_mgp04;Dbxref=GeneID:32886058;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=CCM02_mgp04
+NC_034749.1	RefSeq	CDS	16827	17534	.	-	0	ID=cds-YP_009368737.1;Parent=gene-CCM02_mgp04;Dbxref=GenBank:YP_009368737.1,GeneID:32886058;Name=YP_009368737.1;gbkey=CDS;gene=ATP6;locus_tag=CCM02_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009368737.1;transl_table=4
+NC_034749.1	RefSeq	gene	17559	17774	.	-	.	ID=gene-CCM02_mgp03;Dbxref=GeneID:32886055;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=CCM02_mgp03
+NC_034749.1	RefSeq	CDS	17559	17774	.	-	0	ID=cds-YP_009368738.1;Parent=gene-CCM02_mgp03;Dbxref=GenBank:YP_009368738.1,GeneID:32886055;Name=YP_009368738.1;gbkey=CDS;gene=ATP8;locus_tag=CCM02_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_009368738.1;transl_table=4
+NC_034749.1	RefSeq	gene	17796	18557	.	-	.	ID=gene-CCM02_mgp02;Dbxref=GeneID:32886056;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=CCM02_mgp02
+NC_034749.1	RefSeq	CDS	17796	18557	.	-	0	ID=cds-YP_009368739.1;Parent=gene-CCM02_mgp02;Dbxref=GenBank:YP_009368739.1,GeneID:32886056;Name=YP_009368739.1;gbkey=CDS;gene=COX2;locus_tag=CCM02_mgp02;product=cytochrome c oxidase subunit II;protein_id=YP_009368739.1;transl_table=4
+

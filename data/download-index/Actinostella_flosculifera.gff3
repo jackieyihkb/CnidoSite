@@ -1,0 +1,51 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PV232310.1 1 19504
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3034631
+PV232310.1	Genbank	region	1	19504	.	+	.	ID=PV232310.1:1..19504;Dbxref=taxon:3034631;Is_circular=true;Name=MT;collected-by=Duran-Fuentes JA;collection-date=08-Jul-2022;country=Brazil: South America%2C Sao Paulo;gbkey=Src;genome=mitochondrion;isolate=Aflosc_mit;isolation-source=seawater;lat-lon=23.501111 S 45.119722 W;mol_type=genomic DNA;tissue-type=whole body
+PV232310.1	Genbank	gene	1	4079	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	1	717	.	+	0	ID=cds-XPO11622.1;Parent=gene-ND5;Dbxref=NCBI_GP:XPO11622.1;Name=XPO11622.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XPO11622.1;transl_table=4
+PV232310.1	Genbank	CDS	3000	4079	.	+	0	ID=cds-XPO11622.1;Parent=gene-ND5;Dbxref=NCBI_GP:XPO11622.1;Name=XPO11622.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XPO11622.1;transl_table=4
+PV232310.1	Genbank	exon	1	717	.	+	.	ID=id-ND5-1;Parent=gene-ND5;exon_number=1;gbkey=exon;gene=ND5;number=1
+PV232310.1	Genbank	exon	3000	4079	.	+	.	ID=id-ND5-2;Parent=gene-ND5;exon_number=2;gbkey=exon;gene=ND5;number=2
+PV232310.1	Genbank	intron	718	2999	.	+	.	ID=id-ND5;Parent=gene-ND5;Note=group I;gbkey=intron;gene=ND5
+PV232310.1	Genbank	gene	940	1923	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	940	1923	.	+	0	ID=cds-XPO11623.1;Parent=gene-ND1;Dbxref=NCBI_GP:XPO11623.1;Name=XPO11623.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XPO11623.1;transl_table=4
+PV232310.1	Genbank	gene	1930	2286	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	1930	2286	.	+	0	ID=cds-XPO11624.1;Parent=gene-ND3;Dbxref=NCBI_GP:XPO11624.1;Name=XPO11624.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XPO11624.1;transl_table=4
+PV232310.1	Genbank	gene	4327	4396	.	+	.	ID=gene-tRNA-Tyr;Name=tRNA-Tyr;gbkey=Gene;gene=tRNA-Tyr;gene_biotype=tRNA
+PV232310.1	Genbank	tRNA	4327	4396	.	+	.	ID=rna-tRNA-Tyr;Parent=gene-tRNA-Tyr;gbkey=tRNA;gene=tRNA-Tyr;product=tRNA-Tyr
+PV232310.1	Genbank	exon	4327	4396	.	+	.	ID=exon-tRNA-Tyr-1;Parent=rna-tRNA-Tyr;gbkey=tRNA;gene=tRNA-Tyr;product=tRNA-Tyr
+PV232310.1	Genbank	gene	4788	5930	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	4788	5930	.	+	0	ID=cds-XPO11625.1;Parent=gene-ND2;Dbxref=NCBI_GP:XPO11625.1;Name=XPO11625.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XPO11625.1;transl_table=4
+PV232310.1	Genbank	rRNA	5977	7035	.	+	.	ID=rna-PV232310.1:5977..7035;gbkey=rRNA;product=small subunit ribosomal RNA
+PV232310.1	Genbank	exon	5977	7035	.	+	.	ID=exon-PV232310.1:5977..7035-1;Parent=rna-PV232310.1:5977..7035;gbkey=rRNA;product=small subunit ribosomal RNA
+PV232310.1	Genbank	gene	7089	7835	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	7089	7835	.	+	0	ID=cds-XPO11626.1;Parent=gene-COX2;Dbxref=NCBI_GP:XPO11626.1;Name=XPO11626.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XPO11626.1;transl_table=4
+PV232310.1	Genbank	gene	7841	9316	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	7841	9316	.	+	0	ID=cds-XPO11627.1;Parent=gene-ND4;Dbxref=NCBI_GP:XPO11627.1;Name=XPO11627.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XPO11627.1;transl_table=4
+PV232310.1	Genbank	gene	9330	9929	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	9330	9929	.	+	0	ID=cds-XPO11628.1;Parent=gene-ND6;Dbxref=NCBI_GP:XPO11628.1;Name=XPO11628.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XPO11628.1;transl_table=4
+PV232310.1	Genbank	gene	9957	11108	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	9957	11108	.	+	0	ID=cds-XPO11629.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XPO11629.1;Name=XPO11629.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XPO11629.1;transl_table=4
+PV232310.1	Genbank	gene	11527	11597	.	+	.	ID=gene-tRNA-Met;Name=tRNA-Met;gbkey=Gene;gene=tRNA-Met;gene_biotype=tRNA
+PV232310.1	Genbank	tRNA	11527	11597	.	+	.	ID=rna-tRNA-Met;Parent=gene-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+PV232310.1	Genbank	exon	11527	11597	.	+	.	ID=exon-tRNA-Met-1;Parent=rna-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+PV232310.1	Genbank	rRNA	11784	13805	.	+	.	ID=rna-PV232310.1:11784..13805;gbkey=rRNA;product=large subunit ribosomal RNA
+PV232310.1	Genbank	exon	11784	13805	.	+	.	ID=exon-PV232310.1:11784..13805-1;Parent=rna-PV232310.1:11784..13805;gbkey=rRNA;product=large subunit ribosomal RNA
+PV232310.1	Genbank	gene	13887	14675	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	13887	14675	.	+	0	ID=cds-XPO11630.1;Parent=gene-COX3;Dbxref=NCBI_GP:XPO11630.1;Name=XPO11630.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XPO11630.1;transl_table=4
+PV232310.1	Genbank	gene	15185	17609	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	15185	16075	.	+	0	ID=cds-XPO11631.1;Parent=gene-COX1;Dbxref=NCBI_GP:XPO11631.1;Name=XPO11631.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XPO11631.1;transl_table=4
+PV232310.1	Genbank	CDS	16932	17609	.	+	0	ID=cds-XPO11631.1;Parent=gene-COX1;Dbxref=NCBI_GP:XPO11631.1;Name=XPO11631.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XPO11631.1;transl_table=4
+PV232310.1	Genbank	exon	15185	16075	.	+	.	ID=id-COX1-1;Parent=gene-COX1;exon_number=1;gbkey=exon;gene=COX1;number=1
+PV232310.1	Genbank	exon	16932	17609	.	+	.	ID=id-COX1-2;Parent=gene-COX1;exon_number=2;gbkey=exon;gene=COX1;number=2
+PV232310.1	Genbank	intron	16076	16931	.	+	.	ID=id-COX1;Parent=gene-COX1;Note=group I;gbkey=intron;gene=COX1
+PV232310.1	Genbank	gene	18214	18513	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	18214	18513	.	+	0	ID=cds-XPO11632.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XPO11632.1;Name=XPO11632.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XPO11632.1;transl_table=4
+PV232310.1	Genbank	gene	18538	18753	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	18538	18753	.	+	0	ID=cds-XPO11633.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XPO11633.1;Name=XPO11633.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XPO11633.1;transl_table=4
+PV232310.1	Genbank	gene	18787	19476	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PV232310.1	Genbank	CDS	18787	19476	.	+	0	ID=cds-XPO11634.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XPO11634.1;Name=XPO11634.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XPO11634.1;transl_table=4
+

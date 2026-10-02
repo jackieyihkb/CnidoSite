@@ -1,0 +1,47 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PQ821685.1 1 17009
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=371664
+PQ821685.1	Genbank	region	1	17009	.	+	.	ID=PQ821685.1:1..17009;Dbxref=taxon:371664;Is_circular=true;Name=MT;country=China: Sanya;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+PQ821685.1	Genbank	gene	1	1704	.	+	.	ID=gene-rrnL;Name=rrnL;gbkey=Gene;gene=rrnL;gene_biotype=rRNA
+PQ821685.1	Genbank	rRNA	1	1704	.	+	.	ID=rna-rrnL;Parent=gene-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+PQ821685.1	Genbank	exon	1	1704	.	+	.	ID=exon-rrnL-1;Parent=rna-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+PQ821685.1	Genbank	gene	1739	2449	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ821685.1	Genbank	gene	12072	13181	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	1739	2449	.	+	0	ID=cds-XLZ18841.1;Parent=gene-ND5;Dbxref=NCBI_GP:XLZ18841.1;Name=XLZ18841.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XLZ18841.1;transl_table=4
+PQ821685.1	Genbank	CDS	12072	13181	.	+	0	ID=cds-XLZ18841.1;Parent=gene-ND5;Dbxref=NCBI_GP:XLZ18841.1;Name=XLZ18841.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XLZ18841.1;transl_table=4
+PQ821685.1	Genbank	gene	2582	3529	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	2582	3529	.	+	0	ID=cds-XLZ18842.1;Parent=gene-ND1;Dbxref=NCBI_GP:XLZ18842.1;Name=XLZ18842.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XLZ18842.1;transl_table=4
+PQ821685.1	Genbank	gene	3510	4670	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	3510	4670	.	+	0	ID=cds-XLZ18843.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XLZ18843.1;Name=XLZ18843.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XLZ18843.1;transl_table=4
+PQ821685.1	Genbank	gene	4666	5982	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	4666	5982	.	+	0	ID=cds-XLZ18844.1;Parent=gene-ND2;Dbxref=NCBI_GP:XLZ18844.1;Name=XLZ18844.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XLZ18844.1;transl_table=4
+PQ821685.1	Genbank	gene	5983	6543	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	5983	6543	.	+	0	ID=cds-XLZ18845.1;Parent=gene-ND6;Dbxref=NCBI_GP:XLZ18845.1;Name=XLZ18845.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XLZ18845.1;transl_table=4
+PQ821685.1	Genbank	gene	6543	7220	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	6543	7220	.	+	0	ID=cds-XLZ18846.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XLZ18846.1;Name=XLZ18846.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XLZ18846.1;transl_table=4
+PQ821685.1	Genbank	gene	7220	8659	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	7220	8659	.	+	0	ID=cds-XLZ18847.1;Parent=gene-ND4;Dbxref=NCBI_GP:XLZ18847.1;Name=XLZ18847.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XLZ18847.1;transl_table=4
+PQ821685.1	Genbank	gene	8866	9774	.	+	.	ID=gene-rrnS;Name=rrnS;gbkey=Gene;gene=rrnS;gene_biotype=rRNA
+PQ821685.1	Genbank	rRNA	8866	9774	.	+	.	ID=rna-rrnS;Parent=gene-rrnS;gbkey=rRNA;gene=rrnS;product=12S ribosomal RNA
+PQ821685.1	Genbank	exon	8866	9774	.	+	.	ID=exon-rrnS-1;Parent=rna-rrnS;gbkey=rRNA;gene=rrnS;product=12S ribosomal RNA
+PQ821685.1	Genbank	gene	9774	10553	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	9774	10553	.	+	0	ID=cds-XLZ18848.1;Parent=gene-COX3;Dbxref=NCBI_GP:XLZ18848.1;Name=XLZ18848.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XLZ18848.1;transl_table=4
+PQ821685.1	Genbank	gene	10677	11399	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	10677	11399	.	+	0	ID=cds-XLZ18849.1;Parent=gene-COX2;Dbxref=NCBI_GP:XLZ18849.1;Name=XLZ18849.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XLZ18849.1;transl_table=4
+PQ821685.1	Genbank	gene	11381	11680	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	11381	11680	.	+	0	ID=cds-XLZ18850.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XLZ18850.1;Name=XLZ18850.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XLZ18850.1;transl_table=4
+PQ821685.1	Genbank	gene	11680	12024	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	11680	12024	.	+	0	ID=cds-XLZ18851.1;Parent=gene-ND3;Dbxref=NCBI_GP:XLZ18851.1;Name=XLZ18851.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XLZ18851.1;transl_table=4
+PQ821685.1	Genbank	gene	13180	13249	.	+	.	ID=gene-tRNA-Trp;Name=tRNA-Trp;gbkey=Gene;gene=tRNA-Trp;gene_biotype=tRNA
+PQ821685.1	Genbank	tRNA	13180	13249	.	+	.	ID=rna-tRNA-Trp;Parent=gene-tRNA-Trp;gbkey=tRNA;gene=tRNA-Trp;product=tRNA-Trp
+PQ821685.1	Genbank	exon	13180	13249	.	+	.	ID=exon-tRNA-Trp-1;Parent=rna-tRNA-Trp;gbkey=tRNA;gene=tRNA-Trp;product=tRNA-Trp
+PQ821685.1	Genbank	gene	13253	13450	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	13253	13450	.	+	0	ID=cds-XLZ18852.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XLZ18852.1;Name=XLZ18852.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XLZ18852.1;transl_table=4
+PQ821685.1	Genbank	gene	13621	15199	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PQ821685.1	Genbank	CDS	13621	15199	.	+	0	ID=cds-XLZ18853.1;Parent=gene-COX1;Dbxref=NCBI_GP:XLZ18853.1;Name=XLZ18853.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XLZ18853.1;transl_except=(pos:15199%2Caa:TERM);transl_table=4
+PQ821685.1	Genbank	gene	16801	16872	.	+	.	ID=gene-tRNA-Met;Name=tRNA-Met;gbkey=Gene;gene=tRNA-Met;gene_biotype=tRNA
+PQ821685.1	Genbank	tRNA	16801	16872	.	+	.	ID=rna-tRNA-Met;Parent=gene-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+PQ821685.1	Genbank	exon	16801	16872	.	+	.	ID=exon-tRNA-Met-1;Parent=rna-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+

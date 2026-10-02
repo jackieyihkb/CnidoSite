@@ -1,0 +1,122 @@
+
+ul {
+  position:relative;
+  /*left:0;
+  right:0;*/
+  margin:0;
+  padding:0;
+  
+  width:100px;
+  height:220px;
+  list-style:none;
+  -webkit-perspective:1000;
+  -moz-perspective:1000;
+  -o-perspective:1000;
+  perspective:1000;
+}
+
+li {
+  margin:8px 0;
+  padding:0;
+}
+
+li m {
+  display:block;
+  height:26px;
+  width:70px;
+  background:rgba(155,155,155,0.5);
+  color:#fff;
+  padding:15px 6px;
+  text-decoration:none;
+  text-align:center;
+  border-radius:8px;
+}
+
+li a {
+  display:block;
+  height:15px;
+  width:10px;
+  background:rgba(155,155,155,0.5);
+  color:#fff;
+  padding:8px 6px;
+  text-decoration:none;
+  text-align:center;
+  border-radius:4px;
+}
+li a:hover{
+  background:red;
+
+}
+
+.menu {
+  opacity:1;
+  -webkit-transform:rotateY(0deg);
+  -moz-transform:rotateY(0deg);
+  -o-transform:rotateY(0deg);
+  transform:rotateY(0deg);
+  -webkit-transition:.3s;
+  -moz-transition:.3s;
+  -o-transition:.3s;
+  transition:.3s;
+}
+li span {
+  width:90px;
+  float:left;
+  text-align:center;
+  background:rgba(155,155,155,0.5);
+  color:#fff;
+  margin:-42px -25px;
+  padding:8px 6px;
+  transform-origin:0%;
+  opacity:0;
+  -webkit-transform:rotateY(95deg);
+  -webkit-transition:.5s;
+  -moz-transition:.5s;
+  -o-transition:.5s;
+  transition:.5s;
+  -webkit-animation: flip 2s;
+  -moz-animation: flip 2s;
+  -o-animation: flip 2s;
+  animation: flip 2s;
+}
+
+
+span[class='menu']{-webkit-animation:none;}
+li:nth-child(2) span {
+  -webkit-animation-delay:.5s;
+  -moz-animation-delay:.5s;
+  -o-animation-delay:.5s;
+  animation-delay:.5s;}
+li:nth-child(3) span {
+  -webkit-animation-delay:.4s;
+  -moz-animation-delay:.4s;
+  -o-animation-delay:.4s;
+  animation-delay:.4s;}
+li:nth-child(4) span {
+  -webkit-animation-delay:.3s;
+  -moz-animation-delay:.3s;
+  -o-animation-delay:.3s;
+  animation-delay:.3s;}
+li:nth-child(5) span {
+  -webkit-animation-delay:.2s;
+  -moz-animation-delay:.2s;
+  -o-animation-delay:.2s;
+  animation-delay:.2s;}
+li:nth-child(6) span {
+  -webkit-animation-delay:.1s;
+  -moz-animation-delay:.1s;
+  -o-animation-delay:.1s;
+  animation-delay:.1s;}
+
+li a:hover ~ span {
+  opacity:1;
+  -webkit-transform:rotateY(0deg);
+  -moz-transform:rotateY(0deg);
+  -o-transform:rotateY(0deg);
+  transform:rotateY(0deg);
+  -webkit-transition:.5s;
+  -moz-transition:.5s;
+  -o-transition:.5s;
+  transition:.5s;
+}
+.stylefont{font-family:Arial;font-weight:bold;color:black;font-size:14px;}

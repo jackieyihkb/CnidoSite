@@ -1,0 +1,1363 @@
+<?php
+/* =====================================================================
+ * Primer Design —— 站内原生引物设计页面
+ *
+ * 这个文件以前是一个指向 https://www.primer3plus.com/ 的 iframe：页面能显示，
+ * 只是因为对方服务器恰好没有设 X-Frame-Options，随时可能白屏；而且用户输入的
+ * 序列会被送到第三方网站。现在改为本站自己调用 primer3_core。
+ *
+ * 文件名的扩展名仍是 .html，不是笔误：站内有 74 个文件把
+ * /primer3plus/primer3.html 硬编码在各自的导航栏里（没有共享的导航 include），
+ * 改名要同时改 74 个文件。同目录的 .htaccess 用 <Files> 只把这一个文件交给
+ * PHP 解析，理由与做法写在那里。
+ *
+ * 引擎：primer3_core 2.6.1（GPLv2），由源码编译后装在 docroot 之外：
+ *       /var/www/cnidosite-tools/bin/primer3_core
+ *       源码树留在 /var/www/cnidosite-tools/src/primer3-2.6.1/ 以便重建。
+ *       放在 docroot 之外是为了不被 HTTP 下载（站内既有的 blast/blast.REAL
+ *       就是公网可下的，7.5 MB）。
+ * ===================================================================== */
+
+require_once __DIR__ . '/../includes/state.php';
+require_once __DIR__ . '/../includes/domain_search.php';
+
+define('P3_BIN',      '/var/www/cnidosite-tools/bin/primer3_core');
+define('P3_TIMEOUT',  25);        // 秒；实测 100 kb 模板约 1.8 s，25 s 是极宽的兜底
+define('P3_MAX_SEQ',  100000);    // bp
+define('P3_NUM_RETURN_DEFAULT', 5);
+
+/** HTML 转义（本页局部 helper，与站内各页的 safe()/h()/sc_h() 同义）。 */
+function p3_h($s)
+{
+    return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8');
+}
+
+/**
+ * 参数预设。
+ *
+ * 关于「为什么不直接喂上游的 settings 文件」——上游 primer3plus 仓库的
+ * server/settings_files/*.txt 是 Primer3Plus 的参数存档，**不能原样喂给
+ * primer3_core 2.6.1**，逐个实测过：
+ *
+ *   primer3web_v0_4_0_default_settings.txt   exit 252
+ *   primer3plus_2_4_2_default_settings.txt   exit 252
+ *       两份都死在 "Unrecognized tag: PRIMER_INTERNAL_NO_5_PRIME_G" ——
+ *       这些文件比引擎新/旧，含有 2.6.1 不认的 tag，--strict_tags 下直接中止。
+ *   qPCR.txt                                 报错
+ *       文件里设了 PRIMER_WT_GC_PERCENT_GT/LT 却没设 PRIMER_OPT_GC_PERCENT，
+ *       引擎拒绝：「Primer GC content is part of objective function while
+ *       optimum gc_content is not defined」。这是上游文件自身的残缺
+ *       （probe.txt 就记得设 PRIMER_OPT_GC_PERCENT=50.0，所以它能跑）。
+ *   probe.txt / cloning_primers.txt / annealing_temp.txt /
+ *   secondary_structures.txt                  exit 0，可用
+ *
+ * 所以这里的预设是**逐个核对过、并跑通过引擎**的固化参数集，而不是文件的搬运。
+ * 下面 qPCR 一项就是上游 qPCR.txt 补上缺失的 PRIMER_OPT_GC_PERCENT；probe 一项
+ * 按上游 probe.txt 逐条誊写（含最容易漏掉、却决定探针能否达到 68-72℃ 的
+ * PRIMER_INTERNAL_MIN/OPT/MAX_SIZE=18/25/30）。
+ *
+ * 第一项不是 Primer3 的默认值，而是**本站页面上自己声明的方案**：页面正文写
+ * 「optimal melting temperature of 60℃ (ranging from 58℃ to 62℃), an optimal
+ * primer length of 20bp (18–24 bp), and a GC content between 40% and 60%」。而
+ * Primer3 的实际默认是 57–63 / 18–27 / 20–80 —— 两者不同，所以页面宣称的那套
+ * 必须单独成一个预设，否则工具算出来的引物和页面上写的参数对不上。
+ * 页面没有声明产物长度区间，那一项是这里补的常用范围。
+ */
+function p3_presets()
+{
+    return array(
+        'published' => array(
+            'label' => 'CnidoSite published protocol (Tm 60 [58-62] °C, 20 [18-24] bp, GC 40-60%)',
+            'set'   => array(
+                'PRIMER_OPT_TM'   => '60.0', 'PRIMER_MIN_TM' => '58.0', 'PRIMER_MAX_TM' => '62.0',
+                'PRIMER_OPT_SIZE' => '20',   'PRIMER_MIN_SIZE' => '18', 'PRIMER_MAX_SIZE' => '24',
+                'PRIMER_MIN_GC'   => '40.0', 'PRIMER_MAX_GC' => '60.0',
+                'PRIMER_MAX_SELF_ANY' => '8.00', 'PRIMER_MAX_SELF_END' => '3.00',
+                'PRIMER_PRODUCT_SIZE_RANGE' => '100-300 300-500 500-1000',
+            ),
+        ),
+        'default' => array(
+            // 上游 Primer3Plus 2.4.2 的全局默认（primer3plus_2_4_2_default_settings.txt）。
+            // 这里逐条誊写而不是留空，是因为「留空」拿到的是 primer3_core 自己的内置
+            // 默认，两者在产物区间上并不一致：内置默认最大 1000 bp，Primer3Plus 一直到
+            // 5000 bp。留空会让稍长的模板莫名其妙找不到引物，而且随引擎版本漂移。
+            // （盐/热力学那一组两者恰好相同，实测同一条模板选出的引物完全一致，
+            //   所以不再重复列出。）
+            'label' => 'Primer3Plus defaults (Tm 57-63 °C, 18-27 bp, GC 20-80%)',
+            'set'   => array(
+                'PRIMER_MIN_TM'   => '57.0', 'PRIMER_OPT_TM' => '60.0', 'PRIMER_MAX_TM' => '63.0',
+                'PRIMER_MIN_SIZE' => '18',   'PRIMER_OPT_SIZE' => '20', 'PRIMER_MAX_SIZE' => '27',
+                'PRIMER_MIN_GC'   => '20.0', 'PRIMER_OPT_GC_PERCENT' => '50.0', 'PRIMER_MAX_GC' => '80.0',
+                'PRIMER_NUM_RETURN' => '5',
+                'PRIMER_PRODUCT_SIZE_RANGE' => '101-200 201-300 301-400 401-500 501-600 601-700 701-850 851-1000 1001-1500 1501-3000 3001-5000',
+            ),
+        ),
+        'qpcr' => array(
+            // 上游 qPCR.txt 的全部条目，另补它缺失的 PRIMER_OPT_GC_PERCENT
+            'label' => 'qPCR (product 70-150 bp, primer length max 23 bp)',
+            'set'   => array(
+                'PRIMER_GC_CLAMP'   => '1',
+                'PRIMER_MAX_END_GC' => '3',
+                'PRIMER_MIN_TM'     => '58.0',
+                'PRIMER_MAX_TM'     => '62.0',
+                'PRIMER_MIN_SIZE'   => '18',
+                'PRIMER_MAX_SIZE'   => '23',
+                'PRIMER_MIN_GC'     => '30.0',
+                'PRIMER_OPT_GC_PERCENT' => '50.0',   // ← 上游漏了，缺它会直接报错
+                'PRIMER_MAX_GC'     => '80.0',
+                'PRIMER_PAIR_MAX_DIFF_TM' => '1',
+                'PRIMER_PRODUCT_SIZE_RANGE' => '70-150',
+                'PRIMER_WT_GC_PERCENT_GT' => '0.5',
+                'PRIMER_WT_GC_PERCENT_LT' => '0.5',
+                'PRIMER_WT_POS_PENALTY'   => '0.0',
+            ),
+        ),
+        'probe' => array(
+            // 逐条誊写上游 probe.txt；INTERNAL_*_SIZE 三项是关键，缺了探针达不到 68-72℃
+            'label' => 'Probe / hydrolysis probe (internal oligo at Tm 68-72 °C)',
+            'set'   => array(
+                'PRIMER_PICK_INTERNAL_OLIGO' => '1',
+                'PRIMER_PICK_ANYWAY'   => '1',
+                'PRIMER_MIN_SIZE'      => '18',
+                'PRIMER_OPT_SIZE'      => '20',
+                'PRIMER_MAX_SIZE'      => '23',
+                'PRIMER_MIN_TM'        => '58.0',
+                'PRIMER_OPT_TM'        => '60.0',
+                'PRIMER_MAX_TM'        => '62.0',
+                'PRIMER_MIN_GC'        => '30.0',
+                'PRIMER_OPT_GC_PERCENT'=> '50.0',
+                'PRIMER_MAX_GC'        => '80.0',
+                'PRIMER_GC_CLAMP'      => '1',
+                'PRIMER_WT_GC_PERCENT_GT' => '0.5',
+                'PRIMER_WT_GC_PERCENT_LT' => '0.5',
+                'PRIMER_INTERNAL_MIN_SIZE' => '18',
+                'PRIMER_INTERNAL_OPT_SIZE' => '25',
+                'PRIMER_INTERNAL_MAX_SIZE' => '30',
+                'PRIMER_INTERNAL_MIN_TM'   => '68.0',
+                'PRIMER_INTERNAL_OPT_TM'   => '70.0',
+                'PRIMER_INTERNAL_MAX_TM'   => '72.0',
+                'PRIMER_INTERNAL_MIN_GC'   => '30.0',
+                'PRIMER_INTERNAL_OPT_GC_PERCENT' => '50.0',
+                'PRIMER_INTERNAL_MAX_GC'   => '80.0',
+                // 上游 probe.txt / 上游全局默认都把内部寡核苷酸的二价盐设成 0.0，
+                // 而引物那侧是 1.5 —— 两者在同一管 PCR 反应里，没有理由不同。
+                // 更要紧的是它直接决定了本预设能不能成立：实测同一条模板，
+                //   dv=0.0 → 25-mer Tm 上限 58.7 ℃，探针要求 68-72，永远 low tm，
+                //            PRIMER_INTERNAL_EXPLAIN: considered 13059, low tm 11636, ok 0
+                //   dv=1.5 → 上限 70.5 ℃，ok 810，正常选出 5 条探针（Tm≈69.2, GC 50%）
+                'PRIMER_INTERNAL_SALT_DIVALENT' => '1.5',
+                'PRIMER_INTERNAL_WT_GC_PERCENT_GT' => '0.5',
+                'PRIMER_INTERNAL_WT_GC_PERCENT_LT' => '0.5',
+                'PRIMER_PAIR_MAX_DIFF_TM'   => '1',
+                'PRIMER_PRODUCT_SIZE_RANGE' => '70-150',
+            ),
+        ),
+        'cloning' => array(
+            // 逐条誊写上游 cloning_primers.txt 的四项。产物区间用占位符，构建时
+            // 展开成「整条模板」：这个任务要的产物就是全长的模板，写死任何上限
+            // 都会在长一点的转录本上失败（上游靠全局默认的 5000 bp 兜住，
+            // 而 primer3 内置默认只到 1000 bp，直接喂 cloning_primers.txt
+            // 会在 1059 bp 的模板上报 unacceptable product size）。
+            'label' => 'Cloning primers (at the template ends, 15 pairs)',
+            'set'   => array(
+                'PRIMER_TASK' => 'pick_cloning_primers',
+                'PRIMER_MIN_LEFT_THREE_PRIME_DISTANCE'  => '0',
+                'PRIMER_MIN_RIGHT_THREE_PRIME_DISTANCE' => '0',
+                'PRIMER_NUM_RETURN' => '15',
+                'PRIMER_PRODUCT_SIZE_RANGE' => '@WHOLE_TEMPLATE@',
+            ),
+        ),
+    );
+}
+
+/**
+ * 清理并校验模板序列。
+ *
+ * primer3_core 自己**不做**输入校验：喂给它非法碱基或空序列都返回 0 且不报错
+ * （只有无法识别的 tag 才会以 252 退出）。所以合法性必须在这里判定，否则用户
+ * 会拿到一个空结果页却不知道是自己输错了。
+ *
+ * @return array(seq, error)  error 为 null 表示通过
+ */
+function p3_clean_seq($raw)
+{
+    // FASTA 头行整行去掉；其余非字母字符（空白、数字、换行）一律剔除
+    $lines = preg_split('/\r\n|\r|\n/', (string)$raw);
+    $out = '';
+    foreach ($lines as $ln) {
+        if ($ln === '' || $ln[0] === '>' || $ln[0] === ';') { continue; }
+        $out .= preg_replace('/[^A-Za-z]/', '', $ln);
+    }
+    $out = strtoupper($out);
+    if ($out === '') {
+        return array('', 'No sequence was read from your input.');
+    }
+    // 允许 IUPAC 简并碱基（primer3 在 PRIMER_LIBERAL_BASE=1 下会处理）
+    $bad = preg_replace('/[ACGTURYSWKMBDHVN]/', '', $out);
+    if ($bad !== '') {
+        $u = array_unique(str_split($bad));
+        return array('', 'The sequence contains characters that are not nucleotides: ' . implode(' ', array_slice($u, 0, 10))
+                   . ' (only A C G T U and the IUPAC ambiguity codes R Y S W K M B D H V N are accepted).');
+    }
+    $out = str_replace('U', 'T', $out);   // RNA 模板按 DNA 处理
+    if (strlen($out) > P3_MAX_SEQ) {
+        return array('', 'The sequence is ' . number_format(strlen($out)) . ' bp, which is over the '
+                   . number_format(P3_MAX_SEQ) . ' bp limit. Please submit a shorter region.');
+    }
+    if (strlen($out) < 30) {
+        return array('', 'The sequence is only ' . strlen($out) . ' bp long; at least 30 bp are needed to design primers.');
+    }
+    return array($out, null);
+}
+
+/**
+ * 组装 Boulder-IO 输入。
+ *
+ * $params 是已经过白名单与类型校验的 PRIMER_* 键值（值一律为字符串）。
+ */
+function p3_build_input($params, $seq, $seqid)
+{
+    $lines = array();
+    // 固定项：先给，$params 可覆盖（PRIMER_TASK / PRIMER_PICK_INTERNAL_OLIGO 等）
+    $base = array(
+        'PRIMER_TASK'             => 'generic',
+        'PRIMER_PICK_LEFT_PRIMER' => '1',
+        'PRIMER_PICK_RIGHT_PRIMER'=> '1',
+        'PRIMER_PICK_INTERNAL_OLIGO' => '0',
+        'PRIMER_EXPLAIN_FLAG'     => '1',   // 没设计出来时给出原因，用于结果页说明
+        'PRIMER_NUM_RETURN'       => (string)P3_NUM_RETURN_DEFAULT,
+        'PRIMER_LIBERAL_BASE'     => '1',
+    );
+    foreach ($base as $k => $v) {
+        if (!isset($params[$k])) { $params[$k] = $v; }
+    }
+    // 预设里可以用 @WHOLE_TEMPLATE@ 占位，此处展开成产物区间 —— cloning 任务的产物
+    // 就是整条模板，长度只有到这一步才知道。
+    //   下限不能小于 PRIMER_MAX_SIZE，否则引擎直接报
+    //   "PRIMER_MAX_SIZE > min PRIMER_PRODUCT_SIZE_RANGE" 并以 252 退出
+    //   （所以不能简单写成 1-<长度>）。
+    //   上限取「模板长度」与 5000 的较大者：前者保证整条模板一定落在区间内，
+    //   后者是 Primer3Plus 历史默认的上界，免得长转录本被一个无关的上限卡掉。
+    $pmin = isset($params['PRIMER_MAX_SIZE']) ? (int)$params['PRIMER_MAX_SIZE'] : 27;
+    if ($pmin < 27) { $pmin = 27; }
+    $pmax = max(strlen($seq), 5000);
+    foreach ($params as $k => $v) {
+        if ($v === '@WHOLE_TEMPLATE@') { $params[$k] = $pmin . '-' . $pmax; }
+    }
+    // 键排序，保证同样的输入产生同样的 Boulder-IO（便于复现与日志比对）
+    ksort($params);
+    foreach ($params as $k => $v) {
+        $lines[] = $k . '=' . $v;
+    }
+    $lines[] = 'SEQUENCE_ID=' . $seqid;
+    $lines[] = 'SEQUENCE_TEMPLATE=' . $seq;
+    $lines[] = '=';
+    return implode("\n", $lines) . "\n";
+}
+
+/**
+ * 运行 primer3_core。用 proc_open 传数组形式的命令，不经过 shell，
+ * 因此不存在命令注入面；输入从 stdin 喂，输出从 stdout 读。
+ *
+ * 超时由 /usr/bin/timeout 兜底（25 s）；正常调用不到 2 s。
+ *
+ * @return array(rc, stdout, stderr)
+ */
+function p3_run($input)
+{
+    if (!is_executable(P3_BIN)) {
+        return array(-1, '', 'The primer3 engine is unavailable: ' . P3_BIN . ' is missing or not executable.');
+    }
+    $cmd = array('/usr/bin/timeout', (string)P3_TIMEOUT, P3_BIN);
+    $desc = array(
+        0 => array('pipe', 'r'),
+        1 => array('pipe', 'w'),
+        2 => array('pipe', 'w'),
+    );
+    $proc = @proc_open($cmd, $desc, $pipes);
+    if (!is_resource($proc)) {
+        return array(-1, '', 'The primer3_core process could not be started.');
+    }
+    fwrite($pipes[0], $input);
+    fclose($pipes[0]);
+    $stdout = stream_get_contents($pipes[1]);
+    $stderr = stream_get_contents($pipes[2]);
+    fclose($pipes[1]);
+    fclose($pipes[2]);
+    $rc = proc_close($proc);
+    return array($rc, (string)$stdout, (string)$stderr);
+}
+
+/**
+ * 解析 Boulder-IO 输出。
+ *
+ * 输出是扁平的 TAG=value 行，每个引物/引物对用 _0 _1 … 下标区分，整个记录以
+ * 单独一行 "=" 结束。所有 TAG 互不重复，所以直接摊平成关联数组即可。
+ */
+function p3_parse($out)
+{
+    $tags = array();
+    foreach (preg_split('/\r\n|\r|\n/', $out) as $ln) {
+        if ($ln === '' || $ln === '=') { continue; }
+        $eq = strpos($ln, '=');
+        if ($eq === false) { continue; }
+        $tags[substr($ln, 0, $eq)] = substr($ln, $eq + 1);
+    }
+
+    $res = array(
+        'tags'    => $tags,
+        'error'   => isset($tags['PRIMER_ERROR']) ? $tags['PRIMER_ERROR'] : '',
+        'n'       => isset($tags['PRIMER_PAIR_NUM_RETURNED']) ? (int)$tags['PRIMER_PAIR_NUM_RETURNED'] : 0,
+        'warnings'=> isset($tags['PRIMER_WARNING']) ? $tags['PRIMER_WARNING'] : '',
+        'pairs'   => array(),
+        'internal'=> array(),
+    );
+
+    /** "start,len" -> array(start, len)；容错处理缺失/畸形 */
+    $rl = function ($v) {
+        $p = explode(',', (string)$v);
+        if (count($p) !== 2 || !is_numeric($p[0]) || !is_numeric($p[1])) { return array(null, null); }
+        return array((int)$p[0], (int)$p[1]);
+    };
+
+    for ($i = 0; $i < $res['n']; $i++) {
+        list($ls, $ll) = $rl(isset($tags["PRIMER_LEFT_$i"])  ? $tags["PRIMER_LEFT_$i"]  : '');
+        list($rs, $rl_) = $rl(isset($tags["PRIMER_RIGHT_$i"]) ? $tags["PRIMER_RIGHT_$i"] : '');
+        $g = function ($t) use ($tags) { return isset($tags[$t]) ? $tags[$t] : ''; };
+        $res['pairs'][] = array(
+            'idx'        => $i,
+            'left_seq'   => $g("PRIMER_LEFT_{$i}_SEQUENCE"),
+            'left_start' => $ls, 'left_len' => $ll,
+            'left_tm'    => $g("PRIMER_LEFT_{$i}_TM"),
+            'left_gc'    => $g("PRIMER_LEFT_{$i}_GC_PERCENT"),
+            'left_self'  => $g("PRIMER_LEFT_{$i}_SELF_ANY_TH"),
+            'left_hair'  => $g("PRIMER_LEFT_{$i}_HAIRPIN_TH"),
+            'right_seq'  => $g("PRIMER_RIGHT_{$i}_SEQUENCE"),
+            'right_start'=> $rs, 'right_len' => $rl_,
+            'right_tm'   => $g("PRIMER_RIGHT_{$i}_TM"),
+            'right_gc'   => $g("PRIMER_RIGHT_{$i}_GC_PERCENT"),
+            'right_self' => $g("PRIMER_RIGHT_{$i}_SELF_ANY_TH"),
+            'right_hair' => $g("PRIMER_RIGHT_{$i}_HAIRPIN_TH"),
+            'product'    => $g("PRIMER_PAIR_{$i}_PRODUCT_SIZE"),
+            'product_tm' => $g("PRIMER_PAIR_{$i}_PRODUCT_TM"),
+            'pair_compl' => $g("PRIMER_PAIR_{$i}_COMPL_ANY_TH"),
+            'penalty'    => $g("PRIMER_PAIR_{$i}_PENALTY"),
+        );
+    }
+    // 内部寡核苷酸（探针）的 tag 名两种拼法都要认：
+    //   primer3 2.6.1（本机引擎）→  PRIMER_INTERNAL_<i>_SEQUENCE、位置是 PRIMER_INTERNAL_<i>
+    //   Primer3Plus 老版          →  PRIMER_INTERNAL_OLIGO_<i>_SEQUENCE、位置 PRIMER_INTERNAL_OLIGO_<i>
+    // 原写法只认后者，于是即便引擎真的选出了探针，页面这一栏也永远是空的 ——
+    // 「设了探针却没有探针」就是这里。以 NUM_RETURNED 为上限，先试前者。
+    $nint = isset($tags['PRIMER_INTERNAL_NUM_RETURNED']) ? (int)$tags['PRIMER_INTERNAL_NUM_RETURNED'] : 0;
+    for ($i = 0; $i < max($nint, 10); $i++) {
+        $pre = "PRIMER_INTERNAL_{$i}_";
+        $pos = "PRIMER_INTERNAL_{$i}";
+        if (!isset($tags[$pre . 'SEQUENCE'])) {
+            $pre = "PRIMER_INTERNAL_OLIGO_{$i}_";
+            $pos = "PRIMER_INTERNAL_OLIGO_{$i}";
+        }
+        if (!isset($tags[$pre . 'SEQUENCE'])) { break; }
+        list($is, $il) = $rl(isset($tags[$pos]) ? $tags[$pos] : '');
+        $res['internal'][] = array(
+            'seq'   => $tags[$pre . 'SEQUENCE'],
+            'start' => $is, 'len' => $il,
+            'tm'    => isset($tags[$pre . 'TM']) ? $tags[$pre . 'TM'] : '',
+            'gc'    => isset($tags[$pre . 'GC_PERCENT']) ? $tags[$pre . 'GC_PERCENT'] : '',
+        );
+    }
+    return $res;
+}
+
+/* ---------------------------------------------------------------------
+ * 收集输入
+ * ------------------------------------------------------------------- */
+$conn = null;
+try {
+    $conn = new mysqli(getenv('CNIDO_DB_HOST') ?: 'localhost', getenv('CNIDO_DB_USER') ?: 'cnidosite', getenv('CNIDO_DB_PASS') ?: '', getenv('CNIDO_DB_NAME') ?: 'cnidaria');
+    if ($conn->connect_error) { $conn = null; }
+} catch (Throwable $e) {
+    $conn = null;
+}
+if ($conn) { $conn->set_charset('utf8mb4'); }
+
+$presets  = p3_presets();
+$preset   = isset($_GET['preset']) && isset($presets[$_GET['preset']]) ? $_GET['preset'] : 'published';
+$sp       = isset($_GET['sp']) && ds_valid_abbr($_GET['sp']) ? $_GET['sp'] : '';
+$gid      = isset($_GET['gid']) ? trim($_GET['gid']) : '';
+$raw_seq  = isset($_GET['seq']) ? $_GET['seq'] : '';
+$do_run   = isset($_GET['run']);
+$as_tsv   = isset($_GET['format']) && $_GET['format'] === 'tsv';
+
+// 物种白名单来自数据库本身：只有真的存在 <ABBR>_seq 表、且该 abbr1 在 abbr
+// 表里有登记的物种才放行，因此拼进 SQL 的表名不可能被用户构造出来。
+//
+// 两重条件缺一不可。只按表名判断会混进 mirna_seq —— 它只是恰好以 "_seq" 结尾，
+// ds_species_list() 剥掉后缀就得到一个根本不存在的「物种」mirna，并且会以裸
+// 缩写码的形式出现在下拉框里。与 abbr 求交集同时保证了每个选项都有拉丁学名
+// 可显示（站内约定：页面上一律显示学名，不显示缩写码）。
+$seq_species = array();
+$latin_by_ab = array();
+if ($conn) {
+    $have = array_flip(ds_species_list($conn, 'seq'));
+    $qa = mysqli_query($conn, "SELECT abbr1, species FROM abbr");
+    while ($qa && ($ra = mysqli_fetch_row($qa))) {
+        $ab = (string)$ra[0];
+        if ($ab !== '' && isset($have[$ab])) {
+            $seq_species[] = $ab;
+            $latin_by_ab[$ab] = (string)$ra[1];
+        }
+    }
+    sort($seq_species);
+}
+
+/* 从 CnidoSite 序列库取模板 —— 本工具相对通用 Primer3Plus 的主要增益：
+   直接对站内注释的转录本设计引物，不用用户自己去别处复制序列。 */
+$seq_note = '';
+$seq_used = '';
+if ($gid !== '' && $sp !== '') {
+    // 提示文案里显示拉丁学名（站内约定不把缩写码露给用户）；万一 abbr 表没给名字
+    // 就退回缩写码，不显示空字符串。
+    $sp_show = isset($latin_by_ab[$sp]) && $latin_by_ab[$sp] !== '' ? $latin_by_ab[$sp] : $sp;
+    if (!in_array($sp, $seq_species, true)) {
+        $seq_note = 'No sequence data is available for ' . $sp_show . '.';
+    } elseif (!$conn) {
+        $seq_note = 'The database could not be reached, so a template cannot be fetched by gene ID.';
+    } else {
+        $esc = mysqli_real_escape_string($conn, $gid);
+        $q = mysqli_query($conn, "SELECT gene, transcript, transcript_seq, cds_seq FROM `{$sp}_seq`
+                                  WHERE gene = '$esc' OR transcript = '$esc' LIMIT 1");
+        $r = $q ? mysqli_fetch_row($q) : null;
+        if ($r) {
+            // 优先用转录本序列（引物通常设计在 mRNA 上），没有再用 CDS
+            $s = ($r[2] !== null && $r[2] !== '') ? $r[2] : $r[3];
+            list($seq_used, $err) = p3_clean_seq($s);
+            if ($err !== null) { $seq_note = $err; }
+            else {
+                $seq_note = 'Template taken from CnidoSite: ' . $r[0] . ' (' . ($r[1] !== null ? $r[1] : 'CDS') . '), '
+                          . number_format(strlen($seq_used)) . ' bp.';
+            }
+        } else {
+            $seq_note = 'Nothing matching "' . $gid . '" was found in the ' . $sp . '_seq table.';
+        }
+    }
+}
+// 基因路径没拿到序列时，若用户同时粘贴了序列就退回用它；两者都没有才提示
+// 「没有读到序列」。早期的写法无条件调用 p3_clean_seq('')，结果把「找不到该
+// 基因」这种更具体的说明覆盖成了泛泛的「没有读到序列」，用户看不出是 ID 写错了。
+if ($seq_used === '' && $do_run) {
+    if (trim((string)$raw_seq) !== '') {
+        list($seq_used, $err) = p3_clean_seq($raw_seq);
+        if ($err !== null) {
+            $seq_note = ($seq_note !== '' ? $seq_note . ' ' : '') . $err;
+        } else {
+            $seq_note = '';   // 已改用粘贴的序列，丢弃基因路径的提示
+        }
+    } elseif ($seq_note === '') {
+        $seq_note = 'No sequence was read from your input.';
+    }
+}
+
+/* ---------------------------------------------------------------------
+ * 组装参数（只接受白名单内的键，值一律做数字/枚举校验后转成字符串）
+ * ------------------------------------------------------------------- */
+$params = array();
+foreach ($presets[$preset]['set'] as $k => $v) { $params[$k] = $v; }
+
+/** 数字型覆盖：只有用户确实填了合法数字才覆盖预设 */
+$num_fields = array(
+    'opt_tm'    => 'PRIMER_OPT_TM',    'min_tm'  => 'PRIMER_MIN_TM',  'max_tm' => 'PRIMER_MAX_TM',
+    'opt_size'  => 'PRIMER_OPT_SIZE',  'min_size'=> 'PRIMER_MIN_SIZE','max_size' => 'PRIMER_MAX_SIZE',
+    'min_gc'    => 'PRIMER_MIN_GC',    'max_gc'  => 'PRIMER_MAX_GC',
+    'num_return'=> 'PRIMER_NUM_RETURN',
+    'max_self_any' => 'PRIMER_MAX_SELF_ANY', 'max_self_end' => 'PRIMER_MAX_SELF_END',
+    'gc_clamp'  => 'PRIMER_GC_CLAMP',  'max_poly_x' => 'PRIMER_MAX_POLY_X',
+    'salt_mono' => 'PRIMER_SALT_MONOVALENT', 'dna_conc' => 'PRIMER_DNA_CONC',
+);
+foreach ($num_fields as $field => $tag) {
+    if (isset($_GET[$field]) && $_GET[$field] !== '' && is_numeric($_GET[$field])) {
+        $params[$tag] = (string)(0 + $_GET[$field]);
+    }
+}
+// 产物长度按 "min-max" 单独处理（它是 range 不是标量）
+if (isset($_GET['prod_min'], $_GET['prod_max'])
+    && is_numeric($_GET['prod_min']) && is_numeric($_GET['prod_max'])
+    && (int)$_GET['prod_min'] > 0 && (int)$_GET['prod_max'] >= (int)$_GET['prod_min']) {
+    $params['PRIMER_PRODUCT_SIZE_RANGE'] = (int)$_GET['prod_min'] . '-' . (int)$_GET['prod_max'];
+}
+// Tm 计算式（枚举）
+// PRIMER_TM_FORMULA 取整数（0=Breslauer 1986, 1=SantaLucia 1998），不是名字。
+// 原写法把 'santalucia' 这个字符串直接写进 Boulder-IO，引擎解析整数失败会以
+// 252 退出，也就是「一选 Tm 算法就整个报错」。这里映射成 0/1 再传。
+if (isset($_GET[$_t = 'tm_formula']) && in_array($_GET[$_t], array('breslauer', 'santalucia'), true)) {
+    $params['PRIMER_TM_FORMULA'] = ($_GET[$_t] === 'santalucia') ? '1' : '0';
+}
+if (isset($_GET['pick_internal']) && $_GET['pick_internal'] === '1') {
+    $params['PRIMER_PICK_INTERNAL_OLIGO'] = '1';
+}
+if (isset($_GET['explain'])) { $params['PRIMER_EXPLAIN_FLAG'] = '1'; }
+
+/* ---------------------------------------------------------------------
+ * 运行
+ * ------------------------------------------------------------------- */
+$ran = false; $result = null; $rc = 0; $stderr = ''; $boulder = '';
+if ($do_run && $seq_used !== '') {
+    $boulder = p3_build_input($params, $seq_used, ($gid !== '' ? $gid : 'query'));
+    list($rc, $stdout, $stderr) = p3_run($boulder);
+    $result = p3_parse($stdout);
+    $ran = true;
+}
+
+/* ---------------------------------------------------------------------
+ * TSV 导出（必须在任何 HTML 输出之前）
+ * ------------------------------------------------------------------- */
+if ($as_tsv && $ran) {
+    $fn = 'cnidosite_primers_' . preg_replace('/[^A-Za-z0-9_.-]/', '', ($gid !== '' ? $gid : 'query')) . '.tsv';
+    header('Content-Type: text/tab-separated-values; charset=utf-8');
+    header('Content-Disposition: attachment; filename="' . $fn . '"');
+    echo "# CnidoSite Primer Design (primer3_core)\n";
+    echo "# Generated\t" . date('Y-m-d H:i:s') . "\n";
+    echo "# Preset\t" . $presets[$preset]['label'] . "\n";
+    echo "# Template\t" . ($gid !== '' ? ($sp . ' / ' . $gid) : 'user-supplied sequence') . "\n";
+    echo "# Template length\t" . strlen($seq_used) . " bp\n";
+    if ($result !== null && $result['error'] !== '') {
+        echo "# PRIMER_ERROR\t" . $result['error'] . "\n";
+    }
+    // 坐标口径与网页表格一致：模板链上的 1-based 闭区间（左引物 5' 端起，
+    // 右引物退火区段的 5' 端起），两者可比。
+    echo "Pair\tLeft sequence (5'-3')\tLeft start\tLeft end\tLeft length\tLeft Tm (C)\tLeft GC (%)\t"
+       . "Right sequence (5'-3')\tRight start\tRight end\tRight length\tRight Tm (C)\tRight GC (%)\t"
+       . "Product size (bp)\tProduct Tm (C)\tPair penalty\n";
+    if ($result !== null) {
+        foreach ($result['pairs'] as $p) {
+            echo ($p['idx'] + 1) . "\t"
+               . $p['left_seq'] . "\t"
+               . ($p['left_start'] !== null ? ($p['left_start'] + 1) . "\t" . ($p['left_start'] + $p['left_len']) : "\t") . "\t"
+               . $p['left_len'] . "\t" . $p['left_tm'] . "\t" . $p['left_gc'] . "\t"
+               . $p['right_seq'] . "\t"
+               . (($p['right_start'] !== null && $p['right_len'] !== null)
+                    ? ($p['right_start'] - $p['right_len'] + 2) . "\t" . ($p['right_start'] + 1) : "\t") . "\t"
+               . $p['right_len'] . "\t" . $p['right_tm'] . "\t" . $p['right_gc'] . "\t"
+               . $p['product'] . "\t" . $p['product_tm'] . "\t" . $p['penalty'] . "\n";
+        }
+    }
+    exit;
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/js/rwd-tables.js" defer></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<title>Primer Design - CnidoSite</title>
+<meta name="keywords" content="Cnidaria, primer design, PCR, Primer3" />
+<meta name="description" content="Design PCR primers against a sequence annotated in CnidoSite or against a sequence you paste in, using the site's own Primer3 engine." />
+<link href="/templatemo_style.css?v=<?php echo (int)@filemtime(__DIR__ . '/../templatemo_style.css'); ?>" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/highcharts.js"></script>
+<script src="../js/highcharts-more.js"></script>
+<script src="../js/exporting.js"></script>
+
+<script src="../js/sign.js" language="javascript"></script>
+<script src="../js/tooltip.js" type="text/javascript"></script>
+<script src="../js/highcharts-detail.js"></script>
+<script src="../js/modernizr.main.js"></script>
+<style type="text/css">
+/* 表单控件样式：templatemo_style.css 里没有 input/textarea 的全局规则（只有 bootstrap
+   残留的 .form-group/.col-form-label），站内的做法是在页面里自带一段 <style>
+   （blast/blast.php、macrosynteny.css 都是如此）。类名一律 p3- 前缀，就是为了不和
+   那两个全局的 .form-* 撞车。
+
+   观感与 blast/blast.php 的表单卡片对齐：同一套圆角 12px、同样的浅阴影、同样的
+   蓝色 #3b82f6→#1d4ed8 渐变按钮和聚焦光圈，这样两个工具页看起来是一家人。
+   表单卡片限宽 800px 且居中 —— 与 go.php / interpro.php 的 .kegg-form-container 同一
+   套写法；#column 本身有 1590px 宽，不限宽的话输入框会被拉得极长。结果表不限宽。 */
+.p3-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+    padding: 26px 30px;
+    margin: 20px 0 0;
+}
+.p3-card-form { max-width: 800px; margin-left: auto; margin-right: auto; }
+.p3-sec { margin: 0 0 24px; padding: 0 0 22px; border-bottom: 1px solid #e2e8f0; }
+.p3-sec:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.p3-sec-title {
+    font-size: 18px; font-weight: 600; color: #1e293b;
+    margin: 0 0 16px; padding-left: 12px; position: relative; line-height: 1.35;
+}
+.p3-sec-title::before {
+    content: ""; position: absolute; left: 0; top: 3px; bottom: 3px; width: 4px;
+    border-radius: 2px; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+.p3-sec-title .p3-sub { font-size: 13px; font-weight: 400; color: #64748b; margin-left: 10px; }
+.p3-results .p3-sec-title { margin: 0 0 10px; }
+
+/* 表单行与字段 */
+.p3-row { display: flex; flex-wrap: wrap; gap: 16px 20px; align-items: flex-start; margin: 0 0 16px; }
+.p3-row:last-child { margin-bottom: 0; }
+.p3-f { display: flex; flex-direction: column; gap: 6px; flex: 1 1 200px; min-width: 0; }
+.p3-f-wide { flex: 1 1 100%; }
+.p3-f > label { font-size: 13.5px; font-weight: 600; color: #475569; line-height: 1.4; }
+.p3-f input[type=text], .p3-f input[type=number], .p3-f select {
+    width: 100%; box-sizing: border-box; font-size: 14px; padding: 9px 12px;
+    border: 2px solid #e2e8f0; border-radius: 8px; background: #fff; color: #1e293b;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.p3-f input[type=text]:focus, .p3-f input[type=number]:focus, .p3-f select:focus {
+    outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+}
+.p3-seq {
+    width: 100%; box-sizing: border-box; font-family: Consolas, Monaco, "Ubuntu Mono", monospace;
+    font-size: 13px; line-height: 1.6; padding: 12px 14px; background: #f8fafc; color: #1e293b;
+    border: 2px solid #e2e8f0; border-radius: 8px; resize: vertical;
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.p3-seq:focus {
+    outline: none; border-color: #3b82f6; background: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+}
+
+/* 按钮 */
+.p3-btns { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 22px; }
+.p3-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 15px; font-weight: 600; padding: 12px 28px; border-radius: 10px;
+    border: 2px solid #e2e8f0; background: #f8fafc; color: #64748b;
+    cursor: pointer; text-decoration: none;
+    transition: all .25s ease;
+}
+.p3-btn:hover { background: #eef2f7; color: #475569; border-color: #cbd5e1; }
+/* 「提交」按钮的渐变起点原来是最亮的 #3b82f6，白字压在上面只有 3.68；
+   换成站里其它蓝按钮用的 #1d4ed8→#1e40af（6.41→8.72），悬停再压深一档，
+   这样「按下变深」的手感保留，白字全程达标。 */
+.p3-btn-go {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    border-color: transparent; color: #fff;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, .3);
+}
+.p3-btn-go:hover {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: #fff; transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(29, 78, 216, .4);
+}
+
+/* 高级参数折叠区 */
+.p3-adv { margin: 4px 0 0; border: 1px solid #e2e8f0; border-radius: 10px; background: #fbfcfe; }
+.p3-adv > summary {
+    display: block;                      /* 让下面的 ::before 三角在各浏览器里位置一致 */
+    cursor: pointer; font-size: 14px; font-weight: 600; color: #1d4ed8;
+    padding: 13px 18px; list-style: none; user-select: none;
+}
+.p3-adv > summary::-webkit-details-marker { display: none; }
+.p3-adv > summary::before { content: "\25B8"; display: inline-block; width: 16px; color: #64748b; }
+.p3-adv[open] > summary::before { content: "\25BE"; }
+.p3-adv > summary:hover { color: #1e40af; }
+.p3-adv .p3-adv-body { padding: 4px 18px 20px; border-top: 1px solid #e2e8f0; }
+.p3-fgroup { margin-top: 20px; }
+.p3-fgroup-title {
+    font-size: 12.5px; font-weight: 700;
+    color: #64748b; margin: 0 0 12px; padding-bottom: 6px; border-bottom: 1px dashed #e2e8f0;
+}
+
+/* 表单里的说明文字（.sc-note 在 sc_pages.css 里，本页没有引那张表 —— 原来这几段
+   说明是裸的正文样式，这里给回一个本页自己的类） */
+.p3-note { font-size: 16px; color: #475569; line-height: 1.65; margin: 6px 0 12px; }
+.p3-note a { color: #1d4ed8; text-decoration: none; font-weight: 600; }
+.p3-note a:hover { text-decoration: underline; }
+.p3-note b, .p3-note strong { color: #1e293b; }
+.p3-hint {
+    margin: 0 0 16px; padding: 12px 16px; background: #f1f5f9;
+    border-left: 3px solid #64748b; border-radius: 0 6px 6px 0;
+    font-size: 16px; line-height: 1.65; color: #475569;
+}
+.p3-hint b { color: #1e293b; }
+
+/* 结果里引物序列用等宽字体，方便按碱基对齐数 */
+.p3-nt { font-family: Consolas, Monaco, monospace; font-size: 13px; letter-spacing: .3px; }
+/* 结果表的滚动容器。这两个类不在任何共享样式表里 —— 它们是 blast_result.php
+   的局部 <style>（:152 和 :161）定义的，那里也是站内唯一一处。此处照抄一份，
+   让 Primer Design 的结果表和 BLAST 的结果表外观一致。 */
+.table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    margin-top: 20px;
+}
+.table-scroll-container {
+    max-height: 700px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* 结果区：.table-container 自带卡片外观，套在 .p3-card 里会变成卡中卡，
+   所以结果卡内部把它降级成一个普通的内嵌滚动框。 */
+.p3-results .table-container {
+    box-shadow: none; border-color: #e8edf3; border-radius: 8px; margin-top: 12px;
+}
+/* 结果表：表头吸顶，长表滚动时不丢列名 */
+.p3-results table.gridtable { margin: 0; }
+.p3-results table.gridtable th { position: sticky; top: 0; z-index: 1; }
+.p3-results table.gridtable tr:hover td { background: #f4f8fd; }
+
+/* 扩增子视图：引物区段高亮 */
+.p3-amp { font-family: Consolas, Monaco, monospace; font-size: 13px; line-height: 1.9;
+          word-break: break-all; background: #fbfbf8; border: 1px solid #e1e0d9;
+          border-radius: 6px; padding: 12px 14px; white-space: normal; }
+.p3-amp b { background: #dbeafe; color: #10416f; font-weight: 700; border-radius: 2px; }
+.p3-amp i { background: #fee2e2; color: #7a1f1f; font-style: normal; font-weight: 700; border-radius: 2px; }
+.p3-legend-inline { font-size: 13px; color: #64748b; margin: 6px 0 12px; }
+.p3-legend-inline b { background: #dbeafe; color: #10416f; padding: 1px 5px; border-radius: 3px; }
+.p3-legend-inline i { background: #fee2e2; color: #7a1f1f; font-style: normal; padding: 1px 5px; border-radius: 3px; }
+
+/* ---- Primer map（结果里的引物图）----
+   图本体是 width="100%" 的 SVG，viewBox 宽取卡片可用宽度，正常窗口下按 1:1 铺满，
+   不做整体缩小；下面这些是图例和元件明细卡片，字号都是自然字号，不参与缩放。 */
+.p3-map-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; font-size: 12.5px; color: #475569; }
+.p3-map-legend .k { display: inline-flex; align-items: center; gap: 6px; background: #f8fafc;
+                    border: 1px solid #e2e8f0; border-radius: 14px; padding: 3px 10px; }
+.p3-map-legend .sw { width: 12px; height: 12px; border-radius: 3px; }
+.p3-map-items { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 10px; margin: 12px 0 2px; }
+.p3-map-item { border: 1px solid #e2e8f0; border-left: 4px solid #cbd5e1; border-radius: 8px;
+               padding: 9px 12px; background: #fff; }
+.p3-map-item.l { border-left-color: #2563eb; }
+.p3-map-item.r { border-left-color: #dc2626; }
+.p3-map-item.p { border-left-color: #b45309; }
+.p3-map-item .hd { font-size: 12.5px; font-weight: 700; color: #334155; margin-bottom: 3px; }
+.p3-map-item .seq { font-family: Consolas, Monaco, monospace; font-size: 13px; letter-spacing: .3px;
+                    word-break: break-all; color: #1e293b; }
+.p3-map-item .meta { font-size: 12px; color: #64748b; margin-top: 4px; }
+
+/* 标签行：左边是字段名，右边放「载入示例」这类小动作 —— blast.php 的
+   .textarea-header 用的是同一个布局，这里照做。 */
+.p3-label-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.p3-example { font-size: 13px; font-weight: 600; color: #1d4ed8; text-decoration: none; white-space: nowrap; }
+.p3-example:hover { color: #1e40af; text-decoration: underline; }
+
+/* 窄屏：让字段和按钮铺满一行 */
+@media (max-width: 768px) {
+    .p3-card { padding: 18px 16px; }
+    .p3-f { flex: 1 1 100%; }
+    .p3-label-row { flex-wrap: wrap; }
+    .p3-btns { flex-direction: column; align-items: stretch; }
+}
+</style>
+
+<script type="text/javascript">
+/* 「Load example sequence」：把一条**真实的**序列填进 textarea，让用户点一下就能
+   看到完整的结果页长什么样。纯客户端填充 —— 不改 URL、不提交、不碰 sp/gid，
+   与 blast/blast.php 的 prexample() 同一做法。
+
+   序列是本站 NVECT_seq 表里 LOC116613690（转录本 rna-XM_048724567.1）的前 900 bp，
+   按 60 bp 分行写成 FASTA。选它是因为：它是站内真实注释过的转录本（不是编的），
+   900 bp 用默认的 published 预设实测能返回 5 对引物，而且提交后的 URL 不到 1 kb
+   （粘贴序列走 GET，太长的模板会 414）。改这条序列前请先确认这两点仍然成立。 */
+function p3Example()
+{
+  var seq =
+    "ACTTATATAGGGACCTACATAGGAGGGTTATAGAAAAACATGGCGGCTTCCAACTGGGAC" +
+    "ACACGGCCGAGAGAAAGAGGGAGTTTAGACTAAAACTCCGCGATCGTCCAACAAAATAAC" +
+    "AACGATGGATGTAATCTCGATATTATAAATGACCGACATGGCGGAAAACGATGGCAATGA" +
+    "GATGGAAACCATTGAAGTCAAGAAGGAAGATGCTGGCCAGGTGTTCCTGCTTATGGGAAA" +
+    "GGAGTACCGTATTTCTCGCAGCATCAGGGCGCAGTGGTTCTTCCAGCAATTTAACTCAAT" +
+    "TCTTGGCCATGCAAAGCCAAAAGAAGACATGTTGGCCTCAAATGAAGAGCTTGAGCTGTT" +
+    "ATCTGTGCTGTCAAGGGAGAATCATGATGATTCTAACCACAAAATATACAAACTGGTTCC" +
+    "CTCTACCCATATAACGTTCATTGGCAGAAGATACAAATTTGTCTTTTGTCTTGATATAAG" +
+    "TCCATCTTTGGCAACTGTGGACACAAAGTCTGAAACTGTCATTACAGATGAAGTATATGA" +
+    "GAAATTCAGAATTTGCCTTTCAGCTTTGGTGATGCCATTTTCAGTTCCAGGGAACAGTAT" +
+    "AGTTCTATGTCCAGAATTGCACATAACTGTGTTGGCCTACACATCAATACTCAGCCCAGA" +
+    "AGCACCGCAGATTATCCTCCAGGGCTGTTTAGTAACAGAAGATAACCTTGAGACAGTTCT" +
+    "ACACACAGTTGAAGACCAGCTTCACATGCTGGAAGACATTCTTGCTGGCACTGTCACCTC" +
+    "TTCCCTCCAGCTAGACAGCAAACACCCAAGTGAGGGAGATGGCTTGTCAAGTGATACTGT" +
+    "GACACTGCTGTCGCCAGAGGCGGGGCCTATTGCAATGCTCAGGGCCGCCTTACTAGCATT";
+  document.getElementById("seq").value = ">LOC116613690_NVECT_partial\n" + seq.match(/.{1,60}/g).join("\n") + "\n";
+}
+</script>
+</head>
+<body>
+<?php include __DIR__ . '/../Webpage_components.php'; print $header; ?>
+
+<div id="tempatemo_content_wrapper">
+<div id="templatemo_content">
+<div id="column">
+
+<legend><img src="../images/header.jpg" height="35px"  style="margin-bottom:-10px">&nbsp;<b>Primer Design</b></legend>
+<p class="paleo-intro">Primers can be designed directly against the sequences annotated in CnidoSite, or against a sequence you paste in. Design is performed by <a href="https://github.com/primer3-org/primer3" target="_blank">primer3</a> (version 2.6.1) running on this server &mdash; your sequence is not sent to any third-party website. For reference, the primers released with this database were designed with an optimal melting temperature of 60&deg;C (58&ndash;62&nbsp;&deg;C), an optimal primer length of 20&nbsp;bp (18&ndash;24&nbsp;bp), and a GC content between 40% and 60%, with self-complementarity restricted to limit primer-dimer formation; that parameter set is the <b>CnidoSite published protocol</b> preset below.</p>
+
+<?php if ($seq_note !== ''): ?>
+<div class="gd-notice gd-info" style="margin:8px 0 12px;"><?= p3_h($seq_note) ?></div>
+<?php endif; ?>
+
+<?php if ($ran && $result !== null && ($result['error'] !== '' || $rc !== 0)): ?>
+<div class="gd-notice gd-warn" style="margin:8px 0 12px;">
+<b>primer3 did not complete this design run.</b>
+<?php if ($result['error'] !== ''): ?>
+<div style="margin-top:5px;">Engine report: <code><?= p3_h($result['error']) ?></code></div>
+<?php endif; ?>
+<?php if ($rc !== 0): ?>
+<div style="margin-top:5px;">Process exit code <code><?= (int)$rc ?></code><?= $stderr !== '' ? ': <code>' . p3_h(trim($stderr)) . '</code>' : '' ?></div>
+<?php endif; ?>
+<div style="margin-top:5px;">This usually means the template is too short, the product size range does not fit the template, or two parameter ranges contradict each other (for example a minimum Tm above the maximum Tm). Please adjust the settings and try again.</div>
+</div>
+<?php elseif ($ran && $result !== null && $result['n'] === 0): ?>
+<div class="gd-notice gd-warn" style="margin:8px 0 12px;">
+<b>The engine ran normally but returned no primer pair under the current settings.</b>
+<div style="margin-top:5px;">This is not a program error &mdash; the constraints are too strict for this template. The reasons, taken one by one from primer3&rsquo;s EXPLAIN output:</div>
+<?php
+$ex = array();
+foreach (array('LEFT' => 'Left primer', 'RIGHT' => 'Right primer', 'PAIR' => 'Primer pair') as $k => $lbl) {
+    $tag = 'PRIMER_' . $k . '_EXPLAIN';
+    if (isset($result['tags'][$tag]) && $result['tags'][$tag] !== '') {
+        $ex[] = '<div style="margin-top:4px;"><b>' . $lbl . ':</b> ' . p3_h($result['tags'][$tag]) . '</div>';
+    }
+}
+echo $ex ? implode('', $ex) : '<div style="margin-top:4px;">(The engine returned no EXPLAIN details.)</div>';
+?>
+</div>
+<?php endif; ?>
+
+<div class="p3-card p3-card-form">
+<form method="get" action="primer3.html">
+
+  <div class="p3-sec">
+    <div class="p3-sec-title">Template</div>
+    <p class="p3-hint">Two ways to supply a template: pick a species and a gene / transcript ID, or paste
+    your own sequence. <b>If the gene ID is found it is used; the pasted sequence is used otherwise.</b>
+    A template must be at least 30&nbsp;bp.</p>
+    <div class="p3-row">
+      <div class="p3-f">
+        <label for="sp">Species (CnidoSite sequence database)</label>
+        <select name="sp" id="sp">
+          <option value="">(not used)</option>
+          <?php
+          // 只列真的存在 <ABBR>_seq 表、且在 abbr 里登记过的物种；值用 abbr1
+          // （表名前缀），显示一律用拉丁学名 —— 站内约定不把缩写码露给用户。
+          $opts = array();
+          foreach ($seq_species as $ab) {
+              $opts[$ab] = isset($latin_by_ab[$ab]) && $latin_by_ab[$ab] !== '' ? $latin_by_ab[$ab] : $ab;
+          }
+          asort($opts, SORT_NATURAL | SORT_FLAG_CASE);
+          foreach ($opts as $ab => $nm) {
+              echo '<option value="' . p3_h($ab) . '"' . ($ab === $sp ? ' selected' : '') . '>'
+                 . p3_h($nm) . '</option>';
+          }
+          ?>
+        </select>
+      </div>
+      <div class="p3-f">
+        <label for="gid">Gene / transcript ID</label>
+        <input type="text" name="gid" id="gid" size="26" value="<?= p3_h($gid) ?>" placeholder="e.g. LOC5505843" />
+      </div>
+    </div>
+    <div class="p3-f">
+      <div class="p3-label-row">
+        <label for="seq">Or paste a sequence (FASTA or plain; used when the gene ID above yields no template)</label>
+        <a href="javascript:void(0)" onclick="p3Example()" class="p3-example"
+           title="Pastes a 900 bp FASTA excerpt of the Nematostella vectensis transcript LOC116613690, taken from this site's own sequence database.">Load example sequence</a>
+      </div>
+      <textarea class="p3-seq" name="seq" id="seq" rows="6" placeholder=">my_sequence&#10;ACGT..."><?= p3_h($raw_seq) ?></textarea>
+    </div>
+  </div>
+
+  <div class="p3-sec">
+    <div class="p3-sec-title">Primer parameters</div>
+    <div class="p3-row">
+      <div class="p3-f p3-f-wide">
+        <label for="preset">Parameter preset</label>
+        <select name="preset" id="preset">
+          <?php foreach ($presets as $k => $pv): ?>
+            <option value="<?= p3_h($k) ?>"<?= $k === $preset ? ' selected' : '' ?>><?= p3_h($pv['label']) ?></option>
+          <?php endforeach; ?>
+        </select>
+      </div>
+    </div>
+
+  <details class="p3-adv">
+    <summary>Advanced parameters (any field left empty keeps the preset value)</summary>
+    <div class="p3-adv-body">
+      <p class="p3-note" style="margin:16px 0 0;">A value that is not a number is ignored. The product size
+      range is applied only when both of its fields are filled in and the maximum is at least the minimum.</p>
+
+      <div class="p3-fgroup">
+        <div class="p3-fgroup-title">Melting temperature</div>
+        <div class="p3-row">
+          <div class="p3-f"><label for="opt_tm">Optimum Tm (&deg;C)</label>
+            <input type="text" id="opt_tm" name="opt_tm" value="<?= p3_h(isset($_GET['opt_tm']) ? $_GET['opt_tm'] : '') ?>" /></div>
+          <div class="p3-f"><label for="min_tm">Minimum Tm (&deg;C)</label>
+            <input type="text" id="min_tm" name="min_tm" value="<?= p3_h(isset($_GET['min_tm']) ? $_GET['min_tm'] : '') ?>" /></div>
+          <div class="p3-f"><label for="max_tm">Maximum Tm (&deg;C)</label>
+            <input type="text" id="max_tm" name="max_tm" value="<?= p3_h(isset($_GET['max_tm']) ? $_GET['max_tm'] : '') ?>" /></div>
+          <div class="p3-f"><label for="tm_formula">Tm formula</label>
+            <select name="tm_formula" id="tm_formula">
+              <option value="">(preset default)</option>
+              <option value="santalucia"<?= (isset($_GET['tm_formula']) && $_GET['tm_formula'] === 'santalucia') ? ' selected' : '' ?>>SantaLucia</option>
+              <option value="breslauer"<?= (isset($_GET['tm_formula']) && $_GET['tm_formula'] === 'breslauer') ? ' selected' : '' ?>>Breslauer</option>
+            </select></div>
+          <div class="p3-f"><label for="salt_mono">Monovalent salt (mM)</label>
+            <input type="text" id="salt_mono" name="salt_mono" value="<?= p3_h(isset($_GET['salt_mono']) ? $_GET['salt_mono'] : '') ?>" /></div>
+          <div class="p3-f"><label for="dna_conc">Primer concentration (nM)</label>
+            <input type="text" id="dna_conc" name="dna_conc" value="<?= p3_h(isset($_GET['dna_conc']) ? $_GET['dna_conc'] : '') ?>" /></div>
+        </div>
+      </div>
+
+      <div class="p3-fgroup">
+        <div class="p3-fgroup-title">Primer length and GC content</div>
+        <div class="p3-row">
+          <div class="p3-f"><label for="opt_size">Optimum length (bp)</label>
+            <input type="text" id="opt_size" name="opt_size" value="<?= p3_h(isset($_GET['opt_size']) ? $_GET['opt_size'] : '') ?>" /></div>
+          <div class="p3-f"><label for="min_size">Minimum length (bp)</label>
+            <input type="text" id="min_size" name="min_size" value="<?= p3_h(isset($_GET['min_size']) ? $_GET['min_size'] : '') ?>" /></div>
+          <div class="p3-f"><label for="max_size">Maximum length (bp)</label>
+            <input type="text" id="max_size" name="max_size" value="<?= p3_h(isset($_GET['max_size']) ? $_GET['max_size'] : '') ?>" /></div>
+          <div class="p3-f"><label for="min_gc">Minimum GC (%)</label>
+            <input type="text" id="min_gc" name="min_gc" value="<?= p3_h(isset($_GET['min_gc']) ? $_GET['min_gc'] : '') ?>" /></div>
+          <div class="p3-f"><label for="max_gc">Maximum GC (%)</label>
+            <input type="text" id="max_gc" name="max_gc" value="<?= p3_h(isset($_GET['max_gc']) ? $_GET['max_gc'] : '') ?>" /></div>
+          <div class="p3-f"><label for="gc_clamp">GC clamp (G/C at the 3&rsquo; end)</label>
+            <input type="text" id="gc_clamp" name="gc_clamp" value="<?= p3_h(isset($_GET['gc_clamp']) ? $_GET['gc_clamp'] : '') ?>" /></div>
+          <div class="p3-f"><label for="max_poly_x">Maximum poly-X run</label>
+            <input type="text" id="max_poly_x" name="max_poly_x" value="<?= p3_h(isset($_GET['max_poly_x']) ? $_GET['max_poly_x'] : '') ?>" /></div>
+        </div>
+      </div>
+
+      <div class="p3-fgroup">
+        <div class="p3-fgroup-title">Product and output</div>
+        <div class="p3-row">
+          <div class="p3-f"><label for="prod_min">Minimum product size (bp)</label>
+            <input type="text" id="prod_min" name="prod_min" value="<?= p3_h(isset($_GET['prod_min']) ? $_GET['prod_min'] : '') ?>" /></div>
+          <div class="p3-f"><label for="prod_max">Maximum product size (bp)</label>
+            <input type="text" id="prod_max" name="prod_max" value="<?= p3_h(isset($_GET['prod_max']) ? $_GET['prod_max'] : '') ?>" /></div>
+          <div class="p3-f"><label for="num_return">Pairs to return</label>
+            <input type="text" id="num_return" name="num_return" value="<?= p3_h(isset($_GET['num_return']) ? $_GET['num_return'] : '') ?>" /></div>
+        </div>
+      </div>
+
+      <div class="p3-fgroup">
+        <div class="p3-fgroup-title">Self-complementarity and probe</div>
+        <div class="p3-row">
+          <div class="p3-f"><label for="max_self_any">Max self-complementarity (&Delta;G)</label>
+            <input type="text" id="max_self_any" name="max_self_any" value="<?= p3_h(isset($_GET['max_self_any']) ? $_GET['max_self_any'] : '') ?>" /></div>
+          <div class="p3-f"><label for="max_self_end">Max 3&rsquo; self-complementarity</label>
+            <input type="text" id="max_self_end" name="max_self_end" value="<?= p3_h(isset($_GET['max_self_end']) ? $_GET['max_self_end'] : '') ?>" /></div>
+          <div class="p3-f"><label for="pick_internal">Internal oligo (probe)</label>
+            <select name="pick_internal" id="pick_internal">
+              <option value="0">Do not pick an internal oligo</option>
+              <option value="1"<?= (isset($_GET['pick_internal']) && $_GET['pick_internal'] === '1') ? ' selected' : '' ?>>Also pick an internal oligo</option>
+            </select></div>
+        </div>
+      </div>
+
+    </div>
+  </details>
+  </div><!-- .p3-sec 结束。这一行以前漏了：少了它，下面 </div> 会依次错位一格，
+            形成卡片一直不闭合的连锁反应 —— 结果卡被套进 800px 宽的 .p3-card-form
+            里（表格列挤到 104px，引物序列折成两行）、primer map 的 SVG 被整体缩到
+            0.48 倍（1530 的 viewBox 塞进 738px），页面上表格之后的所有内容都跟着
+            进了表单卡。改这里前请先用浏览器量一下 .p3-results 的父节点。 -->
+
+  <input type="hidden" name="run" value="1" />
+  <div class="p3-btns">
+    <button type="submit" class="p3-btn p3-btn-go">Design primers</button>
+    <?php if ($ran && $result !== null && $result['n'] > 0): ?>
+      <?php
+      // 导出走同一套 GET 参数再跑一次（primer3 通常 <1 s），避免把结果存到 tmp/
+      // 里带去重和清理问题 —— 站内 tmp/ 已经堆了 2000 多个从不清理的作业文件。
+      $qs = $_GET; $qs['format'] = 'tsv';
+      ?>
+      <a class="p3-btn"
+         href="primer3.html?<?= p3_h(http_build_query($qs)) ?>">Download TSV</a>
+    <?php endif; ?>
+  </div>
+</form>
+</div>
+
+<?php if ($ran && $result !== null && $result['n'] > 0): ?>
+  <?php $tpl_len = strlen($seq_used); ?>
+  <div class="p3-card p3-results">
+  <div class="p3-sec-title">Design results <span class="p3-sub">sorted by primer3 penalty, lowest first</span></div>
+  <p class="p3-note" style="margin:0 0 4px;">
+    Template <b><?= number_format($tpl_len) ?></b> bp &middot;
+    parameter preset <b><?= p3_h($presets[$preset]['label']) ?></b> &middot;
+    <b><?= (int)$result['n'] ?></b> primer pair<?= (int)$result['n'] === 1 ? '' : 's' ?> returned.
+  </p>
+
+  <div class="table-container">
+  <div class="table-scroll-container">
+  <table class="gridtable">
+    <tr align="center">
+      <th width="4%">Pair</th>
+      <th width="17%">Left primer (5'&rarr;3')</th>
+      <th width="9%">Position</th>
+      <th width="6%">Len</th>
+      <th width="7%">Tm (&deg;C)</th>
+      <th width="6%">GC (%)</th>
+      <th width="17%">Right primer (5'&rarr;3')</th>
+      <th width="9%">Position</th>
+      <th width="6%">Len</th>
+      <th width="7%">Tm (&deg;C)</th>
+      <th width="6%">GC (%)</th>
+      <th width="7%">Product (bp)</th>
+      <th width="5%">Penalty</th>
+    </tr>
+    <?php foreach ($result['pairs'] as $p):
+        /* 位置一律显示成模板链上的区间（1-based 闭区间），两个引物口径一致：
+           左引物占 left_start..left_start+len-1；
+           右引物退火在模板上的区段起点是 rs0 = right_start-right_len+1。
+           primer3 的 PRIMER_RIGHT 给的是右引物 3' 端的 0-based 下标，直接拿它
+           显示会让「Start」这一列左引物是 5' 端、右引物却是 3' 端，两个数字
+           不可比 —— 所以统一改成区间。 */
+        $l_s = $p['left_start'] !== null ? ($p['left_start'] + 1) . '&ndash;' . ($p['left_start'] + $p['left_len']) : '';
+        $r_s = ($p['right_start'] !== null && $p['right_len'] !== null)
+             ? ($p['right_start'] - $p['right_len'] + 2) . '&ndash;' . ($p['right_start'] + 1) : '';
+    ?>
+    <tr align="center">
+      <td><?= $p['idx'] + 1 ?></td>
+      <td class="p3-nt"><?= p3_h($p['left_seq']) ?></td>
+      <td><?= $l_s ?></td>
+      <td><?= p3_h($p['left_len']) ?></td>
+      <td><?= p3_h($p['left_tm']) ?></td>
+      <td><?= p3_h($p['left_gc']) ?></td>
+      <td class="p3-nt"><?= p3_h($p['right_seq']) ?></td>
+      <td><?= $r_s ?></td>
+      <td><?= p3_h($p['right_len']) ?></td>
+      <td><?= p3_h($p['right_tm']) ?></td>
+      <td><?= p3_h($p['right_gc']) ?></td>
+      <td><b><?= p3_h($p['product']) ?></b></td>
+      <td><?= p3_h($p['penalty'] !== '' ? number_format((float)$p['penalty'], 3) : '') ?></td>
+    </tr>
+    <?php endforeach; ?>
+  </table>
+  </div>
+  </div>
+
+  <?php if (!empty($result['internal'])): ?>
+  <div class="p3-sec-title" style="margin-top:26px;">Internal oligos (probes) <span class="p3-sub">picked alongside the primer pairs</span></div>
+  <div class="table-container"><div class="table-scroll-container">
+  <table class="gridtable">
+    <tr align="center"><th width="8%">#</th><th width="40%">Sequence (5'&rarr;3')</th>
+      <th width="12%">Start</th><th width="12%">Len</th><th width="14%">Tm (&deg;C)</th><th width="14%">GC (%)</th></tr>
+    <?php foreach ($result['internal'] as $k => $o): ?>
+    <tr align="center"><td><?= $k + 1 ?></td><td class="p3-nt"><?= p3_h($o['seq']) ?></td>
+      <td><?= $o['start'] !== null ? $o['start'] + 1 : '' ?></td><td><?= p3_h($o['len']) ?></td>
+      <td><?= p3_h($o['tm']) ?></td><td><?= p3_h($o['gc']) ?></td></tr>
+    <?php endforeach; ?>
+  </table></div></div>
+  <?php endif; ?>
+
+  <?php
+  /* ---------------------------------------------------------------------
+   * Primer map：把第 1 对引物画进模板坐标里。
+   *
+   * 以前这里只有一段会折行的等宽文本（把产物序列打出来，左右引物换个底色）：
+   * 产物落在模板的哪一段看不出，两个引物的方向也看不出。现在画成上下两条轨道 ——
+   *   上：整条模板，标出产物区段与两个引物在模板上的真实位置；模板远长于产物时
+   *       改画产物附近的 1500 bp 窗口（见 $WIN_BP），否则引物会小到看不见；
+   *   下：产物放大，左右引物各占一格（带 5'→3' 箭头、引物序列、内部探针）+ 刻度。
+   * 整张图是**一个 width="100%" 的 SVG**，viewBox 宽取结果卡片的可用宽度，所以正常
+   * 窗口下按 1:1 铺满整幅宽度、不做整体缩小；只有长度方向随容器伸缩 —— 所有 x 都由
+   * 碱基位置换算（$bx/$bw），没有写死的像素宽度，文字保持自然字号。
+   *
+   * 坐标是 0-based 闭区间（PRIMER_RIGHT_i 给的是右引物 3' 端的 0-based 下标），
+   * 所以右引物在模板上的起点 = right_start - right_len + 1。
+   * ------------------------------------------------------------------- */
+  $p0 = $result['pairs'][0];
+  if ($p0['left_start'] !== null && $p0['right_start'] !== null && $p0['right_len'] !== null) {
+      $amp_s = $p0['left_start'];
+      $amp_e = $p0['right_start'];
+      if ($amp_e >= $amp_s && $amp_e < $tpl_len) {
+          $amp_len = $amp_e - $amp_s + 1;
+          $rs0     = $p0['right_start'] - $p0['right_len'] + 1;
+          $amp     = substr($seq_used, $amp_s, $amp_len);
+          $off_r   = $rs0 - $amp_s;                       // 右引物在产物内的偏移
+
+          /* 上轨画多少 bp：模板短就画整条，长就只画产物附近的一个窗口。
+             12655 bp 的转录本上 241 bp 的产物在 1418px 的轨道里只有 27px，两个引物各
+             0.6px —— 位置、方向、相对大小全丢了，这条轨就成了没用的装饰。所以超过
+             $WIN_BP 就改画窗口：固定 1500 bp（产物本身比 1500 还长就取产物的 1.25 倍），
+             以产物为中心、贴住模板两端；窗口在整条模板里的位置由上面那条 context 条表示，
+             刻度写的一律是**绝对坐标**，所以窗口不会让人看错位置。 */
+          $WIN_BP  = 1500;
+          $span1   = $tpl_len <= $WIN_BP
+                   ? $tpl_len
+                   : min($tpl_len, max($WIN_BP, (int) ceil($amp_len * 1.25)));
+          $w_start = $tpl_len <= $span1
+                   ? 0
+                   : max(0, min((int) round(($amp_s + $amp_e) / 2 - $span1 / 2), $tpl_len - $span1));
+          $wnd     = $span1 < $tpl_len;                   // 上轨是窗口、不是整条模板
+
+          $VW  = 1530;                                    // viewBox：宽 = 卡片可用宽度
+          $LX  = 100;                                     // 左侧标签栏（右对齐）
+          $X0  = 112; $X1 = $VW - 10;                     // 轨道左右端
+          $TW  = $X1 - $X0;
+          $VH  = $wnd ? 204 : 180;
+          $R1Y = $wnd ? 48 : 26;  $R1H = 34;              // 上轨：模板 / 模板窗口
+          $R2Y = $R1Y + 76;       $R2H = 54;              // 下轨：产物
+          $acy = $R2Y + $R2H / 2;
+          $mono = ' font-family="Consolas,Monaco,monospace" letter-spacing="0.3"';
+
+          /* 碱基位置 -> 图内 x；$span 是该轨道的碱基跨度 */
+          $bx = function ($pos, $span) use ($X0, $TW) { return $X0 + $pos / $span * $TW; };
+          $bw = function ($len, $span) use ($TW) { return $len / $span * $TW; };
+          /* 上轨专用：入参一律是**模板绝对坐标**，内部再减掉窗口起点 */
+          $bx1 = function ($pos) use ($bx, $span1, $w_start) { return $bx($pos - $w_start, $span1); };
+          $bw1 = function ($len) use ($bw, $span1) { return $bw($len, $span1); };
+          /* 轨道刻度：只画 25/50/75% 三根，两端用轨道自己的边 */
+          $ticks = function ($y, $h) use ($X0, $TW) {
+              $o = '';
+              foreach (array(.25, .5, .75) as $q) {
+                  $x = round($X0 + $q * $TW, 1);
+                  $o .= '<line x1="' . $x . '" y1="' . $y . '" x2="' . $x . '" y2="' . ($y + $h)
+                      . '" stroke="#cbd5e1" stroke-width="1" />';
+              }
+              return $o;
+          };
+          /* 刻度标签：首尾贴两端，中间三分均分 */
+          $ruler = function ($first, $last, $y) use ($X0, $TW) {
+              $o = '';
+              for ($k = 0; $k < 5; $k++) {
+                  $q  = $k / 4;
+                  $an = $k === 0 ? 'start' : ($k === 4 ? 'end' : 'middle');
+                  $o .= '<text x="' . round($X0 + $q * $TW, 1) . '" y="' . $y . '" text-anchor="' . $an
+                      . '" font-size="11.5" fill="#64748b">'
+                      . number_format((int)round($first + $q * ($last - $first))) . '</text>';
+              }
+              return $o;
+          };
+
+          $svg  = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 ' . $VW . ' ' . $VH
+                . '" style="display:block;height:auto" role="img" aria-label="Primer map: a '
+                . number_format($amp_len) . ' bp product on the ' . number_format($tpl_len) . ' bp template'
+                . ($wnd ? ', template track showing a ' . number_format($span1) . ' bp window' : '') . '">';
+          $svg .= '<rect x="0.5" y="0.5" width="' . ($VW - 1) . '" height="' . ($VH - 1)
+                . '" rx="10" fill="#ffffff" stroke="#e2e8f0" />';
+
+          /* ---------- context 条：整条模板的缩略，蓝块 = 下轨画的那段窗口 ---------- */
+          if ($wnd) {
+              $cy = 18; $ch = 7;
+              $svg .= '<text x="' . $LX . '" y="' . ($cy + 7) . '" text-anchor="end" font-size="11"'
+                    . ' fill="#64748b">whole template</text>';
+              $svg .= '<rect x="' . $X0 . '" y="' . $cy . '" width="' . $TW . '" height="' . $ch
+                    . '" rx="3.5" fill="#e8eef6" stroke="#dbe3ec" />';
+              $cxw = $bx($w_start, $tpl_len); $cww = max(4, $bw($span1, $tpl_len));
+              $svg .= '<rect x="' . round($cxw, 1) . '" y="' . $cy . '" width="' . round($cww, 1)
+                    . '" height="' . $ch . '" rx="3.5" fill="#93c5fd" stroke="#1d4ed8"><title>the '
+                    . number_format($span1) . ' bp drawn in the track below &#183; template '
+                    . number_format($w_start + 1) . '&#8211;' . number_format($w_start + $span1)
+                    . ' of ' . number_format($tpl_len) . '</title></rect>';
+              /* 产物在这一条上的位置，让人一眼知道窗口为什么开在这里 */
+              $svg .= '<rect x="' . round($bx($amp_s, $tpl_len), 1) . '" y="' . $cy . '" width="'
+                    . round(max(1.5, $bw($amp_len, $tpl_len)), 1) . '" height="' . $ch
+                    . '" fill="#f59e0b" />';
+          }
+
+          /* ---------- 上轨：整条模板，或模板上的一个窗口 ---------- */
+          $svg .= '<text x="' . $LX . '" y="' . ($R1Y + 14) . '" text-anchor="end" font-size="13.5"'
+                . ' font-weight="700" fill="#1e293b">Template</text>';
+          $svg .= '<text x="' . $LX . '" y="' . ($R1Y + 30) . '" text-anchor="end" font-size="11.5"'
+                . ' fill="#64748b">'
+                . ($wnd ? number_format($span1) . ' bp window' : number_format($tpl_len) . ' bp')
+                . '</text>';
+          $svg .= '<rect x="' . $X0 . '" y="' . $R1Y . '" width="' . $TW . '" height="' . $R1H
+                . '" rx="6" fill="#eef2f7" stroke="#dbe3ec" />';
+          $pbx = $bx1($amp_s); $pbw = $bw1($amp_len);
+          $svg .= '<rect x="' . round($pbx, 1) . '" y="' . $R1Y . '" width="' . round($pbw, 1)
+                . '" height="' . $R1H . '" fill="#fef3c7" stroke="#f59e0b"><title>product '
+                . number_format($amp_len) . ' bp &#183; template ' . number_format($amp_s + 1) . '&#8211;'
+                . number_format($amp_e + 1) . '</title></rect>';
+          if ($pbw > 104) {
+              $svg .= '<text x="' . round($pbx + $pbw / 2, 1) . '" y="' . ($R1Y + 21)
+                    . '" text-anchor="middle" font-size="11.5" fill="#92400e">product '
+                    . number_format($amp_len) . ' bp</text>';
+          }
+          foreach (array(
+              array($bx1($p0['left_start']), $bw1($p0['left_len']), '#93c5fd', '#1d4ed8',
+                    'left primer, template ' . number_format($p0['left_start'] + 1) . '&#8211;'
+                    . number_format($p0['left_start'] + $p0['left_len'])),
+              array($bx1($rs0), $bw1($p0['right_len']), '#fca5a5', '#b91c1c',
+                    'right primer anneals here, template ' . number_format($rs0 + 1) . '&#8211;'
+                    . number_format($rs0 + $p0['right_len'])),
+          ) as $seg) {
+              $svg .= '<rect x="' . round($seg[0], 1) . '" y="' . $R1Y . '" width="'
+                    . round(max(1.5, $seg[1]), 1) . '" height="' . $R1H . '" fill="' . $seg[2]
+                    . '" stroke="' . $seg[3] . '"><title>' . $seg[4] . '</title></rect>';
+          }
+          $svg .= $ticks($R1Y, $R1H);
+          $svg .= $ruler($w_start + 1, $w_start + $span1, $R1Y + $R1H + 15);
+
+          /* ---------- 下轨：产物放大 ---------- */
+          $svg .= '<text x="' . $LX . '" y="' . ($R2Y + 23) . '" text-anchor="end" font-size="13.5"'
+                . ' font-weight="700" fill="#1e293b">Amplicon</text>';
+          $svg .= '<text x="' . $LX . '" y="' . ($R2Y + 39) . '" text-anchor="end" font-size="11.5"'
+                . ' fill="#64748b">' . number_format($amp_len) . ' bp</text>';
+          $svg .= '<rect x="' . $X0 . '" y="' . $R2Y . '" width="' . $TW . '" height="' . $R2H
+                . '" rx="8" fill="#f1f5f9" stroke="#cbd5e1" />';
+          $lw = $bw($p0['left_len'], $amp_len);
+          $rw = $bw($p0['right_len'], $amp_len);
+          $rx = $bx($off_r, $amp_len);
+          $svg .= '<rect x="' . round($X0, 1) . '" y="' . $R2Y . '" width="' . round($lw, 1) . '" height="'
+                . $R2H . '" rx="6" fill="#bfdbfe" stroke="#1d4ed8"><title>left primer '
+                . p3_h($p0['left_seq']) . ' &#183; 5&#8242;&#8594;3&#8242;</title></rect>';
+          $svg .= '<path d="M' . round($X0 + $lw, 1) . ' ' . ($acy - 11) . ' L' . round($X0 + $lw + 11, 1)
+                . ' ' . $acy . ' L' . round($X0 + $lw, 1) . ' ' . ($acy + 11) . ' Z" fill="#1d4ed8" />';
+          $svg .= '<rect x="' . round($rx, 1) . '" y="' . $R2Y . '" width="' . round($rw, 1) . '" height="'
+                . $R2H . '" rx="6" fill="#fecaca" stroke="#b91c1c"><title>right primer '
+                . p3_h($p0['right_seq']) . ' &#183; its reverse complement binds the template strand</title></rect>';
+          $svg .= '<path d="M' . round($rx, 1) . ' ' . ($acy - 11) . ' L' . round($rx - 11, 1) . ' ' . $acy
+                . ' L' . round($rx, 1) . ' ' . ($acy + 11) . ' Z" fill="#b91c1c" />';
+          /* 引物序列写进色块里 —— 放不下就不写（块宽不足时宁缺勿挤） */
+          if ($lw >= 7.6 * strlen($p0['left_seq'])) {
+              $svg .= '<text x="' . round($X0 + $lw / 2, 1) . '" y="' . ($acy + 5)
+                    . '" text-anchor="middle" font-size="13"' . $mono . ' fill="#10416f">'
+                    . p3_h($p0['left_seq']) . '</text>';
+          }
+          if ($rw >= 7.6 * strlen($p0['right_seq'])) {
+              $svg .= '<text x="' . round($rx + $rw / 2, 1) . '" y="' . ($acy + 5)
+                    . '" text-anchor="middle" font-size="13"' . $mono . ' fill="#7a1f1f">'
+                    . p3_h($p0['right_seq']) . '</text>';
+          }
+          if ($rx - ($X0 + $lw) > 130) {              // 两引物之间的产物内部
+              $svg .= '<text x="' . round(($X0 + $lw + $rx) / 2, 1) . '" y="' . ($acy + 4)
+                    . '" text-anchor="middle" font-size="12" fill="#64748b">interior '
+                    . number_format($amp_len - $p0['left_len'] - $p0['right_len']) . ' bp</text>';
+          }
+          /* 内部探针：primer3 是**每对引物各选一条**（tag 写作 PRIMER_INTERNAL_<pair>_…），
+             同一条序列会被多对共用，所以列表里看着有重复 —— 那是引擎的真实输出，不是解析
+             出错。这张图画的是 pair 1，就只画**第 1 对自己**的那条（下标 0），既不重复，
+             口径也和标题一致。探针坐标是模板绝对坐标，先折进产物内的偏移。 */
+          $probe = isset($result['internal'][0]) ? $result['internal'][0] : null;
+          if ($probe !== null
+              && ($probe['start'] === null || $probe['len'] === null || $probe['len'] < 1
+                  || $probe['start'] < $amp_s || $probe['start'] + $probe['len'] - 1 > $amp_e)) {
+              $probe = null;                        // 缺失或落在产物外就不画
+          }
+          if ($probe !== null) {
+              $qx = $bx($probe['start'] - $amp_s, $amp_len);
+              $qw = max(4, $bw($probe['len'], $amp_len));
+              $svg .= '<rect x="' . round($qx, 1) . '" y="' . ($R2Y + 11) . '" width="' . round($qw, 1)
+                    . '" height="' . ($R2H - 22) . '" rx="3" fill="#fde68a" stroke="#b45309"><title>probe: '
+                    . p3_h($probe['seq']) . ' &#183; template '
+                    . number_format($probe['start'] + 1) . '&#8211;'
+                    . number_format($probe['start'] + $probe['len']) . '</title></rect>';
+              if ($qw >= 7.4 * strlen($probe['seq'])) {      // 放得下就把探针序列也写进去
+                  $svg .= '<text x="' . round($qx + $qw / 2, 1) . '" y="' . ($R2Y + $R2H / 2 + 4)
+                        . '" text-anchor="middle" font-size="12"' . $mono . ' fill="#7c2d12">'
+                        . p3_h($probe['seq']) . '</text>';
+              }
+          }
+          $svg .= $ticks($R2Y, $R2H);
+          $svg .= $ruler($amp_s + 1, $amp_e + 1, $R2Y + $R2H + 15);
+          $svg .= '</svg>';
+
+          echo '<div class="p3-sec-title" style="margin-top:26px;">Primer map '
+             . '<span class="p3-sub">pair&nbsp;1 (lowest penalty) &#183; product ' . number_format($amp_len)
+             . ' bp at template position ' . number_format($amp_s + 1) . '&#8211;' . number_format($amp_e + 1)
+             . ($wnd
+                ? ' &#183; the template track shows a ' . number_format($span1) . ' bp window of the '
+                  . number_format($tpl_len) . ' bp template &#8212; the blue segment on the top bar is '
+                  . 'where that window sits, and every scale is in template coordinates'
+                : '')
+             . ' &#183; the two tracks are drawn at different scales</span></div>';
+          echo '<p class="p3-map-legend">'
+             . '<span class="k"><span class="sw" style="background:#bfdbfe;border:1px solid #1d4ed8"></span>'
+             . 'Left primer &#8212; binds the template strand as listed (5&#8242;&#8594;3&#8242;)</span>'
+             . '<span class="k"><span class="sw" style="background:#fecaca;border:1px solid #b91c1c"></span>'
+             . 'Right primer &#8212; its reverse complement binds here</span>'
+             . '<span class="k"><span class="sw" style="background:#fef3c7;border:1px solid #f59e0b"></span>'
+             . 'Product</span>'
+             . ($wnd
+                ? '<span class="k"><span class="sw" style="background:#93c5fd;border:1px solid #1d4ed8"></span>'
+                  . 'Window drawn in the template track</span>' : '')
+             . ($probe !== null
+                ? '<span class="k"><span class="sw" style="background:#fde68a;border:1px solid #b45309"></span>'
+                  . 'Internal oligo (probe)</span>' : '')
+             . '</p>';
+          echo $svg;
+
+          /* 每个元件的明细：序列、模板位置、长度、Tm、GC */
+          echo '<div class="p3-map-items">';
+          $mk_item = function ($cls, $hd, $seq, $meta) {
+              return '<div class="p3-map-item ' . $cls . '"><div class="hd">' . $hd . '</div>'
+                   . '<div class="seq">' . p3_h($seq) . '</div>'
+                   . '<div class="meta">' . $meta . '</div></div>';
+          };
+          echo $mk_item('l', 'Left primer', $p0['left_seq'],
+              'template ' . number_format($p0['left_start'] + 1) . '&#8211;'
+              . number_format($p0['left_start'] + $p0['left_len']) . ' &#183; '
+              . p3_h($p0['left_len']) . ' bp &#183; Tm ' . p3_h($p0['left_tm']) . ' &#176;C &#183; GC '
+              . p3_h($p0['left_gc']) . ' %');
+          echo $mk_item('r', 'Right primer', $p0['right_seq'],
+              'template ' . number_format($rs0 + 1) . '&#8211;'
+              . number_format($rs0 + $p0['right_len']) . ' &#183; '
+              . p3_h($p0['right_len']) . ' bp &#183; Tm ' . p3_h($p0['right_tm']) . ' &#176;C &#183; GC '
+              . p3_h($p0['right_gc']) . ' %');
+          if ($probe !== null) {
+              echo $mk_item('p', 'Probe (pair&nbsp;1)', $probe['seq'],
+                  'template ' . number_format($probe['start'] + 1) . '&#8211;'
+                  . number_format($probe['start'] + $probe['len']) . ' &#183; ' . p3_h($probe['len'])
+                  . ' bp &#183; Tm ' . p3_h($probe['tm']) . ' &#176;C &#183; GC ' . p3_h($probe['gc']) . ' %'
+                  . ' &#183; sits between the two primers');
+          }
+          echo '</div>';
+
+          /* 产物序列原文：图给的是位置关系，这一段是拿来复制下单的 */
+          $html = '<b>' . p3_h(substr($amp, 0, $p0['left_len'])) . '</b>'
+                . p3_h(substr($amp, $p0['left_len'], $off_r - $p0['left_len']))
+                . '<i>' . p3_h(substr($amp, $off_r, $p0['right_len'])) . '</i>';
+          echo '<p class="p3-note" style="margin:14px 0 6px;">'
+             . '<b>Amplicon sequence</b> (5&#8242;&#8594;3&#8242; on the template strand, '
+             . number_format($amp_len) . ' bp) &#8212; <b>blue</b> is the left primer, <i>red</i> is where '
+             . 'the right primer anneals. Copy from here to order or to check a base by eye.</p>';
+          echo '<div class="p3-amp">' . $html . '</div>';
+          echo '<p class="p3-note" style="margin:8px 0 14px;">The right primer is listed as its own 5\'&rarr;3\' '
+             . 'sequence; what anneals to the template strand shown here is its reverse complement, so the '
+             . 'highlighted stretch is complementary to the listed sequence. That is expected.</p>';
+      }
+  }
+  ?>
+
+  <p class="p3-note" style="margin:18px 0 10px;">
+    <b>How to read this table.</b> <b>Position</b> is a 1-based interval on the template, and both primers
+    use the same convention: it is <b>the stretch the primer occupies on the template strand</b> (for the
+    left primer, starting at its 5&rsquo; end; for the right primer, the region it anneals to, i.e. where the
+    reverse complement of the listed sequence sits on the template). The two coordinates in a row
+    therefore use one convention and can be compared directly; the product size is the right-hand
+    coordinate minus the left-hand coordinate <b>plus one</b>, because the interval is closed at both
+    ends. The amplicon view above marks both coordinates so you can check them by eye.
+    <b>Penalty</b> is primer3&rsquo;s weighted sum of the deviations from your constraints &mdash;
+    lower is better, and the pairs are returned in that order. Tm is computed by primer3 with the
+    thermodynamic parameters in effect &mdash; SantaLucia unless you selected Breslauer above &mdash; at
+    the salt and primer concentrations in effect. The primer sequences
+    themselves are 5&rsquo;&rarr;3&prime; and can be ordered as they stand; the right primer anneals to the
+    template as its reverse complement.
+  </p>
+  <p class="p3-note" style="margin:0;">
+    <b>Specificity has not been assessed.</b> This page only designs primers; it does not check whether they
+    also anneal elsewhere in the genome or transcriptome. Once you have candidates, confirm each primer
+    sequence with this site&rsquo;s <a href="/blast/blast.php">BLAST</a>. The Tm and GC settings above are the
+    design targets, and the annealing temperature still has to be optimised at the bench.
+  </p>
+  </div><!-- /p3-card results -->
+<?php endif; ?>
+
+</div>
+</div>
+</div>
+<div class="guide">
+	<div class="guide-wrap">
+
+		<a href="javascript:window.scrollTo(0,0)" class="top" title="TOP"><span>TOP</span></a>
+	</div>
+</div>
+
+
+<?php print $footer; ?>
+</body>
+</html>

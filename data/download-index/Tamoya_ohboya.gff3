@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region BK067243.1 1 2860
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=685043
+BK067243.1	tpg	region	1	2860	.	+	.	ID=BK067243.1:1..2860;Dbxref=taxon:685043;Name=8;chromosome=8;gbkey=Src;genome=mitochondrion;isolate=IRGN 5EI4VPYLNR;mol_type=genomic DNA;specimen-voucher=IRGN:5EI4VPYLNR
+BK067243.1	tpg	inverted_repeat	11	802	.	-	.	ID=id-BK067243.1:11..802;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+BK067243.1	tpg	gene	816	1964	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+BK067243.1	tpg	CDS	816	1964	.	+	0	ID=cds-DBB38880.1;Parent=gene-cob;Dbxref=NCBI_GP:DBB38880.1;Name=DBB38880.1;gbkey=CDS;gene=cob;product=apocytochrome b;protein_id=DBB38880.1;transl_table=4
+BK067243.1	tpg	inverted_repeat	2066	2857	.	+	.	ID=id-BK067243.1:2066..2857;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+

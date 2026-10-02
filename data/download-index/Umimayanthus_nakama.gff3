@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_080209.1 1 22654
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1643395
+NC_080209.1	RefSeq	region	1	22654	.	+	.	ID=NC_080209.1:1..22654;Dbxref=taxon:1643395;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_080209.1	RefSeq	gene	108	4258	.	+	.	ID=gene-QU245_mgp01;Dbxref=GeneID:82275664;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=QU245_mgp01
+NC_080209.1	RefSeq	CDS	108	824	.	+	0	ID=cds-YP_010872594.1;Parent=gene-QU245_mgp01;Dbxref=GenBank:YP_010872594.1,GeneID:82275664;Name=YP_010872594.1;gbkey=CDS;gene=ND5;locus_tag=QU245_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_010872594.1;transl_table=4
+NC_080209.1	RefSeq	CDS	3128	4258	.	+	0	ID=cds-YP_010872594.1;Parent=gene-QU245_mgp01;Dbxref=GenBank:YP_010872594.1,GeneID:82275664;Name=YP_010872594.1;gbkey=CDS;gene=ND5;locus_tag=QU245_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_010872594.1;transl_table=4
+NC_080209.1	RefSeq	exon	108	824	.	+	.	ID=id-QU245_mgp01-1;Parent=gene-QU245_mgp01;Dbxref=GeneID:82275664;exon_number=1;gbkey=exon;gene=ND5;locus_tag=QU245_mgp01;number=1
+NC_080209.1	RefSeq	exon	3128	4258	.	+	.	ID=id-QU245_mgp01-2;Parent=gene-QU245_mgp01;Dbxref=GeneID:82275664;exon_number=2;gbkey=exon;gene=ND5;locus_tag=QU245_mgp01;number=2
+NC_080209.1	RefSeq	intron	825	3127	.	+	.	ID=id-QU245_mgp01;Parent=gene-QU245_mgp01;Dbxref=GeneID:82275664;gbkey=intron;gene=ND5;locus_tag=QU245_mgp01
+NC_080209.1	RefSeq	gene	1380	2369	.	+	.	ID=gene-QU245_mgp02;Dbxref=GeneID:82275654;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=QU245_mgp02
+NC_080209.1	RefSeq	CDS	1380	2369	.	+	0	ID=cds-YP_010872595.1;Parent=gene-QU245_mgp02;Dbxref=GenBank:YP_010872595.1,GeneID:82275654;Name=YP_010872595.1;gbkey=CDS;gene=ND1;locus_tag=QU245_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_010872595.1;transl_table=4
+NC_080209.1	RefSeq	gene	2520	2876	.	+	.	ID=gene-QU245_mgp03;Dbxref=GeneID:82275655;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=QU245_mgp03
+NC_080209.1	RefSeq	CDS	2520	2876	.	+	0	ID=cds-YP_010872596.1;Parent=gene-QU245_mgp03;Dbxref=GenBank:YP_010872596.1,GeneID:82275655;Name=YP_010872596.1;gbkey=CDS;gene=ND3;locus_tag=QU245_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_010872596.1;transl_table=4
+NC_080209.1	RefSeq	gene	4737	5489	.	+	.	ID=gene-QU245_mgp04;Dbxref=GeneID:82275656;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=QU245_mgp04
+NC_080209.1	RefSeq	CDS	4737	5489	.	+	0	ID=cds-YP_010872597.1;Parent=gene-QU245_mgp04;Dbxref=GenBank:YP_010872597.1,GeneID:82275656;Name=YP_010872597.1;gbkey=CDS;gene=COX2;locus_tag=QU245_mgp04;product=cytochrome c oxidase subunit II;protein_id=YP_010872597.1;transl_table=4
+NC_080209.1	RefSeq	gene	5978	7453	.	+	.	ID=gene-QU245_mgp05;Dbxref=GeneID:82275657;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=QU245_mgp05
+NC_080209.1	RefSeq	CDS	5978	7453	.	+	0	ID=cds-YP_010872598.1;Parent=gene-QU245_mgp05;Dbxref=GenBank:YP_010872598.1,GeneID:82275657;Name=YP_010872598.1;gbkey=CDS;gene=ND4;locus_tag=QU245_mgp05;product=NADH dehydrogenase subunit 4;protein_id=YP_010872598.1;transl_table=4
+NC_080209.1	RefSeq	gene	7570	8220	.	+	.	ID=gene-QU245_mgp06;Dbxref=GeneID:82275658;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=QU245_mgp06
+NC_080209.1	RefSeq	CDS	7570	8220	.	+	0	ID=cds-YP_010872599.1;Parent=gene-QU245_mgp06;Dbxref=GenBank:YP_010872599.1,GeneID:82275658;Name=YP_010872599.1;gbkey=CDS;gene=ND6;locus_tag=QU245_mgp06;product=NADH dehydrogenase subunit 6;protein_id=YP_010872599.1;transl_table=4
+NC_080209.1	RefSeq	gene	8475	9635	.	+	.	ID=gene-QU245_mgp07;Dbxref=GeneID:82275659;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=QU245_mgp07
+NC_080209.1	RefSeq	CDS	8475	9635	.	+	0	ID=cds-YP_010872600.1;Parent=gene-QU245_mgp07;Dbxref=GenBank:YP_010872600.1,GeneID:82275659;Name=YP_010872600.1;gbkey=CDS;gene=CYTB;locus_tag=QU245_mgp07;product=cytochrome b;protein_id=YP_010872600.1;transl_table=4
+NC_080209.1	RefSeq	gene	9983	10771	.	+	.	ID=gene-QU245_mgp08;Dbxref=GeneID:82275660;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=QU245_mgp08
+NC_080209.1	RefSeq	CDS	9983	10771	.	+	0	ID=cds-YP_010872601.1;Parent=gene-QU245_mgp08;Dbxref=GenBank:YP_010872601.1,GeneID:82275660;Name=YP_010872601.1;gbkey=CDS;gene=COX3;locus_tag=QU245_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_010872601.1;transl_table=4
+NC_080209.1	RefSeq	gene	10994	13812	.	+	.	ID=gene-QU245_mgp09;Dbxref=GeneID:82275661;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=QU245_mgp09
+NC_080209.1	RefSeq	CDS	10994	11881	.	+	0	ID=cds-YP_010872602.1;Parent=gene-QU245_mgp09;Dbxref=GenBank:YP_010872602.1,GeneID:82275661;Name=YP_010872602.1;gbkey=CDS;gene=COX1;locus_tag=QU245_mgp09;product=cytochrome c oxidase subunit I;protein_id=YP_010872602.1;transl_table=4
+NC_080209.1	RefSeq	CDS	13096	13812	.	+	0	ID=cds-YP_010872602.1;Parent=gene-QU245_mgp09;Dbxref=GenBank:YP_010872602.1,GeneID:82275661;Name=YP_010872602.1;gbkey=CDS;gene=COX1;locus_tag=QU245_mgp09;product=cytochrome c oxidase subunit I;protein_id=YP_010872602.1;transl_table=4
+NC_080209.1	RefSeq	exon	10994	11881	.	+	.	ID=id-QU245_mgp09-1;Parent=gene-QU245_mgp09;Dbxref=GeneID:82275661;exon_number=1;gbkey=exon;gene=COX1;locus_tag=QU245_mgp09;number=1
+NC_080209.1	RefSeq	exon	13096	13812	.	+	.	ID=id-QU245_mgp09-2;Parent=gene-QU245_mgp09;Dbxref=GeneID:82275661;exon_number=2;gbkey=exon;gene=COX1;locus_tag=QU245_mgp09;number=2
+NC_080209.1	RefSeq	intron	11882	13095	.	+	.	ID=id-QU245_mgp09;Parent=gene-QU245_mgp09;Dbxref=GeneID:82275661;exon_number=1;gbkey=intron;gene=COX1;locus_tag=QU245_mgp09;number=1
+NC_080209.1	RefSeq	gene	13902	14201	.	+	.	ID=gene-QU245_mgp10;Dbxref=GeneID:82275649;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=QU245_mgp10
+NC_080209.1	RefSeq	CDS	13902	14201	.	+	0	ID=cds-YP_010872603.1;Parent=gene-QU245_mgp10;Dbxref=GenBank:YP_010872603.1,GeneID:82275649;Name=YP_010872603.1;gbkey=CDS;gene=ND4L;locus_tag=QU245_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_010872603.1;transl_table=4
+NC_080209.1	RefSeq	gene	14459	14677	.	+	.	ID=gene-QU245_mgp11;Dbxref=GeneID:82275650;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=QU245_mgp11
+NC_080209.1	RefSeq	CDS	14459	14677	.	+	0	ID=cds-YP_010872604.1;Parent=gene-QU245_mgp11;Dbxref=GenBank:YP_010872604.1,GeneID:82275650;Name=YP_010872604.1;gbkey=CDS;gene=ATP8;locus_tag=QU245_mgp11;product=ATP synthase F0 subunit 8;protein_id=YP_010872604.1;transl_table=4
+NC_080209.1	RefSeq	gene	14893	15591	.	+	.	ID=gene-QU245_mgp12;Dbxref=GeneID:82275651;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=QU245_mgp12
+NC_080209.1	RefSeq	CDS	14893	15591	.	+	0	ID=cds-YP_010872605.1;Parent=gene-QU245_mgp12;Dbxref=GenBank:YP_010872605.1,GeneID:82275651;Name=YP_010872605.1;gbkey=CDS;gene=ATP6;locus_tag=QU245_mgp12;product=ATP synthase F0 subunit 6;protein_id=YP_010872605.1;transl_table=4
+NC_080209.1	RefSeq	gene	15851	17041	.	+	.	ID=gene-QU245_mgr01;Dbxref=GeneID:82275652;Name=QU245_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=QU245_mgr01
+NC_080209.1	RefSeq	rRNA	15851	17041	.	+	.	ID=rna-QU245_mgr01;Parent=gene-QU245_mgr01;Dbxref=GeneID:82275652;gbkey=rRNA;locus_tag=QU245_mgr01;product=12S ribosomal RNA
+NC_080209.1	RefSeq	exon	15851	17041	.	+	.	ID=exon-QU245_mgr01-1;Parent=rna-QU245_mgr01;Dbxref=GeneID:82275652;gbkey=rRNA;locus_tag=QU245_mgr01;product=12S ribosomal RNA
+NC_080209.1	RefSeq	gene	18320	19477	.	+	.	ID=gene-QU245_mgp13;Dbxref=GeneID:82275663;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=QU245_mgp13
+NC_080209.1	RefSeq	CDS	18320	19477	.	+	0	ID=cds-YP_010872606.1;Parent=gene-QU245_mgp13;Dbxref=GenBank:YP_010872606.1,GeneID:82275663;Name=YP_010872606.1;gbkey=CDS;gene=ND2;locus_tag=QU245_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_010872606.1;transl_table=4
+NC_080209.1	RefSeq	gene	19621	19691	.	+	.	ID=gene-QU245_mgt01;Dbxref=GeneID:82275653;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=QU245_mgt01
+NC_080209.1	RefSeq	tRNA	19621	19691	.	+	.	ID=rna-QU245_mgt01;Parent=gene-QU245_mgt01;Dbxref=GeneID:82275653;gbkey=tRNA;gene=trnM;locus_tag=QU245_mgt01;product=tRNA-Met
+NC_080209.1	RefSeq	exon	19621	19691	.	+	.	ID=exon-QU245_mgt01-1;Parent=rna-QU245_mgt01;Dbxref=GeneID:82275653;gbkey=tRNA;gene=trnM;locus_tag=QU245_mgt01;product=tRNA-Met
+NC_080209.1	RefSeq	gene	19718	22434	.	+	.	ID=gene-QU245_mgr02;Dbxref=GeneID:82275662;Name=QU245_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=QU245_mgr02
+NC_080209.1	RefSeq	rRNA	19718	22434	.	+	.	ID=rna-QU245_mgr02;Parent=gene-QU245_mgr02;Dbxref=GeneID:82275662;gbkey=rRNA;locus_tag=QU245_mgr02;product=16S ribosomal RNA
+NC_080209.1	RefSeq	exon	19718	22434	.	+	.	ID=exon-QU245_mgr02-1;Parent=rna-QU245_mgr02;Dbxref=GeneID:82275662;gbkey=rRNA;locus_tag=QU245_mgr02;product=16S ribosomal RNA
+

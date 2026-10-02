@@ -1,0 +1,98 @@
+LOCUS       BK067252                2195 bp    DNA     linear   INV 05-MAY-2026
+DEFINITION  TPA_asm: Morbakka virulenta isolate Ondo Fishing port chromosome 8
+            mitochondrion, complete sequence.
+ACCESSION   BK067252
+VERSION     BK067252.1
+KEYWORDS    Third Party Data; TPA; TPA:assembly.
+SOURCE      mitochondrion Morbakka virulenta
+  ORGANISM  Morbakka virulenta
+            Eukaryota; Metazoa; Cnidaria; Cubozoa; Carybdeida; Carukiidae;
+            Morbakka.
+REFERENCE   1  (bases 1 to 2195)
+  AUTHORS   Kayal,E. and Lavrov,D.V.
+  TITLE     One Ring does not rule them all: Linear mtDNA in Metazoa
+  JOURNAL   Gene 933, 148999 (2025)
+   PUBMED   39396556
+REFERENCE   2  (bases 1 to 2195)
+  AUTHORS   Kayal,E., Lavrov,D.V. and Collins,A.G.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (06-MAR-2024) Department of Ecology, Evolution, and
+            Organismal Biology, Iowa State University, 253 Bessey Hall, Ames,
+            IA 50011, USA
+COMMENT     THIRD PARTY DATABASE: This TPA record uses data from
+            DDBJ/EMBL/GenBank entry SRR7983773
+            
+            ##Assembly-Data-START##
+            Assembly Method :: SPAdes v. 3.15.5; NOVOPlasty v. 4.3; Bowtie2 v.
+                               2.5.2; Geneious v. 2023.2.1
+            Assembly Name   :: M.virulenta_SRR7983773
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..2195
+                     /organism="Morbakka virulenta"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /isolate="Ondo Fishing port"
+                     /db_xref="taxon:686327"
+                     /chromosome="8"
+     repeat_region   complement(1..512)
+                     /note="telomere repeat region"
+                     /rpt_type=inverted
+     gene            502..1668
+                     /gene="cob"
+     CDS             502..1668
+                     /gene="cob"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="apocytochrome b"
+                     /protein_id="DBB38895.1"
+                     /translation="MSALIRWRKDHPLASLVNSMVVDLPAPSNISYFWNFGSLLSLCL
+                     IIQIVTGVFLAMHYNSDVGLAFSSIAHIMRDVNYGYLLKFFHANGASLFFFCVYIHIA
+                     RGLYYGSYTQTAVWNVGVVIYFIMMLTAFIGYVLPWGQMSFWGATVITNLVSAVPYIG
+                     DLIVQWIWGGFSVSGATLNRFFSLHYLFPFVLVALVVVHLISLHERGSNNPTGLRSDI
+                     DKLPFHIYFSAKDVFGFVALGVLLAGVVYFAPNVLNDPENFISANPLVTPKHIQPEWY
+                     FLFAYAILRSIPNKLGGVVAMVASIAVLFLMPILHTSKIRNLTYKPIGKVMYWVFCAN
+                     FILLTWIGSQPVEDPFIMVGQISGLLYFLYFLVIIPTIGVLEDRLLLERKQVVT"
+     repeat_region   1694..2195
+                     /note="telomere repeat region"
+                     /rpt_type=inverted
+ORIGIN      
+        1 acggctttgt tttttgacat aaaattagct gtcgatcagg cggttatttt tcttgggatt
+       61 tttgcggtaa aatcgctcta gtaattttag gtgtaatttt tctaggggtt ttagcgttaa
+      121 accgggtttt ttcttgcata agccctgttt ttcctagagt tcatttttgt ttgtttgtac
+      181 acttttgtta caagccctga aggttttttc aaaggttagc atgttttttc gctgggaagt
+      241 aaattttgta atttaattta ttttttactc tccaagcacc gcctatttta gggctaaaac
+      301 ctaaaaaaat gagtaataat tttccataat ttttagctaa ttttatgtat tccgcgctct
+      361 caggcataat tgggcggaac actttttacc tccttgaatt tatatcccgg aaagtgaaaa
+      421 tttgcgcggg ggggtatcga ctaaatgaac atcatctttt atcccttaat tcaagtaaga
+      481 actcctcaga gagttagtat aatgagcgct ctaatcagat ggcggaaaga ccacccatta
+      541 gcttcactag ttaattctat ggtggtggat ctcccagccc ccagcaatat tagttatttt
+      601 tgaaattttg gttctctttt aagcctgtgc cttattattc aaattgttac tggtgtgttt
+      661 ttggctatgc attataactc tgatgtgggt ttagcctttt cttctattgc ccacataatg
+      721 agagatgtaa attatggata cttgttgaaa tttttccatg ctaatggggc ttccctattt
+      781 ttcttttgcg tgtatatcca cattgcacga gggctttatt atggaagcta tactcaaaca
+      841 gctgtgtgaa acgtgggggt tgtgatctat tttattatga tgttgacagc ctttattggt
+      901 tatgttcttc cctgaggtca gatgtctttt tggggggcca ctgttattac taacttggtg
+      961 tctgcagtgc cctatatagg agatctgatt gttcagtgaa tatggggagg gttctctgta
+     1021 tccggtgcca cccttaatag gttttttagt cttcactact tatttccttt tgtactagtc
+     1081 gctttggttg ttgttcacct aatcagctta cacgagagag gctccaataa tcccactggt
+     1141 ttaagatctg atatagataa gctacccttt cacatttatt tctctgctaa agatgtattt
+     1201 gggtttgttg ccttaggggt tcttttagct ggggtggtct actttgcccc caatgtatta
+     1261 aatgatcccg aaaacttcat ctcagcaaat ccattagtaa cacctaaaca catacaacct
+     1321 gaatgatact ttctatttgc ttatgcaatt ctaagatcta tccctaacaa attggggggt
+     1381 gtggtagcta tggtagcaag catagccgta ttattcctca tgcctattct tcacactagc
+     1441 aaaataagga acttaacata caaacccata ggaaaggtta tgtattgagt gttttgtgct
+     1501 aactttattc ttttgacttg aataggttct caacctgtag aagacccatt tattatggtg
+     1561 ggacagatct ccggactttt gtattttctt tatttcctgg taatcattcc taccataggg
+     1621 gtgttggaag accgacttct cctagagaga aagcaagtcg taacatagtg agagtagggg
+     1681 aacctgttct tgataatatt acttactaat agagctcctc tcgtgatagc gggaggagtt
+     1741 cttacttgaa ttaagggata aaagatgatg ttcatttagt cgataccccc ccgcgcaaat
+     1801 tttcactttc cgggatataa attcaaggag gtaaaaagtg ttccgcccaa ttatgcctga
+     1861 gagcgcggaa tacataaaat tagctaaaaa ttatggaaaa ttattactca tttttttagg
+     1921 ttttagccct aaaataggcg gtgcttggag agtaaaaaat aaattaaatt acaaaattta
+     1981 cttcccagcg aaaaaacatg ctaaaattgc accgattttc agggcttgta aaaaaagtgt
+     2041 aaaaattaac tataatgagc tctaggaaaa acagggctta tgcaagaaaa aacccggttt
+     2101 aacgctaaac cccctagaaa aattacccct aaaattccta gagcgatttt accgcaaaag
+     2161 tcccaagaaa aatcaccgcc tgatcgacag ctaaa
+//
+

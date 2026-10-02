@@ -1,0 +1,42 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_080262.1 1 21247
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=862612
+NC_080262.1	RefSeq	region	1	21247	.	+	.	ID=NC_080262.1:1..21247;Dbxref=taxon:862612;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_080262.1	RefSeq	gene	1187	1486	.	+	.	ID=gene-QU298_mgp02;Dbxref=GeneID:82280040;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=QU298_mgp02
+NC_080262.1	RefSeq	CDS	1187	1486	.	+	0	ID=cds-YP_010875210.1;Parent=gene-QU298_mgp02;Dbxref=GenBank:YP_010875210.1,GeneID:82280040;Name=YP_010875210.1;gbkey=CDS;gene=ND4L;locus_tag=QU298_mgp02;product=NADH dehydrogenase subunit 4L;protein_id=YP_010875210.1;transl_table=4
+NC_080262.1	RefSeq	gene	1532	1750	.	+	.	ID=gene-QU298_mgp03;Dbxref=GeneID:82280050;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=QU298_mgp03
+NC_080262.1	RefSeq	CDS	1532	1750	.	+	0	ID=cds-YP_010875211.1;Parent=gene-QU298_mgp03;Dbxref=GenBank:YP_010875211.1,GeneID:82280050;Name=YP_010875211.1;gbkey=CDS;gene=ATP8;locus_tag=QU298_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_010875211.1;transl_table=4
+NC_080262.1	RefSeq	gene	1966	2664	.	+	.	ID=gene-QU298_mgp04;Dbxref=GeneID:82280049;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=QU298_mgp04
+NC_080262.1	RefSeq	CDS	1966	2664	.	+	0	ID=cds-YP_010875212.1;Parent=gene-QU298_mgp04;Dbxref=GenBank:YP_010875212.1,GeneID:82280049;Name=YP_010875212.1;gbkey=CDS;gene=ATP6;locus_tag=QU298_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_010875212.1;transl_table=4
+NC_080262.1	RefSeq	gene	2903	4099	.	+	.	ID=gene-QU298_mgr01;Dbxref=GeneID:82280048;Name=QU298_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=QU298_mgr01
+NC_080262.1	RefSeq	rRNA	2903	4099	.	+	.	ID=rna-QU298_mgr01;Parent=gene-QU298_mgr01;Dbxref=GeneID:82280048;gbkey=rRNA;locus_tag=QU298_mgr01;product=small subunit ribosomal RNA
+NC_080262.1	RefSeq	exon	2903	4099	.	+	.	ID=exon-QU298_mgr01-1;Parent=rna-QU298_mgr01;Dbxref=GeneID:82280048;gbkey=rRNA;locus_tag=QU298_mgr01;product=small subunit ribosomal RNA
+NC_080262.1	RefSeq	gene	5892	5962	.	+	.	ID=gene-QU298_mgt01;Dbxref=GeneID:82280052;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=QU298_mgt01
+NC_080262.1	RefSeq	tRNA	5892	5962	.	+	.	ID=rna-QU298_mgt01;Parent=gene-QU298_mgt01;Dbxref=GeneID:82280052;gbkey=tRNA;gene=trnM;locus_tag=QU298_mgt01;product=tRNA-Met
+NC_080262.1	RefSeq	exon	5892	5962	.	+	.	ID=exon-QU298_mgt01-1;Parent=rna-QU298_mgt01;Dbxref=GeneID:82280052;gbkey=tRNA;gene=trnM;locus_tag=QU298_mgt01;product=tRNA-Met
+NC_080262.1	RefSeq	gene	6002	8622	.	+	.	ID=gene-QU298_mgr02;Dbxref=GeneID:82280051;Name=QU298_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=QU298_mgr02
+NC_080262.1	RefSeq	rRNA	6002	8622	.	+	.	ID=rna-QU298_mgr02;Parent=gene-QU298_mgr02;Dbxref=GeneID:82280051;gbkey=rRNA;locus_tag=QU298_mgr02;product=large subunit ribosomal RNA
+NC_080262.1	RefSeq	exon	6002	8622	.	+	.	ID=exon-QU298_mgr02-1;Parent=rna-QU298_mgr02;Dbxref=GeneID:82280051;gbkey=rRNA;locus_tag=QU298_mgr02;product=large subunit ribosomal RNA
+NC_080262.1	RefSeq	gene	8891	13002	.	+	.	ID=gene-QU298_mgp12;Dbxref=GeneID:82280053;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=QU298_mgp12
+NC_080262.1	RefSeq	CDS	8891	9622	.	+	0	ID=cds-YP_010875213.1;Parent=gene-QU298_mgp12;Dbxref=GenBank:YP_010875213.1,GeneID:82280053;Name=YP_010875213.1;gbkey=CDS;gene=ND5;locus_tag=QU298_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_010875213.1;transl_table=4
+NC_080262.1	RefSeq	CDS	11872	13002	.	+	0	ID=cds-YP_010875213.1;Parent=gene-QU298_mgp12;Dbxref=GenBank:YP_010875213.1,GeneID:82280053;Name=YP_010875213.1;gbkey=CDS;gene=ND5;locus_tag=QU298_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_010875213.1;transl_table=4
+NC_080262.1	RefSeq	gene	9974	10987	.	+	.	ID=gene-QU298_mgp11;Dbxref=GeneID:82280041;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=QU298_mgp11
+NC_080262.1	RefSeq	CDS	9974	10987	.	+	0	ID=cds-YP_010875214.1;Parent=gene-QU298_mgp11;Dbxref=GenBank:YP_010875214.1,GeneID:82280041;Name=YP_010875214.1;gbkey=CDS;gene=ND1;locus_tag=QU298_mgp11;product=NADH dehydrogenase subunit 1;protein_id=YP_010875214.1;transl_table=4
+NC_080262.1	RefSeq	gene	11217	11573	.	+	.	ID=gene-QU298_mgp10;Dbxref=GeneID:82280042;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=QU298_mgp10
+NC_080262.1	RefSeq	CDS	11217	11573	.	+	0	ID=cds-YP_010875215.1;Parent=gene-QU298_mgp10;Dbxref=GenBank:YP_010875215.1,GeneID:82280042;Name=YP_010875215.1;gbkey=CDS;gene=ND3;locus_tag=QU298_mgp10;product=NADH dehydrogenase subunit 3;protein_id=YP_010875215.1;transl_table=4
+NC_080262.1	RefSeq	gene	13718	14470	.	+	.	ID=gene-QU298_mgp09;Dbxref=GeneID:82280043;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=QU298_mgp09
+NC_080262.1	RefSeq	CDS	13718	14470	.	+	0	ID=cds-YP_010875216.1;Parent=gene-QU298_mgp09;Dbxref=GenBank:YP_010875216.1,GeneID:82280043;Name=YP_010875216.1;gbkey=CDS;gene=COX2;locus_tag=QU298_mgp09;product=cytochrome c oxidase subunit II;protein_id=YP_010875216.1;transl_table=4
+NC_080262.1	RefSeq	gene	14832	16307	.	+	.	ID=gene-QU298_mgp08;Dbxref=GeneID:82280044;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=QU298_mgp08
+NC_080262.1	RefSeq	CDS	14832	16307	.	+	0	ID=cds-YP_010875217.1;Parent=gene-QU298_mgp08;Dbxref=GenBank:YP_010875217.1,GeneID:82280044;Name=YP_010875217.1;gbkey=CDS;gene=ND4;locus_tag=QU298_mgp08;product=NADH dehydrogenase subunit 4;protein_id=YP_010875217.1;transl_table=4
+NC_080262.1	RefSeq	gene	16310	16960	.	+	.	ID=gene-QU298_mgp07;Dbxref=GeneID:82280045;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=QU298_mgp07
+NC_080262.1	RefSeq	CDS	16310	16960	.	+	0	ID=cds-YP_010875218.1;Parent=gene-QU298_mgp07;Dbxref=GenBank:YP_010875218.1,GeneID:82280045;Name=YP_010875218.1;gbkey=CDS;gene=ND6;locus_tag=QU298_mgp07;product=NADH dehydrogenase subunit 6;protein_id=YP_010875218.1;transl_table=4
+NC_080262.1	RefSeq	gene	17050	18237	.	+	.	ID=gene-QU298_mgp06;Dbxref=GeneID:82280046;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=QU298_mgp06
+NC_080262.1	RefSeq	CDS	17050	18237	.	+	0	ID=cds-YP_010875219.1;Parent=gene-QU298_mgp06;Dbxref=GenBank:YP_010875219.1,GeneID:82280046;Name=YP_010875219.1;gbkey=CDS;gene=CYTB;locus_tag=QU298_mgp06;product=cytochrome b;protein_id=YP_010875219.1;transl_table=4
+NC_080262.1	RefSeq	gene	18528	19316	.	+	.	ID=gene-QU298_mgp05;Dbxref=GeneID:82280047;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=QU298_mgp05
+NC_080262.1	RefSeq	CDS	18528	19316	.	+	0	ID=cds-YP_010875220.1;Parent=gene-QU298_mgp05;Dbxref=GenBank:YP_010875220.1,GeneID:82280047;Name=YP_010875220.1;gbkey=CDS;gene=COX3;locus_tag=QU298_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_010875220.1;transl_table=4
+NC_080262.1	RefSeq	gene	19394	22293	.	+	.	ID=gene-QU298_mgp01;Dbxref=GeneID:82280054;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=QU298_mgp01
+NC_080262.1	RefSeq	CDS	19394	20281	.	+	0	ID=cds-YP_010875209.1;Parent=gene-QU298_mgp01;Dbxref=GenBank:YP_010875209.1,GeneID:82280054;Name=YP_010875209.1;gbkey=CDS;gene=COX1;locus_tag=QU298_mgp01;part=1;product=cytochrome c oxidase subunit I;protein_id=YP_010875209.1;transl_table=4
+NC_080262.1	RefSeq	CDS	21577	22293	.	+	0	ID=cds-YP_010875209.1;Parent=gene-QU298_mgp01;Dbxref=GenBank:YP_010875209.1,GeneID:82280054;Name=YP_010875209.1;gbkey=CDS;gene=COX1;locus_tag=QU298_mgp01;part=2;product=cytochrome c oxidase subunit I;protein_id=YP_010875209.1;transl_table=4
+

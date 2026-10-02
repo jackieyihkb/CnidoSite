@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_071915.1 1 20786
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3024564
+NC_071915.1	RefSeq	region	1	20786	.	+	.	ID=NC_071915.1:1..20786;Dbxref=taxon:3024564;Is_circular=true;Name=MT;country=China;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_071915.1	RefSeq	gene	178	2613	.	+	.	ID=gene-P1P94_mgp01;Dbxref=GeneID:79045269;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=P1P94_mgp01
+NC_071915.1	RefSeq	CDS	178	1068	.	+	0	ID=cds-YP_010701969.1;Parent=gene-P1P94_mgp01;Dbxref=GenBank:YP_010701969.1,GeneID:79045269;Name=YP_010701969.1;gbkey=CDS;gene=COX1;locus_tag=P1P94_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_010701969.1;transl_table=4
+NC_071915.1	RefSeq	CDS	1933	2613	.	+	0	ID=cds-YP_010701969.1;Parent=gene-P1P94_mgp01;Dbxref=GenBank:YP_010701969.1,GeneID:79045269;Name=YP_010701969.1;gbkey=CDS;gene=COX1;locus_tag=P1P94_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_010701969.1;transl_table=4
+NC_071915.1	RefSeq	gene	3036	3335	.	+	.	ID=gene-P1P94_mgp02;Dbxref=GeneID:79045252;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=P1P94_mgp02
+NC_071915.1	RefSeq	CDS	3036	3335	.	+	0	ID=cds-YP_010701970.1;Parent=gene-P1P94_mgp02;Dbxref=GenBank:YP_010701970.1,GeneID:79045252;Name=YP_010701970.1;gbkey=CDS;gene=ND4L;locus_tag=P1P94_mgp02;product=NADH dehydrogenase subunit 4L;protein_id=YP_010701970.1;transl_table=4
+NC_071915.1	RefSeq	gene	3354	3575	.	+	.	ID=gene-P1P94_mgp03;Dbxref=GeneID:79045253;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=P1P94_mgp03
+NC_071915.1	RefSeq	CDS	3354	3575	.	+	0	ID=cds-YP_010701971.1;Parent=gene-P1P94_mgp03;Dbxref=GenBank:YP_010701971.1,GeneID:79045253;Name=YP_010701971.1;gbkey=CDS;gene=ATP8;locus_tag=P1P94_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_010701971.1;transl_table=4
+NC_071915.1	RefSeq	gene	3600	4298	.	+	.	ID=gene-P1P94_mgp04;Dbxref=GeneID:79045254;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=P1P94_mgp04
+NC_071915.1	RefSeq	CDS	3600	4298	.	+	0	ID=cds-YP_010701972.1;Parent=gene-P1P94_mgp04;Dbxref=GenBank:YP_010701972.1,GeneID:79045254;Name=YP_010701972.1;gbkey=CDS;gene=ATP6;locus_tag=P1P94_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_010701972.1;transl_table=4
+NC_071915.1	RefSeq	gene	4357	8113	.	+	.	ID=gene-P1P94_mgp05;Dbxref=GeneID:79045255;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=P1P94_mgp05
+NC_071915.1	RefSeq	CDS	4357	5070	.	+	0	ID=cds-YP_010701973.1;Parent=gene-P1P94_mgp05;Dbxref=GenBank:YP_010701973.1,GeneID:79045255;Name=YP_010701973.1;gbkey=CDS;gene=ND5;locus_tag=P1P94_mgp05;product=NADH dehydrogenase subunit 5;protein_id=YP_010701973.1;transl_table=4
+NC_071915.1	RefSeq	CDS	6998	8113	.	+	0	ID=cds-YP_010701973.1;Parent=gene-P1P94_mgp05;Dbxref=GenBank:YP_010701973.1,GeneID:79045255;Name=YP_010701973.1;gbkey=CDS;gene=ND5;locus_tag=P1P94_mgp05;product=NADH dehydrogenase subunit 5;protein_id=YP_010701973.1;transl_table=4
+NC_071915.1	RefSeq	gene	5219	6280	.	+	.	ID=gene-P1P94_mgp06;Dbxref=GeneID:79045256;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=P1P94_mgp06
+NC_071915.1	RefSeq	CDS	5219	6280	.	+	0	ID=cds-YP_010701974.1;Parent=gene-P1P94_mgp06;Dbxref=GenBank:YP_010701974.1,GeneID:79045256;Name=YP_010701974.1;gbkey=CDS;gene=ND1;locus_tag=P1P94_mgp06;product=NADH dehydrogenase subunit 1;protein_id=YP_010701974.1;transl_table=4
+NC_071915.1	RefSeq	gene	6287	6643	.	+	.	ID=gene-P1P94_mgp07;Dbxref=GeneID:79045257;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=P1P94_mgp07
+NC_071915.1	RefSeq	CDS	6287	6643	.	+	0	ID=cds-YP_010701975.1;Parent=gene-P1P94_mgp07;Dbxref=GenBank:YP_010701975.1,GeneID:79045257;Name=YP_010701975.1;gbkey=CDS;gene=ND3;locus_tag=P1P94_mgp07;product=NADH dehydrogenase subunit 3;protein_id=YP_010701975.1;transl_table=4
+NC_071915.1	RefSeq	gene	8361	8430	.	+	.	ID=gene-P1P94_mgt01;Dbxref=GeneID:79045258;Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA;locus_tag=P1P94_mgt01
+NC_071915.1	RefSeq	tRNA	8361	8430	.	+	.	ID=rna-P1P94_mgt01;Parent=gene-P1P94_mgt01;Dbxref=GeneID:79045258;gbkey=tRNA;gene=trnW(uca);locus_tag=P1P94_mgt01;product=tRNA-Trp
+NC_071915.1	RefSeq	exon	8361	8430	.	+	.	ID=exon-P1P94_mgt01-1;Parent=rna-P1P94_mgt01;Dbxref=GeneID:79045258;gbkey=tRNA;gene=trnW(uca);locus_tag=P1P94_mgt01;product=tRNA-Trp
+NC_071915.1	RefSeq	gene	8483	9859	.	+	.	ID=gene-P1P94_mgp14;Dbxref=GeneID:79045265;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=P1P94_mgp14
+NC_071915.1	RefSeq	CDS	8483	9859	.	+	0	ID=cds-YP_010701976.1;Parent=gene-P1P94_mgp14;Dbxref=GenBank:YP_010701976.1,GeneID:79045265;Name=YP_010701976.1;gbkey=CDS;gene=ND2;locus_tag=P1P94_mgp14;product=NADH dehydrogenase subunit 2;protein_id=YP_010701976.1;transl_table=4
+NC_071915.1	RefSeq	gene	9932	10990	.	+	.	ID=gene-P1P94_mgr02;Dbxref=GeneID:79045259;Name=rrn12;gbkey=Gene;gene=rrn12;gene_biotype=rRNA;locus_tag=P1P94_mgr02
+NC_071915.1	RefSeq	rRNA	9932	10990	.	+	.	ID=rna-P1P94_mgr02;Parent=gene-P1P94_mgr02;Dbxref=GeneID:79045259;gbkey=rRNA;gene=rrn12;locus_tag=P1P94_mgr02;product=12S ribosomal RNA
+NC_071915.1	RefSeq	exon	9932	10990	.	+	.	ID=exon-P1P94_mgr02-1;Parent=rna-P1P94_mgr02;Dbxref=GeneID:79045259;gbkey=rRNA;gene=rrn12;locus_tag=P1P94_mgr02;product=12S ribosomal RNA
+NC_071915.1	RefSeq	gene	11044	11784	.	+	.	ID=gene-P1P94_mgp13;Dbxref=GeneID:79045267;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=P1P94_mgp13
+NC_071915.1	RefSeq	CDS	11044	11784	.	+	0	ID=cds-YP_010701977.1;Parent=gene-P1P94_mgp13;Dbxref=GenBank:YP_010701977.1,GeneID:79045267;Name=YP_010701977.1;gbkey=CDS;gene=COX2;locus_tag=P1P94_mgp13;product=cytochrome c oxidase subunit II;protein_id=YP_010701977.1;transl_table=4
+NC_071915.1	RefSeq	gene	11793	13727	.	+	.	ID=gene-P1P94_mgp12;Dbxref=GeneID:79045260;Name=P1P94_mgp12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=P1P94_mgp12
+NC_071915.1	RefSeq	CDS	11793	13727	.	+	0	ID=cds-YP_010701978.1;Parent=gene-P1P94_mgp12;Dbxref=GenBank:YP_010701978.1,GeneID:79045260;Name=YP_010701978.1;gbkey=CDS;locus_tag=P1P94_mgp12;product=hypothetical protein;protein_id=YP_010701978.1;transl_table=4
+NC_071915.1	RefSeq	gene	13906	15372	.	+	.	ID=gene-P1P94_mgp11;Dbxref=GeneID:79045261;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=P1P94_mgp11
+NC_071915.1	RefSeq	CDS	13906	15372	.	+	0	ID=cds-YP_010701979.1;Parent=gene-P1P94_mgp11;Dbxref=GenBank:YP_010701979.1,GeneID:79045261;Name=YP_010701979.1;gbkey=CDS;gene=ND4;locus_tag=P1P94_mgp11;product=NADH dehydrogenase subunit 4;protein_id=YP_010701979.1;transl_table=4
+NC_071915.1	RefSeq	gene	15377	15985	.	+	.	ID=gene-P1P94_mgp10;Dbxref=GeneID:79045262;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=P1P94_mgp10
+NC_071915.1	RefSeq	CDS	15377	15985	.	+	0	ID=cds-YP_010701980.1;Parent=gene-P1P94_mgp10;Dbxref=GenBank:YP_010701980.1,GeneID:79045262;Name=YP_010701980.1;gbkey=CDS;gene=ND6;locus_tag=P1P94_mgp10;product=NADH dehydrogenase subunit 6;protein_id=YP_010701980.1;transl_table=4
+NC_071915.1	RefSeq	gene	16013	17164	.	+	.	ID=gene-P1P94_mgp09;Dbxref=GeneID:79045263;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=P1P94_mgp09
+NC_071915.1	RefSeq	CDS	16013	17164	.	+	0	ID=cds-YP_010701981.1;Parent=gene-P1P94_mgp09;Dbxref=GenBank:YP_010701981.1,GeneID:79045263;Name=YP_010701981.1;gbkey=CDS;gene=CYTB;locus_tag=P1P94_mgp09;product=cytochrome b;protein_id=YP_010701981.1;transl_table=4
+NC_071915.1	RefSeq	gene	17613	17683	.	+	.	ID=gene-P1P94_mgt02;Dbxref=GeneID:79045264;Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA;locus_tag=P1P94_mgt02
+NC_071915.1	RefSeq	tRNA	17613	17683	.	+	.	ID=rna-P1P94_mgt02;Parent=gene-P1P94_mgt02;Dbxref=GeneID:79045264;gbkey=tRNA;gene=trnM(cau);locus_tag=P1P94_mgt02;product=tRNA-Met
+NC_071915.1	RefSeq	exon	17613	17683	.	+	.	ID=exon-P1P94_mgt02-1;Parent=rna-P1P94_mgt02;Dbxref=GeneID:79045264;gbkey=tRNA;gene=trnM(cau);locus_tag=P1P94_mgt02;product=tRNA-Met
+NC_071915.1	RefSeq	gene	17870	19867	.	+	.	ID=gene-P1P94_mgr01;Dbxref=GeneID:79045266;Name=rrn16;gbkey=Gene;gene=rrn16;gene_biotype=rRNA;locus_tag=P1P94_mgr01
+NC_071915.1	RefSeq	rRNA	17870	19867	.	+	.	ID=rna-P1P94_mgr01;Parent=gene-P1P94_mgr01;Dbxref=GeneID:79045266;gbkey=rRNA;gene=rrn16;locus_tag=P1P94_mgr01;product=16S ribosomal RNA
+NC_071915.1	RefSeq	exon	17870	19867	.	+	.	ID=exon-P1P94_mgr01-1;Parent=rna-P1P94_mgr01;Dbxref=GeneID:79045266;gbkey=rRNA;gene=rrn16;locus_tag=P1P94_mgr01;product=16S ribosomal RNA
+NC_071915.1	RefSeq	gene	19949	20737	.	+	.	ID=gene-P1P94_mgp08;Dbxref=GeneID:79045268;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=P1P94_mgp08
+NC_071915.1	RefSeq	CDS	19949	20737	.	+	0	ID=cds-YP_010701982.1;Parent=gene-P1P94_mgp08;Dbxref=GenBank:YP_010701982.1,GeneID:79045268;Name=YP_010701982.1;gbkey=CDS;gene=COX3;locus_tag=P1P94_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_010701982.1;transl_table=4
+

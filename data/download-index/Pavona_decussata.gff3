@@ -1,0 +1,42 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_026527.1 1 18378
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=227230
+NC_026527.1	RefSeq	region	1	18378	.	+	.	ID=NC_026527.1:1..18378;Dbxref=taxon:227230;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_026527.1	RefSeq	gene	1	12965	.	+	.	ID=gene-ND5;Dbxref=GeneID:23629709;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	1	720	.	+	0	ID=cds-YP_009122359.1;Parent=gene-ND5;Dbxref=GenBank:YP_009122359.1,GeneID:23629709;Name=YP_009122359.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=YP_009122359.1;transl_table=4
+NC_026527.1	RefSeq	CDS	11850	12965	.	+	0	ID=cds-YP_009122359.1;Parent=gene-ND5;Dbxref=GenBank:YP_009122359.1,GeneID:23629709;Name=YP_009122359.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=YP_009122359.1;transl_table=4
+NC_026527.1	RefSeq	rRNA	7901	9069	.	+	.	ID=rna-ND5;Parent=gene-ND5;Dbxref=GeneID:23629709;gbkey=rRNA;gene=ND5;product=small subunit ribosomal RNA
+NC_026527.1	RefSeq	exon	7901	9069	.	+	.	ID=exon-ND5-1;Parent=rna-ND5;Dbxref=GeneID:23629709;gbkey=rRNA;gene=ND5;product=small subunit ribosomal RNA
+NC_026527.1	RefSeq	gene	1060	2043	.	+	.	ID=gene-ND1;Dbxref=GeneID:23629697;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	1060	2043	.	+	0	ID=cds-YP_009122360.1;Parent=gene-ND1;Dbxref=GenBank:YP_009122360.1,GeneID:23629697;Name=YP_009122360.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=YP_009122360.1;transl_table=4
+NC_026527.1	RefSeq	gene	2086	3237	.	+	.	ID=gene-CYTB;Dbxref=GeneID:23629699;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	2086	3237	.	+	0	ID=cds-YP_009122361.1;Parent=gene-CYTB;Dbxref=GenBank:YP_009122361.1,GeneID:23629699;Name=YP_009122361.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=YP_009122361.1;transl_table=4
+NC_026527.1	RefSeq	gene	3694	4791	.	+	.	ID=gene-ND2;Dbxref=GeneID:23629700;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	3694	4791	.	+	0	ID=cds-YP_009122362.1;Parent=gene-ND2;Dbxref=GenBank:YP_009122362.1,GeneID:23629700;Name=YP_009122362.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=YP_009122362.1;transl_table=4
+NC_026527.1	RefSeq	gene	4813	5418	.	+	.	ID=gene-ND6;Dbxref=GeneID:23629701;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	4813	5418	.	+	0	ID=cds-YP_009122363.1;Parent=gene-ND6;Dbxref=GenBank:YP_009122363.1,GeneID:23629701;Name=YP_009122363.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=YP_009122363.1;transl_table=4
+NC_026527.1	RefSeq	gene	5461	6159	.	+	.	ID=gene-ATP6;Dbxref=GeneID:23629702;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	5461	6159	.	+	0	ID=cds-YP_009122364.1;Parent=gene-ATP6;Dbxref=GenBank:YP_009122364.1,GeneID:23629702;Name=YP_009122364.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=YP_009122364.1;transl_table=4
+NC_026527.1	RefSeq	gene	6370	7848	.	+	.	ID=gene-ND4;Dbxref=GeneID:23629703;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	6370	7848	.	+	0	ID=cds-YP_009122365.1;Parent=gene-ND4;Dbxref=GenBank:YP_009122365.1,GeneID:23629703;Name=YP_009122365.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=YP_009122365.1;transl_table=4
+NC_026527.1	RefSeq	gene	9459	10247	.	+	.	ID=gene-COX3;Dbxref=GeneID:23629698;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	9459	10247	.	+	0	ID=cds-YP_009122366.1;Parent=gene-COX3;Dbxref=GenBank:YP_009122366.1,GeneID:23629698;Name=YP_009122366.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=YP_009122366.1;transl_table=4
+NC_026527.1	RefSeq	gene	10276	11019	.	+	.	ID=gene-COX2;Dbxref=GeneID:23629704;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	10276	11019	.	+	0	ID=cds-YP_009122367.1;Parent=gene-COX2;Dbxref=GenBank:YP_009122367.1,GeneID:23629704;Name=YP_009122367.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=YP_009122367.1;transl_table=4
+NC_026527.1	RefSeq	gene	11054	11353	.	+	.	ID=gene-ND4L;Dbxref=GeneID:23629708;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	11054	11353	.	+	0	ID=cds-YP_009122368.1;Parent=gene-ND4L;Dbxref=GenBank:YP_009122368.1,GeneID:23629708;Name=YP_009122368.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=YP_009122368.1;transl_table=4
+NC_026527.1	RefSeq	gene	11380	11736	.	+	.	ID=gene-ND3;Dbxref=GeneID:23629707;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	11380	11736	.	+	0	ID=cds-YP_009122369.1;Parent=gene-ND3;Dbxref=GenBank:YP_009122369.1,GeneID:23629707;Name=YP_009122369.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=YP_009122369.1;transl_table=4
+NC_026527.1	RefSeq	tRNA	12993	13062	.	+	.	ID=rna-NC_026527.1:12993..13062;gbkey=tRNA;product=tRNA-Trp
+NC_026527.1	RefSeq	exon	12993	13062	.	+	.	ID=exon-NC_026527.1:12993..13062-1;Parent=rna-NC_026527.1:12993..13062;gbkey=tRNA;product=tRNA-Trp
+NC_026527.1	RefSeq	gene	13095	13313	.	+	.	ID=gene-ATP8;Dbxref=GeneID:23629706;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	13095	13313	.	+	0	ID=cds-YP_009122370.1;Parent=gene-ATP8;Dbxref=GenBank:YP_009122370.1,GeneID:23629706;Name=YP_009122370.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=YP_009122370.1;transl_table=4
+NC_026527.1	RefSeq	gene	13295	14905	.	+	.	ID=gene-COX1;Dbxref=GeneID:23629705;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+NC_026527.1	RefSeq	CDS	13295	14905	.	+	0	ID=cds-YP_009122371.1;Parent=gene-COX1;Dbxref=GenBank:YP_009122371.1,GeneID:23629705;Name=YP_009122371.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=YP_009122371.1;transl_table=4
+NC_026527.1	RefSeq	tRNA	15890	15960	.	+	.	ID=rna-NC_026527.1:15890..15960;gbkey=tRNA;product=tRNA-Met
+NC_026527.1	RefSeq	exon	15890	15960	.	+	.	ID=exon-NC_026527.1:15890..15960-1;Parent=rna-NC_026527.1:15890..15960;gbkey=tRNA;product=tRNA-Met
+NC_026527.1	RefSeq	rRNA	15962	18262	.	+	.	ID=rna-NC_026527.1:15962..18262;gbkey=rRNA;product=large subunit ribosomal RNA
+NC_026527.1	RefSeq	exon	15962	18262	.	+	.	ID=exon-NC_026527.1:15962..18262-1;Parent=rna-NC_026527.1:15962..18262;gbkey=rRNA;product=large subunit ribosomal RNA
+

@@ -1,0 +1,46 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_079940.1 1 21875
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=760132
+NC_079940.1	RefSeq	region	1	21875	.	+	.	ID=NC_079940.1:1..21875;Dbxref=taxon:760132;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_079940.1	RefSeq	gene	1	3086	.	+	.	ID=gene-QSG53_mgp01;Dbxref=GeneID:82048972;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=QSG53_mgp01
+NC_079940.1	RefSeq	CDS	1	888	.	+	0	ID=cds-YP_010868427.1;Parent=gene-QSG53_mgp01;Dbxref=GenBank:YP_010868427.1,GeneID:82048972;Name=YP_010868427.1;gbkey=CDS;gene=COX1;locus_tag=QSG53_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_010868427.1;transl_table=4
+NC_079940.1	RefSeq	CDS	2370	3086	.	+	0	ID=cds-YP_010868427.1;Parent=gene-QSG53_mgp01;Dbxref=GenBank:YP_010868427.1,GeneID:82048972;Name=YP_010868427.1;gbkey=CDS;gene=COX1;locus_tag=QSG53_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_010868427.1;transl_table=4
+NC_079940.1	RefSeq	intron	889	2369	.	+	.	ID=id-QSG53_mgp01;Parent=gene-QSG53_mgp01;Dbxref=GeneID:82048972;exon_number=1;gbkey=intron;gene=COX1;locus_tag=QSG53_mgp01;number=1
+NC_079940.1	RefSeq	gene	3129	3428	.	+	.	ID=gene-QSG53_mgp02;Dbxref=GeneID:82048957;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=QSG53_mgp02
+NC_079940.1	RefSeq	CDS	3129	3428	.	+	0	ID=cds-YP_010868428.1;Parent=gene-QSG53_mgp02;Dbxref=GenBank:YP_010868428.1,GeneID:82048957;Name=YP_010868428.1;gbkey=CDS;gene=ND4L;locus_tag=QSG53_mgp02;product=NADH dehydrogenase subunit 4L;protein_id=YP_010868428.1;transl_table=4
+NC_079940.1	RefSeq	gene	3456	3674	.	+	.	ID=gene-QSG53_mgp03;Dbxref=GeneID:82048958;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=QSG53_mgp03
+NC_079940.1	RefSeq	CDS	3456	3674	.	+	0	ID=cds-YP_010868429.1;Parent=gene-QSG53_mgp03;Dbxref=GenBank:YP_010868429.1,GeneID:82048958;Name=YP_010868429.1;gbkey=CDS;gene=ATP8;locus_tag=QSG53_mgp03;product=ATP synthase F0 subunit 8;protein_id=YP_010868429.1;transl_table=4
+NC_079940.1	RefSeq	gene	3750	4448	.	+	.	ID=gene-QSG53_mgp04;Dbxref=GeneID:82048959;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=QSG53_mgp04
+NC_079940.1	RefSeq	CDS	3750	4448	.	+	0	ID=cds-YP_010868430.1;Parent=gene-QSG53_mgp04;Dbxref=GenBank:YP_010868430.1,GeneID:82048959;Name=YP_010868430.1;gbkey=CDS;gene=ATP6;locus_tag=QSG53_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_010868430.1;transl_table=4
+NC_079940.1	RefSeq	gene	4630	5860	.	+	.	ID=gene-QSG53_mgr01;Dbxref=GeneID:82048960;Name=QSG53_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=QSG53_mgr01
+NC_079940.1	RefSeq	rRNA	4630	5860	.	+	.	ID=rna-QSG53_mgr01;Parent=gene-QSG53_mgr01;Dbxref=GeneID:82048960;gbkey=rRNA;locus_tag=QSG53_mgr01;product=small subunit ribosomal RNA
+NC_079940.1	RefSeq	exon	4630	5860	.	+	.	ID=exon-QSG53_mgr01-1;Parent=rna-QSG53_mgr01;Dbxref=GeneID:82048960;gbkey=rRNA;locus_tag=QSG53_mgr01;product=small subunit ribosomal RNA
+NC_079940.1	RefSeq	gene	6349	7530	.	+	.	ID=gene-QSG53_mgp13;Dbxref=GeneID:82048970;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=QSG53_mgp13
+NC_079940.1	RefSeq	CDS	6349	7530	.	+	0	ID=cds-YP_010868431.1;Parent=gene-QSG53_mgp13;Dbxref=GenBank:YP_010868431.1,GeneID:82048970;Name=YP_010868431.1;gbkey=CDS;gene=ND2;locus_tag=QSG53_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_010868431.1;transl_table=4
+NC_079940.1	RefSeq	gene	7596	7666	.	+	.	ID=gene-QSG53_mgt01;Dbxref=GeneID:82048961;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=QSG53_mgt01
+NC_079940.1	RefSeq	tRNA	7596	7666	.	+	.	ID=rna-QSG53_mgt01;Parent=gene-QSG53_mgt01;Dbxref=GeneID:82048961;gbkey=tRNA;gene=trnM;locus_tag=QSG53_mgt01;product=tRNA-Met
+NC_079940.1	RefSeq	exon	7596	7666	.	+	.	ID=exon-QSG53_mgt01-1;Parent=rna-QSG53_mgt01;Dbxref=GeneID:82048961;gbkey=tRNA;gene=trnM;locus_tag=QSG53_mgt01;product=tRNA-Met
+NC_079940.1	RefSeq	gene	7694	10317	.	+	.	ID=gene-QSG53_mgr02;Dbxref=GeneID:82048969;Name=QSG53_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=QSG53_mgr02
+NC_079940.1	RefSeq	rRNA	7694	10317	.	+	.	ID=rna-QSG53_mgr02;Parent=gene-QSG53_mgr02;Dbxref=GeneID:82048969;gbkey=rRNA;locus_tag=QSG53_mgr02;product=large subunit ribosomal RNA
+NC_079940.1	RefSeq	exon	7694	10317	.	+	.	ID=exon-QSG53_mgr02-1;Parent=rna-QSG53_mgr02;Dbxref=GeneID:82048969;gbkey=rRNA;locus_tag=QSG53_mgr02;product=large subunit ribosomal RNA
+NC_079940.1	RefSeq	gene	10448	14117	.	+	.	ID=gene-QSG53_mgp12;Dbxref=GeneID:82048971;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=QSG53_mgp12
+NC_079940.1	RefSeq	CDS	10448	11179	.	+	0	ID=cds-YP_010868432.1;Parent=gene-QSG53_mgp12;Dbxref=GenBank:YP_010868432.1,GeneID:82048971;Name=YP_010868432.1;gbkey=CDS;gene=ND5;locus_tag=QSG53_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_010868432.1;transl_table=4
+NC_079940.1	RefSeq	CDS	13002	14117	.	+	0	ID=cds-YP_010868432.1;Parent=gene-QSG53_mgp12;Dbxref=GenBank:YP_010868432.1,GeneID:82048971;Name=YP_010868432.1;gbkey=CDS;gene=ND5;locus_tag=QSG53_mgp12;product=NADH dehydrogenase subunit 5;protein_id=YP_010868432.1;transl_table=4
+NC_079940.1	RefSeq	intron	11180	13001	.	+	.	ID=id-QSG53_mgp12;Parent=gene-QSG53_mgp12;Dbxref=GeneID:82048971;gbkey=intron;gene=ND5;locus_tag=QSG53_mgp12
+NC_079940.1	RefSeq	gene	11484	12473	.	+	.	ID=gene-QSG53_mgp11;Dbxref=GeneID:82048962;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=QSG53_mgp11
+NC_079940.1	RefSeq	CDS	11484	12473	.	+	0	ID=cds-YP_010868433.1;Parent=gene-QSG53_mgp11;Dbxref=GenBank:YP_010868433.1,GeneID:82048962;Name=YP_010868433.1;gbkey=CDS;gene=ND1;locus_tag=QSG53_mgp11;product=NADH dehydrogenase subunit 1;protein_id=YP_010868433.1;transl_table=4
+NC_079940.1	RefSeq	gene	12493	12849	.	+	.	ID=gene-QSG53_mgp10;Dbxref=GeneID:82048963;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=QSG53_mgp10
+NC_079940.1	RefSeq	CDS	12493	12849	.	+	0	ID=cds-YP_010868434.1;Parent=gene-QSG53_mgp10;Dbxref=GenBank:YP_010868434.1,GeneID:82048963;Name=YP_010868434.1;gbkey=CDS;gene=ND3;locus_tag=QSG53_mgp10;product=NADH dehydrogenase subunit 3;protein_id=YP_010868434.1;transl_table=4
+NC_079940.1	RefSeq	gene	16521	17270	.	+	.	ID=gene-QSG53_mgp09;Dbxref=GeneID:82048964;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=QSG53_mgp09
+NC_079940.1	RefSeq	CDS	16521	17270	.	+	0	ID=cds-YP_010868435.1;Parent=gene-QSG53_mgp09;Dbxref=GenBank:YP_010868435.1,GeneID:82048964;Name=YP_010868435.1;gbkey=CDS;gene=COX2;locus_tag=QSG53_mgp09;product=cytochrome c oxidase subunit II;protein_id=YP_010868435.1;transl_table=4
+NC_079940.1	RefSeq	gene	17358	18833	.	+	.	ID=gene-QSG53_mgp08;Dbxref=GeneID:82048965;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=QSG53_mgp08
+NC_079940.1	RefSeq	CDS	17358	18833	.	+	0	ID=cds-YP_010868436.1;Parent=gene-QSG53_mgp08;Dbxref=GenBank:YP_010868436.1,GeneID:82048965;Name=YP_010868436.1;gbkey=CDS;gene=ND4;locus_tag=QSG53_mgp08;product=NADH dehydrogenase subunit 4;protein_id=YP_010868436.1;transl_table=4
+NC_079940.1	RefSeq	gene	18930	19559	.	+	.	ID=gene-QSG53_mgp07;Dbxref=GeneID:82048966;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=QSG53_mgp07
+NC_079940.1	RefSeq	CDS	18930	19559	.	+	0	ID=cds-YP_010868437.1;Parent=gene-QSG53_mgp07;Dbxref=GenBank:YP_010868437.1,GeneID:82048966;Name=YP_010868437.1;gbkey=CDS;gene=ND6;locus_tag=QSG53_mgp07;product=NADH dehydrogenase subunit 6;protein_id=YP_010868437.1;transl_table=4
+NC_079940.1	RefSeq	gene	19748	20908	.	+	.	ID=gene-QSG53_mgp06;Dbxref=GeneID:82048967;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=QSG53_mgp06
+NC_079940.1	RefSeq	CDS	19748	20908	.	+	0	ID=cds-YP_010868438.1;Parent=gene-QSG53_mgp06;Dbxref=GenBank:YP_010868438.1,GeneID:82048967;Name=YP_010868438.1;gbkey=CDS;gene=CYTB;locus_tag=QSG53_mgp06;product=cytochrome b;protein_id=YP_010868438.1;transl_table=4
+NC_079940.1	RefSeq	gene	20994	21782	.	+	.	ID=gene-QSG53_mgp05;Dbxref=GeneID:82048968;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=QSG53_mgp05
+NC_079940.1	RefSeq	CDS	20994	21782	.	+	0	ID=cds-YP_010868439.1;Parent=gene-QSG53_mgp05;Dbxref=GenBank:YP_010868439.1,GeneID:82048968;Name=YP_010868439.1;gbkey=CDS;gene=COX3;locus_tag=QSG53_mgp05;product=cytochrome c oxidase subunit III;protein_id=YP_010868439.1;transl_table=4
+

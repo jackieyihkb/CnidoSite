@@ -1,0 +1,50 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_035578.1 1 20972
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=329728
+NC_035578.1	RefSeq	region	1	20972	.	+	.	ID=NC_035578.1:1..20972;Dbxref=taxon:329728;Is_circular=true;Name=MT;country=Norway;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_035578.1	RefSeq	gene	154	4112	.	+	.	ID=gene-CKM28_mgp01;Dbxref=GeneID:33875102;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=CKM28_mgp01
+NC_035578.1	RefSeq	CDS	154	885	.	+	0	ID=cds-YP_009413533.1;Parent=gene-CKM28_mgp01;Dbxref=GenBank:YP_009413533.1,GeneID:33875102;Name=YP_009413533.1;gbkey=CDS;gene=ND5;locus_tag=CKM28_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009413533.1;transl_table=4
+NC_035578.1	RefSeq	CDS	2982	4112	.	+	0	ID=cds-YP_009413533.1;Parent=gene-CKM28_mgp01;Dbxref=GenBank:YP_009413533.1,GeneID:33875102;Name=YP_009413533.1;gbkey=CDS;gene=ND5;locus_tag=CKM28_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009413533.1;transl_table=4
+NC_035578.1	RefSeq	exon	154	885	.	+	.	ID=id-CKM28_mgp01-1;Parent=gene-CKM28_mgp01;Dbxref=GeneID:33875102;exon_number=1;gbkey=exon;gene=ND5;locus_tag=CKM28_mgp01;number=1
+NC_035578.1	RefSeq	exon	2982	4112	.	+	.	ID=id-CKM28_mgp01-2;Parent=gene-CKM28_mgp01;Dbxref=GeneID:33875102;exon_number=2;gbkey=exon;gene=ND5;locus_tag=CKM28_mgp01;number=2
+NC_035578.1	RefSeq	intron	886	2981	.	+	.	ID=id-CKM28_mgp01;Parent=gene-CKM28_mgp01;Dbxref=GeneID:33875102;Note=group 1 intron;gbkey=intron;gene=ND5;locus_tag=CKM28_mgp01
+NC_035578.1	RefSeq	gene	1203	2213	.	+	.	ID=gene-CKM28_mgp02;Dbxref=GeneID:33875087;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=CKM28_mgp02
+NC_035578.1	RefSeq	CDS	1203	2213	.	+	0	ID=cds-YP_009413534.1;Parent=gene-CKM28_mgp02;Dbxref=GenBank:YP_009413534.1,GeneID:33875087;Name=YP_009413534.1;gbkey=CDS;gene=ND1;locus_tag=CKM28_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009413534.1;transl_table=4
+NC_035578.1	RefSeq	gene	2447	2803	.	+	.	ID=gene-CKM28_mgp03;Dbxref=GeneID:33875088;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=CKM28_mgp03
+NC_035578.1	RefSeq	CDS	2447	2803	.	+	0	ID=cds-YP_009413535.1;Parent=gene-CKM28_mgp03;Dbxref=GenBank:YP_009413535.1,GeneID:33875088;Name=YP_009413535.1;gbkey=CDS;gene=ND3;locus_tag=CKM28_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009413535.1;transl_table=4
+NC_035578.1	RefSeq	gene	4992	5744	.	+	.	ID=gene-CKM28_mgp04;Dbxref=GeneID:33875089;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;gene_synonym=COII;locus_tag=CKM28_mgp04
+NC_035578.1	RefSeq	CDS	4992	5744	.	+	0	ID=cds-YP_009413536.1;Parent=gene-CKM28_mgp04;Dbxref=GenBank:YP_009413536.1,GeneID:33875089;Name=YP_009413536.1;gbkey=CDS;gene=COX2;locus_tag=CKM28_mgp04;product=cytochrome c oxidase subunit II;protein_id=YP_009413536.1;transl_table=4
+NC_035578.1	RefSeq	gene	6061	7533	.	+	.	ID=gene-CKM28_mgp05;Dbxref=GeneID:33875090;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=CKM28_mgp05
+NC_035578.1	RefSeq	CDS	6061	7533	.	+	0	ID=cds-YP_009413537.1;Parent=gene-CKM28_mgp05;Dbxref=GenBank:YP_009413537.1,GeneID:33875090;Name=YP_009413537.1;gbkey=CDS;gene=ND4;locus_tag=CKM28_mgp05;product=NADH dehydrogenase subunit 4;protein_id=YP_009413537.1;transl_table=4
+NC_035578.1	RefSeq	gene	7622	8287	.	+	.	ID=gene-CKM28_mgp06;Dbxref=GeneID:33875091;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=CKM28_mgp06
+NC_035578.1	RefSeq	CDS	7622	8287	.	+	0	ID=cds-YP_009413538.1;Parent=gene-CKM28_mgp06;Dbxref=GenBank:YP_009413538.1,GeneID:33875091;Name=YP_009413538.1;gbkey=CDS;gene=ND6;locus_tag=CKM28_mgp06;product=NADH dehydrogenase subunit 6;protein_id=YP_009413538.1;transl_table=4
+NC_035578.1	RefSeq	gene	8420	9607	.	+	.	ID=gene-CKM28_mgp07;Dbxref=GeneID:33875092;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=CKM28_mgp07
+NC_035578.1	RefSeq	CDS	8420	9607	.	+	0	ID=cds-YP_009413539.1;Parent=gene-CKM28_mgp07;Dbxref=GenBank:YP_009413539.1,GeneID:33875092;Name=YP_009413539.1;gbkey=CDS;gene=CYTB;locus_tag=CKM28_mgp07;product=cytochrome b;protein_id=YP_009413539.1;transl_table=4
+NC_035578.1	RefSeq	gene	9680	10468	.	+	.	ID=gene-CKM28_mgp08;Dbxref=GeneID:33875093;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;gene_synonym=COIII;locus_tag=CKM28_mgp08
+NC_035578.1	RefSeq	CDS	9680	10468	.	+	0	ID=cds-YP_009413540.1;Parent=gene-CKM28_mgp08;Dbxref=GenBank:YP_009413540.1,GeneID:33875093;Name=YP_009413540.1;gbkey=CDS;gene=COX3;locus_tag=CKM28_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_009413540.1;transl_table=4
+NC_035578.1	RefSeq	gene	10546	13471	.	+	.	ID=gene-CKM28_mgp09;Dbxref=GeneID:33875094;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;gene_synonym=COI;locus_tag=CKM28_mgp09
+NC_035578.1	RefSeq	CDS	10546	11433	.	+	0	ID=cds-YP_009413541.1;Parent=gene-CKM28_mgp09;Dbxref=GenBank:YP_009413541.1,GeneID:33875094;Name=YP_009413541.1;gbkey=CDS;gene=COX1;locus_tag=CKM28_mgp09;product=cytochrome c oxidase subunit I;protein_id=YP_009413541.1;transl_table=4
+NC_035578.1	RefSeq	CDS	12761	13471	.	+	0	ID=cds-YP_009413541.1;Parent=gene-CKM28_mgp09;Dbxref=GenBank:YP_009413541.1,GeneID:33875094;Name=YP_009413541.1;gbkey=CDS;gene=COX1;locus_tag=CKM28_mgp09;product=cytochrome c oxidase subunit I;protein_id=YP_009413541.1;transl_table=4
+NC_035578.1	RefSeq	exon	10546	11433	.	+	.	ID=id-CKM28_mgp09-1;Parent=gene-CKM28_mgp09;Dbxref=GeneID:33875094;exon_number=1;gbkey=exon;gene=COX1;locus_tag=CKM28_mgp09;number=1
+NC_035578.1	RefSeq	exon	12761	13471	.	+	.	ID=id-CKM28_mgp09-2;Parent=gene-CKM28_mgp09;Dbxref=GeneID:33875094;exon_number=2;gbkey=exon;gene=COX1;locus_tag=CKM28_mgp09;number=2
+NC_035578.1	RefSeq	intron	11434	12760	.	+	.	ID=id-CKM28_mgp09;Parent=gene-CKM28_mgp09;Dbxref=GeneID:33875094;Note=group 1 intron;gbkey=intron;gene=COX1;locus_tag=CKM28_mgp09
+NC_035578.1	RefSeq	gene	13531	13830	.	+	.	ID=gene-CKM28_mgp10;Dbxref=GeneID:33875095;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=CKM28_mgp10
+NC_035578.1	RefSeq	CDS	13531	13830	.	+	0	ID=cds-YP_009413542.1;Parent=gene-CKM28_mgp10;Dbxref=GenBank:YP_009413542.1,GeneID:33875095;Name=YP_009413542.1;gbkey=CDS;gene=ND4L;locus_tag=CKM28_mgp10;product=NADH dehydrogenase subunit 4L;protein_id=YP_009413542.1;transl_table=4
+NC_035578.1	RefSeq	gene	13937	14155	.	+	.	ID=gene-CKM28_mgp11;Dbxref=GeneID:33875096;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=CKM28_mgp11
+NC_035578.1	RefSeq	CDS	13937	14155	.	+	0	ID=cds-YP_009413543.1;Parent=gene-CKM28_mgp11;Dbxref=GenBank:YP_009413543.1,GeneID:33875096;Name=YP_009413543.1;gbkey=CDS;gene=ATP8;locus_tag=CKM28_mgp11;product=ATP synthase F0 subunit 8;protein_id=YP_009413543.1;transl_table=4
+NC_035578.1	RefSeq	gene	14359	15057	.	+	.	ID=gene-CKM28_mgp12;Dbxref=GeneID:33875097;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=CKM28_mgp12
+NC_035578.1	RefSeq	CDS	14359	15057	.	+	0	ID=cds-YP_009413544.1;Parent=gene-CKM28_mgp12;Dbxref=GenBank:YP_009413544.1,GeneID:33875097;Name=YP_009413544.1;gbkey=CDS;gene=ATP6;locus_tag=CKM28_mgp12;product=ATP synthase F0 subunit 6;protein_id=YP_009413544.1;transl_table=4
+NC_035578.1	RefSeq	gene	15182	16390	.	+	.	ID=gene-CKM28_mgr01;Dbxref=GeneID:33875098;Name=CKM28_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKM28_mgr01
+NC_035578.1	RefSeq	rRNA	15182	16390	.	+	.	ID=rna-CKM28_mgr01;Parent=gene-CKM28_mgr01;Dbxref=GeneID:33875098;gbkey=rRNA;locus_tag=CKM28_mgr01;product=small subunit ribosomal RNA
+NC_035578.1	RefSeq	exon	15182	16390	.	+	.	ID=exon-CKM28_mgr01-1;Parent=rna-CKM28_mgr01;Dbxref=GeneID:33875098;gbkey=rRNA;locus_tag=CKM28_mgr01;product=small subunit ribosomal RNA
+NC_035578.1	RefSeq	gene	16913	18070	.	+	.	ID=gene-CKM28_mgp13;Dbxref=GeneID:33875101;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=CKM28_mgp13
+NC_035578.1	RefSeq	CDS	16913	18070	.	+	0	ID=cds-YP_009413545.1;Parent=gene-CKM28_mgp13;Dbxref=GenBank:YP_009413545.1,GeneID:33875101;Name=YP_009413545.1;gbkey=CDS;gene=ND2;locus_tag=CKM28_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_009413545.1;transl_table=4
+NC_035578.1	RefSeq	gene	18119	18189	.	+	.	ID=gene-CKM28_mgt01;Dbxref=GeneID:33875099;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=CKM28_mgt01
+NC_035578.1	RefSeq	tRNA	18119	18189	.	+	.	ID=rna-CKM28_mgt01;Parent=gene-CKM28_mgt01;Dbxref=GeneID:33875099;gbkey=tRNA;gene=trnM;locus_tag=CKM28_mgt01;product=tRNA-Met
+NC_035578.1	RefSeq	exon	18119	18189	.	+	.	ID=exon-CKM28_mgt01-1;Parent=rna-CKM28_mgt01;Dbxref=GeneID:33875099;gbkey=tRNA;gene=trnM;locus_tag=CKM28_mgt01;product=tRNA-Met
+NC_035578.1	RefSeq	gene	18216	20928	.	+	.	ID=gene-CKM28_mgr02;Dbxref=GeneID:33875100;Name=CKM28_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=CKM28_mgr02
+NC_035578.1	RefSeq	rRNA	18216	20928	.	+	.	ID=rna-CKM28_mgr02;Parent=gene-CKM28_mgr02;Dbxref=GeneID:33875100;gbkey=rRNA;locus_tag=CKM28_mgr02;product=large subunit ribosomal RNA
+NC_035578.1	RefSeq	exon	18216	20928	.	+	.	ID=exon-CKM28_mgr02-1;Parent=rna-CKM28_mgr02;Dbxref=GeneID:33875100;gbkey=rRNA;locus_tag=CKM28_mgr02;product=large subunit ribosomal RNA
+

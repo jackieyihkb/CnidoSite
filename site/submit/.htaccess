@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------------------
+# 访客提交内容的落盘目录 —— 整目录的**数据文件**拒绝 HTTP 访问（2026-09-29）
+#
+# submission.php / submit.php 把每次表单提交写成 ./submit/<时间戳>.txt
+# （name / position / organization / email / species / link，以及联系表单的
+# message）。文件名是可推的格式，站内又没有一处链接指向这些 .txt，所以唯一
+# 的访问方式就是直接猜 URL —— 实测 `GET /submit/2026Apr16223541.txt` 返回
+# **200**，内容就是访客填的原文。
+#
+# 目录必须留在原处：路径 "./submit/" 硬编码在两个处理脚本里，搬走会让表单失效。
+# 这些文件只由服务器端脚本以文件系统路径读写，不经 HTTP 提供（curator 直接看
+# 文件系统），所以拒绝 HTTP 不影响任何功能。（同 tmp/.htaccess 的做法。）
+#
+# **不能**整目录 `Require all denied`：同目录下的 proteomic_analysis.php 是一个
+# 有意保留的 301（旧的 /submit/proteomic_analysis.php 已被搜索引擎收录，
+# release.php 的 r1.1 条目把「保留可用」写成了对外承诺）。所以这里只挡数据文件。
+#
+# 目前目录里只有 .txt 一种数据文件；.php 一律放行。以后若出现别的扩展名，
+# 往下面这条 <FilesMatch> 里加，或者反过来改成「只放行 .php」。
+# ---------------------------------------------------------------------------
+<FilesMatch "(?i)\.(txt|json|csv|log|tsv|dat|zip|gz|xlsx?)$">
+    Require all denied
+</FilesMatch>

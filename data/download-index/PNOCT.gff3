@@ -1,0 +1,49 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_080358.1 1 16390
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=400838
+NC_080358.1	RefSeq	region	1	16390	.	+	.	ID=NC_080358.1:1..16390;Dbxref=taxon:400838;Name=MT;collection-date=26-May-2021;country=South Korea;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_080358.1	RefSeq	gene	60	1052	.	-	.	ID=gene-QU393_mgp01;Dbxref=GeneID:82289635;Name=dnaB;gbkey=Gene;gene=dnaB;gene_biotype=protein_coding;locus_tag=QU393_mgp01
+NC_080358.1	RefSeq	CDS	60	1052	.	-	0	ID=cds-YP_010880988.1;Parent=gene-QU393_mgp01;Dbxref=GenBank:YP_010880988.1,GeneID:82289635;Name=YP_010880988.1;gbkey=CDS;gene=dnaB;locus_tag=QU393_mgp01;product=replication helicase subunit;protein_id=YP_010880988.1;transl_table=4
+NC_080358.1	RefSeq	gene	1099	1419	.	-	.	ID=gene-QU393_mgp02;Dbxref=GeneID:82289617;Name=QU393_mgp02;gbkey=Gene;gene_biotype=protein_coding;locus_tag=QU393_mgp02
+NC_080358.1	RefSeq	CDS	1099	1419	.	-	0	ID=cds-YP_010880989.1;Parent=gene-QU393_mgp02;Dbxref=GenBank:YP_010880989.1,GeneID:82289617;Name=YP_010880989.1;gbkey=CDS;locus_tag=QU393_mgp02;product=hypothetical protein;protein_id=YP_010880989.1;transl_table=4
+NC_080358.1	RefSeq	gene	1420	3220	.	-	.	ID=gene-QU393_mgr02;Dbxref=GeneID:82289634;Name=rnl;gbkey=Gene;gene=rnl;gene_biotype=rRNA;locus_tag=QU393_mgr02
+NC_080358.1	RefSeq	rRNA	1420	3220	.	-	.	ID=rna-QU393_mgr02;Parent=gene-QU393_mgr02;Dbxref=GeneID:82289634;gbkey=rRNA;gene=rnl;locus_tag=QU393_mgr02;product=16S ribosomal RNA
+NC_080358.1	RefSeq	exon	1420	3220	.	-	.	ID=exon-QU393_mgr02-1;Parent=rna-QU393_mgr02;Dbxref=GeneID:82289634;gbkey=rRNA;gene=rnl;locus_tag=QU393_mgr02;product=16S ribosomal RNA
+NC_080358.1	RefSeq	gene	3221	4798	.	-	.	ID=gene-QU393_mgp15;Dbxref=GeneID:82289618;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=QU393_mgp15
+NC_080358.1	RefSeq	CDS	3221	4798	.	-	0	ID=cds-YP_010880990.1;Parent=gene-QU393_mgp15;Dbxref=GenBank:YP_010880990.1,GeneID:82289618;Name=YP_010880990.1;gbkey=CDS;gene=COX1;locus_tag=QU393_mgp15;product=cytochrome c oxidase subunit I;protein_id=YP_010880990.1;transl_table=4
+NC_080358.1	RefSeq	gene	4871	5617	.	+	.	ID=gene-QU393_mgp14;Dbxref=GeneID:82289619;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=QU393_mgp14
+NC_080358.1	RefSeq	CDS	4871	5617	.	+	0	ID=cds-YP_010880991.1;Parent=gene-QU393_mgp14;Dbxref=GenBank:YP_010880991.1,GeneID:82289619;Name=YP_010880991.1;gbkey=CDS;gene=COX2;locus_tag=QU393_mgp14;product=cytochrome c oxidase subunit II;protein_id=YP_010880991.1;transl_table=4
+NC_080358.1	RefSeq	gene	5623	5692	.	+	.	ID=gene-QU393_mgt01;Dbxref=GeneID:82289620;Name=trnW(uca);gbkey=Gene;gene=trnW(uca);gene_biotype=tRNA;locus_tag=QU393_mgt01
+NC_080358.1	RefSeq	tRNA	5623	5692	.	+	.	ID=rna-QU393_mgt01;Parent=gene-QU393_mgt01;Dbxref=GeneID:82289620;gbkey=tRNA;gene=trnW(uca);locus_tag=QU393_mgt01;product=tRNA-Trp
+NC_080358.1	RefSeq	exon	5623	5692	.	+	.	ID=exon-QU393_mgt01-1;Parent=rna-QU393_mgt01;Dbxref=GeneID:82289620;gbkey=tRNA;gene=trnW(uca);locus_tag=QU393_mgt01;product=tRNA-Trp
+NC_080358.1	RefSeq	gene	5698	5898	.	+	.	ID=gene-QU393_mgp13;Dbxref=GeneID:82289621;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=QU393_mgp13
+NC_080358.1	RefSeq	CDS	5698	5898	.	+	0	ID=cds-YP_010880992.1;Parent=gene-QU393_mgp13;Dbxref=GenBank:YP_010880992.1,GeneID:82289621;Name=YP_010880992.1;gbkey=CDS;gene=ATP8;locus_tag=QU393_mgp13;product=ATP synthase F0 subunit 8;protein_id=YP_010880992.1;transl_table=4
+NC_080358.1	RefSeq	gene	5898	6605	.	+	.	ID=gene-QU393_mgp12;Dbxref=GeneID:82289622;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=QU393_mgp12
+NC_080358.1	RefSeq	CDS	5898	6605	.	+	0	ID=cds-YP_010880993.1;Parent=gene-QU393_mgp12;Dbxref=GenBank:YP_010880993.1,GeneID:82289622;Name=YP_010880993.1;gbkey=CDS;gene=ATP6;locus_tag=QU393_mgp12;product=ATP synthase F0 subunit 6;protein_id=YP_010880993.1;transl_table=4
+NC_080358.1	RefSeq	gene	6605	7390	.	+	.	ID=gene-QU393_mgp11;Dbxref=GeneID:82289623;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=QU393_mgp11
+NC_080358.1	RefSeq	CDS	6605	7390	.	+	0	ID=cds-YP_010880994.1;Parent=gene-QU393_mgp11;Dbxref=GenBank:YP_010880994.1,GeneID:82289623;Name=YP_010880994.1;gbkey=CDS;gene=COX3;locus_tag=QU393_mgp11;product=cytochrome c oxidase subunit III;protein_id=YP_010880994.1;transl_table=4
+NC_080358.1	RefSeq	gene	7395	7465	.	+	.	ID=gene-QU393_mgt02;Dbxref=GeneID:82289624;Name=trnM(cau);gbkey=Gene;gene=trnM(cau);gene_biotype=tRNA;locus_tag=QU393_mgt02
+NC_080358.1	RefSeq	tRNA	7395	7465	.	+	.	ID=rna-QU393_mgt02;Parent=gene-QU393_mgt02;Dbxref=GeneID:82289624;gbkey=tRNA;gene=trnM(cau);locus_tag=QU393_mgt02;product=tRNA-Met
+NC_080358.1	RefSeq	exon	7395	7465	.	+	.	ID=exon-QU393_mgt02-1;Parent=rna-QU393_mgt02;Dbxref=GeneID:82289624;gbkey=tRNA;gene=trnM(cau);locus_tag=QU393_mgt02;product=tRNA-Met
+NC_080358.1	RefSeq	gene	7471	8790	.	+	.	ID=gene-QU393_mgp10;Dbxref=GeneID:82289625;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=QU393_mgp10
+NC_080358.1	RefSeq	CDS	7471	8790	.	+	0	ID=cds-YP_010880995.1;Parent=gene-QU393_mgp10;Dbxref=GenBank:YP_010880995.1,GeneID:82289625;Name=YP_010880995.1;gbkey=CDS;gene=ND2;locus_tag=QU393_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_010880995.1;transl_table=4
+NC_080358.1	RefSeq	gene	8791	10608	.	+	.	ID=gene-QU393_mgp09;Dbxref=GeneID:82289626;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=QU393_mgp09
+NC_080358.1	RefSeq	CDS	8791	10608	.	+	0	ID=cds-YP_010880996.1;Parent=gene-QU393_mgp09;Dbxref=GenBank:YP_010880996.1,GeneID:82289626;Name=YP_010880996.1;gbkey=CDS;gene=ND5;locus_tag=QU393_mgp09;product=NADH dehydrogenase subunit 5;protein_id=YP_010880996.1;transl_table=4
+NC_080358.1	RefSeq	gene	10607	11558	.	+	.	ID=gene-QU393_mgr01;Dbxref=GeneID:82289627;Name=rns;gbkey=Gene;gene=rns;gene_biotype=rRNA;locus_tag=QU393_mgr01
+NC_080358.1	RefSeq	rRNA	10607	11558	.	+	.	ID=rna-QU393_mgr01;Parent=gene-QU393_mgr01;Dbxref=GeneID:82289627;gbkey=rRNA;gene=rns;locus_tag=QU393_mgr01;product=12S ribosomal RNA
+NC_080358.1	RefSeq	exon	10607	11558	.	+	.	ID=exon-QU393_mgr01-1;Parent=rna-QU393_mgr01;Dbxref=GeneID:82289627;gbkey=rRNA;gene=rns;locus_tag=QU393_mgr01;product=12S ribosomal RNA
+NC_080358.1	RefSeq	gene	11591	12142	.	+	.	ID=gene-QU393_mgp08;Dbxref=GeneID:82289628;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=QU393_mgp08
+NC_080358.1	RefSeq	CDS	11591	12142	.	+	0	ID=cds-YP_010880997.1;Parent=gene-QU393_mgp08;Dbxref=GenBank:YP_010880997.1,GeneID:82289628;Name=YP_010880997.1;gbkey=CDS;gene=ND6;locus_tag=QU393_mgp08;product=NADH dehydrogenase subunit 6;protein_id=YP_010880997.1;transl_table=4
+NC_080358.1	RefSeq	gene	12132	12482	.	+	.	ID=gene-QU393_mgp07;Dbxref=GeneID:82289629;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=QU393_mgp07
+NC_080358.1	RefSeq	CDS	12132	12482	.	+	0	ID=cds-YP_010880998.1;Parent=gene-QU393_mgp07;Dbxref=GenBank:YP_010880998.1,GeneID:82289629;Name=YP_010880998.1;gbkey=CDS;gene=ND3;locus_tag=QU393_mgp07;product=NADH dehydrogenase subunit 3;protein_id=YP_010880998.1;transl_table=4
+NC_080358.1	RefSeq	gene	12473	12775	.	+	.	ID=gene-QU393_mgp06;Dbxref=GeneID:82289630;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=QU393_mgp06
+NC_080358.1	RefSeq	CDS	12473	12775	.	+	0	ID=cds-YP_010880999.1;Parent=gene-QU393_mgp06;Dbxref=GenBank:YP_010880999.1,GeneID:82289630;Name=YP_010880999.1;gbkey=CDS;gene=ND4L;locus_tag=QU393_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_010880999.1;transl_table=4
+NC_080358.1	RefSeq	gene	12780	13748	.	+	.	ID=gene-QU393_mgp05;Dbxref=GeneID:82289631;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=QU393_mgp05
+NC_080358.1	RefSeq	CDS	12780	13748	.	+	0	ID=cds-YP_010881000.1;Parent=gene-QU393_mgp05;Dbxref=GenBank:YP_010881000.1,GeneID:82289631;Name=YP_010881000.1;gbkey=CDS;gene=ND1;locus_tag=QU393_mgp05;product=NADH dehydrogenase subunit 1;protein_id=YP_010881000.1;transl_table=4
+NC_080358.1	RefSeq	gene	13751	15193	.	+	.	ID=gene-QU393_mgp04;Dbxref=GeneID:82289632;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=QU393_mgp04
+NC_080358.1	RefSeq	CDS	13751	15193	.	+	0	ID=cds-YP_010881001.1;Parent=gene-QU393_mgp04;Dbxref=GenBank:YP_010881001.1,GeneID:82289632;Name=YP_010881001.1;gbkey=CDS;gene=ND4;locus_tag=QU393_mgp04;product=NADH dehydrogenase subunit 4;protein_id=YP_010881001.1;transl_table=4
+NC_080358.1	RefSeq	gene	15197	16333	.	+	.	ID=gene-QU393_mgp03;Dbxref=GeneID:82289633;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=QU393_mgp03
+NC_080358.1	RefSeq	CDS	15197	16333	.	+	0	ID=cds-YP_010881002.1;Parent=gene-QU393_mgp03;Dbxref=GenBank:YP_010881002.1,GeneID:82289633;Name=YP_010881002.1;gbkey=CDS;gene=CYTB;locus_tag=QU393_mgp03;product=cytochrome b;protein_id=YP_010881002.1;transl_table=4
+

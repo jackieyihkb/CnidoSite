@@ -1,0 +1,378 @@
+{
+ "dataset_id": "HVULG_siebert_atlas",
+ "key": "bat: battery cell, db: doublet, ecEP: ectodermal epithelial cell, enEP: endodermal epithelial cell, fmgl: female germline, gc: gland cell, gmgc: granular mucous gland cell, i: cell of the interstitial lineage, id: integration doublet, mgl: male germline, mp: multiplet, nb: nematoblast, nc: neuronal cell, nem: differentiated nematocyte, pd: suspected phagocytosis doublet, prog: progenitor, SC: stem cell, smgc: spumous mucous gland cell, tent: tentacle, zmg: zymogen gland cell.",
+ "qualifiers": {
+  "pd": "suspected phagocytosis doublet",
+  "id": "integration doublet",
+  "mp": "multiplet",
+  "db": "doublet"
+ },
+ "doublet_caveat": "A clear distinction between the mp, id and pd categories is in many cases not possible.",
+ "source": "cejuliano/hydra_single_cell: SA01 (key), SA06 (short and long label vectors), SA05 (ec/en = ectoderm/endoderm)",
+ "source_short": "the study's own scripts (SA01, SA05, SA06) in cejuliano/hydra_single_cell",
+ "labels": [
+  {
+   "label": "ecEp_SC1",
+   "study_name": "ecEp_stem_cell_1",
+   "english": "Ectodermal epithelial cell, stem cell 1",
+   "brief": "ectodermal stem cell 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp_SC1",
+   "study_name": "enEp_stem_cell_1",
+   "english": "Endodermal epithelial cell, stem cell 1",
+   "brief": "endodermal stem cell 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "unassigned",
+   "study_name": null,
+   "english": null,
+   "brief": "not one of the study's published names",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp_SC2",
+   "study_name": "enEp_stem_cell_2",
+   "english": "Endodermal epithelial cell, stem cell 2",
+   "brief": "endodermal stem cell 2",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_SC",
+   "study_name": "i_stem_cell/progenitor",
+   "english": "Interstitial lineage, stem cell / progenitor",
+   "brief": "stem cell / progenitor",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_nb1",
+   "study_name": "i_nematoblast_1",
+   "english": "Interstitial lineage, nematoblast 1",
+   "brief": "nematoblast 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_prog",
+   "study_name": "i_neuron_prog",
+   "english": "Interstitial lineage, neuronal progenitor",
+   "brief": "neuronal progenitor",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp_SC3",
+   "study_name": "enEp_stem_cell_3",
+   "english": "Endodermal epithelial cell, stem cell 3",
+   "brief": "endodermal stem cell 3",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp-nb(pd)",
+   "study_name": "ecEp-nb(pd)",
+   "english": "Ectodermal epithelial cell with a nematoblast",
+   "brief": "with a nematoblast — suspected doublet",
+   "qualifier": "pd",
+   "qualifier_means": "suspected phagocytosis doublet"
+  },
+  {
+   "label": "i_smgc",
+   "study_name": "i_spumous_mucous_gland_cell",
+   "english": "Interstitial lineage, spumous mucous gland cell",
+   "brief": "spumous mucous gland cell",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp_bat(mp)",
+   "study_name": "ecEp_battery(mp)",
+   "english": "Ectodermal epithelial cell, battery cell",
+   "brief": "battery cell — multiplet",
+   "qualifier": "mp",
+   "qualifier_means": "multiplet"
+  },
+  {
+   "label": "ecEp_head/hyp",
+   "study_name": "ecEp_head/hypostome",
+   "english": "Ectodermal epithelial cell, head / hypostome",
+   "brief": "head / hypostome",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp_head",
+   "study_name": "enEp_head",
+   "english": "Endodermal epithelial cell, head",
+   "brief": "endodermal head",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_nb2",
+   "study_name": "i_nematoblast_2",
+   "english": "Interstitial lineage, nematoblast 2",
+   "brief": "nematoblast 2",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_nb4",
+   "study_name": "i_nematoblast_4",
+   "english": "Interstitial lineage, nematoblast 4",
+   "brief": "nematoblast 4",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp_tent",
+   "study_name": "enEp_tentacle",
+   "english": "Endodermal epithelial cell, tentacle",
+   "brief": "endodermal tentacle",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_fmgl1",
+   "study_name": "i_female_germline_1",
+   "english": "Interstitial lineage, female germline 1",
+   "brief": "female germline 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_mgl",
+   "study_name": "i_male_germline",
+   "english": "Interstitial lineage, male germline",
+   "brief": "male germline",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_fmgl2",
+   "study_name": "i_femalge_germline_2_nurse_cell",
+   "english": "Interstitial lineage, female germline 2, nurse cell",
+   "brief": "female germline 2, nurse cell",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_gmgc",
+   "study_name": "i_granular_mucous_gland_cell",
+   "english": "Interstitial lineage, granular mucous gland cell",
+   "brief": "granular mucous gland cell",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_nb3",
+   "study_name": "i_nematoblast_3",
+   "english": "Interstitial lineage, nematoblast 3",
+   "brief": "nematoblast 3",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_zmg1",
+   "study_name": "i_zymogen_gland_cell_1",
+   "english": "Interstitial lineage, zymogen gland cell 1",
+   "brief": "zymogen gland cell 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp_bd",
+   "study_name": "ecEp_basal_disk",
+   "english": "Ectodermal epithelial cell, basal disk",
+   "brief": "basal disk",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp_foot",
+   "study_name": "enEp_foot",
+   "english": "Endodermal epithelial cell, foot",
+   "brief": "endodermal foot",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_nem",
+   "study_name": "i_nematocyte",
+   "english": "Interstitial lineage, differentiated nematocyte",
+   "brief": "differentiated nematocyte",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp-nem(id)",
+   "study_name": "ecEp-nem(id)",
+   "english": "Ectodermal epithelial cell with a nematocyte",
+   "brief": "with a nematocyte — integration doublet",
+   "qualifier": "id",
+   "qualifier_means": "integration doublet"
+  },
+  {
+   "label": "i_gc/n_prog",
+   "study_name": "i_gland_cell/neuron_progenitor",
+   "english": "Interstitial lineage, gland cell / neuronal progenitor",
+   "brief": "gland cell / neuronal progenitor",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_ec1",
+   "study_name": "i_neuron_ec1",
+   "english": "Interstitial lineage, neuronal cell of the ectodermal nerve net, 1",
+   "brief": "neuron, ectodermal nerve net 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp_SC2",
+   "study_name": "ecEp_stem_cell_2",
+   "english": "Ectodermal epithelial cell, stem cell 2",
+   "brief": "ectodermal stem cell 2",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_ec3",
+   "study_name": "i_neuron_ec3",
+   "english": "Interstitial lineage, neuronal cell of the ectodermal nerve net, 3",
+   "brief": "neuron, ectodermal nerve net 3",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "enEp-nem(pd)",
+   "study_name": "enEp-nem(pd)",
+   "english": "Endodermal epithelial cell with a nematocyte",
+   "brief": "with a nematocyte — suspected doublet",
+   "qualifier": "pd",
+   "qualifier_means": "suspected phagocytosis doublet"
+  },
+  {
+   "label": "i_n_ec2",
+   "study_name": "i_neuron_ec2",
+   "english": "Interstitial lineage, neuronal cell of the ectodermal nerve net, 2",
+   "brief": "neuron, ectodermal nerve net 2",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_en1",
+   "study_name": "i_neuron_en1",
+   "english": "Interstitial lineage, neuronal cell of the endodermal nerve net, 1",
+   "brief": "neuron, endodermal nerve net 1",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp_ped",
+   "study_name": "ecEp_peduncle",
+   "english": "Ectodermal epithelial cell, peduncle",
+   "brief": "peduncle",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_en2",
+   "study_name": "i_neuron_en2",
+   "english": "Interstitial lineage, neuronal cell of the endodermal nerve net, 2",
+   "brief": "neuron, endodermal nerve net 2",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_zmg2",
+   "study_name": "i_zymogen_gland_cell_2",
+   "english": "Interstitial lineage, zymogen gland cell 2",
+   "brief": "zymogen gland cell 2",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_nb5",
+   "study_name": "i_nematoblast_5",
+   "english": "Interstitial lineage, nematoblast 5",
+   "brief": "nematoblast 5",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_ec4",
+   "study_name": "i_neuron_ec4",
+   "english": "Interstitial lineage, neuronal cell of the ectodermal nerve net, 4",
+   "brief": "neuron, ectodermal nerve net 4",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_ec5",
+   "study_name": "i_neuron_ec5",
+   "english": "Interstitial lineage, neuronal cell of the ectodermal nerve net, 5",
+   "brief": "neuron, ectodermal nerve net 5",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "i_n_en3",
+   "study_name": "i_neuron_en3",
+   "english": "Interstitial lineage, neuronal cell of the endodermal nerve net, 3",
+   "brief": "neuron, endodermal nerve net 3",
+   "qualifier": null,
+   "qualifier_means": null
+  },
+  {
+   "label": "ecEp-fmgl(db)",
+   "study_name": "ecEp-fmgl(db)",
+   "english": "Ectodermal epithelial cell with a female germline cell",
+   "brief": "with a female germline cell — doublet",
+   "qualifier": "db",
+   "qualifier_means": "doublet"
+  },
+  {
+   "label": "unident",
+   "study_name": "unident",
+   "english": "Unidentified",
+   "brief": "unidentified",
+   "qualifier": null,
+   "qualifier_means": null
+  }
+ ],
+ "unassigned_note": {
+  "n_cells": 1663,
+  "pct": 6.5,
+  "n_libraries": 15,
+  "top_libraries": [
+   {
+    "sample": "06-MA",
+    "n": 1003
+   },
+   {
+    "sample": "03-MA",
+    "n": 196
+   }
+  ],
+  "top_library_share": 72,
+  "n_clusters_with": 40,
+  "n_clusters_total": 42,
+  "code_files_searched": 17,
+  "top_markers": [
+   "g1835.t1|H2BE_STRPU",
+   "g32541.t1|H5_CHICK",
+   "g4001.t1|RL37A_CRYST",
+   "g32542.t1|H10_MOUSE",
+   "g18365.t1|PABP1_MOUSE",
+   "g24040.t1|RL28_MOUSE"
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_031213.1 1 15425
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=308579
+NC_031213.1	RefSeq	region	1	15425	.	+	.	ID=NC_031213.1:1..15425;Dbxref=taxon:308579;Name=MT;country=Turkey:Gokceada%2C Kura. Burnu;gbkey=Src;genome=mitochondrion;isolate=BP;mol_type=genomic DNA
+NC_031213.1	RefSeq	repeat_region	1	8	.	+	.	ID=id-NC_031213.1:1..8;gbkey=repeat_region
+NC_031213.1	RefSeq	pseudogene	33	329	.	-	.	ID=gene-BI101_gp01;Dbxref=GeneID:29061427;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=pseudogene;locus_tag=BI101_gp01;pseudo=true
+NC_031213.1	RefSeq	gene	283	2048	.	-	.	ID=gene-BI101_gr02;Dbxref=GeneID:29061422;Name=BI101_gr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=BI101_gr02
+NC_031213.1	RefSeq	rRNA	283	2048	.	-	.	ID=rna-BI101_gr02;Parent=gene-BI101_gr02;Dbxref=GeneID:29061422;gbkey=rRNA;locus_tag=BI101_gr02;product=16S ribosomal RNA
+NC_031213.1	RefSeq	exon	283	2048	.	-	.	ID=exon-BI101_gr02-1;Parent=rna-BI101_gr02;Dbxref=GeneID:29061422;gbkey=rRNA;locus_tag=BI101_gr02;product=16S ribosomal RNA
+NC_031213.1	RefSeq	gene	2108	2845	.	+	.	ID=gene-BI101_gp14;Dbxref=GeneID:29061423;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=BI101_gp14
+NC_031213.1	RefSeq	CDS	2108	2845	.	+	0	ID=cds-YP_009300648.1;Parent=gene-BI101_gp14;Dbxref=GenBank:YP_009300648.1,GeneID:29061423;Name=YP_009300648.1;gbkey=CDS;gene=COX2;locus_tag=BI101_gp14;product=cytochrome c oxidase subunit II;protein_id=YP_009300648.1;transl_table=4
+NC_031213.1	RefSeq	gene	2867	2936	.	+	.	ID=gene-BI101_gt01;Dbxref=GeneID:29061410;Name=BI101_gt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=BI101_gt01
+NC_031213.1	RefSeq	tRNA	2867	2936	.	+	.	ID=rna-BI101_gt01;Parent=gene-BI101_gt01;Dbxref=GeneID:29061410;anticodon=(pos:2898..2900);gbkey=tRNA;locus_tag=BI101_gt01;product=tRNA-Trp
+NC_031213.1	RefSeq	exon	2867	2936	.	+	.	ID=exon-BI101_gt01-1;Parent=rna-BI101_gt01;Dbxref=GeneID:29061410;anticodon=(pos:2898..2900);gbkey=tRNA;locus_tag=BI101_gt01;product=tRNA-Trp
+NC_031213.1	RefSeq	gene	2939	3142	.	+	.	ID=gene-BI101_gp13;Dbxref=GeneID:29061424;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=BI101_gp13
+NC_031213.1	RefSeq	CDS	2939	3142	.	+	0	ID=cds-YP_009300649.1;Parent=gene-BI101_gp13;Dbxref=GenBank:YP_009300649.1,GeneID:29061424;Name=YP_009300649.1;gbkey=CDS;gene=ATP8;locus_tag=BI101_gp13;product=ATP synthase F0 subunit 8;protein_id=YP_009300649.1;transl_table=4
+NC_031213.1	RefSeq	gene	3142	3846	.	+	.	ID=gene-BI101_gp12;Dbxref=GeneID:29061411;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=BI101_gp12
+NC_031213.1	RefSeq	CDS	3142	3846	.	+	0	ID=cds-YP_009300650.1;Parent=gene-BI101_gp12;Dbxref=GenBank:YP_009300650.1,GeneID:29061411;Name=YP_009300650.1;gbkey=CDS;gene=ATP6;locus_tag=BI101_gp12;product=ATP synthase F0 subunit 6;protein_id=YP_009300650.1;transl_table=4
+NC_031213.1	RefSeq	gene	3847	4632	.	+	.	ID=gene-BI101_gp11;Dbxref=GeneID:29061412;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=BI101_gp11
+NC_031213.1	RefSeq	CDS	3847	4632	.	+	0	ID=cds-YP_009300651.1;Parent=gene-BI101_gp11;Dbxref=GenBank:YP_009300651.1,GeneID:29061412;Name=YP_009300651.1;gbkey=CDS;gene=COX3;locus_tag=BI101_gp11;product=cytochrome c oxidase subunit III;protein_id=YP_009300651.1;transl_table=4
+NC_031213.1	RefSeq	gene	4648	4718	.	+	.	ID=gene-BI101_gt02;Dbxref=GeneID:29061413;Name=BI101_gt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=BI101_gt02
+NC_031213.1	RefSeq	tRNA	4648	4718	.	+	.	ID=rna-BI101_gt02;Parent=gene-BI101_gt02;Dbxref=GeneID:29061413;anticodon=(pos:4680..4682);gbkey=tRNA;locus_tag=BI101_gt02;product=tRNA-Met
+NC_031213.1	RefSeq	exon	4648	4718	.	+	.	ID=exon-BI101_gt02-1;Parent=rna-BI101_gt02;Dbxref=GeneID:29061413;anticodon=(pos:4680..4682);gbkey=tRNA;locus_tag=BI101_gt02;product=tRNA-Met
+NC_031213.1	RefSeq	gene	4719	6077	.	+	.	ID=gene-BI101_gp10;Dbxref=GeneID:29061425;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=BI101_gp10
+NC_031213.1	RefSeq	CDS	4719	6077	.	+	0	ID=cds-YP_009300652.1;Parent=gene-BI101_gp10;Dbxref=GenBank:YP_009300652.1,GeneID:29061425;Name=YP_009300652.1;gbkey=CDS;gene=ND2;locus_tag=BI101_gp10;product=NADH dehydrogenase subunit 2;protein_id=YP_009300652.1;transl_table=4
+NC_031213.1	RefSeq	gene	6079	7908	.	+	.	ID=gene-BI101_gp09;Dbxref=GeneID:29061414;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=BI101_gp09
+NC_031213.1	RefSeq	CDS	6079	7908	.	+	0	ID=cds-YP_009300653.1;Parent=gene-BI101_gp09;Dbxref=GenBank:YP_009300653.1,GeneID:29061414;Name=YP_009300653.1;gbkey=CDS;gene=ND5;locus_tag=BI101_gp09;product=NADH dehydrogenase subunit 5;protein_id=YP_009300653.1;transl_table=4
+NC_031213.1	RefSeq	gene	7921	8827	.	+	.	ID=gene-BI101_gr01;Dbxref=GeneID:29061415;Name=BI101_gr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=BI101_gr01
+NC_031213.1	RefSeq	rRNA	7921	8827	.	+	.	ID=rna-BI101_gr01;Parent=gene-BI101_gr01;Dbxref=GeneID:29061415;gbkey=rRNA;locus_tag=BI101_gr01;product=12S ribosomal RNA
+NC_031213.1	RefSeq	exon	7921	8827	.	+	.	ID=exon-BI101_gr01-1;Parent=rna-BI101_gr01;Dbxref=GeneID:29061415;gbkey=rRNA;locus_tag=BI101_gr01;product=12S ribosomal RNA
+NC_031213.1	RefSeq	gene	8826	9383	.	+	.	ID=gene-BI101_gp08;Dbxref=GeneID:29061426;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=BI101_gp08
+NC_031213.1	RefSeq	CDS	8826	9383	.	+	0	ID=cds-YP_009300654.1;Parent=gene-BI101_gp08;Dbxref=GenBank:YP_009300654.1,GeneID:29061426;Name=YP_009300654.1;gbkey=CDS;gene=ND6;locus_tag=BI101_gp08;product=NADH dehydrogenase subunit 6;protein_id=YP_009300654.1;transl_table=4
+NC_031213.1	RefSeq	gene	9374	9730	.	+	.	ID=gene-BI101_gp07;Dbxref=GeneID:29061416;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=BI101_gp07
+NC_031213.1	RefSeq	CDS	9374	9730	.	+	0	ID=cds-YP_009300655.1;Parent=gene-BI101_gp07;Dbxref=GenBank:YP_009300655.1,GeneID:29061416;Name=YP_009300655.1;gbkey=CDS;gene=ND3;locus_tag=BI101_gp07;product=NADH dehydrogenase subunit 3;protein_id=YP_009300655.1;transl_table=4
+NC_031213.1	RefSeq	gene	9730	10026	.	+	.	ID=gene-BI101_gp06;Dbxref=GeneID:29061417;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=BI101_gp06
+NC_031213.1	RefSeq	CDS	9730	10026	.	+	0	ID=cds-YP_009300656.1;Parent=gene-BI101_gp06;Dbxref=GenBank:YP_009300656.1,GeneID:29061417;Name=YP_009300656.1;gbkey=CDS;gene=ND4L;locus_tag=BI101_gp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_009300656.1;transl_table=4
+NC_031213.1	RefSeq	gene	10026	11012	.	+	.	ID=gene-BI101_gp05;Dbxref=GeneID:29061418;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=BI101_gp05
+NC_031213.1	RefSeq	CDS	10026	11012	.	+	0	ID=cds-YP_009300657.1;Parent=gene-BI101_gp05;Dbxref=GenBank:YP_009300657.1,GeneID:29061418;Name=YP_009300657.1;gbkey=CDS;gene=ND1;locus_tag=BI101_gp05;product=NADH dehydrogenase subunit 1;protein_id=YP_009300657.1;transl_table=4
+NC_031213.1	RefSeq	gene	11003	12460	.	+	.	ID=gene-BI101_gp04;Dbxref=GeneID:29061419;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=BI101_gp04
+NC_031213.1	RefSeq	CDS	11003	12460	.	+	0	ID=cds-YP_009300658.1;Parent=gene-BI101_gp04;Dbxref=GenBank:YP_009300658.1,GeneID:29061419;Name=YP_009300658.1;gbkey=CDS;gene=ND4;locus_tag=BI101_gp04;product=NADH dehydrogenase subunit 4;protein_id=YP_009300658.1;transl_table=4
+NC_031213.1	RefSeq	gene	12474	13613	.	+	.	ID=gene-BI101_gp03;Dbxref=GeneID:29061420;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=BI101_gp03
+NC_031213.1	RefSeq	CDS	12474	13613	.	+	0	ID=cds-YP_009300659.1;Parent=gene-BI101_gp03;Dbxref=GenBank:YP_009300659.1,GeneID:29061420;Name=YP_009300659.1;gbkey=CDS;gene=CYTB;locus_tag=BI101_gp03;product=cytochrome b;protein_id=YP_009300659.1;transl_table=4
+NC_031213.1	RefSeq	gene	13636	15393	.	+	.	ID=gene-BI101_gp02;Dbxref=GeneID:29061421;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=BI101_gp02
+NC_031213.1	RefSeq	CDS	13636	15393	.	+	0	ID=cds-YP_009300660.1;Parent=gene-BI101_gp02;Dbxref=GenBank:YP_009300660.1,GeneID:29061421;Name=YP_009300660.1;gbkey=CDS;gene=COX1;locus_tag=BI101_gp02;product=cytochrome c oxidase subunit I;protein_id=YP_009300660.1;transl_table=4
+NC_031213.1	RefSeq	repeat_region	15417	15425	.	+	.	ID=id-NC_031213.1:15417..15425;gbkey=repeat_region
+

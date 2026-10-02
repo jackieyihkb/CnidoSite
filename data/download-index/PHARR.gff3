@@ -1,0 +1,48 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_037435.1 1 18630
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=627007
+NC_037435.1	RefSeq	region	1	18630	.	+	.	ID=NC_037435.1:1..18630;Dbxref=taxon:627007;Is_circular=true;Name=MT;collected-by=Francesca Benzoni;country=Saudi Arabia;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_037435.1	RefSeq	gene	1	71	.	+	.	ID=gene-DDI46_mgt01;Dbxref=GeneID:36492429;Name=DDI46_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=DDI46_mgt01
+NC_037435.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-DDI46_mgt01;Parent=gene-DDI46_mgt01;Dbxref=GeneID:36492429;gbkey=tRNA;locus_tag=DDI46_mgt01;product=tRNA-Met
+NC_037435.1	RefSeq	exon	1	71	.	+	.	ID=exon-DDI46_mgt01-1;Parent=rna-DDI46_mgt01;Dbxref=GeneID:36492429;gbkey=tRNA;locus_tag=DDI46_mgt01;product=tRNA-Met
+NC_037435.1	RefSeq	gene	116	2417	.	+	.	ID=gene-DDI46_mgr02;Dbxref=GeneID:36492430;Name=DDI46_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=DDI46_mgr02
+NC_037435.1	RefSeq	rRNA	116	2417	.	+	.	ID=rna-DDI46_mgr02;Parent=gene-DDI46_mgr02;Dbxref=GeneID:36492430;gbkey=rRNA;locus_tag=DDI46_mgr02;product=16S ribosomal RNA
+NC_037435.1	RefSeq	exon	116	2417	.	+	.	ID=exon-DDI46_mgr02-1;Parent=rna-DDI46_mgr02;Dbxref=GeneID:36492430;gbkey=rRNA;locus_tag=DDI46_mgr02;product=16S ribosomal RNA
+NC_037435.1	RefSeq	gene	2563	15531	.	+	.	ID=gene-DDI46_mgp13;Dbxref=GeneID:36492434;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=DDI46_mgp13
+NC_037435.1	RefSeq	CDS	2563	3281	.	+	0	ID=cds-YP_009475741.1;Parent=gene-DDI46_mgp13;Dbxref=GenBank:YP_009475741.1,GeneID:36492434;Name=YP_009475741.1;gbkey=CDS;gene=ND5;locus_tag=DDI46_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_009475741.1;transl_table=4
+NC_037435.1	RefSeq	CDS	14415	15531	.	+	1	ID=cds-YP_009475741.1;Parent=gene-DDI46_mgp13;Dbxref=GenBank:YP_009475741.1,GeneID:36492434;Name=YP_009475741.1;gbkey=CDS;gene=ND5;locus_tag=DDI46_mgp13;product=NADH dehydrogenase subunit 5;protein_id=YP_009475741.1;transl_table=4
+NC_037435.1	RefSeq	intron	3282	14414	.	+	.	ID=id-DDI46_mgp13;Parent=gene-DDI46_mgp13;Dbxref=GeneID:36492434;gbkey=intron;gene=ND5;locus_tag=DDI46_mgp13
+NC_037435.1	RefSeq	gene	3616	4599	.	+	.	ID=gene-DDI46_mgp12;Dbxref=GeneID:36492418;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=DDI46_mgp12
+NC_037435.1	RefSeq	CDS	3616	4599	.	+	0	ID=cds-YP_009475742.1;Parent=gene-DDI46_mgp12;Dbxref=GenBank:YP_009475742.1,GeneID:36492418;Name=YP_009475742.1;gbkey=CDS;gene=ND1;locus_tag=DDI46_mgp12;product=NADH dehydrogenase subunit 1;protein_id=YP_009475742.1;transl_table=4
+NC_037435.1	RefSeq	gene	4721	5881	.	+	.	ID=gene-DDI46_mgp11;Dbxref=GeneID:36492419;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=DDI46_mgp11
+NC_037435.1	RefSeq	CDS	4721	5881	.	+	0	ID=cds-YP_009475743.1;Parent=gene-DDI46_mgp11;Dbxref=GenBank:YP_009475743.1,GeneID:36492419;Name=YP_009475743.1;gbkey=CDS;gene=CYTB;locus_tag=DDI46_mgp11;product=cytochrome b;protein_id=YP_009475743.1;transl_table=4
+NC_037435.1	RefSeq	gene	6451	7548	.	+	.	ID=gene-DDI46_mgp10;Dbxref=GeneID:36492420;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=DDI46_mgp10
+NC_037435.1	RefSeq	CDS	6451	7548	.	+	0	ID=cds-YP_009475744.1;Parent=gene-DDI46_mgp10;Dbxref=GenBank:YP_009475744.1,GeneID:36492420;Name=YP_009475744.1;gbkey=CDS;gene=ND2;locus_tag=DDI46_mgp10;product=NADH dehydrogenase subunit 2;protein_id=YP_009475744.1;transl_table=4
+NC_037435.1	RefSeq	gene	7582	8175	.	+	.	ID=gene-DDI46_mgp09;Dbxref=GeneID:36492421;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=DDI46_mgp09
+NC_037435.1	RefSeq	CDS	7582	8175	.	+	0	ID=cds-YP_009475745.1;Parent=gene-DDI46_mgp09;Dbxref=GenBank:YP_009475745.1,GeneID:36492421;Name=YP_009475745.1;gbkey=CDS;gene=ND6;locus_tag=DDI46_mgp09;product=NADH dehydrogenase subunit 6;protein_id=YP_009475745.1;transl_table=4
+NC_037435.1	RefSeq	gene	8249	8947	.	+	.	ID=gene-DDI46_mgp08;Dbxref=GeneID:36492422;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=DDI46_mgp08
+NC_037435.1	RefSeq	CDS	8249	8947	.	+	0	ID=cds-YP_009475746.1;Parent=gene-DDI46_mgp08;Dbxref=GenBank:YP_009475746.1,GeneID:36492422;Name=YP_009475746.1;gbkey=CDS;gene=ATP6;locus_tag=DDI46_mgp08;product=ATP synthase F0 subunit 6;protein_id=YP_009475746.1;transl_table=4
+NC_037435.1	RefSeq	gene	9210	10685	.	+	.	ID=gene-DDI46_mgp07;Dbxref=GeneID:36492423;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=DDI46_mgp07
+NC_037435.1	RefSeq	CDS	9210	10685	.	+	0	ID=cds-YP_009475747.1;Parent=gene-DDI46_mgp07;Dbxref=GenBank:YP_009475747.1,GeneID:36492423;Name=YP_009475747.1;gbkey=CDS;gene=ND4;locus_tag=DDI46_mgp07;product=NADH dehydrogenase subunit 4;protein_id=YP_009475747.1;transl_table=4
+NC_037435.1	RefSeq	gene	10761	11791	.	+	.	ID=gene-DDI46_mgr01;Dbxref=GeneID:36492424;Name=DDI46_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=DDI46_mgr01
+NC_037435.1	RefSeq	rRNA	10761	11791	.	+	.	ID=rna-DDI46_mgr01;Parent=gene-DDI46_mgr01;Dbxref=GeneID:36492424;gbkey=rRNA;locus_tag=DDI46_mgr01;product=12S ribosomal RNA
+NC_037435.1	RefSeq	exon	10761	11791	.	+	.	ID=exon-DDI46_mgr01-1;Parent=rna-DDI46_mgr01;Dbxref=GeneID:36492424;gbkey=rRNA;locus_tag=DDI46_mgr01;product=12S ribosomal RNA
+NC_037435.1	RefSeq	gene	12024	12812	.	+	.	ID=gene-DDI46_mgp06;Dbxref=GeneID:36492432;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=DDI46_mgp06
+NC_037435.1	RefSeq	CDS	12024	12812	.	+	0	ID=cds-YP_009475748.1;Parent=gene-DDI46_mgp06;Dbxref=GenBank:YP_009475748.1,GeneID:36492432;Name=YP_009475748.1;gbkey=CDS;gene=COX3;locus_tag=DDI46_mgp06;product=cytochrome c oxidase subunit III;protein_id=YP_009475748.1;transl_table=4
+NC_037435.1	RefSeq	gene	12848	13591	.	+	.	ID=gene-DDI46_mgp05;Dbxref=GeneID:36492425;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=DDI46_mgp05
+NC_037435.1	RefSeq	CDS	12848	13591	.	+	0	ID=cds-YP_009475749.1;Parent=gene-DDI46_mgp05;Dbxref=GenBank:YP_009475749.1,GeneID:36492425;Name=YP_009475749.1;gbkey=CDS;gene=COX2;locus_tag=DDI46_mgp05;product=cytochrome c oxidase subunit II;protein_id=YP_009475749.1;transl_table=4
+NC_037435.1	RefSeq	gene	13645	13944	.	+	.	ID=gene-DDI46_mgp04;Dbxref=GeneID:36492426;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=DDI46_mgp04
+NC_037435.1	RefSeq	CDS	13645	13944	.	+	0	ID=cds-YP_009475750.1;Parent=gene-DDI46_mgp04;Dbxref=GenBank:YP_009475750.1,GeneID:36492426;Name=YP_009475750.1;gbkey=CDS;gene=ND4L;locus_tag=DDI46_mgp04;product=NADH dehydrogenase subunit 4L;protein_id=YP_009475750.1;transl_table=4
+NC_037435.1	RefSeq	gene	13959	14315	.	+	.	ID=gene-DDI46_mgp03;Dbxref=GeneID:36492427;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=DDI46_mgp03
+NC_037435.1	RefSeq	CDS	13959	14315	.	+	0	ID=cds-YP_009475751.1;Parent=gene-DDI46_mgp03;Dbxref=GenBank:YP_009475751.1,GeneID:36492427;Name=YP_009475751.1;gbkey=CDS;gene=ND3;locus_tag=DDI46_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009475751.1;transl_table=4
+NC_037435.1	RefSeq	gene	15571	15640	.	+	.	ID=gene-DDI46_mgt02;Dbxref=GeneID:36492428;Name=DDI46_mgt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=DDI46_mgt02
+NC_037435.1	RefSeq	tRNA	15571	15640	.	+	.	ID=rna-DDI46_mgt02;Parent=gene-DDI46_mgt02;Dbxref=GeneID:36492428;gbkey=tRNA;locus_tag=DDI46_mgt02;product=tRNA-Trp
+NC_037435.1	RefSeq	exon	15571	15640	.	+	.	ID=exon-DDI46_mgt02-1;Parent=rna-DDI46_mgt02;Dbxref=GeneID:36492428;gbkey=tRNA;locus_tag=DDI46_mgt02;product=tRNA-Trp
+NC_037435.1	RefSeq	gene	15673	15888	.	+	.	ID=gene-DDI46_mgp02;Dbxref=GeneID:36492433;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=DDI46_mgp02
+NC_037435.1	RefSeq	CDS	15673	15888	.	+	0	ID=cds-YP_009475752.1;Parent=gene-DDI46_mgp02;Dbxref=GenBank:YP_009475752.1,GeneID:36492433;Name=YP_009475752.1;gbkey=CDS;gene=ATP8;locus_tag=DDI46_mgp02;product=ATP synthase F0 subunit 8;protein_id=YP_009475752.1;transl_table=4
+NC_037435.1	RefSeq	gene	15993	18535	.	+	.	ID=gene-DDI46_mgp01;Dbxref=GeneID:36492431;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=DDI46_mgp01
+NC_037435.1	RefSeq	CDS	15993	16886	.	+	0	ID=cds-YP_009475753.1;Parent=gene-DDI46_mgp01;Dbxref=GenBank:YP_009475753.1,GeneID:36492431;Name=YP_009475753.1;gbkey=CDS;gene=COX1;locus_tag=DDI46_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009475753.1;transl_table=4
+NC_037435.1	RefSeq	CDS	17852	18535	.	+	0	ID=cds-YP_009475753.1;Parent=gene-DDI46_mgp01;Dbxref=GenBank:YP_009475753.1,GeneID:36492431;Name=YP_009475753.1;gbkey=CDS;gene=COX1;locus_tag=DDI46_mgp01;product=cytochrome c oxidase subunit I;protein_id=YP_009475753.1;transl_table=4
+

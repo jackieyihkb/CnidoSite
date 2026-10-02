@@ -1,0 +1,52 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_044902.1 1 20691
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6105
+NC_044902.1	RefSeq	region	1	20691	.	+	.	ID=NC_044902.1:1..20691;Dbxref=taxon:6105;Is_circular=true;Name=MT;biotype=Red ecotype;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_044902.1	RefSeq	gene	1	4003	.	+	.	ID=gene-F7P26_mgp01;Dbxref=GeneID:41854794;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=F7P26_mgp01
+NC_044902.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_009701413.1;Parent=gene-F7P26_mgp01;Dbxref=GenBank:YP_009701413.1,GeneID:41854794;Name=YP_009701413.1;gbkey=CDS;gene=ND5;locus_tag=F7P26_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009701413.1;transl_table=4
+NC_044902.1	RefSeq	CDS	2888	4003	.	+	0	ID=cds-YP_009701413.1;Parent=gene-F7P26_mgp01;Dbxref=GenBank:YP_009701413.1,GeneID:41854794;Name=YP_009701413.1;gbkey=CDS;gene=ND5;locus_tag=F7P26_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009701413.1;transl_table=4
+NC_044902.1	RefSeq	exon	1	717	.	+	.	ID=id-F7P26_mgp01-1;Parent=gene-F7P26_mgp01;Dbxref=GeneID:41854794;exon_number=1;gbkey=exon;gene=ND5;locus_tag=F7P26_mgp01;number=1
+NC_044902.1	RefSeq	intron	718	2887	.	+	.	ID=id-F7P26_mgp01;Parent=gene-F7P26_mgp01;Dbxref=GeneID:41854794;Note=group I;gbkey=intron;gene=ND5;locus_tag=F7P26_mgp01
+NC_044902.1	RefSeq	gene	863	1924	.	+	.	ID=gene-F7P26_mgp02;Dbxref=GeneID:41854778;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=F7P26_mgp02
+NC_044902.1	RefSeq	CDS	863	1924	.	+	0	ID=cds-YP_009701414.1;Parent=gene-F7P26_mgp02;Dbxref=GenBank:YP_009701414.1,GeneID:41854778;Name=YP_009701414.1;gbkey=CDS;gene=ND1;locus_tag=F7P26_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009701414.1;transl_table=4
+NC_044902.1	RefSeq	gene	1931	2287	.	+	.	ID=gene-F7P26_mgp03;Dbxref=GeneID:41854779;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=F7P26_mgp03
+NC_044902.1	RefSeq	CDS	1931	2287	.	+	0	ID=cds-YP_009701415.1;Parent=gene-F7P26_mgp03;Dbxref=GenBank:YP_009701415.1,GeneID:41854779;Name=YP_009701415.1;gbkey=CDS;gene=ND3;locus_tag=F7P26_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009701415.1;transl_table=4
+NC_044902.1	RefSeq	gene	4252	4321	.	+	.	ID=gene-F7P26_mgt01;Dbxref=GeneID:41854780;Name=F7P26_mgt01;gbkey=Gene;gene_biotype=tRNA;locus_tag=F7P26_mgt01
+NC_044902.1	RefSeq	tRNA	4252	4321	.	+	.	ID=rna-F7P26_mgt01;Parent=gene-F7P26_mgt01;Dbxref=GeneID:41854780;gbkey=tRNA;locus_tag=F7P26_mgt01;product=tRNA-Trp
+NC_044902.1	RefSeq	exon	4252	4321	.	+	.	ID=exon-F7P26_mgt01-1;Parent=rna-F7P26_mgt01;Dbxref=GeneID:41854780;gbkey=tRNA;locus_tag=F7P26_mgt01;product=tRNA-Trp
+NC_044902.1	RefSeq	gene	4374	5750	.	+	.	ID=gene-F7P26_mgp13;Dbxref=GeneID:41854790;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=F7P26_mgp13
+NC_044902.1	RefSeq	CDS	4374	5750	.	+	0	ID=cds-YP_009701416.1;Parent=gene-F7P26_mgp13;Dbxref=GenBank:YP_009701416.1,GeneID:41854790;Name=YP_009701416.1;gbkey=CDS;gene=ND2;locus_tag=F7P26_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_009701416.1;transl_table=4
+NC_044902.1	RefSeq	gene	5800	6881	.	+	.	ID=gene-F7P26_mgr02;Dbxref=GeneID:41854781;Name=F7P26_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=F7P26_mgr02
+NC_044902.1	RefSeq	rRNA	5800	6881	.	+	.	ID=rna-F7P26_mgr02;Parent=gene-F7P26_mgr02;Dbxref=GeneID:41854781;gbkey=rRNA;locus_tag=F7P26_mgr02;product=small subunit ribosomal RNA
+NC_044902.1	RefSeq	exon	5800	6881	.	+	.	ID=exon-F7P26_mgr02-1;Parent=rna-F7P26_mgr02;Dbxref=GeneID:41854781;gbkey=rRNA;locus_tag=F7P26_mgr02;product=small subunit ribosomal RNA
+NC_044902.1	RefSeq	gene	6935	7675	.	+	.	ID=gene-F7P26_mgp12;Dbxref=GeneID:41854791;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=F7P26_mgp12
+NC_044902.1	RefSeq	CDS	6935	7675	.	+	0	ID=cds-YP_009701417.1;Parent=gene-F7P26_mgp12;Dbxref=GenBank:YP_009701417.1,GeneID:41854791;Name=YP_009701417.1;gbkey=CDS;gene=COX2;locus_tag=F7P26_mgp12;product=cytochrome c oxidase subunit II;protein_id=YP_009701417.1;transl_table=4
+NC_044902.1	RefSeq	gene	9664	11130	.	+	.	ID=gene-F7P26_mgp11;Dbxref=GeneID:41854782;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=F7P26_mgp11
+NC_044902.1	RefSeq	CDS	9664	11130	.	+	0	ID=cds-YP_009701418.1;Parent=gene-F7P26_mgp11;Dbxref=GenBank:YP_009701418.1,GeneID:41854782;Name=YP_009701418.1;gbkey=CDS;gene=ND4;locus_tag=F7P26_mgp11;product=NADH dehydrogenase subunit 4;protein_id=YP_009701418.1;transl_table=4
+NC_044902.1	RefSeq	gene	11135	11743	.	+	.	ID=gene-F7P26_mgp10;Dbxref=GeneID:41854783;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=F7P26_mgp10
+NC_044902.1	RefSeq	CDS	11135	11743	.	+	0	ID=cds-YP_009701419.1;Parent=gene-F7P26_mgp10;Dbxref=GenBank:YP_009701419.1,GeneID:41854783;Name=YP_009701419.1;gbkey=CDS;gene=ND6;locus_tag=F7P26_mgp10;product=NADH dehydrogenase subunit 6;protein_id=YP_009701419.1;transl_table=4
+NC_044902.1	RefSeq	gene	11771	12922	.	+	.	ID=gene-F7P26_mgp09;Dbxref=GeneID:41854784;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=F7P26_mgp09
+NC_044902.1	RefSeq	CDS	11771	12922	.	+	0	ID=cds-YP_009701420.1;Parent=gene-F7P26_mgp09;Dbxref=GenBank:YP_009701420.1,GeneID:41854784;Name=YP_009701420.1;gbkey=CDS;gene=CYTB;locus_tag=F7P26_mgp09;product=cytochrome b;protein_id=YP_009701420.1;transl_table=4
+NC_044902.1	RefSeq	gene	13328	13398	.	+	.	ID=gene-F7P26_mgt02;Dbxref=GeneID:41854785;Name=F7P26_mgt02;gbkey=Gene;gene_biotype=tRNA;locus_tag=F7P26_mgt02
+NC_044902.1	RefSeq	tRNA	13328	13398	.	+	.	ID=rna-F7P26_mgt02;Parent=gene-F7P26_mgt02;Dbxref=GeneID:41854785;gbkey=tRNA;locus_tag=F7P26_mgt02;product=tRNA-Met
+NC_044902.1	RefSeq	exon	13328	13398	.	+	.	ID=exon-F7P26_mgt02-1;Parent=rna-F7P26_mgt02;Dbxref=GeneID:41854785;gbkey=tRNA;locus_tag=F7P26_mgt02;product=tRNA-Met
+NC_044902.1	RefSeq	gene	13399	15592	.	+	.	ID=gene-F7P26_mgr01;Dbxref=GeneID:41854792;Name=F7P26_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=F7P26_mgr01
+NC_044902.1	RefSeq	rRNA	13399	15592	.	+	.	ID=rna-F7P26_mgr01;Parent=gene-F7P26_mgr01;Dbxref=GeneID:41854792;gbkey=rRNA;locus_tag=F7P26_mgr01;product=large subunit ribosomal RNA
+NC_044902.1	RefSeq	exon	13399	15592	.	+	.	ID=exon-F7P26_mgr01-1;Parent=rna-F7P26_mgr01;Dbxref=GeneID:41854792;gbkey=rRNA;locus_tag=F7P26_mgr01;product=large subunit ribosomal RNA
+NC_044902.1	RefSeq	gene	15665	16453	.	+	.	ID=gene-F7P26_mgp08;Dbxref=GeneID:41854793;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=F7P26_mgp08
+NC_044902.1	RefSeq	CDS	15665	16453	.	+	0	ID=cds-YP_009701421.1;Parent=gene-F7P26_mgp08;Dbxref=GenBank:YP_009701421.1,GeneID:41854793;Name=YP_009701421.1;gbkey=CDS;gene=COX3;locus_tag=F7P26_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_009701421.1;transl_table=4
+NC_044902.1	RefSeq	gene	16688	19113	.	+	.	ID=gene-F7P26_mgp07;Dbxref=GeneID:41854786;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=F7P26_mgp07
+NC_044902.1	RefSeq	CDS	16688	17577	.	+	0	ID=cds-YP_009701422.1;Parent=gene-F7P26_mgp07;Dbxref=GenBank:YP_009701422.1,GeneID:41854786;Name=YP_009701422.1;gbkey=CDS;gene=COX1;locus_tag=F7P26_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009701422.1;transl_table=4
+NC_044902.1	RefSeq	CDS	18432	19113	.	+	1	ID=cds-YP_009701422.1;Parent=gene-F7P26_mgp07;Dbxref=GenBank:YP_009701422.1,GeneID:41854786;Name=YP_009701422.1;gbkey=CDS;gene=COX1;locus_tag=F7P26_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009701422.1;transl_table=4
+NC_044902.1	RefSeq	exon	16688	17577	.	+	.	ID=id-F7P26_mgp07-1;Parent=gene-F7P26_mgp07;Dbxref=GeneID:41854786;exon_number=1;gbkey=exon;gene=COX1;locus_tag=F7P26_mgp07;number=1
+NC_044902.1	RefSeq	exon	18432	19113	.	+	.	ID=id-F7P26_mgp07-2;Parent=gene-F7P26_mgp07;Dbxref=GeneID:41854786;exon_number=2;gbkey=exon;gene=COX1;locus_tag=F7P26_mgp07;number=2
+NC_044902.1	RefSeq	intron	17578	18431	.	+	.	ID=id-F7P26_mgp07;Parent=gene-F7P26_mgp07;Dbxref=GeneID:41854786;Note=group I;gbkey=intron;gene=COX1;locus_tag=F7P26_mgp07
+NC_044902.1	RefSeq	gene	19410	19709	.	+	.	ID=gene-F7P26_mgp06;Dbxref=GeneID:41854787;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=F7P26_mgp06
+NC_044902.1	RefSeq	CDS	19410	19709	.	+	0	ID=cds-YP_009701423.1;Parent=gene-F7P26_mgp06;Dbxref=GenBank:YP_009701423.1,GeneID:41854787;Name=YP_009701423.1;gbkey=CDS;gene=ND4L;locus_tag=F7P26_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_009701423.1;transl_table=4
+NC_044902.1	RefSeq	gene	19734	19949	.	+	.	ID=gene-F7P26_mgp05;Dbxref=GeneID:41854788;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=F7P26_mgp05
+NC_044902.1	RefSeq	CDS	19734	19949	.	+	0	ID=cds-YP_009701424.1;Parent=gene-F7P26_mgp05;Dbxref=GenBank:YP_009701424.1,GeneID:41854788;Name=YP_009701424.1;gbkey=CDS;gene=ATP8;locus_tag=F7P26_mgp05;product=ATP synthase F0 subunit 8;protein_id=YP_009701424.1;transl_table=4
+NC_044902.1	RefSeq	gene	19983	20672	.	+	.	ID=gene-F7P26_mgp04;Dbxref=GeneID:41854789;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=F7P26_mgp04
+NC_044902.1	RefSeq	CDS	19983	20672	.	+	0	ID=cds-YP_009701425.1;Parent=gene-F7P26_mgp04;Dbxref=GenBank:YP_009701425.1,GeneID:41854789;Name=YP_009701425.1;gbkey=CDS;gene=ATP6;locus_tag=F7P26_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009701425.1;transl_table=4
+

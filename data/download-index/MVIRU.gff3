@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region BK067252.1 1 2195
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=686327
+BK067252.1	tpg	region	1	2195	.	+	.	ID=BK067252.1:1..2195;Dbxref=taxon:686327;Name=8;chromosome=8;gbkey=Src;genome=mitochondrion;isolate=Ondo Fishing port;mol_type=genomic DNA
+BK067252.1	tpg	inverted_repeat	1	512	.	-	.	ID=id-BK067252.1:1..512;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+BK067252.1	tpg	gene	502	1668	.	+	.	ID=gene-cob;Name=cob;gbkey=Gene;gene=cob;gene_biotype=protein_coding
+BK067252.1	tpg	CDS	502	1668	.	+	0	ID=cds-DBB38895.1;Parent=gene-cob;Dbxref=NCBI_GP:DBB38895.1;Name=DBB38895.1;gbkey=CDS;gene=cob;product=apocytochrome b;protein_id=DBB38895.1;transl_table=4
+BK067252.1	tpg	inverted_repeat	1694	2195	.	+	.	ID=id-BK067252.1:1694..2195;Note=telomere repeat region;gbkey=repeat_region;rpt_type=inverted
+

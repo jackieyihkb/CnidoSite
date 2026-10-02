@@ -1,0 +1,55 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_037177.1 1 20108
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=51769
+NC_037177.1	RefSeq	region	1	20108	.	+	.	ID=NC_037177.1:1..20108;Dbxref=taxon:51769;Is_circular=true;Name=MT;country=Norway;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+NC_037177.1	RefSeq	gene	1	3559	.	+	.	ID=gene-C7V87_mgp01;Dbxref=GeneID:36275371;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=C7V87_mgp01
+NC_037177.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_009468810.1;Parent=gene-C7V87_mgp01;Dbxref=GenBank:YP_009468810.1,GeneID:36275371;Name=YP_009468810.1;gbkey=CDS;gene=ND5;locus_tag=C7V87_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009468810.1;transl_table=4
+NC_037177.1	RefSeq	CDS	2444	3559	.	+	0	ID=cds-YP_009468810.1;Parent=gene-C7V87_mgp01;Dbxref=GenBank:YP_009468810.1,GeneID:36275371;Name=YP_009468810.1;gbkey=CDS;gene=ND5;locus_tag=C7V87_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_009468810.1;transl_table=4
+NC_037177.1	RefSeq	exon	1	717	.	+	.	ID=id-C7V87_mgp01-1;Parent=gene-C7V87_mgp01;Dbxref=GeneID:36275371;exon_number=1;gbkey=exon;gene=ND5;locus_tag=C7V87_mgp01;number=1
+NC_037177.1	RefSeq	exon	2444	3559	.	+	.	ID=id-C7V87_mgp01-2;Parent=gene-C7V87_mgp01;Dbxref=GeneID:36275371;exon_number=2;gbkey=exon;gene=ND5;locus_tag=C7V87_mgp01;number=2
+NC_037177.1	RefSeq	intron	718	941	.	+	.	ID=id-C7V87_mgp01;Parent=gene-C7V87_mgp01;Dbxref=GeneID:36275371;Note=group I;gbkey=intron;gene=ND5;locus_tag=C7V87_mgp01
+NC_037177.1	RefSeq	gene	846	1925	.	+	.	ID=gene-C7V87_mgp02;Dbxref=GeneID:36275354;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=C7V87_mgp02
+NC_037177.1	RefSeq	CDS	846	1925	.	+	0	ID=cds-YP_009468811.1;Parent=gene-C7V87_mgp02;Dbxref=GenBank:YP_009468811.1,GeneID:36275354;Name=YP_009468811.1;gbkey=CDS;gene=ND1;locus_tag=C7V87_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_009468811.1;transl_table=4
+NC_037177.1	RefSeq	gene	1932	2288	.	+	.	ID=gene-C7V87_mgp03;Dbxref=GeneID:36275355;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=C7V87_mgp03
+NC_037177.1	RefSeq	CDS	1932	2288	.	+	0	ID=cds-YP_009468812.1;Parent=gene-C7V87_mgp03;Dbxref=GenBank:YP_009468812.1,GeneID:36275355;Name=YP_009468812.1;gbkey=CDS;gene=ND3;locus_tag=C7V87_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_009468812.1;transl_table=4
+NC_037177.1	RefSeq	gene	3675	3744	.	+	.	ID=gene-C7V87_mgt01;Dbxref=GeneID:36275356;Name=trnW;gbkey=Gene;gene=trnW;gene_biotype=tRNA;locus_tag=C7V87_mgt01
+NC_037177.1	RefSeq	tRNA	3675	3744	.	+	.	ID=rna-C7V87_mgt01;Parent=gene-C7V87_mgt01;Dbxref=GeneID:36275356;gbkey=tRNA;gene=trnW;locus_tag=C7V87_mgt01;product=tRNA-Trp
+NC_037177.1	RefSeq	exon	3675	3744	.	+	.	ID=exon-C7V87_mgt01-1;Parent=rna-C7V87_mgt01;Dbxref=GeneID:36275356;gbkey=tRNA;gene=trnW;locus_tag=C7V87_mgt01;product=tRNA-Trp
+NC_037177.1	RefSeq	gene	3796	5172	.	+	.	ID=gene-C7V87_mgp14;Dbxref=GeneID:36275357;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=C7V87_mgp14
+NC_037177.1	RefSeq	CDS	3796	5172	.	+	0	ID=cds-YP_009468813.1;Parent=gene-C7V87_mgp14;Dbxref=GenBank:YP_009468813.1,GeneID:36275357;Name=YP_009468813.1;gbkey=CDS;gene=ND2;locus_tag=C7V87_mgp14;product=NADH dehydrogenase subunit 2;protein_id=YP_009468813.1;transl_table=4
+NC_037177.1	RefSeq	gene	5222	6302	.	+	.	ID=gene-C7V87_mgr02;Dbxref=GeneID:36275358;Name=C7V87_mgr02;gbkey=Gene;gene_biotype=rRNA;locus_tag=C7V87_mgr02
+NC_037177.1	RefSeq	rRNA	5222	6302	.	+	.	ID=rna-C7V87_mgr02;Parent=gene-C7V87_mgr02;Dbxref=GeneID:36275358;gbkey=rRNA;locus_tag=C7V87_mgr02;product=small subunit ribosomal RNA
+NC_037177.1	RefSeq	exon	5222	6302	.	+	.	ID=exon-C7V87_mgr02-1;Parent=rna-C7V87_mgr02;Dbxref=GeneID:36275358;gbkey=rRNA;locus_tag=C7V87_mgr02;product=small subunit ribosomal RNA
+NC_037177.1	RefSeq	gene	6356	7096	.	+	.	ID=gene-C7V87_mgp13;Dbxref=GeneID:36275368;Name=coii;gbkey=Gene;gene=coii;gene_biotype=protein_coding;locus_tag=C7V87_mgp13
+NC_037177.1	RefSeq	CDS	6356	7096	.	+	0	ID=cds-YP_009468814.1;Parent=gene-C7V87_mgp13;Dbxref=GenBank:YP_009468814.1,GeneID:36275368;Name=YP_009468814.1;gbkey=CDS;gene=coii;locus_tag=C7V87_mgp13;product=cytochrome c oxidase subunit II;protein_id=YP_009468814.1;transl_table=4
+NC_037177.1	RefSeq	gene	7110	8666	.	+	.	ID=gene-C7V87_mgp12;Dbxref=GeneID:36275359;Name=C7V87_mgp12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=C7V87_mgp12
+NC_037177.1	RefSeq	CDS	7110	8666	.	+	0	ID=cds-YP_009468815.1;Parent=gene-C7V87_mgp12;Dbxref=GenBank:YP_009468815.1,GeneID:36275359;Name=YP_009468815.1;Note=ORFA;gbkey=CDS;locus_tag=C7V87_mgp12;product=hypothetical protein;protein_id=YP_009468815.1;transl_table=4
+NC_037177.1	RefSeq	gene	9085	10551	.	+	.	ID=gene-C7V87_mgp11;Dbxref=GeneID:36275370;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=C7V87_mgp11
+NC_037177.1	RefSeq	CDS	9085	10551	.	+	0	ID=cds-YP_009468816.1;Parent=gene-C7V87_mgp11;Dbxref=GenBank:YP_009468816.1,GeneID:36275370;Name=YP_009468816.1;gbkey=CDS;gene=ND4;locus_tag=C7V87_mgp11;product=NADH dehydrogenase subunit 4;protein_id=YP_009468816.1;transl_table=4
+NC_037177.1	RefSeq	gene	10556	11164	.	+	.	ID=gene-C7V87_mgp10;Dbxref=GeneID:36275360;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=C7V87_mgp10
+NC_037177.1	RefSeq	CDS	10556	11164	.	+	0	ID=cds-YP_009468817.1;Parent=gene-C7V87_mgp10;Dbxref=GenBank:YP_009468817.1,GeneID:36275360;Name=YP_009468817.1;gbkey=CDS;gene=ND6;locus_tag=C7V87_mgp10;product=NADH dehydrogenase subunit 6;protein_id=YP_009468817.1;transl_table=4
+NC_037177.1	RefSeq	gene	11192	12343	.	+	.	ID=gene-C7V87_mgp09;Dbxref=GeneID:36275361;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=C7V87_mgp09
+NC_037177.1	RefSeq	CDS	11192	12343	.	+	0	ID=cds-YP_009468818.1;Parent=gene-C7V87_mgp09;Dbxref=GenBank:YP_009468818.1,GeneID:36275361;Name=YP_009468818.1;gbkey=CDS;gene=CYTB;locus_tag=C7V87_mgp09;product=cytochrome b;protein_id=YP_009468818.1;transl_table=4
+NC_037177.1	RefSeq	gene	12762	12832	.	+	.	ID=gene-C7V87_mgt02;Dbxref=GeneID:36275362;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=C7V87_mgt02
+NC_037177.1	RefSeq	tRNA	12762	12832	.	+	.	ID=rna-C7V87_mgt02;Parent=gene-C7V87_mgt02;Dbxref=GeneID:36275362;gbkey=tRNA;gene=trnM;locus_tag=C7V87_mgt02;product=tRNA-Met
+NC_037177.1	RefSeq	exon	12762	12832	.	+	.	ID=exon-C7V87_mgt02-1;Parent=rna-C7V87_mgt02;Dbxref=GeneID:36275362;gbkey=tRNA;gene=trnM;locus_tag=C7V87_mgt02;product=tRNA-Met
+NC_037177.1	RefSeq	gene	12833	15079	.	+	.	ID=gene-C7V87_mgr01;Dbxref=GeneID:36275363;Name=C7V87_mgr01;gbkey=Gene;gene_biotype=rRNA;locus_tag=C7V87_mgr01
+NC_037177.1	RefSeq	rRNA	12833	15079	.	+	.	ID=rna-C7V87_mgr01;Parent=gene-C7V87_mgr01;Dbxref=GeneID:36275363;gbkey=rRNA;locus_tag=C7V87_mgr01;product=large subunit ribosomal RNA
+NC_037177.1	RefSeq	exon	12833	15079	.	+	.	ID=exon-C7V87_mgr01-1;Parent=rna-C7V87_mgr01;Dbxref=GeneID:36275363;gbkey=rRNA;locus_tag=C7V87_mgr01;product=large subunit ribosomal RNA
+NC_037177.1	RefSeq	gene	15152	15940	.	+	.	ID=gene-C7V87_mgp08;Dbxref=GeneID:36275369;Name=coiii;gbkey=Gene;gene=coiii;gene_biotype=protein_coding;locus_tag=C7V87_mgp08
+NC_037177.1	RefSeq	CDS	15152	15940	.	+	0	ID=cds-YP_009468819.1;Parent=gene-C7V87_mgp08;Dbxref=GenBank:YP_009468819.1,GeneID:36275369;Name=YP_009468819.1;gbkey=CDS;gene=coiii;locus_tag=C7V87_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_009468819.1;transl_table=4
+NC_037177.1	RefSeq	gene	16117	18541	.	+	.	ID=gene-C7V87_mgp07;Dbxref=GeneID:36275364;Name=coi;gbkey=Gene;gene=coi;gene_biotype=protein_coding;locus_tag=C7V87_mgp07
+NC_037177.1	RefSeq	CDS	16117	17006	.	+	0	ID=cds-YP_009468820.1;Parent=gene-C7V87_mgp07;Dbxref=GenBank:YP_009468820.1,GeneID:36275364;Name=YP_009468820.1;gbkey=CDS;gene=coi;locus_tag=C7V87_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009468820.1;transl_table=4
+NC_037177.1	RefSeq	CDS	17860	18541	.	+	1	ID=cds-YP_009468820.1;Parent=gene-C7V87_mgp07;Dbxref=GenBank:YP_009468820.1,GeneID:36275364;Name=YP_009468820.1;gbkey=CDS;gene=coi;locus_tag=C7V87_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_009468820.1;transl_table=4
+NC_037177.1	RefSeq	exon	16117	17006	.	+	.	ID=id-C7V87_mgp07-1;Parent=gene-C7V87_mgp07;Dbxref=GeneID:36275364;exon_number=1;gbkey=exon;gene=coi;locus_tag=C7V87_mgp07;number=1
+NC_037177.1	RefSeq	intron	17007	17859	.	+	.	ID=id-C7V87_mgp07;Parent=gene-C7V87_mgp07;Dbxref=GeneID:36275364;Note=group I;gbkey=intron;gene=coi;locus_tag=C7V87_mgp07
+NC_037177.1	RefSeq	CDS	16117	17136	.	+	0	ID=cds-YP_009468821.1;Dbxref=GenBank:YP_009468821.1;Name=YP_009468821.1;exon_number=2;gbkey=CDS;number=2;product=truncated homing endonuclease;protein_id=YP_009468821.1;transl_table=4
+NC_037177.1	RefSeq	gene	18827	19126	.	+	.	ID=gene-C7V87_mgp06;Dbxref=GeneID:36275365;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=C7V87_mgp06
+NC_037177.1	RefSeq	CDS	18827	19126	.	+	0	ID=cds-YP_009468822.1;Parent=gene-C7V87_mgp06;Dbxref=GenBank:YP_009468822.1,GeneID:36275365;Name=YP_009468822.1;gbkey=CDS;gene=ND4L;locus_tag=C7V87_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_009468822.1;transl_table=4
+NC_037177.1	RefSeq	gene	19151	19366	.	+	.	ID=gene-C7V87_mgp05;Dbxref=GeneID:36275366;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=C7V87_mgp05
+NC_037177.1	RefSeq	CDS	19151	19366	.	+	0	ID=cds-YP_009468823.1;Parent=gene-C7V87_mgp05;Dbxref=GenBank:YP_009468823.1,GeneID:36275366;Name=YP_009468823.1;gbkey=CDS;gene=ATP8;locus_tag=C7V87_mgp05;product=ATP synthase F0 subunit 8;protein_id=YP_009468823.1;transl_table=4
+NC_037177.1	RefSeq	gene	19400	20089	.	+	.	ID=gene-C7V87_mgp04;Dbxref=GeneID:36275367;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=C7V87_mgp04
+NC_037177.1	RefSeq	CDS	19400	20089	.	+	0	ID=cds-YP_009468824.1;Parent=gene-C7V87_mgp04;Dbxref=GenBank:YP_009468824.1,GeneID:36275367;Name=YP_009468824.1;gbkey=CDS;gene=ATP6;locus_tag=C7V87_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_009468824.1;transl_table=4
+

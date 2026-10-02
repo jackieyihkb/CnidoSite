@@ -1,0 +1,46 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_009797.1 1 17415
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=46731
+NC_009797.1	RefSeq	region	1	17415	.	+	.	ID=NC_009797.1:1..17415;Dbxref=taxon:46731;Is_circular=true;Name=MT;common=cauliflower lace;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=J.F. Flot 04NC293 (MNHN)
+NC_009797.1	RefSeq	gene	1	71	.	+	.	ID=gene-KEG64_t01;Dbxref=GeneID:64987747;Name=KEG64_t01;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEG64_t01
+NC_009797.1	RefSeq	tRNA	1	71	.	+	.	ID=rna-KEG64_t01;Parent=gene-KEG64_t01;Dbxref=GeneID:64987747;gbkey=tRNA;locus_tag=KEG64_t01;product=tRNA-Met
+NC_009797.1	RefSeq	exon	1	71	.	+	.	ID=exon-KEG64_t01-1;Parent=rna-KEG64_t01;Dbxref=GeneID:64987747;gbkey=tRNA;locus_tag=KEG64_t01;product=tRNA-Met
+NC_009797.1	RefSeq	gene	72	1987	.	+	.	ID=gene-KEG64_r02;Dbxref=GeneID:64987746;Name=KEG64_r02;gbkey=Gene;gene_biotype=rRNA;locus_tag=KEG64_r02
+NC_009797.1	RefSeq	rRNA	72	1987	.	+	.	ID=rna-KEG64_r02;Parent=gene-KEG64_r02;Dbxref=GeneID:64987746;Note=large subunit ribosomal RNA;gbkey=rRNA;locus_tag=KEG64_r02;product=l-rRNA
+NC_009797.1	RefSeq	exon	72	1987	.	+	.	ID=exon-KEG64_r02-1;Parent=rna-KEG64_r02;Dbxref=GeneID:64987746;Note=large subunit ribosomal RNA;gbkey=rRNA;locus_tag=KEG64_r02;product=l-rRNA
+NC_009797.1	RefSeq	gene	1988	14689	.	+	.	ID=gene-KEG64_r01;Dbxref=GeneID:5580402;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=KEG64_r01
+NC_009797.1	RefSeq	CDS	1988	2698	.	+	0	ID=cds-YP_001456703.1;Parent=gene-KEG64_r01;Dbxref=GenBank:YP_001456703.1,GeneID:5580402;Name=YP_001456703.1;gbkey=CDS;gene=ND5;locus_tag=KEG64_r01;product=NADH dehydrogenase subunit 5;protein_id=YP_001456703.1;transl_table=4
+NC_009797.1	RefSeq	CDS	13562	14689	.	+	0	ID=cds-YP_001456703.1;Parent=gene-KEG64_r01;Dbxref=GenBank:YP_001456703.1,GeneID:5580402;Name=YP_001456703.1;gbkey=CDS;gene=ND5;locus_tag=KEG64_r01;product=NADH dehydrogenase subunit 5;protein_id=YP_001456703.1;transl_table=4
+NC_009797.1	RefSeq	rRNA	10382	11290	.	+	.	ID=rna-KEG64_r01;Parent=gene-KEG64_r01;Dbxref=GeneID:5580402;Note=small subunit ribosomal RNA;gbkey=rRNA;gene=ND5;locus_tag=KEG64_r01;product=s-rRNA
+NC_009797.1	RefSeq	exon	10382	11290	.	+	.	ID=exon-KEG64_r01-1;Parent=rna-KEG64_r01;Dbxref=GeneID:5580402;Note=small subunit ribosomal RNA;gbkey=rRNA;gene=ND5;locus_tag=KEG64_r01;product=s-rRNA
+NC_009797.1	RefSeq	intron	2699	13561	.	+	.	ID=id-KEG64_r01;Parent=gene-KEG64_r01;Dbxref=GeneID:5580402;Note=group I intron;gbkey=intron;gene=ND5;locus_tag=KEG64_r01
+NC_009797.1	RefSeq	gene	2823	3800	.	+	.	ID=gene-KEG64_p12;Dbxref=GeneID:5580403;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=KEG64_p12
+NC_009797.1	RefSeq	CDS	2823	3800	.	+	0	ID=cds-YP_001456704.1;Parent=gene-KEG64_p12;Dbxref=GenBank:YP_001456704.1,GeneID:5580403;Name=YP_001456704.1;gbkey=CDS;gene=ND1;locus_tag=KEG64_p12;product=NADH dehydrogenase subunit 1;protein_id=YP_001456704.1;transl_table=4
+NC_009797.1	RefSeq	gene	3852	4991	.	+	.	ID=gene-KEG64_p11;Dbxref=GeneID:5580401;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=KEG64_p11
+NC_009797.1	RefSeq	CDS	3852	4991	.	+	0	ID=cds-YP_001456705.1;Parent=gene-KEG64_p11;Dbxref=GenBank:YP_001456705.1,GeneID:5580401;Name=YP_001456705.1;gbkey=CDS;gene=CYTB;locus_tag=KEG64_p11;product=cytochrome b;protein_id=YP_001456705.1;transl_table=4
+NC_009797.1	RefSeq	gene	4996	6303	.	+	.	ID=gene-KEG64_p10;Dbxref=GeneID:5580395;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=KEG64_p10
+NC_009797.1	RefSeq	CDS	4996	6303	.	+	0	ID=cds-YP_001456706.1;Parent=gene-KEG64_p10;Dbxref=GenBank:YP_001456706.1,GeneID:5580395;Name=YP_001456706.1;gbkey=CDS;gene=ND2;locus_tag=KEG64_p10;product=NADH dehydrogenase subunit 2;protein_id=YP_001456706.1;transl_table=4
+NC_009797.1	RefSeq	gene	6305	6868	.	+	.	ID=gene-KEG64_p09;Dbxref=GeneID:5580404;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=KEG64_p09
+NC_009797.1	RefSeq	CDS	6305	6868	.	+	0	ID=cds-YP_001456707.1;Parent=gene-KEG64_p09;Dbxref=GenBank:YP_001456707.1,GeneID:5580404;Name=YP_001456707.1;gbkey=CDS;gene=ND6;locus_tag=KEG64_p09;product=NADH dehydrogenase subunit 6;protein_id=YP_001456707.1;transl_table=4
+NC_009797.1	RefSeq	gene	6868	7545	.	+	.	ID=gene-KEG64_p08;Dbxref=GeneID:5580396;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=KEG64_p08
+NC_009797.1	RefSeq	CDS	6868	7545	.	+	0	ID=cds-YP_001456708.1;Parent=gene-KEG64_p08;Dbxref=GenBank:YP_001456708.1,GeneID:5580396;Name=YP_001456708.1;gbkey=CDS;gene=ATP6;locus_tag=KEG64_p08;product=ATP synthase F0 subunit 6;protein_id=YP_001456708.1;transl_table=4
+NC_009797.1	RefSeq	gene	8891	10381	.	+	.	ID=gene-KEG64_p07;Dbxref=GeneID:5580405;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=KEG64_p07
+NC_009797.1	RefSeq	CDS	8891	10381	.	+	0	ID=cds-YP_001456710.1;Parent=gene-KEG64_p07;Dbxref=GenBank:YP_001456710.1,GeneID:5580405;Name=YP_001456710.1;gbkey=CDS;gene=ND4;locus_tag=KEG64_p07;product=NADH dehydrogenase subunit 4;protein_id=YP_001456710.1;transl_table=4
+NC_009797.1	RefSeq	gene	11291	12070	.	+	.	ID=gene-KEG64_p06;Dbxref=GeneID:5580398;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=KEG64_p06
+NC_009797.1	RefSeq	CDS	11291	12070	.	+	0	ID=cds-YP_001456711.1;Parent=gene-KEG64_p06;Dbxref=GenBank:YP_001456711.1,GeneID:5580398;Name=YP_001456711.1;gbkey=CDS;gene=COX3;locus_tag=KEG64_p06;product=cytochrome c oxidase subunit III;protein_id=YP_001456711.1;transl_table=4
+NC_009797.1	RefSeq	gene	12082	12882	.	+	.	ID=gene-KEG64_p05;Dbxref=GeneID:5580397;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=KEG64_p05
+NC_009797.1	RefSeq	CDS	12082	12882	.	+	0	ID=cds-YP_001456712.1;Parent=gene-KEG64_p05;Dbxref=GenBank:YP_001456712.1,GeneID:5580397;Name=YP_001456712.1;gbkey=CDS;gene=COX2;locus_tag=KEG64_p05;product=cytochrome c oxidase subunit II;protein_id=YP_001456712.1;transl_table=4
+NC_009797.1	RefSeq	gene	12864	13163	.	+	.	ID=gene-KEG64_p04;Dbxref=GeneID:5580399;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=KEG64_p04
+NC_009797.1	RefSeq	CDS	12864	13163	.	+	0	ID=cds-YP_001456713.1;Parent=gene-KEG64_p04;Dbxref=GenBank:YP_001456713.1,GeneID:5580399;Name=YP_001456713.1;gbkey=CDS;gene=ND4L;locus_tag=KEG64_p04;product=NADH dehydrogenase subunit 4L;protein_id=YP_001456713.1;transl_table=4
+NC_009797.1	RefSeq	gene	13163	13507	.	+	.	ID=gene-KEG64_p03;Dbxref=GeneID:5580394;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=KEG64_p03
+NC_009797.1	RefSeq	CDS	13163	13507	.	+	0	ID=cds-YP_001456714.1;Parent=gene-KEG64_p03;Dbxref=GenBank:YP_001456714.1,GeneID:5580394;Name=YP_001456714.1;gbkey=CDS;gene=ND3;locus_tag=KEG64_p03;product=NADH dehydrogenase subunit 3;protein_id=YP_001456714.1;transl_table=4
+NC_009797.1	RefSeq	gene	14702	14771	.	+	.	ID=gene-KEG64_t02;Dbxref=GeneID:64987745;Name=KEG64_t02;gbkey=Gene;gene_biotype=tRNA;locus_tag=KEG64_t02
+NC_009797.1	RefSeq	tRNA	14702	14771	.	+	.	ID=rna-KEG64_t02;Parent=gene-KEG64_t02;Dbxref=GeneID:64987745;gbkey=tRNA;locus_tag=KEG64_t02;product=tRNA-Trp
+NC_009797.1	RefSeq	exon	14702	14771	.	+	.	ID=exon-KEG64_t02-1;Parent=rna-KEG64_t02;Dbxref=GeneID:64987745;gbkey=tRNA;locus_tag=KEG64_t02;product=tRNA-Trp
+NC_009797.1	RefSeq	gene	14773	14985	.	+	.	ID=gene-KEG64_p02;Dbxref=GeneID:5580400;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=KEG64_p02
+NC_009797.1	RefSeq	CDS	14773	14985	.	+	0	ID=cds-YP_001456715.1;Parent=gene-KEG64_p02;Dbxref=GenBank:YP_001456715.1,GeneID:5580400;Name=YP_001456715.1;gbkey=CDS;gene=ATP8;locus_tag=KEG64_p02;product=ATP synthase F0 subunit 8;protein_id=YP_001456715.1;transl_table=4
+NC_009797.1	RefSeq	gene	15829	17388	.	+	.	ID=gene-KEG64_p01;Dbxref=GeneID:5580393;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=KEG64_p01
+NC_009797.1	RefSeq	CDS	15829	17388	.	+	0	ID=cds-YP_001456716.1;Parent=gene-KEG64_p01;Dbxref=GenBank:YP_001456716.1,GeneID:5580393;Name=YP_001456716.1;gbkey=CDS;gene=COX1;locus_tag=KEG64_p01;product=cytochrome c oxidase subunit I;protein_id=YP_001456716.1;transl_table=4
+

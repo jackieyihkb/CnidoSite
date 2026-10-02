@@ -1,0 +1,47 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region PQ763181.1 1 16363
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=214987
+PQ763181.1	Genbank	region	1	16363	.	+	.	ID=PQ763181.1:1..16363;Dbxref=taxon:214987;Is_circular=true;Name=MT;country=China: Sanya;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+PQ763181.1	Genbank	gene	1	72	.	+	.	ID=gene-tRNA-Met;Name=tRNA-Met;gbkey=Gene;gene=tRNA-Met;gene_biotype=tRNA
+PQ763181.1	Genbank	tRNA	1	72	.	+	.	ID=rna-tRNA-Met;Parent=gene-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+PQ763181.1	Genbank	exon	1	72	.	+	.	ID=exon-tRNA-Met-1;Parent=rna-tRNA-Met;gbkey=tRNA;gene=tRNA-Met;product=tRNA-Met
+PQ763181.1	Genbank	gene	83	2029	.	+	.	ID=gene-rrnL;Name=rrnL;gbkey=Gene;gene=rrnL;gene_biotype=rRNA
+PQ763181.1	Genbank	rRNA	83	2029	.	+	.	ID=rna-rrnL;Parent=gene-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+PQ763181.1	Genbank	exon	83	2029	.	+	.	ID=exon-rrnL-1;Parent=rna-rrnL;gbkey=rRNA;gene=rrnL;product=16S ribosomal RNA
+PQ763181.1	Genbank	gene	2030	2740	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ763181.1	Genbank	gene	12415	13521	.	+	.	ID=gene-ND5;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	2030	2740	.	+	0	ID=cds-XLM48959.1;Parent=gene-ND5;Dbxref=NCBI_GP:XLM48959.1;Name=XLM48959.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XLM48959.1;transl_table=4
+PQ763181.1	Genbank	CDS	12415	13521	.	+	0	ID=cds-XLM48959.1;Parent=gene-ND5;Dbxref=NCBI_GP:XLM48959.1;Name=XLM48959.1;gbkey=CDS;gene=ND5;product=NADH dehydrogenase subunit 5;protein_id=XLM48959.1;transl_table=4
+PQ763181.1	Genbank	gene	2850	3797	.	+	.	ID=gene-ND1;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	2850	3797	.	+	0	ID=cds-XLM48949.1;Parent=gene-ND1;Dbxref=NCBI_GP:XLM48949.1;Name=XLM48949.1;gbkey=CDS;gene=ND1;product=NADH dehydrogenase subunit 1;protein_id=XLM48949.1;transl_table=4
+PQ763181.1	Genbank	gene	3800	4939	.	+	.	ID=gene-CYTB;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	3800	4939	.	+	0	ID=cds-XLM48950.1;Parent=gene-CYTB;Dbxref=NCBI_GP:XLM48950.1;Name=XLM48950.1;gbkey=CDS;gene=CYTB;product=cytochrome b;protein_id=XLM48950.1;transl_table=4
+PQ763181.1	Genbank	gene	4965	6251	.	+	.	ID=gene-ND2;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	4965	6251	.	+	0	ID=cds-XLM48951.1;Parent=gene-ND2;Dbxref=NCBI_GP:XLM48951.1;Name=XLM48951.1;gbkey=CDS;gene=ND2;product=NADH dehydrogenase subunit 2;protein_id=XLM48951.1;transl_table=4
+PQ763181.1	Genbank	gene	6253	6813	.	+	.	ID=gene-ND6;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	6253	6813	.	+	0	ID=cds-XLM48952.1;Parent=gene-ND6;Dbxref=NCBI_GP:XLM48952.1;Name=XLM48952.1;gbkey=CDS;gene=ND6;product=NADH dehydrogenase subunit 6;protein_id=XLM48952.1;transl_table=4
+PQ763181.1	Genbank	gene	6813	7490	.	+	.	ID=gene-ATP6;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	6813	7490	.	+	0	ID=cds-XLM48953.1;Parent=gene-ATP6;Dbxref=NCBI_GP:XLM48953.1;Name=XLM48953.1;gbkey=CDS;gene=ATP6;product=ATP synthase F0 subunit 6;protein_id=XLM48953.1;transl_table=4
+PQ763181.1	Genbank	gene	7490	8929	.	+	.	ID=gene-ND4;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	7490	8929	.	+	0	ID=cds-XLM48954.1;Parent=gene-ND4;Dbxref=NCBI_GP:XLM48954.1;Name=XLM48954.1;gbkey=CDS;gene=ND4;product=NADH dehydrogenase subunit 4;protein_id=XLM48954.1;transl_table=4
+PQ763181.1	Genbank	gene	9067	9977	.	+	.	ID=gene-rrnS;Name=rrnS;gbkey=Gene;gene=rrnS;gene_biotype=rRNA
+PQ763181.1	Genbank	rRNA	9067	9977	.	+	.	ID=rna-rrnS;Parent=gene-rrnS;gbkey=rRNA;gene=rrnS;product=12S ribosomal RNA
+PQ763181.1	Genbank	exon	9067	9977	.	+	.	ID=exon-rrnS-1;Parent=rna-rrnS;gbkey=rRNA;gene=rrnS;product=12S ribosomal RNA
+PQ763181.1	Genbank	gene	10038	10817	.	+	.	ID=gene-COX3;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	10038	10817	.	+	0	ID=cds-XLM48955.1;Parent=gene-COX3;Dbxref=NCBI_GP:XLM48955.1;Name=XLM48955.1;gbkey=CDS;gene=COX3;product=cytochrome c oxidase subunit III;protein_id=XLM48955.1;transl_table=4
+PQ763181.1	Genbank	gene	11029	11736	.	+	.	ID=gene-COX2;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	11029	11736	.	+	0	ID=cds-XLM48956.1;Parent=gene-COX2;Dbxref=NCBI_GP:XLM48956.1;Name=XLM48956.1;gbkey=CDS;gene=COX2;product=cytochrome c oxidase subunit II;protein_id=XLM48956.1;transl_table=4
+PQ763181.1	Genbank	gene	11718	12017	.	+	.	ID=gene-ND4L;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	11718	12017	.	+	0	ID=cds-XLM48957.1;Parent=gene-ND4L;Dbxref=NCBI_GP:XLM48957.1;Name=XLM48957.1;gbkey=CDS;gene=ND4L;product=NADH dehydrogenase subunit 4L;protein_id=XLM48957.1;transl_table=4
+PQ763181.1	Genbank	gene	12020	12361	.	+	.	ID=gene-ND3;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	12020	12361	.	+	0	ID=cds-XLM48958.1;Parent=gene-ND3;Dbxref=NCBI_GP:XLM48958.1;Name=XLM48958.1;gbkey=CDS;gene=ND3;product=NADH dehydrogenase subunit 3;protein_id=XLM48958.1;transl_table=4
+PQ763181.1	Genbank	gene	13520	13589	.	+	.	ID=gene-tRNA-Trp;Name=tRNA-Trp;gbkey=Gene;gene=tRNA-Trp;gene_biotype=tRNA
+PQ763181.1	Genbank	tRNA	13520	13589	.	+	.	ID=rna-tRNA-Trp;Parent=gene-tRNA-Trp;gbkey=tRNA;gene=tRNA-Trp;product=tRNA-Trp
+PQ763181.1	Genbank	exon	13520	13589	.	+	.	ID=exon-tRNA-Trp-1;Parent=rna-tRNA-Trp;gbkey=tRNA;gene=tRNA-Trp;product=tRNA-Trp
+PQ763181.1	Genbank	gene	13593	13790	.	+	.	ID=gene-ATP8;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	13593	13790	.	+	0	ID=cds-XLM48960.1;Parent=gene-ATP8;Dbxref=NCBI_GP:XLM48960.1;Name=XLM48960.1;gbkey=CDS;gene=ATP8;product=ATP synthase F0 subunit 8;protein_id=XLM48960.1;transl_table=4
+PQ763181.1	Genbank	gene	13790	15391	.	+	.	ID=gene-COX1;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding
+PQ763181.1	Genbank	CDS	13790	15391	.	+	0	ID=cds-XLM48961.1;Parent=gene-COX1;Dbxref=NCBI_GP:XLM48961.1;Name=XLM48961.1;gbkey=CDS;gene=COX1;product=cytochrome c oxidase subunit I;protein_id=XLM48961.1;transl_table=4
+

@@ -1,0 +1,1302 @@
+/*
+CSS Credit: http://www.templatemo.com
+*/
+/* 
+Biz Brown Template 
+http://www.templatemo.com/preview/templatemo_147_biz_brown 
+*/
+/* body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+	background: #ffffff;
+} */
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.7em;
+	font-family:  "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	color: #000000;
+	background: #d8d7d7;
+}
+/* 全站链接配色统一到新版页面用的蓝（#1d4ed8）＋ hover 下划线。原来 hover 变纯红
+   #F00，与新版页面的行为不一致，且深色底上对比度只有 1.6（页脚那处已单独修过）。
+   页面自己的 a.类名 规则仍按特异性覆盖本行。 */
+a:link, a:visited { color: #1d4ed8; text-decoration: none; font-weight: normal; }
+a:active, a:hover { color: #1d4ed8; text-decoration: underline; }
+p {
+	margin: 20px 5px 20px 5px;
+	padding: 0px;
+}
+img {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+.cleaner { clear: both; width: 100%; height: 0px; font-size: 0px;  }
+.margin_bottom_10 { clear: both; width: 100%; height: 10px; font-size: 1px;	}
+.margin_bottom_15 { clear: both; width: 100%; height: 15px; font-size: 1px;	}
+.margin_bottom_20 { clear: both; width: 100%; height: 20px; font-size: 1px;	}
+.margin_bottom_30 { clear: both; width: 100%; height: 30px; font-size: 1px;	}
+.margin_bottom_40 { clear: both; width: 100%; height: 40px; font-size: 1px;	}
+.margin_bottom_50 { clear: both; width: 100%; height: 50px; font-size: 1px;	}
+.margin_bottom_60 { clear: both; width: 100%; height: 60px; font-size: 1px;	}
+.margin_right_40 { margin-right: 40px; }
+.margin_right_60 { margin-right: 60px; }
+.fl { float: left; }
+.fr { float: right }
+.button_01 a {
+	clear: both;
+	display: block;
+	width: 104px;
+	height: 25px;
+	padding-top: 5px;
+	background: url(images/templatemo_readmore_button.jpg) no-repeat;
+	
+	color: #000;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+.header_01 {
+	clear: both;
+	padding-bottom: 30px;
+	margin-bottom: 15px;
+	font-size: 22px;
+	letter-spacing: 2px;
+	color: #000000;
+	background: url(images/templatemo_header_underline.jpg) left bottom no-repeat;	
+}
+.header_02 {
+	clear: both;
+	font-size: 22px;
+	letter-spacing: 2px;
+	color: #000000;
+	height: 20px;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	background: url(images/templatemo_side_header_bg.jpg) repeat-x;
+}
+.header02 {
+	clear: both;
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: #000000;
+	height: 40px;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	background: url(images/templatemo_side_header_bg1.jpg) repeat-x;
+}
+.header02 .ongoing {
+    color: red; /* 设置"Ongoing"文本颜色为红色 */
+}
+.header_03 {
+	clear: both;
+	font-size: 18px;
+	color: #dad021;
+	font-weight: bold;	
+	padding: 0 0 10px 0;
+	margin: 0 0 15px 0;
+	background: url(images/templatemo_banner_divider.jpg) bottom repeat-x;
+}
+.header_04 {
+	clear: both;
+	font-size: 15px;
+	color: #c7bb10;
+	font-weight: bold;	
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+	background: url(images/templatemo_footer_divider.jpg) bottom repeat-x;
+}
+.header_05 {
+	clear: both;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+}
+.header_05 a {
+	clear: both;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+}
+/* ---------------------------------------------------------------------------
+   RWD 第一层：把写死的 1650px 换成 100% + max-width。
+   这不是"手机专属"的修补 —— 1650 比 1366×768 笔记本的屏幕还宽，桌面端本来
+   就在横向滚动。max-width 保住大屏上的观感，小屏不再溢出。
+
+   flow-root 用在 header_wrapper 上：里面只有浮动的 #site_logo，没有它高度会
+   塌成 0（浮动不撑父元素）。原来是写死 height:104px 硬撑的，那等于把"logo
+   恰好 104px 高"这件事钉死，屏幕一窄就多出一条蓝边。
+   --------------------------------------------------------------------------- */
+#templatemo_header_wrapper {
+	width: 100%;
+	height: auto;
+	display: flow-root;
+	margin: 0 auto;
+	background: #336699 repeat-x;
+}
+#templatemo_header {
+	width: 100%;
+	max-width: 1650px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+#templatemo_header #site_logo {
+	/* 背景图是 1650×104 的整幅横幅（左边 CnidoSite 字标 + 右边副标题）。
+	   原来宽高都写死，屏幕窄于 1650 就只露出左边一截字标，副标题被裁掉。
+	   改成按原比例缩放：宽 100%，高交给 aspect-ratio，背景图铺满盒子，
+	   任何宽度下整幅都完整可见。手机上 375px 算出来只有 24px 高、字标认不
+	   出来，所以断点里另换一张裁好的竖版图（见文件末尾的响应式段）。 */
+	float: left;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1650 / 104;
+	font-size: 40px;
+	color: #336699;
+	background: url(images/templatemo_logo_latest.png) no-repeat;
+	background-size: 100% 100%;
+	margin-left: 0;
+}
+/* end of header */
+/* menu */
+/* 那条 templatemo_menu_bg.jpg 是 10×50 的竖条（y=0..39 纯 #19456A，y=49
+   一条 #96909C 高光）。原来只 repeat-x：靠下面那条 @media (max-width:700px)
+   的 `height:auto`，菜单换行后 wrapper 长到 142px，超过 50px 的部分没有图，
+   露出 body 的 #d8d7d7，在菜单右侧空出一块灰。
+   改成「底色铺满 + 图贴底 repeat-x」：50px 高时图的上下沿与盒子完全重合，
+   与改前逐像素相同；变高时下半部分由同色底色接管，底部那条高光仍然落在
+   盒子底边 —— 位置和原来一样。 */
+#templatemo_menu_wrapper {
+	clear: both;
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	background: #19456a url(images/templatemo_menu_bg.jpg) repeat-x left bottom;
+}
+#templatemo_menu {
+	/* 1700 比上面的 header 还宽 50px，屏幕一窄就最先溢出。 */
+	width: 100%;
+	max-width: 1700px;
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0 auto;
+}
+#templatemo_menu ul {
+	margin: 0 0 0 13px;
+	padding: 0px;
+	list-style: none;
+	float: left;
+}
+#templatemo_menu ul li {
+	float: left;
+	position:relative;
+	z-index:10;
+}
+#templatemo_menu ul li a {
+	line-height: 30px;
+	display: block;
+	height: 100%;
+	width: auto;
+	padding: 5px 20px 0 20px;
+	background: url(images/templatemo_menu.jpg) bottom no-repeat;
+	text-align: center;
+	/* 18.5px 是**故意留在阶梯外**的，别顺手吸附到 20px。
+	   一级菜单是 13 个 float:left 的项，每项宽 = 文字 + 左右各 20px padding，
+	   整体高度被 #templatemo_menu_wrapper 写死成 50px，而每项是 line-height
+	   30px + padding-top 5px = 35px。字号 18.5 -> 20 会让整排在 1920px 视口
+	   下从 1 行涨到 2 行（实测右缘余量只剩 46px，一涨就破），第二行 35px 直接
+	   溢出 50px 的蓝条、把链接画到导航栏外面 —— 而且这里没有 overflow:hidden
+	   兜底，是硬溢出。数据库内容层该抬到 15px，但导航本来就是 18.5px，不在
+	   "字体很小" 的范围内，保持原样。 */
+	font-size: 18.5px;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	outline: none;
+}
+#templatemo_menu li a:hover, #templatemo_menu li .current {
+	color: #ffffff;
+	background: url(images/templatemo_menu_hover.jpg) bottom no-repeat;
+}
+ 
+/*二级导航*/
+#templatemo_menu ul li ul { 
+        display: none; 
+		word-break:break-all;
+}
+#templatemo_menu ul li ul li a {
+		font-size: 16px;
+}
+#templatemo_menu li:hover ul{  
+        display:block;
+		margin-left:6px;
+		z-index:10;
+		position:absolute;
+        left:0px;top:35px;
+} 
+#templatemo_menu li:hover ul li a{color: #ffffff;background: #336699;width:220px;border-bottom: 2px solid #336699;text-align:left;padding-left:15px;display:block; }
+#templatemo_menu li:hover ul li a:hover{background: url(images/templatemo_menu_hover1.png) bottom no-repeat;color: #ffffff;display:block;}
+/* end of menu*/
+/* content */
+#tempatemo_content_wrapper {
+	clear: both;
+	width: 100%;
+	max-width: 1650px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+#templatemo_content {
+	/* box-sizing 在这里是必需的：这盒子有 1px 边框，用 border-box 之外的
+	   算法时 width:100% 会变成 100%+2px，在窄屏上正好撑出 2px 的横向滚动。 */
+	width: 100%;
+	max-width: 1630px;
+	box-sizing: border-box;
+	min-height:650px;
+	margin: 15px 0;
+	padding: 0;
+	border: 1px solid #c3c4c5;
+	background: #fff;
+}
+#tempatemo_content_wrapper1 {
+	clear: both;
+	width: 1630px;
+	margin: 0 auto;
+}
+#templatemo_content2 {
+	width: 1630px;min-height:650px;
+	margin: 20px 30px;
+	padding: 9px;
+	border: 1px solid #c3c4c5;
+	background: #fff;
+}
+#templatemo_content1 {
+	width: 1630px;
+	min-height:5000px;
+	margin: 20px 30px;
+	padding: 9px;
+	border: 1px solid #c3c4c5;
+	background: #fff;
+}
+#templatemo_content_genedetail {
+	width: 1450px;min-height:1400px;
+	margin: 20px 30px;
+	padding: 9px;
+	border: 1px solid #c3c4c5;
+	background: #fff;
+}
+#templatemo_content_P450 {
+	width: 1450px;min-height:1660px;
+	margin: 20px 30px;
+	padding: 9px;
+	border: 1px solid #c3c4c5;
+	background: #fff;
+}
+#templatemo_content_CAZy {
+	width: 1450px;min-height:1000px;
+	margin: 20px 30px;
+	padding: 9px;
+	border: 1px solid #c3c4c5;
+	background: #fff;
+}
+.recent_projects {
+	float: left;
+	width: 1550px;
+	/*height: 260px;*/
+	height: 800px;
+	/* margin-bottom: 10px; */
+	
+	background: #ffffff;
+}
+.project_slideshow {
+	
+	margin:0 auto;
+	width: 1650px;
+	height: 900px;
+	padding: 10px 0;
+	/*
+	float: left;
+	width: 610px;
+	height: 200px;
+	*/
+	/* padding: 30px 0; */
+	overflow: hidden;	
+	
+}
+.project_content {
+	float: left;
+	width: 250px;
+	height: 180px;
+	padding: 40px 20px;
+	overflow: hidden;
+	background: #64452b;
+}
+.project_content p{
+	font-size: 15px;
+	line-height: 20px;
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+#content_panel {
+	clear: both;
+	width: 100%;
+	border: 0px #c6c5c5;
+	background: #ffffff;
+}
+/* ---------------------------------------------------------------------------
+   首页那套模板的两栏。原来是写死 1150px / 400px，加上内边距一栏 1190、
+   另一栏 430，合起来 1620 —— 只在 ≥1650 的屏上成立。375px 上左栏一个人把
+   页面撑到 1191px。
+   改成 100% + max-width，两个 max-width 取的是**原来含内边距的外宽**
+   （1150+40、400+30），配合 box-sizing:border-box，桌面端算出来的内容宽
+   和改之前逐像素相同（1150 / 400），窄屏才收缩、两栏自然上下叠。
+   --------------------------------------------------------------------------- */
+#column_w610 {
+	float: left;
+	width: 100%;
+	max-width: 1190px;
+	box-sizing: border-box;
+	padding: 20px 20px 20px 20px;
+	background: #ffffff;
+}
+#column_w290 {
+	float: left;
+	width: 100%;
+	max-width: 430px;
+	box-sizing: border-box;
+	padding: 20px 10px 20px 20px;
+	background: #ffffff url(images/content_right_column_bg.jpg) left repeat-y;
+}
+/* ---------------------------------------------------------------------------
+   1140–1620：两栏并排。
+   左栏上限 1190、右栏上限 430，两者相加 1620 —— 只有 ≥1621 的屏才排得下。
+   1430/1440/1536 这些最常见的笔记本上，右栏被挤到下一行：左栏右边空出几百
+   像素，而叠在下面的右栏只有 430 宽、旁边又是一大片空白，整页高度几乎翻倍
+   （1440 上 2778px → 4562px，实测）。
+   左栏改成按剩余宽度收缩就能保持并排，设计者的两栏意图在笔记本上才成立。
+   减 431 而不是 430：两者相加必须严格小于容器，否则亚像素取整会把右栏再挤下去。
+   窄于 1140 时左栏剩不到 709px，再并排就太挤了 —— 那种宽度维持原来的上下叠。
+   --------------------------------------------------------------------------- */
+@media (min-width: 1140px) and (max-width: 1620px) {
+	#column_w610 { max-width: calc(100% - 431px); }
+}
+#content_species {
+	clear: both;
+	width: 100%;
+	background:#f1f5f9;
+	float: left;
+	background: #ffffff;
+	border-bottom: 0px solid #c6c5c5;
+}
+.news_section {
+	clear: both;
+	margin: 0 20px 20px 20px;
+}
+.news_section .news_date {
+	float: left;
+	width: 70px;
+	height: 50px;
+	padding: 20px 0 0 0;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	background: url(images/templatemo_news_date_bg.jpg) no-repeat;
+}
+.news_section .news_date span {
+	display: block;
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: normal;
+}
+.news_section .news_content {
+	float: right;
+	width: 160px;
+}
+#column_w290 .inputfield {
+	height: 16px;
+	width: 235px;
+	padding: 2px 5px;
+	margin: 0 0 10px 0;
+	font-size: 15px;
+	font-variant: normal;
+	line-height: normal;
+}
+#column_w290 .submitbutton{
+	float: right;
+	margin: 0px;
+	padding: 2px 6px 4px 6px;
+	cursor: pointer;
+	font-size: 15px;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: pre;
+}
+.column_w290_content {
+	margin: 0;
+}
+#column_w610 p {
+	padding-bottom: 20px;
+}
+.section_01 {
+	clear: both;
+	position: relative;
+	width: 430px;
+	padding: 30px 40px 20px 40px;
+	margin-bottom: 20px;
+	background: url(images/templatemo_section_middle.jpg) repeat-y;
+}
+.section_01 .top {
+	position: absolute;
+	width: 510px;
+	height: 22px;
+	top: 0px;
+	left: 0px;
+	background: url(images/templatemo_section_top.jpg) top left no-repeat;
+}
+.section_01 .bottom {
+	position: absolute;
+	width: 510px;
+	height: 22px;
+	bottom: 0px;
+	left: 0px;
+	background: url(images/templatemo_section_bottom.jpg) bottom left no-repeat;
+}
+.list_with_icon {
+	margin: 0 0 0 30px;
+	padding: 0px;
+	list-style: none;
+}
+.list_with_icon li{
+	margin: 0 0 10px 0;
+	padding: 0 0 0 30px;
+	background: url(images/templatemo_list_icon.jpg) left top no-repeat;
+}
+/* end of content */
+/* footer */
+#templatemo_footer_wrapper {
+	width: 100%;
+	margin: 0 auto;
+	background: #336699;
+}
+#templatemo_footer {
+	/* 1630 + 左右各 10px padding = 1650，正是它把整页撑到 1650 的。
+	   border-box 让 padding 算进 100% 里，窄屏才不会再溢出。 */
+	width: 100%;
+	max-width: 1630px;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 0 auto;
+	color: #ffffff;
+	background: url(images/templatemo_footer_bg.jpg) bottom center no-repeat;
+	font-size:16px;
+}
+.section_w920 {
+	/* 页脚里那一条（Webpage_components.php 的 $footer），1350 写死。
+	   类名叫 w920 而宽度是 1350，名字早就对不上了，别照名字推。 */
+	float: left;
+	text-align: left;
+	width: 100%;
+	max-width: 1350px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.section_w184 {
+	float: left;
+	width: 144px;
+	padding: 0 40px 0 0;	
+}
+.section_w368 {
+	float: left;
+	width: 328px;
+	padding: 0 40px 0 0;
+}
+.footer_menu_list {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.footer_menu_list li {
+	margin: 0px;
+	padding: 0px;
+}
+.footer_menu_list li a {
+	color: #928b85;
+	text-decoration: none;
+}
+/* end of footer */
+#species {
+	float: left;
+	margin: 0 8px;
+	width: 190px;
+	height:190px
+}
+#header {
+	float: left;
+	margin: 0 8px;
+	width: 190px;
+	height:30px;
+	text-align: center;
+	font:normal 12px verdana,arial,sans-serif;
+}
+#species img {  
+    display: block;  
+    border: 0;  
+    width: 100%;  
+    transform: scale(1);  
+    transition: all 1s ease 0s;  
+    -webkit-transform: scale(1);  
+    -webkit-transform: all 1s ease 0s;  
+}  
+  
+#species:hover img {  
+    transform: scale(1.1);  
+    transition: all 1s ease 0s;  
+    -webkit-transform: scale(1.1);  
+    -webkit-transform: all 1s ease 0s;  
+} 
+#column {
+	padding: 20px;
+	background: #ffffff;
+}
+.title {
+	clear: both;
+	padding-bottom: 30px;
+	margin-bottom: 15px;
+	width:1350px;
+	color: #000000;
+	background: url(images/templatemo_header_underline.jpg) left bottom no-repeat;
+	font:normal 22px verdana,arial,sans-serif;
+	letter-spacing: 1px;
+}
+.title_1 {
+	clear: both;
+	padding-bottom: 30px;
+	margin-bottom: 15px;
+	color: #000000;
+	background: url(images/templatemo_header_underline_1.jpg) right bottom no-repeat;	
+	font:normal 22px verdana,arial,sans-serif;
+	letter-spacing: 1px;
+}
+.title2 {
+	clear: both;
+	padding: 15px 0 ;
+	color: #af3a40;
+	font:bold 18px Arial, Helvetica, sans-serif;
+	
+}
+.title3 {
+	clear: both;
+	padding: 15px 0 ;
+	color: #000000;
+	font:normal 18px Arial, Helvetica, sans-serif;
+	
+}
+.link {
+	clear: both;
+	/* padding-bottom: 30px; */
+	margin-bottom: 15px;
+	color: #000000;
+	font:bold 18px verdana,arial,sans-serif;
+	
+}
+.link a:link, .link a:visited { color: #1d4ed8; text-decoration: none; font-weight: normal; }
+.link a:active, .link a:hover { color: #1d4ed8; text-decoration: underline; }
+/* 页脚是深蓝底（#336699 + 背景图），原 #b9d7d9 只有 4.24、hover 的纯红 #F00 更是 1.6 —— 都读不清 */
+.section_w920 a:link, .section_w920 a:visited { color: #cbeef0; text-decoration: none; font-weight: normal; }
+.section_w920 a:active, .section_w920 a:hover { color: #ffffff; text-decoration: underline; }
+fieldset{
+border:2px #af3a40 solid;
+padding:30px;
+margin:0 0 10px 0;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+legend{
+color:#000000;
+background-color:#FFFFFF;
+font:28px Arial, Helvetica, sans-serif; padding:8px; 
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+.button {
+   border-top: 1px solid #336699;
+   background: #336699;
+   background: -webkit-gradient(linear, left top, left bottom, from(#409553), to(#7ac461));
+   background: -webkit-linear-gradient(top, #336699, #336699);
+   background: -moz-linear-gradient(top, #336699, #336699);
+   background: -ms-linear-gradient(top, #336699, #336699);
+   background: -o-linear-gradient(top, #336699, #336699);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 16px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   cursor:pointer;
+   }
+.button:hover {
+   border-top-color: #336699;
+   background: #336699;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #336699;
+   background: #336699;
+   }
+/* ---------------------------------------------------------------------------
+   Data tables — the one shared look.
+
+   Mirrors core/index.php's `table.cc` (the "How this compares with BUSCO"
+   table): a borderless grid with a light header band, hairline row separators,
+   zebra striping, a hover highlight and blue links. It replaced a red box grid
+   (every cell outlined in #af3a40, 2px padding) which read as a spreadsheet
+   from 1999 and wasted most of its width on rules.
+
+   `table-layout` is auto, like the reference, NOT the fixed the old rule used.
+   Fixed split every table into equal columns no matter what it held, which is
+   why "Hexacorallia" broke across two lines as "Hexacorall / ia" and why long
+   descriptions wrapped into a column the same width as a count. Around twenty
+   pages pass `<th width="...">`; under auto those still act as preferred
+   widths, so their intended proportions survive while the algorithm is free to
+   give text the room it needs. A page that genuinely needs equal columns can
+   ask for them with `table.gridtable.<class>{table-layout:fixed}`.
+
+   `word-wrap:break-word` is kept: long unbroken strings (accessions,
+   sequences) still have to break instead of forcing the table wider than its
+   column.
+
+   What did NOT carry over is `white-space:pre-wrap`. It made every newline in
+   the PHP source render as a real line break inside the cell, which is why a
+   few pages (proteomic_reanalysis, download, sc_pages' .qc-cell) carry
+   `white-space:normal` patches and why <td> tags written across several source
+   lines used to open ~140px-tall blank rows. Those patches are harmless no-ops
+   now; new markup does not need them.
+
+   ALIGNMENT. Cells default to centred — short values (counts, ranks, IDs,
+   coordinates, yes/no) read best that way. Long free text does not, so a cell
+   holding a description/methodology/note/reference gets class="tal" to sit
+   left, and one holding a number gets class="num" to sit right with tabular
+   figures (the reference's `.cc-num`). The `[align]` rules below exist because
+   the HTML `align` attribute is
+   only a presentational hint: it loses to ANY author rule, so the new default
+   `text-align:center` would otherwise quietly override the ~160 cells site-wide
+   that authors explicitly left-aligned. Their selectors have to repeat
+   `table.gridtable` to reach (0,2,3) and outrank `table.gridtable td`. The
+   `.tal` rules come after them on purpose — read the comment there before
+   reordering this file.
+
+   To change one table, override with `table.gridtable.<yourclass>` (0,2,2) —
+   NOT a bare `.gridtable`, which is (0,1,0) and silently loses to everything
+   here (several page-level rules were dead for exactly that reason).
+   --------------------------------------------------------------------------- */
+table.gridtable {
+	font-family: inherit;
+	font-size:15px;
+	line-height:1.55;
+	border: 0;
+	border-collapse: collapse;
+	width:100%;
+	table-layout:auto;
+	word-break: normal;
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	color:#1e293b;
+}
+table.gridtable th {
+	border: 0;
+	border-bottom: 1px solid #e2e8f0;
+	padding: 8px 10px;
+	background-color: #f1f5f9;
+	color:#334155;
+	font-weight: 600;
+	text-align: center;
+	vertical-align: bottom;
+	white-space: nowrap;
+}
+table.gridtable td {
+	border: 0;
+	border-bottom: 1px solid #eef2f7;
+	padding: 7px 10px;
+	background-color: #ffffff;
+	text-align: center;
+	vertical-align: top;
+	line-height: 1.55;
+}
+table.gridtable tbody tr:nth-child(even) td { background-color:#fcfdff; }
+table.gridtable tbody tr:hover td { background-color:#f1f5f9; }
+table.gridtable a { color:#1d4ed8; text-decoration:none; }
+table.gridtable a:hover { text-decoration:underline; }
+
+/* Honour the align="" markup already in the pages (see the note above). */
+table.gridtable th[align="left"],
+table.gridtable td[align="left"],
+table.gridtable tr[align="left"] th,
+table.gridtable tr[align="left"] td { text-align:left; }
+table.gridtable th[align="right"],
+table.gridtable td[align="right"],
+table.gridtable tr[align="right"] th,
+table.gridtable tr[align="right"] td { text-align:right; }
+table.gridtable th[align="center"],
+table.gridtable td[align="center"],
+table.gridtable tr[align="center"] th,
+table.gridtable tr[align="center"] td { text-align:center; }
+
+/* Long text stays left (description, methodology, note, reference, sequence…).
+
+   This block MUST come after the [align] rules, and each selector MUST have the
+   `tr` in it. Most tables on this site mark every body row `<tr align="center">`,
+   which makes `table.gridtable tr[align="center"] td` (0,2,3) outrank a plain
+   `table.gridtable td.tal` (0,2,2) — so written the short way, class="tal" lost
+   on exactly the pages that needed it (measured: proteomic_reprocessed,
+   metagenomic_data, epigenomic_data, phenotype all rendered centred). Adding the
+   `tr` lifts `.tal` to (0,2,3) as well, and being later in the file it wins. */
+table.gridtable th.tal,
+table.gridtable tr th.tal,
+table.gridtable td.tal,
+table.gridtable tr td.tal { text-align:left; }
+
+/* Numbers line up on the decimal point and keep their digits the same width, the
+   same idea as the reference's `.cc-num`. Same `tr`-bearing selectors and same
+   place-in-the-file reason as `.tal` just above — several pages had their own
+   copy of this rule, they can all drop it now. */
+table.gridtable th.num,
+table.gridtable tr th.num,
+table.gridtable td.num,
+table.gridtable tr td.num { text-align:right; font-variant-numeric:tabular-nums; }
+
+/* The white card a table sits on. The page background is #d8d7d7, so without
+   this a table renders as a bare white block on grey; on /core/ the reference
+   table sits inside a white `.cc-card`, and that is the look being matched.
+   Twelve pages already carried this exact rule in their own <style> (all
+   byte-identical apart from GSEA's margin, which it keeps locally); eleven more
+   wrote class="table-container" and never defined it, so on those the class did
+   nothing at all. Defined once here instead. */
+.table-container {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+/* The two legacy variants. Neither has any markup left that uses it — they are
+   kept in step so the file does not hold two contradictory table styles. */
+table.gridtable1 {
+	font-family: inherit;
+	font-size:16px;
+	line-height:1.55;
+	border: 0;
+	border-collapse: collapse;
+	width:80%;
+	table-layout:fixed;
+	word-break: normal;
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	color:#1e293b;
+}
+table.gridtable1 th {
+	border: 0;
+	border-bottom: 1px solid #e2e8f0;
+	padding: 8px 10px;
+	background-color: #f1f5f9;
+	color:#334155;
+	font-weight: 600;
+}
+table.gridtable1 td {
+	border: 0;
+	border-bottom: 1px solid #eef2f7;
+	padding: 7px 10px;
+	background-color: #ffffff;
+}
+table.gridtable1 tbody tr:nth-child(even) td { background-color:#fcfdff; }
+table.sampletable {
+	font-family: inherit;
+	font-size:15px;
+	line-height:1.55;
+	border: 0;
+	border-collapse: collapse;
+	width:100%;
+	word-break: normal;
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	color:#1e293b;
+}
+table.sampletable th {
+	border: 0;
+	border-bottom: 1px solid #e2e8f0;
+	padding: 8px 10px;
+	background-color: #f1f5f9;
+	color:#334155;
+	font-weight: 600;
+}
+table.sampletable td {
+	border: 0;
+	border-bottom: 1px solid #eef2f7;
+	padding: 7px 10px;
+	background-color: #ffffff;
+}
+.guide{width:60px;margin-left:820px;position:fixed;left:50%;bottom:230px;_position:absolute;_top:expression(documentElement.scrollTop+documentElement.clientHeight - this.clientHeight - 134+'px');display:block;}
+.guide a{display:block;width:60px;height:50px;background:url(images/sprite_v2.png) no-repeat;margin-top:10px;text-decoration:none;font:16px/50px "Microsoft YaHei";text-align:center;color:#fff;border-radius:2px;}
+.guide a span{display:none;text-align:center;}
+.guide a:hover{text-decoration:none;background-color:#336699;color:#fff;}
+.guide a:hover span{display:block;width:60px;background:#336699}
+.guide .find{background-position:-84px -236px;}
+.guide .report{background-position:-146px -236px;}
+.guide .edit{background-position:-83px -185px;}
+.guide .top{background-position:-145px -185px;}
+select {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	
+	padding: 1px;
+	line-height: 1.5em;
+}
+/* Turning page css  */
+.TurnPg {
+	padding: 10px 0 0 0 ;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+.TurnPg A {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #eee 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; MARGIN: 1px; BORDER-LEFT: #eee 1px solid; COLOR: #333; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid; TEXT-DECORATION: none; FONT-WEIGHT: bold;
+}
+.TurnPg A:hover {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; BORDER-LEFT: #333 1px solid; COLOR: #3399CC; BORDER-BOTTOM: #333 1px solid
+}
+.TurnPg A:active {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; BORDER-LEFT: #333 1px solid; COLOR: #3399CC; BORDER-BOTTOM: #333 1px solid
+}
+.TurnPg .current {
+	BORDER-RIGHT: #89c403 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #89c403 1px solid; PADDING-LEFT: 1px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #89c403 1px solid; COLOR: #FFFF00; PADDING-TOP: 2px; BORDER-BOTTOM: #89c403 1px solid; BACKGROUND-COLOR: #89c403
+}
+.TurnPg .disabled {
+	BORDER-RIGHT: #eee 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #eee 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #eee 1px solid; COLOR: #ccc; PADDING-TOP: 2px; BORDER-BOTTOM: #eee 1px solid
+}
+.df_list{
+  padding: 0;
+  padding-left: 25px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+.df_list span {
+  /* 首页统计区块里靠右的那些数字（5,157,061 这类）。原来的 #5B9BD5 在 #f9f9f9 上
+     只有 2.81，几乎读不出来；改成站点的深蓝 #1d4ed8（6.08）。 */
+  color: #1d4ed8;
+  float: right;
+}
+.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+.form-group{margin-bottom:1rem}
+.form-inline .form-group{display:-ms-flexbox;display:flex;-ms-flex:0 0 auto;flex:0 0 auto;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-align:center;align-items:center;margin-bottom:0}
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:#212529;text-decoration:none}.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn.disabled,.btn:disabled{opacity:.65}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}.btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}.btn-primary.focus,.btn-primary:focus{box-shadow:0 0 0 .2rem rgba(38,143,255,.5)}.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#007bff;border-color:#007bff}.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(38,143,255,.5)}.btn-secondary{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:hover{color:#fff;background-color:#5a6268;border-color:#545b62}.btn-secondary.focus,.btn-secondary:focus{box-shadow:0 0 0 .2rem rgba(130,138,145,.5)}.btn-secondary.disabled,.btn-secondary:disabled{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-secondary:not(:disabled):not(.disabled).active,.btn-secondary:not(:disabled):not(.disabled):active,.show>.btn-secondary.dropdown-toggle{color:#fff;background-color:#545b62;border-color:#4e555b}.btn-secondary:not(:disabled):not(.disabled).active:focus,.btn-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(130,138,145,.5)}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{box-shadow:0 0 0 .2rem rgba(72,180,97,.5)}.btn-success.disabled,.btn-success:disabled{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:not(:disabled):not(.disabled).active,.btn-success:not(:disabled):not(.disabled):active,.show>.btn-success.dropdown-toggle{color:#fff;background-color:#1e7e34;border-color:#1c7430}.btn-success:not(:disabled):not(.disabled).active:focus,.btn-success:not(:disabled):not(.disabled):active:focus,.show>.btn-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(72,180,97,.5)}.btn-info{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:hover{color:#fff;background-color:#138496;border-color:#117a8b}.btn-info.focus,.btn-info:focus{box-shadow:0 0 0 .2rem rgba(58,176,195,.5)}.btn-info.disabled,.btn-info:disabled{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-info:not(:disabled):not(.disabled).active,.btn-info:not(:disabled):not(.disabled):active,.show>.btn-info.dropdown-toggle{color:#fff;background-color:#117a8b;border-color:#10707f}.btn-info:not(:disabled):not(.disabled).active:focus,.btn-info:not(:disabled):not(.disabled):active:focus,.show>.btn-info.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(58,176,195,.5)}.btn-warning{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-warning:hover{color:#212529;background-color:#e0a800;border-color:#d39e00}.btn-warning.focus,.btn-warning:focus{box-shadow:0 0 0 .2rem rgba(222,170,12,.5)}.btn-warning.disabled,.btn-warning:disabled{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-warning:not(:disabled):not(.disabled).active,.btn-warning:not(:disabled):not(.disabled):active,.show>.btn-warning.dropdown-toggle{color:#212529;background-color:#d39e00;border-color:#c69500}.btn-warning:not(:disabled):not(.disabled).active:focus,.btn-warning:not(:disabled):not(.disabled):active:focus,.show>.btn-warning.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(222,170,12,.5)}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:hover{color:#fff;background-color:#c82333;border-color:#bd2130}.btn-danger.focus,.btn-danger:focus{box-shadow:0 0 0 .2rem rgba(225,83,97,.5)}.btn-danger.disabled,.btn-danger:disabled{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:not(:disabled):not(.disabled).active,.btn-danger:not(:disabled):not(.disabled):active,.show>.btn-danger.dropdown-toggle{color:#fff;background-color:#bd2130;border-color:#b21f2d}.btn-danger:not(:disabled):not(.disabled).active:focus,.btn-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(225,83,97,.5)}.btn-light{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:hover{color:#212529;background-color:#e2e6ea;border-color:#dae0e5}.btn-light.focus,.btn-light:focus{box-shadow:0 0 0 .2rem rgba(216,217,219,.5)}.btn-light.disabled,.btn-light:disabled{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:not(:disabled):not(.disabled).active,.btn-light:not(:disabled):not(.disabled):active,.show>.btn-light.dropdown-toggle{color:#212529;background-color:#dae0e5;border-color:#d3d9df}.btn-light:not(:disabled):not(.disabled).active:focus,.btn-light:not(:disabled):not(.disabled):active:focus,.show>.btn-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(216,217,219,.5)}.btn-dark{color:#fff;background-color:#343a40;border-color:#343a40}.btn-dark:hover{color:#fff;background-color:#23272b;border-color:#1d2124}.btn-dark.focus,.btn-dark:focus{box-shadow:0 0 0 .2rem rgba(82,88,93,.5)}.btn-dark.disabled,.btn-dark:disabled{color:#fff;background-color:#343a40;border-color:#343a40}.btn-dark:not(:disabled):not(.disabled).active,.btn-dark:not(:disabled):not(.disabled):active,.show>.btn-dark.dropdown-toggle{color:#fff;background-color:#1d2124;border-color:#171a1d}.btn-dark:not(:disabled):not(.disabled).active:focus,.btn-dark:not(:disabled):not(.disabled):active:focus,.show>.btn-dark.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(82,88,93,.5)}.btn-outline-primary{color:#007bff;border-color:#007bff}.btn-outline-primary:hover{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary.focus,.btn-outline-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#007bff;background-color:transparent}.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active,.show>.btn-outline-primary.dropdown-toggle{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-secondary{color:#6c757d;border-color:#6c757d}.btn-outline-secondary:hover{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary.focus,.btn-outline-secondary:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-outline-secondary.disabled,.btn-outline-secondary:disabled{color:#6c757d;background-color:transparent}.btn-outline-secondary:not(:disabled):not(.disabled).active,.btn-outline-secondary:not(:disabled):not(.disabled):active,.show>.btn-outline-secondary.dropdown-toggle{color:#fff;background-color:#6c757d;border-color:#6c757d}.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-secondary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(108,117,125,.5)}.btn-outline-success{color:#28a745;border-color:#28a745}.btn-outline-success:hover{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success.focus,.btn-outline-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-outline-success.disabled,.btn-outline-success:disabled{color:#28a745;background-color:transparent}.btn-outline-success:not(:disabled):not(.disabled).active,.btn-outline-success:not(:disabled):not(.disabled):active,.show>.btn-outline-success.dropdown-toggle{color:#fff;background-color:#28a745;border-color:#28a745}.btn-outline-success:not(:disabled):not(.disabled).active:focus,.btn-outline-success:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-outline-info{color:#17a2b8;border-color:#17a2b8}.btn-outline-info:hover{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info.focus,.btn-outline-info:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-outline-info.disabled,.btn-outline-info:disabled{color:#17a2b8;background-color:transparent}.btn-outline-info:not(:disabled):not(.disabled).active,.btn-outline-info:not(:disabled):not(.disabled):active,.show>.btn-outline-info.dropdown-toggle{color:#fff;background-color:#17a2b8;border-color:#17a2b8}.btn-outline-info:not(:disabled):not(.disabled).active:focus,.btn-outline-info:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-info.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(23,162,184,.5)}.btn-outline-warning{color:#ffc107;border-color:#ffc107}.btn-outline-warning:hover{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning.focus,.btn-outline-warning:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-outline-warning.disabled,.btn-outline-warning:disabled{color:#ffc107;background-color:transparent}.btn-outline-warning:not(:disabled):not(.disabled).active,.btn-outline-warning:not(:disabled):not(.disabled):active,.show>.btn-outline-warning.dropdown-toggle{color:#212529;background-color:#ffc107;border-color:#ffc107}.btn-outline-warning:not(:disabled):not(.disabled).active:focus,.btn-outline-warning:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-warning.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(255,193,7,.5)}.btn-outline-danger{color:#dc3545;border-color:#dc3545}.btn-outline-danger:hover{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger.focus,.btn-outline-danger:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-outline-danger.disabled,.btn-outline-danger:disabled{color:#dc3545;background-color:transparent}.btn-outline-danger:not(:disabled):not(.disabled).active,.btn-outline-danger:not(:disabled):not(.disabled):active,.show>.btn-outline-danger.dropdown-toggle{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-outline-danger:not(:disabled):not(.disabled).active:focus,.btn-outline-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-outline-light{color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light:hover{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light.focus,.btn-outline-light:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-outline-light.disabled,.btn-outline-light:disabled{color:#f8f9fa;background-color:transparent}.btn-outline-light:not(:disabled):not(.disabled).active,.btn-outline-light:not(:disabled):not(.disabled):active,.show>.btn-outline-light.dropdown-toggle{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-light:not(:disabled):not(.disabled).active:focus,.btn-outline-light:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-light.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-outline-dark{color:#343a40;border-color:#343a40}.btn-outline-dark:hover{color:#fff;background-color:#343a40;border-color:#343a40}.btn-outline-dark.focus,.btn-outline-dark:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-outline-dark.disabled,.btn-outline-dark:disabled{color:#343a40;background-color:transparent}.btn-outline-dark:not(:disabled):not(.disabled).active,.btn-outline-dark:not(:disabled):not(.disabled):active,.show>.btn-outline-dark.dropdown-toggle{color:#fff;background-color:#343a40;border-color:#343a40}.btn-outline-dark:not(:disabled):not(.disabled).active:focus,.btn-outline-dark:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-dark.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(52,58,64,.5)}.btn-link{font-weight:400;color:#007bff;text-decoration:none}.btn-link:hover{color:#0056b3;text-decoration:underline}.btn-link.focus,.btn-link:focus{text-decoration:underline;box-shadow:none}.btn-link.disabled,.btn-link:disabled{color:#6c757d;pointer-events:none}.btn-group-lg>.btn,.btn-lg{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:.5rem}input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-block{width:100%}
+.col-sm-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}
+.col-form-label{padding-top:calc(.375rem + 1px);padding-bottom:calc(.375rem + 1px);margin-bottom:0;font-size:inherit;line-height:1.5}.col-form-label-lg{padding-top:calc(.5rem + 1px);padding-bottom:calc(.5rem + 1px);font-size:1.25rem;line-height:1.5}.col-form-label-sm{padding-top:calc(.25rem + 1px);padding-bottom:calc(.25rem + 1px);font-size:.875rem;line-height:1.5}
+row.form-control-plaintext{display:block;width:100%;padding-top:.375rem;padding-bottom:.375rem;margin-bottom:0;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}
+.col-md-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}
+.col-sm-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}
+.btn-toolbar{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:start;justify-content:flex-start}.btn-toolbar .input-group{width:auto}
+.btn-group,.btn-group-vertical{position:relative;display:-ms-inline-flexbox;display:inline-flex;vertical-align:middle}.btn-group-vertical>.btn,.btn-group>.btn{position:relative;-ms-flex:1 1 auto;flex:1 1 auto}.btn-group-vertical>.btn:hover,.btn-group>.btn:hover{z-index:1}.btn-group-vertical>.btn.active,.btn-group-vertical>.btn:active,.btn-group-vertical>.btn:focus,.btn-group>.btn.active,.btn-group>.btn:active,.btn-group>.btn:focus{z-index:1}.btn-toolbar{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:start;justify-content:flex-start}.btn-toolbar .input-group{width:auto}.btn-group>.btn-group:not(:first-child),.btn-group>.btn:not(:first-child){margin-left:-1px}.btn-group>.btn-group:not(:last-child)>.btn,.btn-group>.btn:not(:last-child):not(.dropdown-toggle){border-top-right-radius:0;border-bottom-right-radius:0}.btn-group>.btn-group:not(:first-child)>.btn,.btn-group>.btn:not(:first-child){border-top-left-radius:0;border-bottom-left-radius:0}.dropdown-toggle-split{padding-right:.5625rem;padding-left:.5625rem}.dropdown-toggle-split::after,.dropright .dropdown-toggle-split::after,.dropup .dropdown-toggle-split::after{margin-left:0}.dropleft .dropdown-toggle-split::before{margin-right:0}.btn-group-sm>.btn+.dropdown-toggle-split,.btn-sm+.dropdown-toggle-split{padding-right:.375rem;padding-left:.375rem}.btn-group-lg>.btn+.dropdown-toggle-split,.btn-lg+.dropdown-toggle-split{padding-right:.75rem;padding-left:.75rem}.btn-group-vertical{-ms-flex-direction:column;flex-direction:column;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:center;justify-content:center}.btn-group-vertical>.btn,.btn-group-vertical>.btn-group{width:100%}.btn-group-vertical>.btn-group:not(:first-child),.btn-group-vertical>.btn:not(:first-child){margin-top:-1px}.btn-group-vertical>.btn-group:not(:last-child)>.btn,.btn-group-vertical>.btn:not(:last-child):not(.dropdown-toggle){border-bottom-right-radius:0;border-bottom-left-radius:0}.btn-group-vertical>.btn-group:not(:first-child)>.btn,.btn-group-vertical>.btn:not(:first-child){border-top-left-radius:0;border-top-right-radius:0}.btn-group-toggle>.btn,.btn-group-toggle>.btn-group>.btn{margin-bottom:0}.btn-group-toggle>.btn input[type=checkbox],.btn-group-toggle>.btn input[type=radio],.btn-group-toggle>.btn-group>.btn input[type=checkbox],.btn-group-toggle>.btn-group>.btn input[type=radio]{position:absolute;clip:rect(0,0,0,0);pointer-events:none}
+.form-control{display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+.form-control::-ms-expand{background-color:transparent;border:0}.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1}.form-control::-moz-placeholder{color:#6c757d;opacity:1}.form-control:-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::-ms-input-placeholder{color:#6c757d;opacity:1}.form-control::placeholder{color:#6c757d;opacity:1}.form-control:disabled,.form-control[readonly]{background-color:#e9ecef;opacity:1}select.form-control:focus::-ms-value{color:#495057;background-color:#fff}.form-control-file,.form-control-range{display:block;width:100%}row.form-control-plaintext{display:block;width:100%;padding-top:.375rem;padding-bottom:.375rem;margin-bottom:0;line-height:1.5;color:#212529;background-color:transparent;border:solid transparent;border-width:1px 0}.form-control-plaintext.form-control-lg,.form-control-plaintext.form-control-sm{padding-right:0;padding-left:0}.form-control-sm{height:calc(1.5em + .5rem + 2px);padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}.form-control-lg{height:calc(1.5em + 1rem + 2px);padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}select.form-control[multiple],select.form-control[size]{height:auto}textarea.form-control{height:auto}
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* 统计项基础样式 */
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+/* 标题区域样式 */
+.stat-header {
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+.stat-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+/* 内容区域样式 */
+.stat-content {
+  padding: 25px 15px;
+  text-align: center;
+  background-color: #f9fdf9;
+}
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+/* 装饰性背景图案 */
+.stats-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(144, 238, 144, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(152, 251, 152, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(0, 128, 0, 0.05) 0%, transparent 30%);
+  z-index: -1;
+  pointer-events: none;
+}
+/* 每个统计项不同的标题颜色 */
+.stat-item:nth-child(1) .stat-header {
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+}
+.stat-item:nth-child(2) .stat-header {
+  background: linear-gradient(135deg, #228b22 0%, #32cd32 100%);
+}
+.stat-item:nth-child(3) .stat-header {
+  background: linear-gradient(135deg, #006400 0%, #228b22 100%);
+}
+.stat-item:nth-child(4) .stat-header {
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+}
+.stat-item:nth-child(5) .stat-header {
+  background: linear-gradient(135deg, #228b22 0%, #32cd32 100%);
+}
+.stat-item:nth-child(6) .stat-header {
+  background: linear-gradient(135deg, #006400 0%, #228b22 100%);
+}
+/* 鼠标悬停效果 */
+.stat-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 100, 0, 0.15);
+}
+/* 悬停时改变整个统计项的背景色 */
+.stat-item:hover .stat-header {
+  background: linear-gradient(135deg, #1e6b47 0%, #2da361 100%);
+}
+.stat-item:hover .stat-content {
+  background-color: #f0f9f0;
+}
+/* 悬停时数字颜色变化 */
+.stat-item:hover .stat-number {
+  color: #1e6b47;
+}
+/* 添加悬停时的微动效果 */
+.stat-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-item {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.slider_bg{
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f6f6f6 1%, #f0f0f0 19%, #efefef 39%, #ededed 59%, #dddddd 81%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f6f6f6), color-stop(19%,#f0f0f0), color-stop(39%,#efefef), color-stop(59%,#ededed), color-stop(81%,#dddddd), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f6f6f6 1%,#f0f0f0 19%,#efefef 39%,#ededed 59%,#dddddd 81%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f6f6f6 1%,#f0f0f0 19%,#efefef 39%,#ededed 59%,#dddddd 81%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f6f6f6 1%,#f0f0f0 19%,#efefef 39%,#ededed 59%,#dddddd 81%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f6f6f6 1%,#f0f0f0 19%,#efefef 39%,#ededed 59%,#dddddd 81%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+.wrap{
+	margin:0 auto;
+	width:80%;
+}
+.slider{
+	padding: 4% 4%;
+}
+.paleo-intro {
+background-color: #f1f5f9; /* 浅灰底 */
+border-left: none; /* 不用左边框，左侧竖线由下面的 ::before 画 */
+padding: 10px 15px 10px 15px;
+font-size: 16px;
+color: #1f2937; /* 正常的深灰色 */
+position: relative;
+text-align: justify;
+}
+.paleo-intro::before {
+content: "";
+position: absolute;
+left: 0;
+top: 5px;
+bottom: 5px;
+width: 3px;
+background-color: #9ca3af; /* 使用中性灰线条，彻底弱化存在感 */
+border-radius: 2px;
+}
+/* ===================================================================
+ * 全局「数据可用性 / 错误说明」提示条
+ * 用于替换原先把缺失数据渲染成 "-" / 空白 / 破图的写法
+ * （审稿意见 Referee 3 点 10a/10b/10d、Referee 2 major 1）
+ * ================================================================= */
+.gd-notice{
+  margin:12px 0 18px;
+  padding:12px 16px;
+  border-radius:8px;
+  font-size:16px;
+  line-height:1.75;
+  color:#334155;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
+  border-left:4px solid #94a3b8;
+}
+.gd-notice.gd-info{ background:#f0f9ff; border-color:#bae6fd; border-left-color:#0369a1; }
+.gd-notice.gd-warn{ background:#fffbeb; border-color:#fde68a; border-left-color:#b45309; }
+.gd-notice code{
+  background:#f1f5f9; border-radius:4px; padding:1px 5px;
+  font-family:Consolas,Monaco,monospace; font-size:16px; color:#0f172a;
+}
+.gd-na{ color:#64748b; font-style:italic; font-weight:400; }
+/* 「同一个基因号出现在多个物种里，请选一个」的候选列表（gene_detail.php）。
+   站点导航用的是裸 <ul>，所以这里必须自带样式，不能只靠 ul 的默认外观。 */
+.gd-species-pick{
+  list-style:none; margin:0 0 18px; padding:0;
+  display:flex; flex-wrap:wrap; gap:8px 14px;
+}
+.gd-species-pick li{ margin:0; }
+.gd-species-pick a{
+  display:inline-block; padding:7px 14px; border-radius:6px;
+  border:1px solid #cbd5e1; background:#fff; color:#0f172a;
+  text-decoration:none; font-size:15px; line-height:1.4;
+}
+.gd-species-pick a:hover{ border-color:#0369a1; background:#f0f9ff; }
+.gd-species-pick .paleo-code{ color:#64748b; font-size:15px; }
+.plot-missing{
+  border:1px dashed #cbd5e1; border-radius:8px; background:#f8fafc;
+  color:#64748b; font-size:15px; text-align:center;
+  padding:38px 16px; line-height:1.7;
+}
+
+/* ===========================================================================
+   响应式第一层（RWD Tier 1）
+   ---------------------------------------------------------------------------
+   目标只有一条：让手机/小平板**能用**。不重排表格、不做汉堡菜单、不改任何
+   PHP 逻辑。上面那些 100% + max-width 的改动已经让页面在各宽度下都不再溢出，
+   这里补齐的是窄屏下三处"能用但不顺手"的地方。
+
+   为什么这些规则全部包在媒体查询里：桌面端的观感必须逐像素不变。上面那批
+   width/max-width 改动是例外 —— 它们修的是桌面端本来就有的 bug（1650 比
+   1366×768 的屏幕还宽），而下面这些纯粹是窄屏适配，不该影响大屏。
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   宽表横滑 —— 必须靠包裹层，纯 CSS 做不到。这里是为什么。
+   站点几乎每张数据表都是 `table.gridtable`（定义在本文件上方）。窄屏上这些表
+   比容器宽得多，而外面那层卡片常带 `overflow:hidden`（圆角用），于是右边的列
+   是**被直接裁掉的** —— 不是"要横滑才能看到"，是根本够不着。
+
+   先试了纯 CSS 的写法，两种都不行：
+     table.gridtable{display:block;overflow-x:auto}
+       能横滑（clientWidth 331 / scrollWidth 967），但 `display:block` 之后表内
+       会生成一个**匿名 table 盒**，它按 shrink-to-fit 取到的是 min-content 宽度，
+       于是每一列都被压到"最长单词"那么窄：Species 列从 368 掉到 113，单元格
+       文本疯狂换行，行高从 62 涨到 155，表格看起来像是坏了。这是最常见的
+       "响应式表格"错觉 —— 能滑，但滑的是被压扁的表。
+     table.gridtable{display:block;overflow-x:auto;width:max-content}
+       列宽恢复正常，但表格盒子本身胀到 1471（data_statistics.php 里那张甚至到
+       30963），`overflow-x:auto` 于是永远不触发，页面直接被撑破
+       （实测 docScroll 31020）。browse.php 看着没事，是因为它外面恰好有
+       .table-container 的 overflow:hidden 在裁 —— 不是真能滑。
+
+   根本原因：匿名 table 盒的宽度没法从外面单独指定。标准解法就是加一层真正的
+   包裹元素：包裹层留在容器宽度上负责滚动，表在里面取 max-content 自然列宽。
+   实测这个组合（375px / browse.php）：Species 368 = 桌面值，行高回到 62，
+   docScroll 375 不溢出。
+
+   包裹由 js/rwd-tables.js 在 DOMContentLoaded 时打上（39 个页面引了它）。
+   **这里刻意不写 display:block 兜底**：脚本跑之前的几百毫秒里，表格保持和今天
+   一样的"被裁"状态，视觉上不会跳；若改用兜底反而会先压扁再撑开，重排更明显。
+   脚本挂掉时行为等同今天，不会更差。
+
+   断点取 1200 而不是 700：表格在平板上就已经挤得难读了。桌面端（≥1200）
+   这些规则完全不生效。
+   --------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+	.gt-scroll {
+		overflow-x: auto;
+		/* 横滑到头时不要触发浏览器的「后退」手势 —— 全表横滑最常见的投诉。 */
+		overscroll-behavior-x: contain;
+	}
+	/* 选择器要写成 `.gt-scroll > table.gridtable`(0,2,1)，不能只写 .gt-scroll
+	   table —— 上面 `table.gridtable`(0,1,1) 那条 width:100% 会把 max-content
+	   压回去，特异性不够就静默失效。
+
+	   全站有三族数据表，js/rwd-tables.js 会把三族的表都套上 .gt-scroll：
+	     table.gridtable  —— 2026-09-27 统一后的主力（129 张，见记忆）
+	     table.cc         —— core/ 自己的那套，templatemo_style.css 里没有它，
+                         规则内联在 core/index.php 里（`width:100%` 挡不住
+                         min-content，431px 的表在 333px 栏里照样溢出）
+	     table.sc-table   —— 单细胞各页，sc_pages.css
+	   加新的一族时这里和 JS 里的 SEL 要一起改，否则表不会滚。 */
+	.gt-scroll > table.gridtable,
+	.gt-scroll > table.cc,
+	.gt-scroll > table.sc-table {
+		display: table;
+		width: max-content;
+		max-width: none;
+		min-width: 100%;      /* 窄表仍然铺满容器，不缩成一条 */
+	}
+}
+
+/* ---------------------------------------------------------------------------
+   悬浮工具条 .guide（回顶那个）。
+   原写法 left:50% + margin-left:820px，等于「屏幕中心再往右 820px」，要整个
+   进屏幕需要视口 ≥ 1760px —— 1366 的笔记本上它就已经在屏幕外了，是 1650
+   布局留下的同一个假设。它 position:fixed，撑不出横向滚动条，所以之前的
+   溢出扫描一直没把它算进来；但按钮点不到是真的。
+   窄于 1760 就改成贴右边，桌面端 ≥1760 时这条不生效、位置不变。
+   --------------------------------------------------------------------------- */
+@media (max-width: 1759px) {
+	.guide { left: auto; right: 12px; margin-left: 0; }
+}
+
+/* ---------------------------------------------------------------------------
+   手机版 logo。
+   横幅是 1650×104 的整幅图，按比例缩到 375px 只剩 24px 高，字标认不出来。
+   这里换成 images/logo_mobile.png：把原图按 x=525~566 那条空白列切开，
+   上半是字标、下半是副标题，重新叠成 750×230。两半背景都是纯 #336699，
+   与 #templatemo_header_wrapper 同色，所以拼起来无缝。
+   生成命令（可重跑）：
+     convert images/templatemo_logo_latest.png -crop 530x104+0+0 +repage /tmp/wm.png
+     convert images/templatemo_logo_latest.png -crop 940x104+560+0 +repage /tmp/sub.png
+     convert /tmp/wm.png -resize 750x /tmp/wm2.png
+     convert /tmp/sub.png -resize 750x /tmp/sub2.png
+     convert /tmp/wm2.png /tmp/sub2.png -background '#336699' -gravity center \
+             -append images/logo_mobile.png
+   断点选 700px 是算出来的：原图副标题约 40px 高，缩到宽度 V 时是 V/41 像素，
+   要 ≥17px 就得 V ≥ 700。
+   max-width 是防止在 700px 的平板上顶出一个 215px 高的头；float:none 是因为
+   浮动元素吃不到 margin:0 auto，取消浮动才能居中。
+   --------------------------------------------------------------------------- */
+@media (max-width: 700px) {
+	#templatemo_header #site_logo {
+		float: none;
+		width: 100%;
+		max-width: 460px;
+		margin: 0 auto;
+		aspect-ratio: 750 / 230;
+		background-image: url(images/logo_mobile.png);
+		background-size: 100% 100%;
+	}
+}
+
+/* ---------------------------------------------------------------------------
+   导航。
+   一级菜单是一排 float:left 的 li，二级菜单靠 `li:hover ul` 展开、绝对定位。
+   触屏上 hover 要么不触发、要么点一下之后黏住不消失，所以窄屏要改两件事：
+   一级项换行排列；二级菜单改成「导航条下方铺满整宽的面板」，展开由
+   :hover / :focus-within 以及脚本打的 li.cnido-nav-open 三者之一触发
+   （脚本见 js/nav-dropdown.js）。
+
+   注意下面的选择器都写成了和原规则**同等特异性**（都是 (1,1,3) 一类的形状）
+   再靠"在后面"取胜。少写一个 :hover / ul 就会变成 (1,0,4) 之类，b 位比原规则
+   小，会静默失效 —— 这个文件里已经有好几条规则是这么死的。加
+   li.cnido-nav-open 时同样要求 b 位不降（一个类 = 一个伪类）。
+   --------------------------------------------------------------------------- */
+@media (max-width: 700px) {
+	#templatemo_menu_wrapper { height: auto; }
+	#templatemo_menu {
+		height: auto;
+		padding-bottom: 6px;
+		/* 二级菜单的锚点（见下）。锚在这个盒子上而不是父 li：父项可能贴右缘
+		   （Tools 起点 309px，390px 屏上右边只剩 81px），以 li 为锚的 220px
+		   面板会整块跑到屏幕外；铺满整宽与父项位置无关，永远放得下。 */
+		position: relative;
+	}
+	#templatemo_menu ul {
+		float: none;
+		margin-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	/* position:static 是为了上面那个锚点生效 —— li 自己不能是定位元素。 */
+	#templatemo_menu ul li { float: none; position: static; }
+	#templatemo_menu ul li a {
+		font-size: 15px;
+		padding: 4px 10px 0 10px;
+		/* height:auto 是必须的，不是顺手写的。基础规则里那条 `height:100%`
+		   在这个盒子上算出来是「li 的内容高 34px」，而本站没有全局
+		   box-sizing:border-box（templatemo_style.css 里的 bootstrap 段是残缺的），
+		   于是 padding-top:4px 再叠上去，锚盒实际 38px 高、比它所在的 li 高出
+		   4px —— 多出来的那 4px 正好压到下一行的项上。平时看不出来（精灵图
+		   底板是纯 #194369），但 `.current` / `:hover` 用的是一张下面 31px 是
+		   浅蓝的 128×35 图，那 4px 会被下一行的 Proteome 盖住左半边，高亮块
+		   变成缺一角的 L 形（390px 屏上实测：满宽 269→348.7 只到 y=34.7，
+		   再往下只剩 308→348.7）。改 auto 后锚盒回到 34px，与 li 齐平，
+		   文字位置一点没动（内容区仍是 line-height:30px）。 */
+		height: auto;
+	}
+	/* 二级菜单：脱离文档流，在导航条正下方铺满整宽。
+	   原来写的是 position:static（跟着文档流走），但一级 li 是 flex 项，子菜单
+	   一展开就把整个 flex 行撑到 600+ 像素高：同行的兄弟项被 align-items 默认的
+	   stretch 一起拉长，后面的行整排下移，导航栏变成一大块盖住页面的蓝底、
+	   行与行之间全是空的 —— 手机上看就是「点一下导航栏整页样式崩了」。
+	   那一版还漏了颜色：只给 `li:focus-within ul li a` 抄了 width，没抄
+	   `li:hover ul li a` 的 background:#336699，于是触屏走 focus 路径时子菜单
+	   链接是**透明底白字**，在蓝底上根本看不出有东西可点。这里一并补上底色和
+	   分隔线。 */
+	#templatemo_menu li:hover ul,
+	#templatemo_menu li:focus-within ul,
+	#templatemo_menu li.cnido-nav-open ul {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		margin-left: 0;
+		z-index: 60;
+		background: #336699;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, .32);
+		/* 最长的一份是 Genome（16 项，约 620px）。不给上限的话，矮屏上
+		   面板底部会落到视口外，只能靠整页下滚去够；限高后它自己滚。 */
+		max-height: 72vh;
+		overflow-y: auto;
+		overscroll-behavior-y: contain;
+	}
+	#templatemo_menu li:hover ul li a,
+	#templatemo_menu li:focus-within ul li a,
+	#templatemo_menu li.cnido-nav-open ul li a {
+		width: auto;
+		padding: 8px 14px 8px 24px;
+		background: #336699;
+		border-bottom: 1px solid #2b5680;
+		/* text-align 必须显式写：一级项的 `#templatemo_menu ul li a` 里是
+		   text-align:center，那条同样命中二级链接，而桌面端把链接压成左对齐的
+		   `li:hover ul li a` 靠的是 :hover —— 走 :focus-within / cnido-nav-open
+		   这条路时 :hover 不成立，不写就会排成居中的一列。 */
+		text-align: left;
+	}
+}

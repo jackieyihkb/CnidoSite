@@ -1,0 +1,47 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region NC_066051.1 1 18511
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=6112
+NC_066051.1	RefSeq	region	1	18511	.	+	.	ID=NC_066051.1:1..18511;Dbxref=taxon:6112;Is_circular=true;Name=MT;country=China: Qingdao;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA;specimen-voucher=2021-05-AX-P01
+NC_066051.1	RefSeq	gene	1	3571	.	+	.	ID=gene-N4M38_mgp01;Dbxref=GeneID:74848160;Name=ND5;gbkey=Gene;gene=ND5;gene_biotype=protein_coding;locus_tag=N4M38_mgp01
+NC_066051.1	RefSeq	CDS	1	717	.	+	0	ID=cds-YP_010471326.1;Parent=gene-N4M38_mgp01;Dbxref=GenBank:YP_010471326.1,GeneID:74848160;Name=YP_010471326.1;gbkey=CDS;gene=ND5;locus_tag=N4M38_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_010471326.1;transl_table=4
+NC_066051.1	RefSeq	CDS	2456	3571	.	+	0	ID=cds-YP_010471326.1;Parent=gene-N4M38_mgp01;Dbxref=GenBank:YP_010471326.1,GeneID:74848160;Name=YP_010471326.1;gbkey=CDS;gene=ND5;locus_tag=N4M38_mgp01;product=NADH dehydrogenase subunit 5;protein_id=YP_010471326.1;transl_table=4
+NC_066051.1	RefSeq	gene	920	1924	.	+	.	ID=gene-N4M38_mgp02;Dbxref=GeneID:74848145;Name=ND1;gbkey=Gene;gene=ND1;gene_biotype=protein_coding;locus_tag=N4M38_mgp02
+NC_066051.1	RefSeq	CDS	920	1924	.	+	0	ID=cds-YP_010471327.1;Parent=gene-N4M38_mgp02;Dbxref=GenBank:YP_010471327.1,GeneID:74848145;Name=YP_010471327.1;gbkey=CDS;gene=ND1;locus_tag=N4M38_mgp02;product=NADH dehydrogenase subunit 1;protein_id=YP_010471327.1;transl_table=4
+NC_066051.1	RefSeq	gene	1931	2287	.	+	.	ID=gene-N4M38_mgp03;Dbxref=GeneID:74848146;Name=ND3;gbkey=Gene;gene=ND3;gene_biotype=protein_coding;locus_tag=N4M38_mgp03
+NC_066051.1	RefSeq	CDS	1931	2287	.	+	0	ID=cds-YP_010471328.1;Parent=gene-N4M38_mgp03;Dbxref=GenBank:YP_010471328.1,GeneID:74848146;Name=YP_010471328.1;gbkey=CDS;gene=ND3;locus_tag=N4M38_mgp03;product=NADH dehydrogenase subunit 3;protein_id=YP_010471328.1;transl_table=4
+NC_066051.1	RefSeq	gene	3686	3756	.	+	.	ID=gene-N4M38_mgt01;Dbxref=GeneID:74848147;Name=trnW;gbkey=Gene;gene=trnW;gene_biotype=tRNA;locus_tag=N4M38_mgt01
+NC_066051.1	RefSeq	tRNA	3686	3756	.	+	.	ID=rna-N4M38_mgt01;Parent=gene-N4M38_mgt01;Dbxref=GeneID:74848147;gbkey=tRNA;gene=trnW;locus_tag=N4M38_mgt01;product=tRNA-Trp
+NC_066051.1	RefSeq	exon	3686	3756	.	+	.	ID=exon-N4M38_mgt01-1;Parent=rna-N4M38_mgt01;Dbxref=GeneID:74848147;gbkey=tRNA;gene=trnW;locus_tag=N4M38_mgt01;product=tRNA-Trp
+NC_066051.1	RefSeq	gene	4026	5183	.	+	.	ID=gene-N4M38_mgp13;Dbxref=GeneID:74848148;Name=ND2;gbkey=Gene;gene=ND2;gene_biotype=protein_coding;locus_tag=N4M38_mgp13
+NC_066051.1	RefSeq	CDS	4026	5183	.	+	0	ID=cds-YP_010471329.1;Parent=gene-N4M38_mgp13;Dbxref=GenBank:YP_010471329.1,GeneID:74848148;Name=YP_010471329.1;gbkey=CDS;gene=ND2;locus_tag=N4M38_mgp13;product=NADH dehydrogenase subunit 2;protein_id=YP_010471329.1;transl_table=4
+NC_066051.1	RefSeq	gene	5233	6314	.	+	.	ID=gene-N4M38_mgr02;Dbxref=GeneID:74848149;Name=rrn12;gbkey=Gene;gene=rrn12;gene_biotype=rRNA;locus_tag=N4M38_mgr02
+NC_066051.1	RefSeq	rRNA	5233	6314	.	+	.	ID=rna-N4M38_mgr02;Parent=gene-N4M38_mgr02;Dbxref=GeneID:74848149;gbkey=rRNA;gene=rrn12;locus_tag=N4M38_mgr02;product=12S ribosomal RNA
+NC_066051.1	RefSeq	exon	5233	6314	.	+	.	ID=exon-N4M38_mgr02-1;Parent=rna-N4M38_mgr02;Dbxref=GeneID:74848149;gbkey=rRNA;gene=rrn12;locus_tag=N4M38_mgr02;product=12S ribosomal RNA
+NC_066051.1	RefSeq	gene	6368	7108	.	+	.	ID=gene-N4M38_mgp12;Dbxref=GeneID:74848150;Name=COX2;gbkey=Gene;gene=COX2;gene_biotype=protein_coding;locus_tag=N4M38_mgp12
+NC_066051.1	RefSeq	CDS	6368	7108	.	+	0	ID=cds-YP_010471330.1;Parent=gene-N4M38_mgp12;Dbxref=GenBank:YP_010471330.1,GeneID:74848150;Name=YP_010471330.1;gbkey=CDS;gene=COX2;locus_tag=N4M38_mgp12;product=cytochrome c oxidase subunit II;protein_id=YP_010471330.1;transl_table=4
+NC_066051.1	RefSeq	gene	7732	9198	.	+	.	ID=gene-N4M38_mgp11;Dbxref=GeneID:74848151;Name=ND4;gbkey=Gene;gene=ND4;gene_biotype=protein_coding;locus_tag=N4M38_mgp11
+NC_066051.1	RefSeq	CDS	7732	9198	.	+	0	ID=cds-YP_010471331.1;Parent=gene-N4M38_mgp11;Dbxref=GenBank:YP_010471331.1,GeneID:74848151;Name=YP_010471331.1;gbkey=CDS;gene=ND4;locus_tag=N4M38_mgp11;product=NADH dehydrogenase subunit 4;protein_id=YP_010471331.1;transl_table=4
+NC_066051.1	RefSeq	gene	9203	9811	.	+	.	ID=gene-N4M38_mgp10;Dbxref=GeneID:74848152;Name=ND6;gbkey=Gene;gene=ND6;gene_biotype=protein_coding;locus_tag=N4M38_mgp10
+NC_066051.1	RefSeq	CDS	9203	9811	.	+	0	ID=cds-YP_010471332.1;Parent=gene-N4M38_mgp10;Dbxref=GenBank:YP_010471332.1,GeneID:74848152;Name=YP_010471332.1;gbkey=CDS;gene=ND6;locus_tag=N4M38_mgp10;product=NADH dehydrogenase subunit 6;protein_id=YP_010471332.1;transl_table=4
+NC_066051.1	RefSeq	gene	9839	10990	.	+	.	ID=gene-N4M38_mgp09;Dbxref=GeneID:74848153;Name=CYTB;gbkey=Gene;gene=CYTB;gene_biotype=protein_coding;locus_tag=N4M38_mgp09
+NC_066051.1	RefSeq	CDS	9839	10990	.	+	0	ID=cds-YP_010471333.1;Parent=gene-N4M38_mgp09;Dbxref=GenBank:YP_010471333.1,GeneID:74848153;Name=YP_010471333.1;gbkey=CDS;gene=CYTB;locus_tag=N4M38_mgp09;product=cytochrome b;protein_id=YP_010471333.1;transl_table=4
+NC_066051.1	RefSeq	gene	11412	11482	.	+	.	ID=gene-N4M38_mgt02;Dbxref=GeneID:74848154;Name=trnM;gbkey=Gene;gene=trnM;gene_biotype=tRNA;locus_tag=N4M38_mgt02
+NC_066051.1	RefSeq	tRNA	11412	11482	.	+	.	ID=rna-N4M38_mgt02;Parent=gene-N4M38_mgt02;Dbxref=GeneID:74848154;gbkey=tRNA;gene=trnM;locus_tag=N4M38_mgt02;product=tRNA-Met
+NC_066051.1	RefSeq	exon	11412	11482	.	+	.	ID=exon-N4M38_mgt02-1;Parent=rna-N4M38_mgt02;Dbxref=GeneID:74848154;gbkey=tRNA;gene=trnM;locus_tag=N4M38_mgt02;product=tRNA-Met
+NC_066051.1	RefSeq	gene	11485	13677	.	+	.	ID=gene-N4M38_mgr01;Dbxref=GeneID:74848155;Name=rrn16;gbkey=Gene;gene=rrn16;gene_biotype=rRNA;locus_tag=N4M38_mgr01
+NC_066051.1	RefSeq	rRNA	11485	13677	.	+	.	ID=rna-N4M38_mgr01;Parent=gene-N4M38_mgr01;Dbxref=GeneID:74848155;gbkey=rRNA;gene=rrn16;locus_tag=N4M38_mgr01;product=16S ribosomal RNA
+NC_066051.1	RefSeq	exon	11485	13677	.	+	.	ID=exon-N4M38_mgr01-1;Parent=rna-N4M38_mgr01;Dbxref=GeneID:74848155;gbkey=rRNA;gene=rrn16;locus_tag=N4M38_mgr01;product=16S ribosomal RNA
+NC_066051.1	RefSeq	gene	13749	14537	.	+	.	ID=gene-N4M38_mgp08;Dbxref=GeneID:74848156;Name=COX3;gbkey=Gene;gene=COX3;gene_biotype=protein_coding;locus_tag=N4M38_mgp08
+NC_066051.1	RefSeq	CDS	13749	14537	.	+	0	ID=cds-YP_010471334.1;Parent=gene-N4M38_mgp08;Dbxref=GenBank:YP_010471334.1,GeneID:74848156;Name=YP_010471334.1;gbkey=CDS;gene=COX3;locus_tag=N4M38_mgp08;product=cytochrome c oxidase subunit III;protein_id=YP_010471334.1;transl_table=4
+NC_066051.1	RefSeq	gene	14609	17033	.	+	.	ID=gene-N4M38_mgp07;Dbxref=GeneID:74848161;Name=COX1;gbkey=Gene;gene=COX1;gene_biotype=protein_coding;locus_tag=N4M38_mgp07
+NC_066051.1	RefSeq	CDS	14609	15499	.	+	0	ID=cds-YP_010471335.1;Parent=gene-N4M38_mgp07;Dbxref=GenBank:YP_010471335.1,GeneID:74848161;Name=YP_010471335.1;gbkey=CDS;gene=COX1;locus_tag=N4M38_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_010471335.1;transl_table=4
+NC_066051.1	RefSeq	CDS	16353	17033	.	+	0	ID=cds-YP_010471335.1;Parent=gene-N4M38_mgp07;Dbxref=GenBank:YP_010471335.1,GeneID:74848161;Name=YP_010471335.1;gbkey=CDS;gene=COX1;locus_tag=N4M38_mgp07;product=cytochrome c oxidase subunit I;protein_id=YP_010471335.1;transl_table=4
+NC_066051.1	RefSeq	gene	17230	17529	.	+	.	ID=gene-N4M38_mgp06;Dbxref=GeneID:74848157;Name=ND4L;gbkey=Gene;gene=ND4L;gene_biotype=protein_coding;locus_tag=N4M38_mgp06
+NC_066051.1	RefSeq	CDS	17230	17529	.	+	0	ID=cds-YP_010471336.1;Parent=gene-N4M38_mgp06;Dbxref=GenBank:YP_010471336.1,GeneID:74848157;Name=YP_010471336.1;gbkey=CDS;gene=ND4L;locus_tag=N4M38_mgp06;product=NADH dehydrogenase subunit 4L;protein_id=YP_010471336.1;transl_table=4
+NC_066051.1	RefSeq	gene	17554	17769	.	+	.	ID=gene-N4M38_mgp05;Dbxref=GeneID:74848158;Name=ATP8;gbkey=Gene;gene=ATP8;gene_biotype=protein_coding;locus_tag=N4M38_mgp05
+NC_066051.1	RefSeq	CDS	17554	17769	.	+	0	ID=cds-YP_010471337.1;Parent=gene-N4M38_mgp05;Dbxref=GenBank:YP_010471337.1,GeneID:74848158;Name=YP_010471337.1;gbkey=CDS;gene=ATP8;locus_tag=N4M38_mgp05;product=ATP synthase F0 subunit 8;protein_id=YP_010471337.1;transl_table=4
+NC_066051.1	RefSeq	gene	17803	18492	.	+	.	ID=gene-N4M38_mgp04;Dbxref=GeneID:74848159;Name=ATP6;gbkey=Gene;gene=ATP6;gene_biotype=protein_coding;locus_tag=N4M38_mgp04
+NC_066051.1	RefSeq	CDS	17803	18492	.	+	0	ID=cds-YP_010471338.1;Parent=gene-N4M38_mgp04;Dbxref=GenBank:YP_010471338.1,GeneID:74848159;Name=YP_010471338.1;gbkey=CDS;gene=ATP6;locus_tag=N4M38_mgp04;product=ATP synthase F0 subunit 6;protein_id=YP_010471338.1;transl_table=4
+

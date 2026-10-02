@@ -1,0 +1,43 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region LC005413.1 1 16623
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=237398
+LC005413.1	DDBJ	region	1	16623	.	+	.	ID=LC005413.1:1..16623;Dbxref=taxon:237398;Is_circular=true;Name=MT;gbkey=Src;genome=mitochondrion;mol_type=genomic DNA
+LC005413.1	DDBJ	CDS	179	1144	.	-	0	ID=cds-BAR45993.1;Dbxref=NCBI_GP:BAR45993.1;Name=BAR45993.1;Note=orf966;gbkey=CDS;product=hypothetical protein;protein_id=BAR45993.1;transl_table=4
+LC005413.1	DDBJ	CDS	1174	1488	.	-	0	ID=cds-BAR45994.1;Dbxref=NCBI_GP:BAR45994.1;Name=BAR45994.1;Note=orf315;gbkey=CDS;product=hypothetical protein;protein_id=BAR45994.1;transl_table=4
+LC005413.1	DDBJ	rRNA	1489	3311	.	-	.	ID=rna-LC005413.1:1489..3311;gbkey=rRNA;product=16S ribosomal RNA
+LC005413.1	DDBJ	exon	1489	3311	.	-	.	ID=exon-LC005413.1:1489..3311-1;Parent=rna-LC005413.1:1489..3311;gbkey=rRNA;product=16S ribosomal RNA
+LC005413.1	DDBJ	gene	3312	4892	.	-	.	ID=gene-cox1;Name=cox1;gbkey=Gene;gene=cox1;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	3312	4892	.	-	0	ID=cds-BAR45995.1;Parent=gene-cox1;Dbxref=NCBI_GP:BAR45995.1;Name=BAR45995.1;gbkey=CDS;gene=cox1;product=cytochrome c oxidase subunit I;protein_id=BAR45995.1;transl_table=4
+LC005413.1	DDBJ	gene	4965	5711	.	+	.	ID=gene-cox2;Name=cox2;gbkey=Gene;gene=cox2;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	4965	5711	.	+	0	ID=cds-BAR45996.1;Parent=gene-cox2;Dbxref=NCBI_GP:BAR45996.1;Name=BAR45996.1;gbkey=CDS;gene=cox2;product=cytochrome c oxidase subunit II;protein_id=BAR45996.1;transl_table=4
+LC005413.1	DDBJ	tRNA	5717	5786	.	+	.	ID=rna-LC005413.1:5717..5786;gbkey=tRNA;product=tRNA-Trp
+LC005413.1	DDBJ	exon	5717	5786	.	+	.	ID=exon-LC005413.1:5717..5786-1;Parent=rna-LC005413.1:5717..5786;gbkey=tRNA;product=tRNA-Trp
+LC005413.1	DDBJ	gene	5792	5995	.	+	.	ID=gene-atp8;Name=atp8;gbkey=Gene;gene=atp8;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	5792	5995	.	+	0	ID=cds-BAR45997.1;Parent=gene-atp8;Dbxref=NCBI_GP:BAR45997.1;Name=BAR45997.1;Note=ATPase 8;gbkey=CDS;gene=atp8;product=ATPase subunit 8;protein_id=BAR45997.1;transl_table=4
+LC005413.1	DDBJ	gene	5995	6699	.	+	.	ID=gene-atp6;Name=atp6;gbkey=Gene;gene=atp6;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	5995	6699	.	+	0	ID=cds-BAR45998.1;Parent=gene-atp6;Dbxref=NCBI_GP:BAR45998.1;Name=BAR45998.1;Note=ATPase 6;gbkey=CDS;gene=atp6;product=ATPase subunit 6;protein_id=BAR45998.1;transl_table=4
+LC005413.1	DDBJ	gene	6699	7484	.	+	.	ID=gene-cox3;Name=cox3;gbkey=Gene;gene=cox3;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	6699	7484	.	+	0	ID=cds-BAR45999.1;Parent=gene-cox3;Dbxref=NCBI_GP:BAR45999.1;Name=BAR45999.1;gbkey=CDS;gene=cox3;product=cytochrome c oxidase subunit III;protein_id=BAR45999.1;transl_table=4
+LC005413.1	DDBJ	tRNA	7496	7566	.	+	.	ID=rna-LC005413.1:7496..7566;gbkey=tRNA;product=tRNA-Met
+LC005413.1	DDBJ	exon	7496	7566	.	+	.	ID=exon-LC005413.1:7496..7566-1;Parent=rna-LC005413.1:7496..7566;gbkey=tRNA;product=tRNA-Met
+LC005413.1	DDBJ	gene	7568	8887	.	+	.	ID=gene-nad2;Name=nad2;gbkey=Gene;gene=nad2;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	7568	8887	.	+	0	ID=cds-BAR46000.1;Parent=gene-nad2;Dbxref=NCBI_GP:BAR46000.1;Name=BAR46000.1;gbkey=CDS;gene=nad2;product=NADH dehydrogenase subunit 2;protein_id=BAR46000.1;transl_table=4
+LC005413.1	DDBJ	gene	8888	10705	.	+	.	ID=gene-nad5;Name=nad5;gbkey=Gene;gene=nad5;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	8888	10705	.	+	0	ID=cds-BAR46001.1;Parent=gene-nad5;Dbxref=NCBI_GP:BAR46001.1;Name=BAR46001.1;gbkey=CDS;gene=nad5;product=NADH dehydrogenase subunit 5;protein_id=BAR46001.1;transl_table=4
+LC005413.1	DDBJ	rRNA	10706	11663	.	+	.	ID=rna-LC005413.1:10706..11663;gbkey=rRNA;product=12S ribosomal RNA
+LC005413.1	DDBJ	exon	10706	11663	.	+	.	ID=exon-LC005413.1:10706..11663-1;Parent=rna-LC005413.1:10706..11663;gbkey=rRNA;product=12S ribosomal RNA
+LC005413.1	DDBJ	gene	11664	12236	.	+	.	ID=gene-nad6;Name=nad6;gbkey=Gene;gene=nad6;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	11664	12236	.	+	0	ID=cds-BAR46002.1;Parent=gene-nad6;Dbxref=NCBI_GP:BAR46002.1;Name=BAR46002.1;gbkey=CDS;gene=nad6;product=NADH dehydrogenase subunit 6;protein_id=BAR46002.1;transl_table=4
+LC005413.1	DDBJ	gene	12190	12549	.	+	.	ID=gene-nad3;Name=nad3;gbkey=Gene;gene=nad3;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	12190	12549	.	+	0	ID=cds-BAR46003.1;Parent=gene-nad3;Dbxref=NCBI_GP:BAR46003.1;Name=BAR46003.1;gbkey=CDS;gene=nad3;product=NADH dehydrogenase subunit 3;protein_id=BAR46003.1;transl_table=4
+LC005413.1	DDBJ	gene	12540	12842	.	+	.	ID=gene-nad4L;Name=nad4L;gbkey=Gene;gene=nad4L;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	12540	12842	.	+	0	ID=cds-BAR46004.1;Parent=gene-nad4L;Dbxref=NCBI_GP:BAR46004.1;Name=BAR46004.1;gbkey=CDS;gene=nad4L;product=NADH dehydrogenase subunit 4L;protein_id=BAR46004.1;transl_table=4
+LC005413.1	DDBJ	gene	12842	13813	.	+	.	ID=gene-nad1;Name=nad1;gbkey=Gene;gene=nad1;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	12842	13813	.	+	0	ID=cds-BAR46005.1;Parent=gene-nad1;Dbxref=NCBI_GP:BAR46005.1;Name=BAR46005.1;gbkey=CDS;gene=nad1;product=NADH dehydrogenase subunit 1;protein_id=BAR46005.1;transl_table=4
+LC005413.1	DDBJ	gene	13814	15256	.	+	.	ID=gene-nad4;Name=nad4;gbkey=Gene;gene=nad4;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	13814	15256	.	+	0	ID=cds-BAR46006.1;Parent=gene-nad4;Dbxref=NCBI_GP:BAR46006.1;Name=BAR46006.1;gbkey=CDS;gene=nad4;product=NADH dehydrogenase subunit 4;protein_id=BAR46006.1;transl_table=4
+LC005413.1	DDBJ	gene	15259	16398	.	+	.	ID=gene-cytb;Name=cytb;gbkey=Gene;gene=cytb;gene_biotype=protein_coding
+LC005413.1	DDBJ	CDS	15259	16398	.	+	0	ID=cds-BAR46007.1;Parent=gene-cytb;Dbxref=NCBI_GP:BAR46007.1;Name=BAR46007.1;gbkey=CDS;gene=cytb;product=cytochrome b;protein_id=BAR46007.1;transl_table=4
+
