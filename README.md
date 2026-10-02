@@ -109,4 +109,4 @@ See [`LICENSE.md`](LICENSE.md). The manuscript citation will be added on accepta
 
 ## Contact
 
-Longjun Wu lab — see https://cnidosite.org/contact.php
+Longjun Wu lab — see https://longjunwulab.org/
