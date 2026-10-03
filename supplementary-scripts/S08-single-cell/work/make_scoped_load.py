@@ -1,0 +1,168 @@
+#!/usr/bin/env python
+"""Turn a full load_singlecell.sql into a dataset-scoped one.
+
+Why this exists
+---------------
+`pipeline/06_aggregate_qc_table.py` emits a *full reload*: it opens with an
+unconditional `DELETE FROM` on each of the five tables and then re-INSERTs every
+dataset the local tree knows about.  Run against production that is only safe if
+the local tree is a superset of what is live -- and on 2026-09-28 it was not:
+
+  * `ACOER_lifecycle` (live: published, 8 cell types, 63,230 cells, cnidosite
+    row 27) has no local directory at all, so the reload would have DELETEd the
+    dataset off the public site.
+  * `OARBU_symbiotic` is live as another session's published / 28-type build but
+    de_novo / 16-type in our tree, so the reload would have rolled it back.
+
+So instead of the whole-table DELETE we scope every statement to the datasets we
+actually mean to refresh.  Everything else in the database is untouched by
+construction, not by review.
+
+The input is parsed rather than pattern-matched: each INSERT names its columns
+explicitly, so the dataset_id is looked up by *column name* and the value taken
+from the matching tuple position.  That keeps it correct if a column is ever
+reordered, and it cannot be fooled by a gene or cell-type value that happens to
+look like a dataset id.
+
+Usage:
+    python work/make_scoped_load.py --in work/scratch_load_full.sql \
+        --out work/load_5datasets.sql --datasets NVECT_2month,NVECT_nervous,...
+"""
+import argparse
+import sys
+
+TABLES = ["singlecell_markers", "singlecell_celltype", "singlecell_qc",
+          "singlecell_atlas_map", "singlecell_atlas"]
+
+# Order is not cosmetic.  singlecell_celltype and singlecell_markers both carry
+# `FOREIGN KEY (dataset_id) REFERENCES singlecell_atlas (dataset_id)` with ON
+# DELETE CASCADE, so a child row cannot be inserted before its parent exists --
+# doing that fails the whole transaction with ER_NO_REFERENCED_ROW_2.  Deletes go
+# child-first, inserts parent-first.
+DELETE_ORDER = ["singlecell_markers", "singlecell_celltype", "singlecell_qc",
+                "singlecell_atlas_map", "singlecell_atlas"]
+INSERT_ORDER = ["singlecell_atlas", "singlecell_qc", "singlecell_celltype",
+                "singlecell_markers", "singlecell_atlas_map"]
+
+
+def split_top_level(s):
+    """Split a VALUES tuple body on commas that are not inside a string.
+
+    Handles both the '' and \\' escapes that sql_escape() may emit.
+    """
+    out, cur, i, q = [], [], 0, False
+    while i < len(s):
+        c = s[i]
+        if q:
+            if c == "\\" and i + 1 < len(s):
+                cur.append(s[i:i + 2]); i += 2; continue
+            if c == "'":
+                if i + 1 < len(s) and s[i + 1] == "'":
+                    cur.append("''"); i += 2; continue
+                q = False
+            cur.append(c)
+        else:
+            if c == "'":
+                q = True; cur.append(c)
+            elif c == ",":
+                out.append("".join(cur).strip()); cur = []
+            else:
+                cur.append(c)
+        i += 1
+    out.append("".join(cur).strip())
+    return out
+
+
+def parse_insert(line):
+    """-> (table, {col: value}, raw_line) or None if not a plain INSERT."""
+    if not line.startswith("INSERT INTO "):
+        return None
+    try:
+        head, rest = line.split(" VALUES ", 1)
+    except ValueError:
+        return None
+    if not rest.rstrip().endswith(";"):
+        return None
+    table = head[len("INSERT INTO "):].split(" ")[0]
+    cols = head[head.index("(") + 1:head.rindex(")")]
+    cols = [c.strip().strip("`") for c in cols.split(",")]
+    vals = split_top_level(rest.rstrip().rstrip(";").strip()[1:-1])
+    if len(cols) != len(vals):
+        raise SystemExit(f"column/value count mismatch in {table}: "
+                         f"{len(cols)} vs {len(vals)}\n  {line[:160]}")
+    return table, dict(zip(cols, vals)), line
+
+
+def unq(v):
+    return v[1:-1] if len(v) >= 2 and v[0] == "'" and v[-1] == "'" else v
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--in", dest="src", required=True)
+    ap.add_argument("--out", dest="dst", required=True)
+    ap.add_argument("--datasets", required=True)
+    a = ap.parse_args()
+
+    want = [d.strip() for d in a.datasets.split(",") if d.strip()]
+    wset = set(want)
+    for d in want:
+        if "'" in d:
+            raise SystemExit(f"refusing: quote in dataset id {d!r}")
+
+    kept = {t: [] for t in TABLES}
+    seen = {t: set() for t in TABLES}
+    other = set()
+    for raw in open(a.src):
+        p = parse_insert(raw.rstrip("\n"))
+        if not p:
+            continue
+        table, row, line = p
+        if table not in kept:
+            continue
+        did = unq(row.get("dataset_id", ""))
+        if did in wset:
+            kept[table].append(line)
+            seen[table].add(did)
+        else:
+            other.add(did)
+
+    out = [
+        "-- Scoped refresh of cell-type annotation for the datasets below.",
+        "-- Generated by work/make_scoped_load.py from "
+        + a.src.split("/")[-1],
+        "--",
+        "-- NOT the full reload emitted by 06_aggregate_qc_table.py: every DELETE",
+        "-- is scoped by dataset_id, so datasets this tree does not carry",
+        "-- (e.g. ACOER_lifecycle) and datasets another session owns",
+        "-- (OARBU_symbiotic) are left exactly as they are.",
+        "--",
+        "-- Load with:  mysql -ujackie -p<REDACTED> cnidaria < " + a.dst,
+        "",
+        "START TRANSACTION;",
+        "",
+    ]
+    inlist = ", ".join("'%s'" % d for d in want)
+    for t in DELETE_ORDER:
+        out.append(f"DELETE FROM {t} WHERE dataset_id IN ({inlist});")
+    out.append("")
+    for t in INSERT_ORDER:
+        if kept[t]:
+            out.append(f"-- {t}: {len(kept[t])} rows")
+            out += kept[t]
+            out.append("")
+    out += ["COMMIT;", ""]
+
+    with open(a.dst, "w") as fh:
+        fh.write("\n".join(out))
+
+    print(f"wrote {a.dst}")
+    for t in TABLES:
+        miss = wset - seen[t]
+        print(f"  {t:<22} {len(kept[t]):>6} rows"
+              + (f"   MISSING: {sorted(miss)}" if miss else ""))
+    print(f"  ({len(other)} other datasets in the source were ignored)")
+
+
+if __name__ == "__main__":
+    main()

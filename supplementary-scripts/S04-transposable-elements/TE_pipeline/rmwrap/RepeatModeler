@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# RepeatModeler shim -- make a restarted species RESUME instead of starting over.
+#
+# Why this exists
+# ---------------
+# EDTA_raw.pl:569 only skips the LINE module if the FINAL product
+# `<genome>-families.fa` exists, and that file is written only after all 5 rounds
+# finish.  Mid-run it is absent, so a restart takes the `else` branch and calls
+# RepeatModeler WITHOUT -recoverDir (EDTA_raw.pl:576).  RepeatModeler then hits
+# the else at RepeatModeler:484-496, calls createTempDir(), makes a brand new
+# RM_<pid>.<date>/ and starts at ROUND 1 -- silently discarding every completed
+# round (measured: Sanderia_malayensis had round-1..5 on disk).
+#
+# RepeatModeler *can* resume: with -recoverDir it reuses that directory and its
+# recovery block (RepeatModeler:675-760) finds the last round with a non-empty
+# consensi.fa, backs up the incomplete one, and continues from the next round.
+# EDTA just never passes the flag.  This shim adds it.
+#
+# It is INERT unless TE_RM_RESUME=1, which common.sh sets.  That matters: with
+# `--overwrite 1` EDTA deliberately reruns the module, and resuming there would
+# silently ignore the user's intent.  Without the variable this is a pure
+# pass-through.
+#
+# Injected via EDTA.pl's own --repeatmodeler option (EDTA.pl:184 -> :475), so no
+# EDTA source is patched.  EDTA calls "${repeatmodeler}RepeatModeler" by absolute
+# path, which is why a PATH shim would not have worked.
+set -uo pipefail
+
+REAL="${TE_RM_REAL:-/home/$USER/miniconda3/envs/EDTA/bin/RepeatModeler}"
+
+# Inert by default: not our resumable pipeline -> behave exactly like the real one.
+if [[ "${TE_RM_RESUME:-0}" != "1" ]]; then
+  exec "$REAL" "$@"
+fi
+
+args=("$@")
+have_recover=0
+i=0
+while (( i < $# )); do
+  case "${!i}" in
+    -recoverDir|-recoverDir=*) have_recover=1 ;;
+  esac
+  i=$((i + 1))
+done
+
+if (( have_recover )); then
+  exec "$REAL" "${args[@]}"
+fi
+
+# RepeatModeler is invoked with cwd = <genome>.EDTA.raw/LINE, so the previous
+# run's directories are the RM_* entries right here.
+best=""; best_round=0
+for d in RM_*/; do
+  [[ -d "$d" ]] || continue
+  r=0
+  for k in 6 5 4 3 2 1; do
+    if [[ -s "${d}round-$k/consensi.fa" ]]; then r=$k; break; fi
+  done
+  if (( r > best_round )); then best_round=$r; best="${d%/}"; fi
+done
+
+if (( best_round == 0 )); then
+  # Nothing to resume from (a genuine first run) -- stay transparent.
+  exec "$REAL" "${args[@]}"
+fi
+
+echo "[rmwrap] previous run found: $best has round-$best_round complete -> adding -recoverDir $best" >&2
+
+if [[ "${TE_RM_DRYRUN:-0}" == "1" ]]; then
+  echo "[rmwrap] DRYRUN: would exec: $REAL ${args[*]} -recoverDir $best" >&2
+  exit 0
+fi
+
+# Absolute path: RepeatModeler feeds this to Cwd::abs_path (RepeatModeler:481),
+# which is happiest with an existing absolute path.  $PWD, not `.` -- the shim
+# may be run from a directory that is later replaced by a symlink.
+exec "$REAL" "${args[@]}" -recoverDir "$PWD/$best"

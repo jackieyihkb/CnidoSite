@@ -1,0 +1,27 @@
+library("gplots")
+library("ROCR")
+pdf("ROC_pcc.pdf")
+go.data5=read.delim("data_ROC_in6_PCC")
+go.data6=read.delim("data_ROC_in7_PCC")
+go.data7=read.delim("data_ROC_in8_PCC")
+go.data8=read.delim("data_ROC_in9_PCC")
+pred.go6=prediction(go.data6[,1],go.data6[,2]) 
+pref.go6=performance(pred.go6,"tpr","fpr")
+auc.go6=performance(pred.go6,"auc")@y.values
+auc.go6
+library("pROC")
+citation("pROC")	
+library("pROC")
+plot.roc(go.data6[,2],go.data6[,1], print.thres=FALSE, col="red")
+roc(go.data6[,2],go.data6[,1])
+lines.roc(go.data5[,2],go.data5[,1], col="black")
+lines.roc(go.data7[,2],go.data7[,1], col="green")
+lines.roc(go.data8[,2],go.data8[,1], col="blue")
+legend("topleft",legend=c("PCC 0.6","PCC 0.7","PCC 0.8","PCC 0.9"),col=c( "black","red", "green","blue"),pch=15,bty="o")
+roc(go.data5[,2],go.data5[,1])
+roc(go.data6[,2],go.data6[,1])
+roc(go.data7[,2],go.data7[,1])
+roc(go.data8[,2],go.data8[,1])
+
+legend("bottomright",legend=c("AUC=0.6573","AUC=0.6806","AUC=0.6667","AUC=0.6426"),col=c( "black","red", "green","blue"),pch=15,bty="o")
+
