@@ -6,14 +6,6 @@ directory of the same number. Alongside the file list, this manifest carries the
 tables the Supplementary Methods refers to it for: the software versions recorded for
 each module, and the summary counts of the data served.
 
-**Where this lives.** This directory is part of the CnidoSite archive at
-<https://github.com/jackieyihkb/CnidoSite>, at the repository root. Every `# from:`
-citation in the Supplementary Methods is a path into this tree, so a citation such as
-`supplementary-scripts/S03-genome-annotation/genome/1.py:56` resolves against
-<https://github.com/jackieyihkb/CnidoSite/blob/master/supplementary-scripts/S03-genome-annotation/genome/1.py>.
-The prose records that refer to these scripts are in
-[`scripts/pipelines/`](../scripts/pipelines/), one file per analysis module.
-
 Generated: 2026-10-02 17:58:02   
 Scripts: 271
 
@@ -103,6 +95,14 @@ pinned in a module's environment. A tool whose version was never printed is list
 
 Counts are read from the production database on 2026-10-02 and are the figures the
 resource's own statistics page reports.
+
+> **Two of these do not reconcile with the archive, and both are left standing rather than
+> one being chosen.** The repository's own `docs/DATA_OVERVIEW.md` records **~3.7 M TE
+> records** (580,259 of them AIDSS) against the 46,286,391 elements below, and
+> **13,111,410 rows in `trans_assembly`** against the 5,156,916 predicted transcripts below.
+> Each pair may be measuring different things — rows including isoforms versus transcripts,
+> or raw elements versus filtered table rows — but that has not been established. Settling it
+> needs the production database.
 
 | Dataset | Count |
 |---|---|
