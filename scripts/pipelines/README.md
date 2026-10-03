@@ -71,9 +71,8 @@ marked as external; the supplementary text states the same exclusion in §S1 and
 | [`07-single-cell.md`](07-single-cell.md) | Single-cell ingest and re-analysis | §S8 | Two of three families recovered; the exporter behind the 15 published datasets is a gap |
 | [`08-comparative-genomics.sh`](08-comparative-genomics.sh) | OrthoFinder, species tree, gene trees | §S7 | OrthoFinder, MAFFT, BMGE and the four IQ-TREE runs recovered; the AMAS concatenation, the drop3/drop5 alignments and the macrosynteny commands are gaps |
 | [`09-metagenome-mags.sh`](09-metagenome-mags.sh) | MAG annotation | §S11 | KofamScan + InterProScan recovered; assembly, binning and taxonomy are gaps |
-| [`10-database-build.sh`](10-database-build.sh) | Loading the curated data into MySQL | §S13 | Fully recovered |
+| [`10-database-build.sh`](10-database-build.sh) | Loading the curated data into MySQL | §S13, §S12 | Fully recovered; the phenotype and trait builders of §S12 are listed in section 2 |
 | [`11-proteome.md`](11-proteome.md) | Proteomics re-analysis (Comet + Percolator) | §S9 | The Comet and Crux/Percolator commands recovered, with the parameter settings |
-| [`12-phenotype-traits.sh`](12-phenotype-traits.sh) | Phenotype, trait data and mitogenomes | §S12 | Recovered |
 | [`TO-BE-SUPPLIED.md`](TO-BE-SUPPLIED.md) | — | Appendix | The items only the authors can supply |
 
 Of these, **`01-genome-assembly.sh` is the one file whose contents are not CnidoSite

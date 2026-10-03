@@ -83,6 +83,42 @@ $PHP /var/www/cnidosite-tools/src/octd_unused_columns.php            # OCTD colu
 # audit_*.py, check_links.py, fontscale.py, shot_pages.py). Those operate on the source
 # tree, not on the database; they are not part of rebuilding a copy of the resource.
 
+# ---------------------------------------------------------------------------
+# 2b. Phenotype, trait and mitogenome tables   (§S12)
+# ---------------------------------------------------------------------------
+# The phenotype builders above assemble the table from the Octocoral Trait Database
+# (OctocoralTraits v2.2, Zenodo record 14228404, CC BY 4.0), the legacy non-Octocorallia
+# rows, the WoRMS Marine Species Traits service and the Pelagic Species Trait Database.
+# The table is rebuilt as a staging table and swapped in, so the live table is never
+# written in place:
+#   php build_phenotype_v2.php            # dry run: read CSV + old table, report, no DB write
+#   php build_phenotype_v2.php --apply    # build (DROP the old v2 first)
+#   php build_phenotype_v2.php --report   # reconciliation report on an existing v2
+#   php build_phenotype_refs.php          # trait dictionary + literature table
+#   php fetch_worms_traits.php --resolve | --attributes | --load --apply --table phenotype_v2
+#   php fetch_worms_traits.php --shard k/n   # by crc32(AphiaID) % n; keep concurrency <= 3-4
+#   php pheno_worms_verify.php ; php pheno_v2_verify.php
+#   RENAME TABLE phenotype TO phenotype_old_20260927, phenotype_v2 TO phenotype
+#
+# WoRMS is queried through its REST API (`/AphiaRecordsByNames`, <= 500 names per call;
+# `/AphiaAttributesByAphiaID/{AphiaID}?include_inherited=true`, one identifier per call).
+# Its data are CC BY 4.0 with redistribution restricted, so only the cnidarian subset is
+# taken, with per-record attribution and a credit and back-link on the page.
+#
+# Two cautions recorded in the supplementary text: the resolved-name mapping must not be
+# presented as "the accepted name is X" (WoRMS's own `valid_name` field points to unrelated
+# taxa for some cnidarian entries), and the value column holds readings, not a standard
+# identifier.
+
+# Mitochondrial genomes — imported from NCBI, not assembled here. 173 species carry a
+# mitogenome record with 3,555 annotated features.
+#   php -d extension=mysqlnd.so -d extension=mysqli.so import.php [--commit]
+#   python3 fetch.py        # writes mito_fetch.json, reads plan.json, no database access
+
+# Palaeobiology — the 410 cnidarian fossil records behind `paleobiology.php` come from the
+# Paleobiology Database. **No ingestion script survives on any reachable host**; this is a
+# gap, listed in the supplementary text's Appendix. See TO-BE-SUPPLIED.md.
+
 # ===========================================================================
 # 3. Running SQL from the command line
 # ===========================================================================

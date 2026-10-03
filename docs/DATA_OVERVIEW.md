@@ -131,8 +131,15 @@ annotation tables are keyed by **protein-level** IDs; the site converts with
 `cnido_te_gene_proteins()`. Empty annotations for some species (SSIDE, ASP1, SMALA) are
 data gaps, not broken links.
 
-The commands behind this dataset are one of the outstanding gaps — see
-`scripts/pipelines/TO-BE-SUPPLIED.md` item 4.
+The commands behind this dataset are recovered: the served tables come from `TE_pipeline/`,
+deposited under `supplementary-scripts/S04-transposable-elements/`. Note that a second
+implementation on the working tree (`genome_TE/TE_pipeline/`) assigns `region` by a different
+rule and did **not** produce these tables — see `scripts/pipelines/02-transposable-elements.sh`.
+
+**The record count below does not reconcile with the supplementary text**, which gives
+58 species tables holding 46,286,391 elements against the ~3.7 M recorded here. One of the
+two is measuring something else; settling it needs the production database. Both figures are
+left standing rather than one being chosen.
 
 ---
 
@@ -177,8 +184,9 @@ protein tables. Each dataset carries both the re-analysis values (`cnido_*`: eng
 tolerances, FDR, decoy strategy) and the original study's own reported values (`orig_*`).
 
 * The re-analysis is **Comet 2026.01 with Percolator (Crux 4.2) FDR control at q ≤ 0.01**,
-  with a Comet-internal reversed 1:1 decoy. The exact invocations are not on this server;
-  the parameter *values* are in the table. See `scripts/pipelines/11-proteome.md`.
+  with a Comet-internal reversed 1:1 decoy. The commands survive in
+  `supplementary-scripts/S09-proteomics/2.pipeline/`, and the parameter *values* are in the
+  table. See `scripts/pipelines/11-proteome.md`.
 * **Six datasets identified no peptides.** Four are the Glu-C residual fractions of a
   MED-FASP experiment. For these the site prints the original study's own published result
   from `data/proteomic_published.json` instead of an empty panel.

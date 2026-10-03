@@ -13,9 +13,38 @@ Ordering is by importance to the reviewer's request, not by module.
 
 ---
 
+## Status: seven of the eighteen are now closed
+
+This list was written from a search of one server. Seven entries have since been closed from
+the material deposited under [`../../supplementary-scripts/`](../../supplementary-scripts/) —
+the scripts were on the working tree all along, and it was the *invocation* that was missing,
+not the command:
+
+| # | Item | Closed by |
+|---|---|---|
+| 1 | Species tree | OrthoFinder, MAFFT, BMGE and the four IQ-TREE runs recovered from `S07-comparative-genomics/tree/`. **Only the AMAS concatenation and the `drop3`/`drop5` alignments remain open** |
+| 2 | DHS `--nomodel --shift` | Closed by MACS2's own log banner: the published peaks *are* the `--nomodel --shift -100 --extsize 200` re-call |
+| 3 | ChIP per-sample peak calls | Closed by the MACS2 log banners (`chip_gfix.sh`, `logs_bampe/`, `logs_broad/`) |
+| 4 | TE commands | Closed: the served tables come from `TE_pipeline/`, which is deposited under `S04-transposable-elements/` |
+| 5b | Proteomics | Closed by `S09-proteomics/2.pipeline/` — the Comet and Crux/Percolator commands survive |
+| 13 | Co-expression networks | Closed by `S06-co-expression/` — construction scripts and edge thresholds recovered |
+| 14 | Core orthologs, gene trees | Closed by `S07-comparative-genomics/orthology/` — the six-step pipeline and the FastTree command |
+
+The remaining eleven stand. Five of them — MAG assembly/binning/taxonomy, miRNA-seq,
+macro- and microsynteny, and the Paleobiology ingestion — have no script on any reachable
+host at all, so no request to the authors can produce them; the other six are recorded below
+with what survives. Items 1, 2, 3 and 4 are retained in full because the searches they record
+are still the evidence for *why* the recovered command is the right one.
+
+---
+
 ## The five that matter most
 
 ### 1. Species tree — MAFFT, BMGE, AMAS, OrthoFinder and both IQ-TREE runs
+
+> **CLOSED, except AMAS.** The chain is recovered — see 08-comparative-genomics.sh §1–3.
+> What remains genuinely missing from this item is the AMAS concatenation and the
+> construction of the drop3 and drop5 alignments.
 
 **Missing:** the exact commands for the whole chain, and the 70-orthogroup / 24,975-site
 supermatrix they consumed.
@@ -33,6 +62,10 @@ method description, not a run record. The 70-OG matrix is not on this server at 
 **Also to confirm:** the letter says IQ-TREE v3.1.2; the binary here is v3.1.3.
 
 ### 2. DNase-seq / DHS — the `--nomodel --shift` question
+
+> **CLOSED.** MACS2 prints its invocation into the log banner of every run, so the re-call
+> is a run record, not a template. The published peaks ARE the `--nomodel --shift -100
+> --extsize 200` re-call — see `06-epigenome.md` §3.
 
 **Missing:** the alignment command, the peak-calling command, and the per-sample re-call log.
 
@@ -58,6 +91,9 @@ decision on which record is correct.
 
 ### 3. ChIP-seq — the per-sample peak-calling commands
 
+> **CLOSED.** Recovered from the MACS2 log banners (`chip_gfix.sh`,
+> `logs_bampe/*_macs2.log`, `logs_broad/*_macs2.log`) — see `06-epigenome.md` §2.
+
 **Missing:** the original commands and the 2026-09-22 re-call commands.
 
 **Surviving evidence:** a 95-line count summary
@@ -71,6 +107,11 @@ and H3K4me1`), plus a 353 MB pre-re-run database snapshot
 any command line. The re-call log is, per the letter itself, no longer on this machine.
 
 ### 4. Transposable elements — the commands behind the released data
+
+> **CLOSED.** The served tables come from `TE_pipeline/`, deposited under
+> `../../supplementary-scripts/S04-transposable-elements/` — see
+> `02-transposable-elements.sh` §1. The pipeline described below is the *second*
+> implementation, which did not produce them.
 
 **Missing:** the RepeatModeler v2.0.7 / RepeatMasker v4.2.1 commands that produced the
 3.7 M released TE records (580,259 of them AIDSS).
@@ -98,11 +139,14 @@ No BLAST, DIAMOND, eggNOG or TransDecoder run is recorded for this module.
 
 ---
 
-## The remaining thirteen
+## The remaining items
+
+(The heading said *thirteen* before the seven closures above. Eleven still stand; the three
+rows marked **CLOSED** are kept so the searches they record remain visible.)
 
 | # | Module | Missing | Surviving evidence |
 |---|---|---|---|
-| 5b | **Proteomics re-analysis** | every command in `2.pipeline/` (steps 02–07), and the contents of the `comet.params` that `04_run_search.py` writes | the wrapper names are published on `proteomic_dataset.php:480-485`; the parameter *values* are in the `proteomic_datasets` table (`cnido_*` columns). `grep -rilE 'comet\|crux\|percolator\|msconvert\|thermo'` over the whole `proteome/` tree returns zero matches, and no such binary exists on this host |
+| 5b | **Proteomics re-analysis** — **CLOSED**, see Status | only the per-dataset `comet.params` beyond the archived example | the commands are recovered in `11-proteome.md`, from the scripts in `S09-proteomics/2.pipeline/` |
 | 6 | **Single-cell, family C** | the exporter that produced the 15 published datasets (`pipeline_version: cnidosite-sc-1.0.0`) | `sc_ingest/` holds only the ACOER and OARBU families; whole-disk search for a writer of `embedding.bin` / `cellmeta.bin` finds nothing else |
 | 7 | **RNA-seq strand flag** | which single-end template was used: `--rna-strandness F` (`run_analysis.sh:34`) or `RF` (every other SE line) | both templates on disk; no successful run log exists |
 | 8 | **Single-cell platform** | whether the module should be described as Seurat v4.4 / LogNormalize (site) or scanpy + harmonypy + scrublet (code on disk: `OARBU/step1_analyse.py`, Python 3.11, numpy 2.4.6) | both |
@@ -110,8 +154,8 @@ No BLAST, DIAMOND, eggNOG or TransDecoder run is recorded for this module.
 | 10 | **MAG quality** | the CheckM2 1.1.0 invocation | `tools/mag_pipeline/fill_mags_checkm.sql:4` names CheckM2 1.1.0 and its DIAMOND database in a comment; the file contains only UPDATE statements |
 | 11 | **MAG taxonomy** | GTDB-Tk command | not installed, no trace |
 | 12 | **MAG ORF prediction** | prodigal / prokka commands | both installed in the base environment, neither has a project run |
-| 13 | **Co-expression networks** | the network-construction script, the per-species PCC floors, the top-K cap and the merge rule | the released tables themselves; the site applies `CNIDO_NET_TOP_K=100` and orders by PCC; the letter states the construction happened off-box |
-| 14 | **Core ortholog / gene trees** | the OrthoFinder and FastTree commands behind `/core/` and the 67,795 families in `/genetree/` | FastTree 2.1.11 and 2.2.0 are installed; `cco_stage/import_core.sh` is a loader, not a builder |
+| 13 | **Co-expression networks** — **CLOSED**, see Status | the negative-edge MR floor is inconsistent between drafts (`MR < 30` against `MR < 50`) and needs confirming against the delivered edge lists | recovered in `05-transcriptome-rnaseq.sh` §9, from `S06-co-expression/` |
+| 14 | **Core ortholog / gene trees** — **CLOSED**, see Status | the driver invocations only; the scripts themselves survive | recovered in `08-comparative-genomics.sh` §4–5, from `S07-comparative-genomics/orthology/` |
 | 15 | **Macro- and microsynteny** | the macrosyntR and Pansyn invocations | only the viewer pages (`macrosynteny.php`, `microsynteny*.php`, `js/macrosynteny.js`); no R script, no Snakemake file, no `macrosyntR`/`pansyn` string anywhere. The letter's parameters (Fisher exact, BH q < 0.001, 30-anchor minimum, `igraph::cluster_fast_greedy`) are descriptions |
 | 16 | **Divergence-time dating** | the dating software and its command | fossil calibrations are recorded in `assembly.sh:264-273`; the tool is never named |
 | 17 | **Hi-C scaffolding** | the juicer + 3D-DNA commands | `assembly.sh:4` names the tools, and the mamba line installs them; no invocation exists |
