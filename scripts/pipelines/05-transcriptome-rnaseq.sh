@@ -138,22 +138,89 @@ php -c /etc/php/7.4/apache2/php.ini /var/www/html/CnidoSite/includes/rnaseq_meta
 # `--check` reports the index timestamp, row count and per-table coverage without rebuilding.
 
 # ===========================================================================
-# 9. Co-expression networks — [GAP]
+# 9. Co-expression networks — [RUN], [RECONSTRUCTED] for the invocations
 # ===========================================================================
-# The site serves `<ABBR>_coexpress_positive` and `<ABBR>_coexpress_negative` tables. The
-# only artefacts on this server are the finished tables (/home/jackie/staging-network/);
-# **no network-construction script exists here**. A whole-machine grep for the parameters
-# that the tables clearly encode (rankA / rankB / pcc / top-K) hits only the site's own PHP
-# and third-party libraries.
+# Per-transcript TPM from the StringTie assemblies is collapsed to a gene-level matrix per
+# species, filtered with a per-sample cutoff, and turned into an undirected network by
+# all-vs-all Pearson correlation (PCC) and mutual rank (MR); edges are selected by
+# thresholds fixed with ROC curves against known co-functional pairs. The resource serves
+# 29 networks over 29 species.
 #
-# What is known about the construction, all of it reconstructed from the released tables
-# and recorded in the response letter rather than from a script:
-#   · edge strength = Pearson correlation coefficient (PCC);
-#   · mutual rank MR = sqrt(rankA * rankB);
-#   · a per-species top-K cap, CNIDO_NET_TOP_K = 100, applied on the site side;
-#   · positive table ordered by PCC descending, negative table by PCC ascending.
-# The per-species PCC floors and the merge rule are not recoverable. See
-# TO-BE-SUPPLIED.md item 13.
+# Scripts are deposited as supplementary-scripts/S06-co-expression/. The operative lines
+# survive; the invocations do not, so the driver lines below are reconstructed from them.
+
+# --- 9.1 TPM extraction and filtering ---
+# Source: extract_TPM.pl:15, 20, 30-34, 69
+#   open(my $fh, '<', 'gtf') or die "无法打开gtf.txt: $!";
+#   my ($sample) = $filename =~ /bpl_([^"]+)_trimmed_stringtie.gtf/;
+#   if( @a && $a[2] eq "transcript" && $a[8] =~ /TPM "([^"]+)";/){
+#       my $tpm = $1;
+#       my ($gene) = $a[8] =~ /gene_id "\d+:([^"]+)";/;
+#       $tpm_data{$gene}{$sample} = $tpm;
+#   my $tpm = $tpm_data{$gene_id}{$sample} || 0;
+# [RECONSTRUCTED] perl extract_TPM.pl   # run in a directory containing the file `gtf`
+
+# Source: FPKM_threshold.R:2, 14, 16, 23, 24, 27, 30, 33, 36
+#   fpkm <- read.table("Csq_expression_matrix.txt", header=TRUE, sep="\t")
+#   b <- sort(a[a != 0])
+#   c[i] <- b[round(0.05 * length(b))]           # 5th percentile of non-zero values
+#   mean_c <- mean(c, na.rm=TRUE)
+#   cutoff <- mean_c + 3 * sd(c, na.rm=TRUE)
+#   data[data < cutoff] <- 0
+#   new <- data[rowSums(data) != 0, ]
+#   new[new < cutoff] <- cutoff
+# [RECONSTRUCTED] Rscript FPKM_threshold.R
+# The per-sample cutoff is therefore the mean of the 5th percentiles of the non-zero values
+# plus three standard deviations; values below it are set to zero and surviving rows are
+# floored at the cutoff.
+
+# --- 9.2 Network construction --- [RUN], [RECONSTRUCTED] for the invocation
+# PCC and MR are computed with the WGCNA package; MR is the geometric mean of the two
+# genes' descending-PCC ranks. Source: PCC_MR_by_WGCNA.R:6, 8-12, 15, 17, 24-31, 43-48, 61-62
+#   library(WGCNA)
+#   enableWGCNAThreads()
+#   fpkm <- read.table("bpl_expression_matrix_no0.txt", head=T, sep="\t", row.names=1)
+#   datExpr = as.data.frame(t(fpkm[,1:dim(fpkm)[2]]))
+#   pccMat = adjacency(datExpr, power = 1, type="sign")
+#   diag(pccMat) <- 2
+#   for(i in 1:n){ pccRankMat[i,] <- rank(-pccMat[i,], ties.method="min") }
+#      a <- pccRankMat[x,j]-1 ; b <- pccRankMat[j,x]-1
+#      MRpos <- sqrt(a*b)
+#      c <- n-a ; d <- n-b ; MRneg <- sqrt(c*d)
+#   mc <- getOption("mc.cores",5) ; mclapply(2:n, funMR, mc.cores=mc)
+# [RECONSTRUCTED] Rscript PCC_MR_by_WGCNA.R
+
+# An alternative all-vs-all PCC script (`pcc.pl`, Perl `Statistics::Basic`) is recorded but
+# **did not run** — the module is not installed on the machine and its log shows the load
+# failing. The delivered networks come from the WGCNA path above.
+
+# --- 9.3 Threshold selection ---
+# Edge labels are generated for known co-functional pairs (two genes sharing at least one
+# GO term) and the PCC and MR grids are scored by ROC.
+# Source: PCC_ROC.R:4-10, 15; MR_ROC.R:4-8, 15, 23
+#   go.data6 = read.delim("data_ROC_in6_PCC");  pred.go6 = prediction(go.data6[,1], go.data6[,2])
+#   pref.go6 = performance(pred.go6, "tpr", "fpr");  auc.go6 = performance(pred.go6,"auc")@y.values
+#   plot.roc(go.data6[,2], go.data6[,1], print.thres=FALSE, col="red")
+# [RECONSTRUCTED] Rscript PCC_ROC.R ; Rscript MR_ROC.R
+
+# Recorded outcomes: PCC AUCs 0.6573 (0.6), 0.6806 (0.7), 0.6667 (0.8), 0.6426 (0.9);
+# MR AUCs 0.7806 (20), 0.7909 (30), 0.7885 (40), 0.7811 (50), 0.7914 (100).
+#
+# The final edge lists are selected at **PCC >= 0.75 and MR < 30** (positive; 241,360
+# edges) and **PCC <= -0.5 and MR < 30** (negative; 68,959 edges) — both counts verified
+# against the delivered files.
+#
+# NOTE, to confirm before publishing: an earlier draft of this record gave the negative
+# floor as MR < 50 rather than MR < 30. Both drafts report the same 68,959 negative edges.
+# The delivered edge lists settle it; check them against the threshold before quoting it.
+
+# --- 9.4 Site-side parameters ---
+# These are applied by the website, not by the construction scripts, and a re-implementation
+# must observe them:
+#   · a per-species top-K cap of 100 (CNIDO_NET_TOP_K = 100);
+#   · the positive table is ordered by PCC descending, the negative table by PCC ascending;
+#   · `rankA` and `rankB` are mutual-rank positions and must not be used to order or to
+#     weight results.
 
 # ===========================================================================
 # 10. Functional annotation of transcripts — [GAP]

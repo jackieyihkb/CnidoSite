@@ -33,19 +33,68 @@ busco -c 120 -i hifiasm_output_contig.fa -l cnidaria_odb12 -o busco_cnidaria_odb
 #   gffread on line 243. Recorded as found; not silently corrected.
 
 # ---------------------------------------------------------------------------
-# The batch run over all 148 annotated species — [GAP]
+# The batch runs — [RUN]
 # ---------------------------------------------------------------------------
-# The site reports BUSCO for 148 species, but **no batch command exists on this server**.
-# Only the two single-species runs above are recorded. See TO-BE-SUPPLIED.md item 3.
+# Completeness is assessed in two independent modes, each with its own batch.
+
+# --- The protein-mode batch, one run per species ---
+# Scores every deposited protein set against cnidaria_odb12.
+# Source: BUSCO/run_busco.sh:18-32 (loop), :5-13 (config)
+for file in ${INPUT_DIR}/*.pep; do
+    filename=$(basename "$file" .pep)
+    busco -i "$file" -l "$LINEAGE_DB" -o "${filename}_results" \
+          -m "$MODE" -c "$THREADS" --out_path "$OUTPUT_DIR"
+done
+# LINEAGE_DB=cnidaria_odb12  MODE=protein  THREADS=120
+
+# As echoed into one species' own log
+# (1.BUSCO/busco_results/Thelohanellus_kitauei_results/logs/busco.log:1):
+busco -i ./Thelohanellus_kitauei.pep -l cnidaria_odb12 -o Thelohanellus_kitauei_results \
+      -m protein -c 120 --out_path busco_results
+
+# The merged table. Source: BUSCO/merge_busco_results.py:21, :79
+python3 merge_busco_results.py     # busco_results/*/run_cnidaria_odb12/full_table.tsv
+
+# --- The genome-mode batch, 650 runs in all (325 assemblies x 2 lineages) ---
+# Scores each assembly against both lineages using miniprot-based gene prediction.
+# Source: busco_assembly/run_le.sh:127-129
+export BUSCO_LINEAGE_SETS=/home/$USER/busco_assembly/lineages
+busco -i "$WORK/in/$abbr.fna" -m genome \
+      --lineage_dataset "$ld" --offline \
+      -o "$tag" --out_path "$OUT" -c "$THREADS"
+# $tag = <ABBR>__<lineage>; $OUT = /mnt/sdb/busco_assembly_out; $THREADS = 16
+
+# The dispatcher is idempotent — a tag whose `short_summary*.json` exists, or that a live
+# BUSCO process owns, is skipped — so the batch restarts safely. Concurrency was 40 runs x
+# 16 threads under a 60 % CPU ceiling.
 #
-# There is a second, unresolved discrepancy in the same area: the site's tools table says
-# the lineage is `cnidaria_odb12`, while the response letter (Response_to_Reviewers_r1.6,
-# BUSCO passage) says `metazoa_odb12`. Both lineage directories are installed, so both are
+# Two assemblies (ALIUI, AIDSS) arrived with each record on a single unwrapped line, which
+# failed BUSCO's reader with a Java heap error; both were re-wrapped without changing a base.
+# Source: busco_assembly/logs/run_cnidaria_missing.sh (pre-step)
+awk '/^>/{print; next} {for(i=1;i<=length($0);i+=60) print substr($0,i,60)}' in/<ABBR>.fna
+
+# Only `short_summary*.json` is transferred; the table is written on $SITE by the site's own
+# collector, which derives `high_quality = 1` when complete >= 90 %, duplicated <= 10 % and
+# fragmented <= 5 %. Source: logs/collect_and_publish.sh:19-28
+rsync -a --include='*/' --include='short_summary*.json' --exclude='*' \
+  /mnt/sdb/busco_assembly_out/ $SITE:/home/$USER/cnidosite-work/busco/assembly/out/
+ssh $SITE 'cd /home/$USER/cnidosite-work/busco/assembly || exit 1
+  python3 collect_genome.py
+  mysql -u$USER -p<REDACTED> cnidaria < genome_rows.sql'
+# The upsert is INSERT ... ON DUPLICATE KEY UPDATE on (abbr1, lineage), so repeated passes
+# are idempotent. 325 of 326 species carry an assembly and both columns; Coelastrea aspera
+# has none in the catalogue or at NCBI, which is why its cells are empty.
+
+# ---------------------------------------------------------------------------
+# Points still to settle
+# ---------------------------------------------------------------------------
+# The site's tools table says the lineage is `cnidaria_odb12`, while the response letter
+# (Response_to_Reviewers_r1.6, BUSCO passage) says `metazoa_odb12`. Both lineage
+# directories are installed, and the genome-mode batch scores against both, so both are
 # possible; only the authors can say which produced the published numbers.
 #
-# Third point to settle at the same time: `busco --download` is currently broken on this
-# host, so re-running requires the lineage directory to be supplied from
-# /home/jackie/busco_downloads/ rather than fetched.
+# `busco --download` is currently broken on this host, so re-running requires the lineage
+# directory to be supplied from /home/jackie/busco_downloads/ rather than fetched.
 
 # ---------------------------------------------------------------------------
 # How the site computes completeness from the BUSCO table — [not a pipeline]

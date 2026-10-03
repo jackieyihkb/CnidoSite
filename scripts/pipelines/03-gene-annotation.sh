@@ -1,14 +1,116 @@
 #!/bin/sh
-# CnidoSite — structural gene annotation
+# CnidoSite — gene models and functional annotation
 #
-# The annotation strategy is summarised by the authors in their own notebook
-# (/mnt/sda/jackie/PASA/jellyfish_final/assembly.sh:5):
+# ===========================================================================
+# 0. WHERE CNIDOSITE'S GENE MODELS COME FROM
+# ===========================================================================
+#
+# They are the **NCBI-submitted annotations**, not a prediction made here. Each
+# per-species assembly is downloaded as an NCBI Datasets tree and flattened into four
+# files; where NCBI publishes a gene set, that gene set is what the resource serves.
+# The supplementary text states this in §S3.1–S3.2.
+#
+# Where an assembly has **no NCBI protein set** — most of the MAGs, 174 assemblies —
+# genes are predicted with Prodigal 2.6.3 in metagenomic mode. The same commands serve
+# the MAG module, and the copies kept in the deposit are the chunked MAG pipeline's.
+#
+# Functional annotation covers six evidence sources per protein set: GO,
+# InterPro/Pfam/PANTHER, UniProt, KEGG, NR and transcription factors.
+#
+# Scripts referred to below are in the supplementary-scripts deposit, under
+# `S03-genome-annotation/genome/` and `S11-mags-and-metagenome/pipeline/`.
+
+# ===========================================================================
+# 0.1 Acquisition and identifier normalisation   (§S3.1)
+# ===========================================================================
+# Each NCBI Datasets download is flattened by `genome/rename_files.sh`:
+#   mv "cds_from_genomic.fna" "../../../../${species_name}.cds"
+#   mv "protein.faa"          "../../../../${species_name}.pep"
+#   mv "$genome_file"         "../../../../${species_name}.fa"
+#   mv "genomic.gff"          "../../../../${species_name}.gff3"
+#
+# Sequence and feature identifiers are then rewritten from the raw INSDC accessions to
+# a species-local scheme (chr1..chrN, SUPER_*_unloc_*, SCAFFOLD_*, mitochondrion),
+# applied in step to the FASTA and the GFF3 so the two stay consistent:
+#   sed -i 's/CM042746.1/chr1/g'               Catalaphyllia_jardinei.fa
+#   sed -i 's/JAEMPF020017689.1/Scaffold_100/g' Catalaphyllia_jardinei.fa
+#   sed -i 's/CM042746.1/chr1/g'               Catalaphyllia_jardinei.gff3
+# (representative of genome/1.sh–10.sh)
+#
+# The gene → transcript → protein mapping behind the per-species protein tables comes
+# from small GFF3 parsers, one per species, each with its input hard-coded:
+#   python3 1.py                       # Exaiptasia_diaphana.gff3 -> exaiptasia_id_mapping.txt
+#   python3 extract_gene_protein.py    # Orbicella_franksi.gff3
+#   python3 1.py <input.gff3> <output_locus>       # from genome/locus/
+# (2.py–5.py are the same parser, differing only in the species table each writes.)
+
+# ===========================================================================
+# 0.2 Gene prediction for assemblies with no NCBI protein set   (§S3.2)
+# ===========================================================================
+# Prodigal 2.6.3, metagenomic mode. Source: pipeline/02_predict.sh:45-47
+"$PRODIGAL" -i "$fna" -p meta -q \
+    -a "$outdir/proteins.faa" -d "$outdir/genes.fna" \
+    -f gff -o "$outdir/genes.gff"
+# -> IDs rewritten to <accession>_<n>; trailing stop characters stripped
+
+# ===========================================================================
+# 0.3 Functional annotation   (§S3.2)
+# ===========================================================================
+# InterPro / Pfam / PANTHER and GO. Source: pipeline/_annotate_one.sh:30-31
+"$IPS" -i "$faa" -f TSV -dp -goterms -pa -cpu "${IPS_CPU_PER_JOB:-4}" -o "$tmp"
+
+# InterProScan is dispatched in chunks, so an interrupted run resumes by re-running
+# the same command. Source: pipeline/run_iprscan_chunked.sh:67-68
+interproscan.sh -i "$f" -f TSV -o "$out" -iprlookup -goterms -dp -cpu "$CPU"
+
+# UniProt and NR, by DIAMOND. Source: pipeline/04_uniprot.sh:83-87
+"$DIAMOND" blastp --db "$db" --query "$all_faa" --out "$hits" \
+    --outfmt 6 qseqid sseqid pident length evalue bitscore stitle \
+    --max-target-seqs 1 --evalue 1e-5 \
+    --threads "${DIAMOND_THREADS:-128}" --sensitive --quiet
+
+# KEGG, by KofamScan — one chunk per job. Source: pipeline/05_kegg.sh:79
+ls "$chunk_dir"/chunk_*.faa | xargs -r -P "$CHUNKS" -n 1 "$MAG_ROOT/pipeline/_kofam_chunk.sh"
+
+# The KofamScan mapper is the matching step. Source: pipeline/run_kofam.sh:49-56
+exec_annotation -f mapper -o "${OUT}" -p "$K/profiles" -k "$K/ko_list" \
+    --cpu "$CPU" --tmp-dir "$TMP" "$IN"
+
+# Three silent failure modes in the InterProScan step, each of which yields an empty
+# column rather than an error — see the supplementary text §S11:
+#   · omitting any of -iprlookup, -goterms or -dp loads zero InterPro entries;
+#   · the GO column (field 14) carries a suffix that must be stripped;
+#   · interproscan.properties does not predict which analyses run — pin InterPro
+#     release 109 explicitly, and include obsolete terms and alternative identifiers
+#     in go_term.tsv.
+
+# ===========================================================================
+# ---- EXTERNAL MATERIAL BEGINS — NOT CNIDOSITE PROVENANCE ------------------
+# ===========================================================================
+#
+# Everything below is the structural annotation chain of a **separate genome project**
+# for one jellyfish genome. It is not the provenance of any CnidoSite gene set: no
+# BRAKER, AUGUSTUS, MAKER or EVM invocation exists for the per-species annotations the
+# resource serves, which are the NCBI-submitted ones described in section 0 above.
+#
+# It is retained because it is the only complete annotation record on the working tree,
+# and because it is easy to mistake for this resource's own. Its own notebook
+# (/mnt/sda/jackie/PASA/jellyfish_final/assembly.sh:5) describes the strategy as
 #
 #   "1) de novo used augustus, genscan and glimmerhmm, 2) homolog used gemoma,
 #    3) transcriptome used PASA, finally merged with EVM"
 #
-# That is also what the site's tools table says (data_statistics.php:530-546).
-# Below, each predictor's recoverable command is given with its provenance.
+# and the site's tools table (data_statistics.php:530-546) describes the same strategy —
+# which is exactly why the confusion is worth foreclosing. Note also that the
+# `--species=nematostella_vectensis` flag in the BRAKER command below selects an AUGUSTUS
+# training profile; it does not name the assembly being annotated.
+#
+# Nothing below should be cited as a CnidoSite method. The supplementary text records the
+# same exclusion in §S1 and §S3.2.
+#
+# ===========================================================================
+# ---- the external chain, section by section, as recovered -----------------
+# ===========================================================================
 
 # ===========================================================================
 # 1. BRAKER3 — [RUN]  (the production command, verbatim)

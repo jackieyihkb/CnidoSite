@@ -1,17 +1,41 @@
 #!/bin/sh
 # CnidoSite — genome assembly, polishing, Hi-C and mitogenome
 #
-# Everything below is [RUN] unless marked otherwise. Source is the working notebook of
-# one representative species (a hydrozoan, "jellyfish"), which is the only assembly for
-# which a complete command chain survives on this server:
+# ===========================================================================
+# ASSEMBLY IS OUT OF SCOPE FOR CNIDOSITE. READ THIS BEFORE USING ANYTHING BELOW.
+# ===========================================================================
 #
-#     /mnt/sda/jackie/PASA/jellyfish_final/assembly.sh   (272 lines)
+# CnidoSite does not publish a de novo assembly of its own. The genome sequences it
+# serves are taken from public INSDC/NCBI deposits, and no assembly command line is
+# part of the provenance of any dataset the resource serves. This is stated in the
+# supplementary text, §S1 ("Genome assembly is out of scope") and §S3.1:
+#
+#   "the assembly, polishing, Hi-C scaffolding and divergence-dating chains that exist
+#    on our servers belong to a separate genome project and are not the provenance of
+#    any dataset served here. No assembly command lines are therefore given."
+#
+# ---------------------------------------------------------------------------
+# What is below, and why it is here
+# ---------------------------------------------------------------------------
+# Everything below belongs to **that separate genome project** — one hydrozoan
+# ("jellyfish") genome — and **not** to CnidoSite. It is retained as reference material
+# because it is the only complete assembly record on the working tree, and because the
+# same tree supplies the BRAKER3 / PASA / GeMoMa / EVM chain that section 3 of
+# `03-gene-annotation.sh` also has to place.
+#
+# Source: /mnt/sda/jackie/PASA/jellyfish_final/assembly.sh   (272 lines)
+#
+# Nothing in this file should be cited as a CnidoSite method.
 #
 # The authors state in that file (lines 3-5) that the pipeline was **not** frozen into a
 # single workflow — parameters were chosen per species. Treat this file as the record of
-# one run, not as a workflow definition.
+# one run of another project, not as a workflow definition.
 #
 # Hardware note: the runs use `-t 120` / `-p 120` throughout; the host has 120 threads.
+#
+# ===========================================================================
+# ---- EXTERNAL MATERIAL BEGINS — NOT CNIDOSITE PROVENANCE ------------------
+# ===========================================================================
 
 # ---------------------------------------------------------------------------
 # 0. Environment

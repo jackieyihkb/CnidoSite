@@ -1,17 +1,21 @@
 # CnidoSite — epigenome pipelines (ATAC / ChIP / DNase / WGBS)
 
-> **Read this first.** This module carries the one substantive scientific dispute in the
-> review, and the working record is incomplete in a way that matters. Two things are true
-> at once:
+> **Read this first.** The released peak calls were produced by a re-run on 2026-09-22. Its
+> per-sample *driver scripts* are on a different host, but the *effective commands* survive
+> in MACS2's own log banners, which print the full invocation of every run. The
+> supplementary text (§S10) reproduces them, and they are given below.
 >
-> * the released peak calls were produced by a re-run on 2026-09-22 whose **per-sample
->   command lines are no longer on this server** — only two count summaries survive;
-> * the response letter states (correctly) that `--nomodel --shift -100 --extsize 200`
->   "appears nowhere", while a run summary on the same disk records the DHS re-run as
->   having used exactly that.
+> One discrepancy is recorded rather than smoothed over: an earlier response letter stated
+> that `--nomodel --shift -100 --extsize 200` "appears nowhere", while the DHS run summary
+> and MACS2's banner both record the DHS re-call as having used exactly that. The banner
+> wins — it is a run record — and the `--nomodel` re-call is what the site publishes.
 >
-> Both are documented below rather than smoothed over. Items 1-5 of
-> [`TO-BE-SUPPLIED.md`](TO-BE-SUPPLIED.md) come from this module.
+> **The largest gap in this module is not in the list above.** The site reports 53 miRNA-seq
+> datasets, and no miRNA pipeline, tool or file exists on any reachable host. Nothing about
+> that module is reproducible. What remains missing from the assays documented here is the
+> reference index builds for the remaining ChIP and WGBS references, and all downstream WGBS
+> analysis (DMR calling, methylation summaries) — see
+> [`TO-BE-SUPPLIED.md`](TO-BE-SUPPLIED.md).
 
 ---
 
@@ -105,10 +109,15 @@ bamCoverage -b "$merged_bam" -o "bw_out/${...}.bw" \
 
 ## 2. ChIP-seq
 
-**The per-sample command lines do not exist on this server.** The `5.ChIP` working tree
-lives on a different host — `/mnt/sda/jackie/cnidaria/5.ChIP` on 143.89.54.44 — and the
-response letter itself concedes at one point that "the re-call log itself is no longer on
-this machine".
+**The per-sample driver scripts are not on this server.** The `5.ChIP` working tree lives on
+a different host — `/mnt/sda/jackie/cnidaria/5.ChIP` on 143.89.54.44 — and the response
+letter itself concedes at one point that "the re-call log itself is no longer on this
+machine".
+
+**The effective commands are nevertheless recovered**, because MACS2 prints its full
+invocation into the log banner of every run. The banner is a run record, not a template, so
+it meets the same evidentiary bar as a script. The supplementary text (§S10) reproduces
+these; they are given below with the paths they were recovered from.
 
 What survives locally:
 
@@ -131,9 +140,40 @@ macs2 callpeak -t <sample BAMs> -c <input/IgG control BAMs> -f BAMPE -g <effecti
 macs2 callpeak ... --broad --broad-cutoff 0.1
 ```
 
+**The recovered commands.** Alignment, then peak calling, with one ChIP sample shown:
+
+```sh
+# Alignment and its sorting and indexing. Source: 5.ChIP/run_Exaiptasia_diaphana.sh:1-4
+bowtie2 -x bowtie2_Exaiptasia_diaphana -1 SRR6202311_1.fastq.gz -2 SRR6202311_2.fastq.gz \
+    -S SRR6202311.sam -p 120 --very-sensitive --dovetail --no-mixed --no-discordant \
+    2> logs/SRR6202311_align.log
+samtools view -@ 120 -bS SRR6202311.sam | samtools sort -o SRR6202311_sorted.bam
+samtools index SRR6202311_sorted.bam
+
+# First pass — one genome size for every species. Source: 5.ChIP/run_*.sh:25
+macs2 callpeak -t SRR6202323_sorted.bam SRR6202324_sorted.bam SRR6202325_sorted.bam \
+    -c SRR6202326_sorted.bam SRR6202311_sorted.bam SRR6202312_sorted.bam \
+    -n peaks/Exaiptasia_diaphana_H3K36me3_wholeAnimal_consensus -f BAM -g 2.61e8 \
+    2> logs/Exaiptasia_diaphana_H3K36me3_wholeAnimal_macs2.log
+
+# Re-call with the corrected, per-species genome size.
+# Source: 5.ChIP/chip_gfix.sh:1 (one command per line, 38 lines)
+macs2 callpeak ... -n peaks_gfix/Exaiptasia_diaphana_H3K36me3_wholeAnimal_consensus \
+    -f BAM -g 1.98e8 2> logs_gfix/Exaiptasia_diaphana_H3K36me3_wholeAnimal_macs2.log
+
+# Paired-end re-call, from the MACS2 log banner (5.ChIP/logs_bampe/*_macs2.log:2)
+callpeak -t SRR18749544_sorted.bam ... -c SRR18749534_sorted.bam ... \
+    -n peaks_bampe/Exaiptasia_diaphana_H3K27ac_consensus -f BAMPE -g 1.98e8
+
+# Broad peaks, from the MACS2 log banner (5.ChIP/logs_broad/*_macs2.log:2)
+callpeak ... -f BAMPE -g 8.81e8 --broad --broad-cutoff 0.1
+```
+
 The defects this re-run fixed are documented in the response letter: every ChIP sample had
 been called with `-g 2.61e8` regardless of species, and paired-end data had been called
-with `-f BAM`. See `TO-BE-SUPPLIED.md` item 1.
+with `-f BAM`. Both are wrong for most datasets. `-g` is not cosmetic — it enters
+PeakModel's `min/max_tags` and PeakDetect's background lambda. The corrected peak sets are
+the published ones.
 
 ---
 
@@ -148,19 +188,32 @@ Only two artefacts are on this server: a download log recording **Kingfisher v0.
 # DNase (6.DHS) old=8145 (default model, d=260)  new=5802 (--nomodel --shift -100 --extsize 200, d=200)
 ```
 
-That line is the **only** place on this disk where `--nomodel --shift -100 --extsize 200`
-appears — and it records the value as having been *used* for the DHS re-call. The response
-letter states the opposite (that the string appears nowhere in the site, the analysis tree,
-or any backup). Both statements are quoted here because reconciling them requires the
-authors: see `TO-BE-SUPPLIED.md` item 2.
-
-The published convention for this assay (`data_statistics.php:542`):
+That line records the value as having been *used* for the DHS re-call, and MACS2's own log
+banner for the re-call confirms it. **The `--nomodel` re-call is what the site publishes**,
+and the supplementary text (§S10) gives it as the published peak set. An earlier response
+letter stated that the string appeared nowhere in the site, the analysis tree or any backup;
+that statement is superseded by the log banner, which is a run record.
 
 ```sh
-macs2 callpeak -t <sample BAM> -f BAM -g 4.38e8
+# Alignment and its sorting and indexing. Source: 6.DHS/run.sh:2-5
+bowtie2 -x bowtie2_Acropora_digitifera -1 DRR608907_1.fastq.gz -2 DRR608907_2.fastq.gz \
+    -S DRR608907.sam -p 120 --very-sensitive --dovetail --no-mixed --no-discordant 2> DRR608907_align.log
+samtools view -@ 120 -bS DRR608907.sam | samtools sort -o DRR608907_sorted.bam
+samtools index DRR608907_sorted.bam
+
+# Model-based first pass. Source: 6.DHS/run.sh:7
+macs2 callpeak -t DRR608907_sorted.bam -n peaks/Acropora_digitifera_DHS_consensus \
+    -f BAM -g 4.38e8 2> Acropora_digitifera_DHS_macs2.log
+
+# The --nomodel re-call, which produced the published peaks.
+# Source: the MACS2 log banner, 6.DHS/logs/DHS_nomodel.out:3
+callpeak -t DRR608907_sorted.bam -n peaks_dnase_fix/Acropora_digitifera_DHS_nomodel_consensus \
+    -f BAM -g 4.38e8 --nomodel --shift -100 --extsize 200
 ```
 
-The aligner used for DHS is not recorded anywhere locally.
+The index-build line is commented out in `run.sh` although the index was built — the
+`bowtie2-build` banner survives. Reference index builds for the remaining ChIP and WGBS
+indices are not recorded (see the supplementary text's Appendix).
 
 ---
 

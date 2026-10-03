@@ -7,10 +7,10 @@ study's own reported values (`orig_*` columns).
 
 ---
 
-## 1. The pipeline — `[PROSE]`: script names only, no commands
+## 1. The pipeline — `[RUN]`
 
-The only surviving description of the re-analysis is on the site itself
-(`proteomic_dataset.php:480-485`), which publishes the pipeline as a sequence of scripts:
+The re-analysis is a six-step pipeline, and the steps are published both on the site itself
+(`proteomic_dataset.php:480-485`) and as the scripts in `2.pipeline/`:
 
 ```sh
 python3 2.pipeline/02_fetch_pride.py <PXD>          # retrieve peak lists from PRIDE
@@ -21,17 +21,55 @@ python3 2.pipeline/06_map_to_genes.py <PXD>          # peptides -> CnidoSite gen
 python3 2.pipeline/07_build_tables.py --release <rel> # load tables + SQL
 ```
 
-**The `2.pipeline/` directory is not on this server.** It could not be found anywhere:
+**The scripts survive, and they are the authoritative record of the search.** The
+`2.pipeline/` directory is deposited under `supplementary-scripts/S09-proteomics/2.pipeline/`,
+and the commands below are taken from it and from the loader. The same sequence is printed
+on the resource's own dataset page.
 
-* whole-filesystem search for `04_run_search.py`, `cnido_common.py`, `comet.params`
-  → no results;
-* `grep -rilE 'comet|crux|percolator|msconvert|thermo'` over the entire
-  `/mnt/sda/jackie/cnidaria_omics/proteome/` tree → **zero matches**. The only text logs in
-  that tree are PRIDE `wget` transcripts;
-* no Comet, Crux, Percolator or MSConvert executable exists on this host.
+```sh
+# Conversion, only for projects that ship no peak list
+ThermoRawFileParser -i <file.raw> -o <tmpdir> -f 0 -m 0
+python3 apl2mgf.py SHARD.apl                      # 2.pipeline/apl2mgf.py:41-44
 
-So the exact Comet invocation, and the contents of the `comet.params` that
-`04_run_search.py` writes, **cannot be recovered here** — see `TO-BE-SUPPLIED.md`.
+# Search — one Comet run per spectrum file. The parameter file is written per dataset by
+# write_comet_params(), which is the authoritative record of the search.
+comet -P3.work/search/<PXD>/comet.params <peaklist>.mgf      # 04_run_search.py:686-703
+
+# FDR — all PIN files for a dataset merged, then scored with Crux 4.2 Percolator at q <= 0.01
+crux percolator --decoy-prefix DECOY_ --output-dir 4.results/<PXD>/percolator \
+     4.results/<PXD>/<PXD>.merged.pin                        # 05_fdr_percolator.py:39-40, :65-79
+```
+
+**What is *not* recoverable** is narrower than "the engine is missing": the per-dataset
+`comet.params` contents are archived only for the representative example (PXD009253), and
+the exact Comet invocation for datasets other than that one is not recorded. See
+`TO-BE-SUPPLIED.md`.
+
+The merge is not cosmetic. The header of the first PIN file is kept and every `SpecId` is
+prefixed with its source file stem, so scan numbers cannot collide across the files being
+merged. The output directory is cleared before the run because Crux refuses to overwrite it.
+The inner Percolator command Crux issues confirms the effective settings
+(`--trainFDR 0.01 --testFDR 0.01 --protein-decoy-pattern DECOY_ --post-processing-tdc`).
+
+**Uniform search settings across datasets**, from the parameter files: Comet 2026.01,
+`decoy_search = 1` (internal reversed decoys, concatenated 1:1),
+`precursor_tolerance_type = 0` (MH+), B/Y ions only, `max_variable_mods_in_peptide = 3`,
+`digest_mass_range = 600.0 5000.0`, `peptide_length_range = 5 50`, charges 1–6,
+`spectrum_batch_size = 15000`, `minimum_peaks = 10`, `equal_I_and_L = 1`,
+`output_percolatorfile = 1`. Fixed modification C+57.021464; variable modification
+M+15.9949 with up to three per peptide. Precursor tolerance and units, fragment tolerance
+and enzyme are per dataset and are read from a metadata table.
+
+**cRAP.** The species reference proteome (BUSCO-validated, or a transcriptome-derived
+`.rep.pep`, or a congener surrogate named in the metadata) is concatenated with the
+116-protein cRAP set. cRAP entries carry a `CRAP_` prefix and `is_contaminant = 1`.
+Decoys are not added here — Comet generates them internally, 1:1 reversed.
+
+**Conversion.** Deposited peak lists are used as they are; only projects that ship no peak
+list are converted. `.mgf` inputs are rewritten with LF line endings and unique titles,
+because CRLF line endings make Comet dump core. `.mzML`/`.mzXML` are read natively by Comet
+(symlinked, not converted); Sciex `.wiff` requires msconvert, and no loaded dataset is of
+that type.
 
 ---
 
