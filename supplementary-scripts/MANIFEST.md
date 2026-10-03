@@ -6,6 +6,14 @@ directory of the same number. Alongside the file list, this manifest carries the
 tables the Supplementary Methods refers to it for: the software versions recorded for
 each module, and the summary counts of the data served.
 
+**Where this lives.** This directory is part of the CnidoSite archive at
+<https://github.com/jackieyihkb/CnidoSite>, at the repository root. Every `# from:` citation in
+the Supplementary Methods is a path into this tree, so a citation such as
+`supplementary-scripts/S03-genome-annotation/genome/1.py:56` resolves against
+<https://github.com/jackieyihkb/CnidoSite/blob/master/supplementary-scripts/S03-genome-annotation/genome/1.py>.
+The prose records that refer to these scripts are in
+[`scripts/pipelines/`](../scripts/pipelines/), one file per analysis module.
+
 Generated: 2026-10-02 17:58:02   
 Scripts: 271
 
@@ -130,7 +138,7 @@ resource's own statistics page reports.
 | Phenotype records | 180,652 |
 | Fossil records | 410 |
 | Species with a mitochondrial genome | 173 |
-| Database objects | 1,542 tables, 2 views (≈178 GB) |
+| Database objects | 1,541 tables, 2 views (≈178 GB) |
 
 ## Files
 
