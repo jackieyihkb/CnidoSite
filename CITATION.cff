@@ -1,7 +1,7 @@
 # Citation metadata for the CnidoSite archival snapshot.
 # GitHub renders this as the "Cite this repository" box.
-# Every TODO below must be filled in BEFORE the GitHub release that Zenodo archives:
-# the metadata is read from the tagged commit, so late edits are not picked up.
+# Author list, order, affiliations and ORCIDs are kept identical to the
+# Zenodo record for this deposit (10.5281/zenodo.23277322).
 cff-version: 1.2.0
 message: "If you use CnidoSite, please cite the manuscript and this archived snapshot."
 title: "CnidoSite: website source code, curated data and database schema at the time of publication"
@@ -10,20 +10,21 @@ authors:
   - family-names: She
     given-names: Jiajie
     orcid: "https://orcid.org/0000-0003-4286-6411"
-    affiliation: "School of Food and Drug, Shenzhen Polytechnic University, Shenzhen, China"
-  - family-names: Jiang
-    given-names: Changsen
-    # TODO affiliation
-    # TODO orcid - two candidates in the ORCID registry, neither confirmed:
-    #   0009-0003-0758-4221  (Wenzhou Medical University)
-    #   0009-0007-2591-430X  (Australian National University)
+    affiliation: "Shenzhen Polytechnic University"
   - family-names: Wu
     given-names: Longjun
     orcid: "https://orcid.org/0000-0002-7580-5503"
-    affiliation: "Department of Ocean Science, The Hong Kong University of Science and Technology, Hong Kong SAR, China"
-# Author order and affiliations must match the manuscript. She Jiajie's ORCID lists
-# HKUST (joint postdoc, 2024-) as well as Shenzhen Second People's Hospital; the
-# affiliation above is the one added to the manuscript in September 2026.
+    affiliation: "Department of Ocean Science, The Hong Kong University of Science and Technology"
+  - family-names: Jiang
+    given-names: Changsen
+    # TODO orcid - not recorded in the Zenodo deposit either
+    affiliation: "Research School of Biology, Australian National University"
+  - family-names: Qian
+    given-names: Pei-Yuan
+    affiliation: "Department of Ocean Science and Otto Poon Center for Climate Resilience and Sustainability, Hong Kong University of Science and Technology"
+  - family-names: Fan
+    given-names: Jiakai
+    # TODO affiliation - not recorded in the Zenodo deposit either
 version: "v1.0"
 date-released: 2026-10-10
 license: MIT
