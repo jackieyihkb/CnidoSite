@@ -8,16 +8,19 @@
   "creators": [
     {
       "name": "She, Jiajie",
-      "affiliation": "School of Food and Drug, Shenzhen Polytechnic University, Shenzhen, China"
+      "affiliation": "School of Food and Drug, Shenzhen Polytechnic University, Shenzhen, China",
+      "orcid": "0000-0003-4286-6411"
     },
     {
       "name": "Jiang, Changsen"
     },
     {
-      "name": "Wu, Longjun"
+      "name": "Wu, Longjun",
+      "affiliation": "Department of Ocean Science, The Hong Kong University of Science and Technology, Hong Kong SAR, China",
+      "orcid": "0000-0002-7580-5503"
     }
   ],
-  "description": "<p>CnidoSite (https://cnidosite.org) is a multi-omics database for Cnidaria. This record is the snapshot of the site at the time of publication, deposited so that the resource survives the website.</p><p>It contains the site's own source code (PHP, JavaScript, CSS, HTML, Perl, Python and the Apache configuration), the curated data of modest size, the complete schema of all 1,541 tables, and step-by-step rebuild instructions.</p><p>The sequence and derived data are too large for a Git repository (4,538 files, about 261 GiB). The archive ships a manifest of every one of these files with its size and public URL (manifests/large-files.tsv), a script that fetches the 2,154 publicly available files (scripts/download-large-data/), and the pipelines that regenerate the rest (scripts/pipelines/). The remaining 2,384 files are the intermediate per-species annotation tables that the site does not serve over HTTP; they are not required to rebuild the database.</p>",
+  "description": "<p>CnidoSite (https://cnidosite.org) is a multi-omics database for Cnidaria. This record is the snapshot of the site at the time of publication, deposited so that the resource survives the website.</p><p>It contains the site's own source code (PHP, JavaScript, CSS, HTML, Perl, Python and the Apache configuration), the curated data of modest size, the complete schema of all 1,541 tables, and step-by-step rebuild instructions. The source code is released under the MIT licence; the curated data are released under CC BY 4.0.</p><p>The sequence and derived data are too large for a Git repository (4,538 files, about 261 GiB). The archive ships a manifest of every one of these files with its size and public URL (manifests/large-files.tsv), a script that fetches the 2,154 publicly available files (scripts/download-large-data/), and the pipelines that regenerate the rest (scripts/pipelines/). The remaining 2,384 files are the intermediate per-species annotation tables that the site does not serve over HTTP; they are not required to rebuild the database.</p>",
   "keywords": [
     "Cnidaria",
     "multi-omics database",
