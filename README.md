@@ -115,7 +115,11 @@ rather than guessed.
 
 ## License and citation
 
-See [`LICENSE.md`](LICENSE.md). The manuscript citation will be added on acceptance.
+The code is released under the MIT licence and the curated data under CC BY 4.0 — see
+[`LICENSE.md`](LICENSE.md). Machine-readable citation metadata are in
+[`CITATION.cff`](CITATION.cff); this snapshot is also archived on Zenodo.
+
+The manuscript citation will be added on acceptance.
 
 ## Contact
 
