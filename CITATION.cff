@@ -1,0 +1,37 @@
+# Citation metadata for the CnidoSite archival snapshot.
+# GitHub renders this as the "Cite this repository" box.
+# Every TODO below must be filled in BEFORE the GitHub release that Zenodo archives:
+# the metadata is read from the tagged commit, so late edits are not picked up.
+cff-version: 1.2.0
+message: "If you use CnidoSite, please cite the manuscript and this archived snapshot."
+title: "CnidoSite: website source code, curated data and database schema at the time of publication"
+type: software
+authors:
+  - family-names: She
+    given-names: Jiajie
+    affiliation: "School of Food and Drug, Shenzhen Polytechnic University, Shenzhen, China"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO
+  - family-names: Jiang
+    given-names: Changsen
+    # affiliation: ""   # TODO
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO
+  - family-names: Wu
+    given-names: Longjun
+    # affiliation: ""   # TODO
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO
+# Author order should match the manuscript. affiliation above is the one added in
+# September 2026; confirm it against the author list.
+version: "1.0.0"
+date-released: 2026-10-10
+license: MIT
+repository-code: "https://github.com/jackieyihkb/CnidoSite"
+url: "https://cnidosite.org"
+keywords:
+  - Cnidaria
+  - multi-omics database
+  - genome
+  - transcriptome
+  - single-cell
+  - reproducibility
+# Add the version DOI after the release has been archived by Zenodo:
+# doi: 10.5281/zenodo.XXXXXXX
