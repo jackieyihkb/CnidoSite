@@ -117,7 +117,12 @@ rather than guessed.
 
 The code is released under the MIT licence and the curated data under CC BY 4.0 — see
 [`LICENSE.md`](LICENSE.md). Machine-readable citation metadata are in
-[`CITATION.cff`](CITATION.cff); this snapshot is also archived on Zenodo.
+[`CITATION.cff`](CITATION.cff).
+
+This snapshot is archived on Zenodo:
+
+* this version (v1.0) — https://doi.org/10.5281/zenodo.23277322
+* all versions — https://doi.org/10.5281/zenodo.23277321
 
 The manuscript citation will be added on acceptance.
 
